@@ -1,0 +1,9 @@
+采样程序说明：
+波特率等：512000@8n1
+采样率：2K samples/s
+数据包头：
+header0: 0xAB
+header1: 0xCD
+data_pack: 192字节
+
+

@@ -9,7 +9,7 @@ if ~isempty(instrfind)
 		delete(instrfind);
 end
 % 端口配置
-s = serialport('com3', 512000); % 创建串行端口对象
+s = serialport('com5', 512000); % 创建串行端口对象
 s.Timeout = 300; % 300秒未读到串口数据报错
 
 % 基本参数
@@ -75,15 +75,15 @@ while(1)
 	% 串口数据获取
 	while(1)
 	check_head = read(s, 1, 'uint8');
-		while check_head ~= 171
+		while check_head ~= 171  % 0xAB
 			check_head = read(s, 1, 'uint8');
 		end
 		check_head = read(s, 1, 'uint8');
-		if check_head == 205
+		if check_head == 205   % 0xCD
 			break
 		end
 	end
-	data = read(s, data_length, 'uint16');	
+	data = read(s, data_length, 'uint16');	% 获取1包数据
 	% 数据累积与滑窗
 	if data_index < cumulation_num - 1
 		data_cumulation_1(1, data_length/ 2* data_index+ 1: data_length/ 2* (data_index+ 1)) = data(1: 2: end);

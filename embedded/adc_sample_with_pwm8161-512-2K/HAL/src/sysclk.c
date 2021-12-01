@@ -6,10 +6,15 @@
 
 void SysClkInit(void)
 {
+    volatile uint32_t u32Pclk1;
+		volatile uint32_t u32cpu;
+	
     stc_clk_xtal_cfg_t   stcXtalCfg;
     stc_clk_mpll_cfg_t   stcMpllCfg;
     en_clk_sys_source_t  enSysClkSrc;
     stc_clk_sysclk_cfg_t stcSysClkCfg;
+	
+    stc_clk_freq_t stcClkTmp;
 
     MEM_ZERO_STRUCT(enSysClkSrc);
     MEM_ZERO_STRUCT(stcSysClkCfg);
@@ -58,6 +63,10 @@ void SysClkInit(void)
 
     /* Switch system clock source to MPLL. */
     CLK_SetSysClkSource(CLKSysSrcMPLL);
+		
+		CLK_GetClockFreq(&stcClkTmp);
+    u32Pclk1 = stcClkTmp.pclk1Freq;//adc clock
+		u32cpu = stcClkTmp.sysclkFreq;//main clock
 }
 
 
