@@ -39,7 +39,7 @@ void segger_init(void)
 	SEGGER_RTT_ConfigUpBuffer(1, "JScope_U2U2U2U2U2U2", &JS_RTT_UpBuffer[0], sizeof(JS_RTT_UpBuffer), SEGGER_RTT_MODE_NO_BLOCK_SKIP);
 	
 	SEGGER_RTT_Init();
-	SEGGER_RTT_printf(0, "%sphosense radar chip: XBR8161 DEMO%s\r\n", RTT_CTRL_BG_BRIGHT_RED, RTT_CTRL_RESET);
+	CV_LOG("%sphosense radar chip: XBR8161 DEMO%s\r\n", RTT_CTRL_BG_BRIGHT_RED, RTT_CTRL_RESET);
 }
 
 void read_uid(void)
@@ -47,13 +47,13 @@ void read_uid(void)
 		char	i = 0;
     char data[12] = {0};
 		
-		SEGGER_RTT_printf(0, "%smcu chip uid: \r\n", RTT_CTRL_TEXT_BRIGHT_GREEN);
+		CV_LOG("%smcu chip uid: \r\n", RTT_CTRL_TEXT_BRIGHT_GREEN);
 		for(i = 0; i < 12; i++) 
 		{
 				data[i] = *((unsigned char *)(FEM_UQID1 + i));
-				SEGGER_RTT_printf(0, "%02X ", data[i]);
+				CV_LOG("%02X ", data[i]);
 		}
-		SEGGER_RTT_printf(0, "%s\r\n", RTT_CTRL_RESET);
+		CV_LOG("%s\r\n", RTT_CTRL_RESET);
 }
 
 void enable_flash_cache(en_functional_state_t state0)
@@ -74,16 +74,16 @@ void memory_init(void)
 	
 	while (1 != FIFO_IsDataEmpty(&FIFO_Data[0]))
 	{
-		SEGGER_RTT_printf(0, "fifo0 number useless: %d\r\n", FIFO_GetDataCount(&FIFO_Data[0]));	
+		CV_LOG("fifo0 number useless: %d\r\n", FIFO_GetDataCount(&FIFO_Data[0]));	
 		//FIFO_ReadData(&FIFO_Data[0], &Fast_detection_data[0], 2000);
-		SEGGER_RTT_printf(0, "fifo0 number useless: %d\r\n", FIFO_GetDataCount(&FIFO_Data[0]));
+		CV_LOG("fifo0 number useless: %d\r\n", FIFO_GetDataCount(&FIFO_Data[0]));
 	}
 		
 	while (1 != FIFO_IsDataEmpty(&FIFO_Data[1]))
 	{
-		SEGGER_RTT_printf(0, "fifo1 number useless: %d\r\n", FIFO_GetDataCount(&FIFO_Data[1]));	
+		CV_LOG("fifo1 number useless: %d\r\n", FIFO_GetDataCount(&FIFO_Data[1]));	
 		//FIFO_ReadData(&FIFO_Data[1], &Fast_detection_data[0], 2000);
-		SEGGER_RTT_printf(0, "fifo1 number useless: %d\r\n", FIFO_GetDataCount(&FIFO_Data[1]));
+		CV_LOG("fifo1 number useless: %d\r\n", FIFO_GetDataCount(&FIFO_Data[1]));
 	}	
 	
 	FIFO_Init(&FIFO_Data[0]);
@@ -128,7 +128,7 @@ void sent_sample_data(void)
 void error_process(void)
 {
 	//do some print
-	SEGGER_RTT_WriteString(0, "error!!!\r\n");
+	CV_LOG("error!!!\r\n");
 }
 
 void uart_post_process(void)
@@ -147,7 +147,7 @@ void idle_process(void)
 	diff = now_tick - last_tick;
 	if ((0 != last_tick) && (0 != diff))
 	{
-		//SEGGER_RTT_printf(0, "idle tick max duty: %d\r\n", diff);
+		//CV_LOG("idle tick max duty: %d\r\n", diff);
 	}
 	last_tick = now_tick;
 	
@@ -157,38 +157,9 @@ void idle_process(void)
 	UsartRxErrProcess();
 	tuya_UsartRxErrProcess();
 	//
+	shellTask(&shell);
+	//
 	state = UART_PROTOCOL;
-}
-
-void app(void)
-{
-	uint32_t start_tick = 0;
-	uint32_t finish_tick = 0;
-	uint32_t diff = 0;
-	
-	switch (state)
-	{
-		case	UART_SEND_DATA:
-			start_tick = SysTick_GetTick();
-			sent_sample_data();
-			finish_tick = SysTick_GetTick();
-			diff = finish_tick - start_tick;
-			SEGGER_RTT_printf(0, "%s - sent_sample_data: %d ms\r\n", __FUNCTION__, diff);
-			break;
-		case	UART_PROTOCOL:
-			bt_uart_service();
-			uart_post_process();
-			break;
-		case	IDLE:
-			idle_process();
-			break;
-		case	ERROR_ERROR:
-			error_process();
-			break;
-		default:
-			error_process();
-			break;
-	}
 }
 
 void init_all(void)
@@ -222,7 +193,38 @@ void init_all(void)
 	read_uid();
 	*/
 	
+	//shell
+	User_Shell_Init();
 	
 	init_finish_tick = SysTick_GetTick();
-	SEGGER_RTT_printf(0, "\r\n%s - %s%sinit time: %dms%s\r\n", __FUNCTION__, RTT_CTRL_BG_BRIGHT_BLUE, RTT_CTRL_TEXT_WHITE, init_finish_tick - start_tick, RTT_CTRL_RESET);
+	CV_LOG("\r\n%s - %s%sinit time: %dms%s\r\n", __FUNCTION__, RTT_CTRL_BG_BRIGHT_BLUE, RTT_CTRL_TEXT_WHITE, init_finish_tick - start_tick, RTT_CTRL_RESET);
+}
+
+void app(void)
+{
+//	uint32_t start_tick = 0;
+//	uint32_t finish_tick = 0;
+	
+	switch (state)
+	{
+		case	UART_SEND_DATA:
+			//start_tick = SysTick_GetTick();
+			sent_sample_data();
+			//finish_tick = SysTick_GetTick();
+			//CV_LOG("%s - sent_sample_data: %d ms\r\n", __FUNCTION__, finish_tick - start_tick);
+			break;
+		case	UART_PROTOCOL:
+			bt_uart_service();
+			uart_post_process();
+			break;
+		case	IDLE:
+			idle_process();
+			break;
+		case	ERROR_ERROR:
+			error_process();
+			break;
+		default:
+			error_process();
+			break;
+	}
 }

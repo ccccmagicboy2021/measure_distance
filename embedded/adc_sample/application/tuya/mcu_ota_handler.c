@@ -38,10 +38,11 @@
 MCU OTA的方式和芯片强相关，该MCU OTA程序demo不一定适用所有芯片平台，但大同小异，用户可根据自己芯片平台的升级方式对该demo进行修改或参考该demo自行编写完成MCU OTA功能
 
 ******************************************************************************/
-
+#include "sys.h"
 #include "mcu_ota_handler.h"
 #include "string.h"
 #include "bluetooth.h"
+
 
 #ifdef SUPPORT_MCU_FIRM_UPDATE
 
@@ -160,7 +161,7 @@ static void mcu_ota_start_req(uint8_t*recv_data,uint32_t recv_len)
     if(mcu_ota_status_get()!=MCU_OTA_STATUS_NONE)
     {
         //TUYA_OTA_LOG("current ota status is not MCU_OTA_STATUS_NONE  and is : %d !",mcu_ota_status_get());
-				SEGGER_RTT_printf(0,"current ota status is not MCU_OTA_STATUS_NONE  and is : %d !\r\n",mcu_ota_status_get());
+				CV_LOG("current ota status is not MCU_OTA_STATUS_NONE  and is : %d !\r\n",mcu_ota_status_get());
         return;
     }
 
@@ -194,7 +195,7 @@ static void mcu_ota_file_info_req(uint8_t*recv_data,uint32_t recv_len)
 	
     if(mcu_ota_status_get()!=MCU_OTA_STATUS_START)
     {
-				SEGGER_RTT_printf(0,"current ota status is not MCU_OTA_STATUS_START  and is : %d !\r\n",mcu_ota_status_get());
+				CV_LOG("current ota status is not MCU_OTA_STATUS_START  and is : %d !\r\n",mcu_ota_status_get());
         return;
     }
 
@@ -228,19 +229,19 @@ static void mcu_ota_file_info_req(uint8_t*recv_data,uint32_t recv_len)
         {
             if(file_version <= MCU_OTA_VERSION)
             {
-								SEGGER_RTT_printf(0,"ota file version too old !\r\n");
+								CV_LOG("ota file version too old !\r\n");
                 state = 2;
             }
             else
             {
-								SEGGER_RTT_printf(0,"ota file length is too bigger than rev space !\r\n");
+								CV_LOG("ota file length is too bigger than rev space !\r\n");
                 state = 3;
             }
         }
     }
     else
     {
-				SEGGER_RTT_printf(0,"ota pid error !\r\n");
+				CV_LOG("ota pid error !\r\n");
         state = 1;
     }
 
@@ -265,16 +266,16 @@ static void mcu_ota_file_info_req(uint8_t*recv_data,uint32_t recv_len)
         current_package = 0;
         last_package = 0;
 			
-				SEGGER_RTT_printf(0, "%sota file version : 0x%06x\r\n", RTT_CTRL_TEXT_BRIGHT_MAGENTA, file_version);
-				SEGGER_RTT_printf(0, "ota file length  : 0x%08x\r\n", file_length);
-				SEGGER_RTT_printf(0, "ota file crc     : 0x%08x\r\n", file_crc);
+				CV_LOG("%sota file version : 0x%06x\r\n", RTT_CTRL_TEXT_BRIGHT_MAGENTA, file_version);
+				CV_LOG("ota file length  : 0x%08x\r\n", file_length);
+				CV_LOG("ota file crc     : 0x%08x\r\n", file_crc);
 				
-				SEGGER_RTT_printf(0, "ota file md5     : ");
+				CV_LOG("ota file md5     : ");
 				for (i =0;i<16;i++)
 				{
-					SEGGER_RTT_printf(0, "%02x ", file_md5[i]);
+					CV_LOG("%02x ", file_md5[i]);
 				}
-				SEGGER_RTT_printf(0, "\r\n%s", RTT_CTRL_RESET);
+				CV_LOG("\r\n%s", RTT_CTRL_RESET);
     }
     payload_len = 25;
 		length = set_bt_uart_buffer(length,(unsigned char *)p_buf,payload_len);
@@ -292,7 +293,7 @@ static void mcu_ota_offset_req(uint8_t*recv_data,uint32_t recv_len)
 	
     if(mcu_ota_status_get()!=MCU_OTA_STATUS_FILE_INFO)
     {
-				SEGGER_RTT_printf(0,"current ota status is not MCU_OTA_STATUS_FILE_INFO  and is : %d !\r\n",mcu_ota_status_get());
+				CV_LOG("current ota status is not MCU_OTA_STATUS_FILE_INFO  and is : %d !\r\n",mcu_ota_status_get());
         return;
     }
 
@@ -301,7 +302,7 @@ static void mcu_ota_offset_req(uint8_t*recv_data,uint32_t recv_len)
     offset += recv_data[2]<<8;
     offset += recv_data[3];
 
-		SEGGER_RTT_printf(0, "offset: 0x%08x\r\n", offset);
+		CV_LOG("offset: 0x%08x\r\n", offset);
 
     p_buf[0] = offset_mcu_last>>24;
     p_buf[1] = offset_mcu_last>>16;
@@ -327,7 +328,7 @@ static void mcu_ota_data_req(uint8_t*recv_data,uint32_t recv_len)
     
     if((mcu_ota_status_get()!=MCU_OTA_STATUS_FILE_OFFSET)&&(mcu_ota_status_get()!=MCU_OTA_STATUS_FILE_DATA))
     {
-        SEGGER_RTT_printf(0, "current ota status is not MCU_OTA_STATUS_FILE_OFFSET  or MCU_OTA_STATUS_FILE_DATA and is : %d !\r\n", mcu_ota_status_get());
+        CV_LOG("current ota status is not MCU_OTA_STATUS_FILE_OFFSET  or MCU_OTA_STATUS_FILE_DATA and is : %d !\r\n", mcu_ota_status_get());
 				return;
     }
 
@@ -338,16 +339,16 @@ static void mcu_ota_data_req(uint8_t*recv_data,uint32_t recv_len)
 		//��ǰ�İ�����
     len = (recv_data[2]<<8)|recv_data[3];
 		
-		SEGGER_RTT_printf(0, "%s - %d - %d\r\n", __func__, last_package, current_package);		
+		CV_LOG("%s - %d - %d\r\n", __func__, last_package, current_package);		
 
     if((current_package!=(last_package+1))&&(current_package!=0))
     {
-        SEGGER_RTT_printf(0, "ota received package number error. received package number : %d\r\n", current_package);
+        CV_LOG("ota received package number error. received package number : %d\r\n", current_package);
         state = 1;	//�����쳣
     }
     else  if(len>MAX_DFU_DATA_LEN)
     {
-				SEGGER_RTT_printf(0, "ota received package data length error : %d\r\n", len);
+				CV_LOG("ota received package data length error : %d\r\n", len);
         state = 5;
     }
     else
@@ -371,7 +372,7 @@ static void mcu_ota_data_req(uint8_t*recv_data,uint32_t recv_len)
 
     if(state!=0)//�������ָ���ʼ״̬
     {
-				SEGGER_RTT_printf(0, "ota error!\r\n");
+				CV_LOG("ota error!\r\n");
         mcu_ota_status_set(MCU_OTA_STATUS_NONE);
         mcu_ota_init_disconnect();
     }
@@ -384,14 +385,14 @@ static void mcu_ota_data_req(uint8_t*recv_data,uint32_t recv_len)
 
 static void reset_after_flash_write(void * p_context)
 {
-		SEGGER_RTT_printf(0, "start reset~~~.\r\n");
+		CV_LOG("start reset~~~.\r\n");
     mcu_device_delay_restart();
 }
 
 
 static void on_dfu_complete(void)
 {
-		SEGGER_RTT_printf(0, "All flash operations have completed. DFU completed.\r\n");
+		CV_LOG("All flash operations have completed. DFU completed.\r\n");
     reset_after_flash_write(NULL);
 }
 
@@ -415,13 +416,13 @@ static void on_data_write_request_sched(void * data)
 
     if(state==0)
     {
-			SEGGER_RTT_printf(0, "ota success!\r\n");
+			CV_LOG("ota success!\r\n");
 			//do some thing here!
       on_dfu_complete();
     }
     else
     {
-			SEGGER_RTT_printf(0, "ota crc error!\r\n");
+			CV_LOG("ota crc error!\r\n");
       mcu_ota_status_set(MCU_OTA_STATUS_NONE);
       mcu_ota_init_disconnect();
     }
@@ -434,7 +435,7 @@ static void mcu_ota_end_req(uint8_t*recv_data,uint32_t recv_len)
 {
     if(mcu_ota_status_get()==MCU_OTA_STATUS_NONE)
     {
-				SEGGER_RTT_printf(0, "current ota status is MCU_OTA_STATUS_NONE!\r\n");
+				CV_LOG("current ota status is MCU_OTA_STATUS_NONE!\r\n");
         return;
     }
     on_data_write_request_sched(NULL);
@@ -461,7 +462,7 @@ void mcu_ota_proc(uint16_t cmd,uint8_t*recv_data,uint32_t recv_len)
         mcu_ota_end_req(recv_data,recv_len);
         break;
     default:
-				SEGGER_RTT_printf(0,"tuya_ota_proc cmd err.\r\n");
+				CV_LOG("tuya_ota_proc cmd err.\r\n");
         break;
     }
 

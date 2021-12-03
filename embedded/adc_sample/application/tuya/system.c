@@ -314,12 +314,12 @@ void data_handle(unsigned short offset)
 				//0 sucess, 1 fail
 				if (hand_up_status)
 				{
-					SEGGER_RTT_printf(0, "hand up ERROR!!!\r\n");
+					CV_LOG("hand up ERROR!!!\r\n");
 				}
 				else
 				{
 					//
-					SEGGER_RTT_printf(0, "hand up OK!!!\r\n");
+					CV_LOG("hand up OK!!!\r\n");
 				}			
 			}
 			break;

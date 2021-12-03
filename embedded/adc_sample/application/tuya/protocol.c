@@ -188,7 +188,7 @@ static unsigned char dp_download_pir_delay_handle(const unsigned char value[], u
     
     pir_delay = mcu_get_dp_download_value(value,length);
 	
-	SEGGER_RTT_printf(0, "%s%snew delay_time_num: %d%s\r\n", RTT_CTRL_BG_BRIGHT_YELLOW, RTT_CTRL_TEXT_BLACK, pir_delay, RTT_CTRL_RESET);
+	CV_LOG("%s%snew delay_time_num: %d%s\r\n", RTT_CTRL_BG_BRIGHT_YELLOW, RTT_CTRL_TEXT_BLACK, pir_delay, RTT_CTRL_RESET);
 
     //处理完DP数据后应有反馈
     ret = mcu_dp_value_update(DPID_PIR_DELAY, pir_delay);

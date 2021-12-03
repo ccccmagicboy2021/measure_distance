@@ -8,6 +8,8 @@
 #include "bluetooth.h"
 #include "SEGGER_RTT.h"
 #include "SEGGER_RTT_Conf.h"
+#include "shell.h"
+#include "shell_port.h"
 
 #include "flash_def.h"
 #include "ddl_config.h"
@@ -35,6 +37,12 @@ typedef uint8_t  u8;
 typedef const uint32_t uc32;  
 typedef const uint16_t uc16;  
 typedef const uint8_t uc8;
+
+#define CV_LOG(fmt, ...) \
+do \
+{ \
+		SEGGER_RTT_printf(0, fmt, ##__VA_ARGS__); \
+}while(0)
 
 #define ALL_UPLOAD_DELAY		100
 #define SEGGER_RTT_IN_RAM		1

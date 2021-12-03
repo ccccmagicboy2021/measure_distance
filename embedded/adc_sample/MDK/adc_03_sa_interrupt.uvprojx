@@ -141,7 +141,7 @@
           <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
-          <pFcarmGrp></pFcarmGrp>
+          <pFcarmGrp>common</pFcarmGrp>
           <pFcArmRoot></pFcArmRoot>
           <FcArmLst>0</FcArmLst>
         </Utilities>
@@ -300,8 +300,8 @@
               </OCR_RVCT8>
               <OCR_RVCT9>
                 <Type>0</Type>
-                <StartAddress>0x1fff9000</StartAddress>
-                <Size>0x2e000</Size>
+                <StartAddress>0x1fff8000</StartAddress>
+                <Size>0x2f000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>__DEBUG,HC32F46x,USE_DEVICE_DRIVER_LIB,ARM_MATH_CM4,_CC_ARM,__TARGET_FPU_VFP,__FPU_PRESENT,ARM_MATH_MATRIX_CHECK,ARM_MATH_ROUNDING,SYSTEM_GLOBAL</Define>
               <Undefine></Undefine>
-              <IncludePath>C:\Keil_v5\ARM\include;..\MDK;..\source;..\common;..\driver\inc;..\driver\src;..\application\rtt;..\application\tuya;..\application\adc;..\application\led;..\application\usart;..\application\timer;..\application\matlab;..\application\fifo;..\application\app;..\application\clk;..\DSP;..\DSP\Include</IncludePath>
+              <IncludePath>C:\Keil_v5\ARM\include;..\MDK;..\source;..\common;..\driver\inc;..\driver\src;..\application\rtt;..\application\tuya;..\application\adc;..\application\led;..\application\usart;..\application\timer;..\application\matlab;..\application\fifo;..\application\app;..\application\clk;..\application\shell;..\DSP;..\DSP\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -494,49 +494,14 @@
               <FilePath>..\application\timer\mytimer.c</FilePath>
             </File>
             <File>
-              <FileName>fifo.c</FileName>
+              <FileName>myclk.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\application\fifo\fifo.c</FilePath>
-            </File>
-            <File>
-              <FileName>mcu_api.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\tuya\mcu_api.c</FilePath>
-            </File>
-            <File>
-              <FileName>system.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\tuya\system.c</FilePath>
-            </File>
-            <File>
-              <FileName>mcu_ota_handler.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\tuya\mcu_ota_handler.c</FilePath>
-            </File>
-            <File>
-              <FileName>protocol.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\tuya\protocol.c</FilePath>
-            </File>
-            <File>
-              <FileName>SEGGER_RTT.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\rtt\SEGGER_RTT.c</FilePath>
-            </File>
-            <File>
-              <FileName>SEGGER_RTT_printf.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\rtt\SEGGER_RTT_printf.c</FilePath>
+              <FilePath>..\application\clk\myclk.c</FilePath>
             </File>
             <File>
               <FileName>app.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\app\app.c</FilePath>
-            </File>
-            <File>
-              <FileName>myclk.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\clk\myclk.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -547,6 +512,86 @@
               <FileName>arm_cortexM4lf_math.lib</FileName>
               <FileType>4</FileType>
               <FilePath>..\DSP\arm_cortexM4lf_math.lib</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>shell</GroupName>
+          <Files>
+            <File>
+              <FileName>shell.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\shell\shell.c</FilePath>
+            </File>
+            <File>
+              <FileName>shell_cmd_list.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\shell\shell_cmd_list.c</FilePath>
+            </File>
+            <File>
+              <FileName>shell_companion.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\shell\shell_companion.c</FilePath>
+            </File>
+            <File>
+              <FileName>shell_ext.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\shell\shell_ext.c</FilePath>
+            </File>
+            <File>
+              <FileName>shell_port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\shell\shell_port.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>tuya</GroupName>
+          <Files>
+            <File>
+              <FileName>system.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\tuya\system.c</FilePath>
+            </File>
+            <File>
+              <FileName>protocol.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\tuya\protocol.c</FilePath>
+            </File>
+            <File>
+              <FileName>mcu_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\tuya\mcu_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>mcu_ota_handler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\tuya\mcu_ota_handler.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>debug</GroupName>
+          <Files>
+            <File>
+              <FileName>SEGGER_RTT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\rtt\SEGGER_RTT.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_RTT_printf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\rtt\SEGGER_RTT_printf.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>memory</GroupName>
+          <Files>
+            <File>
+              <FileName>fifo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\fifo\fifo.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1043,49 +1088,14 @@
               <FilePath>..\application\timer\mytimer.c</FilePath>
             </File>
             <File>
-              <FileName>fifo.c</FileName>
+              <FileName>myclk.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\application\fifo\fifo.c</FilePath>
-            </File>
-            <File>
-              <FileName>mcu_api.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\tuya\mcu_api.c</FilePath>
-            </File>
-            <File>
-              <FileName>system.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\tuya\system.c</FilePath>
-            </File>
-            <File>
-              <FileName>mcu_ota_handler.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\tuya\mcu_ota_handler.c</FilePath>
-            </File>
-            <File>
-              <FileName>protocol.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\tuya\protocol.c</FilePath>
-            </File>
-            <File>
-              <FileName>SEGGER_RTT.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\rtt\SEGGER_RTT.c</FilePath>
-            </File>
-            <File>
-              <FileName>SEGGER_RTT_printf.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\rtt\SEGGER_RTT_printf.c</FilePath>
+              <FilePath>..\application\clk\myclk.c</FilePath>
             </File>
             <File>
               <FileName>app.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\app\app.c</FilePath>
-            </File>
-            <File>
-              <FileName>myclk.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\clk\myclk.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1096,6 +1106,86 @@
               <FileName>arm_cortexM4lf_math.lib</FileName>
               <FileType>4</FileType>
               <FilePath>..\DSP\arm_cortexM4lf_math.lib</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>shell</GroupName>
+          <Files>
+            <File>
+              <FileName>shell.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\shell\shell.c</FilePath>
+            </File>
+            <File>
+              <FileName>shell_cmd_list.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\shell\shell_cmd_list.c</FilePath>
+            </File>
+            <File>
+              <FileName>shell_companion.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\shell\shell_companion.c</FilePath>
+            </File>
+            <File>
+              <FileName>shell_ext.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\shell\shell_ext.c</FilePath>
+            </File>
+            <File>
+              <FileName>shell_port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\shell\shell_port.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>tuya</GroupName>
+          <Files>
+            <File>
+              <FileName>system.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\tuya\system.c</FilePath>
+            </File>
+            <File>
+              <FileName>protocol.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\tuya\protocol.c</FilePath>
+            </File>
+            <File>
+              <FileName>mcu_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\tuya\mcu_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>mcu_ota_handler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\tuya\mcu_ota_handler.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>debug</GroupName>
+          <Files>
+            <File>
+              <FileName>SEGGER_RTT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\rtt\SEGGER_RTT.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_RTT_printf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\rtt\SEGGER_RTT_printf.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>memory</GroupName>
+          <Files>
+            <File>
+              <FileName>fifo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\fifo\fifo.c</FilePath>
             </File>
           </Files>
         </Group>
