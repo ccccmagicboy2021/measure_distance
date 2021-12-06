@@ -15,8 +15,8 @@ void led_init(void) {
     PORT_Init(PortA, Pin01, & stcPortInit); //Red
     PORT_Init(PortA, Pin05, & stcPortInit); //Green
 
-    led_red(0, 1);
-    led_green(0, 1);
+    led_red(0, 1);	//off
+    led_green(0, 1);		//off
 }
 
 void led_red(char onoff, char en) {

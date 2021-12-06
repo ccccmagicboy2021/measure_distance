@@ -20,7 +20,8 @@ static void UsartRxIrqCallback(void)
 	
 		rev_data1 = (unsigned char)rev_data;
 	
-    uart_receive_input(rev_data1);	
+    //letter-shell
+		shellHandler(&shell, rev_data1);
 }
 
 static void tuya_UsartRxIrqCallback(void)
@@ -32,7 +33,7 @@ static void tuya_UsartRxIrqCallback(void)
 	
 		rev_data1 = (unsigned char)rev_data;
 	
-    uart_receive_input(rev_data1);
+    uart_receive_input(rev_data1);		//tuya fifo
 }
 
 /**
@@ -170,12 +171,8 @@ void usart_init(void)
     USART_FuncCmd(USART_TUYA_CH, UsartRx, Enable);
     USART_FuncCmd(USART_TUYA_CH, UsartTx, Enable);
 		
-#ifndef TUYA_ENABLE
-		USART_FuncCmd(USART_CH, UsartRxInt, Enable);       //enalbe the rxd interrupt
-#else
-    USART_FuncCmd(USART_TUYA_CH, UsartRxInt, Enable);       //enalbe the rxd interrupt
-#endif
-
+		USART_FuncCmd(USART_CH, UsartRxInt, Enable);						//enalbe the rxd interrupt
+    USART_FuncCmd(USART_TUYA_CH, UsartRxInt, Enable);				//enalbe the rxd interrupt
 }
 
 

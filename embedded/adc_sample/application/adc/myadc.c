@@ -1,5 +1,6 @@
 #include "myadc.h"
 #include "hc32_ddl.h"
+#include "sys.h"
 
 uint16_t m_au16Adc1SaValue[ADC1_CH_COUNT];
 uint16_t m_au16Adc2SaValue[ADC2_CH_COUNT];
@@ -26,8 +27,23 @@ static void AdcSetPinMode(uint8_t u8AdcPin, en_pin_mode_t enMode);
  ******************************************************************************/
 void AdcClockConfig(void)
 {
-	//PCLK2:50--->>>ADC_CLK
-	//PCLK4:100
+		//set to 60MHz
+	
+    stc_clk_upll_cfg_t stcUpllCfg;
+
+    MEM_ZERO_STRUCT(stcUpllCfg);
+
+    /* Set UPLL out 240MHz. */
+    stcUpllCfg.pllmDiv = 2u;
+    /* upll = 8M(XTAL) / pllmDiv * plln */
+    stcUpllCfg.plln    = 60u;
+    stcUpllCfg.PllpDiv = 4u;
+    stcUpllCfg.PllqDiv = 4u;
+    stcUpllCfg.PllrDiv = 4u;
+    CLK_SetPllSource(ClkPllSrcXTAL);		//8MHz
+    CLK_UpllConfig(&stcUpllCfg);
+    CLK_UpllCmd(Enable);
+    CLK_SetPeriClkSource(ClkPeriSrcUpllr);
 }
 
 /**
@@ -85,9 +101,9 @@ void AdcChannelConfig(void)
     ADC_AddAdcChannel(M4_ADC1, &stcChCfg);
 
     /* 3. Configure the average channel if you need. */
-		ADC_ConfigAvg(M4_ADC1, AdcAvcnt_64);
+		//ADC_ConfigAvg(M4_ADC1, AdcAvcnt_64);
     //ADC_ConfigAvg(M4_ADC1, AdcAvcnt_128);
-		//ADC_ConfigAvg(M4_ADC1, AdcAvcnt_256);
+		ADC_ConfigAvg(M4_ADC1, AdcAvcnt_256);
     /* 4. Add average channel if you need. */
     ADC_AddAvgChannel(M4_ADC1, ADC1_AVG_CHANNEL);
 /////////////////////////////////////////////////////////////////////////////////
@@ -114,7 +130,8 @@ void AdcChannelConfig(void)
     /* Add PGA pin */
     ADC_AddPgaChannel(ADC1_PGA_CHANNEL);
     /* Enable PGA. */
-    ADC_PgaCmd(Enable);
+    //ADC_PgaCmd(Enable);
+		ADC_PgaCmd(Disable);
 }
 
 /**
@@ -347,9 +364,24 @@ static void AdcDmaConfig(void)
 void AdcConfig(void)
 {
     AdcClockConfig();
+		adc_clk_test();
     AdcInitConfig();
     AdcChannelConfig();
     AdcDmaConfig();
+	
+		ADC_StartConvert(M4_ADC1);
+		ADC_StartConvert(M4_ADC2);
 }
 
+void adc_clk_test(void)
+{
+	volatile uint32_t adc_clk = 0;
+	
+	stc_pll_clk_freq_t stcClkTmp1;
+	CLK_GetPllClockFreq(&stcClkTmp1);
+	
+  adc_clk = stcClkTmp1.upllr;
+	
+	CV_LOG("adc_clk: %d \n", adc_clk);
+}
 

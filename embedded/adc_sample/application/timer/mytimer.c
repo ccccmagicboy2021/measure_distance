@@ -10,8 +10,6 @@ extern uint16_t m_au16Adc1SaValue[ADC1_CH_COUNT];
 extern uint16_t m_au16Adc2SaValue[ADC2_CH_COUNT];
 
 volatile uint32_t Timer_Counter = 0;
-volatile uint32_t light_sensor_Timer_Counter = 0;
-volatile uint32_t data_report_counter = 0;
 
 Val_t adc_value;
 
@@ -29,19 +27,10 @@ void timer0_init(void)
     stc_tim0_base_init_t stcTimerCfg;
     stc_irq_regi_conf_t stcIrqRegiConf;
     stc_port_init_t stcPortInit;
-
-    volatile uint32_t u32Pclk1;
-		volatile uint32_t u32cpu;
-    stc_clk_freq_t stcClkTmp;
     
     MEM_ZERO_STRUCT(stcTimerCfg);
     MEM_ZERO_STRUCT(stcIrqRegiConf);
     MEM_ZERO_STRUCT(stcPortInit);
-
-    /* Get pclk1 */
-    CLK_GetClockFreq(&stcClkTmp);
-    u32Pclk1 = stcClkTmp.pclk1Freq;
-		u32cpu = stcClkTmp.sysclkFreq;
 
     /* Timer0 peripheral enable */
     ENABLE_TMR0();
@@ -72,12 +61,12 @@ void timer0_init(void)
 
     /*config register for channel B */
     stcTimerCfg.Tim0_CounterMode = Tim0_Sync;
-    stcTimerCfg.Tim0_SyncClockSource = Tim0_Pclk1;//50MHz
+    stcTimerCfg.Tim0_SyncClockSource = Tim0_Pclk1;//50MHz, 20ns
     stcTimerCfg.Tim0_ClockDivision = Tim0_ClkDiv0;
-    //stcTimerCfg.Tim0_CmpValue = (uint16_t)(25000 - 1);//500us
+    stcTimerCfg.Tim0_CmpValue = (uint16_t)(25000 - 1);//500us
 		//stcTimerCfg.Tim0_CmpValue = (uint16_t)(12800 - 1);//256us
 		//stcTimerCfg.Tim0_CmpValue = (uint16_t)(12500 - 1);//250us
-		stcTimerCfg.Tim0_CmpValue = (uint16_t)(7500 - 1);//150us	
+		//stcTimerCfg.Tim0_CmpValue = (uint16_t)(7500 - 1);//150us	
 		//stcTimerCfg.Tim0_CmpValue = (uint16_t)(5000 - 1);//100us
     TIMER0_BaseInit(TMR_UNIT,Tim0_ChannelB,&stcTimerCfg);
 
@@ -103,50 +92,27 @@ void timer0_init(void)
     TIMER0_Cmd(TMR_UNIT,Tim0_ChannelB,Disable);
 }
 
-static void Timer0B_CallBack(void)		// T === 500us
+static void Timer0B_CallBack(void)		// T = var
 {
-  u16  if_adc_data = 0;		//IF adcÊý¾Ý
+#if (ADC1_SA_NORMAL_CHANNEL == (ADC1_CH6))
+	adc_value.Val1 = m_au16Adc1SaValue[6u];	//if
+#elif (ADC1_SA_NORMAL_CHANNEL == (ADC1_CH0))
+	adc_value.Val1 = m_au16Adc1SaValue[0u];	//adc1
+#elif (ADC1_SA_NORMAL_CHANNEL == (ADC1_CH4))
+	adc_value.Val1 = m_au16Adc1SaValue[4u];	//ADC1_CH4	//adc2
+#endif
 	
-	if (Set == DMA_GetIrqFlag(ADC1_SA_DMA_UNIT, ADC1_SA_DMA_CH, BlkTrnCpltIrq))
-	{
-		DMA_ClearIrqFlag(ADC1_SA_DMA_UNIT, ADC1_SA_DMA_CH, BlkTrnCpltIrq);
+	adc_value.Val2 = m_au16Adc2SaValue[5u];
+	adc_value.Val3 = 0;
+	adc_value.Val4 = 0;
+	adc_value.Val5 = 0;
+	adc_value.Val6 = 0;
 		
-		if_adc_data =  m_au16Adc1SaValue[6u];
-		
-		FIFO_WriteOneData(&FIFO_Data[0], if_adc_data);
-		
-		adc_value.Val1 = if_adc_data;
-		adc_value.Val2 = 0;
-		adc_value.Val3 = 0;
-		adc_value.Val4 = 0;
-		adc_value.Val5 = 0;
-		adc_value.Val6 = 0;
-		
-		SEGGER_RTT_Write(1, &adc_value, sizeof(adc_value));
-
-	}
-	
-	if (Set == DMA_GetIrqFlag(ADC2_SA_DMA_UNIT, ADC2_SA_DMA_CH, BlkTrnCpltIrq))
-	{
-		DMA_ClearIrqFlag(ADC2_SA_DMA_UNIT, ADC2_SA_DMA_CH, BlkTrnCpltIrq);	
-
-		//switch_delay = m_au16Adc2SaValue[0u];
-		//light_sensor2_adc_data = m_au16Adc2SaValue[3u];		
-		//switch_dist = m_au16Adc2SaValue[4u];
-		//light_sensor_adc_data =  m_au16Adc2SaValue[5u];
-	}	
-	
+	SEGGER_RTT_Write(1, &adc_value, sizeof(adc_value));	
 }
 
 static void Timer0A_CallBack(void)      //  T = 1ms
 {
 	Timer_Counter++;
-	light_sensor_Timer_Counter++;
-	data_report_counter++;
-	
-	if (light_sensor_Timer_Counter >= 1000*10)
-	{
-		light_sensor_Timer_Counter = 0;
-	}
 }
 

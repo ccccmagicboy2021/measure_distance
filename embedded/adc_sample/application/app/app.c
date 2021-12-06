@@ -87,9 +87,11 @@ void memory_init(void)
 	}	
 	
 	FIFO_Init(&FIFO_Data[0]);
-	FIFO_Init(&FIFO_Data[1]);	
+	FIFO_Init(&FIFO_Data[1]);
+	
 	//memset(&Fast_detection_data[0], 0, MAX_DATA_POOL * 2);
 	memset(&FIFO_DataBuffer[0], 0, FIFO_DATA_NUM * FIFO_DATA_SIZE * 2);
+	
 	stop_sample(0);
 }
 
@@ -103,26 +105,28 @@ void gpio_init(void)
 	stcPortInit.enExInt = Disable;
 	stcPortInit.enPullUp = Disable;
 
-	//PORT_Init(PortA, Pin07, &stcPortInit);   //P1-4	//gpio0
-	PORT_Init(PortA, Pin08, &stcPortInit);   //P1-3	//gpio1
-	//PORT_Init(PortB, Pin06, &stcPortInit);   //P5-1 //gpio2
-	//PORT_Init(PortB, Pin05, &stcPortInit);   //P5-2	//gpio3
-	//PORT_Init(PortA, Pin00, &stcPortInit);   //P5-3 //gpio4
-	//PORT_Init(PortA, Pin04, &stcPortInit);   //P5-4	//gpio5		
-	//PORT_Init(PortB, Pin00, &stcPortInit);   //P5-5 //gpio6
+	//PORT_Init(PortA, Pin07, &stcPortInit);   //O1
+	//PORT_Init(PortA, Pin08, &stcPortInit);   //O
+	PORT_Init(PortB, Pin06, &stcPortInit);   //RF_EN
+	//PORT_Init(PortB, Pin05, &stcPortInit);   //FSK_PWM
+	//PORT_Init(PortA, Pin00, &stcPortInit);   //ADC1
+	//PORT_Init(PortA, Pin04, &stcPortInit);   //ADC2		
+	//PORT_Init(PortB, Pin00, &stcPortInit);   //N/A
 		
 //	GPIO0_LOW();
-	GPIO1_LOW();
+//	GPIO1_LOW();
 //	GPIO2_LOW();
 //	GPIO3_LOW();
 //	GPIO4_LOW();
 //	GPIO5_LOW();
 //	GPIO6_LOW();
+
+	GPIO2_HIGH();		//enalbe the rf of radar chip
 }
 
 void sent_sample_data(void)
 {
-
+	//Delay_ms(100);
 }
 
 void error_process(void)
@@ -179,23 +183,26 @@ void init_all(void)
 	memory_init();
 	//flash
 	enable_flash_cache(Enable);
-	
-	
-	/*
-	usart_init();
-	led_init();	
-	AdcConfig();
-	timer0_init();
-	ADC_StartConvert(M4_ADC1);
-	ADC_StartConvert(M4_ADC2);
-	bt_protocol_init();
-	gpio_init();
+	//uuid
 	read_uid();
-	*/
-	
+	//uart
+	usart_init();
+	//gpio
+	led_init();
+	gpio_init();
+	//tuya init
+	bt_protocol_init();
+	//pwm
+	Timera_Config();
+	//adc
+	AdcConfig();
+	//hw timer
+	timer0_init();
 	//shell
 	User_Shell_Init();
-	
+	//enable timer0 b
+	stop_sample(0);
+	//
 	init_finish_tick = SysTick_GetTick();
 	CV_LOG("\r\n%s - %s%sinit time: %dms%s\r\n", __FUNCTION__, RTT_CTRL_BG_BRIGHT_BLUE, RTT_CTRL_TEXT_WHITE, init_finish_tick - start_tick, RTT_CTRL_RESET);
 }

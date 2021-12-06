@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>__DEBUG,HC32F46x,USE_DEVICE_DRIVER_LIB,ARM_MATH_CM4,_CC_ARM,__TARGET_FPU_VFP,__FPU_PRESENT,ARM_MATH_MATRIX_CHECK,ARM_MATH_ROUNDING,SYSTEM_GLOBAL</Define>
               <Undefine></Undefine>
-              <IncludePath>C:\Keil_v5\ARM\include;..\MDK;..\source;..\common;..\driver\inc;..\driver\src;..\application\rtt;..\application\tuya;..\application\adc;..\application\led;..\application\usart;..\application\timer;..\application\matlab;..\application\fifo;..\application\app;..\application\clk;..\application\shell;..\DSP;..\DSP\Include</IncludePath>
+              <IncludePath>C:\Keil_v5\ARM\include;..\MDK;..\source;..\common;..\driver\inc;..\driver\src;..\application\rtt;..\application\tuya;..\application\adc;..\application\led;..\application\usart;..\application\timer;..\application\matlab;..\application\fifo;..\application\app;..\application\clk;..\application\shell;..\application\pwm;..\DSP;..\DSP\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -468,6 +468,11 @@
               <FileType>1</FileType>
               <FilePath>..\driver\src\hc32f46x_dmac.c</FilePath>
             </File>
+            <File>
+              <FileName>hc32f46x_timera.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\src\hc32f46x_timera.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -502,6 +507,11 @@
               <FileName>app.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\app\app.c</FilePath>
+            </File>
+            <File>
+              <FileName>timera_pwm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\pwm\timera_pwm.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1062,6 +1072,11 @@
               <FileType>1</FileType>
               <FilePath>..\driver\src\hc32f46x_dmac.c</FilePath>
             </File>
+            <File>
+              <FileName>hc32f46x_timera.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\src\hc32f46x_timera.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1096,6 +1111,11 @@
               <FileName>app.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\app\app.c</FilePath>
+            </File>
+            <File>
+              <FileName>timera_pwm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\pwm\timera_pwm.c</FilePath>
             </File>
           </Files>
         </Group>

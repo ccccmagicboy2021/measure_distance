@@ -21,6 +21,7 @@
 #include "myclk.h"
 #include "myusart.h"
 #include "myadc.h"
+#include "timera_pwm.h"
 
 typedef int32_t  s32;
 typedef int16_t s16;
@@ -64,14 +65,14 @@ do \
 //#define GPIO0_HIGH()		(PORT_SetBits(PortA, Pin07))
 //#define GPIO0_LOW()			(PORT_ResetBits(PortA, Pin07))
 
-#define GPIO1_HIGH()		(PORT_SetBits(PortA, Pin08))			//relay
-#define GPIO1_LOW()			(PORT_ResetBits(PortA, Pin08))
+//#define GPIO1_HIGH()		(PORT_SetBits(PortA, Pin08))
+//#define GPIO1_LOW()			(PORT_ResetBits(PortA, Pin08))
 
 #define GPIO2_HIGH()		(PORT_SetBits(PortB, Pin06))			//not use
 #define GPIO2_LOW()			(PORT_ResetBits(PortB, Pin06))
 
-#define GPIO3_HIGH()		(PORT_SetBits(PortB, Pin05))			//not use
-#define GPIO3_LOW()			(PORT_ResetBits(PortB, Pin05))
+//#define GPIO3_HIGH()		(PORT_SetBits(PortB, Pin05))			//not use
+//#define GPIO3_LOW()			(PORT_ResetBits(PortB, Pin05))
 
 //#define GPIO4_HIGH()		(PORT_SetBits(PortA, Pin00))
 //#define GPIO4_LOW()			(PORT_ResetBits(PortA, Pin00))
