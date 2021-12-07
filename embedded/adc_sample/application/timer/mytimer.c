@@ -103,7 +103,7 @@ static void Timer0B_CallBack(void)		// T = var
 #endif
 	
 	adc_value.Val2 = m_au16Adc2SaValue[5u];
-	adc_value.Val3 = 0;
+	adc_value.Val3 = PORT_GetBit(TIMERA_UNIT1_CH1_PORT, TIMERA_UNIT1_CH1_PIN);
 	adc_value.Val4 = 0;
 	adc_value.Val5 = 0;
 	adc_value.Val6 = 0;
