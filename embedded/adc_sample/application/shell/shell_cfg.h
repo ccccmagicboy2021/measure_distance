@@ -81,7 +81,7 @@
  *        启用后，可以通过`exec [addr] [args]`直接执行对应地址的函数
  * @attention 如果地址错误，可能会直接引起程序崩溃
  */
-#define     SHELL_EXEC_UNDEF_FUNC       0
+#define     SHELL_EXEC_UNDEF_FUNC       1
 
 /**
  * @brief shell命令参数最大数量
