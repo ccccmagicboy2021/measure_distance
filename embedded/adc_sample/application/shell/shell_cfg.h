@@ -18,7 +18,7 @@
  *        使能此宏，则`shellTask()`函数会一直循环读取输入，一般使用操作系统建立shell
  *        任务时使能此宏，关闭此宏的情况下，一般适用于无操作系统，在主循环中调用`shellTask()`
  */
-#define     SHELL_TASK_WHILE            1
+#define     SHELL_TASK_WHILE            0
 
 /**
  * @brief 是否使用命令导出方式
@@ -41,7 +41,7 @@
 /**
  * @brief 是否在输出命令列表中列出用户
  */
-#define     SHELL_HELP_LIST_USER        0
+#define     SHELL_HELP_LIST_USER        1
 
 /**
  * @brief 是否在输出命令列表中列出变量
@@ -136,7 +136,7 @@
  *        定义此宏为获取系统Tick，如`HAL_GetTick()`
  * @note 此宏不定义时无法使用双击tab补全命令help，无法使用shell超时锁定
  */
-#define     SHELL_GET_TICK()            0
+#define     SHELL_GET_TICK()            SysTick_GetTick()
 
 /**
  * @brief 使用锁
@@ -169,13 +169,13 @@
 /**
  * @brief shell默认用户
  */
-#define     SHELL_DEFAULT_USER          "letter"
+#define     SHELL_DEFAULT_USER          "root"
 
 /**
  * @brief shell默认用户密码
  *        若默认用户不需要密码，设为""
  */
-#define     SHELL_DEFAULT_USER_PASSWORD ""
+#define     SHELL_DEFAULT_USER_PASSWORD "123456"
 
 /**
  * @brief shell自动锁定超时

@@ -43,6 +43,11 @@ void AdcClockConfig(void)
     CLK_SetPllSource(ClkPllSrcXTAL);		//8MHz
     CLK_UpllConfig(&stcUpllCfg);
     CLK_UpllCmd(Enable);
+	
+    while (Set != CLK_GetFlagStatus(ClkFlagUPLLRdy)) {
+        ;
+    }
+	
     CLK_SetPeriClkSource(ClkPeriSrcUpllr);
 }
 

@@ -120,19 +120,11 @@ const DOWNLOAD_CMD_S download_cmd[] =
 *****************************************************************************/
 void uart_transmit_output(unsigned char value)
 {
-#ifndef TUYA_ENABLE
-    USART_CH->DR = value;
-    while (0ul == USART_CH->SR_f.TC)
-    {
-        ;
-    }	
-#else
     USART_TUYA_CH->DR = value;
     while (0ul == USART_TUYA_CH->SR_f.TC)
     {
         ;
     }	
-#endif		
 }
 /******************************************************************************
                            第二步:实现具体用户函数

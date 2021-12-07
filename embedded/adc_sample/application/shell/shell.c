@@ -13,6 +13,7 @@
 #include "stdio.h"
 #include "stdarg.h"
 #include "shell_ext.h"
+#include "sys.h"
 
 
 #if SHELL_USING_CMD_EXPORT == 1
@@ -86,15 +87,16 @@ static const char *shellText[] =
 #if SHELL_SHOW_INFO == 1
     [SHELL_TEXT_INFO] =
         "\r\n"
-        " _         _   _                  _          _ _ \r\n"
-        "| |    ___| |_| |_ ___ _ __   ___| |__   ___| | |\r\n"
-        "| |   / _ \\ __| __/ _ \\ '__| / __| '_ \\ / _ \\ | |\r\n"
-        "| |__|  __/ |_| ||  __/ |    \\__ \\ | | |  __/ | |\r\n"
-        "|_____\\___|\\__|\\__\\___|_|    |___/_| |_|\\___|_|_|\r\n"
+				" _____  _    _  ____   ___  __   __ __ \r\n"
+				"|  __ \\| |  | |/ __ \\ / _ \\/_ | / //_ |\r\n"
+				"| |__) | |__| | |  | | (_) || |/ /_ | |\r\n"
+				"|  ___/|  __  | |  | |> _ < | | '_ \\| |\r\n"
+				"| |    | |  | | |__| | (_) || | (_) | |\r\n"
+				"|_|    |_|  |_|\\____/ \\___/ |_|\\___/|_|\r\n"
         "\r\n"
         "Build:       "__DATE__" "__TIME__"\r\n"
         "Version:     "SHELL_VERSION"\r\n"
-        "Copyright:   (c) 2020 Letter\r\n",
+        "Copyright:   (c) 2021 Phosense\r\n",
 #endif
     [SHELL_TEXT_CMD_TOO_LONG] = 
         "\r\nWarning: Command is too long\r\n",
