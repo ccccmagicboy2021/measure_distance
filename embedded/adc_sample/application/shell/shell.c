@@ -86,16 +86,16 @@ static const char *shellText[] =
 {
 #if SHELL_SHOW_INFO == 1
     [SHELL_TEXT_INFO] =
-        "\r\n"
+        "\r\n\x1b[36;1m"
 				" _____  _    _  ____   ___  __   __ __ \r\n"
 				"|  __ \\| |  | |/ __ \\ / _ \\/_ | / //_ |\r\n"
 				"| |__) | |__| | |  | | (_) || |/ /_ | |\r\n"
 				"|  ___/|  __  | |  | |> _ < | | '_ \\| |\r\n"
 				"| |    | |  | | |__| | (_) || | (_) | |\r\n"
 				"|_|    |_|  |_|\\____/ \\___/ |_|\\___/|_|\r\n"
-        "\r\n"
-        "Build:       "__DATE__" "__TIME__"\r\n"
-        "Version:     "SHELL_VERSION"\r\n"
+        "\r\n\x1b[0m"
+        "\x1b[37;1mBuild:       "__DATE__" "__TIME__"\r\n\x1b[0m"
+        "Version:     "APP_VERSION"\r\n"
         "Copyright:   (c) 2021 Phosense\r\n",
 #endif
     [SHELL_TEXT_CMD_TOO_LONG] = 
@@ -355,7 +355,9 @@ static void shellWritePrompt(Shell *shell, unsigned char newline)
         {
             shellWriteString(shell, "\r\n");
         }
+				shellWriteString(shell, "\x1b[32;1m");
         shellWriteString(shell, shell->info.user->data.user.name);
+				shellWriteString(shell, "\x1b[0m");
         shellWriteString(shell, ":");
         shellWriteString(shell, shell->info.path ? shell->info.path : "/");
         shellWriteString(shell, "$ ");

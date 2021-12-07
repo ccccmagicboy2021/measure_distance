@@ -45,6 +45,8 @@ do \
 		SEGGER_RTT_printf(0, fmt, ##__VA_ARGS__); \
 }while(0)
 
+#define     APP_VERSION               "1.0.0"                 /**< °æ±¾ºÅ */
+
 #define ALL_UPLOAD_DELAY		100
 #define SEGGER_RTT_IN_RAM		1
 

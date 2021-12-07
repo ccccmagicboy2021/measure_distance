@@ -6,9 +6,9 @@ Memory Map of the image
 
   Image Entry point : 0x00000281
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x0000c480, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x0000c4b4, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x0000c3bc, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x0000c3f0, Max: 0x00080000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -480,68 +480,68 @@ Memory Map of the image
     0x0000b7aa   0x0000b7aa   0x00000002   PAD
     0x0000b7ac   0x0000b7ac   0x0000005c   Code   RO         3596    i.shellWriteCommandDesc  shell.o
     0x0000b808   0x0000b808   0x0000006c   Code   RO         3597    i.shellWriteCommandHelp  shell.o
-    0x0000b874   0x0000b874   0x00000068   Code   RO         3598    i.shellWritePrompt  shell.o
-    0x0000b8dc   0x0000b8dc   0x0000008c   Code   RO         3599    i.shellWriteReturnValue  shell.o
-    0x0000b968   0x0000b968   0x00000030   Code   RO         3600    i.shellWriteString  shell.o
-    0x0000b998   0x0000b998   0x00000024   Code   RO         3983    i.shell_uart_write_data  shell_port.o
-    0x0000b9bc   0x0000b9bc   0x0000002c   Code   RO         4156    i.soft_reset_mcu    protocol.o
-    0x0000b9e8   0x0000b9e8   0x00000024   Code   RO         3417    i.stop_sample       app.o
-    0x0000ba0c   0x0000ba0c   0x0000000c   Code   RO         3418    i.tick_init         app.o
-    0x0000ba18   0x0000ba18   0x00000100   Code   RO         3313    i.timer0_init       mytimer.o
-    0x0000bb18   0x0000bb18   0x00000044   Code   RO         3246    i.tuya_UsartRxErrProcess  myusart.o
-    0x0000bb5c   0x0000bb5c   0x0000001c   Code   RO         3247    i.tuya_UsartRxIrqCallback  myusart.o
-    0x0000bb78   0x0000bb78   0x00000008   Code   RO         4157    i.tuya_re_config_network  protocol.o
-    0x0000bb80   0x0000bb80   0x00000008   Code   RO         4158    i.tuya_reset_module  protocol.o
-    0x0000bb88   0x0000bb88   0x00000002   Code   RO         4159    i.tuya_retry_ota    protocol.o
-    0x0000bb8a   0x0000bb8a   0x00000002   PAD
-    0x0000bb8c   0x0000bb8c   0x00000014   Code   RO         3419    i.uart_post_process  app.o
-    0x0000bba0   0x0000bba0   0x00000068   Code   RO         4392    i.uart_receive_input  mcu_api.o
-    0x0000bc08   0x0000bc08   0x00000018   Code   RO         4160    i.uart_transmit_output  protocol.o
-    0x0000bc20   0x0000bc20   0x00000018   Code   RO         3984    i.uart_transmit_output_shell  shell_port.o
-    0x0000bc38   0x0000bc38   0x00000148   Code   RO         3248    i.usart_init        myusart.o
-    0x0000bd80   0x0000bd80   0x00000010   Data   RO         2546    .constdata          hc32f46x_usart.o
-    0x0000bd90   0x0000bd90   0x00000009   Data   RO         3249    .constdata          myusart.o
-    0x0000bd99   0x0000bd99   0x00000009   Data   RO         3376    .constdata          myclk.o
-    0x0000bda2   0x0000bda2   0x00000009   Data   RO         3421    .constdata          app.o
-    0x0000bdab   0x0000bdab   0x000000e7   Data   RO         3602    .constdata          shell.o
-    0x0000be92   0x0000be92   0x0000003c   Data   RO         4161    .constdata          protocol.o
-    0x0000bece   0x0000bece   0x00000011   Data   RO         4556    .constdata          mcu_ota_handler.o
-    0x0000bedf   0x0000bedf   0x00000010   Data   RO         4898    .constdata          segger_rtt_printf.o
-    0x0000beef   0x0000beef   0x00000001   PAD
-    0x0000bef0   0x0000bef0   0x0000029d   Data   RO         3603    .conststring        shell.o
-    0x0000c18d   0x0000c18d   0x00000003   PAD
-    0x0000c190   0x0000c190   0x000000ea   Data   RO         4557    .conststring        mcu_ota_handler.o
-    0x0000c27a   0x0000c27a   0x00000002   PAD
-    0x0000c27c   0x0000c27c   0x00000020   Data   RO         5354    Region$$Table       anon$$obj.o
-    0x0000c29c   0x0000c29c   0x00000120   Data   RO         3605    shellCommand        shell.o
+    0x0000b874   0x0000b874   0x0000008c   Code   RO         3598    i.shellWritePrompt  shell.o
+    0x0000b900   0x0000b900   0x0000008c   Code   RO         3599    i.shellWriteReturnValue  shell.o
+    0x0000b98c   0x0000b98c   0x00000030   Code   RO         3600    i.shellWriteString  shell.o
+    0x0000b9bc   0x0000b9bc   0x00000024   Code   RO         3983    i.shell_uart_write_data  shell_port.o
+    0x0000b9e0   0x0000b9e0   0x0000002c   Code   RO         4156    i.soft_reset_mcu    protocol.o
+    0x0000ba0c   0x0000ba0c   0x00000024   Code   RO         3417    i.stop_sample       app.o
+    0x0000ba30   0x0000ba30   0x0000000c   Code   RO         3418    i.tick_init         app.o
+    0x0000ba3c   0x0000ba3c   0x00000100   Code   RO         3313    i.timer0_init       mytimer.o
+    0x0000bb3c   0x0000bb3c   0x00000044   Code   RO         3246    i.tuya_UsartRxErrProcess  myusart.o
+    0x0000bb80   0x0000bb80   0x0000001c   Code   RO         3247    i.tuya_UsartRxIrqCallback  myusart.o
+    0x0000bb9c   0x0000bb9c   0x00000008   Code   RO         4157    i.tuya_re_config_network  protocol.o
+    0x0000bba4   0x0000bba4   0x00000008   Code   RO         4158    i.tuya_reset_module  protocol.o
+    0x0000bbac   0x0000bbac   0x00000002   Code   RO         4159    i.tuya_retry_ota    protocol.o
+    0x0000bbae   0x0000bbae   0x00000002   PAD
+    0x0000bbb0   0x0000bbb0   0x00000014   Code   RO         3419    i.uart_post_process  app.o
+    0x0000bbc4   0x0000bbc4   0x00000068   Code   RO         4392    i.uart_receive_input  mcu_api.o
+    0x0000bc2c   0x0000bc2c   0x00000018   Code   RO         4160    i.uart_transmit_output  protocol.o
+    0x0000bc44   0x0000bc44   0x00000018   Code   RO         3984    i.uart_transmit_output_shell  shell_port.o
+    0x0000bc5c   0x0000bc5c   0x00000148   Code   RO         3248    i.usart_init        myusart.o
+    0x0000bda4   0x0000bda4   0x00000010   Data   RO         2546    .constdata          hc32f46x_usart.o
+    0x0000bdb4   0x0000bdb4   0x00000009   Data   RO         3249    .constdata          myusart.o
+    0x0000bdbd   0x0000bdbd   0x00000009   Data   RO         3376    .constdata          myclk.o
+    0x0000bdc6   0x0000bdc6   0x00000009   Data   RO         3421    .constdata          app.o
+    0x0000bdcf   0x0000bdcf   0x000000e1   Data   RO         3602    .constdata          shell.o
+    0x0000beb0   0x0000beb0   0x0000003c   Data   RO         4161    .constdata          protocol.o
+    0x0000beec   0x0000beec   0x00000011   Data   RO         4556    .constdata          mcu_ota_handler.o
+    0x0000befd   0x0000befd   0x00000010   Data   RO         4898    .constdata          segger_rtt_printf.o
+    0x0000bf0d   0x0000bf0d   0x00000003   PAD
+    0x0000bf10   0x0000bf10   0x000002b1   Data   RO         3603    .conststring        shell.o
+    0x0000c1c1   0x0000c1c1   0x00000003   PAD
+    0x0000c1c4   0x0000c1c4   0x000000ea   Data   RO         4557    .conststring        mcu_ota_handler.o
+    0x0000c2ae   0x0000c2ae   0x00000002   PAD
+    0x0000c2b0   0x0000c2b0   0x00000020   Data   RO         5354    Region$$Table       anon$$obj.o
+    0x0000c2d0   0x0000c2d0   0x00000120   Data   RO         3605    shellCommand        shell.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x1fff9000, Load base: 0x0000c3bc, Size: 0x0000d0a0, Max: 0x0002e000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x1fff9000, Load base: 0x0000c3f0, Size: 0x0000d0a0, Max: 0x0002e000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x1fff9000   0x0000c3bc   0x00000008   Data   RW           15    .data               system_hc32f46x.o
-    0x1fff9008   0x0000c3c4   0x00000008   Data   RW          266    .data               hc32f46x_utility.o
-    0x1fff9010   0x0000c3cc   0x00000001   Data   RW         2769    .data               hc32f46x_dmac.o
-    0x1fff9011   0x0000c3cd   0x00000003   PAD
-    0x1fff9014   0x0000c3d0   0x00000004   Data   RW         3315    .data               mytimer.o
-    0x1fff9018   0x0000c3d4   0x00000008   Data   RW         3422    .data               app.o
-    0x1fff9020   0x0000c3dc   0x00000054   Data   RW         3604    .data               shell.o
-    0x1fff9074   0x0000c430   0x0000000d   Data   RW         4041    .data               system.o
-    0x1fff9081   0x0000c43d   0x00000001   PAD
-    0x1fff9082   0x0000c43e   0x0000000a   Data   RW         4393    .data               mcu_api.o
-    0x1fff908c   0x0000c448   0x0000000c   Data   RW         4558    .data               mcu_ota_handler.o
-    0x1fff9098   0x0000c454   0x00000028   Data   RW         4943    .data               fifo.o
-    0x1fff90c0   0x0000c47c   0x00000004   Data   RW         5330    .data               mc_w.l(stdout.o)
+    0x1fff9000   0x0000c3f0   0x00000008   Data   RW           15    .data               system_hc32f46x.o
+    0x1fff9008   0x0000c3f8   0x00000008   Data   RW          266    .data               hc32f46x_utility.o
+    0x1fff9010   0x0000c400   0x00000001   Data   RW         2769    .data               hc32f46x_dmac.o
+    0x1fff9011   0x0000c401   0x00000003   PAD
+    0x1fff9014   0x0000c404   0x00000004   Data   RW         3315    .data               mytimer.o
+    0x1fff9018   0x0000c408   0x00000008   Data   RW         3422    .data               app.o
+    0x1fff9020   0x0000c410   0x00000054   Data   RW         3604    .data               shell.o
+    0x1fff9074   0x0000c464   0x0000000d   Data   RW         4041    .data               system.o
+    0x1fff9081   0x0000c471   0x00000001   PAD
+    0x1fff9082   0x0000c472   0x0000000a   Data   RW         4393    .data               mcu_api.o
+    0x1fff908c   0x0000c47c   0x0000000c   Data   RW         4558    .data               mcu_ota_handler.o
+    0x1fff9098   0x0000c488   0x00000028   Data   RW         4943    .data               fifo.o
+    0x1fff90c0   0x0000c4b0   0x00000004   Data   RW         5330    .data               mc_w.l(stdout.o)
     0x1fff90c4        -       0x00000200   Zero   RW         1262    .bss                hc32f46x_interrupts.o
     0x1fff92c4        -       0x00000034   Zero   RW         3147    .bss                myadc.o
     0x1fff92f8        -       0x0000000c   Zero   RW         3314    .bss                mytimer.o
     0x1fff9304        -       0x00000400   Zero   RW         3420    .bss                app.o
     0x1fff9704        -       0x0000001d   Zero   RW         3601    .bss                shell.o
-    0x1fff9721   0x0000c480   0x00000003   PAD
+    0x1fff9721   0x0000c4b4   0x00000003   PAD
     0x1fff9724        -       0x0000026c   Zero   RW         3985    .bss                shell_port.o
     0x1fff9990        -       0x00000515   Zero   RW         4040    .bss                system.o
-    0x1fff9ea5   0x0000c480   0x00000003   PAD
+    0x1fff9ea5   0x0000c4b4   0x00000003   PAD
     0x1fff9ea8        -       0x000010b8   Zero   RW         4694    .bss                segger_rtt.o
     0x1fffaf60        -       0x00005140   Zero   RW         4942    .bss                fifo.o
     0x200000a0        -       0x00006000   Zero   RW            1    STACK               startup_hc32f46x.o
