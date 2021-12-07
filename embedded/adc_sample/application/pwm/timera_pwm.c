@@ -11,20 +11,6 @@
 /*******************************************************************************
  * Local pre-processor symbols/macros ('#define')
  ******************************************************************************/
- 
-/* TIMERA unit and clock definition */
-#define TIMERA_UNIT1                    (M4_TMRA3)
-#define TIMERA_UNIT1_CLOCK              (PWC_FCG2_PERIPH_TIMA3)
-
-/* TIMERA channel 1 Port/Pin definition */
-#define TIMERA_UNIT1_CH1                (TimeraCh2)
-#define TIMERA_UNIT1_CH1_PORT           (PortB)
-#define TIMERA_UNIT1_CH1_PIN            (Pin05)
-#define TIMERA_UNIT1_CH1_FUNC           (Func_Tima0)
-
-
-#define TIMERA_COUNT_OVERFLOW           (50000-1)  // 2kHz
-#define TIMERA_COUNT_COMPARE						(25000-1)  //
 
 /*******************************************************************************
  * Global variable definitions (declared in header file with 'extern')
@@ -70,19 +56,20 @@ void Timera_Config(void)
     PORT_SetFunc(TIMERA_UNIT1_CH1_PORT, TIMERA_UNIT1_CH1_PIN, TIMERA_UNIT1_CH1_FUNC, Disable);
 
     /* Configuration timera unit 1 base structure */
-    stcTimeraInit.enClkDiv = TimeraPclkDiv1;
-    stcTimeraInit.enCntMode = TimeraCountModeSawtoothWave;
+    stcTimeraInit.enClkDiv = TimeraPclkDiv1;			//50MHz
+    stcTimeraInit.enCntMode = TimeraCountModeSawtoothWave;			//直角三角形的锯齿波
+		//stcTimeraInit.enCntMode = TimeraCountModeTriangularWave;	//使用三角波
     stcTimeraInit.enCntDir = TimeraCountDirUp;
     stcTimeraInit.enSyncStartupEn = Disable;
     stcTimeraInit.u16PeriodVal = TIMERA_COUNT_OVERFLOW;						//duty value
     TIMERA_BaseInit(TIMERA_UNIT1, &stcTimeraInit);
 
-    /* Configuration timera unit 1 compare structure */
+    /* Configuration timera unit 1 compare structure */   //p628
     stcTimerCompareInit.u16CompareVal = TIMERA_COUNT_COMPARE;			//compare value
     stcTimerCompareInit.enStartCountOutput = TimeraCountStartOutputLow;
     stcTimerCompareInit.enStopCountOutput = TimeraCountStopOutputLow;
-    stcTimerCompareInit.enCompareMatchOutput = TimeraCompareMatchOutputReverse;
-    stcTimerCompareInit.enPeriodMatchOutput = TimeraPeriodMatchOutputKeep;
+    stcTimerCompareInit.enCompareMatchOutput = TimeraCompareMatchOutputReverse;	//reverse
+    stcTimerCompareInit.enPeriodMatchOutput = TimeraPeriodMatchOutputReverse;		//reverse
     stcTimerCompareInit.enSpecifyOutput = TimeraSpecifyOutputInvalid;
     stcTimerCompareInit.enCacheEn = Disable;
     stcTimerCompareInit.enTriangularTroughTransEn = Disable;
