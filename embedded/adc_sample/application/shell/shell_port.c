@@ -46,4 +46,4 @@ void quit_shell(void)
 {
 	soft_reset_mcu();
 }
-SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_MAIN), exit, quit_shell, exit);
+SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), exit, quit_shell, exit);
