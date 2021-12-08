@@ -2,7 +2,7 @@
 #include "sys.h"
 
 //////////global var here///////////////////////
-char JS_RTT_UpBuffer[1024];
+char JS_RTT_UpBuffer[1024*2];
 volatile enum app_state state = UART_SEND_DATA;	//状态机变量
 volatile enum app_state next_state = UART_SEND_DATA;	//状态机变量的下一个状态
 ////////////////////////////////////////////////
@@ -106,10 +106,22 @@ void tick_init(void)
 	SysTick_Init(1000u);//1ms
 }
 
-void set_samplerate(unsigned int speed)
+int set_samplerate(unsigned int speed)
 {
-	*((unsigned int *)(TMR02_CMPBR)) = speed;
+	CV_LOG("[%s] duty: %d ns\r\n", __FUNCTION__, (speed*20));
+	*((unsigned int *)(TMR02_CMPBR)) = speed - 1;
+	return 0;
 }
+SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), timer0_duty, set_samplerate, set the sample timer duty);
+
+int set_fsk_wave_duty(unsigned int speed)
+{
+	CV_LOG("[%s] duty: %d ns(%d)(%d)\r\n", __FUNCTION__, (speed*20), speed - 1, (speed >> 1) - 1);
+	*((unsigned int *)(TMRA3_PERAR)) = speed - 1;
+	*((unsigned int *)(TMRA3_CMPAR2)) = (speed >> 1) - 1;
+	return 0;
+}
+SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), fsk_wave_duty, set_fsk_wave_duty, set the fsk pwm wave duty);
 
 void segger_init(void)
 {
@@ -204,7 +216,7 @@ void gpio_init(void)
 
 void sent_sample_data(void)
 {
-	//Delay_ms(100);
+	Delay_ms(100);
 }
 
 void error_process(void)
@@ -279,6 +291,7 @@ void init_all(void)
 	//shell
 	User_Shell_Init();
 	//enable timer0 b
+	set_samplerate(25000);
 	stop_sample(0);
 	//
 	init_finish_tick = SysTick_GetTick();

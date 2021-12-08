@@ -58,6 +58,10 @@ do \
 #define TMR02_BASE			0x40024400u
 #define TMR02_CMPBR			(TMR02_BASE + 0x0C)
 
+#define	TMRA3_BASE			0x40015800
+#define	TMRA3_CMPAR2		(TMRA3_BASE + 0x44)
+#define	TMRA3_PERAR			(TMRA3_BASE + 0x04)
+
 /////////////////////////////////////////////////////////////////////
 #define	USER_PARAMETER_START_SECTOR_ADDRESS0	0x0007A000u
 #define	USER_PARAMETER_START_SECTOR_ADDRESS1	0x0007C000u

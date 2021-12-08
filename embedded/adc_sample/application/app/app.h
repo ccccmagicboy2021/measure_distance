@@ -6,7 +6,7 @@
 void stop_sample(unsigned char flag);
 void SysTick_IrqHandler(void);
 void tick_init(void);
-void set_samplerate(unsigned int speed);
+int set_samplerate(unsigned int speed);
 void segger_init(void);
 void read_uid(void);
 void enable_flash_cache(en_functional_state_t state0);
@@ -19,6 +19,7 @@ void idle_process(void);
 void app(void);
 void init_all(void);
 int hexdump(const char* buf, int len);
+int set_fsk_wave_duty(unsigned int speed);
 
 
 #endif//_CBE81D98_3CA6_4077_890C_D3B7C63233CA_
