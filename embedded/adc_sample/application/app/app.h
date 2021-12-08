@@ -18,8 +18,7 @@ void uart_post_process(void);
 void idle_process(void);
 void app(void);
 void init_all(void);
-void hexdump(const char* buf, int len);
-//int fputc(int ch, FILE *f);
+int hexdump(const char* buf, int len);
 
 
 #endif//_CBE81D98_3CA6_4077_890C_D3B7C63233CA_
