@@ -3,7 +3,8 @@
 
 #include "sys.h"
 
-void stop_sample(unsigned char flag);
+int en_sample(unsigned char flag);
+int en_fsk_pwm(unsigned char flag);
 void SysTick_IrqHandler(void);
 void tick_init(void);
 int set_samplerate(unsigned int speed);
@@ -20,6 +21,7 @@ void app(void);
 void init_all(void);
 int hexdump(const char* buf, int len);
 int set_fsk_wave_duty(unsigned int speed);
+int set_if_adc_avg(int mode);
 
 
 #endif//_CBE81D98_3CA6_4077_890C_D3B7C63233CA_

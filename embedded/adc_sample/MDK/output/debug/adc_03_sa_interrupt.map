@@ -6,47 +6,47 @@ Memory Map of the image
 
   Image Entry point : 0x00000281
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x0000c9d4, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x0000cad4, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x0000c90c, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x0000ca0c, Max: 0x00080000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x00000000   0x00000000   0x00000280   Data   RO            3    RESET               startup_hc32f46x.o
-    0x00000280   0x00000280   0x00000000   Code   RO         5038  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x00000280   0x00000280   0x00000004   Code   RO         5348    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x00000284   0x00000284   0x00000004   Code   RO         5351    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x00000288   0x00000288   0x00000000   Code   RO         5353    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x00000288   0x00000288   0x00000000   Code   RO         5355    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x00000288   0x00000288   0x00000008   Code   RO         5356    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x00000290   0x00000290   0x00000004   Code   RO         5363    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
-    0x00000294   0x00000294   0x00000000   Code   RO         5358    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
-    0x00000294   0x00000294   0x00000000   Code   RO         5360    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
-    0x00000294   0x00000294   0x00000004   Code   RO         5349    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x00000280   0x00000280   0x00000000   Code   RO         5050  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x00000280   0x00000280   0x00000004   Code   RO         5360    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x00000284   0x00000284   0x00000004   Code   RO         5363    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x00000288   0x00000288   0x00000000   Code   RO         5365    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x00000288   0x00000288   0x00000000   Code   RO         5367    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x00000288   0x00000288   0x00000008   Code   RO         5368    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x00000290   0x00000290   0x00000004   Code   RO         5375    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
+    0x00000294   0x00000294   0x00000000   Code   RO         5370    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
+    0x00000294   0x00000294   0x00000000   Code   RO         5372    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
+    0x00000294   0x00000294   0x00000004   Code   RO         5361    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x00000298   0x00000298   0x00000058   Code   RO            4    .text               startup_hc32f46x.o
-    0x000002f0   0x000002f0   0x00000062   Code   RO         5041    .text               mc_w.l(uldiv.o)
-    0x00000352   0x00000352   0x00000024   Code   RO         5071    .text               mc_w.l(memcpya.o)
-    0x00000376   0x00000376   0x00000024   Code   RO         5073    .text               mc_w.l(memseta.o)
-    0x0000039a   0x0000039a   0x0000000e   Code   RO         5075    .text               mc_w.l(strlen.o)
-    0x000003a8   0x000003a8   0x0000001c   Code   RO         5077    .text               mc_w.l(strcmp.o)
-    0x000003c4   0x000003c4   0x0000001a   Code   RO         5079    .text               mc_w.l(memcmp.o)
-    0x000003de   0x000003de   0x00000012   Code   RO         5081    .text               mc_w.l(strcpy.o)
-    0x000003f0   0x000003f0   0x00000000   Code   RO         5371    .text               mc_w.l(iusefp.o)
+    0x000002f0   0x000002f0   0x00000062   Code   RO         5053    .text               mc_w.l(uldiv.o)
+    0x00000352   0x00000352   0x00000024   Code   RO         5083    .text               mc_w.l(memcpya.o)
+    0x00000376   0x00000376   0x00000024   Code   RO         5085    .text               mc_w.l(memseta.o)
+    0x0000039a   0x0000039a   0x0000000e   Code   RO         5087    .text               mc_w.l(strlen.o)
+    0x000003a8   0x000003a8   0x0000001c   Code   RO         5089    .text               mc_w.l(strcmp.o)
+    0x000003c4   0x000003c4   0x0000001a   Code   RO         5091    .text               mc_w.l(memcmp.o)
+    0x000003de   0x000003de   0x00000012   Code   RO         5093    .text               mc_w.l(strcpy.o)
+    0x000003f0   0x000003f0   0x00000000   Code   RO         5383    .text               mc_w.l(iusefp.o)
     0x000003f0   0x000003f0   0x00000008   Code   RO         1102    i.BusFault_Handler  hc32f46x_interrupts.o
     0x000003f8   0x000003f8   0x00000008   Code   RO         1103    i.DebugMon_Handler  hc32f46x_interrupts.o
     0x00000400   0x00000400   0x00000020   Data   RO          232    .ARM.__AT_0x00000400  hc32f46x_icg.o
-    0x00000420   0x00000420   0x0000001e   Code   RO         5083    .text               mc_w.l(strncmp.o)
-    0x0000043e   0x0000043e   0x0000002c   Code   RO         5365    .text               mc_w.l(uidiv.o)
-    0x0000046a   0x0000046a   0x0000001e   Code   RO         5367    .text               mc_w.l(llshl.o)
-    0x00000488   0x00000488   0x00000020   Code   RO         5369    .text               mc_w.l(llushr.o)
-    0x000004a8   0x000004a8   0x0000014e   Code   RO         5372    .text               mf_w.l(dadd.o)
-    0x000005f6   0x000005f6   0x000000e4   Code   RO         5374    .text               mf_w.l(dmul.o)
-    0x000006da   0x000006da   0x000000de   Code   RO         5376    .text               mf_w.l(ddiv.o)
-    0x000007b8   0x000007b8   0x00000030   Code   RO         5378    .text               mf_w.l(dfixul.o)
-    0x000007e8   0x000007e8   0x00000030   Code   RO         5380    .text               mf_w.l(cdrcmple.o)
-    0x00000818   0x00000818   0x00000024   Code   RO         5382    .text               mc_w.l(init.o)
-    0x0000083c   0x0000083c   0x00000024   Code   RO         5384    .text               mc_w.l(llsshr.o)
-    0x00000860   0x00000860   0x000000ba   Code   RO         5386    .text               mf_w.l(depilogue.o)
+    0x00000420   0x00000420   0x0000001e   Code   RO         5095    .text               mc_w.l(strncmp.o)
+    0x0000043e   0x0000043e   0x0000002c   Code   RO         5377    .text               mc_w.l(uidiv.o)
+    0x0000046a   0x0000046a   0x0000001e   Code   RO         5379    .text               mc_w.l(llshl.o)
+    0x00000488   0x00000488   0x00000020   Code   RO         5381    .text               mc_w.l(llushr.o)
+    0x000004a8   0x000004a8   0x0000014e   Code   RO         5384    .text               mf_w.l(dadd.o)
+    0x000005f6   0x000005f6   0x000000e4   Code   RO         5386    .text               mf_w.l(dmul.o)
+    0x000006da   0x000006da   0x000000de   Code   RO         5388    .text               mf_w.l(ddiv.o)
+    0x000007b8   0x000007b8   0x00000030   Code   RO         5390    .text               mf_w.l(dfixul.o)
+    0x000007e8   0x000007e8   0x00000030   Code   RO         5392    .text               mf_w.l(cdrcmple.o)
+    0x00000818   0x00000818   0x00000024   Code   RO         5394    .text               mc_w.l(init.o)
+    0x0000083c   0x0000083c   0x00000024   Code   RO         5396    .text               mc_w.l(llsshr.o)
+    0x00000860   0x00000860   0x000000ba   Code   RO         5398    .text               mf_w.l(depilogue.o)
     0x0000091a   0x0000091a   0x00000002   PAD
     0x0000091c   0x0000091c   0x000000e0   Code   RO          354    i.ADC_AddAdcChannel  hc32f46x_adc.o
     0x000009fc   0x000009fc   0x00000084   Code   RO          355    i.ADC_AddAvgChannel  hc32f46x_adc.o
@@ -94,9 +94,9 @@ Memory Map of the image
     0x00002af0   0x00002af0   0x00000018   Code   RO          835    i.EFM_Lock          hc32f46x_efm.o
     0x00002b08   0x00002b08   0x00000084   Code   RO          844    i.EFM_SetLatency    hc32f46x_efm.o
     0x00002b8c   0x00002b8c   0x00000014   Code   RO          849    i.EFM_Unlock        hc32f46x_efm.o
-    0x00002ba0   0x00002ba0   0x00000006   Code   RO         4968    i.FIFO_GetDataCount  fifo.o
-    0x00002ba6   0x00002ba6   0x0000000e   Code   RO         4969    i.FIFO_Init         fifo.o
-    0x00002bb4   0x00002bb4   0x0000000e   Code   RO         4970    i.FIFO_IsDataEmpty  fifo.o
+    0x00002ba0   0x00002ba0   0x00000006   Code   RO         4980    i.FIFO_GetDataCount  fifo.o
+    0x00002ba6   0x00002ba6   0x0000000e   Code   RO         4981    i.FIFO_Init         fifo.o
+    0x00002bb4   0x00002bb4   0x0000000e   Code   RO         4982    i.FIFO_IsDataEmpty  fifo.o
     0x00002bc2   0x00002bc2   0x00000008   Code   RO         1104    i.HardFault_Handler  hc32f46x_interrupts.o
     0x00002bca   0x00002bca   0x00000002   PAD
     0x00002bcc   0x00002bcc   0x00000014   Code   RO         1105    i.IRQ000_Handler    hc32f46x_interrupts.o
@@ -255,13 +255,13 @@ Memory Map of the image
     0x0000583c   0x0000583c   0x00000078   Code   RO         2094    i.PWC_Fcg2PeriphClockCmd  hc32f46x_pwc.o
     0x000058b4   0x000058b4   0x00000078   Code   RO         2095    i.PWC_Fcg3PeriphClockCmd  hc32f46x_pwc.o
     0x0000592c   0x0000592c   0x00000008   Code   RO         1248    i.PendSV_Handler    hc32f46x_interrupts.o
-    0x00005934   0x00005934   0x0000003c   Code   RO         4063    i.Queue_Read_Byte   system.o
-    0x00005970   0x00005970   0x00000074   Code   RO         4694    i.SEGGER_RTT_ConfigUpBuffer  segger_rtt.o
-    0x000059e4   0x000059e4   0x00000008   Code   RO         4701    i.SEGGER_RTT_Init   segger_rtt.o
-    0x000059ec   0x000059ec   0x00000048   Code   RO         4716    i.SEGGER_RTT_Write  segger_rtt.o
-    0x00005a34   0x00005a34   0x00000084   Code   RO         4719    i.SEGGER_RTT_WriteNoLock  segger_rtt.o
-    0x00005ab8   0x00005ab8   0x00000022   Code   RO         4927    i.SEGGER_RTT_printf  segger_rtt_printf.o
-    0x00005ada   0x00005ada   0x0000024a   Code   RO         4928    i.SEGGER_RTT_vprintf  segger_rtt_printf.o
+    0x00005934   0x00005934   0x0000003c   Code   RO         4075    i.Queue_Read_Byte   system.o
+    0x00005970   0x00005970   0x00000074   Code   RO         4706    i.SEGGER_RTT_ConfigUpBuffer  segger_rtt.o
+    0x000059e4   0x000059e4   0x00000008   Code   RO         4713    i.SEGGER_RTT_Init   segger_rtt.o
+    0x000059ec   0x000059ec   0x00000048   Code   RO         4728    i.SEGGER_RTT_Write  segger_rtt.o
+    0x00005a34   0x00005a34   0x00000084   Code   RO         4731    i.SEGGER_RTT_WriteNoLock  segger_rtt.o
+    0x00005ab8   0x00005ab8   0x00000022   Code   RO         4939    i.SEGGER_RTT_printf  segger_rtt_printf.o
+    0x00005ada   0x00005ada   0x0000024a   Code   RO         4940    i.SEGGER_RTT_vprintf  segger_rtt_printf.o
     0x00005d24   0x00005d24   0x00000008   Code   RO         1249    i.SVC_Handler       hc32f46x_interrupts.o
     0x00005d2c   0x00005d2c   0x00000134   Code   RO         2510    i.SetClkSyncBaudrate  hc32f46x_usart.o
     0x00005e60   0x00005e60   0x00000170   Code   RO         2511    i.SetScBaudrate     hc32f46x_usart.o
@@ -284,7 +284,7 @@ Memory Map of the image
     0x00006fb0   0x00006fb0   0x00000260   Code   RO         2936    i.TIMERA_CompareInit  hc32f46x_timera.o
     0x00007210   0x00007210   0x00000010   Code   RO         3308    i.Timer0A_CallBack  mytimer.o
     0x00007220   0x00007220   0x0000003c   Code   RO         3309    i.Timer0B_CallBack  mytimer.o
-    0x0000725c   0x0000725c   0x000000b8   Code   RO         3531    i.Timera_Config     timera_pwm.o
+    0x0000725c   0x0000725c   0x000000b8   Code   RO         3543    i.Timera_Config     timera_pwm.o
     0x00007314   0x00007314   0x00000084   Code   RO         2514    i.USART_ClearStatus  hc32f46x_usart.o
     0x00007398   0x00007398   0x00000244   Code   RO         2516    i.USART_FuncCmd     hc32f46x_usart.o
     0x000075dc   0x000075dc   0x000000a0   Code   RO         2526    i.USART_GetStatus   hc32f46x_usart.o
@@ -295,264 +295,267 @@ Memory Map of the image
     0x00007b14   0x00007b14   0x00000090   Code   RO         2545    i.UsartGetClk       hc32f46x_usart.o
     0x00007ba4   0x00007ba4   0x00000044   Code   RO         3241    i.UsartRxErrProcess  myusart.o
     0x00007be8   0x00007be8   0x00000024   Code   RO         3242    i.UsartRxIrqCallback  myusart.o
-    0x00007c0c   0x00007c0c   0x00000024   Code   RO         4007    i.User_Shell_Init   shell_port.o
-    0x00007c30   0x00007c30   0x00000070   Code   RO         4723    i._DoInit           segger_rtt.o
-    0x00007ca0   0x00007ca0   0x0000001c   Code   RO         4724    i._GetAvailWriteSpace  segger_rtt.o
-    0x00007cbc   0x00007cbc   0x000000ec   Code   RO         4929    i._PrintInt         segger_rtt_printf.o
-    0x00007da8   0x00007da8   0x000000ec   Code   RO         4930    i._PrintUnsigned    segger_rtt_printf.o
-    0x00007e94   0x00007e94   0x00000044   Code   RO         4931    i._StoreChar        segger_rtt_printf.o
-    0x00007ed8   0x00007ed8   0x00000076   Code   RO         4726    i._WriteBlocking    segger_rtt.o
-    0x00007f4e   0x00007f4e   0x00000058   Code   RO         4727    i._WriteNoCheck     segger_rtt.o
+    0x00007c0c   0x00007c0c   0x00000024   Code   RO         4019    i.User_Shell_Init   shell_port.o
+    0x00007c30   0x00007c30   0x00000070   Code   RO         4735    i._DoInit           segger_rtt.o
+    0x00007ca0   0x00007ca0   0x0000001c   Code   RO         4736    i._GetAvailWriteSpace  segger_rtt.o
+    0x00007cbc   0x00007cbc   0x000000ec   Code   RO         4941    i._PrintInt         segger_rtt_printf.o
+    0x00007da8   0x00007da8   0x000000ec   Code   RO         4942    i._PrintUnsigned    segger_rtt_printf.o
+    0x00007e94   0x00007e94   0x00000044   Code   RO         4943    i._StoreChar        segger_rtt_printf.o
+    0x00007ed8   0x00007ed8   0x00000076   Code   RO         4738    i._WriteBlocking    segger_rtt.o
+    0x00007f4e   0x00007f4e   0x00000058   Code   RO         4739    i._WriteNoCheck     segger_rtt.o
     0x00007fa6   0x00007fa6   0x00000002   PAD
-    0x00007fa8   0x00007fa8   0x00000020   Code   RO         5320    i.__0printf         mc_w.l(printfa.o)
+    0x00007fa8   0x00007fa8   0x00000020   Code   RO         5332    i.__0printf         mc_w.l(printfa.o)
     0x00007fc8   0x00007fc8   0x0000001c   Code   RO         3243    i.__NVIC_ClearPendingIRQ  myusart.o
     0x00007fe4   0x00007fe4   0x0000001c   Code   RO         3310    i.__NVIC_ClearPendingIRQ  mytimer.o
     0x00008000   0x00008000   0x00000022   Code   RO         3244    i.__NVIC_EnableIRQ  myusart.o
     0x00008022   0x00008022   0x00000022   Code   RO         3311    i.__NVIC_EnableIRQ  mytimer.o
     0x00008044   0x00008044   0x00000028   Code   RO         3245    i.__NVIC_SetPriority  myusart.o
     0x0000806c   0x0000806c   0x00000028   Code   RO         3312    i.__NVIC_SetPriority  mytimer.o
-    0x00008094   0x00008094   0x0000000e   Code   RO         5390    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x000080a2   0x000080a2   0x00000002   Code   RO         5391    i.__scatterload_null  mc_w.l(handlers.o)
-    0x000080a4   0x000080a4   0x0000000e   Code   RO         5392    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00008094   0x00008094   0x0000000e   Code   RO         5402    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x000080a2   0x000080a2   0x00000002   Code   RO         5403    i.__scatterload_null  mc_w.l(handlers.o)
+    0x000080a4   0x000080a4   0x0000000e   Code   RO         5404    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x000080b2   0x000080b2   0x00000002   PAD
-    0x000080b4   0x000080b4   0x00000184   Code   RO         5327    i._fp_digits        mc_w.l(printfa.o)
-    0x00008238   0x00008238   0x000006b4   Code   RO         5328    i._printf_core      mc_w.l(printfa.o)
-    0x000088ec   0x000088ec   0x00000024   Code   RO         5329    i._printf_post_padding  mc_w.l(printfa.o)
-    0x00008910   0x00008910   0x0000002e   Code   RO         5330    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x000080b4   0x000080b4   0x00000184   Code   RO         5339    i._fp_digits        mc_w.l(printfa.o)
+    0x00008238   0x00008238   0x000006b4   Code   RO         5340    i._printf_core      mc_w.l(printfa.o)
+    0x000088ec   0x000088ec   0x00000024   Code   RO         5341    i._printf_post_padding  mc_w.l(printfa.o)
+    0x00008910   0x00008910   0x0000002e   Code   RO         5342    i._printf_pre_padding  mc_w.l(printfa.o)
     0x0000893e   0x0000893e   0x00000002   PAD
     0x00008940   0x00008940   0x00000034   Code   RO         3146    i.adc_clk_test      myadc.o
-    0x00008974   0x00008974   0x0000000a   Code   RO         4155    i.all_data_update   protocol.o
+    0x00008974   0x00008974   0x0000000a   Code   RO         4167    i.all_data_update   protocol.o
     0x0000897e   0x0000897e   0x00000002   PAD
     0x00008980   0x00008980   0x00000040   Code   RO         3406    i.app               app.o
-    0x000089c0   0x000089c0   0x00000002   Code   RO         4157    i.bt_close_timer_result  protocol.o
-    0x000089c2   0x000089c2   0x00000002   Code   RO         4159    i.bt_disconnect_result  protocol.o
-    0x000089c4   0x000089c4   0x00000002   Code   RO         4161    i.bt_enable_lowpoer_result  protocol.o
-    0x000089c6   0x000089c6   0x00000002   Code   RO         4162    i.bt_factor_reset_notify  protocol.o
-    0x000089c8   0x000089c8   0x00000002   Code   RO         4164    i.bt_modify_adv_interval_result  protocol.o
+    0x000089c0   0x000089c0   0x00000002   Code   RO         4169    i.bt_close_timer_result  protocol.o
+    0x000089c2   0x000089c2   0x00000002   Code   RO         4171    i.bt_disconnect_result  protocol.o
+    0x000089c4   0x000089c4   0x00000002   Code   RO         4173    i.bt_enable_lowpoer_result  protocol.o
+    0x000089c6   0x000089c6   0x00000002   Code   RO         4174    i.bt_factor_reset_notify  protocol.o
+    0x000089c8   0x000089c8   0x00000002   Code   RO         4176    i.bt_modify_adv_interval_result  protocol.o
     0x000089ca   0x000089ca   0x00000002   PAD
-    0x000089cc   0x000089cc   0x00000018   Code   RO         4403    i.bt_protocol_init  mcu_api.o
-    0x000089e4   0x000089e4   0x00000002   Code   RO         4167    i.bt_send_one_time_password_token_result  protocol.o
+    0x000089cc   0x000089cc   0x00000018   Code   RO         4415    i.bt_protocol_init  mcu_api.o
+    0x000089e4   0x000089e4   0x00000002   Code   RO         4179    i.bt_send_one_time_password_token_result  protocol.o
     0x000089e6   0x000089e6   0x00000002   PAD
-    0x000089e8   0x000089e8   0x00000064   Code   RO         4404    i.bt_uart_service   mcu_api.o
-    0x00008a4c   0x00008a4c   0x00000024   Code   RO         4064    i.bt_uart_write_data  system.o
-    0x00008a70   0x00008a70   0x00000044   Code   RO         4065    i.bt_uart_write_frame  system.o
-    0x00008ab4   0x00008ab4   0x0000000c   Code   RO         4168    i.bt_unbound_req    protocol.o
-    0x00008ac0   0x00008ac0   0x0000001a   Code   RO         4405    i.byte_to_int       mcu_api.o
+    0x000089e8   0x000089e8   0x00000064   Code   RO         4416    i.bt_uart_service   mcu_api.o
+    0x00008a4c   0x00008a4c   0x00000024   Code   RO         4076    i.bt_uart_write_data  system.o
+    0x00008a70   0x00008a70   0x00000044   Code   RO         4077    i.bt_uart_write_frame  system.o
+    0x00008ab4   0x00008ab4   0x0000000c   Code   RO         4180    i.bt_unbound_req    protocol.o
+    0x00008ac0   0x00008ac0   0x0000001a   Code   RO         4417    i.byte_to_int       mcu_api.o
     0x00008ada   0x00008ada   0x00000002   PAD
     0x00008adc   0x00008adc   0x00000160   Code   RO         3375    i.clk_test          myclk.o
-    0x00008c3c   0x00008c3c   0x00000224   Code   RO         4066    i.data_handle       system.o
-    0x00008e60   0x00008e60   0x0000004c   Code   RO         4067    i.data_point_handle  system.o
-    0x00008eac   0x00008eac   0x00000070   Code   RO         4169    i.dp_download_common_command_handle  protocol.o
-    0x00008f1c   0x00008f1c   0x00000062   Code   RO         4170    i.dp_download_factory_op_handle  protocol.o
-    0x00008f7e   0x00008f7e   0x0000001a   Code   RO         4171    i.dp_download_find_me_handle  protocol.o
-    0x00008f98   0x00008f98   0x00000028   Code   RO         4172    i.dp_download_freq_parameter1_handle  protocol.o
-    0x00008fc0   0x00008fc0   0x00000028   Code   RO         4173    i.dp_download_freq_parameter2_handle  protocol.o
-    0x00008fe8   0x00008fe8   0x00000028   Code   RO         4174    i.dp_download_freq_times_handle  protocol.o
-    0x00009010   0x00009010   0x00000128   Code   RO         4175    i.dp_download_handle  protocol.o
-    0x00009138   0x00009138   0x0000001a   Code   RO         4176    i.dp_download_light_threshold1_handle  protocol.o
-    0x00009152   0x00009152   0x0000001a   Code   RO         4177    i.dp_download_light_threshold2_handle  protocol.o
-    0x0000916c   0x0000916c   0x0000001a   Code   RO         4178    i.dp_download_light_threshold3_handle  protocol.o
-    0x00009186   0x00009186   0x0000001a   Code   RO         4179    i.dp_download_light_threshold4_handle  protocol.o
-    0x000091a0   0x000091a0   0x00000028   Code   RO         4180    i.dp_download_load_radar_parameter_handle  protocol.o
-    0x000091c8   0x000091c8   0x00000078   Code   RO         4181    i.dp_download_pir_delay_handle  protocol.o
-    0x00009240   0x00009240   0x00000044   Code   RO         4182    i.dp_download_study_cmd_handle  protocol.o
-    0x00009284   0x00009284   0x00000028   Code   RO         4183    i.dp_download_time_add_handle  protocol.o
-    0x000092ac   0x000092ac   0x00000028   Code   RO         4184    i.dp_download_time_times_handle  protocol.o
-    0x000092d4   0x000092d4   0x0000001a   Code   RO         4185    i.dp_download_upload_duty_handle  protocol.o
-    0x000092ee   0x000092ee   0x00000028   Code   RO         4186    i.dp_download_work_mode_handle  protocol.o
+    0x00008c3c   0x00008c3c   0x00000224   Code   RO         4078    i.data_handle       system.o
+    0x00008e60   0x00008e60   0x0000004c   Code   RO         4079    i.data_point_handle  system.o
+    0x00008eac   0x00008eac   0x00000070   Code   RO         4181    i.dp_download_common_command_handle  protocol.o
+    0x00008f1c   0x00008f1c   0x00000062   Code   RO         4182    i.dp_download_factory_op_handle  protocol.o
+    0x00008f7e   0x00008f7e   0x0000001a   Code   RO         4183    i.dp_download_find_me_handle  protocol.o
+    0x00008f98   0x00008f98   0x00000028   Code   RO         4184    i.dp_download_freq_parameter1_handle  protocol.o
+    0x00008fc0   0x00008fc0   0x00000028   Code   RO         4185    i.dp_download_freq_parameter2_handle  protocol.o
+    0x00008fe8   0x00008fe8   0x00000028   Code   RO         4186    i.dp_download_freq_times_handle  protocol.o
+    0x00009010   0x00009010   0x00000128   Code   RO         4187    i.dp_download_handle  protocol.o
+    0x00009138   0x00009138   0x0000001a   Code   RO         4188    i.dp_download_light_threshold1_handle  protocol.o
+    0x00009152   0x00009152   0x0000001a   Code   RO         4189    i.dp_download_light_threshold2_handle  protocol.o
+    0x0000916c   0x0000916c   0x0000001a   Code   RO         4190    i.dp_download_light_threshold3_handle  protocol.o
+    0x00009186   0x00009186   0x0000001a   Code   RO         4191    i.dp_download_light_threshold4_handle  protocol.o
+    0x000091a0   0x000091a0   0x00000028   Code   RO         4192    i.dp_download_load_radar_parameter_handle  protocol.o
+    0x000091c8   0x000091c8   0x00000078   Code   RO         4193    i.dp_download_pir_delay_handle  protocol.o
+    0x00009240   0x00009240   0x00000044   Code   RO         4194    i.dp_download_study_cmd_handle  protocol.o
+    0x00009284   0x00009284   0x00000028   Code   RO         4195    i.dp_download_time_add_handle  protocol.o
+    0x000092ac   0x000092ac   0x00000028   Code   RO         4196    i.dp_download_time_times_handle  protocol.o
+    0x000092d4   0x000092d4   0x0000001a   Code   RO         4197    i.dp_download_upload_duty_handle  protocol.o
+    0x000092ee   0x000092ee   0x00000028   Code   RO         4198    i.dp_download_work_mode_handle  protocol.o
     0x00009316   0x00009316   0x00000002   PAD
     0x00009318   0x00009318   0x000000c0   Code   RO         1258    i.enIrqRegistration  hc32f46x_interrupts.o
-    0x000093d8   0x000093d8   0x00000028   Code   RO         3407    i.enable_flash_cache  app.o
-    0x00009400   0x00009400   0x0000001c   Code   RO         3408    i.error_process     app.o
-    0x0000941c   0x0000941c   0x00000010   Code   RO          265    i.fputc             hc32f46x_utility.o
-    0x0000942c   0x0000942c   0x0000001c   Code   RO         4068    i.get_check_sum     system.o
-    0x00009448   0x00009448   0x0000002c   Code   RO         4069    i.get_dowmload_dpid_index  system.o
-    0x00009474   0x00009474   0x00000004   Code   RO         4187    i.get_download_cmd_total  protocol.o
-    0x00009478   0x00009478   0x0000000e   Code   RO         4070    i.get_mcu_bt_mode   system.o
-    0x00009486   0x00009486   0x00000002   PAD
-    0x00009488   0x00009488   0x0000001c   Code   RO         4071    i.get_queue_total_data  system.o
-    0x000094a4   0x000094a4   0x00000002   Code   RO         4188    i.go_bootloader_ota  protocol.o
-    0x000094a6   0x000094a6   0x00000030   Code   RO         3409    i.gpio_init         app.o
-    0x000094d6   0x000094d6   0x00000002   PAD
-    0x000094d8   0x000094d8   0x000001f4   Code   RO         3410    i.hexdump           app.o
-    0x000096cc   0x000096cc   0x00000038   Code   RO         3411    i.idle_process      app.o
-    0x00009704   0x00009704   0x000000b8   Code   RO         3412    i.init_all          app.o
-    0x000097bc   0x000097bc   0x0000001e   Code   RO         3205    i.led_green         myled.o
-    0x000097da   0x000097da   0x00000040   Code   RO         3206    i.led_init          myled.o
-    0x0000981a   0x0000981a   0x0000001e   Code   RO         3207    i.led_red           myled.o
-    0x00009838   0x00009838   0x0000000c   Code   RO           88    i.main              main.o
-    0x00009844   0x00009844   0x0000018c   Code   RO         4408    i.mcu_common_uart_data_unpack  mcu_api.o
-    0x000099d0   0x000099d0   0x00000002   Code   RO         4572    i.mcu_device_delay_restart  mcu_ota_handler.o
-    0x000099d2   0x000099d2   0x00000002   PAD
-    0x000099d4   0x000099d4   0x00000064   Code   RO         4409    i.mcu_dp_bool_update  mcu_api.o
-    0x00009a38   0x00009a38   0x00000054   Code   RO         4410    i.mcu_dp_enum_update  mcu_api.o
-    0x00009a8c   0x00009a8c   0x00000078   Code   RO         4414    i.mcu_dp_value_update  mcu_api.o
-    0x00009b04   0x00009b04   0x00000006   Code   RO         4417    i.mcu_get_dp_download_enum  mcu_api.o
-    0x00009b0a   0x00009b0a   0x0000000e   Code   RO         4418    i.mcu_get_dp_download_value  mcu_api.o
-    0x00009b18   0x00009b18   0x00000160   Code   RO         4577    i.mcu_ota_data_req  mcu_ota_handler.o
-    0x00009c78   0x00009c78   0x00000054   Code   RO         4578    i.mcu_ota_end_req   mcu_ota_handler.o
-    0x00009ccc   0x00009ccc   0x000002e0   Code   RO         4579    i.mcu_ota_file_info_req  mcu_ota_handler.o
-    0x00009fac   0x00009fac   0x00000024   Code   RO         4581    i.mcu_ota_init_disconnect  mcu_ota_handler.o
-    0x00009fd0   0x00009fd0   0x000000b0   Code   RO         4582    i.mcu_ota_offset_req  mcu_ota_handler.o
-    0x0000a080   0x0000a080   0x0000007c   Code   RO         4583    i.mcu_ota_proc      mcu_ota_handler.o
-    0x0000a0fc   0x0000a0fc   0x000000b4   Code   RO         4584    i.mcu_ota_start_req  mcu_ota_handler.o
-    0x0000a1b0   0x0000a1b0   0x0000000c   Code   RO         4585    i.mcu_ota_status_get  mcu_ota_handler.o
-    0x0000a1bc   0x0000a1bc   0x0000000c   Code   RO         4586    i.mcu_ota_status_set  mcu_ota_handler.o
-    0x0000a1c8   0x0000a1c8   0x00000018   Code   RO         4420    i.mcu_reset_bt      mcu_api.o
-    0x0000a1e0   0x0000a1e0   0x000000e0   Code   RO         3413    i.memory_init       app.o
-    0x0000a2c0   0x0000a2c0   0x00000044   Code   RO         4423    i.my_memcpy         mcu_api.o
-    0x0000a304   0x0000a304   0x00000022   Code   RO         4424    i.my_memset         mcu_api.o
-    0x0000a326   0x0000a326   0x00000002   PAD
-    0x0000a328   0x0000a328   0x00000078   Code   RO         4587    i.on_data_write_request_sched  mcu_ota_handler.o
-    0x0000a3a0   0x0000a3a0   0x00000050   Code   RO         4588    i.on_dfu_complete   mcu_ota_handler.o
-    0x0000a3f0   0x0000a3f0   0x00000008   Code   RO         4008    i.quit_shell        shell_port.o
-    0x0000a3f8   0x0000a3f8   0x00000088   Code   RO         3414    i.read_uid          app.o
-    0x0000a480   0x0000a480   0x0000002c   Code   RO         4589    i.reset_after_flash_write  mcu_ota_handler.o
-    0x0000a4ac   0x0000a4ac   0x00000002   Code   RO         4189    i.reset_default_parameter  protocol.o
-    0x0000a4ae   0x0000a4ae   0x00000002   PAD
-    0x0000a4b0   0x0000a4b0   0x000000bc   Code   RO         3415    i.segger_init       app.o
-    0x0000a56c   0x0000a56c   0x0000000a   Code   RO         3416    i.sent_sample_data  app.o
-    0x0000a576   0x0000a576   0x00000002   PAD
-    0x0000a578   0x0000a578   0x00000028   Code   RO         4072    i.set_bt_uart_buffer  system.o
-    0x0000a5a0   0x0000a5a0   0x00000010   Code   RO         4073    i.set_bt_uart_byte  system.o
-    0x0000a5b0   0x0000a5b0   0x00000060   Code   RO         3417    i.set_fsk_wave_duty  app.o
-    0x0000a610   0x0000a610   0x00000040   Code   RO         3418    i.set_samplerate    app.o
-    0x0000a650   0x0000a650   0x00000028   Code   RO         3555    i.shellAdd          shell.o
-    0x0000a678   0x0000a678   0x0000000e   Code   RO         3556    i.shellBackspace    shell.o
-    0x0000a686   0x0000a686   0x00000002   PAD
-    0x0000a688   0x0000a688   0x00000044   Code   RO         3557    i.shellCheckPassword  shell.o
-    0x0000a6cc   0x0000a6cc   0x00000036   Code   RO         3558    i.shellCheckPermission  shell.o
-    0x0000a702   0x0000a702   0x00000002   PAD
-    0x0000a704   0x0000a704   0x0000001c   Code   RO         3559    i.shellClear        shell.o
-    0x0000a720   0x0000a720   0x00000028   Code   RO         3560    i.shellClearCommandLine  shell.o
-    0x0000a748   0x0000a748   0x00000012   Code   RO         3561    i.shellCmds         shell.o
-    0x0000a75a   0x0000a75a   0x00000010   Code   RO         3562    i.shellDelete       shell.o
-    0x0000a76a   0x0000a76a   0x000000da   Code   RO         3563    i.shellDeleteByte   shell.o
-    0x0000a844   0x0000a844   0x00000020   Code   RO         3564    i.shellDeleteCommandLine  shell.o
-    0x0000a864   0x0000a864   0x00000010   Code   RO         3565    i.shellDown         shell.o
-    0x0000a874   0x0000a874   0x00000014   Code   RO         3566    i.shellEnter        shell.o
-    0x0000a888   0x0000a888   0x00000074   Code   RO         3567    i.shellExec         shell.o
-    0x0000a8fc   0x0000a8fc   0x00000054   Code   RO         3568    i.shellExecute      shell.o
-    0x0000a950   0x0000a950   0x00000058   Code   RO         3956    i.shellExtNumType   shell_ext.o
-    0x0000a9a8   0x0000a9a8   0x00000046   Code   RO         3957    i.shellExtParseChar  shell_ext.o
-    0x0000a9ee   0x0000a9ee   0x00000002   PAD
-    0x0000a9f0   0x0000a9f0   0x000000ec   Code   RO         3958    i.shellExtParseNumber  shell_ext.o
-    0x0000aadc   0x0000aadc   0x00000056   Code   RO         3959    i.shellExtParsePara  shell_ext.o
-    0x0000ab32   0x0000ab32   0x0000004a   Code   RO         3960    i.shellExtParseString  shell_ext.o
-    0x0000ab7c   0x0000ab7c   0x00000024   Code   RO         3961    i.shellExtParseVar  shell_ext.o
-    0x0000aba0   0x0000aba0   0x000000ca   Code   RO         3962    i.shellExtRun       shell_ext.o
-    0x0000ac6a   0x0000ac6a   0x00000036   Code   RO         3963    i.shellExtToNum     shell_ext.o
-    0x0000aca0   0x0000aca0   0x00000030   Code   RO         3569    i.shellGetCommandDesc  shell.o
-    0x0000acd0   0x0000acd0   0x00000050   Code   RO         3570    i.shellGetCommandName  shell.o
-    0x0000ad20   0x0000ad20   0x00000034   Code   RO         3571    i.shellGetCurrent   shell.o
-    0x0000ad54   0x0000ad54   0x00000054   Code   RO         3572    i.shellGetVarValue  shell.o
-    0x0000ada8   0x0000ada8   0x000000f8   Code   RO         3573    i.shellHandler      shell.o
-    0x0000aea0   0x0000aea0   0x0000002c   Code   RO         3574    i.shellHelp         shell.o
-    0x0000aecc   0x0000aecc   0x000000c2   Code   RO         3575    i.shellHistory      shell.o
-    0x0000af8e   0x0000af8e   0x0000007a   Code   RO         3576    i.shellHistoryAdd   shell.o
-    0x0000b008   0x0000b008   0x000000a0   Code   RO         3577    i.shellInit         shell.o
-    0x0000b0a8   0x0000b0a8   0x000000d8   Code   RO         3578    i.shellInsertByte   shell.o
-    0x0000b180   0x0000b180   0x00000012   Code   RO         3579    i.shellKeys         shell.o
-    0x0000b192   0x0000b192   0x0000001a   Code   RO         3580    i.shellLeft         shell.o
-    0x0000b1ac   0x0000b1ac   0x00000012   Code   RO         3581    i.shellListAll      shell.o
-    0x0000b1be   0x0000b1be   0x00000002   PAD
-    0x0000b1c0   0x0000b1c0   0x0000004c   Code   RO         3582    i.shellListCommand  shell.o
-    0x0000b20c   0x0000b20c   0x000000fc   Code   RO         3583    i.shellListItem     shell.o
-    0x0000b308   0x0000b308   0x00000058   Code   RO         3584    i.shellListKey      shell.o
-    0x0000b360   0x0000b360   0x00000058   Code   RO         3585    i.shellListUser     shell.o
-    0x0000b3b8   0x0000b3b8   0x00000058   Code   RO         3586    i.shellListVar      shell.o
-    0x0000b410   0x0000b410   0x0000001c   Code   RO         3587    i.shellNormalInput  shell.o
-    0x0000b42c   0x0000b42c   0x0000008e   Code   RO         3588    i.shellParserParam  shell.o
-    0x0000b4ba   0x0000b4ba   0x00000068   Code   RO         3591    i.shellRemoveParamQuotes  shell.o
-    0x0000b522   0x0000b522   0x0000001e   Code   RO         3592    i.shellRight        shell.o
-    0x0000b540   0x0000b540   0x000000ae   Code   RO         3594    i.shellRunCommand   shell.o
-    0x0000b5ee   0x0000b5ee   0x0000007a   Code   RO         3595    i.shellSeekCommand  shell.o
-    0x0000b668   0x0000b668   0x0000005c   Code   RO         3596    i.shellSetUser      shell.o
-    0x0000b6c4   0x0000b6c4   0x00000070   Code   RO         3597    i.shellSetVar       shell.o
-    0x0000b734   0x0000b734   0x00000090   Code   RO         3598    i.shellSetVarValue  shell.o
-    0x0000b7c4   0x0000b7c4   0x000000c0   Code   RO         3599    i.shellShowVar      shell.o
-    0x0000b884   0x0000b884   0x0000002c   Code   RO         3600    i.shellStringCompare  shell.o
-    0x0000b8b0   0x0000b8b0   0x00000018   Code   RO         3601    i.shellStringCopy   shell.o
-    0x0000b8c8   0x0000b8c8   0x00000160   Code   RO         3602    i.shellTab          shell.o
-    0x0000ba28   0x0000ba28   0x00000022   Code   RO         3603    i.shellTask         shell.o
-    0x0000ba4a   0x0000ba4a   0x00000056   Code   RO         3604    i.shellToDec        shell.o
-    0x0000baa0   0x0000baa0   0x00000038   Code   RO         3605    i.shellToHex        shell.o
-    0x0000bad8   0x0000bad8   0x0000000e   Code   RO         3606    i.shellUp           shell.o
-    0x0000bae6   0x0000bae6   0x00000012   Code   RO         3607    i.shellUsers        shell.o
-    0x0000baf8   0x0000baf8   0x00000012   Code   RO         3608    i.shellVars         shell.o
-    0x0000bb0a   0x0000bb0a   0x00000012   Code   RO         4009    i.shellWrite        shell_port.o
-    0x0000bb1c   0x0000bb1c   0x0000000e   Code   RO         3609    i.shellWriteByte    shell.o
-    0x0000bb2a   0x0000bb2a   0x00000002   PAD
-    0x0000bb2c   0x0000bb2c   0x0000005c   Code   RO         3610    i.shellWriteCommandDesc  shell.o
-    0x0000bb88   0x0000bb88   0x0000006c   Code   RO         3611    i.shellWriteCommandHelp  shell.o
-    0x0000bbf4   0x0000bbf4   0x0000008c   Code   RO         3612    i.shellWritePrompt  shell.o
-    0x0000bc80   0x0000bc80   0x0000008c   Code   RO         3613    i.shellWriteReturnValue  shell.o
-    0x0000bd0c   0x0000bd0c   0x00000030   Code   RO         3614    i.shellWriteString  shell.o
-    0x0000bd3c   0x0000bd3c   0x00000024   Code   RO         4010    i.shell_uart_write_data  shell_port.o
-    0x0000bd60   0x0000bd60   0x0000002c   Code   RO         4190    i.soft_reset_mcu    protocol.o
-    0x0000bd8c   0x0000bd8c   0x00000048   Code   RO         3419    i.stop_sample       app.o
-    0x0000bdd4   0x0000bdd4   0x0000000c   Code   RO         3420    i.tick_init         app.o
-    0x0000bde0   0x0000bde0   0x00000100   Code   RO         3313    i.timer0_init       mytimer.o
-    0x0000bee0   0x0000bee0   0x00000044   Code   RO         3246    i.tuya_UsartRxErrProcess  myusart.o
-    0x0000bf24   0x0000bf24   0x0000001c   Code   RO         3247    i.tuya_UsartRxIrqCallback  myusart.o
-    0x0000bf40   0x0000bf40   0x00000008   Code   RO         4191    i.tuya_re_config_network  protocol.o
-    0x0000bf48   0x0000bf48   0x00000008   Code   RO         4192    i.tuya_reset_module  protocol.o
-    0x0000bf50   0x0000bf50   0x00000002   Code   RO         4193    i.tuya_retry_ota    protocol.o
-    0x0000bf52   0x0000bf52   0x00000002   PAD
-    0x0000bf54   0x0000bf54   0x00000014   Code   RO         3421    i.uart_post_process  app.o
-    0x0000bf68   0x0000bf68   0x00000068   Code   RO         4426    i.uart_receive_input  mcu_api.o
-    0x0000bfd0   0x0000bfd0   0x00000018   Code   RO         4194    i.uart_transmit_output  protocol.o
-    0x0000bfe8   0x0000bfe8   0x00000018   Code   RO         4011    i.uart_transmit_output_shell  shell_port.o
-    0x0000c000   0x0000c000   0x00000148   Code   RO         3248    i.usart_init        myusart.o
-    0x0000c148   0x0000c148   0x00000010   Data   RO         2546    .constdata          hc32f46x_usart.o
-    0x0000c158   0x0000c158   0x00000009   Data   RO         3249    .constdata          myusart.o
-    0x0000c161   0x0000c161   0x00000009   Data   RO         3376    .constdata          myclk.o
-    0x0000c16a   0x0000c16a   0x000000d2   Data   RO         3423    .constdata          app.o
-    0x0000c23c   0x0000c23c   0x00000114   Data   RO         3616    .constdata          shell.o
-    0x0000c350   0x0000c350   0x0000000a   Data   RO         4013    .constdata          shell_port.o
-    0x0000c35a   0x0000c35a   0x0000003c   Data   RO         4195    .constdata          protocol.o
-    0x0000c396   0x0000c396   0x00000011   Data   RO         4590    .constdata          mcu_ota_handler.o
-    0x0000c3a7   0x0000c3a7   0x00000010   Data   RO         4932    .constdata          segger_rtt_printf.o
-    0x0000c3b7   0x0000c3b7   0x00000001   PAD
-    0x0000c3b8   0x0000c3b8   0x000002c5   Data   RO         3617    .conststring        shell.o
-    0x0000c67d   0x0000c67d   0x00000003   PAD
-    0x0000c680   0x0000c680   0x000000ea   Data   RO         4591    .conststring        mcu_ota_handler.o
-    0x0000c76a   0x0000c76a   0x00000002   PAD
-    0x0000c76c   0x0000c76c   0x00000020   Data   RO         5388    Region$$Table       anon$$obj.o
-    0x0000c78c   0x0000c78c   0x00000040   Data   RO         3425    shellCommand        app.o
-    0x0000c7cc   0x0000c7cc   0x00000130   Data   RO         3619    shellCommand        shell.o
-    0x0000c8fc   0x0000c8fc   0x00000010   Data   RO         4014    shellCommand        shell_port.o
+    0x000093d8   0x000093d8   0x00000044   Code   RO         3407    i.en_fsk_pwm        app.o
+    0x0000941c   0x0000941c   0x00000048   Code   RO         3408    i.en_sample         app.o
+    0x00009464   0x00009464   0x00000028   Code   RO         3409    i.enable_flash_cache  app.o
+    0x0000948c   0x0000948c   0x0000001c   Code   RO         3410    i.error_process     app.o
+    0x000094a8   0x000094a8   0x00000010   Code   RO          265    i.fputc             hc32f46x_utility.o
+    0x000094b8   0x000094b8   0x0000001c   Code   RO         4080    i.get_check_sum     system.o
+    0x000094d4   0x000094d4   0x0000002c   Code   RO         4081    i.get_dowmload_dpid_index  system.o
+    0x00009500   0x00009500   0x00000004   Code   RO         4199    i.get_download_cmd_total  protocol.o
+    0x00009504   0x00009504   0x0000000e   Code   RO         4082    i.get_mcu_bt_mode   system.o
+    0x00009512   0x00009512   0x00000002   PAD
+    0x00009514   0x00009514   0x0000001c   Code   RO         4083    i.get_queue_total_data  system.o
+    0x00009530   0x00009530   0x00000002   Code   RO         4200    i.go_bootloader_ota  protocol.o
+    0x00009532   0x00009532   0x00000030   Code   RO         3411    i.gpio_init         app.o
+    0x00009562   0x00009562   0x00000002   PAD
+    0x00009564   0x00009564   0x000001f4   Code   RO         3412    i.hexdump           app.o
+    0x00009758   0x00009758   0x00000038   Code   RO         3413    i.idle_process      app.o
+    0x00009790   0x00009790   0x000000cc   Code   RO         3414    i.init_all          app.o
+    0x0000985c   0x0000985c   0x0000001e   Code   RO         3205    i.led_green         myled.o
+    0x0000987a   0x0000987a   0x00000040   Code   RO         3206    i.led_init          myled.o
+    0x000098ba   0x000098ba   0x0000001e   Code   RO         3207    i.led_red           myled.o
+    0x000098d8   0x000098d8   0x0000000c   Code   RO           88    i.main              main.o
+    0x000098e4   0x000098e4   0x0000018c   Code   RO         4420    i.mcu_common_uart_data_unpack  mcu_api.o
+    0x00009a70   0x00009a70   0x00000002   Code   RO         4584    i.mcu_device_delay_restart  mcu_ota_handler.o
+    0x00009a72   0x00009a72   0x00000002   PAD
+    0x00009a74   0x00009a74   0x00000064   Code   RO         4421    i.mcu_dp_bool_update  mcu_api.o
+    0x00009ad8   0x00009ad8   0x00000054   Code   RO         4422    i.mcu_dp_enum_update  mcu_api.o
+    0x00009b2c   0x00009b2c   0x00000078   Code   RO         4426    i.mcu_dp_value_update  mcu_api.o
+    0x00009ba4   0x00009ba4   0x00000006   Code   RO         4429    i.mcu_get_dp_download_enum  mcu_api.o
+    0x00009baa   0x00009baa   0x0000000e   Code   RO         4430    i.mcu_get_dp_download_value  mcu_api.o
+    0x00009bb8   0x00009bb8   0x00000160   Code   RO         4589    i.mcu_ota_data_req  mcu_ota_handler.o
+    0x00009d18   0x00009d18   0x00000054   Code   RO         4590    i.mcu_ota_end_req   mcu_ota_handler.o
+    0x00009d6c   0x00009d6c   0x000002e0   Code   RO         4591    i.mcu_ota_file_info_req  mcu_ota_handler.o
+    0x0000a04c   0x0000a04c   0x00000024   Code   RO         4593    i.mcu_ota_init_disconnect  mcu_ota_handler.o
+    0x0000a070   0x0000a070   0x000000b0   Code   RO         4594    i.mcu_ota_offset_req  mcu_ota_handler.o
+    0x0000a120   0x0000a120   0x0000007c   Code   RO         4595    i.mcu_ota_proc      mcu_ota_handler.o
+    0x0000a19c   0x0000a19c   0x000000b4   Code   RO         4596    i.mcu_ota_start_req  mcu_ota_handler.o
+    0x0000a250   0x0000a250   0x0000000c   Code   RO         4597    i.mcu_ota_status_get  mcu_ota_handler.o
+    0x0000a25c   0x0000a25c   0x0000000c   Code   RO         4598    i.mcu_ota_status_set  mcu_ota_handler.o
+    0x0000a268   0x0000a268   0x00000018   Code   RO         4432    i.mcu_reset_bt      mcu_api.o
+    0x0000a280   0x0000a280   0x000000e0   Code   RO         3415    i.memory_init       app.o
+    0x0000a360   0x0000a360   0x00000044   Code   RO         4435    i.my_memcpy         mcu_api.o
+    0x0000a3a4   0x0000a3a4   0x00000022   Code   RO         4436    i.my_memset         mcu_api.o
+    0x0000a3c6   0x0000a3c6   0x00000002   PAD
+    0x0000a3c8   0x0000a3c8   0x00000078   Code   RO         4599    i.on_data_write_request_sched  mcu_ota_handler.o
+    0x0000a440   0x0000a440   0x00000050   Code   RO         4600    i.on_dfu_complete   mcu_ota_handler.o
+    0x0000a490   0x0000a490   0x00000008   Code   RO         4020    i.quit_shell        shell_port.o
+    0x0000a498   0x0000a498   0x00000088   Code   RO         3416    i.read_uid          app.o
+    0x0000a520   0x0000a520   0x0000002c   Code   RO         4601    i.reset_after_flash_write  mcu_ota_handler.o
+    0x0000a54c   0x0000a54c   0x00000002   Code   RO         4201    i.reset_default_parameter  protocol.o
+    0x0000a54e   0x0000a54e   0x00000002   PAD
+    0x0000a550   0x0000a550   0x000000bc   Code   RO         3417    i.segger_init       app.o
+    0x0000a60c   0x0000a60c   0x0000000a   Code   RO         3418    i.sent_sample_data  app.o
+    0x0000a616   0x0000a616   0x00000002   PAD
+    0x0000a618   0x0000a618   0x00000028   Code   RO         4084    i.set_bt_uart_buffer  system.o
+    0x0000a640   0x0000a640   0x00000010   Code   RO         4085    i.set_bt_uart_byte  system.o
+    0x0000a650   0x0000a650   0x00000060   Code   RO         3419    i.set_fsk_wave_duty  app.o
+    0x0000a6b0   0x0000a6b0   0x00000018   Code   RO         3420    i.set_if_adc_avg    app.o
+    0x0000a6c8   0x0000a6c8   0x00000048   Code   RO         3421    i.set_samplerate    app.o
+    0x0000a710   0x0000a710   0x00000028   Code   RO         3567    i.shellAdd          shell.o
+    0x0000a738   0x0000a738   0x0000000e   Code   RO         3568    i.shellBackspace    shell.o
+    0x0000a746   0x0000a746   0x00000002   PAD
+    0x0000a748   0x0000a748   0x00000044   Code   RO         3569    i.shellCheckPassword  shell.o
+    0x0000a78c   0x0000a78c   0x00000036   Code   RO         3570    i.shellCheckPermission  shell.o
+    0x0000a7c2   0x0000a7c2   0x00000002   PAD
+    0x0000a7c4   0x0000a7c4   0x0000001c   Code   RO         3571    i.shellClear        shell.o
+    0x0000a7e0   0x0000a7e0   0x00000028   Code   RO         3572    i.shellClearCommandLine  shell.o
+    0x0000a808   0x0000a808   0x00000012   Code   RO         3573    i.shellCmds         shell.o
+    0x0000a81a   0x0000a81a   0x00000010   Code   RO         3574    i.shellDelete       shell.o
+    0x0000a82a   0x0000a82a   0x000000da   Code   RO         3575    i.shellDeleteByte   shell.o
+    0x0000a904   0x0000a904   0x00000020   Code   RO         3576    i.shellDeleteCommandLine  shell.o
+    0x0000a924   0x0000a924   0x00000010   Code   RO         3577    i.shellDown         shell.o
+    0x0000a934   0x0000a934   0x00000014   Code   RO         3578    i.shellEnter        shell.o
+    0x0000a948   0x0000a948   0x00000074   Code   RO         3579    i.shellExec         shell.o
+    0x0000a9bc   0x0000a9bc   0x00000054   Code   RO         3580    i.shellExecute      shell.o
+    0x0000aa10   0x0000aa10   0x00000058   Code   RO         3968    i.shellExtNumType   shell_ext.o
+    0x0000aa68   0x0000aa68   0x00000046   Code   RO         3969    i.shellExtParseChar  shell_ext.o
+    0x0000aaae   0x0000aaae   0x00000002   PAD
+    0x0000aab0   0x0000aab0   0x000000ec   Code   RO         3970    i.shellExtParseNumber  shell_ext.o
+    0x0000ab9c   0x0000ab9c   0x00000056   Code   RO         3971    i.shellExtParsePara  shell_ext.o
+    0x0000abf2   0x0000abf2   0x0000004a   Code   RO         3972    i.shellExtParseString  shell_ext.o
+    0x0000ac3c   0x0000ac3c   0x00000024   Code   RO         3973    i.shellExtParseVar  shell_ext.o
+    0x0000ac60   0x0000ac60   0x000000ca   Code   RO         3974    i.shellExtRun       shell_ext.o
+    0x0000ad2a   0x0000ad2a   0x00000036   Code   RO         3975    i.shellExtToNum     shell_ext.o
+    0x0000ad60   0x0000ad60   0x00000030   Code   RO         3581    i.shellGetCommandDesc  shell.o
+    0x0000ad90   0x0000ad90   0x00000050   Code   RO         3582    i.shellGetCommandName  shell.o
+    0x0000ade0   0x0000ade0   0x00000034   Code   RO         3583    i.shellGetCurrent   shell.o
+    0x0000ae14   0x0000ae14   0x00000054   Code   RO         3584    i.shellGetVarValue  shell.o
+    0x0000ae68   0x0000ae68   0x000000f8   Code   RO         3585    i.shellHandler      shell.o
+    0x0000af60   0x0000af60   0x0000002c   Code   RO         3586    i.shellHelp         shell.o
+    0x0000af8c   0x0000af8c   0x000000c2   Code   RO         3587    i.shellHistory      shell.o
+    0x0000b04e   0x0000b04e   0x0000007a   Code   RO         3588    i.shellHistoryAdd   shell.o
+    0x0000b0c8   0x0000b0c8   0x000000a0   Code   RO         3589    i.shellInit         shell.o
+    0x0000b168   0x0000b168   0x000000d8   Code   RO         3590    i.shellInsertByte   shell.o
+    0x0000b240   0x0000b240   0x00000012   Code   RO         3591    i.shellKeys         shell.o
+    0x0000b252   0x0000b252   0x0000001a   Code   RO         3592    i.shellLeft         shell.o
+    0x0000b26c   0x0000b26c   0x00000012   Code   RO         3593    i.shellListAll      shell.o
+    0x0000b27e   0x0000b27e   0x00000002   PAD
+    0x0000b280   0x0000b280   0x0000004c   Code   RO         3594    i.shellListCommand  shell.o
+    0x0000b2cc   0x0000b2cc   0x000000fc   Code   RO         3595    i.shellListItem     shell.o
+    0x0000b3c8   0x0000b3c8   0x00000058   Code   RO         3596    i.shellListKey      shell.o
+    0x0000b420   0x0000b420   0x00000058   Code   RO         3597    i.shellListUser     shell.o
+    0x0000b478   0x0000b478   0x00000058   Code   RO         3598    i.shellListVar      shell.o
+    0x0000b4d0   0x0000b4d0   0x0000001c   Code   RO         3599    i.shellNormalInput  shell.o
+    0x0000b4ec   0x0000b4ec   0x0000008e   Code   RO         3600    i.shellParserParam  shell.o
+    0x0000b57a   0x0000b57a   0x00000068   Code   RO         3603    i.shellRemoveParamQuotes  shell.o
+    0x0000b5e2   0x0000b5e2   0x0000001e   Code   RO         3604    i.shellRight        shell.o
+    0x0000b600   0x0000b600   0x000000ae   Code   RO         3606    i.shellRunCommand   shell.o
+    0x0000b6ae   0x0000b6ae   0x0000007a   Code   RO         3607    i.shellSeekCommand  shell.o
+    0x0000b728   0x0000b728   0x0000005c   Code   RO         3608    i.shellSetUser      shell.o
+    0x0000b784   0x0000b784   0x00000070   Code   RO         3609    i.shellSetVar       shell.o
+    0x0000b7f4   0x0000b7f4   0x00000090   Code   RO         3610    i.shellSetVarValue  shell.o
+    0x0000b884   0x0000b884   0x000000c0   Code   RO         3611    i.shellShowVar      shell.o
+    0x0000b944   0x0000b944   0x0000002c   Code   RO         3612    i.shellStringCompare  shell.o
+    0x0000b970   0x0000b970   0x00000018   Code   RO         3613    i.shellStringCopy   shell.o
+    0x0000b988   0x0000b988   0x00000160   Code   RO         3614    i.shellTab          shell.o
+    0x0000bae8   0x0000bae8   0x00000022   Code   RO         3615    i.shellTask         shell.o
+    0x0000bb0a   0x0000bb0a   0x00000056   Code   RO         3616    i.shellToDec        shell.o
+    0x0000bb60   0x0000bb60   0x00000038   Code   RO         3617    i.shellToHex        shell.o
+    0x0000bb98   0x0000bb98   0x0000000e   Code   RO         3618    i.shellUp           shell.o
+    0x0000bba6   0x0000bba6   0x00000012   Code   RO         3619    i.shellUsers        shell.o
+    0x0000bbb8   0x0000bbb8   0x00000012   Code   RO         3620    i.shellVars         shell.o
+    0x0000bbca   0x0000bbca   0x00000012   Code   RO         4021    i.shellWrite        shell_port.o
+    0x0000bbdc   0x0000bbdc   0x0000000e   Code   RO         3621    i.shellWriteByte    shell.o
+    0x0000bbea   0x0000bbea   0x00000002   PAD
+    0x0000bbec   0x0000bbec   0x0000005c   Code   RO         3622    i.shellWriteCommandDesc  shell.o
+    0x0000bc48   0x0000bc48   0x0000006c   Code   RO         3623    i.shellWriteCommandHelp  shell.o
+    0x0000bcb4   0x0000bcb4   0x0000008c   Code   RO         3624    i.shellWritePrompt  shell.o
+    0x0000bd40   0x0000bd40   0x0000008c   Code   RO         3625    i.shellWriteReturnValue  shell.o
+    0x0000bdcc   0x0000bdcc   0x00000030   Code   RO         3626    i.shellWriteString  shell.o
+    0x0000bdfc   0x0000bdfc   0x00000024   Code   RO         4022    i.shell_uart_write_data  shell_port.o
+    0x0000be20   0x0000be20   0x0000002c   Code   RO         4202    i.soft_reset_mcu    protocol.o
+    0x0000be4c   0x0000be4c   0x0000000c   Code   RO         3422    i.tick_init         app.o
+    0x0000be58   0x0000be58   0x00000100   Code   RO         3313    i.timer0_init       mytimer.o
+    0x0000bf58   0x0000bf58   0x00000044   Code   RO         3246    i.tuya_UsartRxErrProcess  myusart.o
+    0x0000bf9c   0x0000bf9c   0x0000001c   Code   RO         3247    i.tuya_UsartRxIrqCallback  myusart.o
+    0x0000bfb8   0x0000bfb8   0x00000008   Code   RO         4203    i.tuya_re_config_network  protocol.o
+    0x0000bfc0   0x0000bfc0   0x00000008   Code   RO         4204    i.tuya_reset_module  protocol.o
+    0x0000bfc8   0x0000bfc8   0x00000002   Code   RO         4205    i.tuya_retry_ota    protocol.o
+    0x0000bfca   0x0000bfca   0x00000002   PAD
+    0x0000bfcc   0x0000bfcc   0x00000014   Code   RO         3423    i.uart_post_process  app.o
+    0x0000bfe0   0x0000bfe0   0x00000068   Code   RO         4438    i.uart_receive_input  mcu_api.o
+    0x0000c048   0x0000c048   0x00000018   Code   RO         4206    i.uart_transmit_output  protocol.o
+    0x0000c060   0x0000c060   0x00000018   Code   RO         4023    i.uart_transmit_output_shell  shell_port.o
+    0x0000c078   0x0000c078   0x00000148   Code   RO         3248    i.usart_init        myusart.o
+    0x0000c1c0   0x0000c1c0   0x00000010   Data   RO         2546    .constdata          hc32f46x_usart.o
+    0x0000c1d0   0x0000c1d0   0x00000009   Data   RO         3249    .constdata          myusart.o
+    0x0000c1d9   0x0000c1d9   0x00000009   Data   RO         3376    .constdata          myclk.o
+    0x0000c1e2   0x0000c1e2   0x00000139   Data   RO         3425    .constdata          app.o
+    0x0000c31b   0x0000c31b   0x00000001   PAD
+    0x0000c31c   0x0000c31c   0x00000114   Data   RO         3628    .constdata          shell.o
+    0x0000c430   0x0000c430   0x0000000a   Data   RO         4025    .constdata          shell_port.o
+    0x0000c43a   0x0000c43a   0x0000003c   Data   RO         4207    .constdata          protocol.o
+    0x0000c476   0x0000c476   0x00000011   Data   RO         4602    .constdata          mcu_ota_handler.o
+    0x0000c487   0x0000c487   0x00000010   Data   RO         4944    .constdata          segger_rtt_printf.o
+    0x0000c497   0x0000c497   0x00000001   PAD
+    0x0000c498   0x0000c498   0x000002c5   Data   RO         3629    .conststring        shell.o
+    0x0000c75d   0x0000c75d   0x00000003   PAD
+    0x0000c760   0x0000c760   0x000000ea   Data   RO         4603    .conststring        mcu_ota_handler.o
+    0x0000c84a   0x0000c84a   0x00000002   PAD
+    0x0000c84c   0x0000c84c   0x00000020   Data   RO         5400    Region$$Table       anon$$obj.o
+    0x0000c86c   0x0000c86c   0x00000060   Data   RO         3427    shellCommand        app.o
+    0x0000c8cc   0x0000c8cc   0x00000130   Data   RO         3631    shellCommand        shell.o
+    0x0000c9fc   0x0000c9fc   0x00000010   Data   RO         4026    shellCommand        shell_port.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x1fff9000, Load base: 0x0000c90c, Size: 0x0000d4a8, Max: 0x0002e000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x1fff9000, Load base: 0x0000ca0c, Size: 0x0000d4a8, Max: 0x0002e000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x1fff9000   0x0000c90c   0x00000008   Data   RW           15    .data               system_hc32f46x.o
-    0x1fff9008   0x0000c914   0x00000008   Data   RW          266    .data               hc32f46x_utility.o
-    0x1fff9010   0x0000c91c   0x00000001   Data   RW         2769    .data               hc32f46x_dmac.o
-    0x1fff9011   0x0000c91d   0x00000003   PAD
-    0x1fff9014   0x0000c920   0x00000004   Data   RW         3315    .data               mytimer.o
-    0x1fff9018   0x0000c924   0x00000008   Data   RW         3424    .data               app.o
-    0x1fff9020   0x0000c92c   0x00000058   Data   RW         3618    .data               shell.o
-    0x1fff9078   0x0000c984   0x0000000d   Data   RW         4075    .data               system.o
-    0x1fff9085   0x0000c991   0x00000001   PAD
-    0x1fff9086   0x0000c992   0x0000000a   Data   RW         4427    .data               mcu_api.o
-    0x1fff9090   0x0000c99c   0x0000000c   Data   RW         4592    .data               mcu_ota_handler.o
-    0x1fff909c   0x0000c9a8   0x00000028   Data   RW         4977    .data               fifo.o
-    0x1fff90c4   0x0000c9d0   0x00000004   Data   RW         5364    .data               mc_w.l(stdout.o)
+    0x1fff9000   0x0000ca0c   0x00000008   Data   RW           15    .data               system_hc32f46x.o
+    0x1fff9008   0x0000ca14   0x00000008   Data   RW          266    .data               hc32f46x_utility.o
+    0x1fff9010   0x0000ca1c   0x00000001   Data   RW         2769    .data               hc32f46x_dmac.o
+    0x1fff9011   0x0000ca1d   0x00000003   PAD
+    0x1fff9014   0x0000ca20   0x00000004   Data   RW         3315    .data               mytimer.o
+    0x1fff9018   0x0000ca24   0x00000008   Data   RW         3426    .data               app.o
+    0x1fff9020   0x0000ca2c   0x00000058   Data   RW         3630    .data               shell.o
+    0x1fff9078   0x0000ca84   0x0000000d   Data   RW         4087    .data               system.o
+    0x1fff9085   0x0000ca91   0x00000001   PAD
+    0x1fff9086   0x0000ca92   0x0000000a   Data   RW         4439    .data               mcu_api.o
+    0x1fff9090   0x0000ca9c   0x0000000c   Data   RW         4604    .data               mcu_ota_handler.o
+    0x1fff909c   0x0000caa8   0x00000028   Data   RW         4989    .data               fifo.o
+    0x1fff90c4   0x0000cad0   0x00000004   Data   RW         5376    .data               mc_w.l(stdout.o)
     0x1fff90c8        -       0x00000200   Zero   RW         1262    .bss                hc32f46x_interrupts.o
     0x1fff92c8        -       0x00000034   Zero   RW         3147    .bss                myadc.o
     0x1fff92fc        -       0x0000000c   Zero   RW         3314    .bss                mytimer.o
-    0x1fff9308        -       0x00000800   Zero   RW         3422    .bss                app.o
-    0x1fff9b08        -       0x0000001d   Zero   RW         3615    .bss                shell.o
-    0x1fff9b25   0x0000c9d4   0x00000003   PAD
-    0x1fff9b28        -       0x0000026c   Zero   RW         4012    .bss                shell_port.o
-    0x1fff9d94        -       0x00000515   Zero   RW         4074    .bss                system.o
-    0x1fffa2a9   0x0000c9d4   0x00000003   PAD
-    0x1fffa2ac        -       0x000010b8   Zero   RW         4728    .bss                segger_rtt.o
-    0x1fffb364        -       0x00005140   Zero   RW         4976    .bss                fifo.o
-    0x200004a4   0x0000c9d4   0x00000004   PAD
+    0x1fff9308        -       0x00000800   Zero   RW         3424    .bss                app.o
+    0x1fff9b08        -       0x0000001d   Zero   RW         3627    .bss                shell.o
+    0x1fff9b25   0x0000cad4   0x00000003   PAD
+    0x1fff9b28        -       0x0000026c   Zero   RW         4024    .bss                shell_port.o
+    0x1fff9d94        -       0x00000515   Zero   RW         4086    .bss                system.o
+    0x1fffa2a9   0x0000cad4   0x00000003   PAD
+    0x1fffa2ac        -       0x000010b8   Zero   RW         4740    .bss                segger_rtt.o
+    0x1fffb364        -       0x00005140   Zero   RW         4988    .bss                fifo.o
+    0x200004a4   0x0000cad4   0x00000004   PAD
     0x200004a8        -       0x00006000   Zero   RW            1    STACK               startup_hc32f46x.o
 
 

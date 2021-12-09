@@ -80,7 +80,7 @@ void Timera_Config(void)
     TIMERA_CompareInit(TIMERA_UNIT1, TIMERA_UNIT1_CH1, &stcTimerCompareInit);
     TIMERA_CompareCmd(TIMERA_UNIT1, TIMERA_UNIT1_CH1, Enable);
 
-		TIMERA_Cmd(TIMERA_UNIT1, Enable);
+		TIMERA_Cmd(TIMERA_UNIT1, Disable);
 
 }
 

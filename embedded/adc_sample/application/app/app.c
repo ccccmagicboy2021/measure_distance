@@ -81,20 +81,39 @@ int hexdump(const char* buf, int len)
 }
 SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), hexdump, hexdump, dump the mcu memory);
 
-void stop_sample(unsigned char flag)
+int en_sample(unsigned char flag)
 {
 	CV_LOG("[%s] flag: %d\r\n", __FUNCTION__, flag);
 	
 	if (flag)
 	{
-		TIMER0_Cmd(TMR_UNIT,Tim0_ChannelB,Disable);
+		TIMER0_Cmd(TMR_UNIT,Tim0_ChannelB, Enable);
 	}
 	else
 	{
-		TIMER0_Cmd(TMR_UNIT,Tim0_ChannelB,Enable);
+		TIMER0_Cmd(TMR_UNIT,Tim0_ChannelB, Disable);
 	}
+	
+	return 0;
 }
-SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), timer0_en, stop_sample, enable/disable the sample timer);
+SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), timer0_en, en_sample, enable/disable the sample timer);
+
+int en_fsk_pwm(unsigned char flag)
+{
+	CV_LOG("[%s] flag: %d\r\n", __FUNCTION__, flag);
+	
+	if (flag)
+	{
+		TIMERA_Cmd(TIMERA_UNIT1, Enable);
+	}
+	else
+	{
+		TIMERA_Cmd(TIMERA_UNIT1, Disable);
+	}
+	
+	return 0;
+}
+SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), fsk_pwm_en, en_fsk_pwm, enable/disable the fsk pwm timer);
 
 void SysTick_IrqHandler(void)
 {
@@ -108,9 +127,16 @@ void tick_init(void)
 
 int set_samplerate(unsigned int speed)
 {
-	CV_LOG("[%s] duty: %d ns\r\n", __FUNCTION__, (speed*20));
-	*((unsigned int *)(TMR02_CMPBR)) = speed - 1;
-	return 0;
+	if (250 > speed)
+	{
+		return -1;
+	}
+	else
+	{
+		CV_LOG("[%s] duty: %d ns\r\n", __FUNCTION__, (speed*20));
+		*((unsigned int *)(TMR02_CMPBR)) = speed - 1;
+		return 0;
+	}
 }
 SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), timer0_duty, set_samplerate, set the sample timer duty);
 
@@ -121,7 +147,14 @@ int set_fsk_wave_duty(unsigned int speed)
 	*((unsigned int *)(TMRA3_CMPAR2)) = (speed >> 1) - 1;
 	return 0;
 }
-SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), fsk_wave_duty, set_fsk_wave_duty, set the fsk pwm wave duty);
+SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), fsk_pwm_duty, set_fsk_wave_duty, set the fsk pwm wave duty);
+
+int set_if_adc_avg(int mode)
+{
+	M4_ADC1->CR0_f.AVCNT = mode;
+	return 0;
+}
+SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), if_adc_avg, set_if_adc_avg, set the if adc average times 0-7: 2-256);
 
 void segger_init(void)
 {
@@ -160,7 +193,7 @@ void enable_flash_cache(en_functional_state_t state0)
 
 void memory_init(void)
 {
-	stop_sample(1);
+	en_sample(false);
 	
 	while (1 != FIFO_IsDataEmpty(&FIFO_Data[0]))
 	{
@@ -182,7 +215,7 @@ void memory_init(void)
 	//memset(&Fast_detection_data[0], 0, MAX_DATA_POOL * 2);
 	memset(&FIFO_DataBuffer[0], 0, FIFO_DATA_NUM * FIFO_DATA_SIZE * 2);
 	
-	stop_sample(0);
+	en_sample(true);
 }
 
 void gpio_init(void)
@@ -290,9 +323,12 @@ void init_all(void)
 	timer0_init();
 	//shell
 	User_Shell_Init();
-	//enable timer0 b
+	//enable timer0 timera
+	set_if_adc_avg(AdcAvcnt_2);
+	set_fsk_wave_duty(50000);
+	en_fsk_pwm(true);
 	set_samplerate(25000);
-	stop_sample(0);
+	en_sample(true);
 	//
 	init_finish_tick = SysTick_GetTick();
 	CV_LOG("\r\n%s - %s%sinit time: %dms%s\r\n", __FUNCTION__, RTT_CTRL_BG_BRIGHT_BLUE, RTT_CTRL_TEXT_WHITE, init_finish_tick - start_tick, RTT_CTRL_RESET);
