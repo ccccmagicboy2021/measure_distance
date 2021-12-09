@@ -55,7 +55,7 @@ void timer0_init(void)
     /* Clear Pending */
     NVIC_ClearPendingIRQ(stcIrqRegiConf.enIRQn);
     /* Set priority */
-    NVIC_SetPriority(stcIrqRegiConf.enIRQn, DDL_IRQ_PRIORITY_14);
+    NVIC_SetPriority(stcIrqRegiConf.enIRQn, DDL_IRQ_PRIORITY_15);
     /* Enable NVIC */
     NVIC_EnableIRQ(stcIrqRegiConf.enIRQn);    
 
@@ -87,13 +87,14 @@ void timer0_init(void)
     /* Enable NVIC */
     NVIC_EnableIRQ(stcIrqRegiConf.enIRQn);
 
-    /*start timer0 a not b*/
-    TIMER0_Cmd(TMR_UNIT,Tim0_ChannelA,Enable);
+    /*start timer0 a or b?*/
+    TIMER0_Cmd(TMR_UNIT,Tim0_ChannelA,Disable);
     TIMER0_Cmd(TMR_UNIT,Tim0_ChannelB,Disable);
 }
 
 static void Timer0B_CallBack(void)		// T = var
 {
+#if 1
 #if (ADC1_SA_NORMAL_CHANNEL == (ADC1_CH6))
 	adc_value.Val1 = m_au16Adc1SaValue[6u];	//if
 #elif (ADC1_SA_NORMAL_CHANNEL == (ADC1_CH0))
@@ -104,11 +105,9 @@ static void Timer0B_CallBack(void)		// T = var
 	
 	adc_value.Val2 = m_au16Adc2SaValue[5u];
 	adc_value.Val3 = PORT_GetBit(TIMERA_UNIT1_CH1_PORT, TIMERA_UNIT1_CH1_PIN);
-	adc_value.Val4 = 0;
-	adc_value.Val5 = 0;
-	adc_value.Val6 = 0;
 		
 	SEGGER_RTT_Write(1, &adc_value, sizeof(adc_value));	
+#endif
 }
 
 static void Timer0A_CallBack(void)      //  T = 1ms

@@ -105,10 +105,12 @@ int en_fsk_pwm(unsigned char flag)
 	if (flag)
 	{
 		TIMERA_Cmd(TIMERA_UNIT1, Enable);
+		TIMER0_Cmd(TMR_UNIT,Tim0_ChannelB, Disable);
 	}
 	else
 	{
 		TIMERA_Cmd(TIMERA_UNIT1, Disable);
+		TIMER0_Cmd(TMR_UNIT,Tim0_ChannelB, Enable);
 	}
 	
 	return 0;
@@ -142,23 +144,24 @@ SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), ti
 
 int set_fsk_wave_duty(unsigned int speed)
 {
-	CV_LOG("[%s] duty: %d ns(%d)(%d)\r\n", __FUNCTION__, (speed*20), speed - 1, (speed >> 1) - 1);
+	CV_LOG("[%s] duty: %d ns(per: %d)(cmp2: %d)(cmp5: %d)\r\n", __FUNCTION__, (speed*20), speed - 1, (speed >> 2) - 1, (speed >> 2) + (speed >> 1) - 1);
 	*((unsigned int *)(TMRA3_PERAR)) = speed - 1;
-	*((unsigned int *)(TMRA3_CMPAR2)) = (speed >> 1) - 1;
+	*((unsigned int *)(TMRA3_CMPAR2)) = (speed >> 2) - 1;
+	*((unsigned int *)(TMRA3_CMPAR5)) = (speed >> 2) + (speed >> 1) - 1;
 	return 0;
 }
-SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), fsk_pwm_duty, set_fsk_wave_duty, set the fsk pwm wave duty);
+SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), fsk_pwm_saw_duty, set_fsk_wave_duty, set the fsk pwm sawtooth wave duty);
 
 int set_if_adc_avg(int mode)
 {
 	M4_ADC1->CR0_f.AVCNT = mode;
 	return 0;
 }
-SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), if_adc_avg, set_if_adc_avg, set the if adc average times 0-7: 2-256);
+SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), if_adc_avg, set_if_adc_avg, set IF adc average times 0-7: 2-256);
 
 void segger_init(void)
 {
-	SEGGER_RTT_ConfigUpBuffer(1, "JScope_U2U2U2U2U2U2", &JS_RTT_UpBuffer[0], sizeof(JS_RTT_UpBuffer), SEGGER_RTT_MODE_NO_BLOCK_SKIP);
+	SEGGER_RTT_ConfigUpBuffer(1, "JScope_U2U2U2", &JS_RTT_UpBuffer[0], sizeof(JS_RTT_UpBuffer), SEGGER_RTT_MODE_NO_BLOCK_SKIP);
 	
 	SEGGER_RTT_Init();
 	CV_LOG("%sphosense radar chip: XBR8161 DEMO%s\r\n", RTT_CTRL_BG_BRIGHT_RED, RTT_CTRL_RESET);
@@ -193,7 +196,7 @@ void enable_flash_cache(en_functional_state_t state0)
 
 void memory_init(void)
 {
-	en_sample(false);
+	//en_sample(false);
 	
 	while (1 != FIFO_IsDataEmpty(&FIFO_Data[0]))
 	{
@@ -215,7 +218,7 @@ void memory_init(void)
 	//memset(&Fast_detection_data[0], 0, MAX_DATA_POOL * 2);
 	memset(&FIFO_DataBuffer[0], 0, FIFO_DATA_NUM * FIFO_DATA_SIZE * 2);
 	
-	en_sample(true);
+	//en_sample(true);
 }
 
 void gpio_init(void)
@@ -249,7 +252,7 @@ void gpio_init(void)
 
 void sent_sample_data(void)
 {
-	Delay_ms(100);
+	//Delay_ms(100);
 }
 
 void error_process(void)
@@ -325,10 +328,14 @@ void init_all(void)
 	User_Shell_Init();
 	//enable timer0 timera
 	set_if_adc_avg(AdcAvcnt_2);
-	set_fsk_wave_duty(50000);
+	set_fsk_wave_duty(25000);
 	en_fsk_pwm(true);
+	
 	set_samplerate(25000);
-	en_sample(true);
+#if 0
+	en_sample(false);
+#endif
+
 	//
 	init_finish_tick = SysTick_GetTick();
 	CV_LOG("\r\n%s - %s%sinit time: %dms%s\r\n", __FUNCTION__, RTT_CTRL_BG_BRIGHT_BLUE, RTT_CTRL_TEXT_WHITE, init_finish_tick - start_tick, RTT_CTRL_RESET);

@@ -59,8 +59,9 @@ do \
 #define TMR02_CMPBR			(TMR02_BASE + 0x0C)
 
 #define	TMRA3_BASE			0x40015800
-#define	TMRA3_CMPAR2		(TMRA3_BASE + 0x44)
 #define	TMRA3_PERAR			(TMRA3_BASE + 0x04)
+#define	TMRA3_CMPAR2		(TMRA3_BASE + 0x44)
+#define	TMRA3_CMPAR5		(TMRA3_BASE + 0x50)
 
 /////////////////////////////////////////////////////////////////////
 #define	USER_PARAMETER_START_SECTOR_ADDRESS0	0x0007A000u
@@ -93,10 +94,7 @@ typedef struct Val
 {
 	unsigned short Val1;		//radar if
 	unsigned short Val2;		//light sensor on board
-	unsigned short Val3;		//light sensor on base board
-	unsigned short Val4;		//switch dist
-	unsigned short Val5;		//switch delay
-	unsigned short Val6;		//switch light
+	unsigned short Val3;		//fsk pwm io level
 } Val_t;
 
 enum app_state
