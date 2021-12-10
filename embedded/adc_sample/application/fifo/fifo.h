@@ -15,12 +15,17 @@
  * 并将此数据类型作为FIFO数据结构库的成员类型。
  * 这么做的好处是可以方便的修改FIFO的成员数据类型。
  */
-#define FIFO_DATA_NUM		2					//两支fifo
-#define FIFO_DATA_SIZE		5200		//fifo的大小, 10K
+#define FIFO_DATA_NUM			1					//两支fifo
+#define FIFO_DATA_SIZE		2000			//fifo的大小
 
 //typedef short int FIFO_DataType;
 //typedef char FIFO_DataType;
-typedef short int FIFO_DataType;
+//typedef short int FIFO_DataType;
+typedef struct cccc
+{
+	unsigned short Val1;		//radar if
+	unsigned short Val3;		//fsk pwm io level
+} FIFO_DataType;
 
 typedef struct
 {

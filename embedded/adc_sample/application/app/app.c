@@ -2,7 +2,7 @@
 #include "sys.h"
 
 //////////global var here///////////////////////
-char JS_RTT_UpBuffer[1024*2];
+char JS_RTT_UpBuffer[1024*10];
 volatile enum app_state state = UART_SEND_DATA;	//状态机变量
 volatile enum app_state next_state = UART_SEND_DATA;	//状态机变量的下一个状态
 ////////////////////////////////////////////////
@@ -124,6 +124,7 @@ void SysTick_IrqHandler(void)
 
 void tick_init(void)
 {
+	NVIC_SetPriority(SysTick_IRQn, DDL_IRQ_PRIORITY_15);
 	SysTick_Init(1000u);//1ms
 }
 
@@ -144,13 +145,27 @@ SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), ti
 
 int set_fsk_wave_duty(unsigned int speed)
 {
-	CV_LOG("[%s] duty: %d ns(per: %d)(cmp2: %d)(cmp5: %d)\r\n", __FUNCTION__, (speed*20), speed - 1, (speed >> 2) - 1, (speed >> 2) + (speed >> 1) - 1);
-	*((unsigned int *)(TMRA3_PERAR)) = speed - 1;
-	*((unsigned int *)(TMRA3_CMPAR2)) = (speed >> 2) - 1;
-	*((unsigned int *)(TMRA3_CMPAR5)) = (speed >> 2) + (speed >> 1) - 1;
-	return 0;
+	if (speed >= 10000)		//5K samplerate max 2.5K wave
+	{
+		if (speed % 1000 == 0)
+		{
+			CV_LOG("[%s] duty: %d ns(per: %d)(cmp2: %d)(cmp5: %d)\r\n", __FUNCTION__, (speed*20), speed - 1, (speed >> 2) - 1, (speed >> 2) + (speed >> 1) - 1);
+			*((unsigned int *)(TMRA3_PERAR)) = speed - 1;
+			*((unsigned int *)(TMRA3_CMPAR2)) = (speed >> 2) - 1;
+			*((unsigned int *)(TMRA3_CMPAR5)) = (speed >> 2) + (speed >> 1) - 1;
+			return 0;
+		}
+		else
+		{
+			return -1;
+		}
+	}
+	else
+	{
+		return -1;
+	}
 }
-SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), fsk_pwm_saw_duty, set_fsk_wave_duty, set the fsk pwm sawtooth wave duty);
+SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), fsk_pwm_saw_duty, set_fsk_wave_duty, set fsk pwm sawtooth duty);
 
 int set_if_adc_avg(int mode)
 {
@@ -161,7 +176,7 @@ SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_FUNC), if
 
 void segger_init(void)
 {
-	SEGGER_RTT_ConfigUpBuffer(1, "JScope_U2U2U2", &JS_RTT_UpBuffer[0], sizeof(JS_RTT_UpBuffer), SEGGER_RTT_MODE_NO_BLOCK_SKIP);
+	SEGGER_RTT_ConfigUpBuffer(1, "JScope_U2U2", &JS_RTT_UpBuffer[0], sizeof(JS_RTT_UpBuffer), SEGGER_RTT_MODE_NO_BLOCK_SKIP);
 	
 	SEGGER_RTT_Init();
 	CV_LOG("%sphosense radar chip: XBR8161 DEMO%s\r\n", RTT_CTRL_BG_BRIGHT_RED, RTT_CTRL_RESET);
@@ -196,29 +211,28 @@ void enable_flash_cache(en_functional_state_t state0)
 
 void memory_init(void)
 {
-	//en_sample(false);
-	
 	while (1 != FIFO_IsDataEmpty(&FIFO_Data[0]))
 	{
 		CV_LOG("fifo0 number useless: %d\r\n", FIFO_GetDataCount(&FIFO_Data[0]));	
 		//FIFO_ReadData(&FIFO_Data[0], &Fast_detection_data[0], 2000);
 		CV_LOG("fifo0 number useless: %d\r\n", FIFO_GetDataCount(&FIFO_Data[0]));
 	}
+	FIFO_Init(&FIFO_Data[0]);
 		
+#if 0
 	while (1 != FIFO_IsDataEmpty(&FIFO_Data[1]))
 	{
 		CV_LOG("fifo1 number useless: %d\r\n", FIFO_GetDataCount(&FIFO_Data[1]));	
 		//FIFO_ReadData(&FIFO_Data[1], &Fast_detection_data[0], 2000);
 		CV_LOG("fifo1 number useless: %d\r\n", FIFO_GetDataCount(&FIFO_Data[1]));
 	}	
-	
-	FIFO_Init(&FIFO_Data[0]);
 	FIFO_Init(&FIFO_Data[1]);
+#endif
 	
 	//memset(&Fast_detection_data[0], 0, MAX_DATA_POOL * 2);
-	memset(&FIFO_DataBuffer[0], 0, FIFO_DATA_NUM * FIFO_DATA_SIZE * 2);
 	
-	//en_sample(true);
+	//clear fifo
+	memset(&FIFO_DataBuffer[0], 0, FIFO_DATA_NUM * FIFO_DATA_SIZE * sizeof(FIFO_DataType));
 }
 
 void gpio_init(void)
@@ -252,7 +266,16 @@ void gpio_init(void)
 
 void sent_sample_data(void)
 {
-	//Delay_ms(100);
+	FIFO_DataType tempData[BLOCK_TRANSFER_SIZE];
+	
+	memset(tempData, 0, BLOCK_TRANSFER_SIZE * sizeof(FIFO_DataType));
+	
+	//read fifo
+	if(BLOCK_TRANSFER_SIZE < FIFO_GetDataCount(&FIFO_Data[0]))
+	{
+		FIFO_ReadData(&FIFO_Data[0], tempData, BLOCK_TRANSFER_SIZE);
+		SEGGER_RTT_Write(1, tempData, sizeof(tempData));
+	}
 }
 
 void error_process(void)

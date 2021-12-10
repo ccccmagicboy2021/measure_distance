@@ -19,13 +19,10 @@
         </Windows>
         <SelectedSymbols>
             <Symbol>
-                <Options Name="Symbol No 1" Address="0x00000000" Type="2 Byte unsigned RTT Data" TypeID="7" Size="2" GraphColorRed="255" GraphColorGreen="215" GraphColorBlue="0" YMinSampled="15" YMaxSampled="4067" YAvgSampled="2041" Offset="4" ShowInGraph="1" YOffset="200" IsAutoConfig="1" YResolution="1000" MaxValue="4550" File="None" Scope="1" DrawStyle="0" />
+                <Options Name="Symbol No 1" Address="0x00000000" Type="2 Byte unsigned RTT Data" TypeID="7" Size="2" GraphColorRed="255" GraphColorGreen="215" GraphColorBlue="0" YMinSampled="16" YMaxSampled="4070" YAvgSampled="2041" Offset="4" ShowInGraph="1" YOffset="200" IsAutoConfig="1" YResolution="1000" MaxValue="14310" File="None" Scope="1" DrawStyle="0" />
             </Symbol>
             <Symbol>
-                <Options Name="Symbol No 2" Address="0x00000000" Type="2 Byte unsigned RTT Data" TypeID="7" Size="2" GraphColorRed="0" GraphColorGreen="255" GraphColorBlue="0" YMinSampled="591" YMaxSampled="1695" YAvgSampled="1536" Offset="6" ShowInGraph="1" YOffset="200" IsAutoConfig="1" YResolution="500" MaxValue="2275" File="None" Scope="1" DrawStyle="0" />
-            </Symbol>
-            <Symbol>
-                <Options Name="Symbol No 3" Address="0x00000000" Type="2 Byte unsigned RTT Data" TypeID="7" Size="2" GraphColorRed="0" GraphColorGreen="0" GraphColorBlue="176" YMinSampled="0" YMaxSampled="1" YAvgSampled="0" Offset="8" ShowInGraph="1" YOffset="200" IsAutoConfig="1" YResolution="1" MaxValue="4" File="None" Scope="1" DrawStyle="0" />
+                <Options Name="Symbol No 2" Address="0x00000000" Type="2 Byte unsigned RTT Data" TypeID="7" Size="2" GraphColorRed="0" GraphColorGreen="255" GraphColorBlue="0" YMinSampled="0" YMaxSampled="1" YAvgSampled="0" Offset="6" ShowInGraph="1" YOffset="200" IsAutoConfig="1" YResolution="1" MaxValue="14" File="None" Scope="1" DrawStyle="0" />
             </Symbol>
         </SelectedSymbols>
     </Project>

@@ -63,6 +63,7 @@ do \
 #define	TMRA3_CMPAR2		(TMRA3_BASE + 0x44)
 #define	TMRA3_CMPAR5		(TMRA3_BASE + 0x50)
 
+#define BLOCK_TRANSFER_SIZE 500
 /////////////////////////////////////////////////////////////////////
 #define	USER_PARAMETER_START_SECTOR_ADDRESS0	0x0007A000u
 #define	USER_PARAMETER_START_SECTOR_ADDRESS1	0x0007C000u
@@ -89,13 +90,6 @@ do \
 
 //#define GPIO6_HIGH()		(PORT_SetBits(PortB, Pin00))
 //#define GPIO6_LOW()			(PORT_ResetBits(PortB, Pin00))
-
-typedef struct Val
-{
-	unsigned short Val1;		//radar if
-	unsigned short Val2;		//light sensor on board
-	unsigned short Val3;		//fsk pwm io level
-} Val_t;
 
 enum app_state
 {

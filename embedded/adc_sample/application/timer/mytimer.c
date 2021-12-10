@@ -11,8 +11,6 @@ extern uint16_t m_au16Adc2SaValue[ADC2_CH_COUNT];
 
 volatile uint32_t Timer_Counter = 0;
 
-Val_t adc_value;
-
 void Delay_ms(unsigned int t)
 {
 	Timer_Counter = 0;
@@ -94,6 +92,7 @@ void timer0_init(void)
 
 static void Timer0B_CallBack(void)		// T = var
 {
+	FIFO_DataType adc_value;
 #if 1
 #if (ADC1_SA_NORMAL_CHANNEL == (ADC1_CH6))
 	adc_value.Val1 = m_au16Adc1SaValue[6u];	//if
@@ -103,10 +102,11 @@ static void Timer0B_CallBack(void)		// T = var
 	adc_value.Val1 = m_au16Adc1SaValue[4u];	//ADC1_CH4	//adc2
 #endif
 	
-	adc_value.Val2 = m_au16Adc2SaValue[5u];
 	adc_value.Val3 = PORT_GetBit(TIMERA_UNIT1_CH1_PORT, TIMERA_UNIT1_CH1_PIN);
 		
-	SEGGER_RTT_Write(1, &adc_value, sizeof(adc_value));	
+	FIFO_WriteOneData(&FIFO_Data[0], adc_value);
+	
+	//SEGGER_RTT_Write(1, &adc_value, sizeof(adc_value));	
 #endif
 }
 

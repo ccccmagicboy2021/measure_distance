@@ -8,7 +8,6 @@
 /*******************************************************************************
  * Local type definitions ('typedef')
  ******************************************************************************/
-extern Val_t adc_value;
 extern uint16_t m_au16Adc1SaValue[ADC1_CH_COUNT];
 extern uint16_t m_au16Adc2SaValue[ADC2_CH_COUNT];
 /*******************************************************************************
@@ -28,6 +27,8 @@ extern uint16_t m_au16Adc2SaValue[ADC2_CH_COUNT];
  ******************************************************************************/
 static void TimeraUnit1_IrqCallback(void)
 {
+		FIFO_DataType adc_value;
+	
     /* Capture channel 0 */
     if (Set == TIMERA_GetFlag(TIMERA_UNIT1, TIMERA_UNIT1_CH2_INT_FLAG))
     {
@@ -40,10 +41,12 @@ static void TimeraUnit1_IrqCallback(void)
 					adc_value.Val1 = m_au16Adc1SaValue[4u];	//ADC1_CH4	//adc2
 				#endif
 					
-					adc_value.Val2 = m_au16Adc2SaValue[5u];
 					adc_value.Val3 = PORT_GetBit(TIMERA_UNIT1_CH1_PORT, TIMERA_UNIT1_CH1_PIN);
 						
-					SEGGER_RTT_Write(1, &adc_value, sizeof(adc_value));	
+					FIFO_WriteOneData(&FIFO_Data[0], adc_value);
+			
+					//SEGGER_RTT_Write(1, &adc_value, sizeof(adc_value));
+					
 				//
         TIMERA_ClearFlag(TIMERA_UNIT1, TIMERA_UNIT1_CH2_INT_FLAG);
     }
