@@ -23,8 +23,8 @@
 //typedef short int FIFO_DataType;
 typedef struct cccc
 {
-	unsigned short Val1;		//radar if
-	unsigned short Val3;		//fsk pwm io level
+	unsigned short	Val1;		//radar if
+	unsigned short	Val3;		//fsk pwm io level
 } FIFO_DataType;
 
 typedef struct

@@ -41,7 +41,14 @@ static void TimeraUnit1_IrqCallback(void)
 					adc_value.Val1 = m_au16Adc1SaValue[4u];	//ADC1_CH4	//adc2
 				#endif
 					
-					adc_value.Val3 = PORT_GetBit(TIMERA_UNIT1_CH1_PORT, TIMERA_UNIT1_CH1_PIN);
+					if (Reset == PORT_GetBit(TIMERA_UNIT1_CH1_PORT, TIMERA_UNIT1_CH1_PIN))
+					{
+						adc_value.Val3 = 0;
+					}
+					else
+					{
+						adc_value.Val3 = 1;
+					}
 						
 					FIFO_WriteOneData(&FIFO_Data[0], adc_value);
 			
