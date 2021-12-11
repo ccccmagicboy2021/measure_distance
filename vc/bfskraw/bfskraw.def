@@ -1,4 +1,4 @@
-LIBRARY   fskraw
+LIBRARY   bfskraw
 EXPORTS
 	init						@1
 	close						@2

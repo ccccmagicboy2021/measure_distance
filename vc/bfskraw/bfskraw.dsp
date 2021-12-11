@@ -1,24 +1,24 @@
-# Microsoft Developer Studio Project File - Name="fskraw" - Package Owner=<4>
+# Microsoft Developer Studio Project File - Name="bfskraw" - Package Owner=<4>
 # Microsoft Developer Studio Generated Build File, Format Version 6.00
 # ** DO NOT EDIT **
 
 # TARGTYPE "Win32 (x86) Dynamic-Link Library" 0x0102
 
-CFG=fskraw - Win32 Debug
+CFG=bfskraw - Win32 Debug
 !MESSAGE This is not a valid makefile. To build this project using NMAKE,
 !MESSAGE use the Export Makefile command and run
 !MESSAGE 
-!MESSAGE NMAKE /f "fskraw.mak".
+!MESSAGE NMAKE /f "bfskraw.mak".
 !MESSAGE 
 !MESSAGE You can specify a configuration when running NMAKE
 !MESSAGE by defining the macro CFG on the command line. For example:
 !MESSAGE 
-!MESSAGE NMAKE /f "fskraw.mak" CFG="fskraw - Win32 Debug"
+!MESSAGE NMAKE /f "bfskraw.mak" CFG="bfskraw - Win32 Debug"
 !MESSAGE 
 !MESSAGE Possible choices for configuration are:
 !MESSAGE 
-!MESSAGE "fskraw - Win32 Release" (based on "Win32 (x86) Dynamic-Link Library")
-!MESSAGE "fskraw - Win32 Debug" (based on "Win32 (x86) Dynamic-Link Library")
+!MESSAGE "bfskraw - Win32 Release" (based on "Win32 (x86) Dynamic-Link Library")
+!MESSAGE "bfskraw - Win32 Debug" (based on "Win32 (x86) Dynamic-Link Library")
 !MESSAGE 
 
 # Begin Project
@@ -29,7 +29,7 @@ CPP=cl.exe
 MTL=midl.exe
 RSC=rc.exe
 
-!IF  "$(CFG)" == "fskraw - Win32 Release"
+!IF  "$(CFG)" == "bfskraw - Win32 Release"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 0
@@ -42,8 +42,8 @@ RSC=rc.exe
 # PROP Intermediate_Dir "Release"
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
-# ADD BASE CPP /nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "fskraw_EXPORTS" /YX /FD /c
-# ADD CPP /nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "FSKRAW_EXPORTS" /YX /FD /c
+# ADD BASE CPP /nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "bfskraw_EXPORTS" /YX /FD /c
+# ADD CPP /nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "BFSKRAW_EXPORTS" /YX /FD /c
 # ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /win32
 # ADD MTL /nologo /D "NDEBUG" /mktyplib203 /win32
 # ADD BASE RSC /l 0x804 /d "NDEBUG"
@@ -60,7 +60,7 @@ PreLink_Cmds=echo on
 PostBuild_Cmds=echo on
 # End Special Build Tool
 
-!ELSEIF  "$(CFG)" == "fskraw - Win32 Debug"
+!ELSEIF  "$(CFG)" == "bfskraw - Win32 Debug"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 1
@@ -73,8 +73,8 @@ PostBuild_Cmds=echo on
 # PROP Intermediate_Dir "Debug"
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
-# ADD BASE CPP /nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "fskraw_EXPORTS" /YX /FD /GZ /c
-# ADD CPP /nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "FSKRAW_EXPORTS" /FR /FD /GZ /c
+# ADD BASE CPP /nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "bfskraw_EXPORTS" /YX /FD /GZ /c
+# ADD CPP /nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "BFSKRAW_EXPORTS" /FR /FD /GZ /c
 # SUBTRACT CPP /YX
 # ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /win32
 # ADD MTL /nologo /D "_DEBUG" /mktyplib203 /win32
@@ -96,18 +96,18 @@ PostBuild_Cmds=echo on
 
 # Begin Target
 
-# Name "fskraw - Win32 Release"
-# Name "fskraw - Win32 Debug"
+# Name "bfskraw - Win32 Release"
+# Name "bfskraw - Win32 Debug"
 # Begin Group "Source Files"
 
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;asm"
 # Begin Source File
 
-SOURCE=.\fskraw.cpp
+SOURCE=.\bfskraw.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=.\fskraw.def
+SOURCE=.\bfskraw.def
 # End Source File
 # End Group
 # Begin Group "Header Files"
@@ -115,7 +115,7 @@ SOURCE=.\fskraw.def
 # PROP Default_Filter "h;hpp;hxx;hm;inl;inc"
 # Begin Source File
 
-SOURCE=.\fskraw.h
+SOURCE=.\bfskraw.h
 # End Source File
 # End Group
 # Begin Group "Resource Files"
