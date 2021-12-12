@@ -5,7 +5,7 @@ servers. In order for clients to use discovery, a registry service must
 be running somewhere on their local network.
 """
 from rpyc.utils.registry import REGISTRY_PORT, DEFAULT_PRUNING_TIMEOUT
-from rpyc.utils.registry import UDPRegistryServer, TCPRegistryServer
+from rpyc.utils.registry import UDPRegistryServer
 
 def main():
     server = UDPRegistryServer(
