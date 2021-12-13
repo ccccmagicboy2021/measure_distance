@@ -1,3 +1,5 @@
+#!d:\cccc2020\TOOL\python-3.9.1-embed-win32\python.exe
+
 import rpyc
 import urllib.error
 rpyc.core.vinegar._generic_exceptions_cache["urllib.error.URLError"] = urllib.error.URLError

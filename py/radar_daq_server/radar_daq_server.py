@@ -1,3 +1,5 @@
+#!d:\cccc2020\TOOL\python-3.9.1-embed-win32\python.exe
+
 import rpyc
 import urllib.error
 from rpyc.utils.server import ThreadedServer
@@ -9,12 +11,13 @@ class MyService(rpyc.Service):
     def on_connect(self, conn):
         # code that runs when a connection is created
         # (to init the service, if needed)
-        print ('New connection.')
+        print (f'New connection - {conn}')
         pass
 
     def on_disconnect(self, conn):
         # code that runs after the connection has already closed
         # (to finalize the service, if needed)
+        print (f'Close connection - {conn}')
         pass
 
     def exposed_get_answer(self): # this is an exposed method
