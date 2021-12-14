@@ -3,5 +3,6 @@ EXPORTS
 	init						@1
 	close						@2
 	about						@3
+	read_raw					@4
 
 
