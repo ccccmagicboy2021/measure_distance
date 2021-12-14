@@ -1,0 +1,1 @@
+vsrename.exe bfskraw_tester bfskraw_tester .\
