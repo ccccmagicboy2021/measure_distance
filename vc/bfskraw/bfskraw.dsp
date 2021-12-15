@@ -126,7 +126,27 @@ SOURCE=.\bfskraw.h
 # End Source File
 # Begin Source File
 
+SOURCE=.\3rd_part\jlinksdk\inc\GLOBAL.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\3rd_part\jlinksdk\inc\JLINKARM_Const.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\3rd_part\jlinksdk\inc\JLinkARMDLL.h
+# End Source File
+# Begin Source File
+
 SOURCE=.\StdAfx.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\3rd_part\jlinksdk\inc\TYPES.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\3rd_part\jlinksdk\inc\Version.h
 # End Source File
 # End Group
 # Begin Group "Resource Files"

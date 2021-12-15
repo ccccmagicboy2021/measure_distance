@@ -9,8 +9,11 @@
 
 extern "C" 
 {
-	BFSKRAW_DLL_API	int		__stdcall	init(unsigned int addr);
+	BFSKRAW_DLL_API	void	__stdcall	init(void);
+	BFSKRAW_DLL_API	void	__stdcall	deinit(void);
+	BFSKRAW_DLL_API	int		__stdcall	open(unsigned	int	handle);
 	BFSKRAW_DLL_API	int		__stdcall	close(void);
-	BFSKRAW_DLL_API	void	__stdcall	about(void);
 	BFSKRAW_DLL_API	unsigned int	__stdcall	read_raw(char *buf, unsigned int length);
+	BFSKRAW_DLL_API	unsigned int	__stdcall	find_cb(void);
+	BFSKRAW_DLL_API	void	__stdcall	about(void);
 }

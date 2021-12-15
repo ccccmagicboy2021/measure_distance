@@ -18,13 +18,17 @@ dll = ctypes.CDLL('./bfskraw.dll')
 print(dll)
 
 #about
-dll.about();
+dll.about()
 
 #init
-addr = 0x1fffda8c
-print(addr)
-addr = ctypes.c_uint32(addr)
-dll.init(addr);
+dll.init()
+
+#find_cb
+handle = dll.find_cb()
+print(f'handle = {handle}')
+
+#open
+dll.open(handle)
 
 #read_raw
 length = 1024
@@ -71,3 +75,8 @@ while 1:
                 }              
         savemat('test000.mat', dic_de)
         break
+
+dll.close()
+dll.deinit()
+
+

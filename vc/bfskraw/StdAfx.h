@@ -44,6 +44,24 @@ struct rtt_buf_desc
 	U32 Flags;
 };
 
+struct rtt_cb
+{
+	char acID[16];
+	U32	MaxNumUpBuffers;
+	U32	MaxNumDownBuffers;
+
+	/*
+	class SEGGER_RTT_CB(ctypes.Structure):      # Control Block
+		_fields_ = [
+        ('acID',              ctypes.c_char * 16),
+        ('MaxNumUpBuffers',   ctypes.c_uint),
+        ('MaxNumDownBuffers', ctypes.c_uint),
+        ('aUp',               RingBuffer * 2),
+        ('aDown',             RingBuffer * 2),
+    ]
+	*/
+};
+
 #define HW_INFO_POWER_ENABLED             0
 #define HW_INFO_POWER_OVERCURRENT         1
 #define HW_INFO_ITARGET                   2
