@@ -19,8 +19,11 @@ int main(int argc, char* argv[])
 	while (1)
 	{
 		read_num = read_raw(buf, sizeof(buf));
-		tem_str.Format("read %d bytes", read_num);
-		TRACE(tem_str);
+		if (read_num > 0)
+		{
+			tem_str.Format("read %d bytes", read_num);
+			TRACE(tem_str);
+		}
 	}
 
 	return 0;

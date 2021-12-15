@@ -55,6 +55,5 @@ unsigned int	__stdcall	read_raw(char *buf, unsigned int length)
 {
 	unsigned int read_num = 0;
 	read_num = JLINK_RTTERMINAL_Read(1, buf, length);
-	TRACE("%d", read_num);
 	return read_num;
 }

@@ -70,8 +70,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,0,156
- PRODUCTVERSION 1,0,0,156
+ FILEVERSION 1,0,0,168
+ PRODUCTVERSION 1,0,0,168
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x29L
@@ -89,15 +89,15 @@ BEGIN
             VALUE "Comments", "\0"
             VALUE "CompanyName", "cv\0"
             VALUE "FileDescription", "bfskraw_tester\0"
-            VALUE "FileVersion", "1, 0, 0, 156\0"
+            VALUE "FileVersion", "1, 0, 0, 168\0"
             VALUE "InternalName", "bfskraw_tester\0"
             VALUE "LegalCopyright", "Copyright 2021\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "bfskraw_tester.exe\0"
-            VALUE "PrivateBuild", "156\0"
+            VALUE "PrivateBuild", "168\0"
             VALUE "ProductName", "bfskraw_tester\0"
-            VALUE "ProductVersion", "1, 0, 0, 156\0"
-            VALUE "SpecialBuild", "156\0"
+            VALUE "ProductVersion", "1, 0, 0, 168\0"
+            VALUE "SpecialBuild", "168\0"
         END
     END
     BLOCK "VarFileInfo"

@@ -56,9 +56,10 @@ LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /machine:I386
 # ADD LINK32 /nologo /dll /machine:I386
 # Begin Special Build Tool
+TargetName=bfskraw
 SOURCE="$(InputPath)"
 PreLink_Cmds=echo on
-PostBuild_Cmds=echo on
+PostBuild_Cmds=echo on	copy Release\$(TargetName).dll ..\$(TargetName)_tester\Release	copy Release\$(TargetName).lib ..\$(TargetName)_tester\Release	copy .\$(TargetName).h ..\$(TargetName)_tester\$(TargetName).h
 # End Special Build Tool
 
 !ELSEIF  "$(CFG)" == "bfskraw - Win32 Debug"
@@ -88,9 +89,10 @@ LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /debug /machine:I386 /pdbtype:sept
 # ADD LINK32 /nologo /dll /debug /machine:I386 /pdbtype:sept
 # Begin Special Build Tool
+TargetName=bfskraw
 SOURCE="$(InputPath)"
 PreLink_Cmds=echo on
-PostBuild_Cmds=echo on
+PostBuild_Cmds=echo on	copy Debug\$(TargetName).dll ..\$(TargetName)_tester\Debug	copy Debug\$(TargetName).lib ..\$(TargetName)_tester\Debug	copy .\$(TargetName).h ..\$(TargetName)_tester\$(TargetName).h
 # End Special Build Tool
 
 !ENDIF 
