@@ -116,6 +116,22 @@ SOURCE=.\bfskraw.def
 
 SOURCE=.\StdAfx.cpp
 # End Source File
+# Begin Source File
+
+SOURCE=.\3rd_part\tinyxml\tinystr.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\3rd_part\tinyxml\tinyxml.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\3rd_part\tinyxml\tinyxmlerror.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\3rd_part\tinyxml\tinyxmlparser.cpp
+# End Source File
 # End Group
 # Begin Group "Header Files"
 
@@ -139,6 +155,14 @@ SOURCE=.\3rd_part\jlinksdk\inc\JLinkARMDLL.h
 # Begin Source File
 
 SOURCE=.\StdAfx.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\3rd_part\tinyxml\tinystr.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\3rd_part\tinyxml\tinyxml.h
 # End Source File
 # Begin Source File
 

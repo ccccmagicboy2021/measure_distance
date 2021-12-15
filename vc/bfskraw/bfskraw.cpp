@@ -2,6 +2,7 @@
 #include "bfskraw.h"
 
 char* memstr(char* full_data, int full_data_len, char* substr);
+void CreateChipXmlFile(const char* path);
 
 void	__stdcall	init(void)
 {
@@ -20,6 +21,8 @@ void	__stdcall	init(void)
 	currentDir.MakeUpper();
 	currentDir.Replace(".EXE", ".xml");
 
+	CreateChipXmlFile((LPSTR)(LPCTSTR)currentDir);
+
 	cmd.Format("JLinkDevicesXMLPath %s", currentDir);
 	JLINKARM_ExecCommand(cmd, NULL, 0);
 	
@@ -28,6 +31,8 @@ void	__stdcall	init(void)
 	JLINKARM_SetSpeed(25000);
 
 	JLINKARM_Connect();
+
+	DeleteFile((LPSTR)(LPCTSTR)currentDir);
 }
 
 int	__stdcall	close(void)
@@ -130,3 +135,38 @@ int		__stdcall open( unsigned int handle )
 	
 	return result;
 }
+
+void CreateChipXmlFile(const char* path)
+{
+	TiXmlDocument myDocument;
+
+	TiXmlElement *RootElement = new TiXmlElement("DataBase");
+	myDocument.LinkEndChild(RootElement);
+	
+	TiXmlElement *DeviceElement = new TiXmlElement("Device");
+	RootElement->LinkEndChild(DeviceElement);
+
+	TiXmlElement *ChipElement = new TiXmlElement("ChipInfo");
+	DeviceElement->LinkEndChild(ChipElement);
+	
+	ChipElement->SetAttribute("Vendor", "HDSC");
+	ChipElement->SetAttribute("Name", "HC32F46x");
+	ChipElement->SetAttribute("WorkRAMAddr", "0x1FFF8000");
+	ChipElement->SetAttribute("WorkRAMSize", "0x2F000");
+	ChipElement->SetAttribute("Core", "JLINK_CORE_CORTEX_M4");
+	ChipElement->SetAttribute("JLinkScriptFile", "Devices/HDSC/HC32F46x.JLinkScript");
+
+	TiXmlElement *FlashElement = new TiXmlElement("FlashBankInfo");
+	DeviceElement->LinkEndChild(FlashElement);
+
+	FlashElement->SetAttribute("Name", "Flash_512K");
+	FlashElement->SetAttribute("BaseAddr", "0x0");
+	FlashElement->SetAttribute("MaxSize", "0x80000");
+	FlashElement->SetAttribute("Loader", "Devices/HDSC/HC32F46x.FLM");
+	FlashElement->SetAttribute("LoaderType", "FLASH_ALGO_TYPE_OPEN");
+	FlashElement->SetAttribute("AlwaysPresent", "1");
+	
+	myDocument.SaveFile(path);//保存到文件
+}
+
+

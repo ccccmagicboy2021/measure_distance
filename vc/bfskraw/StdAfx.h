@@ -22,6 +22,11 @@
 
 #include <afxsock.h>		// MFC socket extensions
 
+//////////////////////////////////////////////////////////////////////////
+///tinyxml
+#include "3rd_part/tinyxml/tinyxml.h"
+#include "3rd_part/tinyxml/tinystr.h"
+
 ///jlinksdk
 //#pragma comment (lib, "3rd_part/jlinksdk/win/JLinkARM.lib")
 #pragma comment (lib, "3rd_part/jlinksdk/win/JLink.lib")
