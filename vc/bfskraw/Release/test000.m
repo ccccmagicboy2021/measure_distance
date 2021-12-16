@@ -62,4 +62,8 @@ display(dop_freq);
 %display(delta_ph);
 display(distance);
 
+figure(2);
+imagesc(mag0);
+figure(3);
+imagesc(mag1);
 
