@@ -1,3 +1,5 @@
-数据流：bfskraw.dll--》dll_tester_x86.py--》test000.mat--》test000.m
+程序说明：
+1. dll_tester_x86.py数据流：bfskraw.dll--》dll_tester_x86.py--》test000.mat--》test000.m
+2. dll_tester1_x86.py用于实时计算
 
 
