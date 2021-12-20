@@ -8,7 +8,7 @@ Memory Map of the image
 
   Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00012610, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00012598, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00012594, Max: 0x00080000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -644,225 +644,225 @@ Memory Map of the image
     0x0000dfd0   0x0000dfd0   0x00000020   Code   RO         1643    .text.reset_after_flash_write  mcu_ota_handler.o
     0x0000dff0   0x0000dff0   0x00000002   Code   RO         1538    .text.reset_default_parameter  protocol.o
     0x0000dff2   0x0000dff2   0x00000002   PAD
-    0x0000dff4   0x0000dff4   0x00000076   Code   RO         1146    .text.segger_init   app.o
-    0x0000e06a   0x0000e06a   0x00000002   PAD
-    0x0000e06c   0x0000e06c   0x0000004c   Code   RO         1156    .text.sent_sample_data  app.o
-    0x0000e0b8   0x0000e0b8   0x00000050   Code   RO         1420    .text.set_bt_uart_buffer  system.o
-    0x0000e108   0x0000e108   0x0000003a   Code   RO         1418    .text.set_bt_uart_byte  system.o
-    0x0000e142   0x0000e142   0x00000002   PAD
-    0x0000e144   0x0000e144   0x000000c0   Code   RO         1142    .text.set_fsk_wave_duty  app.o
-    0x0000e204   0x0000e204   0x00000024   Code   RO         1144    .text.set_if_adc_avg  app.o
-    0x0000e228   0x0000e228   0x00000052   Code   RO         1140    .text.set_samplerate  app.o
-    0x0000e27a   0x0000e27a   0x00000002   PAD
-    0x0000e27c   0x0000e27c   0x00000052   Code   RO         1212    .text.shellAdd      shell.o
-    0x0000e2ce   0x0000e2ce   0x00000002   PAD
-    0x0000e2d0   0x0000e2d0   0x00000012   Code   RO         1304    .text.shellBackspace  shell.o
-    0x0000e2e2   0x0000e2e2   0x00000002   PAD
-    0x0000e2e4   0x0000e2e4   0x00000058   Code   RO         1286    .text.shellCheckPassword  shell.o
-    0x0000e33c   0x0000e33c   0x00000064   Code   RO         1228    .text.shellCheckPermission  shell.o
-    0x0000e3a0   0x0000e3a0   0x00000028   Code   RO         1324    .text.shellClear    shell.o
-    0x0000e3c8   0x0000e3c8   0x00000040   Code   RO         1256    .text.shellClearCommandLine  shell.o
-    0x0000e408   0x0000e408   0x0000001e   Code   RO         1318    .text.shellCmds     shell.o
-    0x0000e426   0x0000e426   0x00000002   PAD
-    0x0000e428   0x0000e428   0x00000014   Code   RO         1306    .text.shellDelete   shell.o
-    0x0000e43c   0x0000e43c   0x00000162   Code   RO         1260    .text.shellDeleteByte  shell.o
-    0x0000e59e   0x0000e59e   0x00000002   PAD
-    0x0000e5a0   0x0000e5a0   0x00000032   Code   RO         1254    .text.shellDeleteCommandLine  shell.o
-    0x0000e5d2   0x0000e5d2   0x00000002   PAD
-    0x0000e5d4   0x0000e5d4   0x00000014   Code   RO         1292    .text.shellDown     shell.o
-    0x0000e5e8   0x0000e5e8   0x00000018   Code   RO         1308    .text.shellEnter    shell.o
-    0x0000e600   0x0000e600   0x000000a6   Code   RO         1280    .text.shellExec     shell.o
-    0x0000e6a6   0x0000e6a6   0x00000002   PAD
-    0x0000e6a8   0x0000e6a8   0x0000006c   Code   RO         1328    .text.shellExecute  shell.o
-    0x0000e714   0x0000e714   0x0000009a   Code   RO         1385    .text.shellExtNumType  shell_ext.o
-    0x0000e7ae   0x0000e7ae   0x00000002   PAD
-    0x0000e7b0   0x0000e7b0   0x0000008e   Code   RO         1375    .text.shellExtParseChar  shell_ext.o
-    0x0000e83e   0x0000e83e   0x00000002   PAD
-    0x0000e840   0x0000e840   0x0000014e   Code   RO         1377    .text.shellExtParseNumber  shell_ext.o
-    0x0000e98e   0x0000e98e   0x00000002   PAD
-    0x0000e990   0x0000e990   0x00000094   Code   RO         1373    .text.shellExtParsePara  shell_ext.o
-    0x0000ea24   0x0000ea24   0x0000009a   Code   RO         1381    .text.shellExtParseString  shell_ext.o
-    0x0000eabe   0x0000eabe   0x00000002   PAD
-    0x0000eac0   0x0000eac0   0x00000038   Code   RO         1379    .text.shellExtParseVar  shell_ext.o
-    0x0000eaf8   0x0000eaf8   0x000001a0   Code   RO         1383    .text.shellExtRun   shell_ext.o
-    0x0000ec98   0x0000ec98   0x00000078   Code   RO         1387    .text.shellExtToNum  shell_ext.o
-    0x0000ed10   0x0000ed10   0x00000054   Code   RO         1242    .text.shellGetCommandDesc  shell.o
-    0x0000ed64   0x0000ed64   0x00000096   Code   RO         1236    .text.shellGetCommandName  shell.o
-    0x0000edfa   0x0000edfa   0x00000002   PAD
-    0x0000edfc   0x0000edfc   0x00000076   Code   RO         1222    .text.shellGetCurrent  shell.o
-    0x0000ee72   0x0000ee72   0x00000002   PAD
-    0x0000ee74   0x0000ee74   0x00000086   Code   RO         1262    .text.shellGetVarValue  shell.o
-    0x0000eefa   0x0000eefa   0x00000002   PAD
-    0x0000eefc   0x0000eefc   0x000001b2   Code   RO         1312    .text.shellHandler  shell.o
-    0x0000f0ae   0x0000f0ae   0x00000002   PAD
-    0x0000f0b0   0x0000f0b0   0x00000042   Code   RO         1310    .text.shellHelp     shell.o
-    0x0000f0f2   0x0000f0f2   0x00000002   PAD
-    0x0000f0f4   0x0000f0f4   0x0000012e   Code   RO         1290    .text.shellHistory  shell.o
-    0x0000f222   0x0000f222   0x00000002   PAD
-    0x0000f224   0x0000f224   0x000000bc   Code   RO         1282    .text.shellHistoryAdd  shell.o
-    0x0000f2e0   0x0000f2e0   0x000000e2   Code   RO         1210    .text.shellInit     shell.o
-    0x0000f3c2   0x0000f3c2   0x00000002   PAD
-    0x0000f3c4   0x0000f3c4   0x00000156   Code   RO         1258    .text.shellInsertByte  shell.o
-    0x0000f51a   0x0000f51a   0x00000002   PAD
-    0x0000f51c   0x0000f51c   0x0000001e   Code   RO         1322    .text.shellKeys     shell.o
-    0x0000f53a   0x0000f53a   0x00000002   PAD
-    0x0000f53c   0x0000f53c   0x00000026   Code   RO         1296    .text.shellLeft     shell.o
-    0x0000f562   0x0000f562   0x00000002   PAD
-    0x0000f564   0x0000f564   0x00000016   Code   RO         1252    .text.shellListAll  shell.o
-    0x0000f57a   0x0000f57a   0x00000002   PAD
-    0x0000f57c   0x0000f57c   0x00000082   Code   RO         1244    .text.shellListCommand  shell.o
-    0x0000f5fe   0x0000f5fe   0x00000002   PAD
-    0x0000f600   0x0000f600   0x00000186   Code   RO         1234    .text.shellListItem  shell.o
-    0x0000f786   0x0000f786   0x00000002   PAD
-    0x0000f788   0x0000f788   0x00000096   Code   RO         1250    .text.shellListKey  shell.o
-    0x0000f81e   0x0000f81e   0x00000002   PAD
-    0x0000f820   0x0000f820   0x00000096   Code   RO         1248    .text.shellListUser  shell.o
-    0x0000f8b6   0x0000f8b6   0x00000002   PAD
-    0x0000f8b8   0x0000f8b8   0x00000096   Code   RO         1246    .text.shellListVar  shell.o
-    0x0000f94e   0x0000f94e   0x00000002   PAD
-    0x0000f950   0x0000f950   0x0000002a   Code   RO         1278    .text.shellNormalInput  shell.o
-    0x0000f97a   0x0000f97a   0x00000002   PAD
-    0x0000f97c   0x0000f97c   0x0000012a   Code   RO         1284    .text.shellParserParam  shell.o
-    0x0000faa6   0x0000faa6   0x00000002   PAD
-    0x0000faa8   0x0000faa8   0x000000ae   Code   RO         1274    .text.shellRemoveParamQuotes  shell.o
-    0x0000fb56   0x0000fb56   0x00000002   PAD
-    0x0000fb58   0x0000fb58   0x00000028   Code   RO         1294    .text.shellRight    shell.o
-    0x0000fb80   0x0000fb80   0x000000ec   Code   RO         1272    .text.shellRunCommand  shell.o
-    0x0000fc6c   0x0000fc6c   0x000000da   Code   RO         1216    .text.shellSeekCommand  shell.o
-    0x0000fd46   0x0000fd46   0x00000002   PAD
-    0x0000fd48   0x0000fd48   0x000000a4   Code   RO         1214    .text.shellSetUser  shell.o
-    0x0000fdec   0x0000fdec   0x0000009c   Code   RO         1270    .text.shellSetVar   shell.o
-    0x0000fe88   0x0000fe88   0x000000d8   Code   RO         1264    .text.shellSetVarValue  shell.o
-    0x0000ff60   0x0000ff60   0x0000010a   Code   RO         1268    .text.shellShowVar  shell.o
-    0x0001006a   0x0001006a   0x00000002   PAD
-    0x0001006c   0x0001006c   0x00000072   Code   RO         1300    .text.shellStringCompare  shell.o
-    0x000100de   0x000100de   0x00000002   PAD
-    0x000100e0   0x000100e0   0x00000046   Code   RO         1266    .text.shellStringCopy  shell.o
-    0x00010126   0x00010126   0x00000002   PAD
-    0x00010128   0x00010128   0x00000262   Code   RO         1298    .text.shellTab      shell.o
-    0x0001038a   0x0001038a   0x00000002   PAD
-    0x0001038c   0x0001038c   0x0000003e   Code   RO         1314    .text.shellTask     shell.o
-    0x000103ca   0x000103ca   0x00000002   PAD
-    0x000103cc   0x000103cc   0x000000b8   Code   RO         1232    .text.shellToDec    shell.o
-    0x00010484   0x00010484   0x0000006c   Code   RO         1230    .text.shellToHex    shell.o
-    0x000104f0   0x000104f0   0x00000012   Code   RO         1288    .text.shellUp       shell.o
-    0x00010502   0x00010502   0x00000002   PAD
-    0x00010504   0x00010504   0x0000001e   Code   RO         1316    .text.shellUsers    shell.o
-    0x00010522   0x00010522   0x00000002   PAD
-    0x00010524   0x00010524   0x0000001e   Code   RO         1320    .text.shellVars     shell.o
-    0x00010542   0x00010542   0x00000002   PAD
-    0x00010544   0x00010544   0x0000001e   Code   RO         1396    .text.shellWrite    shell_port.o
-    0x00010562   0x00010562   0x00000002   PAD
-    0x00010564   0x00010564   0x00000026   Code   RO         1238    .text.shellWriteByte  shell.o
-    0x0001058a   0x0001058a   0x00000002   PAD
-    0x0001058c   0x0001058c   0x000000d4   Code   RO         1240    .text.shellWriteCommandDesc  shell.o
-    0x00010660   0x00010660   0x0000009c   Code   RO         1302    .text.shellWriteCommandHelp  shell.o
-    0x000106fc   0x000106fc   0x000000d4   Code   RO         1218    .text.shellWritePrompt  shell.o
-    0x000107d0   0x000107d0   0x000000b6   Code   RO         1276    .text.shellWriteReturnValue  shell.o
-    0x00010886   0x00010886   0x00000002   PAD
-    0x00010888   0x00010888   0x00000062   Code   RO         1224    .text.shellWriteString  shell.o
-    0x000108ea   0x000108ea   0x00000002   PAD
-    0x000108ec   0x000108ec   0x00000046   Code   RO         1398    .text.shell_uart_write_data  shell_port.o
-    0x00010932   0x00010932   0x00000002   PAD
-    0x00010934   0x00010934   0x00000004   Code   RO         1526    .text.soft_reset_mcu  protocol.o
-    0x00010938   0x00010938   0x00000016   Code   RO         1136    .text.tick_init     app.o
-    0x0001094e   0x0001094e   0x00000002   PAD
-    0x00010950   0x00010950   0x00000128   Code   RO         1096    .text.timer0_init   mytimer.o
-    0x00010a78   0x00010a78   0x00000070   Code   RO         1073    .text.tuya_UsartRxErrProcess  myusart.o
-    0x00010ae8   0x00010ae8   0x00000032   Code   RO         1077    .text.tuya_UsartRxIrqCallback  myusart.o
-    0x00010b1a   0x00010b1a   0x00000002   PAD
-    0x00010b1c   0x00010b1c   0x00000008   Code   RO         1532    .text.tuya_re_config_network  protocol.o
-    0x00010b24   0x00010b24   0x00000008   Code   RO         1534    .text.tuya_reset_module  protocol.o
-    0x00010b2c   0x00010b2c   0x00000002   Code   RO         1536    .text.tuya_retry_ota  protocol.o
-    0x00010b2e   0x00010b2e   0x00000002   PAD
-    0x00010b30   0x00010b30   0x00000016   Code   RO         1160    .text.uart_post_process  app.o
-    0x00010b46   0x00010b46   0x00000002   PAD
-    0x00010b48   0x00010b48   0x000000c8   Code   RO         1589    .text.uart_receive_input  mcu_api.o
-    0x00010c10   0x00010c10   0x00000032   Code   RO         1458    .text.uart_transmit_output  protocol.o
-    0x00010c42   0x00010c42   0x00000002   PAD
-    0x00010c44   0x00010c44   0x00000032   Code   RO         1402    .text.uart_transmit_output_shell  shell_port.o
-    0x00010c76   0x00010c76   0x00000002   PAD
-    0x00010c78   0x00010c78   0x000001c8   Code   RO         1075    .text.usart_init    myusart.o
-    0x00010e40   0x00010e40   0x00000020   Code   RO         1834    i.__0printf         mc_w.l(printfa.o)
-    0x00010e60   0x00010e60   0x0000000e   Code   RO         1907    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x00010e6e   0x00010e6e   0x00000002   Code   RO         1908    i.__scatterload_null  mc_w.l(handlers.o)
-    0x00010e70   0x00010e70   0x0000000e   Code   RO         1909    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x00010e7e   0x00010e7e   0x00000002   PAD
-    0x00010e80   0x00010e80   0x00000184   Code   RO         1841    i._fp_digits        mc_w.l(printfa.o)
-    0x00011004   0x00011004   0x000006dc   Code   RO         1842    i._printf_core      mc_w.l(printfa.o)
-    0x000116e0   0x000116e0   0x00000024   Code   RO         1843    i._printf_post_padding  mc_w.l(printfa.o)
-    0x00011704   0x00011704   0x0000002e   Code   RO         1844    i._printf_pre_padding  mc_w.l(printfa.o)
-    0x00011732   0x00011732   0x00000012   Code   RO         1875    i.fputc             mc_w.l(fputc.o)
-    0x00011744   0x00011744   0x00000010   Data   RO         1752    .rodata._PrintUnsigned._aV2C  segger_rtt_printf.o
-    0x00011754   0x00011754   0x00000010   Data   RO          885    .rodata.cst16       hc32f46x_usart.o
-    0x00011764   0x00011764   0x0000003c   Data   RO         1540    .rodata.download_cmd  protocol.o
-    0x000117a0   0x000117a0   0x00000005   Data   RO         1330    .rodata.shellCmdDefaultUser  shell.o
-    0x000117a5   0x000117a5   0x00000006   Data   RO         1359    .rodata.shellCmdclear  shell.o
-    0x000117ab   0x000117ab   0x00000005   Data   RO         1353    .rodata.shellCmdcmds  shell.o
-    0x000117b0   0x000117b0   0x00000005   Data   RO         1361    .rodata.shellCmdexec  shell.o
-    0x000117b5   0x000117b5   0x00000005   Data   RO         1408    .rodata.shellCmdexit  shell_port.o
-    0x000117ba   0x000117ba   0x0000000b   Data   RO         1176    .rodata.shellCmdfsk_pwm_en  app.o
-    0x000117c5   0x000117c5   0x00000011   Data   RO         1180    .rodata.shellCmdfsk_pwm_saw_duty  app.o
-    0x000117d6   0x000117d6   0x00000005   Data   RO         1349    .rodata.shellCmdhelp  shell.o
-    0x000117db   0x000117db   0x00000008   Data   RO         1171    .rodata.shellCmdhexdump  app.o
-    0x000117e3   0x000117e3   0x0000000b   Data   RO         1182    .rodata.shellCmdif_adc_avg  app.o
-    0x000117ee   0x000117ee   0x00000005   Data   RO         1357    .rodata.shellCmdkeys  shell.o
-    0x000117f3   0x000117f3   0x00000007   Data   RO         1337    .rodata.shellCmdsetVar  shell.o
-    0x000117fa   0x000117fa   0x0000000c   Data   RO         1178    .rodata.shellCmdtimer0_duty  app.o
-    0x00011806   0x00011806   0x0000000a   Data   RO         1174    .rodata.shellCmdtimer0_en  app.o
-    0x00011810   0x00011810   0x00000006   Data   RO         1351    .rodata.shellCmdusers  shell.o
-    0x00011816   0x00011816   0x00000005   Data   RO         1355    .rodata.shellCmdvars  shell.o
-    0x0001181b   0x0001181b   0x0000000d   Data   RO         1332    .rodata.shellDesDefaultUser  shell.o
-    0x00011828   0x00011828   0x0000000a   Data   RO         1344    .rodata.shellDesc0x08000000  shell.o
-    0x00011832   0x00011832   0x00000004   Data   RO         1343    .rodata.shellDesc0x09000000  shell.o
-    0x00011836   0x00011836   0x00000006   Data   RO         1347    .rodata.shellDesc0x0A000000  shell.o
-    0x0001183c   0x0001183c   0x00000006   Data   RO         1348    .rodata.shellDesc0x0D000000  shell.o
-    0x00011842   0x00011842   0x00000007   Data   RO         1346    .rodata.shellDesc0x1B5B337E  shell.o
-    0x00011849   0x00011849   0x00000003   Data   RO         1339    .rodata.shellDesc0x1B5B4100  shell.o
-    0x0001184c   0x0001184c   0x00000005   Data   RO         1340    .rodata.shellDesc0x1B5B4200  shell.o
-    0x00011851   0x00011851   0x00000006   Data   RO         1341    .rodata.shellDesc0x1B5B4300  shell.o
-    0x00011857   0x00011857   0x00000005   Data   RO         1342    .rodata.shellDesc0x1B5B4400  shell.o
-    0x0001185c   0x0001185c   0x0000000a   Data   RO         1345    .rodata.shellDesc0x7F000000  shell.o
-    0x00011866   0x00011866   0x0000000e   Data   RO         1360    .rodata.shellDescclear  shell.o
-    0x00011874   0x00011874   0x0000000d   Data   RO         1354    .rodata.shellDesccmds  shell.o
-    0x00011881   0x00011881   0x0000001b   Data   RO         1362    .rodata.shellDescexec  shell.o
-    0x0001189c   0x0001189c   0x00000005   Data   RO         1409    .rodata.shellDescexit  shell_port.o
-    0x000118a1   0x000118a1   0x00000021   Data   RO         1177    .rodata.shellDescfsk_pwm_en  app.o
-    0x000118c2   0x000118c2   0x0000001a   Data   RO         1181    .rodata.shellDescfsk_pwm_saw_duty  app.o
-    0x000118dc   0x000118dc   0x0000001e   Data   RO         1350    .rodata.shellDeschelp  shell.o
-    0x000118fa   0x000118fa   0x00000014   Data   RO         1172    .rodata.shellDeschexdump  app.o
-    0x0001190e   0x0001190e   0x00000024   Data   RO         1183    .rodata.shellDescif_adc_avg  app.o
-    0x00011932   0x00011932   0x0000000d   Data   RO         1358    .rodata.shellDesckeys  shell.o
-    0x0001193f   0x0001193f   0x00000008   Data   RO         1338    .rodata.shellDescsetVar  shell.o
-    0x00011947   0x00011947   0x0000001a   Data   RO         1179    .rodata.shellDesctimer0_duty  app.o
-    0x00011961   0x00011961   0x00000020   Data   RO         1175    .rodata.shellDesctimer0_en  app.o
-    0x00011981   0x00011981   0x0000000e   Data   RO         1352    .rodata.shellDescusers  shell.o
-    0x0001198f   0x0001198f   0x0000000d   Data   RO         1356    .rodata.shellDescvars  shell.o
-    0x0001199c   0x0001199c   0x00000001   Data   RO         1331    .rodata.shellPasswordDefaultUser  shell.o
-    0x0001199d   0x0001199d   0x0000002d   Data   RO           70    .rodata.str1.1      hc32f46x_utility.o
-    0x000119ca   0x000119ca   0x0000001d   Data   RO          150    .rodata.str1.1      hc32f46x_adc.o
-    0x000119e7   0x000119e7   0x0000001d   Data   RO          232    .rodata.str1.1      hc32f46x_clk.o
-    0x00011a04   0x00011a04   0x0000001d   Data   RO          286    .rodata.str1.1      hc32f46x_efm.o
-    0x00011a21   0x00011a21   0x0000001e   Data   RO          328    .rodata.str1.1      hc32f46x_gpio.o
-    0x00011a3f   0x00011a3f   0x00000024   Data   RO          657    .rodata.str1.1      hc32f46x_interrupts.o
-    0x00011a63   0x00011a63   0x0000001d   Data   RO          764    .rodata.str1.1      hc32f46x_pwc.o
-    0x00011a80   0x00011a80   0x00000020   Data   RO          804    .rodata.str1.1      hc32f46x_timer0.o
-    0x00011aa0   0x00011aa0   0x0000001f   Data   RO          884    .rodata.str1.1      hc32f46x_usart.o
-    0x00011abf   0x00011abf   0x0000001e   Data   RO          949    .rodata.str1.1      hc32f46x_dmac.o
-    0x00011add   0x00011add   0x00000020   Data   RO         1022    .rodata.str1.1      hc32f46x_timera.o
-    0x00011afd   0x00011afd   0x0000000e   Data   RO         1048    .rodata.str1.1      myadc.o
-    0x00011b0b   0x00011b0b   0x00000096   Data   RO         1120    .rodata.str1.1      myclk.o
-    0x00011ba1   0x00011ba1   0x00000199   Data   RO         1170    .rodata.str1.1      app.o
-    0x00011d3a   0x00011d3a   0x000002d0   Data   RO         1334    .rodata.str1.1      shell.o
-    0x0001200a   0x0001200a   0x00000023   Data   RO         1443    .rodata.str1.1      system.o
-    0x0001202d   0x0001202d   0x0000002f   Data   RO         1541    .rodata.str1.1      protocol.o
-    0x0001205c   0x0001205c   0x00000367   Data   RO         1646    .rodata.str1.1      mcu_ota_handler.o
-    0x000123c3   0x000123c3   0x00000014   Data   RO         1732    .rodata.str1.1      segger_rtt.o
-    0x000123d7   0x000123d7   0x00000001   PAD
-    0x000123d8   0x000123d8   0x00000020   Data   RO         1906    Region$$Table       anon$$obj.o
-    0x000123f8   0x000123f8   0x00000060   Data   RO         1173    shellCommand        app.o
-    0x00012458   0x00012458   0x00000130   Data   RO         1333    shellCommand        shell.o
-    0x00012588   0x00012588   0x00000010   Data   RO         1410    shellCommand        shell_port.o
+    0x0000dff4   0x0000dff4   0x00000072   Code   RO         1146    .text.segger_init   app.o
+    0x0000e066   0x0000e066   0x00000002   PAD
+    0x0000e068   0x0000e068   0x0000004c   Code   RO         1156    .text.sent_sample_data  app.o
+    0x0000e0b4   0x0000e0b4   0x00000050   Code   RO         1420    .text.set_bt_uart_buffer  system.o
+    0x0000e104   0x0000e104   0x0000003a   Code   RO         1418    .text.set_bt_uart_byte  system.o
+    0x0000e13e   0x0000e13e   0x00000002   PAD
+    0x0000e140   0x0000e140   0x000000c0   Code   RO         1142    .text.set_fsk_wave_duty  app.o
+    0x0000e200   0x0000e200   0x00000024   Code   RO         1144    .text.set_if_adc_avg  app.o
+    0x0000e224   0x0000e224   0x00000052   Code   RO         1140    .text.set_samplerate  app.o
+    0x0000e276   0x0000e276   0x00000002   PAD
+    0x0000e278   0x0000e278   0x00000052   Code   RO         1212    .text.shellAdd      shell.o
+    0x0000e2ca   0x0000e2ca   0x00000002   PAD
+    0x0000e2cc   0x0000e2cc   0x00000012   Code   RO         1304    .text.shellBackspace  shell.o
+    0x0000e2de   0x0000e2de   0x00000002   PAD
+    0x0000e2e0   0x0000e2e0   0x00000058   Code   RO         1286    .text.shellCheckPassword  shell.o
+    0x0000e338   0x0000e338   0x00000064   Code   RO         1228    .text.shellCheckPermission  shell.o
+    0x0000e39c   0x0000e39c   0x00000028   Code   RO         1324    .text.shellClear    shell.o
+    0x0000e3c4   0x0000e3c4   0x00000040   Code   RO         1256    .text.shellClearCommandLine  shell.o
+    0x0000e404   0x0000e404   0x0000001e   Code   RO         1318    .text.shellCmds     shell.o
+    0x0000e422   0x0000e422   0x00000002   PAD
+    0x0000e424   0x0000e424   0x00000014   Code   RO         1306    .text.shellDelete   shell.o
+    0x0000e438   0x0000e438   0x00000162   Code   RO         1260    .text.shellDeleteByte  shell.o
+    0x0000e59a   0x0000e59a   0x00000002   PAD
+    0x0000e59c   0x0000e59c   0x00000032   Code   RO         1254    .text.shellDeleteCommandLine  shell.o
+    0x0000e5ce   0x0000e5ce   0x00000002   PAD
+    0x0000e5d0   0x0000e5d0   0x00000014   Code   RO         1292    .text.shellDown     shell.o
+    0x0000e5e4   0x0000e5e4   0x00000018   Code   RO         1308    .text.shellEnter    shell.o
+    0x0000e5fc   0x0000e5fc   0x000000a6   Code   RO         1280    .text.shellExec     shell.o
+    0x0000e6a2   0x0000e6a2   0x00000002   PAD
+    0x0000e6a4   0x0000e6a4   0x0000006c   Code   RO         1328    .text.shellExecute  shell.o
+    0x0000e710   0x0000e710   0x0000009a   Code   RO         1385    .text.shellExtNumType  shell_ext.o
+    0x0000e7aa   0x0000e7aa   0x00000002   PAD
+    0x0000e7ac   0x0000e7ac   0x0000008e   Code   RO         1375    .text.shellExtParseChar  shell_ext.o
+    0x0000e83a   0x0000e83a   0x00000002   PAD
+    0x0000e83c   0x0000e83c   0x0000014e   Code   RO         1377    .text.shellExtParseNumber  shell_ext.o
+    0x0000e98a   0x0000e98a   0x00000002   PAD
+    0x0000e98c   0x0000e98c   0x00000094   Code   RO         1373    .text.shellExtParsePara  shell_ext.o
+    0x0000ea20   0x0000ea20   0x0000009a   Code   RO         1381    .text.shellExtParseString  shell_ext.o
+    0x0000eaba   0x0000eaba   0x00000002   PAD
+    0x0000eabc   0x0000eabc   0x00000038   Code   RO         1379    .text.shellExtParseVar  shell_ext.o
+    0x0000eaf4   0x0000eaf4   0x000001a0   Code   RO         1383    .text.shellExtRun   shell_ext.o
+    0x0000ec94   0x0000ec94   0x00000078   Code   RO         1387    .text.shellExtToNum  shell_ext.o
+    0x0000ed0c   0x0000ed0c   0x00000054   Code   RO         1242    .text.shellGetCommandDesc  shell.o
+    0x0000ed60   0x0000ed60   0x00000096   Code   RO         1236    .text.shellGetCommandName  shell.o
+    0x0000edf6   0x0000edf6   0x00000002   PAD
+    0x0000edf8   0x0000edf8   0x00000076   Code   RO         1222    .text.shellGetCurrent  shell.o
+    0x0000ee6e   0x0000ee6e   0x00000002   PAD
+    0x0000ee70   0x0000ee70   0x00000086   Code   RO         1262    .text.shellGetVarValue  shell.o
+    0x0000eef6   0x0000eef6   0x00000002   PAD
+    0x0000eef8   0x0000eef8   0x000001b2   Code   RO         1312    .text.shellHandler  shell.o
+    0x0000f0aa   0x0000f0aa   0x00000002   PAD
+    0x0000f0ac   0x0000f0ac   0x00000042   Code   RO         1310    .text.shellHelp     shell.o
+    0x0000f0ee   0x0000f0ee   0x00000002   PAD
+    0x0000f0f0   0x0000f0f0   0x0000012e   Code   RO         1290    .text.shellHistory  shell.o
+    0x0000f21e   0x0000f21e   0x00000002   PAD
+    0x0000f220   0x0000f220   0x000000bc   Code   RO         1282    .text.shellHistoryAdd  shell.o
+    0x0000f2dc   0x0000f2dc   0x000000e2   Code   RO         1210    .text.shellInit     shell.o
+    0x0000f3be   0x0000f3be   0x00000002   PAD
+    0x0000f3c0   0x0000f3c0   0x00000156   Code   RO         1258    .text.shellInsertByte  shell.o
+    0x0000f516   0x0000f516   0x00000002   PAD
+    0x0000f518   0x0000f518   0x0000001e   Code   RO         1322    .text.shellKeys     shell.o
+    0x0000f536   0x0000f536   0x00000002   PAD
+    0x0000f538   0x0000f538   0x00000026   Code   RO         1296    .text.shellLeft     shell.o
+    0x0000f55e   0x0000f55e   0x00000002   PAD
+    0x0000f560   0x0000f560   0x00000016   Code   RO         1252    .text.shellListAll  shell.o
+    0x0000f576   0x0000f576   0x00000002   PAD
+    0x0000f578   0x0000f578   0x00000082   Code   RO         1244    .text.shellListCommand  shell.o
+    0x0000f5fa   0x0000f5fa   0x00000002   PAD
+    0x0000f5fc   0x0000f5fc   0x00000186   Code   RO         1234    .text.shellListItem  shell.o
+    0x0000f782   0x0000f782   0x00000002   PAD
+    0x0000f784   0x0000f784   0x00000096   Code   RO         1250    .text.shellListKey  shell.o
+    0x0000f81a   0x0000f81a   0x00000002   PAD
+    0x0000f81c   0x0000f81c   0x00000096   Code   RO         1248    .text.shellListUser  shell.o
+    0x0000f8b2   0x0000f8b2   0x00000002   PAD
+    0x0000f8b4   0x0000f8b4   0x00000096   Code   RO         1246    .text.shellListVar  shell.o
+    0x0000f94a   0x0000f94a   0x00000002   PAD
+    0x0000f94c   0x0000f94c   0x0000002a   Code   RO         1278    .text.shellNormalInput  shell.o
+    0x0000f976   0x0000f976   0x00000002   PAD
+    0x0000f978   0x0000f978   0x0000012a   Code   RO         1284    .text.shellParserParam  shell.o
+    0x0000faa2   0x0000faa2   0x00000002   PAD
+    0x0000faa4   0x0000faa4   0x000000ae   Code   RO         1274    .text.shellRemoveParamQuotes  shell.o
+    0x0000fb52   0x0000fb52   0x00000002   PAD
+    0x0000fb54   0x0000fb54   0x00000028   Code   RO         1294    .text.shellRight    shell.o
+    0x0000fb7c   0x0000fb7c   0x000000ec   Code   RO         1272    .text.shellRunCommand  shell.o
+    0x0000fc68   0x0000fc68   0x000000da   Code   RO         1216    .text.shellSeekCommand  shell.o
+    0x0000fd42   0x0000fd42   0x00000002   PAD
+    0x0000fd44   0x0000fd44   0x000000a4   Code   RO         1214    .text.shellSetUser  shell.o
+    0x0000fde8   0x0000fde8   0x0000009c   Code   RO         1270    .text.shellSetVar   shell.o
+    0x0000fe84   0x0000fe84   0x000000d8   Code   RO         1264    .text.shellSetVarValue  shell.o
+    0x0000ff5c   0x0000ff5c   0x0000010a   Code   RO         1268    .text.shellShowVar  shell.o
+    0x00010066   0x00010066   0x00000002   PAD
+    0x00010068   0x00010068   0x00000072   Code   RO         1300    .text.shellStringCompare  shell.o
+    0x000100da   0x000100da   0x00000002   PAD
+    0x000100dc   0x000100dc   0x00000046   Code   RO         1266    .text.shellStringCopy  shell.o
+    0x00010122   0x00010122   0x00000002   PAD
+    0x00010124   0x00010124   0x00000262   Code   RO         1298    .text.shellTab      shell.o
+    0x00010386   0x00010386   0x00000002   PAD
+    0x00010388   0x00010388   0x0000003e   Code   RO         1314    .text.shellTask     shell.o
+    0x000103c6   0x000103c6   0x00000002   PAD
+    0x000103c8   0x000103c8   0x000000b8   Code   RO         1232    .text.shellToDec    shell.o
+    0x00010480   0x00010480   0x0000006c   Code   RO         1230    .text.shellToHex    shell.o
+    0x000104ec   0x000104ec   0x00000012   Code   RO         1288    .text.shellUp       shell.o
+    0x000104fe   0x000104fe   0x00000002   PAD
+    0x00010500   0x00010500   0x0000001e   Code   RO         1316    .text.shellUsers    shell.o
+    0x0001051e   0x0001051e   0x00000002   PAD
+    0x00010520   0x00010520   0x0000001e   Code   RO         1320    .text.shellVars     shell.o
+    0x0001053e   0x0001053e   0x00000002   PAD
+    0x00010540   0x00010540   0x0000001e   Code   RO         1396    .text.shellWrite    shell_port.o
+    0x0001055e   0x0001055e   0x00000002   PAD
+    0x00010560   0x00010560   0x00000026   Code   RO         1238    .text.shellWriteByte  shell.o
+    0x00010586   0x00010586   0x00000002   PAD
+    0x00010588   0x00010588   0x000000d4   Code   RO         1240    .text.shellWriteCommandDesc  shell.o
+    0x0001065c   0x0001065c   0x0000009c   Code   RO         1302    .text.shellWriteCommandHelp  shell.o
+    0x000106f8   0x000106f8   0x000000d4   Code   RO         1218    .text.shellWritePrompt  shell.o
+    0x000107cc   0x000107cc   0x000000b6   Code   RO         1276    .text.shellWriteReturnValue  shell.o
+    0x00010882   0x00010882   0x00000002   PAD
+    0x00010884   0x00010884   0x00000062   Code   RO         1224    .text.shellWriteString  shell.o
+    0x000108e6   0x000108e6   0x00000002   PAD
+    0x000108e8   0x000108e8   0x00000046   Code   RO         1398    .text.shell_uart_write_data  shell_port.o
+    0x0001092e   0x0001092e   0x00000002   PAD
+    0x00010930   0x00010930   0x00000004   Code   RO         1526    .text.soft_reset_mcu  protocol.o
+    0x00010934   0x00010934   0x00000016   Code   RO         1136    .text.tick_init     app.o
+    0x0001094a   0x0001094a   0x00000002   PAD
+    0x0001094c   0x0001094c   0x00000128   Code   RO         1096    .text.timer0_init   mytimer.o
+    0x00010a74   0x00010a74   0x00000070   Code   RO         1073    .text.tuya_UsartRxErrProcess  myusart.o
+    0x00010ae4   0x00010ae4   0x00000032   Code   RO         1077    .text.tuya_UsartRxIrqCallback  myusart.o
+    0x00010b16   0x00010b16   0x00000002   PAD
+    0x00010b18   0x00010b18   0x00000008   Code   RO         1532    .text.tuya_re_config_network  protocol.o
+    0x00010b20   0x00010b20   0x00000008   Code   RO         1534    .text.tuya_reset_module  protocol.o
+    0x00010b28   0x00010b28   0x00000002   Code   RO         1536    .text.tuya_retry_ota  protocol.o
+    0x00010b2a   0x00010b2a   0x00000002   PAD
+    0x00010b2c   0x00010b2c   0x00000016   Code   RO         1160    .text.uart_post_process  app.o
+    0x00010b42   0x00010b42   0x00000002   PAD
+    0x00010b44   0x00010b44   0x000000c8   Code   RO         1589    .text.uart_receive_input  mcu_api.o
+    0x00010c0c   0x00010c0c   0x00000032   Code   RO         1458    .text.uart_transmit_output  protocol.o
+    0x00010c3e   0x00010c3e   0x00000002   PAD
+    0x00010c40   0x00010c40   0x00000032   Code   RO         1402    .text.uart_transmit_output_shell  shell_port.o
+    0x00010c72   0x00010c72   0x00000002   PAD
+    0x00010c74   0x00010c74   0x000001c8   Code   RO         1075    .text.usart_init    myusart.o
+    0x00010e3c   0x00010e3c   0x00000020   Code   RO         1834    i.__0printf         mc_w.l(printfa.o)
+    0x00010e5c   0x00010e5c   0x0000000e   Code   RO         1907    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00010e6a   0x00010e6a   0x00000002   Code   RO         1908    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00010e6c   0x00010e6c   0x0000000e   Code   RO         1909    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00010e7a   0x00010e7a   0x00000002   PAD
+    0x00010e7c   0x00010e7c   0x00000184   Code   RO         1841    i._fp_digits        mc_w.l(printfa.o)
+    0x00011000   0x00011000   0x000006dc   Code   RO         1842    i._printf_core      mc_w.l(printfa.o)
+    0x000116dc   0x000116dc   0x00000024   Code   RO         1843    i._printf_post_padding  mc_w.l(printfa.o)
+    0x00011700   0x00011700   0x0000002e   Code   RO         1844    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x0001172e   0x0001172e   0x00000012   Code   RO         1875    i.fputc             mc_w.l(fputc.o)
+    0x00011740   0x00011740   0x00000010   Data   RO         1752    .rodata._PrintUnsigned._aV2C  segger_rtt_printf.o
+    0x00011750   0x00011750   0x00000010   Data   RO          885    .rodata.cst16       hc32f46x_usart.o
+    0x00011760   0x00011760   0x0000003c   Data   RO         1540    .rodata.download_cmd  protocol.o
+    0x0001179c   0x0001179c   0x00000005   Data   RO         1330    .rodata.shellCmdDefaultUser  shell.o
+    0x000117a1   0x000117a1   0x00000006   Data   RO         1359    .rodata.shellCmdclear  shell.o
+    0x000117a7   0x000117a7   0x00000005   Data   RO         1353    .rodata.shellCmdcmds  shell.o
+    0x000117ac   0x000117ac   0x00000005   Data   RO         1361    .rodata.shellCmdexec  shell.o
+    0x000117b1   0x000117b1   0x00000005   Data   RO         1408    .rodata.shellCmdexit  shell_port.o
+    0x000117b6   0x000117b6   0x0000000b   Data   RO         1176    .rodata.shellCmdfsk_pwm_en  app.o
+    0x000117c1   0x000117c1   0x00000011   Data   RO         1180    .rodata.shellCmdfsk_pwm_saw_duty  app.o
+    0x000117d2   0x000117d2   0x00000005   Data   RO         1349    .rodata.shellCmdhelp  shell.o
+    0x000117d7   0x000117d7   0x00000008   Data   RO         1171    .rodata.shellCmdhexdump  app.o
+    0x000117df   0x000117df   0x0000000b   Data   RO         1182    .rodata.shellCmdif_adc_avg  app.o
+    0x000117ea   0x000117ea   0x00000005   Data   RO         1357    .rodata.shellCmdkeys  shell.o
+    0x000117ef   0x000117ef   0x00000007   Data   RO         1337    .rodata.shellCmdsetVar  shell.o
+    0x000117f6   0x000117f6   0x0000000c   Data   RO         1178    .rodata.shellCmdtimer0_duty  app.o
+    0x00011802   0x00011802   0x0000000a   Data   RO         1174    .rodata.shellCmdtimer0_en  app.o
+    0x0001180c   0x0001180c   0x00000006   Data   RO         1351    .rodata.shellCmdusers  shell.o
+    0x00011812   0x00011812   0x00000005   Data   RO         1355    .rodata.shellCmdvars  shell.o
+    0x00011817   0x00011817   0x0000000d   Data   RO         1332    .rodata.shellDesDefaultUser  shell.o
+    0x00011824   0x00011824   0x0000000a   Data   RO         1344    .rodata.shellDesc0x08000000  shell.o
+    0x0001182e   0x0001182e   0x00000004   Data   RO         1343    .rodata.shellDesc0x09000000  shell.o
+    0x00011832   0x00011832   0x00000006   Data   RO         1347    .rodata.shellDesc0x0A000000  shell.o
+    0x00011838   0x00011838   0x00000006   Data   RO         1348    .rodata.shellDesc0x0D000000  shell.o
+    0x0001183e   0x0001183e   0x00000007   Data   RO         1346    .rodata.shellDesc0x1B5B337E  shell.o
+    0x00011845   0x00011845   0x00000003   Data   RO         1339    .rodata.shellDesc0x1B5B4100  shell.o
+    0x00011848   0x00011848   0x00000005   Data   RO         1340    .rodata.shellDesc0x1B5B4200  shell.o
+    0x0001184d   0x0001184d   0x00000006   Data   RO         1341    .rodata.shellDesc0x1B5B4300  shell.o
+    0x00011853   0x00011853   0x00000005   Data   RO         1342    .rodata.shellDesc0x1B5B4400  shell.o
+    0x00011858   0x00011858   0x0000000a   Data   RO         1345    .rodata.shellDesc0x7F000000  shell.o
+    0x00011862   0x00011862   0x0000000e   Data   RO         1360    .rodata.shellDescclear  shell.o
+    0x00011870   0x00011870   0x0000000d   Data   RO         1354    .rodata.shellDesccmds  shell.o
+    0x0001187d   0x0001187d   0x0000001b   Data   RO         1362    .rodata.shellDescexec  shell.o
+    0x00011898   0x00011898   0x00000005   Data   RO         1409    .rodata.shellDescexit  shell_port.o
+    0x0001189d   0x0001189d   0x00000021   Data   RO         1177    .rodata.shellDescfsk_pwm_en  app.o
+    0x000118be   0x000118be   0x0000001a   Data   RO         1181    .rodata.shellDescfsk_pwm_saw_duty  app.o
+    0x000118d8   0x000118d8   0x0000001e   Data   RO         1350    .rodata.shellDeschelp  shell.o
+    0x000118f6   0x000118f6   0x00000014   Data   RO         1172    .rodata.shellDeschexdump  app.o
+    0x0001190a   0x0001190a   0x00000024   Data   RO         1183    .rodata.shellDescif_adc_avg  app.o
+    0x0001192e   0x0001192e   0x0000000d   Data   RO         1358    .rodata.shellDesckeys  shell.o
+    0x0001193b   0x0001193b   0x00000008   Data   RO         1338    .rodata.shellDescsetVar  shell.o
+    0x00011943   0x00011943   0x0000001a   Data   RO         1179    .rodata.shellDesctimer0_duty  app.o
+    0x0001195d   0x0001195d   0x00000020   Data   RO         1175    .rodata.shellDesctimer0_en  app.o
+    0x0001197d   0x0001197d   0x0000000e   Data   RO         1352    .rodata.shellDescusers  shell.o
+    0x0001198b   0x0001198b   0x0000000d   Data   RO         1356    .rodata.shellDescvars  shell.o
+    0x00011998   0x00011998   0x00000001   Data   RO         1331    .rodata.shellPasswordDefaultUser  shell.o
+    0x00011999   0x00011999   0x0000002d   Data   RO           70    .rodata.str1.1      hc32f46x_utility.o
+    0x000119c6   0x000119c6   0x0000001d   Data   RO          150    .rodata.str1.1      hc32f46x_adc.o
+    0x000119e3   0x000119e3   0x0000001d   Data   RO          232    .rodata.str1.1      hc32f46x_clk.o
+    0x00011a00   0x00011a00   0x0000001d   Data   RO          286    .rodata.str1.1      hc32f46x_efm.o
+    0x00011a1d   0x00011a1d   0x0000001e   Data   RO          328    .rodata.str1.1      hc32f46x_gpio.o
+    0x00011a3b   0x00011a3b   0x00000024   Data   RO          657    .rodata.str1.1      hc32f46x_interrupts.o
+    0x00011a5f   0x00011a5f   0x0000001d   Data   RO          764    .rodata.str1.1      hc32f46x_pwc.o
+    0x00011a7c   0x00011a7c   0x00000020   Data   RO          804    .rodata.str1.1      hc32f46x_timer0.o
+    0x00011a9c   0x00011a9c   0x0000001f   Data   RO          884    .rodata.str1.1      hc32f46x_usart.o
+    0x00011abb   0x00011abb   0x0000001e   Data   RO          949    .rodata.str1.1      hc32f46x_dmac.o
+    0x00011ad9   0x00011ad9   0x00000020   Data   RO         1022    .rodata.str1.1      hc32f46x_timera.o
+    0x00011af9   0x00011af9   0x0000000e   Data   RO         1048    .rodata.str1.1      myadc.o
+    0x00011b07   0x00011b07   0x00000096   Data   RO         1120    .rodata.str1.1      myclk.o
+    0x00011b9d   0x00011b9d   0x00000199   Data   RO         1170    .rodata.str1.1      app.o
+    0x00011d36   0x00011d36   0x000002d0   Data   RO         1334    .rodata.str1.1      shell.o
+    0x00012006   0x00012006   0x00000023   Data   RO         1443    .rodata.str1.1      system.o
+    0x00012029   0x00012029   0x0000002f   Data   RO         1541    .rodata.str1.1      protocol.o
+    0x00012058   0x00012058   0x00000367   Data   RO         1646    .rodata.str1.1      mcu_ota_handler.o
+    0x000123bf   0x000123bf   0x00000014   Data   RO         1732    .rodata.str1.1      segger_rtt.o
+    0x000123d3   0x000123d3   0x00000001   PAD
+    0x000123d4   0x000123d4   0x00000020   Data   RO         1906    Region$$Table       anon$$obj.o
+    0x000123f4   0x000123f4   0x00000060   Data   RO         1173    shellCommand        app.o
+    0x00012454   0x00012454   0x00000130   Data   RO         1333    shellCommand        shell.o
+    0x00012584   0x00012584   0x00000010   Data   RO         1410    shellCommand        shell_port.o
 
 
     Execution Region RW_IRAM1 (Exec base: 0x1fff9000, Load base: 0x00012598, Size: 0x0000da68, Max: 0x0002e000, ABSOLUTE)
