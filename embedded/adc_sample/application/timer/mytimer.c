@@ -2,7 +2,6 @@
 #include "myadc.h"
 #include "myusart.h"
 #include "hc32_ddl.h"
-#include "arm_math.h" 
 #include "sys.h"
 #include "fifo.h"
 
