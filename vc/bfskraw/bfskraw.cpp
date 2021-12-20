@@ -78,7 +78,7 @@ unsigned int	__stdcall find_cb( void )
 		pp	=	memstr((char*)buff, sizeof(buff), (char*)sub_str);
 		if (pp != NULL)
 		{
-			addr_cb = addr_cb + 0x28C;
+			addr_cb = addr_cb + ((U32)pp - (U32)buff);
 			break;
 		}
 		else if (i == 191)
