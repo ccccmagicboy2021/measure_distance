@@ -4,7 +4,7 @@
  *      *** Do not modify ! ***
  *
  * Project: 'adc_03_sa_interrupt' 
- * Target:  'adc_03_sa_interrupt_Debug' 
+ * Target:  'flashcode' 
  */
 
 #ifndef RTE_COMPONENTS_H
