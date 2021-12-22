@@ -201,7 +201,7 @@
             <NoZi2>0</NoZi2>
             <NoZi3>0</NoZi3>
             <NoZi4>0</NoZi4>
-            <NoZi5>0</NoZi5>
+            <NoZi5>1</NoZi5>
             <Ro1Chk>0</Ro1Chk>
             <Ro2Chk>0</Ro2Chk>
             <Ro3Chk>0</Ro3Chk>
@@ -361,7 +361,7 @@
             </VariousControls>
           </Aads>
           <LDads>
-            <umfTarg>0</umfTarg>
+            <umfTarg>1</umfTarg>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
             <noStLib>0</noStLib>
@@ -1255,8 +1255,20 @@
       <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="Event Recorder" Cvariant="DAP" Cvendor="Keil" Cversion="1.4.0" condition="Cortex-M Device">
         <package name="ARM_Compiler" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="1.6.3"/>
         <targetInfos>
-          <targetInfo name="flashcode"/>
-          <targetInfo name="ramcode"/>
+          <targetInfo name="flashcode">
+            <mem>
+              <RVCTCodeConst>10</RVCTCodeConst>
+              <RVCTOtherData>5</RVCTOtherData>
+              <RVCTZI>5</RVCTZI>
+            </mem>
+          </targetInfo>
+          <targetInfo name="ramcode">
+            <mem>
+              <RVCTCodeConst>10</RVCTCodeConst>
+              <RVCTOtherData>5</RVCTOtherData>
+              <RVCTZI>5</RVCTZI>
+            </mem>
+          </targetInfo>
         </targetInfos>
       </component>
       <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="I/O" Csub="STDOUT" Cvariant="EVR" Cvendor="Keil" Cversion="1.2.0" condition="ARMCC Cortex-M with EVR">

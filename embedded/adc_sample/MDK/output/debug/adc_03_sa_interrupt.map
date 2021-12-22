@@ -6,9 +6,9 @@ Memory Map of the image
 
   Image Entry point : 0x00000281
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00013140, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00013180, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00013094, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00012864, Max: 0x00080000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -116,862 +116,870 @@ Memory Map of the image
     0x00003422   0x00003422   0x00000002   PAD
     0x00003424   0x00003424   0x00000016   Code   RO          240    .text.EFM_Unlock    hc32f46x_efm.o
     0x0000343a   0x0000343a   0x00000002   PAD
-    0x0000343c   0x0000343c   0x00000040   Code   RO         1824    .text.EventCheckFilter  eventrecorder.o
-    0x0000347c   0x0000347c   0x00000042   Code   RO         1810    .text.EventGetTS    eventrecorder.o
-    0x000034be   0x000034be   0x00000002   PAD
-    0x000034c0   0x000034c0   0x0000005c   Code   RO         1828    .text.EventRecord2  eventrecorder.o
-    0x0000351c   0x0000351c   0x000001a6   Code   RO         1822    .text.EventRecordData  eventrecorder.o
-    0x000036c2   0x000036c2   0x00000002   PAD
-    0x000036c4   0x000036c4   0x00000100   Code   RO         1812    .text.EventRecordItem  eventrecorder.o
-    0x000037c4   0x000037c4   0x00000094   Code   RO         1808    .text.EventRecorderEnable  eventrecorder.o
-    0x00003858   0x00003858   0x000001cc   Code   RO         1804    .text.EventRecorderInitialize  eventrecorder.o
-    0x00003a24   0x00003a24   0x0000004e   Code   RO         1814    .text.EventRecorderStart  eventrecorder.o
+    0x0000343c   0x0000343c   0x0000000c   Code   RO         1787    .text.FIFO_GetDataCount  fifo.o
+    0x00003448   0x00003448   0x0000001a   Code   RO         1773    .text.FIFO_Init     fifo.o
+    0x00003462   0x00003462   0x00000002   PAD
+    0x00003464   0x00003464   0x00000026   Code   RO         1785    .text.FIFO_IsDataEmpty  fifo.o
+    0x0000348a   0x0000348a   0x00000002   PAD
+    0x0000348c   0x0000348c   0x0000009e   Code   RO         1779    .text.FIFO_ReadData  fifo.o
+    0x0000352a   0x0000352a   0x00000002   PAD
+    0x0000352c   0x0000352c   0x00000070   Code   RO         1775    .text.FIFO_WriteData  fifo.o
+    0x0000359c   0x0000359c   0x00000016   Code   RO         1777    .text.FIFO_WriteOneData  fifo.o
+    0x000035b2   0x000035b2   0x00000002   PAD
+    0x000035b4   0x000035b4   0x00000116   Code   RO         1760    .text.HardFaultHandler  segger_hardfaulthandler.o
+    0x000036ca   0x000036ca   0x00000002   PAD
+    0x000036cc   0x000036cc   0x00000022   Code   RO          372    .text.IRQ000_Handler  hc32f46x_interrupts.o
+    0x000036ee   0x000036ee   0x00000002   PAD
+    0x000036f0   0x000036f0   0x00000022   Code   RO          374    .text.IRQ001_Handler  hc32f46x_interrupts.o
+    0x00003712   0x00003712   0x00000002   PAD
+    0x00003714   0x00003714   0x00000022   Code   RO          376    .text.IRQ002_Handler  hc32f46x_interrupts.o
+    0x00003736   0x00003736   0x00000002   PAD
+    0x00003738   0x00003738   0x00000022   Code   RO          378    .text.IRQ003_Handler  hc32f46x_interrupts.o
+    0x0000375a   0x0000375a   0x00000002   PAD
+    0x0000375c   0x0000375c   0x00000022   Code   RO          380    .text.IRQ004_Handler  hc32f46x_interrupts.o
+    0x0000377e   0x0000377e   0x00000002   PAD
+    0x00003780   0x00003780   0x00000022   Code   RO          382    .text.IRQ005_Handler  hc32f46x_interrupts.o
+    0x000037a2   0x000037a2   0x00000002   PAD
+    0x000037a4   0x000037a4   0x00000022   Code   RO          384    .text.IRQ006_Handler  hc32f46x_interrupts.o
+    0x000037c6   0x000037c6   0x00000002   PAD
+    0x000037c8   0x000037c8   0x00000022   Code   RO          386    .text.IRQ007_Handler  hc32f46x_interrupts.o
+    0x000037ea   0x000037ea   0x00000002   PAD
+    0x000037ec   0x000037ec   0x00000022   Code   RO          388    .text.IRQ008_Handler  hc32f46x_interrupts.o
+    0x0000380e   0x0000380e   0x00000002   PAD
+    0x00003810   0x00003810   0x00000022   Code   RO          390    .text.IRQ009_Handler  hc32f46x_interrupts.o
+    0x00003832   0x00003832   0x00000002   PAD
+    0x00003834   0x00003834   0x00000022   Code   RO          392    .text.IRQ010_Handler  hc32f46x_interrupts.o
+    0x00003856   0x00003856   0x00000002   PAD
+    0x00003858   0x00003858   0x00000022   Code   RO          394    .text.IRQ011_Handler  hc32f46x_interrupts.o
+    0x0000387a   0x0000387a   0x00000002   PAD
+    0x0000387c   0x0000387c   0x00000022   Code   RO          396    .text.IRQ012_Handler  hc32f46x_interrupts.o
+    0x0000389e   0x0000389e   0x00000002   PAD
+    0x000038a0   0x000038a0   0x00000022   Code   RO          398    .text.IRQ013_Handler  hc32f46x_interrupts.o
+    0x000038c2   0x000038c2   0x00000002   PAD
+    0x000038c4   0x000038c4   0x00000022   Code   RO          400    .text.IRQ014_Handler  hc32f46x_interrupts.o
+    0x000038e6   0x000038e6   0x00000002   PAD
+    0x000038e8   0x000038e8   0x00000022   Code   RO          402    .text.IRQ015_Handler  hc32f46x_interrupts.o
+    0x0000390a   0x0000390a   0x00000002   PAD
+    0x0000390c   0x0000390c   0x00000022   Code   RO          404    .text.IRQ016_Handler  hc32f46x_interrupts.o
+    0x0000392e   0x0000392e   0x00000002   PAD
+    0x00003930   0x00003930   0x00000022   Code   RO          406    .text.IRQ017_Handler  hc32f46x_interrupts.o
+    0x00003952   0x00003952   0x00000002   PAD
+    0x00003954   0x00003954   0x00000022   Code   RO          408    .text.IRQ018_Handler  hc32f46x_interrupts.o
+    0x00003976   0x00003976   0x00000002   PAD
+    0x00003978   0x00003978   0x00000022   Code   RO          410    .text.IRQ019_Handler  hc32f46x_interrupts.o
+    0x0000399a   0x0000399a   0x00000002   PAD
+    0x0000399c   0x0000399c   0x00000022   Code   RO          412    .text.IRQ020_Handler  hc32f46x_interrupts.o
+    0x000039be   0x000039be   0x00000002   PAD
+    0x000039c0   0x000039c0   0x00000022   Code   RO          414    .text.IRQ021_Handler  hc32f46x_interrupts.o
+    0x000039e2   0x000039e2   0x00000002   PAD
+    0x000039e4   0x000039e4   0x00000022   Code   RO          416    .text.IRQ022_Handler  hc32f46x_interrupts.o
+    0x00003a06   0x00003a06   0x00000002   PAD
+    0x00003a08   0x00003a08   0x00000022   Code   RO          418    .text.IRQ023_Handler  hc32f46x_interrupts.o
+    0x00003a2a   0x00003a2a   0x00000002   PAD
+    0x00003a2c   0x00003a2c   0x00000022   Code   RO          420    .text.IRQ024_Handler  hc32f46x_interrupts.o
+    0x00003a4e   0x00003a4e   0x00000002   PAD
+    0x00003a50   0x00003a50   0x00000022   Code   RO          422    .text.IRQ025_Handler  hc32f46x_interrupts.o
     0x00003a72   0x00003a72   0x00000002   PAD
-    0x00003a74   0x00003a74   0x0000000c   Code   RO         1802    .text.EventRecorderTimerGetCount  eventrecorder.o
-    0x00003a80   0x00003a80   0x0000000c   Code   RO         1800    .text.EventRecorderTimerGetFreq  eventrecorder.o
-    0x00003a8c   0x00003a8c   0x00000024   Code   RO         1798    .text.EventRecorderTimerSetup  eventrecorder.o
-    0x00003ab0   0x00003ab0   0x0000000c   Code   RO         1787    .text.FIFO_GetDataCount  fifo.o
-    0x00003abc   0x00003abc   0x0000001a   Code   RO         1773    .text.FIFO_Init     fifo.o
-    0x00003ad6   0x00003ad6   0x00000002   PAD
-    0x00003ad8   0x00003ad8   0x00000026   Code   RO         1785    .text.FIFO_IsDataEmpty  fifo.o
-    0x00003afe   0x00003afe   0x00000002   PAD
-    0x00003b00   0x00003b00   0x0000009e   Code   RO         1779    .text.FIFO_ReadData  fifo.o
-    0x00003b9e   0x00003b9e   0x00000002   PAD
-    0x00003ba0   0x00003ba0   0x00000070   Code   RO         1775    .text.FIFO_WriteData  fifo.o
-    0x00003c10   0x00003c10   0x00000016   Code   RO         1777    .text.FIFO_WriteOneData  fifo.o
-    0x00003c26   0x00003c26   0x00000002   PAD
-    0x00003c28   0x00003c28   0x00000012   Code   RO         1826    .text.GetContext    eventrecorder.o
+    0x00003a74   0x00003a74   0x00000022   Code   RO          424    .text.IRQ026_Handler  hc32f46x_interrupts.o
+    0x00003a96   0x00003a96   0x00000002   PAD
+    0x00003a98   0x00003a98   0x00000022   Code   RO          426    .text.IRQ027_Handler  hc32f46x_interrupts.o
+    0x00003aba   0x00003aba   0x00000002   PAD
+    0x00003abc   0x00003abc   0x00000022   Code   RO          428    .text.IRQ028_Handler  hc32f46x_interrupts.o
+    0x00003ade   0x00003ade   0x00000002   PAD
+    0x00003ae0   0x00003ae0   0x00000022   Code   RO          430    .text.IRQ029_Handler  hc32f46x_interrupts.o
+    0x00003b02   0x00003b02   0x00000002   PAD
+    0x00003b04   0x00003b04   0x00000022   Code   RO          432    .text.IRQ030_Handler  hc32f46x_interrupts.o
+    0x00003b26   0x00003b26   0x00000002   PAD
+    0x00003b28   0x00003b28   0x00000022   Code   RO          434    .text.IRQ031_Handler  hc32f46x_interrupts.o
+    0x00003b4a   0x00003b4a   0x00000002   PAD
+    0x00003b4c   0x00003b4c   0x00000026   Code   RO          436    .text.IRQ032_Handler  hc32f46x_interrupts.o
+    0x00003b72   0x00003b72   0x00000002   PAD
+    0x00003b74   0x00003b74   0x00000026   Code   RO          438    .text.IRQ033_Handler  hc32f46x_interrupts.o
+    0x00003b9a   0x00003b9a   0x00000002   PAD
+    0x00003b9c   0x00003b9c   0x00000026   Code   RO          440    .text.IRQ034_Handler  hc32f46x_interrupts.o
+    0x00003bc2   0x00003bc2   0x00000002   PAD
+    0x00003bc4   0x00003bc4   0x00000026   Code   RO          442    .text.IRQ035_Handler  hc32f46x_interrupts.o
+    0x00003bea   0x00003bea   0x00000002   PAD
+    0x00003bec   0x00003bec   0x00000026   Code   RO          444    .text.IRQ036_Handler  hc32f46x_interrupts.o
+    0x00003c12   0x00003c12   0x00000002   PAD
+    0x00003c14   0x00003c14   0x00000026   Code   RO          446    .text.IRQ037_Handler  hc32f46x_interrupts.o
     0x00003c3a   0x00003c3a   0x00000002   PAD
-    0x00003c3c   0x00003c3c   0x00000012   Code   RO         1840    .text.GetRecordIndex  eventrecorder.o
-    0x00003c4e   0x00003c4e   0x00000002   PAD
-    0x00003c50   0x00003c50   0x00000116   Code   RO         1760    .text.HardFaultHandler  segger_hardfaulthandler.o
-    0x00003d66   0x00003d66   0x00000002   PAD
-    0x00003d68   0x00003d68   0x00000022   Code   RO          372    .text.IRQ000_Handler  hc32f46x_interrupts.o
-    0x00003d8a   0x00003d8a   0x00000002   PAD
-    0x00003d8c   0x00003d8c   0x00000022   Code   RO          374    .text.IRQ001_Handler  hc32f46x_interrupts.o
-    0x00003dae   0x00003dae   0x00000002   PAD
-    0x00003db0   0x00003db0   0x00000022   Code   RO          376    .text.IRQ002_Handler  hc32f46x_interrupts.o
-    0x00003dd2   0x00003dd2   0x00000002   PAD
-    0x00003dd4   0x00003dd4   0x00000022   Code   RO          378    .text.IRQ003_Handler  hc32f46x_interrupts.o
-    0x00003df6   0x00003df6   0x00000002   PAD
-    0x00003df8   0x00003df8   0x00000022   Code   RO          380    .text.IRQ004_Handler  hc32f46x_interrupts.o
+    0x00003c3c   0x00003c3c   0x00000026   Code   RO          448    .text.IRQ038_Handler  hc32f46x_interrupts.o
+    0x00003c62   0x00003c62   0x00000002   PAD
+    0x00003c64   0x00003c64   0x00000026   Code   RO          450    .text.IRQ039_Handler  hc32f46x_interrupts.o
+    0x00003c8a   0x00003c8a   0x00000002   PAD
+    0x00003c8c   0x00003c8c   0x00000026   Code   RO          452    .text.IRQ040_Handler  hc32f46x_interrupts.o
+    0x00003cb2   0x00003cb2   0x00000002   PAD
+    0x00003cb4   0x00003cb4   0x00000026   Code   RO          454    .text.IRQ041_Handler  hc32f46x_interrupts.o
+    0x00003cda   0x00003cda   0x00000002   PAD
+    0x00003cdc   0x00003cdc   0x00000026   Code   RO          456    .text.IRQ042_Handler  hc32f46x_interrupts.o
+    0x00003d02   0x00003d02   0x00000002   PAD
+    0x00003d04   0x00003d04   0x00000026   Code   RO          458    .text.IRQ043_Handler  hc32f46x_interrupts.o
+    0x00003d2a   0x00003d2a   0x00000002   PAD
+    0x00003d2c   0x00003d2c   0x00000026   Code   RO          460    .text.IRQ044_Handler  hc32f46x_interrupts.o
+    0x00003d52   0x00003d52   0x00000002   PAD
+    0x00003d54   0x00003d54   0x00000026   Code   RO          462    .text.IRQ045_Handler  hc32f46x_interrupts.o
+    0x00003d7a   0x00003d7a   0x00000002   PAD
+    0x00003d7c   0x00003d7c   0x00000026   Code   RO          464    .text.IRQ046_Handler  hc32f46x_interrupts.o
+    0x00003da2   0x00003da2   0x00000002   PAD
+    0x00003da4   0x00003da4   0x00000026   Code   RO          466    .text.IRQ047_Handler  hc32f46x_interrupts.o
+    0x00003dca   0x00003dca   0x00000002   PAD
+    0x00003dcc   0x00003dcc   0x00000026   Code   RO          468    .text.IRQ048_Handler  hc32f46x_interrupts.o
+    0x00003df2   0x00003df2   0x00000002   PAD
+    0x00003df4   0x00003df4   0x00000026   Code   RO          470    .text.IRQ049_Handler  hc32f46x_interrupts.o
     0x00003e1a   0x00003e1a   0x00000002   PAD
-    0x00003e1c   0x00003e1c   0x00000022   Code   RO          382    .text.IRQ005_Handler  hc32f46x_interrupts.o
-    0x00003e3e   0x00003e3e   0x00000002   PAD
-    0x00003e40   0x00003e40   0x00000022   Code   RO          384    .text.IRQ006_Handler  hc32f46x_interrupts.o
-    0x00003e62   0x00003e62   0x00000002   PAD
-    0x00003e64   0x00003e64   0x00000022   Code   RO          386    .text.IRQ007_Handler  hc32f46x_interrupts.o
-    0x00003e86   0x00003e86   0x00000002   PAD
-    0x00003e88   0x00003e88   0x00000022   Code   RO          388    .text.IRQ008_Handler  hc32f46x_interrupts.o
-    0x00003eaa   0x00003eaa   0x00000002   PAD
-    0x00003eac   0x00003eac   0x00000022   Code   RO          390    .text.IRQ009_Handler  hc32f46x_interrupts.o
-    0x00003ece   0x00003ece   0x00000002   PAD
-    0x00003ed0   0x00003ed0   0x00000022   Code   RO          392    .text.IRQ010_Handler  hc32f46x_interrupts.o
-    0x00003ef2   0x00003ef2   0x00000002   PAD
-    0x00003ef4   0x00003ef4   0x00000022   Code   RO          394    .text.IRQ011_Handler  hc32f46x_interrupts.o
-    0x00003f16   0x00003f16   0x00000002   PAD
-    0x00003f18   0x00003f18   0x00000022   Code   RO          396    .text.IRQ012_Handler  hc32f46x_interrupts.o
-    0x00003f3a   0x00003f3a   0x00000002   PAD
-    0x00003f3c   0x00003f3c   0x00000022   Code   RO          398    .text.IRQ013_Handler  hc32f46x_interrupts.o
-    0x00003f5e   0x00003f5e   0x00000002   PAD
-    0x00003f60   0x00003f60   0x00000022   Code   RO          400    .text.IRQ014_Handler  hc32f46x_interrupts.o
+    0x00003e1c   0x00003e1c   0x00000026   Code   RO          472    .text.IRQ050_Handler  hc32f46x_interrupts.o
+    0x00003e42   0x00003e42   0x00000002   PAD
+    0x00003e44   0x00003e44   0x00000026   Code   RO          474    .text.IRQ051_Handler  hc32f46x_interrupts.o
+    0x00003e6a   0x00003e6a   0x00000002   PAD
+    0x00003e6c   0x00003e6c   0x00000026   Code   RO          476    .text.IRQ052_Handler  hc32f46x_interrupts.o
+    0x00003e92   0x00003e92   0x00000002   PAD
+    0x00003e94   0x00003e94   0x00000026   Code   RO          478    .text.IRQ053_Handler  hc32f46x_interrupts.o
+    0x00003eba   0x00003eba   0x00000002   PAD
+    0x00003ebc   0x00003ebc   0x00000026   Code   RO          480    .text.IRQ054_Handler  hc32f46x_interrupts.o
+    0x00003ee2   0x00003ee2   0x00000002   PAD
+    0x00003ee4   0x00003ee4   0x00000026   Code   RO          482    .text.IRQ055_Handler  hc32f46x_interrupts.o
+    0x00003f0a   0x00003f0a   0x00000002   PAD
+    0x00003f0c   0x00003f0c   0x00000026   Code   RO          484    .text.IRQ056_Handler  hc32f46x_interrupts.o
+    0x00003f32   0x00003f32   0x00000002   PAD
+    0x00003f34   0x00003f34   0x00000026   Code   RO          486    .text.IRQ057_Handler  hc32f46x_interrupts.o
+    0x00003f5a   0x00003f5a   0x00000002   PAD
+    0x00003f5c   0x00003f5c   0x00000026   Code   RO          488    .text.IRQ058_Handler  hc32f46x_interrupts.o
     0x00003f82   0x00003f82   0x00000002   PAD
-    0x00003f84   0x00003f84   0x00000022   Code   RO          402    .text.IRQ015_Handler  hc32f46x_interrupts.o
-    0x00003fa6   0x00003fa6   0x00000002   PAD
-    0x00003fa8   0x00003fa8   0x00000022   Code   RO          404    .text.IRQ016_Handler  hc32f46x_interrupts.o
-    0x00003fca   0x00003fca   0x00000002   PAD
-    0x00003fcc   0x00003fcc   0x00000022   Code   RO          406    .text.IRQ017_Handler  hc32f46x_interrupts.o
-    0x00003fee   0x00003fee   0x00000002   PAD
-    0x00003ff0   0x00003ff0   0x00000022   Code   RO          408    .text.IRQ018_Handler  hc32f46x_interrupts.o
-    0x00004012   0x00004012   0x00000002   PAD
-    0x00004014   0x00004014   0x00000022   Code   RO          410    .text.IRQ019_Handler  hc32f46x_interrupts.o
-    0x00004036   0x00004036   0x00000002   PAD
-    0x00004038   0x00004038   0x00000022   Code   RO          412    .text.IRQ020_Handler  hc32f46x_interrupts.o
-    0x0000405a   0x0000405a   0x00000002   PAD
-    0x0000405c   0x0000405c   0x00000022   Code   RO          414    .text.IRQ021_Handler  hc32f46x_interrupts.o
-    0x0000407e   0x0000407e   0x00000002   PAD
-    0x00004080   0x00004080   0x00000022   Code   RO          416    .text.IRQ022_Handler  hc32f46x_interrupts.o
-    0x000040a2   0x000040a2   0x00000002   PAD
-    0x000040a4   0x000040a4   0x00000022   Code   RO          418    .text.IRQ023_Handler  hc32f46x_interrupts.o
-    0x000040c6   0x000040c6   0x00000002   PAD
-    0x000040c8   0x000040c8   0x00000022   Code   RO          420    .text.IRQ024_Handler  hc32f46x_interrupts.o
+    0x00003f84   0x00003f84   0x00000026   Code   RO          490    .text.IRQ059_Handler  hc32f46x_interrupts.o
+    0x00003faa   0x00003faa   0x00000002   PAD
+    0x00003fac   0x00003fac   0x00000026   Code   RO          492    .text.IRQ060_Handler  hc32f46x_interrupts.o
+    0x00003fd2   0x00003fd2   0x00000002   PAD
+    0x00003fd4   0x00003fd4   0x00000026   Code   RO          494    .text.IRQ061_Handler  hc32f46x_interrupts.o
+    0x00003ffa   0x00003ffa   0x00000002   PAD
+    0x00003ffc   0x00003ffc   0x00000026   Code   RO          496    .text.IRQ062_Handler  hc32f46x_interrupts.o
+    0x00004022   0x00004022   0x00000002   PAD
+    0x00004024   0x00004024   0x00000026   Code   RO          498    .text.IRQ063_Handler  hc32f46x_interrupts.o
+    0x0000404a   0x0000404a   0x00000002   PAD
+    0x0000404c   0x0000404c   0x00000026   Code   RO          500    .text.IRQ064_Handler  hc32f46x_interrupts.o
+    0x00004072   0x00004072   0x00000002   PAD
+    0x00004074   0x00004074   0x00000026   Code   RO          502    .text.IRQ065_Handler  hc32f46x_interrupts.o
+    0x0000409a   0x0000409a   0x00000002   PAD
+    0x0000409c   0x0000409c   0x00000026   Code   RO          504    .text.IRQ066_Handler  hc32f46x_interrupts.o
+    0x000040c2   0x000040c2   0x00000002   PAD
+    0x000040c4   0x000040c4   0x00000026   Code   RO          506    .text.IRQ067_Handler  hc32f46x_interrupts.o
     0x000040ea   0x000040ea   0x00000002   PAD
-    0x000040ec   0x000040ec   0x00000022   Code   RO          422    .text.IRQ025_Handler  hc32f46x_interrupts.o
-    0x0000410e   0x0000410e   0x00000002   PAD
-    0x00004110   0x00004110   0x00000022   Code   RO          424    .text.IRQ026_Handler  hc32f46x_interrupts.o
-    0x00004132   0x00004132   0x00000002   PAD
-    0x00004134   0x00004134   0x00000022   Code   RO          426    .text.IRQ027_Handler  hc32f46x_interrupts.o
-    0x00004156   0x00004156   0x00000002   PAD
-    0x00004158   0x00004158   0x00000022   Code   RO          428    .text.IRQ028_Handler  hc32f46x_interrupts.o
-    0x0000417a   0x0000417a   0x00000002   PAD
-    0x0000417c   0x0000417c   0x00000022   Code   RO          430    .text.IRQ029_Handler  hc32f46x_interrupts.o
-    0x0000419e   0x0000419e   0x00000002   PAD
-    0x000041a0   0x000041a0   0x00000022   Code   RO          432    .text.IRQ030_Handler  hc32f46x_interrupts.o
-    0x000041c2   0x000041c2   0x00000002   PAD
-    0x000041c4   0x000041c4   0x00000022   Code   RO          434    .text.IRQ031_Handler  hc32f46x_interrupts.o
-    0x000041e6   0x000041e6   0x00000002   PAD
-    0x000041e8   0x000041e8   0x00000026   Code   RO          436    .text.IRQ032_Handler  hc32f46x_interrupts.o
-    0x0000420e   0x0000420e   0x00000002   PAD
-    0x00004210   0x00004210   0x00000026   Code   RO          438    .text.IRQ033_Handler  hc32f46x_interrupts.o
-    0x00004236   0x00004236   0x00000002   PAD
-    0x00004238   0x00004238   0x00000026   Code   RO          440    .text.IRQ034_Handler  hc32f46x_interrupts.o
-    0x0000425e   0x0000425e   0x00000002   PAD
-    0x00004260   0x00004260   0x00000026   Code   RO          442    .text.IRQ035_Handler  hc32f46x_interrupts.o
-    0x00004286   0x00004286   0x00000002   PAD
-    0x00004288   0x00004288   0x00000026   Code   RO          444    .text.IRQ036_Handler  hc32f46x_interrupts.o
-    0x000042ae   0x000042ae   0x00000002   PAD
-    0x000042b0   0x000042b0   0x00000026   Code   RO          446    .text.IRQ037_Handler  hc32f46x_interrupts.o
-    0x000042d6   0x000042d6   0x00000002   PAD
-    0x000042d8   0x000042d8   0x00000026   Code   RO          448    .text.IRQ038_Handler  hc32f46x_interrupts.o
-    0x000042fe   0x000042fe   0x00000002   PAD
-    0x00004300   0x00004300   0x00000026   Code   RO          450    .text.IRQ039_Handler  hc32f46x_interrupts.o
-    0x00004326   0x00004326   0x00000002   PAD
-    0x00004328   0x00004328   0x00000026   Code   RO          452    .text.IRQ040_Handler  hc32f46x_interrupts.o
-    0x0000434e   0x0000434e   0x00000002   PAD
-    0x00004350   0x00004350   0x00000026   Code   RO          454    .text.IRQ041_Handler  hc32f46x_interrupts.o
-    0x00004376   0x00004376   0x00000002   PAD
-    0x00004378   0x00004378   0x00000026   Code   RO          456    .text.IRQ042_Handler  hc32f46x_interrupts.o
-    0x0000439e   0x0000439e   0x00000002   PAD
-    0x000043a0   0x000043a0   0x00000026   Code   RO          458    .text.IRQ043_Handler  hc32f46x_interrupts.o
-    0x000043c6   0x000043c6   0x00000002   PAD
-    0x000043c8   0x000043c8   0x00000026   Code   RO          460    .text.IRQ044_Handler  hc32f46x_interrupts.o
-    0x000043ee   0x000043ee   0x00000002   PAD
-    0x000043f0   0x000043f0   0x00000026   Code   RO          462    .text.IRQ045_Handler  hc32f46x_interrupts.o
-    0x00004416   0x00004416   0x00000002   PAD
-    0x00004418   0x00004418   0x00000026   Code   RO          464    .text.IRQ046_Handler  hc32f46x_interrupts.o
-    0x0000443e   0x0000443e   0x00000002   PAD
-    0x00004440   0x00004440   0x00000026   Code   RO          466    .text.IRQ047_Handler  hc32f46x_interrupts.o
-    0x00004466   0x00004466   0x00000002   PAD
-    0x00004468   0x00004468   0x00000026   Code   RO          468    .text.IRQ048_Handler  hc32f46x_interrupts.o
-    0x0000448e   0x0000448e   0x00000002   PAD
-    0x00004490   0x00004490   0x00000026   Code   RO          470    .text.IRQ049_Handler  hc32f46x_interrupts.o
-    0x000044b6   0x000044b6   0x00000002   PAD
-    0x000044b8   0x000044b8   0x00000026   Code   RO          472    .text.IRQ050_Handler  hc32f46x_interrupts.o
-    0x000044de   0x000044de   0x00000002   PAD
-    0x000044e0   0x000044e0   0x00000026   Code   RO          474    .text.IRQ051_Handler  hc32f46x_interrupts.o
-    0x00004506   0x00004506   0x00000002   PAD
-    0x00004508   0x00004508   0x00000026   Code   RO          476    .text.IRQ052_Handler  hc32f46x_interrupts.o
-    0x0000452e   0x0000452e   0x00000002   PAD
-    0x00004530   0x00004530   0x00000026   Code   RO          478    .text.IRQ053_Handler  hc32f46x_interrupts.o
-    0x00004556   0x00004556   0x00000002   PAD
-    0x00004558   0x00004558   0x00000026   Code   RO          480    .text.IRQ054_Handler  hc32f46x_interrupts.o
-    0x0000457e   0x0000457e   0x00000002   PAD
-    0x00004580   0x00004580   0x00000026   Code   RO          482    .text.IRQ055_Handler  hc32f46x_interrupts.o
-    0x000045a6   0x000045a6   0x00000002   PAD
-    0x000045a8   0x000045a8   0x00000026   Code   RO          484    .text.IRQ056_Handler  hc32f46x_interrupts.o
-    0x000045ce   0x000045ce   0x00000002   PAD
-    0x000045d0   0x000045d0   0x00000026   Code   RO          486    .text.IRQ057_Handler  hc32f46x_interrupts.o
-    0x000045f6   0x000045f6   0x00000002   PAD
-    0x000045f8   0x000045f8   0x00000026   Code   RO          488    .text.IRQ058_Handler  hc32f46x_interrupts.o
-    0x0000461e   0x0000461e   0x00000002   PAD
-    0x00004620   0x00004620   0x00000026   Code   RO          490    .text.IRQ059_Handler  hc32f46x_interrupts.o
-    0x00004646   0x00004646   0x00000002   PAD
-    0x00004648   0x00004648   0x00000026   Code   RO          492    .text.IRQ060_Handler  hc32f46x_interrupts.o
-    0x0000466e   0x0000466e   0x00000002   PAD
-    0x00004670   0x00004670   0x00000026   Code   RO          494    .text.IRQ061_Handler  hc32f46x_interrupts.o
-    0x00004696   0x00004696   0x00000002   PAD
-    0x00004698   0x00004698   0x00000026   Code   RO          496    .text.IRQ062_Handler  hc32f46x_interrupts.o
-    0x000046be   0x000046be   0x00000002   PAD
-    0x000046c0   0x000046c0   0x00000026   Code   RO          498    .text.IRQ063_Handler  hc32f46x_interrupts.o
-    0x000046e6   0x000046e6   0x00000002   PAD
-    0x000046e8   0x000046e8   0x00000026   Code   RO          500    .text.IRQ064_Handler  hc32f46x_interrupts.o
-    0x0000470e   0x0000470e   0x00000002   PAD
-    0x00004710   0x00004710   0x00000026   Code   RO          502    .text.IRQ065_Handler  hc32f46x_interrupts.o
-    0x00004736   0x00004736   0x00000002   PAD
-    0x00004738   0x00004738   0x00000026   Code   RO          504    .text.IRQ066_Handler  hc32f46x_interrupts.o
-    0x0000475e   0x0000475e   0x00000002   PAD
-    0x00004760   0x00004760   0x00000026   Code   RO          506    .text.IRQ067_Handler  hc32f46x_interrupts.o
-    0x00004786   0x00004786   0x00000002   PAD
-    0x00004788   0x00004788   0x00000026   Code   RO          508    .text.IRQ068_Handler  hc32f46x_interrupts.o
-    0x000047ae   0x000047ae   0x00000002   PAD
-    0x000047b0   0x000047b0   0x00000026   Code   RO          510    .text.IRQ069_Handler  hc32f46x_interrupts.o
-    0x000047d6   0x000047d6   0x00000002   PAD
-    0x000047d8   0x000047d8   0x00000026   Code   RO          512    .text.IRQ070_Handler  hc32f46x_interrupts.o
-    0x000047fe   0x000047fe   0x00000002   PAD
-    0x00004800   0x00004800   0x00000026   Code   RO          514    .text.IRQ071_Handler  hc32f46x_interrupts.o
-    0x00004826   0x00004826   0x00000002   PAD
-    0x00004828   0x00004828   0x00000026   Code   RO          516    .text.IRQ072_Handler  hc32f46x_interrupts.o
-    0x0000484e   0x0000484e   0x00000002   PAD
-    0x00004850   0x00004850   0x00000026   Code   RO          518    .text.IRQ073_Handler  hc32f46x_interrupts.o
-    0x00004876   0x00004876   0x00000002   PAD
-    0x00004878   0x00004878   0x00000026   Code   RO          520    .text.IRQ074_Handler  hc32f46x_interrupts.o
-    0x0000489e   0x0000489e   0x00000002   PAD
-    0x000048a0   0x000048a0   0x00000026   Code   RO          522    .text.IRQ075_Handler  hc32f46x_interrupts.o
-    0x000048c6   0x000048c6   0x00000002   PAD
-    0x000048c8   0x000048c8   0x00000026   Code   RO          524    .text.IRQ076_Handler  hc32f46x_interrupts.o
-    0x000048ee   0x000048ee   0x00000002   PAD
-    0x000048f0   0x000048f0   0x00000026   Code   RO          526    .text.IRQ077_Handler  hc32f46x_interrupts.o
-    0x00004916   0x00004916   0x00000002   PAD
-    0x00004918   0x00004918   0x00000026   Code   RO          528    .text.IRQ078_Handler  hc32f46x_interrupts.o
-    0x0000493e   0x0000493e   0x00000002   PAD
-    0x00004940   0x00004940   0x00000026   Code   RO          530    .text.IRQ079_Handler  hc32f46x_interrupts.o
-    0x00004966   0x00004966   0x00000002   PAD
-    0x00004968   0x00004968   0x00000026   Code   RO          532    .text.IRQ080_Handler  hc32f46x_interrupts.o
-    0x0000498e   0x0000498e   0x00000002   PAD
-    0x00004990   0x00004990   0x00000026   Code   RO          534    .text.IRQ081_Handler  hc32f46x_interrupts.o
-    0x000049b6   0x000049b6   0x00000002   PAD
-    0x000049b8   0x000049b8   0x00000026   Code   RO          536    .text.IRQ082_Handler  hc32f46x_interrupts.o
-    0x000049de   0x000049de   0x00000002   PAD
-    0x000049e0   0x000049e0   0x00000026   Code   RO          538    .text.IRQ083_Handler  hc32f46x_interrupts.o
-    0x00004a06   0x00004a06   0x00000002   PAD
-    0x00004a08   0x00004a08   0x00000026   Code   RO          540    .text.IRQ084_Handler  hc32f46x_interrupts.o
-    0x00004a2e   0x00004a2e   0x00000002   PAD
-    0x00004a30   0x00004a30   0x00000026   Code   RO          542    .text.IRQ085_Handler  hc32f46x_interrupts.o
-    0x00004a56   0x00004a56   0x00000002   PAD
-    0x00004a58   0x00004a58   0x00000026   Code   RO          544    .text.IRQ086_Handler  hc32f46x_interrupts.o
-    0x00004a7e   0x00004a7e   0x00000002   PAD
-    0x00004a80   0x00004a80   0x00000026   Code   RO          546    .text.IRQ087_Handler  hc32f46x_interrupts.o
-    0x00004aa6   0x00004aa6   0x00000002   PAD
-    0x00004aa8   0x00004aa8   0x00000026   Code   RO          548    .text.IRQ088_Handler  hc32f46x_interrupts.o
-    0x00004ace   0x00004ace   0x00000002   PAD
-    0x00004ad0   0x00004ad0   0x00000026   Code   RO          550    .text.IRQ089_Handler  hc32f46x_interrupts.o
-    0x00004af6   0x00004af6   0x00000002   PAD
-    0x00004af8   0x00004af8   0x00000026   Code   RO          552    .text.IRQ090_Handler  hc32f46x_interrupts.o
-    0x00004b1e   0x00004b1e   0x00000002   PAD
-    0x00004b20   0x00004b20   0x00000026   Code   RO          554    .text.IRQ091_Handler  hc32f46x_interrupts.o
-    0x00004b46   0x00004b46   0x00000002   PAD
-    0x00004b48   0x00004b48   0x00000026   Code   RO          556    .text.IRQ092_Handler  hc32f46x_interrupts.o
-    0x00004b6e   0x00004b6e   0x00000002   PAD
-    0x00004b70   0x00004b70   0x00000026   Code   RO          558    .text.IRQ093_Handler  hc32f46x_interrupts.o
-    0x00004b96   0x00004b96   0x00000002   PAD
-    0x00004b98   0x00004b98   0x00000026   Code   RO          560    .text.IRQ094_Handler  hc32f46x_interrupts.o
-    0x00004bbe   0x00004bbe   0x00000002   PAD
-    0x00004bc0   0x00004bc0   0x00000026   Code   RO          562    .text.IRQ095_Handler  hc32f46x_interrupts.o
-    0x00004be6   0x00004be6   0x00000002   PAD
-    0x00004be8   0x00004be8   0x00000026   Code   RO          564    .text.IRQ096_Handler  hc32f46x_interrupts.o
-    0x00004c0e   0x00004c0e   0x00000002   PAD
-    0x00004c10   0x00004c10   0x00000026   Code   RO          566    .text.IRQ097_Handler  hc32f46x_interrupts.o
-    0x00004c36   0x00004c36   0x00000002   PAD
-    0x00004c38   0x00004c38   0x00000026   Code   RO          568    .text.IRQ098_Handler  hc32f46x_interrupts.o
-    0x00004c5e   0x00004c5e   0x00000002   PAD
-    0x00004c60   0x00004c60   0x00000026   Code   RO          570    .text.IRQ099_Handler  hc32f46x_interrupts.o
-    0x00004c86   0x00004c86   0x00000002   PAD
-    0x00004c88   0x00004c88   0x00000026   Code   RO          572    .text.IRQ100_Handler  hc32f46x_interrupts.o
-    0x00004cae   0x00004cae   0x00000002   PAD
-    0x00004cb0   0x00004cb0   0x00000026   Code   RO          574    .text.IRQ101_Handler  hc32f46x_interrupts.o
-    0x00004cd6   0x00004cd6   0x00000002   PAD
-    0x00004cd8   0x00004cd8   0x00000026   Code   RO          576    .text.IRQ102_Handler  hc32f46x_interrupts.o
-    0x00004cfe   0x00004cfe   0x00000002   PAD
-    0x00004d00   0x00004d00   0x00000026   Code   RO          578    .text.IRQ103_Handler  hc32f46x_interrupts.o
-    0x00004d26   0x00004d26   0x00000002   PAD
-    0x00004d28   0x00004d28   0x00000026   Code   RO          580    .text.IRQ104_Handler  hc32f46x_interrupts.o
-    0x00004d4e   0x00004d4e   0x00000002   PAD
-    0x00004d50   0x00004d50   0x00000026   Code   RO          582    .text.IRQ105_Handler  hc32f46x_interrupts.o
-    0x00004d76   0x00004d76   0x00000002   PAD
-    0x00004d78   0x00004d78   0x00000026   Code   RO          584    .text.IRQ106_Handler  hc32f46x_interrupts.o
-    0x00004d9e   0x00004d9e   0x00000002   PAD
-    0x00004da0   0x00004da0   0x00000026   Code   RO          586    .text.IRQ107_Handler  hc32f46x_interrupts.o
-    0x00004dc6   0x00004dc6   0x00000002   PAD
-    0x00004dc8   0x00004dc8   0x00000026   Code   RO          588    .text.IRQ108_Handler  hc32f46x_interrupts.o
-    0x00004dee   0x00004dee   0x00000002   PAD
-    0x00004df0   0x00004df0   0x00000026   Code   RO          590    .text.IRQ109_Handler  hc32f46x_interrupts.o
-    0x00004e16   0x00004e16   0x00000002   PAD
-    0x00004e18   0x00004e18   0x00000026   Code   RO          592    .text.IRQ110_Handler  hc32f46x_interrupts.o
-    0x00004e3e   0x00004e3e   0x00000002   PAD
-    0x00004e40   0x00004e40   0x00000026   Code   RO          594    .text.IRQ111_Handler  hc32f46x_interrupts.o
-    0x00004e66   0x00004e66   0x00000002   PAD
-    0x00004e68   0x00004e68   0x00000026   Code   RO          596    .text.IRQ112_Handler  hc32f46x_interrupts.o
-    0x00004e8e   0x00004e8e   0x00000002   PAD
-    0x00004e90   0x00004e90   0x00000026   Code   RO          598    .text.IRQ113_Handler  hc32f46x_interrupts.o
-    0x00004eb6   0x00004eb6   0x00000002   PAD
-    0x00004eb8   0x00004eb8   0x00000026   Code   RO          600    .text.IRQ114_Handler  hc32f46x_interrupts.o
-    0x00004ede   0x00004ede   0x00000002   PAD
-    0x00004ee0   0x00004ee0   0x00000026   Code   RO          602    .text.IRQ115_Handler  hc32f46x_interrupts.o
-    0x00004f06   0x00004f06   0x00000002   PAD
-    0x00004f08   0x00004f08   0x00000026   Code   RO          604    .text.IRQ116_Handler  hc32f46x_interrupts.o
-    0x00004f2e   0x00004f2e   0x00000002   PAD
-    0x00004f30   0x00004f30   0x00000026   Code   RO          606    .text.IRQ117_Handler  hc32f46x_interrupts.o
-    0x00004f56   0x00004f56   0x00000002   PAD
-    0x00004f58   0x00004f58   0x00000026   Code   RO          608    .text.IRQ118_Handler  hc32f46x_interrupts.o
-    0x00004f7e   0x00004f7e   0x00000002   PAD
-    0x00004f80   0x00004f80   0x00000026   Code   RO          610    .text.IRQ119_Handler  hc32f46x_interrupts.o
-    0x00004fa6   0x00004fa6   0x00000002   PAD
-    0x00004fa8   0x00004fa8   0x00000026   Code   RO          612    .text.IRQ120_Handler  hc32f46x_interrupts.o
-    0x00004fce   0x00004fce   0x00000002   PAD
-    0x00004fd0   0x00004fd0   0x00000026   Code   RO          614    .text.IRQ121_Handler  hc32f46x_interrupts.o
-    0x00004ff6   0x00004ff6   0x00000002   PAD
-    0x00004ff8   0x00004ff8   0x00000026   Code   RO          616    .text.IRQ122_Handler  hc32f46x_interrupts.o
-    0x0000501e   0x0000501e   0x00000002   PAD
-    0x00005020   0x00005020   0x00000026   Code   RO          618    .text.IRQ123_Handler  hc32f46x_interrupts.o
-    0x00005046   0x00005046   0x00000002   PAD
-    0x00005048   0x00005048   0x00000026   Code   RO          620    .text.IRQ124_Handler  hc32f46x_interrupts.o
-    0x0000506e   0x0000506e   0x00000002   PAD
-    0x00005070   0x00005070   0x00000026   Code   RO          622    .text.IRQ125_Handler  hc32f46x_interrupts.o
-    0x00005096   0x00005096   0x00000002   PAD
-    0x00005098   0x00005098   0x00000026   Code   RO          624    .text.IRQ126_Handler  hc32f46x_interrupts.o
-    0x000050be   0x000050be   0x00000002   PAD
-    0x000050c0   0x000050c0   0x00000026   Code   RO          626    .text.IRQ127_Handler  hc32f46x_interrupts.o
-    0x000050e6   0x000050e6   0x00000002   PAD
-    0x000050e8   0x000050e8   0x00000234   Code   RO          628    .text.IRQ128_Handler  hc32f46x_interrupts.o
-    0x0000531c   0x0000531c   0x0000078c   Code   RO          630    .text.IRQ129_Handler  hc32f46x_interrupts.o
-    0x00005aa8   0x00005aa8   0x0000015e   Code   RO          632    .text.IRQ130_Handler  hc32f46x_interrupts.o
-    0x00005c06   0x00005c06   0x00000002   PAD
-    0x00005c08   0x00005c08   0x000004ba   Code   RO          634    .text.IRQ131_Handler  hc32f46x_interrupts.o
-    0x000060c2   0x000060c2   0x00000002   PAD
-    0x000060c4   0x000060c4   0x0000026a   Code   RO          636    .text.IRQ132_Handler  hc32f46x_interrupts.o
-    0x0000632e   0x0000632e   0x00000002   PAD
-    0x00006330   0x00006330   0x00000590   Code   RO          638    .text.IRQ136_Handler  hc32f46x_interrupts.o
-    0x000068c0   0x000068c0   0x000004ae   Code   RO          640    .text.IRQ137_Handler  hc32f46x_interrupts.o
-    0x00006d6e   0x00006d6e   0x00000002   PAD
-    0x00006d70   0x00006d70   0x00000438   Code   RO          642    .text.IRQ138_Handler  hc32f46x_interrupts.o
-    0x000071a8   0x000071a8   0x00000228   Code   RO          644    .text.IRQ139_Handler  hc32f46x_interrupts.o
-    0x000073d0   0x000073d0   0x0000036e   Code   RO          646    .text.IRQ140_Handler  hc32f46x_interrupts.o
-    0x0000773e   0x0000773e   0x00000002   PAD
-    0x00007740   0x00007740   0x000003ca   Code   RO          648    .text.IRQ141_Handler  hc32f46x_interrupts.o
-    0x00007b0a   0x00007b0a   0x00000002   PAD
-    0x00007b0c   0x00007b0c   0x000001de   Code   RO          650    .text.IRQ142_Handler  hc32f46x_interrupts.o
-    0x00007cea   0x00007cea   0x00000002   PAD
-    0x00007cec   0x00007cec   0x00000204   Code   RO          652    .text.IRQ143_Handler  hc32f46x_interrupts.o
-    0x00007ef0   0x00007ef0   0x00000012   Code   RO         1834    .text.IncrementOverflowTS  eventrecorder.o
-    0x00007f02   0x00007f02   0x00000002   PAD
-    0x00007f04   0x00007f04   0x00000012   Code   RO         1848    .text.IncrementRecordsDumped  eventrecorder.o
-    0x00007f16   0x00007f16   0x00000002   PAD
-    0x00007f18   0x00007f18   0x00000012   Code   RO         1846    .text.IncrementRecordsWritten  eventrecorder.o
-    0x00007f2a   0x00007f2a   0x00000002   PAD
-    0x00007f2c   0x00007f2c   0x00000036   Code   RO         1842    .text.LockRecord    eventrecorder.o
-    0x00007f62   0x00007f62   0x00000002   PAD
-    0x00007f64   0x00007f64   0x00000008   Code   RO          358    .text.MemManage_Handler  hc32f46x_interrupts.o
-    0x00007f6c   0x00007f6c   0x00000008   Code   RO          356    .text.NMI_Handler   hc32f46x_interrupts.o
-    0x00007f74   0x00007f74   0x0000011a   Code   RO          308    .text.PORT_GetBit   hc32f46x_gpio.o
-    0x0000808e   0x0000808e   0x00000002   PAD
-    0x00008090   0x00008090   0x00000336   Code   RO          294    .text.PORT_Init     hc32f46x_gpio.o
-    0x000083c6   0x000083c6   0x00000002   PAD
-    0x000083c8   0x000083c8   0x00000010   Code   RO          298    .text.PORT_Lock     hc32f46x_gpio.o
-    0x000083d8   0x000083d8   0x00000076   Code   RO          318    .text.PORT_ResetBits  hc32f46x_gpio.o
-    0x0000844e   0x0000844e   0x00000002   PAD
-    0x00008450   0x00008450   0x00000076   Code   RO          316    .text.PORT_SetBits  hc32f46x_gpio.o
-    0x000084c6   0x000084c6   0x00000002   PAD
-    0x000084c8   0x000084c8   0x000003e0   Code   RO          324    .text.PORT_SetFunc  hc32f46x_gpio.o
-    0x000088a8   0x000088a8   0x00000010   Code   RO          296    .text.PORT_Unlock   hc32f46x_gpio.o
-    0x000088b8   0x000088b8   0x000000b2   Code   RO          685    .text.PWC_Fcg0PeriphClockCmd  hc32f46x_pwc.o
-    0x0000896a   0x0000896a   0x00000002   PAD
-    0x0000896c   0x0000896c   0x00000092   Code   RO          687    .text.PWC_Fcg1PeriphClockCmd  hc32f46x_pwc.o
-    0x000089fe   0x000089fe   0x00000002   PAD
-    0x00008a00   0x00008a00   0x00000092   Code   RO          689    .text.PWC_Fcg2PeriphClockCmd  hc32f46x_pwc.o
-    0x00008a92   0x00008a92   0x00000002   PAD
-    0x00008a94   0x00008a94   0x00000092   Code   RO          691    .text.PWC_Fcg3PeriphClockCmd  hc32f46x_pwc.o
-    0x00008b26   0x00008b26   0x00000002   PAD
-    0x00008b28   0x00008b28   0x00000008   Code   RO          368    .text.PendSV_Handler  hc32f46x_interrupts.o
-    0x00008b30   0x00008b30   0x0000006a   Code   RO         1436    .text.Queue_Read_Byte  system.o
-    0x00008b9a   0x00008b9a   0x00000002   PAD
-    0x00008b9c   0x00008b9c   0x000000a6   Code   RO         1705    .text.SEGGER_RTT_ConfigUpBuffer  segger_rtt.o
-    0x00008c42   0x00008c42   0x00000002   PAD
-    0x00008c44   0x00008c44   0x00000008   Code   RO         1717    .text.SEGGER_RTT_Init  segger_rtt.o
-    0x00008c4c   0x00008c4c   0x0000004e   Code   RO         1681    .text.SEGGER_RTT_Write  segger_rtt.o
-    0x00008c9a   0x00008c9a   0x00000002   PAD
-    0x00008c9c   0x00008c9c   0x000000b2   Code   RO         1677    .text.SEGGER_RTT_WriteNoLock  segger_rtt.o
-    0x00008d4e   0x00008d4e   0x00000002   PAD
-    0x00008d50   0x00008d50   0x0000002a   Code   RO         1750    .text.SEGGER_RTT_printf  segger_rtt_printf.o
-    0x00008d7a   0x00008d7a   0x00000002   PAD
-    0x00008d7c   0x00008d7c   0x00000412   Code   RO         1742    .text.SEGGER_RTT_vprintf  segger_rtt_printf.o
-    0x0000918e   0x0000918e   0x00000002   PAD
-    0x00009190   0x00009190   0x00000008   Code   RO          364    .text.SVC_Handler   hc32f46x_interrupts.o
-    0x00009198   0x00009198   0x00000184   Code   RO          876    .text.SetClkSyncBaudrate  hc32f46x_usart.o
-    0x0000931c   0x0000931c   0x000001c0   Code   RO          874    .text.SetScBaudrate  hc32f46x_usart.o
-    0x000094dc   0x000094dc   0x000001bc   Code   RO          878    .text.SetUartBaudrate  hc32f46x_usart.o
-    0x00009698   0x00009698   0x000000bc   Code   RO         1115    .text.SysClkIni     myclk.o
-    0x00009754   0x00009754   0x00000052   Code   RO           52    .text.SysTick_Config  hc32f46x_utility.o
-    0x000097a6   0x000097a6   0x00000002   PAD
-    0x000097a8   0x000097a8   0x0000000c   Code   RO           56    .text.SysTick_GetTick  hc32f46x_utility.o
-    0x000097b4   0x000097b4   0x00000008   Code   RO          370    .text.SysTick_Handler  hc32f46x_interrupts.o
-    0x000097bc   0x000097bc   0x0000001a   Code   RO           58    .text.SysTick_IncTick  hc32f46x_utility.o
-    0x000097d6   0x000097d6   0x00000002   PAD
-    0x000097d8   0x000097d8   0x0000004e   Code   RO           50    .text.SysTick_Init  hc32f46x_utility.o
-    0x00009826   0x00009826   0x00000002   PAD
-    0x00009828   0x00009828   0x00000008   Code   RO         1133    .text.SysTick_IrqHandler  app.o
-    0x00009830   0x00009830   0x0000016e   Code   RO           13    .text.SystemCoreClockUpdate  system_hc32f46x.o
-    0x0000999e   0x0000999e   0x00000002   PAD
-    0x000099a0   0x000099a0   0x00000018   Code   RO           11    .text.SystemInit    system_hc32f46x.o
-    0x000099b8   0x000099b8   0x000003ca   Code   RO          792    .text.TIMER0_BaseInit  hc32f46x_timer0.o
-    0x00009d82   0x00009d82   0x00000002   PAD
-    0x00009d84   0x00009d84   0x0000013a   Code   RO          778    .text.TIMER0_Cmd    hc32f46x_timer0.o
-    0x00009ebe   0x00009ebe   0x00000002   PAD
-    0x00009ec0   0x00009ec0   0x0000009a   Code   RO          800    .text.TIMER0_GetClkMode  hc32f46x_timer0.o
-    0x00009f5a   0x00009f5a   0x00000002   PAD
-    0x00009f5c   0x00009f5c   0x00000142   Code   RO          782    .text.TIMER0_IntCmd  hc32f46x_timer0.o
-    0x0000a09e   0x0000a09e   0x00000002   PAD
-    0x0000a0a0   0x0000a0a0   0x00000220   Code   RO          958    .text.TIMERA_BaseInit  hc32f46x_timera.o
-    0x0000a2c0   0x0000a2c0   0x0000019c   Code   RO         1014    .text.TIMERA_ClearFlag  hc32f46x_timera.o
-    0x0000a45c   0x0000a45c   0x000000b0   Code   RO          970    .text.TIMERA_Cmd    hc32f46x_timera.o
-    0x0000a50c   0x0000a50c   0x0000011c   Code   RO          984    .text.TIMERA_CompareCmd  hc32f46x_timera.o
-    0x0000a628   0x0000a628   0x000003b4   Code   RO          972    .text.TIMERA_CompareInit  hc32f46x_timera.o
-    0x0000a9dc   0x0000a9dc   0x00000184   Code   RO         1012    .text.TIMERA_GetFlag  hc32f46x_timera.o
-    0x0000ab60   0x0000ab60   0x00000224   Code   RO         1008    .text.TIMERA_IrqCmd  hc32f46x_timera.o
-    0x0000ad84   0x0000ad84   0x0000003e   Code   RO         1096    .text.Timer0A_CallBack  mytimer.o
-    0x0000adc2   0x0000adc2   0x00000002   PAD
-    0x0000adc4   0x0000adc4   0x0000005a   Code   RO         1104    .text.Timer0B_CallBack  mytimer.o
-    0x0000ae1e   0x0000ae1e   0x00000002   PAD
-    0x0000ae20   0x0000ae20   0x00000094   Code   RO         1194    .text.TimeraUnit1_IrqCallback  timera_pwm.o
-    0x0000aeb4   0x0000aeb4   0x00000186   Code   RO         1192    .text.Timera_Config  timera_pwm.o
-    0x0000b03a   0x0000b03a   0x00000002   PAD
-    0x0000b03c   0x0000b03c   0x000000b0   Code   RO          820    .text.USART_ClearStatus  hc32f46x_usart.o
-    0x0000b0ec   0x0000b0ec   0x000001dc   Code   RO          822    .text.USART_FuncCmd  hc32f46x_usart.o
-    0x0000b2c8   0x0000b2c8   0x000000ce   Code   RO          818    .text.USART_GetStatus  hc32f46x_usart.o
-    0x0000b396   0x0000b396   0x00000002   PAD
-    0x0000b398   0x0000b398   0x0000006a   Code   RO          870    .text.USART_RecData  hc32f46x_usart.o
-    0x0000b402   0x0000b402   0x00000002   PAD
-    0x0000b404   0x0000b404   0x00000096   Code   RO          872    .text.USART_SetBaudrate  hc32f46x_usart.o
-    0x0000b49a   0x0000b49a   0x00000002   PAD
-    0x0000b49c   0x0000b49c   0x0000033e   Code   RO          810    .text.USART_UART_Init  hc32f46x_usart.o
-    0x0000b7da   0x0000b7da   0x00000002   PAD
-    0x0000b7dc   0x0000b7dc   0x00000032   Code   RO         1844    .text.UnlockRecord  eventrecorder.o
-    0x0000b80e   0x0000b80e   0x00000002   PAD
-    0x0000b810   0x0000b810   0x0000001a   Code   RO         1832    .text.UpdateTS      eventrecorder.o
-    0x0000b82a   0x0000b82a   0x00000002   PAD
-    0x0000b82c   0x0000b82c   0x00000008   Code   RO          362    .text.UsageFault_Handler  hc32f46x_interrupts.o
-    0x0000b834   0x0000b834   0x00000096   Code   RO          880    .text.UsartGetClk   hc32f46x_usart.o
-    0x0000b8ca   0x0000b8ca   0x00000002   PAD
-    0x0000b8cc   0x0000b8cc   0x00000070   Code   RO         1069    .text.UsartRxErrProcess  myusart.o
-    0x0000b93c   0x0000b93c   0x0000003a   Code   RO         1083    .text.UsartRxIrqCallback  myusart.o
-    0x0000b976   0x0000b976   0x00000002   PAD
-    0x0000b978   0x0000b978   0x00000026   Code   RO         1400    .text.User_Shell_Init  shell_port.o
-    0x0000b99e   0x0000b99e   0x00000002   PAD
-    0x0000b9a0   0x0000b9a0   0x000000a2   Code   RO         1659    .text._DoInit       segger_rtt.o
-    0x0000ba42   0x0000ba42   0x00000002   PAD
-    0x0000ba44   0x0000ba44   0x0000003e   Code   RO         1671    .text._GetAvailWriteSpace  segger_rtt.o
-    0x0000ba82   0x0000ba82   0x00000002   PAD
-    0x0000ba84   0x0000ba84   0x000001e4   Code   RO         1746    .text._PrintInt     segger_rtt_printf.o
-    0x0000bc68   0x0000bc68   0x000001be   Code   RO         1748    .text._PrintUnsigned  segger_rtt_printf.o
-    0x0000be26   0x0000be26   0x00000002   PAD
-    0x0000be28   0x0000be28   0x00000078   Code   RO         1744    .text._StoreChar    segger_rtt_printf.o
-    0x0000bea0   0x0000bea0   0x000000e4   Code   RO         1675    .text._WriteBlocking  segger_rtt.o
-    0x0000bf84   0x0000bf84   0x00000094   Code   RO         1673    .text._WriteNoCheck  segger_rtt.o
-    0x0000c018   0x0000c018   0x0000002c   Code   RO         1079    .text.__NVIC_ClearPendingIRQ  myusart.o
-    0x0000c044   0x0000c044   0x0000002c   Code   RO         1098    .text.__NVIC_ClearPendingIRQ  mytimer.o
-    0x0000c070   0x0000c070   0x0000002c   Code   RO         1196    .text.__NVIC_ClearPendingIRQ  timera_pwm.o
-    0x0000c09c   0x0000c09c   0x0000002c   Code   RO         1081    .text.__NVIC_EnableIRQ  myusart.o
-    0x0000c0c8   0x0000c0c8   0x0000002c   Code   RO         1102    .text.__NVIC_EnableIRQ  mytimer.o
-    0x0000c0f4   0x0000c0f4   0x0000002c   Code   RO         1200    .text.__NVIC_EnableIRQ  timera_pwm.o
-    0x0000c120   0x0000c120   0x0000003a   Code   RO           66    .text.__NVIC_SetPriority  hc32f46x_utility.o
-    0x0000c15a   0x0000c15a   0x00000002   PAD
-    0x0000c15c   0x0000c15c   0x0000003a   Code   RO         1077    .text.__NVIC_SetPriority  myusart.o
-    0x0000c196   0x0000c196   0x00000002   PAD
-    0x0000c198   0x0000c198   0x0000003a   Code   RO         1100    .text.__NVIC_SetPriority  mytimer.o
-    0x0000c1d2   0x0000c1d2   0x00000002   PAD
-    0x0000c1d4   0x0000c1d4   0x0000003a   Code   RO         1137    .text.__NVIC_SetPriority  app.o
-    0x0000c20e   0x0000c20e   0x00000002   PAD
-    0x0000c210   0x0000c210   0x0000003a   Code   RO         1198    .text.__NVIC_SetPriority  timera_pwm.o
-    0x0000c24a   0x0000c24a   0x00000002   PAD
-    0x0000c24c   0x0000c24c   0x00000026   Code   RO         1528    .text.__NVIC_SystemReset  protocol.o
-    0x0000c272   0x0000c272   0x00000002   PAD
-    0x0000c274   0x0000c274   0x0000002a   Code   RO         1038    .text.adc_clk_test  myadc.o
-    0x0000c29e   0x0000c29e   0x00000002   PAD
-    0x0000c2a0   0x0000c2a0   0x0000000a   Code   RO         1460    .text.all_data_update  protocol.o
-    0x0000c2aa   0x0000c2aa   0x00000002   PAD
-    0x0000c2ac   0x0000c2ac   0x00000044   Code   RO         1165    .text.app           app.o
-    0x0000c2f0   0x0000c2f0   0x00000020   Code   RO         1838    .text.atomic_inc32  eventrecorder.o
-    0x0000c310   0x0000c310   0x00000024   Code   RO         1850    .text.atomic_inc8   eventrecorder.o
-    0x0000c334   0x0000c334   0x00000020   Code   RO         1836    .text.atomic_xch32  eventrecorder.o
-    0x0000c354   0x0000c354   0x0000001a   Code   RO         1508    .text.bt_close_timer_result  protocol.o
-    0x0000c36e   0x0000c36e   0x00000002   PAD
-    0x0000c370   0x0000c370   0x0000001a   Code   RO         1520    .text.bt_disconnect_result  protocol.o
-    0x0000c38a   0x0000c38a   0x00000002   PAD
-    0x0000c38c   0x0000c38c   0x0000001a   Code   RO         1512    .text.bt_enable_lowpoer_result  protocol.o
-    0x0000c3a6   0x0000c3a6   0x00000002   PAD
-    0x0000c3a8   0x0000c3a8   0x00000002   Code   RO         1524    .text.bt_factor_reset_notify  protocol.o
-    0x0000c3aa   0x0000c3aa   0x00000002   PAD
-    0x0000c3ac   0x0000c3ac   0x0000001a   Code   RO         1504    .text.bt_modify_adv_interval_result  protocol.o
-    0x0000c3c6   0x0000c3c6   0x00000002   PAD
-    0x0000c3c8   0x0000c3c8   0x0000001e   Code   RO         1595    .text.bt_protocol_init  mcu_api.o
-    0x0000c3e6   0x0000c3e6   0x00000002   PAD
-    0x0000c3e8   0x0000c3e8   0x0000001a   Code   RO         1516    .text.bt_send_one_time_password_token_result  protocol.o
-    0x0000c402   0x0000c402   0x00000002   PAD
-    0x0000c404   0x0000c404   0x00000084   Code   RO         1591    .text.bt_uart_service  mcu_api.o
-    0x0000c488   0x0000c488   0x00000046   Code   RO         1426    .text.bt_uart_write_data  system.o
-    0x0000c4ce   0x0000c4ce   0x00000002   PAD
-    0x0000c4d0   0x0000c4d0   0x0000008a   Code   RO         1424    .text.bt_uart_write_frame  system.o
-    0x0000c55a   0x0000c55a   0x00000002   PAD
-    0x0000c55c   0x0000c55c   0x0000000c   Code   RO         1500    .text.bt_unbound_req  protocol.o
-    0x0000c568   0x0000c568   0x00000044   Code   RO         1563    .text.byte_to_int   mcu_api.o
-    0x0000c5ac   0x0000c5ac   0x00000170   Code   RO         1117    .text.clk_test      myclk.o
-    0x0000c71c   0x0000c71c   0x00000086   Code   RO         1806    .text.crc16_ccitt   eventrecorder.o
-    0x0000c7a2   0x0000c7a2   0x00000002   PAD
-    0x0000c7a4   0x0000c7a4   0x00000366   Code   RO         1430    .text.data_handle   system.o
-    0x0000cb0a   0x0000cb0a   0x00000002   PAD
-    0x0000cb0c   0x0000cb0c   0x00000086   Code   RO         1432    .text.data_point_handle  system.o
-    0x0000cb92   0x0000cb92   0x00000002   PAD
-    0x0000cb94   0x0000cb94   0x0000009c   Code   RO         1492    .text.dp_download_common_command_handle  protocol.o
-    0x0000cc30   0x0000cc30   0x00000090   Code   RO         1478    .text.dp_download_factory_op_handle  protocol.o
-    0x0000ccc0   0x0000ccc0   0x0000003c   Code   RO         1468    .text.dp_download_find_me_handle  protocol.o
-    0x0000ccfc   0x0000ccfc   0x00000048   Code   RO         1480    .text.dp_download_freq_parameter1_handle  protocol.o
-    0x0000cd44   0x0000cd44   0x00000048   Code   RO         1482    .text.dp_download_freq_parameter2_handle  protocol.o
-    0x0000cd8c   0x0000cd8c   0x00000048   Code   RO         1476    .text.dp_download_freq_times_handle  protocol.o
-    0x0000cdd4   0x0000cdd4   0x000001d6   Code   RO         1462    .text.dp_download_handle  protocol.o
-    0x0000cfaa   0x0000cfaa   0x00000002   PAD
-    0x0000cfac   0x0000cfac   0x0000003c   Code   RO         1484    .text.dp_download_light_threshold1_handle  protocol.o
-    0x0000cfe8   0x0000cfe8   0x0000003c   Code   RO         1486    .text.dp_download_light_threshold2_handle  protocol.o
-    0x0000d024   0x0000d024   0x0000003c   Code   RO         1488    .text.dp_download_light_threshold3_handle  protocol.o
-    0x0000d060   0x0000d060   0x0000003c   Code   RO         1490    .text.dp_download_light_threshold4_handle  protocol.o
-    0x0000d09c   0x0000d09c   0x0000004a   Code   RO         1466    .text.dp_download_load_radar_parameter_handle  protocol.o
-    0x0000d0e6   0x0000d0e6   0x00000002   PAD
-    0x0000d0e8   0x0000d0e8   0x00000080   Code   RO         1464    .text.dp_download_pir_delay_handle  protocol.o
-    0x0000d168   0x0000d168   0x0000006c   Code   RO         1494    .text.dp_download_study_cmd_handle  protocol.o
-    0x0000d1d4   0x0000d1d4   0x00000048   Code   RO         1472    .text.dp_download_time_add_handle  protocol.o
-    0x0000d21c   0x0000d21c   0x00000048   Code   RO         1470    .text.dp_download_time_times_handle  protocol.o
-    0x0000d264   0x0000d264   0x0000003c   Code   RO         1496    .text.dp_download_upload_duty_handle  protocol.o
-    0x0000d2a0   0x0000d2a0   0x0000004c   Code   RO         1474    .text.dp_download_work_mode_handle  protocol.o
-    0x0000d2ec   0x0000d2ec   0x000000be   Code   RO          336    .text.enIrqRegistration  hc32f46x_interrupts.o
-    0x0000d3aa   0x0000d3aa   0x00000002   PAD
-    0x0000d3ac   0x0000d3ac   0x00000082   Code   RO         1131    .text.en_fsk_pwm    app.o
-    0x0000d42e   0x0000d42e   0x00000002   PAD
-    0x0000d430   0x0000d430   0x0000005e   Code   RO         1129    .text.en_sample     app.o
-    0x0000d48e   0x0000d48e   0x00000002   PAD
-    0x0000d490   0x0000d490   0x00000030   Code   RO         1149    .text.enable_flash_cache  app.o
-    0x0000d4c0   0x0000d4c0   0x00000016   Code   RO         1157    .text.error_process  app.o
-    0x0000d4d6   0x0000d4d6   0x00000002   PAD
-    0x0000d4d8   0x0000d4d8   0x00000030   Code   RO         1861    .text.fputc         retarget_io.o
-    0x0000d508   0x0000d508   0x0000004c   Code   RO         1422    .text.get_check_sum  system.o
-    0x0000d554   0x0000d554   0x0000005c   Code   RO         1438    .text.get_dowmload_dpid_index  system.o
-    0x0000d5b0   0x0000d5b0   0x00000004   Code   RO         1498    .text.get_download_cmd_total  protocol.o
-    0x0000d5b4   0x0000d5b4   0x00000018   Code   RO         1428    .text.get_mcu_bt_mode  system.o
-    0x0000d5cc   0x0000d5cc   0x00000034   Code   RO         1434    .text.get_queue_total_data  system.o
-    0x0000d600   0x0000d600   0x00000002   Code   RO         1530    .text.go_bootloader_ota  protocol.o
-    0x0000d602   0x0000d602   0x00000002   PAD
-    0x0000d604   0x0000d604   0x00000040   Code   RO         1153    .text.gpio_init     app.o
-    0x0000d644   0x0000d644   0x00000300   Code   RO         1127    .text.hexdump       app.o
-    0x0000d944   0x0000d944   0x00000062   Code   RO         1161    .text.idle_process  app.o
-    0x0000d9a6   0x0000d9a6   0x00000002   PAD
-    0x0000d9a8   0x0000d9a8   0x000000d8   Code   RO         1163    .text.init_all      app.o
-    0x0000da80   0x0000da80   0x0000003e   Code   RO         1060    .text.led_green     myled.o
-    0x0000dabe   0x0000dabe   0x00000002   PAD
-    0x0000dac0   0x0000dac0   0x0000005e   Code   RO         1056    .text.led_init      myled.o
-    0x0000db1e   0x0000db1e   0x00000002   PAD
-    0x0000db20   0x0000db20   0x0000003e   Code   RO         1058    .text.led_red       myled.o
-    0x0000db5e   0x0000db5e   0x00000002   PAD
-    0x0000db60   0x0000db60   0x00000014   Code   RO           24    .text.main          main.o
-    0x0000db74   0x0000db74   0x000002b4   Code   RO         1593    .text.mcu_common_uart_data_unpack  mcu_api.o
-    0x0000de28   0x0000de28   0x00000002   Code   RO         1617    .text.mcu_device_delay_restart  mcu_ota_handler.o
-    0x0000de2a   0x0000de2a   0x00000002   PAD
-    0x0000de2c   0x0000de2c   0x000000ae   Code   RO         1573    .text.mcu_dp_bool_update  mcu_api.o
-    0x0000deda   0x0000deda   0x00000002   PAD
-    0x0000dedc   0x0000dedc   0x00000094   Code   RO         1579    .text.mcu_dp_enum_update  mcu_api.o
-    0x0000df70   0x0000df70   0x000000be   Code   RO         1575    .text.mcu_dp_value_update  mcu_api.o
-    0x0000e02e   0x0000e02e   0x00000002   PAD
-    0x0000e030   0x0000e030   0x00000012   Code   RO         1585    .text.mcu_get_dp_download_enum  mcu_api.o
-    0x0000e042   0x0000e042   0x00000002   PAD
-    0x0000e044   0x0000e044   0x00000018   Code   RO         1587    .text.mcu_get_dp_download_value  mcu_api.o
-    0x0000e05c   0x0000e05c   0x000001ae   Code   RO         1631    .text.mcu_ota_data_req  mcu_ota_handler.o
-    0x0000e20a   0x0000e20a   0x00000002   PAD
-    0x0000e20c   0x0000e20c   0x00000032   Code   RO         1633    .text.mcu_ota_end_req  mcu_ota_handler.o
+    0x000040ec   0x000040ec   0x00000026   Code   RO          508    .text.IRQ068_Handler  hc32f46x_interrupts.o
+    0x00004112   0x00004112   0x00000002   PAD
+    0x00004114   0x00004114   0x00000026   Code   RO          510    .text.IRQ069_Handler  hc32f46x_interrupts.o
+    0x0000413a   0x0000413a   0x00000002   PAD
+    0x0000413c   0x0000413c   0x00000026   Code   RO          512    .text.IRQ070_Handler  hc32f46x_interrupts.o
+    0x00004162   0x00004162   0x00000002   PAD
+    0x00004164   0x00004164   0x00000026   Code   RO          514    .text.IRQ071_Handler  hc32f46x_interrupts.o
+    0x0000418a   0x0000418a   0x00000002   PAD
+    0x0000418c   0x0000418c   0x00000026   Code   RO          516    .text.IRQ072_Handler  hc32f46x_interrupts.o
+    0x000041b2   0x000041b2   0x00000002   PAD
+    0x000041b4   0x000041b4   0x00000026   Code   RO          518    .text.IRQ073_Handler  hc32f46x_interrupts.o
+    0x000041da   0x000041da   0x00000002   PAD
+    0x000041dc   0x000041dc   0x00000026   Code   RO          520    .text.IRQ074_Handler  hc32f46x_interrupts.o
+    0x00004202   0x00004202   0x00000002   PAD
+    0x00004204   0x00004204   0x00000026   Code   RO          522    .text.IRQ075_Handler  hc32f46x_interrupts.o
+    0x0000422a   0x0000422a   0x00000002   PAD
+    0x0000422c   0x0000422c   0x00000026   Code   RO          524    .text.IRQ076_Handler  hc32f46x_interrupts.o
+    0x00004252   0x00004252   0x00000002   PAD
+    0x00004254   0x00004254   0x00000026   Code   RO          526    .text.IRQ077_Handler  hc32f46x_interrupts.o
+    0x0000427a   0x0000427a   0x00000002   PAD
+    0x0000427c   0x0000427c   0x00000026   Code   RO          528    .text.IRQ078_Handler  hc32f46x_interrupts.o
+    0x000042a2   0x000042a2   0x00000002   PAD
+    0x000042a4   0x000042a4   0x00000026   Code   RO          530    .text.IRQ079_Handler  hc32f46x_interrupts.o
+    0x000042ca   0x000042ca   0x00000002   PAD
+    0x000042cc   0x000042cc   0x00000026   Code   RO          532    .text.IRQ080_Handler  hc32f46x_interrupts.o
+    0x000042f2   0x000042f2   0x00000002   PAD
+    0x000042f4   0x000042f4   0x00000026   Code   RO          534    .text.IRQ081_Handler  hc32f46x_interrupts.o
+    0x0000431a   0x0000431a   0x00000002   PAD
+    0x0000431c   0x0000431c   0x00000026   Code   RO          536    .text.IRQ082_Handler  hc32f46x_interrupts.o
+    0x00004342   0x00004342   0x00000002   PAD
+    0x00004344   0x00004344   0x00000026   Code   RO          538    .text.IRQ083_Handler  hc32f46x_interrupts.o
+    0x0000436a   0x0000436a   0x00000002   PAD
+    0x0000436c   0x0000436c   0x00000026   Code   RO          540    .text.IRQ084_Handler  hc32f46x_interrupts.o
+    0x00004392   0x00004392   0x00000002   PAD
+    0x00004394   0x00004394   0x00000026   Code   RO          542    .text.IRQ085_Handler  hc32f46x_interrupts.o
+    0x000043ba   0x000043ba   0x00000002   PAD
+    0x000043bc   0x000043bc   0x00000026   Code   RO          544    .text.IRQ086_Handler  hc32f46x_interrupts.o
+    0x000043e2   0x000043e2   0x00000002   PAD
+    0x000043e4   0x000043e4   0x00000026   Code   RO          546    .text.IRQ087_Handler  hc32f46x_interrupts.o
+    0x0000440a   0x0000440a   0x00000002   PAD
+    0x0000440c   0x0000440c   0x00000026   Code   RO          548    .text.IRQ088_Handler  hc32f46x_interrupts.o
+    0x00004432   0x00004432   0x00000002   PAD
+    0x00004434   0x00004434   0x00000026   Code   RO          550    .text.IRQ089_Handler  hc32f46x_interrupts.o
+    0x0000445a   0x0000445a   0x00000002   PAD
+    0x0000445c   0x0000445c   0x00000026   Code   RO          552    .text.IRQ090_Handler  hc32f46x_interrupts.o
+    0x00004482   0x00004482   0x00000002   PAD
+    0x00004484   0x00004484   0x00000026   Code   RO          554    .text.IRQ091_Handler  hc32f46x_interrupts.o
+    0x000044aa   0x000044aa   0x00000002   PAD
+    0x000044ac   0x000044ac   0x00000026   Code   RO          556    .text.IRQ092_Handler  hc32f46x_interrupts.o
+    0x000044d2   0x000044d2   0x00000002   PAD
+    0x000044d4   0x000044d4   0x00000026   Code   RO          558    .text.IRQ093_Handler  hc32f46x_interrupts.o
+    0x000044fa   0x000044fa   0x00000002   PAD
+    0x000044fc   0x000044fc   0x00000026   Code   RO          560    .text.IRQ094_Handler  hc32f46x_interrupts.o
+    0x00004522   0x00004522   0x00000002   PAD
+    0x00004524   0x00004524   0x00000026   Code   RO          562    .text.IRQ095_Handler  hc32f46x_interrupts.o
+    0x0000454a   0x0000454a   0x00000002   PAD
+    0x0000454c   0x0000454c   0x00000026   Code   RO          564    .text.IRQ096_Handler  hc32f46x_interrupts.o
+    0x00004572   0x00004572   0x00000002   PAD
+    0x00004574   0x00004574   0x00000026   Code   RO          566    .text.IRQ097_Handler  hc32f46x_interrupts.o
+    0x0000459a   0x0000459a   0x00000002   PAD
+    0x0000459c   0x0000459c   0x00000026   Code   RO          568    .text.IRQ098_Handler  hc32f46x_interrupts.o
+    0x000045c2   0x000045c2   0x00000002   PAD
+    0x000045c4   0x000045c4   0x00000026   Code   RO          570    .text.IRQ099_Handler  hc32f46x_interrupts.o
+    0x000045ea   0x000045ea   0x00000002   PAD
+    0x000045ec   0x000045ec   0x00000026   Code   RO          572    .text.IRQ100_Handler  hc32f46x_interrupts.o
+    0x00004612   0x00004612   0x00000002   PAD
+    0x00004614   0x00004614   0x00000026   Code   RO          574    .text.IRQ101_Handler  hc32f46x_interrupts.o
+    0x0000463a   0x0000463a   0x00000002   PAD
+    0x0000463c   0x0000463c   0x00000026   Code   RO          576    .text.IRQ102_Handler  hc32f46x_interrupts.o
+    0x00004662   0x00004662   0x00000002   PAD
+    0x00004664   0x00004664   0x00000026   Code   RO          578    .text.IRQ103_Handler  hc32f46x_interrupts.o
+    0x0000468a   0x0000468a   0x00000002   PAD
+    0x0000468c   0x0000468c   0x00000026   Code   RO          580    .text.IRQ104_Handler  hc32f46x_interrupts.o
+    0x000046b2   0x000046b2   0x00000002   PAD
+    0x000046b4   0x000046b4   0x00000026   Code   RO          582    .text.IRQ105_Handler  hc32f46x_interrupts.o
+    0x000046da   0x000046da   0x00000002   PAD
+    0x000046dc   0x000046dc   0x00000026   Code   RO          584    .text.IRQ106_Handler  hc32f46x_interrupts.o
+    0x00004702   0x00004702   0x00000002   PAD
+    0x00004704   0x00004704   0x00000026   Code   RO          586    .text.IRQ107_Handler  hc32f46x_interrupts.o
+    0x0000472a   0x0000472a   0x00000002   PAD
+    0x0000472c   0x0000472c   0x00000026   Code   RO          588    .text.IRQ108_Handler  hc32f46x_interrupts.o
+    0x00004752   0x00004752   0x00000002   PAD
+    0x00004754   0x00004754   0x00000026   Code   RO          590    .text.IRQ109_Handler  hc32f46x_interrupts.o
+    0x0000477a   0x0000477a   0x00000002   PAD
+    0x0000477c   0x0000477c   0x00000026   Code   RO          592    .text.IRQ110_Handler  hc32f46x_interrupts.o
+    0x000047a2   0x000047a2   0x00000002   PAD
+    0x000047a4   0x000047a4   0x00000026   Code   RO          594    .text.IRQ111_Handler  hc32f46x_interrupts.o
+    0x000047ca   0x000047ca   0x00000002   PAD
+    0x000047cc   0x000047cc   0x00000026   Code   RO          596    .text.IRQ112_Handler  hc32f46x_interrupts.o
+    0x000047f2   0x000047f2   0x00000002   PAD
+    0x000047f4   0x000047f4   0x00000026   Code   RO          598    .text.IRQ113_Handler  hc32f46x_interrupts.o
+    0x0000481a   0x0000481a   0x00000002   PAD
+    0x0000481c   0x0000481c   0x00000026   Code   RO          600    .text.IRQ114_Handler  hc32f46x_interrupts.o
+    0x00004842   0x00004842   0x00000002   PAD
+    0x00004844   0x00004844   0x00000026   Code   RO          602    .text.IRQ115_Handler  hc32f46x_interrupts.o
+    0x0000486a   0x0000486a   0x00000002   PAD
+    0x0000486c   0x0000486c   0x00000026   Code   RO          604    .text.IRQ116_Handler  hc32f46x_interrupts.o
+    0x00004892   0x00004892   0x00000002   PAD
+    0x00004894   0x00004894   0x00000026   Code   RO          606    .text.IRQ117_Handler  hc32f46x_interrupts.o
+    0x000048ba   0x000048ba   0x00000002   PAD
+    0x000048bc   0x000048bc   0x00000026   Code   RO          608    .text.IRQ118_Handler  hc32f46x_interrupts.o
+    0x000048e2   0x000048e2   0x00000002   PAD
+    0x000048e4   0x000048e4   0x00000026   Code   RO          610    .text.IRQ119_Handler  hc32f46x_interrupts.o
+    0x0000490a   0x0000490a   0x00000002   PAD
+    0x0000490c   0x0000490c   0x00000026   Code   RO          612    .text.IRQ120_Handler  hc32f46x_interrupts.o
+    0x00004932   0x00004932   0x00000002   PAD
+    0x00004934   0x00004934   0x00000026   Code   RO          614    .text.IRQ121_Handler  hc32f46x_interrupts.o
+    0x0000495a   0x0000495a   0x00000002   PAD
+    0x0000495c   0x0000495c   0x00000026   Code   RO          616    .text.IRQ122_Handler  hc32f46x_interrupts.o
+    0x00004982   0x00004982   0x00000002   PAD
+    0x00004984   0x00004984   0x00000026   Code   RO          618    .text.IRQ123_Handler  hc32f46x_interrupts.o
+    0x000049aa   0x000049aa   0x00000002   PAD
+    0x000049ac   0x000049ac   0x00000026   Code   RO          620    .text.IRQ124_Handler  hc32f46x_interrupts.o
+    0x000049d2   0x000049d2   0x00000002   PAD
+    0x000049d4   0x000049d4   0x00000026   Code   RO          622    .text.IRQ125_Handler  hc32f46x_interrupts.o
+    0x000049fa   0x000049fa   0x00000002   PAD
+    0x000049fc   0x000049fc   0x00000026   Code   RO          624    .text.IRQ126_Handler  hc32f46x_interrupts.o
+    0x00004a22   0x00004a22   0x00000002   PAD
+    0x00004a24   0x00004a24   0x00000026   Code   RO          626    .text.IRQ127_Handler  hc32f46x_interrupts.o
+    0x00004a4a   0x00004a4a   0x00000002   PAD
+    0x00004a4c   0x00004a4c   0x00000234   Code   RO          628    .text.IRQ128_Handler  hc32f46x_interrupts.o
+    0x00004c80   0x00004c80   0x0000078c   Code   RO          630    .text.IRQ129_Handler  hc32f46x_interrupts.o
+    0x0000540c   0x0000540c   0x0000015e   Code   RO          632    .text.IRQ130_Handler  hc32f46x_interrupts.o
+    0x0000556a   0x0000556a   0x00000002   PAD
+    0x0000556c   0x0000556c   0x000004ba   Code   RO          634    .text.IRQ131_Handler  hc32f46x_interrupts.o
+    0x00005a26   0x00005a26   0x00000002   PAD
+    0x00005a28   0x00005a28   0x0000026a   Code   RO          636    .text.IRQ132_Handler  hc32f46x_interrupts.o
+    0x00005c92   0x00005c92   0x00000002   PAD
+    0x00005c94   0x00005c94   0x00000590   Code   RO          638    .text.IRQ136_Handler  hc32f46x_interrupts.o
+    0x00006224   0x00006224   0x000004ae   Code   RO          640    .text.IRQ137_Handler  hc32f46x_interrupts.o
+    0x000066d2   0x000066d2   0x00000002   PAD
+    0x000066d4   0x000066d4   0x00000438   Code   RO          642    .text.IRQ138_Handler  hc32f46x_interrupts.o
+    0x00006b0c   0x00006b0c   0x00000228   Code   RO          644    .text.IRQ139_Handler  hc32f46x_interrupts.o
+    0x00006d34   0x00006d34   0x0000036e   Code   RO          646    .text.IRQ140_Handler  hc32f46x_interrupts.o
+    0x000070a2   0x000070a2   0x00000002   PAD
+    0x000070a4   0x000070a4   0x000003ca   Code   RO          648    .text.IRQ141_Handler  hc32f46x_interrupts.o
+    0x0000746e   0x0000746e   0x00000002   PAD
+    0x00007470   0x00007470   0x000001de   Code   RO          650    .text.IRQ142_Handler  hc32f46x_interrupts.o
+    0x0000764e   0x0000764e   0x00000002   PAD
+    0x00007650   0x00007650   0x00000204   Code   RO          652    .text.IRQ143_Handler  hc32f46x_interrupts.o
+    0x00007854   0x00007854   0x00000008   Code   RO          358    .text.MemManage_Handler  hc32f46x_interrupts.o
+    0x0000785c   0x0000785c   0x00000008   Code   RO          356    .text.NMI_Handler   hc32f46x_interrupts.o
+    0x00007864   0x00007864   0x0000011a   Code   RO          308    .text.PORT_GetBit   hc32f46x_gpio.o
+    0x0000797e   0x0000797e   0x00000002   PAD
+    0x00007980   0x00007980   0x00000336   Code   RO          294    .text.PORT_Init     hc32f46x_gpio.o
+    0x00007cb6   0x00007cb6   0x00000002   PAD
+    0x00007cb8   0x00007cb8   0x00000010   Code   RO          298    .text.PORT_Lock     hc32f46x_gpio.o
+    0x00007cc8   0x00007cc8   0x00000076   Code   RO          318    .text.PORT_ResetBits  hc32f46x_gpio.o
+    0x00007d3e   0x00007d3e   0x00000002   PAD
+    0x00007d40   0x00007d40   0x00000076   Code   RO          316    .text.PORT_SetBits  hc32f46x_gpio.o
+    0x00007db6   0x00007db6   0x00000002   PAD
+    0x00007db8   0x00007db8   0x000003e0   Code   RO          324    .text.PORT_SetFunc  hc32f46x_gpio.o
+    0x00008198   0x00008198   0x00000010   Code   RO          296    .text.PORT_Unlock   hc32f46x_gpio.o
+    0x000081a8   0x000081a8   0x000000b2   Code   RO          685    .text.PWC_Fcg0PeriphClockCmd  hc32f46x_pwc.o
+    0x0000825a   0x0000825a   0x00000002   PAD
+    0x0000825c   0x0000825c   0x00000092   Code   RO          687    .text.PWC_Fcg1PeriphClockCmd  hc32f46x_pwc.o
+    0x000082ee   0x000082ee   0x00000002   PAD
+    0x000082f0   0x000082f0   0x00000092   Code   RO          689    .text.PWC_Fcg2PeriphClockCmd  hc32f46x_pwc.o
+    0x00008382   0x00008382   0x00000002   PAD
+    0x00008384   0x00008384   0x00000092   Code   RO          691    .text.PWC_Fcg3PeriphClockCmd  hc32f46x_pwc.o
+    0x00008416   0x00008416   0x00000002   PAD
+    0x00008418   0x00008418   0x00000008   Code   RO          368    .text.PendSV_Handler  hc32f46x_interrupts.o
+    0x00008420   0x00008420   0x0000006a   Code   RO         1436    .text.Queue_Read_Byte  system.o
+    0x0000848a   0x0000848a   0x00000002   PAD
+    0x0000848c   0x0000848c   0x000000a6   Code   RO         1705    .text.SEGGER_RTT_ConfigUpBuffer  segger_rtt.o
+    0x00008532   0x00008532   0x00000002   PAD
+    0x00008534   0x00008534   0x00000008   Code   RO         1717    .text.SEGGER_RTT_Init  segger_rtt.o
+    0x0000853c   0x0000853c   0x0000004e   Code   RO         1681    .text.SEGGER_RTT_Write  segger_rtt.o
+    0x0000858a   0x0000858a   0x00000002   PAD
+    0x0000858c   0x0000858c   0x000000b2   Code   RO         1677    .text.SEGGER_RTT_WriteNoLock  segger_rtt.o
+    0x0000863e   0x0000863e   0x00000002   PAD
+    0x00008640   0x00008640   0x0000002a   Code   RO         1750    .text.SEGGER_RTT_printf  segger_rtt_printf.o
+    0x0000866a   0x0000866a   0x00000002   PAD
+    0x0000866c   0x0000866c   0x00000412   Code   RO         1742    .text.SEGGER_RTT_vprintf  segger_rtt_printf.o
+    0x00008a7e   0x00008a7e   0x00000002   PAD
+    0x00008a80   0x00008a80   0x00000008   Code   RO          364    .text.SVC_Handler   hc32f46x_interrupts.o
+    0x00008a88   0x00008a88   0x00000184   Code   RO          876    .text.SetClkSyncBaudrate  hc32f46x_usart.o
+    0x00008c0c   0x00008c0c   0x000001c0   Code   RO          874    .text.SetScBaudrate  hc32f46x_usart.o
+    0x00008dcc   0x00008dcc   0x000001bc   Code   RO          878    .text.SetUartBaudrate  hc32f46x_usart.o
+    0x00008f88   0x00008f88   0x000000bc   Code   RO         1115    .text.SysClkIni     myclk.o
+    0x00009044   0x00009044   0x00000052   Code   RO           52    .text.SysTick_Config  hc32f46x_utility.o
+    0x00009096   0x00009096   0x00000002   PAD
+    0x00009098   0x00009098   0x0000000c   Code   RO           56    .text.SysTick_GetTick  hc32f46x_utility.o
+    0x000090a4   0x000090a4   0x00000008   Code   RO          370    .text.SysTick_Handler  hc32f46x_interrupts.o
+    0x000090ac   0x000090ac   0x0000001a   Code   RO           58    .text.SysTick_IncTick  hc32f46x_utility.o
+    0x000090c6   0x000090c6   0x00000002   PAD
+    0x000090c8   0x000090c8   0x0000004e   Code   RO           50    .text.SysTick_Init  hc32f46x_utility.o
+    0x00009116   0x00009116   0x00000002   PAD
+    0x00009118   0x00009118   0x00000008   Code   RO         1133    .text.SysTick_IrqHandler  app.o
+    0x00009120   0x00009120   0x0000016e   Code   RO           13    .text.SystemCoreClockUpdate  system_hc32f46x.o
+    0x0000928e   0x0000928e   0x00000002   PAD
+    0x00009290   0x00009290   0x00000018   Code   RO           11    .text.SystemInit    system_hc32f46x.o
+    0x000092a8   0x000092a8   0x000003ca   Code   RO          792    .text.TIMER0_BaseInit  hc32f46x_timer0.o
+    0x00009672   0x00009672   0x00000002   PAD
+    0x00009674   0x00009674   0x0000013a   Code   RO          778    .text.TIMER0_Cmd    hc32f46x_timer0.o
+    0x000097ae   0x000097ae   0x00000002   PAD
+    0x000097b0   0x000097b0   0x0000009a   Code   RO          800    .text.TIMER0_GetClkMode  hc32f46x_timer0.o
+    0x0000984a   0x0000984a   0x00000002   PAD
+    0x0000984c   0x0000984c   0x00000142   Code   RO          782    .text.TIMER0_IntCmd  hc32f46x_timer0.o
+    0x0000998e   0x0000998e   0x00000002   PAD
+    0x00009990   0x00009990   0x00000220   Code   RO          958    .text.TIMERA_BaseInit  hc32f46x_timera.o
+    0x00009bb0   0x00009bb0   0x0000019c   Code   RO         1014    .text.TIMERA_ClearFlag  hc32f46x_timera.o
+    0x00009d4c   0x00009d4c   0x000000b0   Code   RO          970    .text.TIMERA_Cmd    hc32f46x_timera.o
+    0x00009dfc   0x00009dfc   0x0000011c   Code   RO          984    .text.TIMERA_CompareCmd  hc32f46x_timera.o
+    0x00009f18   0x00009f18   0x000003b4   Code   RO          972    .text.TIMERA_CompareInit  hc32f46x_timera.o
+    0x0000a2cc   0x0000a2cc   0x00000184   Code   RO         1012    .text.TIMERA_GetFlag  hc32f46x_timera.o
+    0x0000a450   0x0000a450   0x00000224   Code   RO         1008    .text.TIMERA_IrqCmd  hc32f46x_timera.o
+    0x0000a674   0x0000a674   0x0000003e   Code   RO         1096    .text.Timer0A_CallBack  mytimer.o
+    0x0000a6b2   0x0000a6b2   0x00000002   PAD
+    0x0000a6b4   0x0000a6b4   0x0000005a   Code   RO         1104    .text.Timer0B_CallBack  mytimer.o
+    0x0000a70e   0x0000a70e   0x00000002   PAD
+    0x0000a710   0x0000a710   0x00000094   Code   RO         1194    .text.TimeraUnit1_IrqCallback  timera_pwm.o
+    0x0000a7a4   0x0000a7a4   0x00000186   Code   RO         1192    .text.Timera_Config  timera_pwm.o
+    0x0000a92a   0x0000a92a   0x00000002   PAD
+    0x0000a92c   0x0000a92c   0x000000b0   Code   RO          820    .text.USART_ClearStatus  hc32f46x_usart.o
+    0x0000a9dc   0x0000a9dc   0x000001dc   Code   RO          822    .text.USART_FuncCmd  hc32f46x_usart.o
+    0x0000abb8   0x0000abb8   0x000000ce   Code   RO          818    .text.USART_GetStatus  hc32f46x_usart.o
+    0x0000ac86   0x0000ac86   0x00000002   PAD
+    0x0000ac88   0x0000ac88   0x0000006a   Code   RO          870    .text.USART_RecData  hc32f46x_usart.o
+    0x0000acf2   0x0000acf2   0x00000002   PAD
+    0x0000acf4   0x0000acf4   0x00000096   Code   RO          872    .text.USART_SetBaudrate  hc32f46x_usart.o
+    0x0000ad8a   0x0000ad8a   0x00000002   PAD
+    0x0000ad8c   0x0000ad8c   0x0000033e   Code   RO          810    .text.USART_UART_Init  hc32f46x_usart.o
+    0x0000b0ca   0x0000b0ca   0x00000002   PAD
+    0x0000b0cc   0x0000b0cc   0x00000008   Code   RO          362    .text.UsageFault_Handler  hc32f46x_interrupts.o
+    0x0000b0d4   0x0000b0d4   0x00000096   Code   RO          880    .text.UsartGetClk   hc32f46x_usart.o
+    0x0000b16a   0x0000b16a   0x00000002   PAD
+    0x0000b16c   0x0000b16c   0x00000070   Code   RO         1069    .text.UsartRxErrProcess  myusart.o
+    0x0000b1dc   0x0000b1dc   0x0000003a   Code   RO         1083    .text.UsartRxIrqCallback  myusart.o
+    0x0000b216   0x0000b216   0x00000002   PAD
+    0x0000b218   0x0000b218   0x00000026   Code   RO         1400    .text.User_Shell_Init  shell_port.o
+    0x0000b23e   0x0000b23e   0x00000002   PAD
+    0x0000b240   0x0000b240   0x000000a2   Code   RO         1659    .text._DoInit       segger_rtt.o
+    0x0000b2e2   0x0000b2e2   0x00000002   PAD
+    0x0000b2e4   0x0000b2e4   0x0000003e   Code   RO         1671    .text._GetAvailWriteSpace  segger_rtt.o
+    0x0000b322   0x0000b322   0x00000002   PAD
+    0x0000b324   0x0000b324   0x000001e4   Code   RO         1746    .text._PrintInt     segger_rtt_printf.o
+    0x0000b508   0x0000b508   0x000001be   Code   RO         1748    .text._PrintUnsigned  segger_rtt_printf.o
+    0x0000b6c6   0x0000b6c6   0x00000002   PAD
+    0x0000b6c8   0x0000b6c8   0x00000078   Code   RO         1744    .text._StoreChar    segger_rtt_printf.o
+    0x0000b740   0x0000b740   0x000000e4   Code   RO         1675    .text._WriteBlocking  segger_rtt.o
+    0x0000b824   0x0000b824   0x00000094   Code   RO         1673    .text._WriteNoCheck  segger_rtt.o
+    0x0000b8b8   0x0000b8b8   0x0000002c   Code   RO         1079    .text.__NVIC_ClearPendingIRQ  myusart.o
+    0x0000b8e4   0x0000b8e4   0x0000002c   Code   RO         1098    .text.__NVIC_ClearPendingIRQ  mytimer.o
+    0x0000b910   0x0000b910   0x0000002c   Code   RO         1196    .text.__NVIC_ClearPendingIRQ  timera_pwm.o
+    0x0000b93c   0x0000b93c   0x0000002c   Code   RO         1081    .text.__NVIC_EnableIRQ  myusart.o
+    0x0000b968   0x0000b968   0x0000002c   Code   RO         1102    .text.__NVIC_EnableIRQ  mytimer.o
+    0x0000b994   0x0000b994   0x0000002c   Code   RO         1200    .text.__NVIC_EnableIRQ  timera_pwm.o
+    0x0000b9c0   0x0000b9c0   0x0000003a   Code   RO           66    .text.__NVIC_SetPriority  hc32f46x_utility.o
+    0x0000b9fa   0x0000b9fa   0x00000002   PAD
+    0x0000b9fc   0x0000b9fc   0x0000003a   Code   RO         1077    .text.__NVIC_SetPriority  myusart.o
+    0x0000ba36   0x0000ba36   0x00000002   PAD
+    0x0000ba38   0x0000ba38   0x0000003a   Code   RO         1100    .text.__NVIC_SetPriority  mytimer.o
+    0x0000ba72   0x0000ba72   0x00000002   PAD
+    0x0000ba74   0x0000ba74   0x0000003a   Code   RO         1137    .text.__NVIC_SetPriority  app.o
+    0x0000baae   0x0000baae   0x00000002   PAD
+    0x0000bab0   0x0000bab0   0x0000003a   Code   RO         1198    .text.__NVIC_SetPriority  timera_pwm.o
+    0x0000baea   0x0000baea   0x00000002   PAD
+    0x0000baec   0x0000baec   0x00000026   Code   RO         1528    .text.__NVIC_SystemReset  protocol.o
+    0x0000bb12   0x0000bb12   0x00000002   PAD
+    0x0000bb14   0x0000bb14   0x0000002a   Code   RO         1038    .text.adc_clk_test  myadc.o
+    0x0000bb3e   0x0000bb3e   0x00000002   PAD
+    0x0000bb40   0x0000bb40   0x0000000a   Code   RO         1460    .text.all_data_update  protocol.o
+    0x0000bb4a   0x0000bb4a   0x00000002   PAD
+    0x0000bb4c   0x0000bb4c   0x00000044   Code   RO         1165    .text.app           app.o
+    0x0000bb90   0x0000bb90   0x0000001a   Code   RO         1508    .text.bt_close_timer_result  protocol.o
+    0x0000bbaa   0x0000bbaa   0x00000002   PAD
+    0x0000bbac   0x0000bbac   0x0000001a   Code   RO         1520    .text.bt_disconnect_result  protocol.o
+    0x0000bbc6   0x0000bbc6   0x00000002   PAD
+    0x0000bbc8   0x0000bbc8   0x0000001a   Code   RO         1512    .text.bt_enable_lowpoer_result  protocol.o
+    0x0000bbe2   0x0000bbe2   0x00000002   PAD
+    0x0000bbe4   0x0000bbe4   0x00000002   Code   RO         1524    .text.bt_factor_reset_notify  protocol.o
+    0x0000bbe6   0x0000bbe6   0x00000002   PAD
+    0x0000bbe8   0x0000bbe8   0x0000001a   Code   RO         1504    .text.bt_modify_adv_interval_result  protocol.o
+    0x0000bc02   0x0000bc02   0x00000002   PAD
+    0x0000bc04   0x0000bc04   0x0000001e   Code   RO         1595    .text.bt_protocol_init  mcu_api.o
+    0x0000bc22   0x0000bc22   0x00000002   PAD
+    0x0000bc24   0x0000bc24   0x0000001a   Code   RO         1516    .text.bt_send_one_time_password_token_result  protocol.o
+    0x0000bc3e   0x0000bc3e   0x00000002   PAD
+    0x0000bc40   0x0000bc40   0x00000084   Code   RO         1591    .text.bt_uart_service  mcu_api.o
+    0x0000bcc4   0x0000bcc4   0x00000046   Code   RO         1426    .text.bt_uart_write_data  system.o
+    0x0000bd0a   0x0000bd0a   0x00000002   PAD
+    0x0000bd0c   0x0000bd0c   0x0000008a   Code   RO         1424    .text.bt_uart_write_frame  system.o
+    0x0000bd96   0x0000bd96   0x00000002   PAD
+    0x0000bd98   0x0000bd98   0x0000000c   Code   RO         1500    .text.bt_unbound_req  protocol.o
+    0x0000bda4   0x0000bda4   0x00000044   Code   RO         1563    .text.byte_to_int   mcu_api.o
+    0x0000bde8   0x0000bde8   0x00000170   Code   RO         1117    .text.clk_test      myclk.o
+    0x0000bf58   0x0000bf58   0x00000366   Code   RO         1430    .text.data_handle   system.o
+    0x0000c2be   0x0000c2be   0x00000002   PAD
+    0x0000c2c0   0x0000c2c0   0x00000086   Code   RO         1432    .text.data_point_handle  system.o
+    0x0000c346   0x0000c346   0x00000002   PAD
+    0x0000c348   0x0000c348   0x0000009c   Code   RO         1492    .text.dp_download_common_command_handle  protocol.o
+    0x0000c3e4   0x0000c3e4   0x00000090   Code   RO         1478    .text.dp_download_factory_op_handle  protocol.o
+    0x0000c474   0x0000c474   0x0000003c   Code   RO         1468    .text.dp_download_find_me_handle  protocol.o
+    0x0000c4b0   0x0000c4b0   0x00000048   Code   RO         1480    .text.dp_download_freq_parameter1_handle  protocol.o
+    0x0000c4f8   0x0000c4f8   0x00000048   Code   RO         1482    .text.dp_download_freq_parameter2_handle  protocol.o
+    0x0000c540   0x0000c540   0x00000048   Code   RO         1476    .text.dp_download_freq_times_handle  protocol.o
+    0x0000c588   0x0000c588   0x000001d6   Code   RO         1462    .text.dp_download_handle  protocol.o
+    0x0000c75e   0x0000c75e   0x00000002   PAD
+    0x0000c760   0x0000c760   0x0000003c   Code   RO         1484    .text.dp_download_light_threshold1_handle  protocol.o
+    0x0000c79c   0x0000c79c   0x0000003c   Code   RO         1486    .text.dp_download_light_threshold2_handle  protocol.o
+    0x0000c7d8   0x0000c7d8   0x0000003c   Code   RO         1488    .text.dp_download_light_threshold3_handle  protocol.o
+    0x0000c814   0x0000c814   0x0000003c   Code   RO         1490    .text.dp_download_light_threshold4_handle  protocol.o
+    0x0000c850   0x0000c850   0x0000004a   Code   RO         1466    .text.dp_download_load_radar_parameter_handle  protocol.o
+    0x0000c89a   0x0000c89a   0x00000002   PAD
+    0x0000c89c   0x0000c89c   0x00000080   Code   RO         1464    .text.dp_download_pir_delay_handle  protocol.o
+    0x0000c91c   0x0000c91c   0x0000006c   Code   RO         1494    .text.dp_download_study_cmd_handle  protocol.o
+    0x0000c988   0x0000c988   0x00000048   Code   RO         1472    .text.dp_download_time_add_handle  protocol.o
+    0x0000c9d0   0x0000c9d0   0x00000048   Code   RO         1470    .text.dp_download_time_times_handle  protocol.o
+    0x0000ca18   0x0000ca18   0x0000003c   Code   RO         1496    .text.dp_download_upload_duty_handle  protocol.o
+    0x0000ca54   0x0000ca54   0x0000004c   Code   RO         1474    .text.dp_download_work_mode_handle  protocol.o
+    0x0000caa0   0x0000caa0   0x000000be   Code   RO          336    .text.enIrqRegistration  hc32f46x_interrupts.o
+    0x0000cb5e   0x0000cb5e   0x00000002   PAD
+    0x0000cb60   0x0000cb60   0x00000082   Code   RO         1131    .text.en_fsk_pwm    app.o
+    0x0000cbe2   0x0000cbe2   0x00000002   PAD
+    0x0000cbe4   0x0000cbe4   0x0000005e   Code   RO         1129    .text.en_sample     app.o
+    0x0000cc42   0x0000cc42   0x00000002   PAD
+    0x0000cc44   0x0000cc44   0x00000030   Code   RO         1149    .text.enable_flash_cache  app.o
+    0x0000cc74   0x0000cc74   0x00000016   Code   RO         1157    .text.error_process  app.o
+    0x0000cc8a   0x0000cc8a   0x00000002   PAD
+    0x0000cc8c   0x0000cc8c   0x00000030   Code   RO         1861    .text.fputc         retarget_io.o
+    0x0000ccbc   0x0000ccbc   0x0000004c   Code   RO         1422    .text.get_check_sum  system.o
+    0x0000cd08   0x0000cd08   0x0000005c   Code   RO         1438    .text.get_dowmload_dpid_index  system.o
+    0x0000cd64   0x0000cd64   0x00000004   Code   RO         1498    .text.get_download_cmd_total  protocol.o
+    0x0000cd68   0x0000cd68   0x00000018   Code   RO         1428    .text.get_mcu_bt_mode  system.o
+    0x0000cd80   0x0000cd80   0x00000034   Code   RO         1434    .text.get_queue_total_data  system.o
+    0x0000cdb4   0x0000cdb4   0x00000002   Code   RO         1530    .text.go_bootloader_ota  protocol.o
+    0x0000cdb6   0x0000cdb6   0x00000002   PAD
+    0x0000cdb8   0x0000cdb8   0x00000040   Code   RO         1153    .text.gpio_init     app.o
+    0x0000cdf8   0x0000cdf8   0x00000300   Code   RO         1127    .text.hexdump       app.o
+    0x0000d0f8   0x0000d0f8   0x00000062   Code   RO         1161    .text.idle_process  app.o
+    0x0000d15a   0x0000d15a   0x00000002   PAD
+    0x0000d15c   0x0000d15c   0x000000d8   Code   RO         1163    .text.init_all      app.o
+    0x0000d234   0x0000d234   0x0000003e   Code   RO         1060    .text.led_green     myled.o
+    0x0000d272   0x0000d272   0x00000002   PAD
+    0x0000d274   0x0000d274   0x0000005e   Code   RO         1056    .text.led_init      myled.o
+    0x0000d2d2   0x0000d2d2   0x00000002   PAD
+    0x0000d2d4   0x0000d2d4   0x0000003e   Code   RO         1058    .text.led_red       myled.o
+    0x0000d312   0x0000d312   0x00000002   PAD
+    0x0000d314   0x0000d314   0x00000014   Code   RO           24    .text.main          main.o
+    0x0000d328   0x0000d328   0x000002b4   Code   RO         1593    .text.mcu_common_uart_data_unpack  mcu_api.o
+    0x0000d5dc   0x0000d5dc   0x00000002   Code   RO         1617    .text.mcu_device_delay_restart  mcu_ota_handler.o
+    0x0000d5de   0x0000d5de   0x00000002   PAD
+    0x0000d5e0   0x0000d5e0   0x000000ae   Code   RO         1573    .text.mcu_dp_bool_update  mcu_api.o
+    0x0000d68e   0x0000d68e   0x00000002   PAD
+    0x0000d690   0x0000d690   0x00000094   Code   RO         1579    .text.mcu_dp_enum_update  mcu_api.o
+    0x0000d724   0x0000d724   0x000000be   Code   RO         1575    .text.mcu_dp_value_update  mcu_api.o
+    0x0000d7e2   0x0000d7e2   0x00000002   PAD
+    0x0000d7e4   0x0000d7e4   0x00000012   Code   RO         1585    .text.mcu_get_dp_download_enum  mcu_api.o
+    0x0000d7f6   0x0000d7f6   0x00000002   PAD
+    0x0000d7f8   0x0000d7f8   0x00000018   Code   RO         1587    .text.mcu_get_dp_download_value  mcu_api.o
+    0x0000d810   0x0000d810   0x000001ae   Code   RO         1631    .text.mcu_ota_data_req  mcu_ota_handler.o
+    0x0000d9be   0x0000d9be   0x00000002   PAD
+    0x0000d9c0   0x0000d9c0   0x00000032   Code   RO         1633    .text.mcu_ota_end_req  mcu_ota_handler.o
+    0x0000d9f2   0x0000d9f2   0x00000002   PAD
+    0x0000d9f4   0x0000d9f4   0x000002ae   Code   RO         1627    .text.mcu_ota_file_info_req  mcu_ota_handler.o
+    0x0000dca2   0x0000dca2   0x00000002   PAD
+    0x0000dca4   0x0000dca4   0x0000002e   Code   RO         1635    .text.mcu_ota_init_disconnect  mcu_ota_handler.o
+    0x0000dcd2   0x0000dcd2   0x00000002   PAD
+    0x0000dcd4   0x0000dcd4   0x000000ca   Code   RO         1629    .text.mcu_ota_offset_req  mcu_ota_handler.o
+    0x0000dd9e   0x0000dd9e   0x00000002   PAD
+    0x0000dda0   0x0000dda0   0x00000072   Code   RO         1623    .text.mcu_ota_proc  mcu_ota_handler.o
+    0x0000de12   0x0000de12   0x00000002   PAD
+    0x0000de14   0x0000de14   0x00000094   Code   RO         1625    .text.mcu_ota_start_req  mcu_ota_handler.o
+    0x0000dea8   0x0000dea8   0x0000000c   Code   RO         1621    .text.mcu_ota_status_get  mcu_ota_handler.o
+    0x0000deb4   0x0000deb4   0x00000014   Code   RO         1619    .text.mcu_ota_status_set  mcu_ota_handler.o
+    0x0000dec8   0x0000dec8   0x00000016   Code   RO         1567    .text.mcu_reset_bt  mcu_api.o
+    0x0000dede   0x0000dede   0x00000002   PAD
+    0x0000dee0   0x0000dee0   0x00000082   Code   RO         1151    .text.memory_init   app.o
+    0x0000df62   0x0000df62   0x00000002   PAD
+    0x0000df64   0x0000df64   0x000000b4   Code   RO         1555    .text.my_memcpy     mcu_api.o
+    0x0000e018   0x0000e018   0x0000004e   Code   RO         1553    .text.my_memset     mcu_api.o
+    0x0000e066   0x0000e066   0x00000002   PAD
+    0x0000e068   0x0000e068   0x00000088   Code   RO         1639    .text.on_data_write_request_sched  mcu_ota_handler.o
+    0x0000e0f0   0x0000e0f0   0x0000001c   Code   RO         1641    .text.on_dfu_complete  mcu_ota_handler.o
+    0x0000e10c   0x0000e10c   0x00000008   Code   RO         1404    .text.quit_shell    shell_port.o
+    0x0000e114   0x0000e114   0x00000094   Code   RO         1147    .text.read_uid      app.o
+    0x0000e1a8   0x0000e1a8   0x00000020   Code   RO         1643    .text.reset_after_flash_write  mcu_ota_handler.o
+    0x0000e1c8   0x0000e1c8   0x00000002   Code   RO         1538    .text.reset_default_parameter  protocol.o
+    0x0000e1ca   0x0000e1ca   0x00000002   PAD
+    0x0000e1cc   0x0000e1cc   0x00000072   Code   RO         1145    .text.segger_init   app.o
     0x0000e23e   0x0000e23e   0x00000002   PAD
-    0x0000e240   0x0000e240   0x000002ae   Code   RO         1627    .text.mcu_ota_file_info_req  mcu_ota_handler.o
-    0x0000e4ee   0x0000e4ee   0x00000002   PAD
-    0x0000e4f0   0x0000e4f0   0x0000002e   Code   RO         1635    .text.mcu_ota_init_disconnect  mcu_ota_handler.o
-    0x0000e51e   0x0000e51e   0x00000002   PAD
-    0x0000e520   0x0000e520   0x000000ca   Code   RO         1629    .text.mcu_ota_offset_req  mcu_ota_handler.o
-    0x0000e5ea   0x0000e5ea   0x00000002   PAD
-    0x0000e5ec   0x0000e5ec   0x00000072   Code   RO         1623    .text.mcu_ota_proc  mcu_ota_handler.o
-    0x0000e65e   0x0000e65e   0x00000002   PAD
-    0x0000e660   0x0000e660   0x00000094   Code   RO         1625    .text.mcu_ota_start_req  mcu_ota_handler.o
-    0x0000e6f4   0x0000e6f4   0x0000000c   Code   RO         1621    .text.mcu_ota_status_get  mcu_ota_handler.o
-    0x0000e700   0x0000e700   0x00000014   Code   RO         1619    .text.mcu_ota_status_set  mcu_ota_handler.o
-    0x0000e714   0x0000e714   0x00000016   Code   RO         1567    .text.mcu_reset_bt  mcu_api.o
-    0x0000e72a   0x0000e72a   0x00000002   PAD
-    0x0000e72c   0x0000e72c   0x00000082   Code   RO         1151    .text.memory_init   app.o
-    0x0000e7ae   0x0000e7ae   0x00000002   PAD
-    0x0000e7b0   0x0000e7b0   0x000000b4   Code   RO         1555    .text.my_memcpy     mcu_api.o
-    0x0000e864   0x0000e864   0x0000004e   Code   RO         1553    .text.my_memset     mcu_api.o
-    0x0000e8b2   0x0000e8b2   0x00000002   PAD
-    0x0000e8b4   0x0000e8b4   0x00000088   Code   RO         1639    .text.on_data_write_request_sched  mcu_ota_handler.o
-    0x0000e93c   0x0000e93c   0x0000001c   Code   RO         1641    .text.on_dfu_complete  mcu_ota_handler.o
-    0x0000e958   0x0000e958   0x00000008   Code   RO         1404    .text.quit_shell    shell_port.o
-    0x0000e960   0x0000e960   0x00000094   Code   RO         1147    .text.read_uid      app.o
-    0x0000e9f4   0x0000e9f4   0x00000020   Code   RO         1643    .text.reset_after_flash_write  mcu_ota_handler.o
-    0x0000ea14   0x0000ea14   0x00000002   Code   RO         1538    .text.reset_default_parameter  protocol.o
-    0x0000ea16   0x0000ea16   0x00000002   PAD
-    0x0000ea18   0x0000ea18   0x00000072   Code   RO         1145    .text.segger_init   app.o
-    0x0000ea8a   0x0000ea8a   0x00000002   PAD
-    0x0000ea8c   0x0000ea8c   0x0000004c   Code   RO         1155    .text.sent_sample_data  app.o
-    0x0000ead8   0x0000ead8   0x00000050   Code   RO         1420    .text.set_bt_uart_buffer  system.o
-    0x0000eb28   0x0000eb28   0x0000003a   Code   RO         1418    .text.set_bt_uart_byte  system.o
+    0x0000e240   0x0000e240   0x0000004c   Code   RO         1155    .text.sent_sample_data  app.o
+    0x0000e28c   0x0000e28c   0x00000050   Code   RO         1420    .text.set_bt_uart_buffer  system.o
+    0x0000e2dc   0x0000e2dc   0x0000003a   Code   RO         1418    .text.set_bt_uart_byte  system.o
+    0x0000e316   0x0000e316   0x00000002   PAD
+    0x0000e318   0x0000e318   0x000000c0   Code   RO         1141    .text.set_fsk_wave_duty  app.o
+    0x0000e3d8   0x0000e3d8   0x00000024   Code   RO         1143    .text.set_if_adc_avg  app.o
+    0x0000e3fc   0x0000e3fc   0x00000052   Code   RO         1139    .text.set_samplerate  app.o
+    0x0000e44e   0x0000e44e   0x00000002   PAD
+    0x0000e450   0x0000e450   0x00000052   Code   RO         1212    .text.shellAdd      shell.o
+    0x0000e4a2   0x0000e4a2   0x00000002   PAD
+    0x0000e4a4   0x0000e4a4   0x00000012   Code   RO         1304    .text.shellBackspace  shell.o
+    0x0000e4b6   0x0000e4b6   0x00000002   PAD
+    0x0000e4b8   0x0000e4b8   0x00000058   Code   RO         1286    .text.shellCheckPassword  shell.o
+    0x0000e510   0x0000e510   0x00000064   Code   RO         1228    .text.shellCheckPermission  shell.o
+    0x0000e574   0x0000e574   0x00000028   Code   RO         1324    .text.shellClear    shell.o
+    0x0000e59c   0x0000e59c   0x00000040   Code   RO         1256    .text.shellClearCommandLine  shell.o
+    0x0000e5dc   0x0000e5dc   0x0000001e   Code   RO         1318    .text.shellCmds     shell.o
+    0x0000e5fa   0x0000e5fa   0x00000002   PAD
+    0x0000e5fc   0x0000e5fc   0x00000014   Code   RO         1306    .text.shellDelete   shell.o
+    0x0000e610   0x0000e610   0x00000162   Code   RO         1260    .text.shellDeleteByte  shell.o
+    0x0000e772   0x0000e772   0x00000002   PAD
+    0x0000e774   0x0000e774   0x00000032   Code   RO         1254    .text.shellDeleteCommandLine  shell.o
+    0x0000e7a6   0x0000e7a6   0x00000002   PAD
+    0x0000e7a8   0x0000e7a8   0x00000014   Code   RO         1292    .text.shellDown     shell.o
+    0x0000e7bc   0x0000e7bc   0x00000018   Code   RO         1308    .text.shellEnter    shell.o
+    0x0000e7d4   0x0000e7d4   0x000000a6   Code   RO         1280    .text.shellExec     shell.o
+    0x0000e87a   0x0000e87a   0x00000002   PAD
+    0x0000e87c   0x0000e87c   0x0000006c   Code   RO         1328    .text.shellExecute  shell.o
+    0x0000e8e8   0x0000e8e8   0x0000009a   Code   RO         1385    .text.shellExtNumType  shell_ext.o
+    0x0000e982   0x0000e982   0x00000002   PAD
+    0x0000e984   0x0000e984   0x0000008e   Code   RO         1375    .text.shellExtParseChar  shell_ext.o
+    0x0000ea12   0x0000ea12   0x00000002   PAD
+    0x0000ea14   0x0000ea14   0x0000014e   Code   RO         1377    .text.shellExtParseNumber  shell_ext.o
     0x0000eb62   0x0000eb62   0x00000002   PAD
-    0x0000eb64   0x0000eb64   0x000000c0   Code   RO         1141    .text.set_fsk_wave_duty  app.o
-    0x0000ec24   0x0000ec24   0x00000024   Code   RO         1143    .text.set_if_adc_avg  app.o
-    0x0000ec48   0x0000ec48   0x00000052   Code   RO         1139    .text.set_samplerate  app.o
-    0x0000ec9a   0x0000ec9a   0x00000002   PAD
-    0x0000ec9c   0x0000ec9c   0x00000052   Code   RO         1212    .text.shellAdd      shell.o
-    0x0000ecee   0x0000ecee   0x00000002   PAD
-    0x0000ecf0   0x0000ecf0   0x00000012   Code   RO         1304    .text.shellBackspace  shell.o
-    0x0000ed02   0x0000ed02   0x00000002   PAD
-    0x0000ed04   0x0000ed04   0x00000058   Code   RO         1286    .text.shellCheckPassword  shell.o
-    0x0000ed5c   0x0000ed5c   0x00000064   Code   RO         1228    .text.shellCheckPermission  shell.o
-    0x0000edc0   0x0000edc0   0x00000028   Code   RO         1324    .text.shellClear    shell.o
-    0x0000ede8   0x0000ede8   0x00000040   Code   RO         1256    .text.shellClearCommandLine  shell.o
-    0x0000ee28   0x0000ee28   0x0000001e   Code   RO         1318    .text.shellCmds     shell.o
-    0x0000ee46   0x0000ee46   0x00000002   PAD
-    0x0000ee48   0x0000ee48   0x00000014   Code   RO         1306    .text.shellDelete   shell.o
-    0x0000ee5c   0x0000ee5c   0x00000162   Code   RO         1260    .text.shellDeleteByte  shell.o
-    0x0000efbe   0x0000efbe   0x00000002   PAD
-    0x0000efc0   0x0000efc0   0x00000032   Code   RO         1254    .text.shellDeleteCommandLine  shell.o
-    0x0000eff2   0x0000eff2   0x00000002   PAD
-    0x0000eff4   0x0000eff4   0x00000014   Code   RO         1292    .text.shellDown     shell.o
-    0x0000f008   0x0000f008   0x00000018   Code   RO         1308    .text.shellEnter    shell.o
-    0x0000f020   0x0000f020   0x000000a6   Code   RO         1280    .text.shellExec     shell.o
-    0x0000f0c6   0x0000f0c6   0x00000002   PAD
-    0x0000f0c8   0x0000f0c8   0x0000006c   Code   RO         1328    .text.shellExecute  shell.o
-    0x0000f134   0x0000f134   0x0000009a   Code   RO         1385    .text.shellExtNumType  shell_ext.o
-    0x0000f1ce   0x0000f1ce   0x00000002   PAD
-    0x0000f1d0   0x0000f1d0   0x0000008e   Code   RO         1375    .text.shellExtParseChar  shell_ext.o
-    0x0000f25e   0x0000f25e   0x00000002   PAD
-    0x0000f260   0x0000f260   0x0000014e   Code   RO         1377    .text.shellExtParseNumber  shell_ext.o
-    0x0000f3ae   0x0000f3ae   0x00000002   PAD
-    0x0000f3b0   0x0000f3b0   0x00000094   Code   RO         1373    .text.shellExtParsePara  shell_ext.o
-    0x0000f444   0x0000f444   0x0000009a   Code   RO         1381    .text.shellExtParseString  shell_ext.o
-    0x0000f4de   0x0000f4de   0x00000002   PAD
-    0x0000f4e0   0x0000f4e0   0x00000038   Code   RO         1379    .text.shellExtParseVar  shell_ext.o
-    0x0000f518   0x0000f518   0x000001a0   Code   RO         1383    .text.shellExtRun   shell_ext.o
-    0x0000f6b8   0x0000f6b8   0x00000078   Code   RO         1387    .text.shellExtToNum  shell_ext.o
-    0x0000f730   0x0000f730   0x00000054   Code   RO         1242    .text.shellGetCommandDesc  shell.o
-    0x0000f784   0x0000f784   0x00000096   Code   RO         1236    .text.shellGetCommandName  shell.o
-    0x0000f81a   0x0000f81a   0x00000002   PAD
-    0x0000f81c   0x0000f81c   0x00000076   Code   RO         1222    .text.shellGetCurrent  shell.o
-    0x0000f892   0x0000f892   0x00000002   PAD
-    0x0000f894   0x0000f894   0x00000086   Code   RO         1262    .text.shellGetVarValue  shell.o
-    0x0000f91a   0x0000f91a   0x00000002   PAD
-    0x0000f91c   0x0000f91c   0x000001b2   Code   RO         1312    .text.shellHandler  shell.o
-    0x0000face   0x0000face   0x00000002   PAD
-    0x0000fad0   0x0000fad0   0x00000042   Code   RO         1310    .text.shellHelp     shell.o
-    0x0000fb12   0x0000fb12   0x00000002   PAD
-    0x0000fb14   0x0000fb14   0x0000012e   Code   RO         1290    .text.shellHistory  shell.o
-    0x0000fc42   0x0000fc42   0x00000002   PAD
-    0x0000fc44   0x0000fc44   0x000000bc   Code   RO         1282    .text.shellHistoryAdd  shell.o
-    0x0000fd00   0x0000fd00   0x000000e2   Code   RO         1210    .text.shellInit     shell.o
-    0x0000fde2   0x0000fde2   0x00000002   PAD
-    0x0000fde4   0x0000fde4   0x00000156   Code   RO         1258    .text.shellInsertByte  shell.o
-    0x0000ff3a   0x0000ff3a   0x00000002   PAD
-    0x0000ff3c   0x0000ff3c   0x0000001e   Code   RO         1322    .text.shellKeys     shell.o
-    0x0000ff5a   0x0000ff5a   0x00000002   PAD
-    0x0000ff5c   0x0000ff5c   0x00000026   Code   RO         1296    .text.shellLeft     shell.o
-    0x0000ff82   0x0000ff82   0x00000002   PAD
-    0x0000ff84   0x0000ff84   0x00000016   Code   RO         1252    .text.shellListAll  shell.o
-    0x0000ff9a   0x0000ff9a   0x00000002   PAD
-    0x0000ff9c   0x0000ff9c   0x00000082   Code   RO         1244    .text.shellListCommand  shell.o
-    0x0001001e   0x0001001e   0x00000002   PAD
-    0x00010020   0x00010020   0x00000186   Code   RO         1234    .text.shellListItem  shell.o
-    0x000101a6   0x000101a6   0x00000002   PAD
-    0x000101a8   0x000101a8   0x00000096   Code   RO         1250    .text.shellListKey  shell.o
+    0x0000eb64   0x0000eb64   0x00000094   Code   RO         1373    .text.shellExtParsePara  shell_ext.o
+    0x0000ebf8   0x0000ebf8   0x0000009a   Code   RO         1381    .text.shellExtParseString  shell_ext.o
+    0x0000ec92   0x0000ec92   0x00000002   PAD
+    0x0000ec94   0x0000ec94   0x00000038   Code   RO         1379    .text.shellExtParseVar  shell_ext.o
+    0x0000eccc   0x0000eccc   0x000001a0   Code   RO         1383    .text.shellExtRun   shell_ext.o
+    0x0000ee6c   0x0000ee6c   0x00000078   Code   RO         1387    .text.shellExtToNum  shell_ext.o
+    0x0000eee4   0x0000eee4   0x00000054   Code   RO         1242    .text.shellGetCommandDesc  shell.o
+    0x0000ef38   0x0000ef38   0x00000096   Code   RO         1236    .text.shellGetCommandName  shell.o
+    0x0000efce   0x0000efce   0x00000002   PAD
+    0x0000efd0   0x0000efd0   0x00000076   Code   RO         1222    .text.shellGetCurrent  shell.o
+    0x0000f046   0x0000f046   0x00000002   PAD
+    0x0000f048   0x0000f048   0x00000086   Code   RO         1262    .text.shellGetVarValue  shell.o
+    0x0000f0ce   0x0000f0ce   0x00000002   PAD
+    0x0000f0d0   0x0000f0d0   0x000001b2   Code   RO         1312    .text.shellHandler  shell.o
+    0x0000f282   0x0000f282   0x00000002   PAD
+    0x0000f284   0x0000f284   0x00000042   Code   RO         1310    .text.shellHelp     shell.o
+    0x0000f2c6   0x0000f2c6   0x00000002   PAD
+    0x0000f2c8   0x0000f2c8   0x0000012e   Code   RO         1290    .text.shellHistory  shell.o
+    0x0000f3f6   0x0000f3f6   0x00000002   PAD
+    0x0000f3f8   0x0000f3f8   0x000000bc   Code   RO         1282    .text.shellHistoryAdd  shell.o
+    0x0000f4b4   0x0000f4b4   0x000000e2   Code   RO         1210    .text.shellInit     shell.o
+    0x0000f596   0x0000f596   0x00000002   PAD
+    0x0000f598   0x0000f598   0x00000156   Code   RO         1258    .text.shellInsertByte  shell.o
+    0x0000f6ee   0x0000f6ee   0x00000002   PAD
+    0x0000f6f0   0x0000f6f0   0x0000001e   Code   RO         1322    .text.shellKeys     shell.o
+    0x0000f70e   0x0000f70e   0x00000002   PAD
+    0x0000f710   0x0000f710   0x00000026   Code   RO         1296    .text.shellLeft     shell.o
+    0x0000f736   0x0000f736   0x00000002   PAD
+    0x0000f738   0x0000f738   0x00000016   Code   RO         1252    .text.shellListAll  shell.o
+    0x0000f74e   0x0000f74e   0x00000002   PAD
+    0x0000f750   0x0000f750   0x00000082   Code   RO         1244    .text.shellListCommand  shell.o
+    0x0000f7d2   0x0000f7d2   0x00000002   PAD
+    0x0000f7d4   0x0000f7d4   0x00000186   Code   RO         1234    .text.shellListItem  shell.o
+    0x0000f95a   0x0000f95a   0x00000002   PAD
+    0x0000f95c   0x0000f95c   0x00000096   Code   RO         1250    .text.shellListKey  shell.o
+    0x0000f9f2   0x0000f9f2   0x00000002   PAD
+    0x0000f9f4   0x0000f9f4   0x00000096   Code   RO         1248    .text.shellListUser  shell.o
+    0x0000fa8a   0x0000fa8a   0x00000002   PAD
+    0x0000fa8c   0x0000fa8c   0x00000096   Code   RO         1246    .text.shellListVar  shell.o
+    0x0000fb22   0x0000fb22   0x00000002   PAD
+    0x0000fb24   0x0000fb24   0x0000002a   Code   RO         1278    .text.shellNormalInput  shell.o
+    0x0000fb4e   0x0000fb4e   0x00000002   PAD
+    0x0000fb50   0x0000fb50   0x0000012a   Code   RO         1284    .text.shellParserParam  shell.o
+    0x0000fc7a   0x0000fc7a   0x00000002   PAD
+    0x0000fc7c   0x0000fc7c   0x000000ae   Code   RO         1274    .text.shellRemoveParamQuotes  shell.o
+    0x0000fd2a   0x0000fd2a   0x00000002   PAD
+    0x0000fd2c   0x0000fd2c   0x00000028   Code   RO         1294    .text.shellRight    shell.o
+    0x0000fd54   0x0000fd54   0x000000ec   Code   RO         1272    .text.shellRunCommand  shell.o
+    0x0000fe40   0x0000fe40   0x000000da   Code   RO         1216    .text.shellSeekCommand  shell.o
+    0x0000ff1a   0x0000ff1a   0x00000002   PAD
+    0x0000ff1c   0x0000ff1c   0x000000a4   Code   RO         1214    .text.shellSetUser  shell.o
+    0x0000ffc0   0x0000ffc0   0x0000009c   Code   RO         1270    .text.shellSetVar   shell.o
+    0x0001005c   0x0001005c   0x000000d8   Code   RO         1264    .text.shellSetVarValue  shell.o
+    0x00010134   0x00010134   0x0000010a   Code   RO         1268    .text.shellShowVar  shell.o
     0x0001023e   0x0001023e   0x00000002   PAD
-    0x00010240   0x00010240   0x00000096   Code   RO         1248    .text.shellListUser  shell.o
-    0x000102d6   0x000102d6   0x00000002   PAD
-    0x000102d8   0x000102d8   0x00000096   Code   RO         1246    .text.shellListVar  shell.o
-    0x0001036e   0x0001036e   0x00000002   PAD
-    0x00010370   0x00010370   0x0000002a   Code   RO         1278    .text.shellNormalInput  shell.o
-    0x0001039a   0x0001039a   0x00000002   PAD
-    0x0001039c   0x0001039c   0x0000012a   Code   RO         1284    .text.shellParserParam  shell.o
-    0x000104c6   0x000104c6   0x00000002   PAD
-    0x000104c8   0x000104c8   0x000000ae   Code   RO         1274    .text.shellRemoveParamQuotes  shell.o
-    0x00010576   0x00010576   0x00000002   PAD
-    0x00010578   0x00010578   0x00000028   Code   RO         1294    .text.shellRight    shell.o
-    0x000105a0   0x000105a0   0x000000ec   Code   RO         1272    .text.shellRunCommand  shell.o
-    0x0001068c   0x0001068c   0x000000da   Code   RO         1216    .text.shellSeekCommand  shell.o
-    0x00010766   0x00010766   0x00000002   PAD
-    0x00010768   0x00010768   0x000000a4   Code   RO         1214    .text.shellSetUser  shell.o
-    0x0001080c   0x0001080c   0x0000009c   Code   RO         1270    .text.shellSetVar   shell.o
-    0x000108a8   0x000108a8   0x000000d8   Code   RO         1264    .text.shellSetVarValue  shell.o
-    0x00010980   0x00010980   0x0000010a   Code   RO         1268    .text.shellShowVar  shell.o
-    0x00010a8a   0x00010a8a   0x00000002   PAD
-    0x00010a8c   0x00010a8c   0x00000072   Code   RO         1300    .text.shellStringCompare  shell.o
-    0x00010afe   0x00010afe   0x00000002   PAD
-    0x00010b00   0x00010b00   0x00000046   Code   RO         1266    .text.shellStringCopy  shell.o
-    0x00010b46   0x00010b46   0x00000002   PAD
-    0x00010b48   0x00010b48   0x00000262   Code   RO         1298    .text.shellTab      shell.o
-    0x00010daa   0x00010daa   0x00000002   PAD
-    0x00010dac   0x00010dac   0x0000003e   Code   RO         1314    .text.shellTask     shell.o
-    0x00010dea   0x00010dea   0x00000002   PAD
-    0x00010dec   0x00010dec   0x000000b8   Code   RO         1232    .text.shellToDec    shell.o
-    0x00010ea4   0x00010ea4   0x0000006c   Code   RO         1230    .text.shellToHex    shell.o
-    0x00010f10   0x00010f10   0x00000012   Code   RO         1288    .text.shellUp       shell.o
-    0x00010f22   0x00010f22   0x00000002   PAD
-    0x00010f24   0x00010f24   0x0000001e   Code   RO         1316    .text.shellUsers    shell.o
-    0x00010f42   0x00010f42   0x00000002   PAD
-    0x00010f44   0x00010f44   0x0000001e   Code   RO         1320    .text.shellVars     shell.o
-    0x00010f62   0x00010f62   0x00000002   PAD
-    0x00010f64   0x00010f64   0x0000001e   Code   RO         1396    .text.shellWrite    shell_port.o
-    0x00010f82   0x00010f82   0x00000002   PAD
-    0x00010f84   0x00010f84   0x00000026   Code   RO         1238    .text.shellWriteByte  shell.o
-    0x00010faa   0x00010faa   0x00000002   PAD
-    0x00010fac   0x00010fac   0x000000d4   Code   RO         1240    .text.shellWriteCommandDesc  shell.o
-    0x00011080   0x00011080   0x0000009c   Code   RO         1302    .text.shellWriteCommandHelp  shell.o
-    0x0001111c   0x0001111c   0x000000d4   Code   RO         1218    .text.shellWritePrompt  shell.o
-    0x000111f0   0x000111f0   0x000000b6   Code   RO         1276    .text.shellWriteReturnValue  shell.o
-    0x000112a6   0x000112a6   0x00000002   PAD
-    0x000112a8   0x000112a8   0x00000062   Code   RO         1224    .text.shellWriteString  shell.o
-    0x0001130a   0x0001130a   0x00000002   PAD
-    0x0001130c   0x0001130c   0x00000046   Code   RO         1398    .text.shell_uart_write_data  shell_port.o
-    0x00011352   0x00011352   0x00000002   PAD
-    0x00011354   0x00011354   0x00000004   Code   RO         1526    .text.soft_reset_mcu  protocol.o
-    0x00011358   0x00011358   0x0000007e   Code   RO         1863    .text.stdout_putchar  retarget_io.o
-    0x000113d6   0x000113d6   0x00000002   PAD
-    0x000113d8   0x000113d8   0x00000016   Code   RO         1135    .text.tick_init     app.o
-    0x000113ee   0x000113ee   0x00000002   PAD
-    0x000113f0   0x000113f0   0x00000128   Code   RO         1094    .text.timer0_init   mytimer.o
-    0x00011518   0x00011518   0x00000070   Code   RO         1071    .text.tuya_UsartRxErrProcess  myusart.o
-    0x00011588   0x00011588   0x00000032   Code   RO         1075    .text.tuya_UsartRxIrqCallback  myusart.o
-    0x000115ba   0x000115ba   0x00000002   PAD
-    0x000115bc   0x000115bc   0x00000008   Code   RO         1532    .text.tuya_re_config_network  protocol.o
-    0x000115c4   0x000115c4   0x00000008   Code   RO         1534    .text.tuya_reset_module  protocol.o
-    0x000115cc   0x000115cc   0x00000002   Code   RO         1536    .text.tuya_retry_ota  protocol.o
-    0x000115ce   0x000115ce   0x00000002   PAD
-    0x000115d0   0x000115d0   0x00000016   Code   RO         1159    .text.uart_post_process  app.o
-    0x000115e6   0x000115e6   0x00000002   PAD
-    0x000115e8   0x000115e8   0x000000c8   Code   RO         1589    .text.uart_receive_input  mcu_api.o
-    0x000116b0   0x000116b0   0x00000032   Code   RO         1458    .text.uart_transmit_output  protocol.o
-    0x000116e2   0x000116e2   0x00000002   PAD
-    0x000116e4   0x000116e4   0x00000032   Code   RO         1402    .text.uart_transmit_output_shell  shell_port.o
-    0x00011716   0x00011716   0x00000002   PAD
-    0x00011718   0x00011718   0x000001c8   Code   RO         1073    .text.usart_init    myusart.o
-    0x000118e0   0x000118e0   0x00000012   Code   RO         1769    OSKERNEL            hardfaulthandler.o
-    0x000118f2   0x000118f2   0x00000002   PAD
-    0x000118f4   0x000118f4   0x00000020   Code   RO         1938    i.__0printf         mc_w.l(printfa.o)
-    0x00011914   0x00011914   0x0000000e   Code   RO         2004    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x00011922   0x00011922   0x00000002   Code   RO         2005    i.__scatterload_null  mc_w.l(handlers.o)
-    0x00011924   0x00011924   0x0000000e   Code   RO         2006    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x00011932   0x00011932   0x00000002   PAD
-    0x00011934   0x00011934   0x00000184   Code   RO         1945    i._fp_digits        mc_w.l(printfa.o)
-    0x00011ab8   0x00011ab8   0x000006dc   Code   RO         1946    i._printf_core      mc_w.l(printfa.o)
-    0x00012194   0x00012194   0x00000024   Code   RO         1947    i._printf_post_padding  mc_w.l(printfa.o)
-    0x000121b8   0x000121b8   0x0000002e   Code   RO         1948    i._printf_pre_padding  mc_w.l(printfa.o)
-    0x000121e6   0x000121e6   0x00000002   PAD
-    0x000121e8   0x000121e8   0x00000018   Data   RO         1853    .rodata.EventRecorderInfo  eventrecorder.o
-    0x00012200   0x00012200   0x00000010   Data   RO         1752    .rodata._PrintUnsigned._aV2C  segger_rtt_printf.o
-    0x00012210   0x00012210   0x00000010   Data   RO          883    .rodata.cst16       hc32f46x_usart.o
-    0x00012220   0x00012220   0x0000003c   Data   RO         1540    .rodata.download_cmd  protocol.o
-    0x0001225c   0x0001225c   0x00000005   Data   RO         1330    .rodata.shellCmdDefaultUser  shell.o
-    0x00012261   0x00012261   0x00000006   Data   RO         1359    .rodata.shellCmdclear  shell.o
-    0x00012267   0x00012267   0x00000005   Data   RO         1353    .rodata.shellCmdcmds  shell.o
-    0x0001226c   0x0001226c   0x00000005   Data   RO         1361    .rodata.shellCmdexec  shell.o
-    0x00012271   0x00012271   0x00000005   Data   RO         1408    .rodata.shellCmdexit  shell_port.o
-    0x00012276   0x00012276   0x0000000b   Data   RO         1175    .rodata.shellCmdfsk_pwm_en  app.o
-    0x00012281   0x00012281   0x00000011   Data   RO         1179    .rodata.shellCmdfsk_pwm_saw_duty  app.o
-    0x00012292   0x00012292   0x00000005   Data   RO         1349    .rodata.shellCmdhelp  shell.o
-    0x00012297   0x00012297   0x00000008   Data   RO         1170    .rodata.shellCmdhexdump  app.o
-    0x0001229f   0x0001229f   0x0000000b   Data   RO         1181    .rodata.shellCmdif_adc_avg  app.o
-    0x000122aa   0x000122aa   0x00000005   Data   RO         1357    .rodata.shellCmdkeys  shell.o
-    0x000122af   0x000122af   0x00000007   Data   RO         1337    .rodata.shellCmdsetVar  shell.o
-    0x000122b6   0x000122b6   0x0000000c   Data   RO         1177    .rodata.shellCmdtimer0_duty  app.o
-    0x000122c2   0x000122c2   0x0000000a   Data   RO         1173    .rodata.shellCmdtimer0_en  app.o
-    0x000122cc   0x000122cc   0x00000006   Data   RO         1351    .rodata.shellCmdusers  shell.o
-    0x000122d2   0x000122d2   0x00000005   Data   RO         1355    .rodata.shellCmdvars  shell.o
-    0x000122d7   0x000122d7   0x0000000d   Data   RO         1332    .rodata.shellDesDefaultUser  shell.o
-    0x000122e4   0x000122e4   0x0000000a   Data   RO         1344    .rodata.shellDesc0x08000000  shell.o
-    0x000122ee   0x000122ee   0x00000004   Data   RO         1343    .rodata.shellDesc0x09000000  shell.o
-    0x000122f2   0x000122f2   0x00000006   Data   RO         1347    .rodata.shellDesc0x0A000000  shell.o
-    0x000122f8   0x000122f8   0x00000006   Data   RO         1348    .rodata.shellDesc0x0D000000  shell.o
-    0x000122fe   0x000122fe   0x00000007   Data   RO         1346    .rodata.shellDesc0x1B5B337E  shell.o
-    0x00012305   0x00012305   0x00000003   Data   RO         1339    .rodata.shellDesc0x1B5B4100  shell.o
-    0x00012308   0x00012308   0x00000005   Data   RO         1340    .rodata.shellDesc0x1B5B4200  shell.o
-    0x0001230d   0x0001230d   0x00000006   Data   RO         1341    .rodata.shellDesc0x1B5B4300  shell.o
-    0x00012313   0x00012313   0x00000005   Data   RO         1342    .rodata.shellDesc0x1B5B4400  shell.o
-    0x00012318   0x00012318   0x0000000a   Data   RO         1345    .rodata.shellDesc0x7F000000  shell.o
-    0x00012322   0x00012322   0x0000000e   Data   RO         1360    .rodata.shellDescclear  shell.o
-    0x00012330   0x00012330   0x0000000d   Data   RO         1354    .rodata.shellDesccmds  shell.o
-    0x0001233d   0x0001233d   0x0000001b   Data   RO         1362    .rodata.shellDescexec  shell.o
-    0x00012358   0x00012358   0x00000005   Data   RO         1409    .rodata.shellDescexit  shell_port.o
-    0x0001235d   0x0001235d   0x00000021   Data   RO         1176    .rodata.shellDescfsk_pwm_en  app.o
-    0x0001237e   0x0001237e   0x0000001a   Data   RO         1180    .rodata.shellDescfsk_pwm_saw_duty  app.o
-    0x00012398   0x00012398   0x0000001e   Data   RO         1350    .rodata.shellDeschelp  shell.o
-    0x000123b6   0x000123b6   0x00000014   Data   RO         1171    .rodata.shellDeschexdump  app.o
-    0x000123ca   0x000123ca   0x00000024   Data   RO         1182    .rodata.shellDescif_adc_avg  app.o
-    0x000123ee   0x000123ee   0x0000000d   Data   RO         1358    .rodata.shellDesckeys  shell.o
-    0x000123fb   0x000123fb   0x00000008   Data   RO         1338    .rodata.shellDescsetVar  shell.o
-    0x00012403   0x00012403   0x0000001a   Data   RO         1178    .rodata.shellDesctimer0_duty  app.o
-    0x0001241d   0x0001241d   0x00000020   Data   RO         1174    .rodata.shellDesctimer0_en  app.o
-    0x0001243d   0x0001243d   0x0000000e   Data   RO         1352    .rodata.shellDescusers  shell.o
-    0x0001244b   0x0001244b   0x0000000d   Data   RO         1356    .rodata.shellDescvars  shell.o
-    0x00012458   0x00012458   0x00000001   Data   RO         1331    .rodata.shellPasswordDefaultUser  shell.o
-    0x00012459   0x00012459   0x0000002d   Data   RO           70    .rodata.str1.1      hc32f46x_utility.o
-    0x00012486   0x00012486   0x0000001d   Data   RO          150    .rodata.str1.1      hc32f46x_adc.o
-    0x000124a3   0x000124a3   0x0000001d   Data   RO          232    .rodata.str1.1      hc32f46x_clk.o
-    0x000124c0   0x000124c0   0x0000001d   Data   RO          286    .rodata.str1.1      hc32f46x_efm.o
-    0x000124dd   0x000124dd   0x0000001e   Data   RO          328    .rodata.str1.1      hc32f46x_gpio.o
-    0x000124fb   0x000124fb   0x00000024   Data   RO          655    .rodata.str1.1      hc32f46x_interrupts.o
-    0x0001251f   0x0001251f   0x0000001d   Data   RO          762    .rodata.str1.1      hc32f46x_pwc.o
-    0x0001253c   0x0001253c   0x00000020   Data   RO          802    .rodata.str1.1      hc32f46x_timer0.o
-    0x0001255c   0x0001255c   0x0000001f   Data   RO          882    .rodata.str1.1      hc32f46x_usart.o
-    0x0001257b   0x0001257b   0x0000001e   Data   RO          947    .rodata.str1.1      hc32f46x_dmac.o
-    0x00012599   0x00012599   0x00000020   Data   RO         1020    .rodata.str1.1      hc32f46x_timera.o
-    0x000125b9   0x000125b9   0x0000000e   Data   RO         1046    .rodata.str1.1      myadc.o
-    0x000125c7   0x000125c7   0x0000001f   Data   RO         1107    .rodata.str1.1      mytimer.o
-    0x000125e6   0x000125e6   0x00000096   Data   RO         1119    .rodata.str1.1      myclk.o
-    0x0001267c   0x0001267c   0x00000199   Data   RO         1169    .rodata.str1.1      app.o
-    0x00012815   0x00012815   0x00000020   Data   RO         1202    .rodata.str1.1      timera_pwm.o
-    0x00012835   0x00012835   0x000002d0   Data   RO         1334    .rodata.str1.1      shell.o
-    0x00012b05   0x00012b05   0x00000023   Data   RO         1443    .rodata.str1.1      system.o
-    0x00012b28   0x00012b28   0x0000002f   Data   RO         1541    .rodata.str1.1      protocol.o
-    0x00012b57   0x00012b57   0x00000367   Data   RO         1646    .rodata.str1.1      mcu_ota_handler.o
-    0x00012ebe   0x00012ebe   0x00000014   Data   RO         1732    .rodata.str1.1      segger_rtt.o
-    0x00012ed2   0x00012ed2   0x00000002   PAD
-    0x00012ed4   0x00012ed4   0x00000020   Data   RO         2003    Region$$Table       anon$$obj.o
-    0x00012ef4   0x00012ef4   0x00000060   Data   RO         1172    shellCommand        app.o
-    0x00012f54   0x00012f54   0x00000130   Data   RO         1333    shellCommand        shell.o
-    0x00013084   0x00013084   0x00000010   Data   RO         1410    shellCommand        shell_port.o
+    0x00010240   0x00010240   0x00000072   Code   RO         1300    .text.shellStringCompare  shell.o
+    0x000102b2   0x000102b2   0x00000002   PAD
+    0x000102b4   0x000102b4   0x00000046   Code   RO         1266    .text.shellStringCopy  shell.o
+    0x000102fa   0x000102fa   0x00000002   PAD
+    0x000102fc   0x000102fc   0x00000262   Code   RO         1298    .text.shellTab      shell.o
+    0x0001055e   0x0001055e   0x00000002   PAD
+    0x00010560   0x00010560   0x0000003e   Code   RO         1314    .text.shellTask     shell.o
+    0x0001059e   0x0001059e   0x00000002   PAD
+    0x000105a0   0x000105a0   0x000000b8   Code   RO         1232    .text.shellToDec    shell.o
+    0x00010658   0x00010658   0x0000006c   Code   RO         1230    .text.shellToHex    shell.o
+    0x000106c4   0x000106c4   0x00000012   Code   RO         1288    .text.shellUp       shell.o
+    0x000106d6   0x000106d6   0x00000002   PAD
+    0x000106d8   0x000106d8   0x0000001e   Code   RO         1316    .text.shellUsers    shell.o
+    0x000106f6   0x000106f6   0x00000002   PAD
+    0x000106f8   0x000106f8   0x0000001e   Code   RO         1320    .text.shellVars     shell.o
+    0x00010716   0x00010716   0x00000002   PAD
+    0x00010718   0x00010718   0x0000001e   Code   RO         1396    .text.shellWrite    shell_port.o
+    0x00010736   0x00010736   0x00000002   PAD
+    0x00010738   0x00010738   0x00000026   Code   RO         1238    .text.shellWriteByte  shell.o
+    0x0001075e   0x0001075e   0x00000002   PAD
+    0x00010760   0x00010760   0x000000d4   Code   RO         1240    .text.shellWriteCommandDesc  shell.o
+    0x00010834   0x00010834   0x0000009c   Code   RO         1302    .text.shellWriteCommandHelp  shell.o
+    0x000108d0   0x000108d0   0x000000d4   Code   RO         1218    .text.shellWritePrompt  shell.o
+    0x000109a4   0x000109a4   0x000000b6   Code   RO         1276    .text.shellWriteReturnValue  shell.o
+    0x00010a5a   0x00010a5a   0x00000002   PAD
+    0x00010a5c   0x00010a5c   0x00000062   Code   RO         1224    .text.shellWriteString  shell.o
+    0x00010abe   0x00010abe   0x00000002   PAD
+    0x00010ac0   0x00010ac0   0x00000046   Code   RO         1398    .text.shell_uart_write_data  shell_port.o
+    0x00010b06   0x00010b06   0x00000002   PAD
+    0x00010b08   0x00010b08   0x00000004   Code   RO         1526    .text.soft_reset_mcu  protocol.o
+    0x00010b0c   0x00010b0c   0x0000007e   Code   RO         1863    .text.stdout_putchar  retarget_io.o
+    0x00010b8a   0x00010b8a   0x00000002   PAD
+    0x00010b8c   0x00010b8c   0x00000016   Code   RO         1135    .text.tick_init     app.o
+    0x00010ba2   0x00010ba2   0x00000002   PAD
+    0x00010ba4   0x00010ba4   0x00000128   Code   RO         1094    .text.timer0_init   mytimer.o
+    0x00010ccc   0x00010ccc   0x00000070   Code   RO         1071    .text.tuya_UsartRxErrProcess  myusart.o
+    0x00010d3c   0x00010d3c   0x00000032   Code   RO         1075    .text.tuya_UsartRxIrqCallback  myusart.o
+    0x00010d6e   0x00010d6e   0x00000002   PAD
+    0x00010d70   0x00010d70   0x00000008   Code   RO         1532    .text.tuya_re_config_network  protocol.o
+    0x00010d78   0x00010d78   0x00000008   Code   RO         1534    .text.tuya_reset_module  protocol.o
+    0x00010d80   0x00010d80   0x00000002   Code   RO         1536    .text.tuya_retry_ota  protocol.o
+    0x00010d82   0x00010d82   0x00000002   PAD
+    0x00010d84   0x00010d84   0x00000016   Code   RO         1159    .text.uart_post_process  app.o
+    0x00010d9a   0x00010d9a   0x00000002   PAD
+    0x00010d9c   0x00010d9c   0x000000c8   Code   RO         1589    .text.uart_receive_input  mcu_api.o
+    0x00010e64   0x00010e64   0x00000032   Code   RO         1458    .text.uart_transmit_output  protocol.o
+    0x00010e96   0x00010e96   0x00000002   PAD
+    0x00010e98   0x00010e98   0x00000032   Code   RO         1402    .text.uart_transmit_output_shell  shell_port.o
+    0x00010eca   0x00010eca   0x00000002   PAD
+    0x00010ecc   0x00010ecc   0x000001c8   Code   RO         1073    .text.usart_init    myusart.o
+    0x00011094   0x00011094   0x00000012   Code   RO         1769    OSKERNEL            hardfaulthandler.o
+    0x000110a6   0x000110a6   0x0000000a   Ven    RO         2010    Veneer$$Code        anon$$obj.o
+    0x000110b0   0x000110b0   0x0000000a   Ven    RO         2011    Veneer$$Code        anon$$obj.o
+    0x000110ba   0x000110ba   0x0000000a   Ven    RO         2012    Veneer$$Code        anon$$obj.o
+    0x000110c4   0x000110c4   0x0000000a   Ven    RO         2013    Veneer$$Code        anon$$obj.o
+    0x000110ce   0x000110ce   0x00000002   PAD
+    0x000110d0   0x000110d0   0x00000020   Code   RO         1938    i.__0printf         mc_w.l(printfa.o)
+    0x000110f0   0x000110f0   0x0000000e   Code   RO         2004    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x000110fe   0x000110fe   0x00000002   Code   RO         2005    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00011100   0x00011100   0x0000000e   Code   RO         2006    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0001110e   0x0001110e   0x00000002   PAD
+    0x00011110   0x00011110   0x00000184   Code   RO         1945    i._fp_digits        mc_w.l(printfa.o)
+    0x00011294   0x00011294   0x000006dc   Code   RO         1946    i._printf_core      mc_w.l(printfa.o)
+    0x00011970   0x00011970   0x00000024   Code   RO         1947    i._printf_post_padding  mc_w.l(printfa.o)
+    0x00011994   0x00011994   0x0000002e   Code   RO         1948    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x000119c2   0x000119c2   0x00000010   Data   RO         1752    .rodata._PrintUnsigned._aV2C  segger_rtt_printf.o
+    0x000119d2   0x000119d2   0x00000010   Data   RO          883    .rodata.cst16       hc32f46x_usart.o
+    0x000119e2   0x000119e2   0x0000003c   Data   RO         1540    .rodata.download_cmd  protocol.o
+    0x00011a1e   0x00011a1e   0x00000005   Data   RO         1330    .rodata.shellCmdDefaultUser  shell.o
+    0x00011a23   0x00011a23   0x00000006   Data   RO         1359    .rodata.shellCmdclear  shell.o
+    0x00011a29   0x00011a29   0x00000005   Data   RO         1353    .rodata.shellCmdcmds  shell.o
+    0x00011a2e   0x00011a2e   0x00000005   Data   RO         1361    .rodata.shellCmdexec  shell.o
+    0x00011a33   0x00011a33   0x00000005   Data   RO         1408    .rodata.shellCmdexit  shell_port.o
+    0x00011a38   0x00011a38   0x0000000b   Data   RO         1175    .rodata.shellCmdfsk_pwm_en  app.o
+    0x00011a43   0x00011a43   0x00000011   Data   RO         1179    .rodata.shellCmdfsk_pwm_saw_duty  app.o
+    0x00011a54   0x00011a54   0x00000005   Data   RO         1349    .rodata.shellCmdhelp  shell.o
+    0x00011a59   0x00011a59   0x00000008   Data   RO         1170    .rodata.shellCmdhexdump  app.o
+    0x00011a61   0x00011a61   0x0000000b   Data   RO         1181    .rodata.shellCmdif_adc_avg  app.o
+    0x00011a6c   0x00011a6c   0x00000005   Data   RO         1357    .rodata.shellCmdkeys  shell.o
+    0x00011a71   0x00011a71   0x00000007   Data   RO         1337    .rodata.shellCmdsetVar  shell.o
+    0x00011a78   0x00011a78   0x0000000c   Data   RO         1177    .rodata.shellCmdtimer0_duty  app.o
+    0x00011a84   0x00011a84   0x0000000a   Data   RO         1173    .rodata.shellCmdtimer0_en  app.o
+    0x00011a8e   0x00011a8e   0x00000006   Data   RO         1351    .rodata.shellCmdusers  shell.o
+    0x00011a94   0x00011a94   0x00000005   Data   RO         1355    .rodata.shellCmdvars  shell.o
+    0x00011a99   0x00011a99   0x0000000d   Data   RO         1332    .rodata.shellDesDefaultUser  shell.o
+    0x00011aa6   0x00011aa6   0x0000000a   Data   RO         1344    .rodata.shellDesc0x08000000  shell.o
+    0x00011ab0   0x00011ab0   0x00000004   Data   RO         1343    .rodata.shellDesc0x09000000  shell.o
+    0x00011ab4   0x00011ab4   0x00000006   Data   RO         1347    .rodata.shellDesc0x0A000000  shell.o
+    0x00011aba   0x00011aba   0x00000006   Data   RO         1348    .rodata.shellDesc0x0D000000  shell.o
+    0x00011ac0   0x00011ac0   0x00000007   Data   RO         1346    .rodata.shellDesc0x1B5B337E  shell.o
+    0x00011ac7   0x00011ac7   0x00000003   Data   RO         1339    .rodata.shellDesc0x1B5B4100  shell.o
+    0x00011aca   0x00011aca   0x00000005   Data   RO         1340    .rodata.shellDesc0x1B5B4200  shell.o
+    0x00011acf   0x00011acf   0x00000006   Data   RO         1341    .rodata.shellDesc0x1B5B4300  shell.o
+    0x00011ad5   0x00011ad5   0x00000005   Data   RO         1342    .rodata.shellDesc0x1B5B4400  shell.o
+    0x00011ada   0x00011ada   0x0000000a   Data   RO         1345    .rodata.shellDesc0x7F000000  shell.o
+    0x00011ae4   0x00011ae4   0x0000000e   Data   RO         1360    .rodata.shellDescclear  shell.o
+    0x00011af2   0x00011af2   0x0000000d   Data   RO         1354    .rodata.shellDesccmds  shell.o
+    0x00011aff   0x00011aff   0x0000001b   Data   RO         1362    .rodata.shellDescexec  shell.o
+    0x00011b1a   0x00011b1a   0x00000005   Data   RO         1409    .rodata.shellDescexit  shell_port.o
+    0x00011b1f   0x00011b1f   0x00000021   Data   RO         1176    .rodata.shellDescfsk_pwm_en  app.o
+    0x00011b40   0x00011b40   0x0000001a   Data   RO         1180    .rodata.shellDescfsk_pwm_saw_duty  app.o
+    0x00011b5a   0x00011b5a   0x0000001e   Data   RO         1350    .rodata.shellDeschelp  shell.o
+    0x00011b78   0x00011b78   0x00000014   Data   RO         1171    .rodata.shellDeschexdump  app.o
+    0x00011b8c   0x00011b8c   0x00000024   Data   RO         1182    .rodata.shellDescif_adc_avg  app.o
+    0x00011bb0   0x00011bb0   0x0000000d   Data   RO         1358    .rodata.shellDesckeys  shell.o
+    0x00011bbd   0x00011bbd   0x00000008   Data   RO         1338    .rodata.shellDescsetVar  shell.o
+    0x00011bc5   0x00011bc5   0x0000001a   Data   RO         1178    .rodata.shellDesctimer0_duty  app.o
+    0x00011bdf   0x00011bdf   0x00000020   Data   RO         1174    .rodata.shellDesctimer0_en  app.o
+    0x00011bff   0x00011bff   0x0000000e   Data   RO         1352    .rodata.shellDescusers  shell.o
+    0x00011c0d   0x00011c0d   0x0000000d   Data   RO         1356    .rodata.shellDescvars  shell.o
+    0x00011c1a   0x00011c1a   0x00000001   Data   RO         1331    .rodata.shellPasswordDefaultUser  shell.o
+    0x00011c1b   0x00011c1b   0x0000002d   Data   RO           70    .rodata.str1.1      hc32f46x_utility.o
+    0x00011c48   0x00011c48   0x0000001d   Data   RO          150    .rodata.str1.1      hc32f46x_adc.o
+    0x00011c65   0x00011c65   0x0000001d   Data   RO          232    .rodata.str1.1      hc32f46x_clk.o
+    0x00011c82   0x00011c82   0x0000001d   Data   RO          286    .rodata.str1.1      hc32f46x_efm.o
+    0x00011c9f   0x00011c9f   0x0000001e   Data   RO          328    .rodata.str1.1      hc32f46x_gpio.o
+    0x00011cbd   0x00011cbd   0x00000024   Data   RO          655    .rodata.str1.1      hc32f46x_interrupts.o
+    0x00011ce1   0x00011ce1   0x0000001d   Data   RO          762    .rodata.str1.1      hc32f46x_pwc.o
+    0x00011cfe   0x00011cfe   0x00000020   Data   RO          802    .rodata.str1.1      hc32f46x_timer0.o
+    0x00011d1e   0x00011d1e   0x0000001f   Data   RO          882    .rodata.str1.1      hc32f46x_usart.o
+    0x00011d3d   0x00011d3d   0x0000001e   Data   RO          947    .rodata.str1.1      hc32f46x_dmac.o
+    0x00011d5b   0x00011d5b   0x00000020   Data   RO         1020    .rodata.str1.1      hc32f46x_timera.o
+    0x00011d7b   0x00011d7b   0x0000000e   Data   RO         1046    .rodata.str1.1      myadc.o
+    0x00011d89   0x00011d89   0x0000001f   Data   RO         1107    .rodata.str1.1      mytimer.o
+    0x00011da8   0x00011da8   0x00000096   Data   RO         1119    .rodata.str1.1      myclk.o
+    0x00011e3e   0x00011e3e   0x00000199   Data   RO         1169    .rodata.str1.1      app.o
+    0x00011fd7   0x00011fd7   0x00000020   Data   RO         1202    .rodata.str1.1      timera_pwm.o
+    0x00011ff7   0x00011ff7   0x000002d0   Data   RO         1334    .rodata.str1.1      shell.o
+    0x000122c7   0x000122c7   0x00000023   Data   RO         1443    .rodata.str1.1      system.o
+    0x000122ea   0x000122ea   0x0000002f   Data   RO         1541    .rodata.str1.1      protocol.o
+    0x00012319   0x00012319   0x00000367   Data   RO         1646    .rodata.str1.1      mcu_ota_handler.o
+    0x00012680   0x00012680   0x00000014   Data   RO         1732    .rodata.str1.1      segger_rtt.o
+    0x00012694   0x00012694   0x00000030   Data   RO         2003    Region$$Table       anon$$obj.o
+    0x000126c4   0x000126c4   0x00000060   Data   RO         1172    shellCommand        app.o
+    0x00012724   0x00012724   0x00000130   Data   RO         1333    shellCommand        shell.o
+    0x00012854   0x00012854   0x00000010   Data   RO         1410    shellCommand        shell_port.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x1fff9000, Load base: 0x000130c0, Size: 0x0000df98, Max: 0x0002e000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x1fff8000, Load base: 0x00012868, Size: 0x0000dab8, Max: 0x0002f000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x1fff9000   0x000130c0   0x00000004   Data   RW         1889    .data               mc_w.l(stdout.o)
-    0x1fff9004   0x000130c4   0x00000014   Data   RW         1790    .data.FIFO_Data     fifo.o
-    0x1fff9018   0x000130d8   0x00000004   Data   RW           15    .data.HRC_VALUE     system_hc32f46x.o
-    0x1fff901c   0x000130dc   0x00000004   Data   RW           16    .data.SystemCoreClock  system_hc32f46x.o
-    0x1fff9020   0x000130e0   0x00000058   Data   RW         1336    .data.shellText     shell.o
-    0x1fff9078   0x00013138   0x00000008   PAD
-    0x1fff9080        -       0x00000001   Zero   RW          948    .bss.DmaChEnState   hc32f46x_dmac.o
-    0x1fff9081   0x00013138   0x00000001   PAD
-    0x1fff9082        -       0x00001f40   Zero   RW         1789    .bss.FIFO_DataBuffer  fifo.o
-    0x1fffafc2   0x00013138   0x00000002   PAD
-    0x1fffafc4        -       0x00000040   Zero   RW         1762    .bss.HardFaultRegs  segger_hardfaulthandler.o
-    0x1fffb004        -       0x00000200   Zero   RW          654    .bss.IrqHandler     hc32f46x_interrupts.o
-    0x1fffb204        -       0x00004000   Zero   RW         1183    .bss.JS_RTT_UpBuffer  app.o
-    0x1ffff204        -       0x00000004   Zero   RW         1106    .bss.Timer_Counter  mytimer.o
-    0x1ffff208        -       0x00000002   Zero   RW         1599    .bss.UART_RX_Count  mcu_api.o
-    0x1ffff20a   0x00013138   0x00000002   PAD
-    0x1ffff20c        -       0x00000004   Zero   RW         1763    .bss._Continue      segger_hardfaulthandler.o
-    0x1ffff210        -       0x00000078   Zero   RW         1729    .bss._SEGGER_RTT    segger_rtt.o
-    0x1ffff288        -       0x00000010   Zero   RW         1734    .bss._acDownBuffer  segger_rtt.o
-    0x1ffff298        -       0x00001000   Zero   RW         1733    .bss._acUpBuffer    segger_rtt.o
-    0x20000298        -       0x00000207   Zero   RW         1448    .bss.bt_queue_buf   system.o
-    0x2000049f        -       0x00000107   Zero   RW         1441    .bss.bt_uart_rx_buf  system.o
-    0x200005a6        -       0x00000003   Zero   RW         1598    .bss.bt_uart_rx_buf_temp  mcu_api.o
-    0x200005a9   0x00013138   0x00000001   PAD
-    0x200005aa        -       0x00000002   Zero   RW         1597    .bss.bt_uart_service.rx_in  mcu_api.o
-    0x200005ac        -       0x00000207   Zero   RW         1440    .bss.bt_uart_tx_buf  system.o
-    0x200007b3        -       0x00000001   Zero   RW         1444    .bss.bt_work_state  system.o
-    0x200007b4        -       0x00000002   Zero   RW         1647    .bss.current_package  mcu_ota_handler.o
-    0x200007b6   0x00013138   0x00000002   PAD
-    0x200007b8        -       0x00000004   Zero   RW         1600    .bss.current_uart_rev_state_type  mcu_api.o
-    0x200007bc        -       0x00000001   Zero   RW         1442    .bss.data_handle.hand_up_status_last  system.o
-    0x200007bd   0x00013138   0x00000003   PAD
-    0x200007c0        -       0x00000004   Zero   RW         1184    .bss.idle_process.last_tick  app.o
-    0x200007c4        -       0x00000002   Zero   RW         1648    .bss.last_package   mcu_ota_handler.o
-    0x200007c6        -       0x00000022   Zero   RW         1047    .bss.m_au16Adc1SaValue  myadc.o
-    0x200007e8        -       0x00000012   Zero   RW         1048    .bss.m_au16Adc2SaValue  myadc.o
-    0x200007fa   0x00013138   0x00000002   PAD
-    0x200007fc        -       0x00000004   Zero   RW           69    .bss.m_u32TickCount  hc32f46x_utility.o
-    0x20000800        -       0x00000004   Zero   RW           68    .bss.m_u32TickStep  hc32f46x_utility.o
-    0x20000804        -       0x00000004   Zero   RW         1649    .bss.mcu_ota_offset_req.offset_mcu_last  mcu_ota_handler.o
-    0x20000808        -       0x00000004   Zero   RW         1168    .bss.next_state     app.o
-    0x2000080c   0x00013138   0x00000034   PAD
-    0x20000840        -       0x000004a4   Zero   RW         1852    .bss.noinit         eventrecorder.o
-    0x20000ce4        -       0x00000004   Zero   RW         1446    .bss.queue_in       system.o
-    0x20000ce8        -       0x00000004   Zero   RW         1447    .bss.queue_out      system.o
-    0x20000cec        -       0x00000001   Zero   RW         1445    .bss.reset_bt_flag  system.o
-    0x20000ced   0x00013138   0x00000003   PAD
-    0x20000cf0        -       0x0000006c   Zero   RW         1406    .bss.shell          shell_port.o
-    0x20000d5c        -       0x00000009   Zero   RW         1363    .bss.shellGetCommandName.buffer  shell.o
-    0x20000d65   0x00013138   0x00000003   PAD
-    0x20000d68        -       0x00000014   Zero   RW         1335    .bss.shellList      shell.o
-    0x20000d7c        -       0x00000200   Zero   RW         1407    .bss.shell_buffer   shell_port.o
-    0x20000f7c        -       0x00000004   Zero   RW         1167    .bss.state          app.o
-    0x20000f80        -       0x00000008   Zero   RW         1875    .bss.stdout_putchar.buffer  retarget_io.o
-    0x20000f88        -       0x00000004   Zero   RW         1874    .bss.stdout_putchar.index  retarget_io.o
-    0x20000f8c        -       0x00000001   Zero   RW         1449    .bss.stop_update_flag  system.o
-    0x20000f8d   0x00013138   0x00000003   PAD
-    0x20000f90        -       0x00000004   Zero   RW         1645    .bss.tuya_ota_status  mcu_ota_handler.o
-    0x20000f94        -       0x00000002   Zero   RW         1601    .bss.uart_data_len  mcu_api.o
-    0x20000f96   0x00013138   0x00000002   PAD
-    0x20000f98        -       0x00006000   Zero   RW            1    STACK               startup_hc32f46x.o
+    0x1fff8000   0x00012868   0x00000004   Data   RW         1889    .data               mc_w.l(stdout.o)
+    0x1fff8004   0x0001286c   0x00000014   Data   RW         1790    .data.FIFO_Data     fifo.o
+    0x1fff8018   0x00012880   0x00000004   Data   RW           15    .data.HRC_VALUE     system_hc32f46x.o
+    0x1fff801c   0x00012884   0x00000004   Data   RW           16    .data.SystemCoreClock  system_hc32f46x.o
+    0x1fff8020   0x00012888   0x00000058   Data   RW         1336    .data.shellText     shell.o
+    0x1fff8078        -       0x00000001   Zero   RW          948    .bss.DmaChEnState   hc32f46x_dmac.o
+    0x1fff8079   0x000128e0   0x00000001   PAD
+    0x1fff807a        -       0x00001f40   Zero   RW         1789    .bss.FIFO_DataBuffer  fifo.o
+    0x1fff9fba   0x000128e0   0x00000002   PAD
+    0x1fff9fbc        -       0x00000040   Zero   RW         1762    .bss.HardFaultRegs  segger_hardfaulthandler.o
+    0x1fff9ffc        -       0x00000200   Zero   RW          654    .bss.IrqHandler     hc32f46x_interrupts.o
+    0x1fffa1fc        -       0x00004000   Zero   RW         1183    .bss.JS_RTT_UpBuffer  app.o
+    0x1fffe1fc        -       0x00000004   Zero   RW         1106    .bss.Timer_Counter  mytimer.o
+    0x1fffe200        -       0x00000002   Zero   RW         1599    .bss.UART_RX_Count  mcu_api.o
+    0x1fffe202   0x000128e0   0x00000002   PAD
+    0x1fffe204        -       0x00000004   Zero   RW         1763    .bss._Continue      segger_hardfaulthandler.o
+    0x1fffe208        -       0x00000078   Zero   RW         1729    .bss._SEGGER_RTT    segger_rtt.o
+    0x1fffe280        -       0x00000010   Zero   RW         1734    .bss._acDownBuffer  segger_rtt.o
+    0x1fffe290        -       0x00001000   Zero   RW         1733    .bss._acUpBuffer    segger_rtt.o
+    0x1ffff290        -       0x00000207   Zero   RW         1448    .bss.bt_queue_buf   system.o
+    0x1ffff497        -       0x00000107   Zero   RW         1441    .bss.bt_uart_rx_buf  system.o
+    0x1ffff59e        -       0x00000003   Zero   RW         1598    .bss.bt_uart_rx_buf_temp  mcu_api.o
+    0x1ffff5a1   0x000128e0   0x00000001   PAD
+    0x1ffff5a2        -       0x00000002   Zero   RW         1597    .bss.bt_uart_service.rx_in  mcu_api.o
+    0x1ffff5a4        -       0x00000207   Zero   RW         1440    .bss.bt_uart_tx_buf  system.o
+    0x1ffff7ab        -       0x00000001   Zero   RW         1444    .bss.bt_work_state  system.o
+    0x1ffff7ac        -       0x00000002   Zero   RW         1647    .bss.current_package  mcu_ota_handler.o
+    0x1ffff7ae   0x000128e0   0x00000002   PAD
+    0x1ffff7b0        -       0x00000004   Zero   RW         1600    .bss.current_uart_rev_state_type  mcu_api.o
+    0x1ffff7b4        -       0x00000001   Zero   RW         1442    .bss.data_handle.hand_up_status_last  system.o
+    0x1ffff7b5   0x000128e0   0x00000003   PAD
+    0x1ffff7b8        -       0x00000004   Zero   RW         1184    .bss.idle_process.last_tick  app.o
+    0x1ffff7bc        -       0x00000002   Zero   RW         1648    .bss.last_package   mcu_ota_handler.o
+    0x1ffff7be        -       0x00000022   Zero   RW         1047    .bss.m_au16Adc1SaValue  myadc.o
+    0x1ffff7e0        -       0x00000012   Zero   RW         1048    .bss.m_au16Adc2SaValue  myadc.o
+    0x1ffff7f2   0x000128e0   0x00000002   PAD
+    0x1ffff7f4        -       0x00000004   Zero   RW           69    .bss.m_u32TickCount  hc32f46x_utility.o
+    0x1ffff7f8        -       0x00000004   Zero   RW           68    .bss.m_u32TickStep  hc32f46x_utility.o
+    0x1ffff7fc        -       0x00000004   Zero   RW         1649    .bss.mcu_ota_offset_req.offset_mcu_last  mcu_ota_handler.o
+    0x1ffff800        -       0x00000004   Zero   RW         1168    .bss.next_state     app.o
+    0x1ffff804        -       0x00000004   Zero   RW         1446    .bss.queue_in       system.o
+    0x1ffff808        -       0x00000004   Zero   RW         1447    .bss.queue_out      system.o
+    0x1ffff80c        -       0x00000001   Zero   RW         1445    .bss.reset_bt_flag  system.o
+    0x1ffff80d   0x000128e0   0x00000003   PAD
+    0x1ffff810        -       0x0000006c   Zero   RW         1406    .bss.shell          shell_port.o
+    0x1ffff87c        -       0x00000009   Zero   RW         1363    .bss.shellGetCommandName.buffer  shell.o
+    0x1ffff885   0x000128e0   0x00000003   PAD
+    0x1ffff888        -       0x00000014   Zero   RW         1335    .bss.shellList      shell.o
+    0x1ffff89c        -       0x00000200   Zero   RW         1407    .bss.shell_buffer   shell_port.o
+    0x1ffffa9c        -       0x00000004   Zero   RW         1167    .bss.state          app.o
+    0x1ffffaa0        -       0x00000008   Zero   RW         1875    .bss.stdout_putchar.buffer  retarget_io.o
+    0x1ffffaa8        -       0x00000004   Zero   RW         1874    .bss.stdout_putchar.index  retarget_io.o
+    0x1ffffaac        -       0x00000001   Zero   RW         1449    .bss.stop_update_flag  system.o
+    0x1ffffaad   0x000128e0   0x00000003   PAD
+    0x1ffffab0        -       0x00000004   Zero   RW         1645    .bss.tuya_ota_status  mcu_ota_handler.o
+    0x1ffffab4        -       0x00000002   Zero   RW         1601    .bss.uart_data_len  mcu_api.o
+    0x1ffffab6   0x000128e0   0x00000002   PAD
+    0x1ffffab8        -       0x00006000   Zero   RW            1    STACK               startup_hc32f46x.o
+
+
+    Execution Region RW_IRAM2 (Exec base: 0x200f0000, Load base: 0x00012900, Size: 0x00000d24, Max: 0x00001000, ABSOLUTE, UNINIT)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x200f0000   0x00012900   0x00000040   Code   RO         1824    .text.EventCheckFilter  eventrecorder.o
+    0x200f0040   0x00012940   0x00000042   Code   RO         1810    .text.EventGetTS    eventrecorder.o
+    0x200f0082   0x00012982   0x00000002   PAD
+    0x200f0084   0x00012984   0x0000005c   Code   RO         1828    .text.EventRecord2  eventrecorder.o
+    0x200f00e0   0x000129e0   0x000001a6   Code   RO         1822    .text.EventRecordData  eventrecorder.o
+    0x200f0286   0x00012b86   0x00000002   PAD
+    0x200f0288   0x00012b88   0x00000100   Code   RO         1812    .text.EventRecordItem  eventrecorder.o
+    0x200f0388   0x00012c88   0x00000094   Code   RO         1808    .text.EventRecorderEnable  eventrecorder.o
+    0x200f041c   0x00012d1c   0x000001cc   Code   RO         1804    .text.EventRecorderInitialize  eventrecorder.o
+    0x200f05e8   0x00012ee8   0x0000004e   Code   RO         1814    .text.EventRecorderStart  eventrecorder.o
+    0x200f0636   0x00012f36   0x00000002   PAD
+    0x200f0638   0x00012f38   0x0000000c   Code   RO         1802    .text.EventRecorderTimerGetCount  eventrecorder.o
+    0x200f0644   0x00012f44   0x0000000c   Code   RO         1800    .text.EventRecorderTimerGetFreq  eventrecorder.o
+    0x200f0650   0x00012f50   0x00000024   Code   RO         1798    .text.EventRecorderTimerSetup  eventrecorder.o
+    0x200f0674   0x00012f74   0x00000012   Code   RO         1826    .text.GetContext    eventrecorder.o
+    0x200f0686   0x00012f86   0x00000002   PAD
+    0x200f0688   0x00012f88   0x00000012   Code   RO         1840    .text.GetRecordIndex  eventrecorder.o
+    0x200f069a   0x00012f9a   0x00000002   PAD
+    0x200f069c   0x00012f9c   0x00000012   Code   RO         1834    .text.IncrementOverflowTS  eventrecorder.o
+    0x200f06ae   0x00012fae   0x00000002   PAD
+    0x200f06b0   0x00012fb0   0x00000012   Code   RO         1848    .text.IncrementRecordsDumped  eventrecorder.o
+    0x200f06c2   0x00012fc2   0x00000002   PAD
+    0x200f06c4   0x00012fc4   0x00000012   Code   RO         1846    .text.IncrementRecordsWritten  eventrecorder.o
+    0x200f06d6   0x00012fd6   0x00000002   PAD
+    0x200f06d8   0x00012fd8   0x00000036   Code   RO         1842    .text.LockRecord    eventrecorder.o
+    0x200f070e   0x0001300e   0x00000002   PAD
+    0x200f0710   0x00013010   0x00000032   Code   RO         1844    .text.UnlockRecord  eventrecorder.o
+    0x200f0742   0x00013042   0x00000002   PAD
+    0x200f0744   0x00013044   0x0000001a   Code   RO         1832    .text.UpdateTS      eventrecorder.o
+    0x200f075e   0x0001305e   0x00000002   PAD
+    0x200f0760   0x00013060   0x00000020   Code   RO         1838    .text.atomic_inc32  eventrecorder.o
+    0x200f0780   0x00013080   0x00000024   Code   RO         1850    .text.atomic_inc8   eventrecorder.o
+    0x200f07a4   0x000130a4   0x00000020   Code   RO         1836    .text.atomic_xch32  eventrecorder.o
+    0x200f07c4   0x000130c4   0x00000086   Code   RO         1806    .text.crc16_ccitt   eventrecorder.o
+    0x200f084a   0x0001314a   0x0000000a   Ven    RO         2014    Veneer$$Code        anon$$obj.o
+    0x200f0854   0x00013154   0x0000000a   Ven    RO         2015    Veneer$$Code        anon$$obj.o
+    0x200f085e   0x0001315e   0x0000000a   Ven    RO         2016    Veneer$$Code        anon$$obj.o
+    0x200f0868   0x00013168   0x00000018   Data   RO         1853    .rodata.EventRecorderInfo  eventrecorder.o
+    0x200f0880        -       0x000004a4   Zero   RW         1852    .bss.noinit         eventrecorder.o
 
 
 

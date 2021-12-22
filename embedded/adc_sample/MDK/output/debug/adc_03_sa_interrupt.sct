@@ -9,8 +9,11 @@ LR_IROM1 0x00000000 0x00080000  {    ; load region size_region
    .ANY (+RO)
    .ANY (+XO)
   }
-  RW_IRAM1 0x1FFF9000 0x0002E000  {  ; RW data
+  RW_IRAM1 0x1FFF8000 0x0002F000  {  ; RW data
    .ANY (+RW +ZI)
+  }
+  RW_IRAM2 0x200F0000 UNINIT 0x00001000  {
+    EventRecorder.o (+RO +ZI +RW)
   }
 }
 
