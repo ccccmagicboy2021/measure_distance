@@ -1,3 +1,8 @@
+.\adc_sample
+.\adc_sample_with_pwm-8161-4k
+.\adc_sample_with_pwm8161-512-2K
+都为华大F460单片机的工程
+
 采样程序说明：
 波特率等：512000@8n1
 采样率：2K samples/s
