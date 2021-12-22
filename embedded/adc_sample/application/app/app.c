@@ -359,6 +359,9 @@ void init_all(void)
 	en_sample(false);
 #endif
 
+	EventRecorderInitialize(EventRecordAll, 1U); 
+	EventRecorderStart(); 
+
 	//
 	init_finish_tick = SysTick_GetTick();
 	CV_LOG("\r\n%s - %s%sinit time: %dms%s\r\n", __FUNCTION__, RTT_CTRL_BG_BRIGHT_BLUE, RTT_CTRL_TEXT_WHITE, init_finish_tick - start_tick, RTT_CTRL_RESET);

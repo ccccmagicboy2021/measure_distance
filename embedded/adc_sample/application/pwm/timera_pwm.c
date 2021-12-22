@@ -27,6 +27,9 @@ extern uint16_t m_au16Adc2SaValue[ADC2_CH_COUNT];
  ******************************************************************************/
 static void TimeraUnit1_IrqCallback(void)
 {
+		EventStopA(3);
+		EventStartA(3);
+	
 		FIFO_DataType adc_value;
 	
     /* Capture channel 0 */
@@ -50,13 +53,17 @@ static void TimeraUnit1_IrqCallback(void)
 						adc_value.Val3 = 1;
 					}
 						
+					//EventStartA(3);
 					FIFO_WriteOneData(&FIFO_Data[0], adc_value);
+					//EventStopA(3);
 			
 					//SEGGER_RTT_Write(1, &adc_value, sizeof(adc_value));
 					
 				//
         TIMERA_ClearFlag(TIMERA_UNIT1, TIMERA_UNIT1_CH2_INT_FLAG);
     }
+		
+		//EventStopA(3);
 }
 /*******************************************************************************
  * Function implementation - global ('extern') and local ('static')

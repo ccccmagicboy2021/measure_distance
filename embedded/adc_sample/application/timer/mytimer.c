@@ -91,6 +91,7 @@ void timer0_init(void)
 
 static void Timer0B_CallBack(void)		// T = var
 {
+	EventStartA(1);
 	FIFO_DataType adc_value;
 #if 1
 #if (ADC1_SA_NORMAL_CHANNEL == (ADC1_CH6))
@@ -107,10 +108,13 @@ static void Timer0B_CallBack(void)		// T = var
 	
 	//SEGGER_RTT_Write(1, &adc_value, sizeof(adc_value));	
 #endif
+	EventStopA(1);
 }
 
 static void Timer0A_CallBack(void)      //  T = 1ms
 {
+	EventStartA(2);
 	Timer_Counter++;
+	EventStopA(2);
 }
 
