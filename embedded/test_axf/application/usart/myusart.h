@@ -1,0 +1,43 @@
+#ifndef __MYUSART_H
+#define __MYUSART_H
+
+/* USART channel definition */
+#define USART_CH                        (M4_USART3)
+#define USART_TUYA_CH                   (M4_USART1)
+
+/* USART baudrate definition */
+#ifdef BITRATE9600
+	#define USART_BAUDRATE                  (9600ul)
+#else
+	#define USART_BAUDRATE                  (115200ul)
+#endif
+
+/* USART RX Port/Pin definition */
+/* USART TX Port/Pin definition */
+#define USART_TX_PORT                   (PortH)
+#define USART_TX_PIN                    (Pin02)
+#define USART_TX_FUNC                   (Func_Usart3_Tx)
+
+#define USART_RX_PORT                   (PortC)
+#define USART_RX_PIN                    (Pin13)
+#define USART_RX_FUNC                   (Func_Usart3_Rx)
+#define USART_RI_NUM                    (INT_USART3_RI)
+
+#define USART_TUYA_TX_PORT                   (PortA)
+#define USART_TUYA_TX_PIN                    (Pin02)
+#define USART_TUYA_TX_FUNC                   (Func_Usart1_Tx)
+
+#define USART_TUYA_RX_PORT                   (PortA)
+#define USART_TUYA_RX_PIN                    (Pin03)
+#define USART_TUYA_RX_FUNC                   (Func_Usart1_Rx)
+#define USART_TUYA_RI_NUM                    (INT_USART1_RI)
+
+extern void usart_init(void);
+extern void UsartRxErrProcess(void);
+extern void tuya_UsartRxErrProcess(void);
+
+static void tuya_UsartRxIrqCallback(void);
+static void UsartRxIrqCallback(void);
+
+#endif
+

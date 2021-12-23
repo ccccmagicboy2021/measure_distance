@@ -1,0 +1,59 @@
+Component: ARM Compiler 6.14.1 Tool: armlink [5db06d00]
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000281
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00000510, Max: 0x00080000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000500, Max: 0x00080000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x00000280   Data   RO            3    RESET               startup_hc32f46x.o
+    0x00000280   0x00000280   0x00000000   Code   RO           47  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x00000280   0x00000280   0x00000004   Code   RO           50    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x00000284   0x00000284   0x00000004   Code   RO           53    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x00000288   0x00000288   0x00000000   Code   RO           55    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x00000288   0x00000288   0x00000000   Code   RO           57    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x00000288   0x00000288   0x00000008   Code   RO           58    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x00000290   0x00000290   0x00000000   Code   RO           60    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x00000290   0x00000290   0x00000000   Code   RO           62    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x00000290   0x00000290   0x00000004   Code   RO           51    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x00000294   0x00000294   0x00000058   Code   RO            4    .text               startup_hc32f46x.o
+    0x000002ec   0x000002ec   0x00000024   Code   RO           64    .text               mc_w.l(init.o)
+    0x00000310   0x00000310   0x0000016e   Code   RO           13    .text.SystemCoreClockUpdate  system_hc32f46x.o
+    0x0000047e   0x0000047e   0x00000002   PAD
+    0x00000480   0x00000480   0x00000018   Code   RO           11    .text.SystemInit    system_hc32f46x.o
+    0x00000498   0x00000498   0x00000016   Code   RO           40    .text.app           app.o
+    0x000004ae   0x000004ae   0x00000002   PAD
+    0x000004b0   0x000004b0   0x00000010   Code   RO           24    .text.main          main.o
+    0x000004c0   0x000004c0   0x0000000e   Code   RO           68    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x000004ce   0x000004ce   0x00000002   Code   RO           69    i.__scatterload_null  mc_w.l(handlers.o)
+    0x000004d0   0x000004d0   0x0000000e   Code   RO           70    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x000004de   0x000004de   0x00000002   PAD
+    0x000004e0   0x000004e0   0x00000020   Data   RO           67    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x1fff8000, Load base: 0x00000500, Size: 0x00006018, Max: 0x0002f000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x1fff8000   0x00000500   0x00000004   Data   RW           15    .data.HRC_VALUE     system_hc32f46x.o
+    0x1fff8004   0x00000504   0x00000004   Data   RW           16    .data.SystemCoreClock  system_hc32f46x.o
+    0x1fff8008   0x00000508   0x00000004   Data   RW           26    .data.test0         main.o
+    0x1fff800c   0x0000050c   0x00000004   PAD
+    0x1fff8010        -       0x00000004   Zero   RW           27    .bss.test           main.o
+    0x1fff8014   0x0000050c   0x00000004   PAD
+    0x1fff8018        -       0x00006000   Zero   RW            1    STACK               startup_hc32f46x.o
+
+
+
+  Load Region LR_IROM2 (Base: 0x03000c00, Size: 0x00000000, Max: 0x000003c0, ABSOLUTE)
+
+    Execution Region ER_IROM2 (Exec base: 0x03000c00, Load base: 0x03000c00, Size: 0x00000000, Max: 0x000003c0, ABSOLUTE)
+
+    **** No section assigned to this execution region ****
+
