@@ -1,7 +1,7 @@
 #include "sys.h"
 
-int test0 = 0xAA;
-int test;
+int test0_data = 0xAA;
+int test_bss;
 
 int main(void)
 {

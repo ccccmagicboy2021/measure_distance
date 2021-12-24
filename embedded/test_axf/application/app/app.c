@@ -1,12 +1,12 @@
 #include "app.h"
 #include "sys.h"
 
-extern	int test0;
-extern	int test;
+extern	int test0_data;
+extern	int test_bss;
 
 void app(void)
 {
-	test = test0;
+	test_bss = test0_data;
 }
 
 
