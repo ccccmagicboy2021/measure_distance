@@ -1,4 +1,5 @@
 #!d:\cccc2020\TOOL\python-3.9.1-embed-win32\python.exe
+# -*- coding: UTF-8 -*-
 
 import ctypes
 import struct
