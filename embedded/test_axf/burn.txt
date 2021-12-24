@@ -1,13 +1,14 @@
 usb
-si 1
+si swd
 speed 25000
 device HC32F46x
-TestCSpeed 0x1FFF8000
 r
 h
-loadbin .\MDK\bin\adc_03_sa_interrupt.bin 0x0000
-r
-g
+loadbin .\MDK\bin\adc_03_sa_interrupt.bin 0x1fff8000
+wreg MSP,0x20006018
+SetPC 0x1fff8295
+regs
+go
 qc
 
 
