@@ -11,4 +11,9 @@ header0: 0xAB
 header1: 0xCD
 data_pack: 192字节
 
+.\test_axf
+.\test_freertos
+.\test_threadx
+为试验性工程，暂时也用的华大F460单片机
+
 
