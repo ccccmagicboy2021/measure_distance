@@ -6,6 +6,10 @@
 #include "ddl_config.h"
 #include "app.h"
 #include "FreeRTOS.h"
+#include "task.h"
+#include "SEGGER_RTT.h"
+#include "SEGGER_RTT_Conf.h"
+#include "myclk.h"
 
 typedef int32_t  s32;
 typedef int16_t s16;

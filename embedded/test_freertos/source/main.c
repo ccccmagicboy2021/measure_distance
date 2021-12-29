@@ -5,8 +5,7 @@ int test_bss;
 
 int main(void)
 {
-	while(1)
-	{
-		app();
-	}
+	app();
 }
+
+

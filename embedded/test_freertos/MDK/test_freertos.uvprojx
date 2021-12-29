@@ -189,7 +189,7 @@
             <hadIRAM2>1</hadIRAM2>
             <hadIROM2>1</hadIROM2>
             <StupSel>8</StupSel>
-            <useUlib>0</useUlib>
+            <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
             <nSecure>0</nSecure>
@@ -418,6 +418,21 @@
               <FileType>1</FileType>
               <FilePath>..\driver\src\hc32f46x_utility.c</FilePath>
             </File>
+            <File>
+              <FileName>hc32f46x_clk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\src\hc32f46x_clk.c</FilePath>
+            </File>
+            <File>
+              <FileName>hc32f46x_efm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\src\hc32f46x_efm.c</FilePath>
+            </File>
+            <File>
+              <FileName>hc32f46x_interrupts.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\src\hc32f46x_interrupts.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -427,6 +442,11 @@
               <FileName>app.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\app\app.c</FilePath>
+            </File>
+            <File>
+              <FileName>myclk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\clk\myclk.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -482,6 +502,26 @@
               <FileName>port.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\FreeRTOS\ARM_CM4F\port.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Debug</GroupName>
+          <Files>
+            <File>
+              <FileName>SEGGER_RTT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\rtt\SEGGER_RTT.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_RTT_printf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\rtt\SEGGER_RTT_printf.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_HardFaultHandler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\HardFaultHandlerMDK\SEGGER_HardFaultHandler.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -902,6 +942,21 @@
               <FileType>1</FileType>
               <FilePath>..\driver\src\hc32f46x_utility.c</FilePath>
             </File>
+            <File>
+              <FileName>hc32f46x_clk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\src\hc32f46x_clk.c</FilePath>
+            </File>
+            <File>
+              <FileName>hc32f46x_efm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\src\hc32f46x_efm.c</FilePath>
+            </File>
+            <File>
+              <FileName>hc32f46x_interrupts.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\src\hc32f46x_interrupts.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -911,6 +966,11 @@
               <FileName>app.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\app\app.c</FilePath>
+            </File>
+            <File>
+              <FileName>myclk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\clk\myclk.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -966,6 +1026,26 @@
               <FileName>port.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\FreeRTOS\ARM_CM4F\port.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Debug</GroupName>
+          <Files>
+            <File>
+              <FileName>SEGGER_RTT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\rtt\SEGGER_RTT.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_RTT_printf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\rtt\SEGGER_RTT_printf.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_HardFaultHandler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\HardFaultHandlerMDK\SEGGER_HardFaultHandler.c</FilePath>
             </File>
           </Files>
         </Group>
