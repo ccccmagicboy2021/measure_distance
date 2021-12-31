@@ -21,7 +21,7 @@ static void UsartRxIrqCallback(void)
 		rev_data1 = (unsigned char)rev_data;
 	
     //letter-shell
-		shellHandler(&shell, rev_data1);
+		//shellHandler(&shell, rev_data1);
 }
 
 static void tuya_UsartRxIrqCallback(void)
@@ -33,7 +33,7 @@ static void tuya_UsartRxIrqCallback(void)
 	
 		rev_data1 = (unsigned char)rev_data;
 	
-    uart_receive_input(rev_data1);		//tuya fifo
+    //uart_receive_input(rev_data1);		//tuya fifo
 }
 
 /**

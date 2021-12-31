@@ -10,6 +10,7 @@
 #include "SEGGER_RTT.h"
 #include "SEGGER_RTT_Conf.h"
 #include "myclk.h"
+#include "myusart.h"
 
 typedef int32_t  s32;
 typedef int16_t s16;

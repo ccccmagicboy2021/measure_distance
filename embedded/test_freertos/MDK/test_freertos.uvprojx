@@ -433,6 +433,21 @@
               <FileType>1</FileType>
               <FilePath>..\driver\src\hc32f46x_efm.c</FilePath>
             </File>
+            <File>
+              <FileName>hc32f46x_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\src\hc32f46x_usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>hc32f46x_pwc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\src\hc32f46x_pwc.c</FilePath>
+            </File>
+            <File>
+              <FileName>hc32f46x_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\src\hc32f46x_gpio.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -447,6 +462,11 @@
               <FileName>myclk.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\clk\myclk.c</FilePath>
+            </File>
+            <File>
+              <FileName>myusart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\usart\myusart.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -593,7 +613,7 @@
             <nStopA1X>0</nStopA1X>
             <nStopA2X>0</nStopA2X>
           </AfterMake>
-          <SelectedForBatchBuild>1</SelectedForBatchBuild>
+          <SelectedForBatchBuild>0</SelectedForBatchBuild>
           <SVCSIdString></SVCSIdString>
         </TargetCommonOption>
         <CommonProperty>
@@ -937,6 +957,21 @@
               <FileType>1</FileType>
               <FilePath>..\driver\src\hc32f46x_efm.c</FilePath>
             </File>
+            <File>
+              <FileName>hc32f46x_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\src\hc32f46x_usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>hc32f46x_pwc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\src\hc32f46x_pwc.c</FilePath>
+            </File>
+            <File>
+              <FileName>hc32f46x_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\src\hc32f46x_gpio.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -951,6 +986,11 @@
               <FileName>myclk.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\clk\myclk.c</FilePath>
+            </File>
+            <File>
+              <FileName>myusart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\usart\myusart.c</FilePath>
             </File>
           </Files>
         </Group>
