@@ -27,12 +27,12 @@ void	led1_task(void * p_arg);
 TaskHandle_t	FLOATTask_Handler;
 void	float_task(void * p_arg);
 
-void segger_init(void)
-{	
-	SEGGER_RTT_Init();
-	CV_LOG("%s FreeRTOS DEMO%s\r\n", RTT_CTRL_BG_BRIGHT_RED, RTT_CTRL_RESET);
-	CV_LOG("compiled time: %s %s\r\n", __DATE__, __TIME__);
-}
+//void segger_init(void)
+//{	
+//	SEGGER_RTT_Init();
+//	CV_LOG("%s FreeRTOS DEMO%s\r\n", RTT_CTRL_BG_BRIGHT_RED, RTT_CTRL_RESET);
+//	CV_LOG("compiled time: %s %s\r\n", __DATE__, __TIME__);
+//}
 
 void tick_init(void)
 {
@@ -45,7 +45,7 @@ void app(void)
 	test_bss = test0_data;
 	
 	//enable rtt
-	segger_init();
+	//segger_init();
 	//clk
 	SysClkIni();
 	clk_test();

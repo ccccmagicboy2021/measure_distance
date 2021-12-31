@@ -75,9 +75,10 @@ void clk_test(void)	{
     pclk1 = stcClkTmp1.pclk1Freq;
     pclk2 = stcClkTmp1.pclk2Freq;
 
-    CV_LOG("%s - %s%s sysclk:%d %s\r\n", __FUNCTION__, RTT_CTRL_BG_BRIGHT_BLUE, RTT_CTRL_TEXT_WHITE, sysclk, RTT_CTRL_RESET);
-    CV_LOG("%s - %s%s hclk:%d %s\r\n", __FUNCTION__, RTT_CTRL_BG_BRIGHT_BLUE, RTT_CTRL_TEXT_WHITE, hclk, RTT_CTRL_RESET);
-    CV_LOG("%s - %s%s pclk0:%d %s\r\n", __FUNCTION__, RTT_CTRL_BG_BRIGHT_BLUE, RTT_CTRL_TEXT_WHITE, pclk0, RTT_CTRL_RESET);
-    CV_LOG("%s - %s%s pclk1:%d %s\r\n", __FUNCTION__, RTT_CTRL_BG_BRIGHT_BLUE, RTT_CTRL_TEXT_WHITE, pclk1, RTT_CTRL_RESET);
-    CV_LOG("%s - %s%s pclk2:%d %s\r\n", __FUNCTION__, RTT_CTRL_BG_BRIGHT_BLUE, RTT_CTRL_TEXT_WHITE, pclk2, RTT_CTRL_RESET);
+//    CV_LOG("%s - %s%s sysclk:%d %s\r\n", __FUNCTION__, RTT_CTRL_BG_BRIGHT_BLUE, RTT_CTRL_TEXT_WHITE, sysclk, RTT_CTRL_RESET);
+//    CV_LOG("%s - %s%s hclk:%d %s\r\n", __FUNCTION__, RTT_CTRL_BG_BRIGHT_BLUE, RTT_CTRL_TEXT_WHITE, hclk, RTT_CTRL_RESET);
+//    CV_LOG("%s - %s%s pclk0:%d %s\r\n", __FUNCTION__, RTT_CTRL_BG_BRIGHT_BLUE, RTT_CTRL_TEXT_WHITE, pclk0, RTT_CTRL_RESET);
+//    CV_LOG("%s - %s%s pclk1:%d %s\r\n", __FUNCTION__, RTT_CTRL_BG_BRIGHT_BLUE, RTT_CTRL_TEXT_WHITE, pclk1, RTT_CTRL_RESET);
+//    CV_LOG("%s - %s%s pclk2:%d %s\r\n", __FUNCTION__, RTT_CTRL_BG_BRIGHT_BLUE, RTT_CTRL_TEXT_WHITE, pclk2, RTT_CTRL_RESET);
+
 }

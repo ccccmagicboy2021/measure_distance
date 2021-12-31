@@ -49,7 +49,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\output\flashcode\</OutputDirectory>
-          <OutputName>test_freertos</OutputName>
+          <OutputName>adc_03_sa_interrupt</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -414,6 +414,11 @@
               <FilePath>..\driver\src\hc32f46x_icg.c</FilePath>
             </File>
             <File>
+              <FileName>hc32f46x_interrupts.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\src\hc32f46x_interrupts.c</FilePath>
+            </File>
+            <File>
               <FileName>hc32f46x_utility.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\driver\src\hc32f46x_utility.c</FilePath>
@@ -427,11 +432,6 @@
               <FileName>hc32f46x_efm.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\driver\src\hc32f46x_efm.c</FilePath>
-            </File>
-            <File>
-              <FileName>hc32f46x_interrupts.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\hc32f46x_interrupts.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -506,26 +506,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Debug</GroupName>
-          <Files>
-            <File>
-              <FileName>SEGGER_RTT.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\rtt\SEGGER_RTT.c</FilePath>
-            </File>
-            <File>
-              <FileName>SEGGER_RTT_printf.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\rtt\SEGGER_RTT_printf.c</FilePath>
-            </File>
-            <File>
-              <FileName>SEGGER_HardFaultHandler.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\HardFaultHandlerMDK\SEGGER_HardFaultHandler.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>::CMSIS</GroupName>
         </Group>
       </Groups>
@@ -573,7 +553,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\output\ramcode\</OutputDirectory>
-          <OutputName>test_freertos</OutputName>
+          <OutputName>adc_03_sa_interrupt</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -863,7 +843,7 @@
               <MiscControls></MiscControls>
               <Define>__DEBUG,HC32F46x,USE_DEVICE_DRIVER_LIB,ARM_MATH_CM4,_CC_ARM,__TARGET_FPU_VFP,__FPU_PRESENT,ARM_MATH_MATRIX_CHECK,ARM_MATH_ROUNDING,SYSTEM_GLOBAL</Define>
               <Undefine></Undefine>
-              <IncludePath>C:\Keil_v5\ARM\include;..\MDK;..\source;..\common;..\driver\inc;..\driver\src;..\application\rtt;..\application\tuya;..\application\adc;..\application\led;..\application\usart;..\application\timer;..\application\matlab;..\application\fifo;..\application\app;..\application\clk;..\application\shell;..\application\pwm;..\DSP;..\DSP\Include</IncludePath>
+              <IncludePath>C:\Keil_v5\ARM\include;..\MDK;..\source;..\common;..\driver\inc;..\driver\src;..\application\rtt;..\application\tuya;..\application\adc;..\application\led;..\application\usart;..\application\timer;..\application\matlab;..\application\fifo;..\application\app;..\application\clk;..\application\shell;..\application\pwm;..\DSP;..\DSP\Include;..\FreeRTOS\include;..\FreeRTOS\ARM_CM4F</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -938,6 +918,11 @@
               <FilePath>..\driver\src\hc32f46x_icg.c</FilePath>
             </File>
             <File>
+              <FileName>hc32f46x_interrupts.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\src\hc32f46x_interrupts.c</FilePath>
+            </File>
+            <File>
               <FileName>hc32f46x_utility.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\driver\src\hc32f46x_utility.c</FilePath>
@@ -951,11 +936,6 @@
               <FileName>hc32f46x_efm.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\driver\src\hc32f46x_efm.c</FilePath>
-            </File>
-            <File>
-              <FileName>hc32f46x_interrupts.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\hc32f46x_interrupts.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1026,26 +1006,6 @@
               <FileName>port.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\FreeRTOS\ARM_CM4F\port.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Debug</GroupName>
-          <Files>
-            <File>
-              <FileName>SEGGER_RTT.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\rtt\SEGGER_RTT.c</FilePath>
-            </File>
-            <File>
-              <FileName>SEGGER_RTT_printf.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\rtt\SEGGER_RTT_printf.c</FilePath>
-            </File>
-            <File>
-              <FileName>SEGGER_HardFaultHandler.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\HardFaultHandlerMDK\SEGGER_HardFaultHandler.c</FilePath>
             </File>
           </Files>
         </Group>

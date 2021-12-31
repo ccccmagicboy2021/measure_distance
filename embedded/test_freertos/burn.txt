@@ -4,7 +4,7 @@ speed 25000
 device HC32F46x
 r
 h
-loadbin .\MDK\bin\test_freertos.bin 0x1fff8000
+loadbin .\MDK\bin\adc_03_sa_interrupt.bin 0x1fff8000
 wreg MSP,0x20006018
 SetPC 0x1fff8295
 regs
