@@ -1,5 +1,5 @@
 /*
- * FreeRTOS V202112.00
+ * FreeRTOS V202104.00
  * Copyright (C) 2020 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -40,21 +40,22 @@
  *
  * See http://www.freertos.org/a00110.html
  *----------------------------------------------------------*/
-
 /* Ensure stdint is only used by the compiler, and not the assembler. */
-#if defined(__ICCARM__) || defined(__CC_ARM) || defined(__GNUC__)
+#ifdef __ICCARM__
 	#include <stdint.h>
 	extern uint32_t SystemCoreClock;
 #endif
 
+
 #define configUSE_PREEMPTION			1
 #define configUSE_IDLE_HOOK				0
 #define configUSE_TICK_HOOK				0
-#define configCPU_CLOCK_HZ				( SystemCoreClock )
+//#define configCPU_CLOCK_HZ				( SystemCoreClock )
+#define configCPU_CLOCK_HZ				( 200000000 )
 #define configTICK_RATE_HZ				( ( TickType_t ) 1000 )
 #define configMAX_PRIORITIES			( 5 )
-#define configMINIMAL_STACK_SIZE		( ( unsigned short ) 256 )
-#define configTOTAL_HEAP_SIZE			( ( size_t ) ( 10 * 1024 ) )
+#define configMINIMAL_STACK_SIZE		( ( unsigned short ) 130 )
+#define configTOTAL_HEAP_SIZE			( ( size_t ) ( 75 * 1024 ) )
 #define configMAX_TASK_NAME_LEN			( 10 )
 #define configUSE_TRACE_FACILITY		1
 #define configUSE_16_BIT_TICKS			0
@@ -119,13 +120,9 @@ header file. */
 	
 /* Definitions that map the FreeRTOS port interrupt handlers to their CMSIS
 standard names. */
-#define vPortSVCHandler SVC_Handler
-#define xPortPendSVHandler PendSV_Handler
-#define xPortSysTickHandler SysTick_Handler
-
-#define INCLUDE_xTaskGetIdleTaskHandle  1
-#define INCLUDE_pxTaskGetStackStart     1
-#include "SEGGER_SYSVIEW_FreeRTOS.h"
+//#define vPortSVCHandler SVC_Handler
+//#define xPortPendSVHandler PendSV_Handler
+//#define xPortSysTickHandler SysTick_Handler
 
 #endif /* FREERTOS_CONFIG_H */
 

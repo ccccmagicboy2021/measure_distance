@@ -12,6 +12,7 @@
 #include "myclk.h"
 #include "myusart.h"
 #include "myled.h"
+#include "SEGGER_SYSVIEW.h"
 
 typedef int32_t  s32;
 typedef int16_t s16;

@@ -74,7 +74,12 @@ void led1_task(void	*	p_arg)
 	}
 }
 
-
+void segger_init(void)
+{
+	SEGGER_RTT_Init();
+	CV_LOG("%sphosense :FREERTOS DEMO%s\r\n", RTT_CTRL_BG_BRIGHT_RED, RTT_CTRL_RESET);
+	CV_LOG("compiled time: %s %s\r\n", __DATE__, __TIME__);
+}
 
 int main(void)
 {
@@ -83,7 +88,10 @@ int main(void)
 	//test_bss = test0_data;
 	
 	//enable rtt
-	//segger_init();
+	segger_init();
+	//systemview
+	SEGGER_SYSVIEW_Conf();
+	traceSTART();
 	//clk
 	SysClkIni();
 	clk_test();
