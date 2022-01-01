@@ -1,8 +1,6 @@
 /*
- * FreeRTOS Kernel V10.4.6
- * Copyright (C) 2021 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
- *
- * SPDX-License-Identifier: MIT
+ * FreeRTOS Kernel V10.4.3
+ * Copyright (C) 2020 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
  * this software and associated documentation files (the "Software"), to deal in
@@ -24,15 +22,18 @@
  * https://www.FreeRTOS.org
  * https://github.com/FreeRTOS
  *
+ * 1 tab == 4 spaces!
  */
 
 
 #ifndef PORTMACRO_H
-    #define PORTMACRO_H
+#define PORTMACRO_H
+/* *INDENT-OFF* */
 
-    #ifdef __cplusplus
-        extern "C" {
-    #endif
+#ifdef __cplusplus
+    extern "C" {
+#endif
+/* *INDENT-ON* */
 
 /*-----------------------------------------------------------
  * Port specific definitions.
@@ -71,10 +72,13 @@
 /*-----------------------------------------------------------*/
 
 /* Architecture specifics. */
-    #define portSTACK_GROWTH      ( -1 )
-    #define portTICK_PERIOD_MS    ( ( TickType_t ) 1000 / configTICK_RATE_HZ )
-    #define portBYTE_ALIGNMENT    8
-    #define portDONT_DISCARD      __attribute__( ( used ) )
+    #define portSTACK_GROWTH          ( -1 )
+    #define portTICK_PERIOD_MS        ( ( TickType_t ) 1000 / configTICK_RATE_HZ )
+    #define portBYTE_ALIGNMENT        8
+
+/* Constants used with memory barrier intrinsics. */
+    #define portSY_FULL_READ_WRITE    ( 15 )
+
 /*-----------------------------------------------------------*/
 
 /* Scheduler utilities. */
@@ -85,33 +89,28 @@
                                                         \
         /* Barriers are normally not required but do ensure the code is completely \
          * within the specified behaviour for the architecture. */ \
-        __asm volatile ( "dsb" ::: "memory" );                     \
-        __asm volatile ( "isb" );                                  \
+        __dsb( portSY_FULL_READ_WRITE );                           \
+        __isb( portSY_FULL_READ_WRITE );                           \
     }
+/*-----------------------------------------------------------*/
 
     #define portNVIC_INT_CTRL_REG     ( *( ( volatile uint32_t * ) 0xe000ed04 ) )
     #define portNVIC_PENDSVSET_BIT    ( 1UL << 28UL )
-    #define portEND_SWITCHING_ISR( xSwitchRequired )    do { if( xSwitchRequired != pdFALSE ) portYIELD(); } while( 0 )
+    #define portEND_SWITCHING_ISR( xSwitchRequired )    if( xSwitchRequired != pdFALSE ) portYIELD()
     #define portYIELD_FROM_ISR( x )                     portEND_SWITCHING_ISR( x )
 /*-----------------------------------------------------------*/
 
 /* Critical section management. */
     extern void vPortEnterCritical( void );
     extern void vPortExitCritical( void );
-    #define portSET_INTERRUPT_MASK_FROM_ISR()         ulPortRaiseBASEPRI()
-    #define portCLEAR_INTERRUPT_MASK_FROM_ISR( x )    vPortSetBASEPRI( x )
+
     #define portDISABLE_INTERRUPTS()                  vPortRaiseBASEPRI()
     #define portENABLE_INTERRUPTS()                   vPortSetBASEPRI( 0 )
     #define portENTER_CRITICAL()                      vPortEnterCritical()
     #define portEXIT_CRITICAL()                       vPortExitCritical()
+    #define portSET_INTERRUPT_MASK_FROM_ISR()         ulPortRaiseBASEPRI()
+    #define portCLEAR_INTERRUPT_MASK_FROM_ISR( x )    vPortSetBASEPRI( x )
 
-/*-----------------------------------------------------------*/
-
-/* Task function macros as described on the FreeRTOS.org WEB site.  These are
- * not necessary for to use this port.  They are defined so the common demo files
- * (which build with all the ports) will build. */
-    #define portTASK_FUNCTION_PROTO( vFunction, pvParameters )    void vFunction( void * pvParameters )
-    #define portTASK_FUNCTION( vFunction, pvParameters )          void vFunction( void * pvParameters )
 /*-----------------------------------------------------------*/
 
 /* Tickless idle/low power functionality. */
@@ -121,22 +120,12 @@
     #endif
 /*-----------------------------------------------------------*/
 
-/* Architecture specific optimisations. */
+/* Port specific optimisations. */
     #ifndef configUSE_PORT_OPTIMISED_TASK_SELECTION
         #define configUSE_PORT_OPTIMISED_TASK_SELECTION    1
     #endif
 
     #if configUSE_PORT_OPTIMISED_TASK_SELECTION == 1
-
-/* Generic helper function. */
-        __attribute__( ( always_inline ) ) static inline uint8_t ucPortCountLeadingZeros( uint32_t ulBitmap )
-        {
-            uint8_t ucReturn;
-
-            __asm volatile ( "clz %0, %1" : "=r" ( ucReturn ) : "r" ( ulBitmap ) : "memory" );
-
-            return ucReturn;
-        }
 
 /* Check the configuration. */
         #if ( configMAX_PRIORITIES > 32 )
@@ -149,10 +138,16 @@
 
 /*-----------------------------------------------------------*/
 
-        #define portGET_HIGHEST_PRIORITY( uxTopPriority, uxReadyPriorities )    uxTopPriority = ( 31UL - ( uint32_t ) ucPortCountLeadingZeros( ( uxReadyPriorities ) ) )
+        #define portGET_HIGHEST_PRIORITY( uxTopPriority, uxReadyPriorities )    uxTopPriority = ( 31UL - ( uint32_t ) __clz( ( uxReadyPriorities ) ) )
 
-    #endif /* configUSE_PORT_OPTIMISED_TASK_SELECTION */
+    #endif /* taskRECORD_READY_PRIORITY */
+/*-----------------------------------------------------------*/
 
+/* Task function macros as described on the FreeRTOS.org WEB site.  These are
+ * not necessary for to use this port.  They are defined so the common demo files
+ * (which build with all the ports) will build. */
+    #define portTASK_FUNCTION_PROTO( vFunction, pvParameters )    void vFunction( void * pvParameters )
+    #define portTASK_FUNCTION( vFunction, pvParameters )          void vFunction( void * pvParameters )
 /*-----------------------------------------------------------*/
 
     #ifdef configASSERT
@@ -166,16 +161,87 @@
     #define portINLINE              __inline
 
     #ifndef portFORCE_INLINE
-        #define portFORCE_INLINE    inline __attribute__( ( always_inline ) )
+        #define portFORCE_INLINE    __forceinline
     #endif
 
-    portFORCE_INLINE static BaseType_t xPortIsInsideInterrupt( void )
+/*-----------------------------------------------------------*/
+
+    static portFORCE_INLINE void vPortSetBASEPRI( uint32_t ulBASEPRI )
+    {
+        __asm
+        {
+            /* Barrier instructions are not used as this function is only used to
+             * lower the BASEPRI value. */
+/* *INDENT-OFF* */
+        msr basepri, ulBASEPRI
+/* *INDENT-ON* */
+        }
+    }
+/*-----------------------------------------------------------*/
+
+    static portFORCE_INLINE void vPortRaiseBASEPRI( void )
+    {
+        uint32_t ulNewBASEPRI = configMAX_SYSCALL_INTERRUPT_PRIORITY;
+
+        __asm
+        {
+            /* Set BASEPRI to the max syscall priority to effect a critical
+             * section. */
+/* *INDENT-OFF* */
+            msr basepri, ulNewBASEPRI
+            dsb
+            isb
+/* *INDENT-ON* */
+        }
+    }
+/*-----------------------------------------------------------*/
+
+    static portFORCE_INLINE void vPortClearBASEPRIFromISR( void )
+    {
+        __asm
+        {
+            /* Set BASEPRI to 0 so no interrupts are masked.  This function is only
+             * used to lower the mask in an interrupt, so memory barriers are not
+             * used. */
+/* *INDENT-OFF* */
+            msr basepri, # 0
+/* *INDENT-ON* */
+        }
+    }
+/*-----------------------------------------------------------*/
+
+    static portFORCE_INLINE uint32_t ulPortRaiseBASEPRI( void )
+    {
+        uint32_t ulReturn, ulNewBASEPRI = configMAX_SYSCALL_INTERRUPT_PRIORITY;
+
+        __asm
+        {
+            /* Set BASEPRI to the max syscall priority to effect a critical
+             * section. */
+/* *INDENT-OFF* */
+            mrs ulReturn, basepri
+            msr basepri, ulNewBASEPRI
+            dsb
+            isb
+/* *INDENT-ON* */
+        }
+
+        return ulReturn;
+    }
+/*-----------------------------------------------------------*/
+
+    static portFORCE_INLINE BaseType_t xPortIsInsideInterrupt( void )
     {
         uint32_t ulCurrentInterrupt;
         BaseType_t xReturn;
 
         /* Obtain the number of the currently executing interrupt. */
-        __asm volatile ( "mrs %0, ipsr" : "=r" ( ulCurrentInterrupt )::"memory" );
+        __asm
+        {
+/* *INDENT-OFF* */
+            mrs ulCurrentInterrupt, ipsr
+/* *INDENT-ON* */
+        }
 
         if( ulCurrentInterrupt == 0 )
         {
@@ -189,57 +255,10 @@
         return xReturn;
     }
 
-/*-----------------------------------------------------------*/
-
-    portFORCE_INLINE static void vPortRaiseBASEPRI( void )
-    {
-        uint32_t ulNewBASEPRI;
-
-        __asm volatile
-        (
-            "	mov %0, %1												\n"\
-            "	msr basepri, %0											\n"\
-            "	isb														\n"\
-            "	dsb														\n"\
-            : "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
-        );
+/* *INDENT-OFF* */
+#ifdef __cplusplus
     }
-
-/*-----------------------------------------------------------*/
-
-    portFORCE_INLINE static uint32_t ulPortRaiseBASEPRI( void )
-    {
-        uint32_t ulOriginalBASEPRI, ulNewBASEPRI;
-
-        __asm volatile
-        (
-            "	mrs %0, basepri											\n"\
-            "	mov %1, %2												\n"\
-            "	msr basepri, %1											\n"\
-            "	isb														\n"\
-            "	dsb														\n"\
-            : "=r" ( ulOriginalBASEPRI ), "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
-        );
-
-        /* This return will not be reached but is necessary to prevent compiler
-         * warnings. */
-        return ulOriginalBASEPRI;
-    }
-/*-----------------------------------------------------------*/
-
-    portFORCE_INLINE static void vPortSetBASEPRI( uint32_t ulNewMaskValue )
-    {
-        __asm volatile
-        (
-            "	msr basepri, %0	"::"r" ( ulNewMaskValue ) : "memory"
-        );
-    }
-/*-----------------------------------------------------------*/
-
-    #define portMEMORY_BARRIER()    __asm volatile ( "" ::: "memory" )
-
-    #ifdef __cplusplus
-        }
-    #endif
+#endif
+/* *INDENT-ON* */
 
 #endif /* PORTMACRO_H */

@@ -6,7 +6,7 @@ float test1_data = 0.1111;
 
 
 #define START_TASK_PRIO		1
-#define	START_STK_SIZE		512
+#define	START_STK_SIZE		128
 TaskHandle_t	StartTask_Handler;
 void	start_task(void * p_arg);
 
@@ -15,7 +15,7 @@ void	start_task(void * p_arg);
 TaskHandle_t	LED0Task_Handler;
 void	led0_task(void * p_arg);
 
-#define	LED1_TASK_PRIO		3
+#define	LED1_TASK_PRIO		2
 #define	LED1_STK_SIZE			128
 TaskHandle_t	LED1Task_Handler;
 void	led1_task(void * p_arg);
@@ -33,7 +33,7 @@ void tick_init(void)
 
 void	start_task(void	*	p_arg)
 {
-	//taskENTER_CRITICAL();
+	taskENTER_CRITICAL();
 	
 	xTaskCreate(
 								(TaskFunction_t	)led0_task,
@@ -42,23 +42,35 @@ void	start_task(void	*	p_arg)
 								(void	*					)NULL,
 								(UBaseType_t		)LED0_TASK_PRIO,
 								(TaskHandle_t	*	)&LED0Task_Handler);
+								
+	xTaskCreate(
+								(TaskFunction_t	)led1_task,
+								(const char	*		)"led1_task",
+								(uint16_t				)LED1_STK_SIZE,
+								(void	*					)NULL,
+								(UBaseType_t		)LED1_TASK_PRIO,
+								(TaskHandle_t	*	)&LED1Task_Handler);
 
 								
-	//vTaskDelete(StartTask_Handler);
-	//taskEXIT_CRITICAL();
-								
-	while(1)
-	{
-		//
-	}
-	
+	vTaskDelete(StartTask_Handler);
+	taskEXIT_CRITICAL();
 }
 
 void led0_task(void	*	p_arg)
 {
 	while(1)
 	{
+		led_red_toggle();
 		vTaskDelay(500);
+	}
+}
+
+void led1_task(void	*	p_arg)
+{
+	while(1)
+	{
+		led_green_toggle();
+		vTaskDelay(1000);
 	}
 }
 
@@ -78,6 +90,8 @@ int main(void)
 	tick_init();
 	//uart
 	usart_init();
+	//led
+	led_init();
 	
 	xReturn = xTaskCreate(
 								(TaskFunction_t	)start_task,

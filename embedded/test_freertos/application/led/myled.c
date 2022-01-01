@@ -19,6 +19,16 @@ void led_init(void) {
     led_green(0, 1);		//off
 }
 
+void led_red_toggle(void)
+{
+	PORT_Toggle(PortA, Pin01);
+}
+
+void led_green_toggle(void)
+{
+	PORT_Toggle(PortA, Pin05);
+}
+
 void led_red(char onoff, char en) {
     if (onoff) {
         if (en) {
