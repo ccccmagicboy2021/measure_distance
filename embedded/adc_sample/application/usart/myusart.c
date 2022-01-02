@@ -26,14 +26,14 @@ static void UsartRxIrqCallback(void)
 
 static void tuya_UsartRxIrqCallback(void)
 {
-		uint16_t rev_data = 0;
-		unsigned char rev_data1 = 0;
-	
-		rev_data = USART_RecData(USART_TUYA_CH);
-	
-		rev_data1 = (unsigned char)rev_data;
-	
-    uart_receive_input(rev_data1);		//tuya fifo
+//		uint16_t rev_data = 0;
+//		unsigned char rev_data1 = 0;
+//	
+//		rev_data = USART_RecData(USART_TUYA_CH);
+//	
+//		rev_data1 = (unsigned char)rev_data;
+//	
+//    uart_receive_input(rev_data1);		//tuya fifo
 }
 
 /**

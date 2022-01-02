@@ -340,7 +340,7 @@ void init_all(void)
 	led_init();
 	gpio_init();
 	//tuya init
-	bt_protocol_init();
+	//bt_protocol_init();
 	//pwm
 	Timera_Config();
 	//adc
@@ -381,7 +381,7 @@ void app(void)
 			//CV_LOG("%s - sent_sample_data: %d ms\r\n", __FUNCTION__, finish_tick - start_tick);
 			break;
 		case	UART_PROTOCOL:
-			bt_uart_service();
+			//bt_uart_service();
 			uart_post_process();
 			break;
 		case	IDLE:
