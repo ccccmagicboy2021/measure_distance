@@ -5,7 +5,7 @@ device HC32F46x
 TestCSpeed 0x1FFF8000
 r
 h
-loadbin .\MDK\bin\adc_03_sa_interrupt.bin 0x0000
+loadbin .\MDK\bin\flashcode.bin 0x0000
 r
 g
 qc

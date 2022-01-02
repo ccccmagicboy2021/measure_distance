@@ -1,6 +1,6 @@
 import os
 
-MAPFILE = 'adc_03_sa_interrupt.map'
+MAPFILE = 'flashcode.map'
 
 def check_p0(file_name):
     t = ".bss._SEGGER_RTT    segger_rtt.o"

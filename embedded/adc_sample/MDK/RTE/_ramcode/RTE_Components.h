@@ -3,7 +3,7 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'adc_03_sa_interrupt' 
+ * Project: 'adc_sample' 
  * Target:  'ramcode' 
  */
 
