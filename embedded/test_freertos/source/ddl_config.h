@@ -90,7 +90,11 @@ extern "C"
  ** \note DDL_UTILITY_ENABLE must be turned on(DDL_ON) if using Device Driver
  ** Library.
  ******************************************************************************/
+#ifndef USE_RAMCODE
 #define DDL_ICG_ENABLE                              (DDL_ON)
+#else
+#define DDL_ICG_ENABLE                              (DDL_OFF)
+#endif
 #define DDL_UTILITY_ENABLE                          (DDL_ON)
 
 #define DDL_ADC_ENABLE                              (DDL_ON)
