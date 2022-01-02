@@ -4,7 +4,7 @@ speed 25000
 device HC32F46x
 r
 h
-loadbin .\MDK\bin\adc_03_sa_interrupt.bin 0x1fff8000
+loadbin .\MDK\bin\ramcode.bin 0x1fff8000
 wreg MSP,0x1fff8000
 SetPC 0x1fff8004
 regs
