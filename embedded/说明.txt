@@ -1,4 +1,4 @@
-.\adc_sample(AC6)
+.\adc_sample(AC6)(flashcode)(ramcode)
 .\adc_sample_with_pwm-8161-4k
 .\adc_sample_with_pwm8161-512-2K
 都为华大F460单片机的工程
@@ -11,8 +11,8 @@ header0: 0xAB
 header1: 0xCD
 data_pack: 192字节
 
-.\test_axf(AC6)
-.\test_freertos(AC5)
+.\test_axf(AC6)(flashcode)(ramcode)
+.\test_freertos(AC5)(flashcode)
 .\test_threadx
 为试验性工程，暂时也用的华大F460单片机
 
