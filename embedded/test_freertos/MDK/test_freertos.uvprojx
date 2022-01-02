@@ -49,7 +49,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\output\flashcode\</OutputDirectory>
-          <OutputName>adc_03_sa_interrupt</OutputName>
+          <OutputName>test_freertos</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -608,7 +608,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\output\ramcode\</OutputDirectory>
-          <OutputName>adc_03_sa_interrupt</OutputName>
+          <OutputName>ramcode</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>

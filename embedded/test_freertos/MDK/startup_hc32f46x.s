@@ -64,7 +64,7 @@ __initial_sp
 ;   <o>  Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
 ; </h>
 
-Heap_Size       EQU     0x6000
+Heap_Size       EQU     0x8800
 
                 AREA    HEAP, NOINIT, READWRITE, ALIGN=3
 __heap_base
@@ -269,7 +269,7 @@ SET_SRAM3_WAIT
                 STR     R1, [R0]
 
                 LDR     R0, =0x40050800
-                MOV     R1, #0x1100
+				LDR		R1, =0x11001111
                 STR     R1, [R0]
 
                 LDR     R0, =0x40050804
