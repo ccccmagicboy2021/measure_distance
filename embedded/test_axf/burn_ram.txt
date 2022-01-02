@@ -1,0 +1,15 @@
+usb
+si swd
+speed 25000
+device HC32F46x
+r
+h
+loadbin .\MDK\bin\ramcode.bin 0x1FFF8000
+wreg MSP, 0x20006220
+SetPC 0x1fff8295
+w4 E000ED08 0x1FFF8000
+regs
+go
+qc
+
+
