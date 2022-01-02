@@ -269,7 +269,7 @@ SET_SRAM3_WAIT
                 STR     R1, [R0]
 
                 LDR     R0, =0x40050800
-                MOV     R1, #0x1100
+				LDR		R1, =0x11001111
                 STR     R1, [R0]
 
                 LDR     R0, =0x40050804
