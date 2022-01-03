@@ -1,0 +1,11 @@
+usb
+si swd
+speed 25000
+device HC32F46x
+r
+h
+erase chip
+go
+qc
+
+
