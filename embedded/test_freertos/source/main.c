@@ -20,7 +20,7 @@ void	led0_task(void * p_arg);
 TaskHandle_t	LED1Task_Handler;
 void	led1_task(void * p_arg);
 
-#define	FLOAT_TASK_PRIO		4
+#define	FLOAT_TASK_PRIO		2
 #define	FLOAT_STK_SIZE		128
 TaskHandle_t	FLOATTask_Handler;
 void	float_task(void * p_arg);
@@ -50,6 +50,14 @@ void	start_task(void	*	p_arg)
 								(void	*					)NULL,
 								(UBaseType_t		)LED1_TASK_PRIO,
 								(TaskHandle_t	*	)&LED1Task_Handler);
+								
+	xTaskCreate(
+								(TaskFunction_t	)float_task,
+								(const char	*		)"float_task",
+								(uint16_t				)FLOAT_STK_SIZE,
+								(void	*					)NULL,
+								(UBaseType_t		)FLOAT_TASK_PRIO,
+								(TaskHandle_t	*	)&LED1Task_Handler);
 
 								
 	vTaskDelete(StartTask_Handler);
@@ -70,6 +78,18 @@ void led1_task(void	*	p_arg)
 	while(1)
 	{
 		led_green_toggle();
+		vTaskDelay(1000);
+	}
+}
+
+void float_task(void	*	p_arg)
+{
+	static float float_num = 0.00;
+	
+	while(1)
+	{
+		float_num += 0.01f;
+		printf("float_num: %.4f\r\n", float_num);
 		vTaskDelay(1000);
 	}
 }
