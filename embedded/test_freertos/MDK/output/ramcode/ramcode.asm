@@ -39,7 +39,7 @@
 ========================================================================
 
 ** Program header #0 (PT_LOAD) [PF_X + PF_W + PF_R + PF_ARM_ENTRY]
-    Size : 80128 bytes (38760 bytes in file)
+    Size : 56576 bytes (38760 bytes in file)
     Virtual address: 0x20000000 (Alignment 8)
 
 
@@ -52,7 +52,7 @@
     $d.realdata
     RESET
     __Vectors
-        0x20000000:    2001a268    h..     DCD    536978024
+        0x20000000:    20014668    hF.     DCD    536954472
         0x20000004:    20000359    Y..     DCD    536871769
         0x20000008:    200039a5    .9.     DCD    536885669
         0x2000000c:    20000389    ...     DCD    536871817
@@ -218,7 +218,7 @@
     __Vectors_End
     __main
     _main_stk
-        0x20000280:    f8dfd010    ....    LDR      sp,__lit__00000000 ; [0x20000294] = 0x2001a268
+        0x20000280:    f8dfd010    ....    LDR      sp,__lit__00000000 ; [0x20000294] = 0x20014668
     .ARM.Collect$$$$00000004
     _main_scatterload
         0x20000284:    f000fb02    ....    BL       __scatterload ; 0x2000088c
@@ -244,7 +244,7 @@
     .ARM.Collect$$$$00000011
     __rt_final_cpp
     __rt_final_exit
-        0x20000294:    2001a268    h..     DCD    536978024
+        0x20000294:    20014668    hF.     DCD    536954472
     $t
     .emb_text
     $v0
@@ -13808,8 +13808,8 @@
         0x20007f50:    4d454420     DEM    DCD    1296385056
         0x20007f54:    0d73254f    O%s.    DCD    225649999
         0x20007f58:    0000000a    ....    DCD    10
-        0x20007f5c:    353a3531    15:5    DCD    893007153
-        0x20007f60:    33323a34    4:23    DCD    858929716
+        0x20007f5c:    323a3631    16:2    DCD    842675761
+        0x20007f60:    38303a35    5:08    DCD    942684725
         0x20007f64:    00000000    ....    DCD    0
         0x20007f68:    206e614a    Jan     DCD    544104778
         0x20007f6c:    32203420     4 2    DCD    840971296
@@ -16259,7 +16259,7 @@
         0x20009684:    20006630    0f.     DCD    536897072
         0x20009688:    20009768    h..     DCD    536909672
         0x2000968c:    200100d0    ...     DCD    536936656
-        0x20009690:    0000a198    ....    DCD    41368
+        0x20009690:    00004598    .E..    DCD    17816
         0x20009694:    20006640    @f.     DCD    536897088
     Region$$Table$$Limit
 
@@ -16269,7 +16269,7 @@
 
 
 ** Section #3 'RW_IRAM1' (SHT_NOBITS) [SHF_ALLOC + SHF_WRITE]
-    Size   : 41368 bytes (alignment 8)
+    Size   : 17816 bytes (alignment 8)
     Address: 0x200100d0
 
 

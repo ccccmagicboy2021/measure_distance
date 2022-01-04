@@ -602,7 +602,7 @@ Image Symbol Table
     _aPacket                                 0x200040e0   Data         227  segger_sysview.o(.bss)
     .bss                                     0x200041c4   Section      160  segger_sysview_freertos.o(.bss)
     _aTasks                                  0x200041c4   Data         160  segger_sysview_freertos.o(.bss)
-    STACK                                    0x20004268   Section    24576  startup_hc32f46x.o(STACK)
+    STACK                                    0x20004268   Section     1024  startup_hc32f46x.o(STACK)
 
     Global Symbols
 
@@ -1238,7 +1238,7 @@ Image Symbol Table
     IrqHandler                               0x200000d0   Data         512  hc32f46x_interrupts.o(.bss)
     xQueueRegistry                           0x200002d0   Data          64  queue.o(.bss)
     _SEGGER_RTT                              0x20002c00   Data         168  segger_rtt.o(.bss)
-    __initial_sp                             0x2000a268   Data           0  startup_hc32f46x.o(STACK)
+    __initial_sp                             0x20004668   Data           0  startup_hc32f46x.o(STACK)
 
 
 
@@ -1643,7 +1643,7 @@ Memory Map of the image
     0x00009698   0x00009698   0x00000020   Data   RO         4919    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x000096b8, Size: 0x0000a268, Max: 0x00020000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x000096b8, Size: 0x00004668, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1668,7 +1668,7 @@ Memory Map of the image
     0x200041c3   0x00009788   0x00000001   PAD
     0x200041c4        -       0x000000a0   Zero   RW         4554    .bss                segger_sysview_freertos.o
     0x20004264   0x00009788   0x00000004   PAD
-    0x20004268        -       0x00006000   Zero   RW            1    STACK               startup_hc32f46x.o
+    0x20004268        -       0x00000400   Zero   RW            1    STACK               startup_hc32f46x.o
 
 
 ==============================================================================
@@ -1700,13 +1700,13 @@ Image component sizes
       3480        236         26         21       1291      36871   segger_sysview.o
        124         82          0          0          0       1106   segger_sysview_config_freertos.o
        640         40         88          4        160       4814   segger_sysview_freertos.o
-        92         26        640          0      24576        864   startup_hc32f46x.o
+        92         26        640          0       1024        864   startup_hc32f46x.o
        260         40          0          8          0    1509709   system_hc32f46x.o
       3064        412          0         64        200      28953   tasks.o
       1222        114          0         20         40      26463   timers.o
 
     ----------------------------------------------------------------------
-     33940       3548        872        204      41368    1938588   Object Totals
+     33940       3548        872        204      17816    1938588   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         26          0          4          3          5          0   (incl. Padding)
 
@@ -1766,14 +1766,14 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     37712       3654        872        208      41368    1907860   Grand Totals
-     37712       3654        872        208      41368    1907860   ELF Image Totals
+     37712       3654        872        208      17816    1907860   Grand Totals
+     37712       3654        872        208      17816    1907860   ELF Image Totals
      37712       3654        872        208          0          0   ROM Totals
 
 ==============================================================================
 
     Total RO  Size (Code + RO Data)                38584 (  37.68kB)
-    Total RW  Size (RW Data + ZI Data)             41576 (  40.60kB)
+    Total RW  Size (RW Data + ZI Data)             18024 (  17.60kB)
     Total ROM Size (Code + RO Data + RW Data)      38792 (  37.88kB)
 
 ==============================================================================

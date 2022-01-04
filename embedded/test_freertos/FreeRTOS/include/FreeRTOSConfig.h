@@ -127,5 +127,8 @@ standard names. */
 #define INCLUDE_pxTaskGetStackStart     1
 #include "SEGGER_SYSVIEW_FreeRTOS.h"
 
+//cv add
+#define	configAPPLICATION_ALLOCATED_HEAP	0
+
 #endif /* FREERTOS_CONFIG_H */
 
