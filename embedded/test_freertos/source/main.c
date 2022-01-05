@@ -11,7 +11,7 @@ TaskHandle_t	StartTask_Handler;
 void	start_task(void * p_arg);
 
 #define	LED0_TASK_PRIO		2
-#define	LED0_STK_SIZE			128
+#define	LED0_STK_SIZE			20
 TaskHandle_t	LED0Task_Handler;
 void	led0_task(void * p_arg);
 
@@ -79,6 +79,7 @@ void led1_task(void	*	p_arg)
 	{
 		led_green_toggle();
 		vTaskDelay(1000);
+		//configASSERT(0);
 	}
 }
 

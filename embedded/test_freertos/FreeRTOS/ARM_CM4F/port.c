@@ -810,5 +810,10 @@ __asm uint32_t vPortGetIPSR( void )
          * of zero will result in unpredictable behaviour. */
         configASSERT( ( portAIRCR_REG & portPRIORITY_GROUP_MASK ) <= ulMaxPRIGROUPValue );
     }
+		
+void vApplicationStackOverflowHook(TaskHandle_t	xTask, char *	pcTaskName)
+{
+	printf("%s: stack overflow\r\n", pcTaskName);
+}
 
 #endif /* configASSERT_DEFINED */

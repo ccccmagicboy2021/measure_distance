@@ -61,7 +61,7 @@
 #define configIDLE_SHOULD_YIELD			1
 #define configUSE_MUTEXES				1
 #define configQUEUE_REGISTRY_SIZE		8
-#define configCHECK_FOR_STACK_OVERFLOW	0
+#define configCHECK_FOR_STACK_OVERFLOW	2
 #define configUSE_RECURSIVE_MUTEXES		1
 #define configUSE_MALLOC_FAILED_HOOK	0
 #define configUSE_APPLICATION_TASK_TAG	0
@@ -115,7 +115,7 @@ See http://www.FreeRTOS.org/RTOS-Cortex-M3-M4.html. */
 	
 /* Normal assert() semantics without relying on the provision of an assert.h
 header file. */
-#define configASSERT( x ) if( ( x ) == 0 ) { taskDISABLE_INTERRUPTS(); for( ;; ); }	
+//#define configASSERT( x ) if( ( x ) == 0 ) { taskDISABLE_INTERRUPTS(); for( ;; ); }	
 	
 /* Definitions that map the FreeRTOS port interrupt handlers to their CMSIS
 standard names. */
@@ -128,7 +128,8 @@ standard names. */
 #include "SEGGER_SYSVIEW_FreeRTOS.h"
 
 //cv add
-#define	configAPPLICATION_ALLOCATED_HEAP	0
+#define vAssertCalled(char,int)	printf("Error: %s, %d\r\n",char,int)
+#define	configASSERT(x)	if((x)==0) vAssertCalled(__FILE__, __LINE__);
 
 #endif /* FREERTOS_CONFIG_H */
 

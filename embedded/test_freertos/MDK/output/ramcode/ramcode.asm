@@ -31,22 +31,22 @@
     Program header entries: 1
     Section header entries: 16
 
-    Program header offset: 2029060 (0x001ef604)
-    Section header offset: 2029092 (0x001ef624)
+    Program header offset: 2026732 (0x001eecec)
+    Section header offset: 2026764 (0x001eed0c)
 
     Section header string table index: 15
 
 ========================================================================
 
 ** Program header #0 (PT_LOAD) [PF_X + PF_W + PF_R + PF_ARM_ENTRY]
-    Size : 56576 bytes (38760 bytes in file)
+    Size : 57328 bytes (39512 bytes in file)
     Virtual address: 0x20000000 (Alignment 8)
 
 
 ========================================================================
 
 ** Section #1 'ER_IROM1' (SHT_PROGBITS) [SHF_ALLOC + SHF_EXECINSTR]
-    Size   : 38552 bytes (alignment 4)
+    Size   : 39304 bytes (alignment 4)
     Address: 0x20000000
 
     $d.realdata
@@ -303,7 +303,7 @@
         0x20000316:    f3808811    ....    MSR      BASEPRI,r0
         0x2000031a:    f3bf8f4f    ..O.    DSB      
         0x2000031e:    f3bf8f6f    ..o.    ISB      
-        0x20000322:    f008fa4b    ..K.    BL       vTaskSwitchContext ; 0x200087bc
+        0x20000322:    f008fb33    ..3.    BL       vTaskSwitchContext ; 0x2000898c
         0x20000326:    f04f0000    O...    MOV      r0,#0
         0x2000032a:    f3808811    ....    MSR      BASEPRI,r0
         0x2000032e:    bc09        ..      POP      {r0,r3}
@@ -862,8 +862,8 @@
     .text
     __scatterload
     __scatterload_rt2
-        0x2000088c:    4c06        .L      LDR      r4,[pc,#24] ; [0x200008a8] = 0x20009678
-        0x2000088e:    4d07        .M      LDR      r5,[pc,#28] ; [0x200008ac] = 0x20009698
+        0x2000088c:    4c06        .L      LDR      r4,[pc,#24] ; [0x200008a8] = 0x20009968
+        0x2000088e:    4d07        .M      LDR      r5,[pc,#28] ; [0x200008ac] = 0x20009988
         0x20000890:    e006        ..      B        0x200008a0 ; __scatterload + 20
         0x20000892:    68e0        .h      LDR      r0,[r4,#0xc]
         0x20000894:    f0400301    @...    ORR      r3,r0,#1
@@ -874,8 +874,8 @@
         0x200008a2:    d3f6        ..      BCC      0x20000892 ; __scatterload + 6
         0x200008a4:    f7fffcf0    ....    BL       __main_after_scatterload ; 0x20000288
     $d
-        0x200008a8:    20009678    x..     DCD    536909432
-        0x200008ac:    20009698    ...     DCD    536909464
+        0x200008a8:    20009968    h..     DCD    536910184
+        0x200008ac:    20009988    ...     DCD    536910216
     $t
     .text
     __aeabi_lasr
@@ -7531,7 +7531,7 @@
     SEGGER_SYSVIEW_Conf
         0x200044ec:    b510        ..      PUSH     {r4,lr}
         0x200044ee:    4b06        .K      LDR      r3,[pc,#24] ; [0x20004508] = 0x2000668d
-        0x200044f0:    4a06        .J      LDR      r2,[pc,#24] ; [0x2000450c] = 0x20009620
+        0x200044f0:    4a06        .J      LDR      r2,[pc,#24] ; [0x2000450c] = 0x20009910
         0x200044f2:    4807        .H      LDR      r0,[pc,#28] ; [0x20004510] = 0x20010004
         0x200044f4:    6801        .h      LDR      r1,[r0,#0]
         0x200044f6:    6800        .h      LDR      r0,[r0,#0]
@@ -7542,7 +7542,7 @@
     $d
         0x20004506:    0000        ..      DCW    0
         0x20004508:    2000668d    .f.     DCD    536897165
-        0x2000450c:    20009620     ..     DCD    536909344
+        0x2000450c:    20009910    ...     DCD    536910096
         0x20004510:    20010004    ...     DCD    536936452
     $t
     i.SEGGER_SYSVIEW_GetSysDesc
@@ -8570,7 +8570,7 @@
         0x20004e52:    bf00        ..      NOP      
         0x20004e54:    7848        Hx      LDRB     r0,[r1,#1]
         0x20004e56:    220a        ."      MOVS     r2,#0xa
-        0x20004e58:    4935        5I      LDR      r1,[pc,#212] ; [0x20004f30] = 0x20009605
+        0x20004e58:    4935        5I      LDR      r1,[pc,#212] ; [0x20004f30] = 0x200098f5
         0x20004e5a:    f7fff9c5    ....    BL       SEGGER_RTT_WriteSkipNoLock ; 0x200041e8
         0x20004e5e:    b2e0        ..      UXTB     r0,r4
         0x20004e60:    f3808811    ....    MSR      BASEPRI,r0
@@ -8655,7 +8655,7 @@
         0x20004f2a:    bd70        p.      POP      {r4-r6,pc}
     $d
         0x20004f2c:    200140b8    .@.     DCD    536953016
-        0x20004f30:    20009605    ...     DCD    536909317
+        0x20004f30:    200098f5    ...     DCD    536910069
         0x20004f34:    200140e0    .@.     DCD    536953056
     $t
     i.SEGGER_SYSVIEW_Stop
@@ -8760,7 +8760,7 @@
         0x2000501e:    6800        .h      LDR      r0,[r0,#0]
         0x20005020:    2808        .(      CMP      r0,#8
         0x20005022:    d303        ..      BCC      0x2000502c ; SYSVIEW_AddTask + 48
-        0x20005024:    481e        .H      LDR      r0,[pc,#120] ; [0x200050a0] = 0x20009628
+        0x20005024:    481e        .H      LDR      r0,[pc,#120] ; [0x200050a0] = 0x20009918
         0x20005026:    f7ffffa9    ....    BL       SEGGER_SYSVIEW_Warn ; 0x20004f7c
         0x2000502a:    e7f5        ..      B        0x20005018 ; SYSVIEW_AddTask + 28
         0x2000502c:    481b        .H      LDR      r0,[pc,#108] ; [0x2000509c] = 0x200100c8
@@ -8806,7 +8806,7 @@
         0x20005094:    454c4449    IDLE    DCD    1162626121
         0x20005098:    00000000    ....    DCD    0
         0x2000509c:    200100c8    ...     DCD    536936648
-        0x200050a0:    20009628    (..     DCD    536909352
+        0x200050a0:    20009918    ...     DCD    536910104
         0x200050a4:    200141c4    .A.     DCD    536953284
     $t
     i.SYSVIEW_DeleteTask
@@ -9066,7 +9066,7 @@
         0x2000533e:    2500        .%      MOVS     r5,#0
         0x20005340:    1e68        h.      SUBS     r0,r5,#1
         0x20005342:    9007        ..      STR      r0,[sp,#0x1c]
-        0x20005344:    4b4c        LK      LDR      r3,[pc,#304] ; [0x20005478] = 0x200095d0
+        0x20005344:    4b4c        LK      LDR      r3,[pc,#304] ; [0x20005478] = 0x200098c0
         0x20005346:    cb0f        ..      LDM      r3,{r0-r3}
         0x20005348:    af03        ..      ADD      r7,sp,#0xc
         0x2000534a:    c70f        ..      STM      r7!,{r0-r3}
@@ -9175,7 +9175,7 @@
         0x20005470:    e8bd8ff0    ....    POP      {r4-r11,pc}
     $d
         0x20005474:    00000000    ....    DCD    0
-        0x20005478:    200095d0    ...     DCD    536909264
+        0x20005478:    200098c0    ...     DCD    536910016
         0x2000547c:    4001d000    ...@    DCD    1073860608
         0x20005480:    4001d400    ...@    DCD    1073861632
         0x20005484:    40021000    ...@    DCD    1073876992
@@ -9390,7 +9390,7 @@
         0x200056c2:    f3bf8f6f    ..o.    ISB      
         0x200056c6:    bf00        ..      NOP      
         0x200056c8:    f7fff8a8    ....    BL       SEGGER_SYSVIEW_RecordEnterISR ; 0x2000481c
-        0x200056cc:    f003fd34    ..4.    BL       xTaskIncrementTick ; 0x20009138
+        0x200056cc:    f003fe62    ..b.    BL       xTaskIncrementTick ; 0x20009394
         0x200056d0:    b130        0.      CBZ      r0,0x200056e0 ; SysTick_Handler + 44
         0x200056d2:    f7fff8ef    ....    BL       SEGGER_SYSVIEW_RecordExitISRToScheduler ; 0x200048b4
         0x200056d6:    f04f5080    O..P    MOV      r0,#0x10000000
@@ -10674,7 +10674,7 @@
         0x2000627c:    bf00        ..      NOP      
         0x2000627e:    fbb9faf7    ....    UDIV     r10,r9,r7
         0x20006282:    fb0a9917    ....    MLS      r9,r10,r7,r9
-        0x20006286:    4813        .H      LDR      r0,[pc,#76] ; [0x200062d4] = 0x200095f5
+        0x20006286:    4813        .H      LDR      r0,[pc,#76] ; [0x200062d4] = 0x200098e5
         0x20006288:    f810100a    ....    LDRB     r1,[r0,r10]
         0x2000628c:    4640        @F      MOV      r0,r8
         0x2000628e:    f000f8bd    ....    BL       _StoreChar ; 0x2000640c
@@ -10706,7 +10706,7 @@
         0x200062ce:    e8bd9ffc    ....    POP      {r2-r12,pc}
     $d
         0x200062d2:    0000        ..      DCW    0
-        0x200062d4:    200095f5    ...     DCD    536909301
+        0x200062d4:    200098e5    ...     DCD    536910053
     $t
     i._SendPacket
     _SendPacket
@@ -11123,7 +11123,7 @@
     i._cbGetTime
     _cbGetTime
         0x2000664e:    e92d41f0    -..A    PUSH     {r4-r8,lr}
-        0x20006652:    f002fd67    ..g.    BL       xTaskGetTickCountFromISR ; 0x20009124
+        0x20006652:    f002fe95    ....    BL       xTaskGetTickCountFromISR ; 0x20009380
         0x20006656:    2500        .%      MOVS     r5,#0
         0x20006658:    4604        .F      MOV      r4,r0
         0x2000665a:    2101        .!      MOVS     r1,#1
@@ -12141,7 +12141,7 @@
         0x20006ffe:    a326        &.      ADR      r3,{pc}+0x9a ; 0x20007098
         0x20007000:    e9cd2100    ...!    STRD     r2,r1,[sp,#0]
         0x20007004:    9002        ..      STR      r0,[sp,#8]
-        0x20007006:    4a26        &J      LDR      r2,[pc,#152] ; [0x200070a0] = 0x200095e0
+        0x20007006:    4a26        &J      LDR      r2,[pc,#152] ; [0x200070a0] = 0x200098d0
         0x20007008:    a126        &.      ADR      r1,{pc}+0x9c ; 0x200070a4
         0x2000700a:    2000        .       MOVS     r0,#0
         0x2000700c:    f7fdf938    ..8.    BL       SEGGER_RTT_printf ; 0x20004280
@@ -12153,7 +12153,7 @@
         0x2000701a:    a31f        ..      ADR      r3,{pc}+0x7e ; 0x20007098
         0x2000701c:    e9cd2100    ...!    STRD     r2,r1,[sp,#0]
         0x20007020:    9002        ..      STR      r0,[sp,#8]
-        0x20007022:    4a1f        .J      LDR      r2,[pc,#124] ; [0x200070a0] = 0x200095e0
+        0x20007022:    4a1f        .J      LDR      r2,[pc,#124] ; [0x200070a0] = 0x200098d0
         0x20007024:    a126        &.      ADR      r1,{pc}+0x9c ; 0x200070c0
         0x20007026:    2000        .       MOVS     r0,#0
         0x20007028:    f7fdf92a    ..*.    BL       SEGGER_RTT_printf ; 0x20004280
@@ -12165,7 +12165,7 @@
         0x20007036:    a318        ..      ADR      r3,{pc}+0x62 ; 0x20007098
         0x20007038:    e9cd2100    ...!    STRD     r2,r1,[sp,#0]
         0x2000703c:    9002        ..      STR      r0,[sp,#8]
-        0x2000703e:    4a18        .J      LDR      r2,[pc,#96] ; [0x200070a0] = 0x200095e0
+        0x2000703e:    4a18        .J      LDR      r2,[pc,#96] ; [0x200070a0] = 0x200098d0
         0x20007040:    a125        %.      ADR      r1,{pc}+0x98 ; 0x200070d8
         0x20007042:    2000        .       MOVS     r0,#0
         0x20007044:    f7fdf91c    ....    BL       SEGGER_RTT_printf ; 0x20004280
@@ -12177,7 +12177,7 @@
         0x20007052:    a311        ..      ADR      r3,{pc}+0x46 ; 0x20007098
         0x20007054:    e9cd2100    ...!    STRD     r2,r1,[sp,#0]
         0x20007058:    9002        ..      STR      r0,[sp,#8]
-        0x2000705a:    4a11        .J      LDR      r2,[pc,#68] ; [0x200070a0] = 0x200095e0
+        0x2000705a:    4a11        .J      LDR      r2,[pc,#68] ; [0x200070a0] = 0x200098d0
         0x2000705c:    a124        $.      ADR      r1,{pc}+0x94 ; 0x200070f0
         0x2000705e:    2000        .       MOVS     r0,#0
         0x20007060:    f7fdf90e    ....    BL       SEGGER_RTT_printf ; 0x20004280
@@ -12189,7 +12189,7 @@
         0x2000706e:    a30a        ..      ADR      r3,{pc}+0x2a ; 0x20007098
         0x20007070:    e9cd2100    ...!    STRD     r2,r1,[sp,#0]
         0x20007074:    9002        ..      STR      r0,[sp,#8]
-        0x20007076:    4a0a        .J      LDR      r2,[pc,#40] ; [0x200070a0] = 0x200095e0
+        0x20007076:    4a0a        .J      LDR      r2,[pc,#40] ; [0x200070a0] = 0x200098d0
         0x20007078:    a123        #.      ADR      r1,{pc}+0x90 ; 0x20007108
         0x2000707a:    2000        .       MOVS     r0,#0
         0x2000707c:    f7fdf900    ....    BL       SEGGER_RTT_printf ; 0x20004280
@@ -12204,7 +12204,7 @@
         0x20007094:    006d3733    37m.    DCD    7157555
         0x20007098:    3b345b1b    .[4;    DCD    993286939
         0x2000709c:    006d3434    44m.    DCD    7156788
-        0x200070a0:    200095e0    ...     DCD    536909280
+        0x200070a0:    200098d0    ...     DCD    536910032
         0x200070a4:    2d207325    %s -    DCD    757101349
         0x200070a8:    25732520     %s%    DCD    628303136
         0x200070ac:    79732073    s sy    DCD    2037588083
@@ -12326,7 +12326,7 @@
         0x20007206:    a006        ..      ADR      r0,{pc}+0x1a ; 0x20007220
         0x20007208:    f7fff9ce    ....    BL       __0printf ; 0x200065a8
         0x2000720c:    f44f707a    O.zp    MOV      r0,#0x3e8
-        0x20007210:    f001f95a    ..Z.    BL       vTaskDelay ; 0x200084c8
+        0x20007210:    f001fa04    ....    BL       vTaskDelay ; 0x2000861c
         0x20007214:    e7e7        ..      B        0x200071e6 ; float_task + 6
     $d
         0x20007216:    0000        ..      DCW    0
@@ -12352,14 +12352,14 @@
         0x20007244:    e005        ..      B        0x20007252 ; led0_task + 14
         0x20007246:    f000f851    ..Q.    BL       led_red_toggle ; 0x200072ec
         0x2000724a:    f44f70fa    O..p    MOV      r0,#0x1f4
-        0x2000724e:    f001f93b    ..;.    BL       vTaskDelay ; 0x200084c8
+        0x2000724e:    f001f9e5    ....    BL       vTaskDelay ; 0x2000861c
         0x20007252:    e7f8        ..      B        0x20007246 ; led0_task + 2
     i.led1_task
     led1_task
         0x20007254:    e005        ..      B        0x20007262 ; led1_task + 14
         0x20007256:    f000f814    ....    BL       led_green_toggle ; 0x20007282
         0x2000725a:    f44f707a    O.zp    MOV      r0,#0x3e8
-        0x2000725e:    f001f933    ..3.    BL       vTaskDelay ; 0x200084c8
+        0x2000725e:    f001f9dd    ....    BL       vTaskDelay ; 0x2000861c
         0x20007262:    e7f8        ..      B        0x20007256 ; led1_task + 2
     i.led_green
     led_green
@@ -12436,12 +12436,12 @@
     main
         0x200072f8:    b51c        ..      PUSH     {r2-r4,lr}
         0x200072fa:    2401        .$      MOVS     r4,#1
-        0x200072fc:    f000fe02    ....    BL       segger_init ; 0x20007f04
+        0x200072fc:    f000fe4c    ..L.    BL       segger_init ; 0x20007f98
         0x20007300:    f7fdf8f4    ....    BL       SEGGER_SYSVIEW_Conf ; 0x200044ec
         0x20007304:    f7fef97e    ..~.    BL       SysClkIni ; 0x20005604
         0x20007308:    f7fffe5a    ..Z.    BL       clk_test ; 0x20006fc0
-        0x2000730c:    f000fe86    ....    BL       tick_init ; 0x2000801c
-        0x20007310:    f000fea2    ....    BL       usart_init ; 0x20008058
+        0x2000730c:    f000fed0    ....    BL       tick_init ; 0x200080b0
+        0x20007310:    f000feec    ....    BL       usart_init ; 0x200080ec
         0x20007314:    f7ffffbb    ....    BL       led_init ; 0x2000728e
         0x20007318:    480a        .H      LDR      r0,[pc,#40] ; [0x20007344] = 0x20010014
         0x2000731a:    2101        .!      MOVS     r1,#1
@@ -12449,12 +12449,12 @@
         0x2000731e:    2280        ."      MOVS     r2,#0x80
         0x20007320:    e9cd1000    ....    STRD     r1,r0,[sp,#0]
         0x20007324:    a108        ..      ADR      r1,{pc}+0x24 ; 0x20007348
-        0x20007326:    480b        .H      LDR      r0,[pc,#44] ; [0x20007354] = 0x20007f8d
-        0x20007328:    f001feb6    ....    BL       xTaskCreate ; 0x20009098
+        0x20007326:    480b        .H      LDR      r0,[pc,#44] ; [0x20007354] = 0x20008021
+        0x20007328:    f001ffe4    ....    BL       xTaskCreate ; 0x200092f4
         0x2000732c:    4604        .F      MOV      r4,r0
         0x2000732e:    2c01        .,      CMP      r4,#1
         0x20007330:    d102        ..      BNE      0x20007338 ; main + 64
-        0x20007332:    f001f9dd    ....    BL       vTaskStartScheduler ; 0x200086f0
+        0x20007332:    f001fab9    ....    BL       vTaskStartScheduler ; 0x200088a8
         0x20007336:    e002        ..      B        0x2000733e ; main + 70
         0x20007338:    f04f30ff    O..0    MOV      r0,#0xffffffff
         0x2000733c:    bd1c        ..      POP      {r2-r4,pc}
@@ -12466,7 +12466,7 @@
         0x20007348:    72617473    star    DCD    1918989427
         0x2000734c:    61745f74    t_ta    DCD    1635016564
         0x20007350:    00006b73    sk..    DCD    27507
-        0x20007354:    20007f8d    ...     DCD    536903565
+        0x20007354:    20008021    !..     DCD    536903713
     $t
     i.prvAddCurrentTaskToDelayedList
     prvAddCurrentTaskToDelayedList
@@ -12478,7 +12478,7 @@
         0x20007364:    4824        $H      LDR      r0,[pc,#144] ; [0x200073f8] = 0x20010030
         0x20007366:    6800        .h      LDR      r0,[r0,#0]
         0x20007368:    1d00        ..      ADDS     r0,r0,#4
-        0x2000736a:    f000ff19    ....    BL       uxListRemove ; 0x200081a0
+        0x2000736a:    f000ff63    ..c.    BL       uxListRemove ; 0x20008234
         0x2000736e:    b950        P.      CBNZ     r0,0x20007386 ; prvAddCurrentTaskToDelayedList + 46
         0x20007370:    4821        !H      LDR      r0,[pc,#132] ; [0x200073f8] = 0x20010030
         0x20007372:    6800        .h      LDR      r0,[r0,#0]
@@ -12501,7 +12501,7 @@
         0x20007398:    6801        .h      LDR      r1,[r0,#0]
         0x2000739a:    1d09        ..      ADDS     r1,r1,#4
         0x2000739c:    4818        .H      LDR      r0,[pc,#96] ; [0x20007400] = 0x200103c4
-        0x2000739e:    f000ff3d    ..=.    BL       vListInsertEnd ; 0x2000821c
+        0x2000739e:    f000ff9b    ....    BL       vListInsertEnd ; 0x200082d8
         0x200073a2:    e024        $.      B        0x200073ee ; prvAddCurrentTaskToDelayedList + 150
         0x200073a4:    197c        |.      ADDS     r4,r7,r5
         0x200073a6:    4814        .H      LDR      r0,[pc,#80] ; [0x200073f8] = 0x20010030
@@ -12518,7 +12518,7 @@
         0x200073be:    1d09        ..      ADDS     r1,r1,#4
         0x200073c0:    4810        .H      LDR      r0,[pc,#64] ; [0x20007404] = 0x20010038
         0x200073c2:    6800        .h      LDR      r0,[r0,#0]
-        0x200073c4:    f000ff10    ....    BL       vListInsert ; 0x200081e8
+        0x200073c4:    f000ff6e    ..n.    BL       vListInsert ; 0x200082a4
         0x200073c8:    e011        ..      B        0x200073ee ; prvAddCurrentTaskToDelayedList + 150
         0x200073ca:    2104        .!      MOVS     r1,#4
         0x200073cc:    480a        .H      LDR      r0,[pc,#40] ; [0x200073f8] = 0x20010030
@@ -12529,7 +12529,7 @@
         0x200073d8:    1d09        ..      ADDS     r1,r1,#4
         0x200073da:    480b        .H      LDR      r0,[pc,#44] ; [0x20007408] = 0x20010034
         0x200073dc:    6800        .h      LDR      r0,[r0,#0]
-        0x200073de:    f000ff03    ....    BL       vListInsert ; 0x200081e8
+        0x200073de:    f000ff61    ..a.    BL       vListInsert ; 0x200082a4
         0x200073e2:    480a        .H      LDR      r0,[pc,#40] ; [0x2000740c] = 0x20010060
         0x200073e4:    6800        .h      LDR      r0,[r0,#0]
         0x200073e6:    4284        .B      CMP      r4,r0
@@ -12551,7 +12551,7 @@
     prvAddNewTaskToReadyList
         0x20007410:    b538        8.      PUSH     {r3-r5,lr}
         0x20007412:    4604        .F      MOV      r4,r0
-        0x20007414:    f000ff0e    ....    BL       vPortEnterCritical ; 0x20008234
+        0x20007414:    f000ff6c    ..l.    BL       vPortEnterCritical ; 0x200082f0
         0x20007418:    482d        -H      LDR      r0,[pc,#180] ; [0x200074d0] = 0x20010040
         0x2000741a:    6800        .h      LDR      r0,[r0,#0]
         0x2000741c:    1c40        @.      ADDS     r0,r0,#1
@@ -12566,7 +12566,7 @@
         0x2000742e:    6800        .h      LDR      r0,[r0,#0]
         0x20007430:    2801        .(      CMP      r0,#1
         0x20007432:    d10d        ..      BNE      0x20007450 ; prvAddNewTaskToReadyList + 64
-        0x20007434:    f000f9ee    ....    BL       prvInitialiseTaskLists ; 0x20007814
+        0x20007434:    f000f9fc    ....    BL       prvInitialiseTaskLists ; 0x20007830
         0x20007438:    e00a        ..      B        0x20007450 ; prvAddNewTaskToReadyList + 64
         0x2000743a:    4827        'H      LDR      r0,[pc,#156] ; [0x200074d8] = 0x2001004c
         0x2000743c:    6800        .h      LDR      r0,[r0,#0]
@@ -12613,8 +12613,8 @@
         0x2000749c:    4a11        .J      LDR      r2,[pc,#68] ; [0x200074e4] = 0x20010310
         0x2000749e:    eb020081    ....    ADD      r0,r2,r1,LSL #2
         0x200074a2:    1d21        !.      ADDS     r1,r4,#4
-        0x200074a4:    f000feba    ....    BL       vListInsertEnd ; 0x2000821c
-        0x200074a8:    f000feee    ....    BL       vPortExitCritical ; 0x20008288
+        0x200074a4:    f000ff18    ....    BL       vListInsertEnd ; 0x200082d8
+        0x200074a8:    f000ff5e    ..^.    BL       vPortExitCritical ; 0x20008368
         0x200074ac:    480a        .H      LDR      r0,[pc,#40] ; [0x200074d8] = 0x2001004c
         0x200074ae:    6800        .h      LDR      r0,[r0,#0]
         0x200074b0:    b168        h.      CBZ      r0,0x200074ce ; prvAddNewTaskToReadyList + 190
@@ -12642,14 +12642,14 @@
     i.prvCheckForValidListAndQueue
     prvCheckForValidListAndQueue
         0x200074ec:    b510        ..      PUSH     {r4,lr}
-        0x200074ee:    f000fea1    ....    BL       vPortEnterCritical ; 0x20008234
+        0x200074ee:    f000feff    ....    BL       vPortEnterCritical ; 0x200082f0
         0x200074f2:    4810        .H      LDR      r0,[pc,#64] ; [0x20007534] = 0x20010078
         0x200074f4:    6800        .h      LDR      r0,[r0,#0]
         0x200074f6:    b9d0        ..      CBNZ     r0,0x2000752e ; prvCheckForValidListAndQueue + 66
         0x200074f8:    480f        .H      LDR      r0,[pc,#60] ; [0x20007538] = 0x200103d8
-        0x200074fa:    f000fe65    ..e.    BL       vListInitialise ; 0x200081c8
+        0x200074fa:    f000fec3    ....    BL       vListInitialise ; 0x20008284
         0x200074fe:    480f        .H      LDR      r0,[pc,#60] ; [0x2000753c] = 0x200103ec
-        0x20007500:    f000fe62    ..b.    BL       vListInitialise ; 0x200081c8
+        0x20007500:    f000fec0    ....    BL       vListInitialise ; 0x20008284
         0x20007504:    480c        .H      LDR      r0,[pc,#48] ; [0x20007538] = 0x200103d8
         0x20007506:    490e        .I      LDR      r1,[pc,#56] ; [0x20007540] = 0x20010070
         0x20007508:    6008        .`      STR      r0,[r1,#0]
@@ -12659,7 +12659,7 @@
         0x20007510:    2200        ."      MOVS     r2,#0
         0x20007512:    210c        .!      MOVS     r1,#0xc
         0x20007514:    200a        .       MOVS     r0,#0xa
-        0x20007516:    f001fa59    ..Y.    BL       xQueueGenericCreate ; 0x200089cc
+        0x20007516:    f001fb6b    ..k.    BL       xQueueGenericCreate ; 0x20008bf0
         0x2000751a:    4906        .I      LDR      r1,[pc,#24] ; [0x20007534] = 0x20010078
         0x2000751c:    6008        .`      STR      r0,[r1,#0]
         0x2000751e:    4608        .F      MOV      r0,r1
@@ -12668,8 +12668,8 @@
         0x20007524:    a108        ..      ADR      r1,{pc}+0x24 ; 0x20007548
         0x20007526:    4803        .H      LDR      r0,[pc,#12] ; [0x20007534] = 0x20010078
         0x20007528:    6800        .h      LDR      r0,[r0,#0]
-        0x2000752a:    f000ff6d    ..m.    BL       vQueueAddToRegistry ; 0x20008408
-        0x2000752e:    f000feab    ....    BL       vPortExitCritical ; 0x20008288
+        0x2000752a:    f001f809    ....    BL       vQueueAddToRegistry ; 0x20008540
+        0x2000752e:    f000ff1b    ....    BL       vPortExitCritical ; 0x20008368
         0x20007532:    bd10        ..      POP      {r4,pc}
     $d
         0x20007534:    20010078    x..     DCD    536936568
@@ -12684,12 +12684,12 @@
     prvCheckTasksWaitingTermination
         0x20007550:    b510        ..      PUSH     {r4,lr}
         0x20007552:    e016        ..      B        0x20007582 ; prvCheckTasksWaitingTermination + 50
-        0x20007554:    f000fe6e    ..n.    BL       vPortEnterCritical ; 0x20008234
+        0x20007554:    f000fecc    ....    BL       vPortEnterCritical ; 0x200082f0
         0x20007558:    480c        .H      LDR      r0,[pc,#48] ; [0x2000758c] = 0x200103b0
         0x2000755a:    68c0        .h      LDR      r0,[r0,#0xc]
         0x2000755c:    68c4        .h      LDR      r4,[r0,#0xc]
         0x2000755e:    1d20         .      ADDS     r0,r4,#4
-        0x20007560:    f000fe1e    ....    BL       uxListRemove ; 0x200081a0
+        0x20007560:    f000fe68    ..h.    BL       uxListRemove ; 0x20008234
         0x20007564:    480a        .H      LDR      r0,[pc,#40] ; [0x20007590] = 0x20010040
         0x20007566:    6800        .h      LDR      r0,[r0,#0]
         0x20007568:    1e40        @.      SUBS     r0,r0,#1
@@ -12700,7 +12700,7 @@
         0x20007572:    1e40        @.      SUBS     r0,r0,#1
         0x20007574:    4907        .I      LDR      r1,[pc,#28] ; [0x20007594] = 0x2001003c
         0x20007576:    6008        .`      STR      r0,[r1,#0]
-        0x20007578:    f000fe86    ....    BL       vPortExitCritical ; 0x20008288
+        0x20007578:    f000fef6    ....    BL       vPortExitCritical ; 0x20008368
         0x2000757c:    4620         F      MOV      r0,r4
         0x2000757e:    f000f85f    .._.    BL       prvDeleteTCB ; 0x20007640
         0x20007582:    4804        .H      LDR      r0,[pc,#16] ; [0x20007594] = 0x2001003c
@@ -12748,7 +12748,7 @@
         0x200075d8:    2800        .(      CMP      r0,#0
         0x200075da:    d12c        ,.      BNE      0x20007636 ; prvCopyDataToQueue + 116
         0x200075dc:    68a0        .h      LDR      r0,[r4,#8]
-        0x200075de:    f001fe53    ..S.    BL       xTaskPriorityDisinherit ; 0x20009288
+        0x200075de:    f001ff8d    ....    BL       xTaskPriorityDisinherit ; 0x200094fc
         0x200075e2:    4680        .F      MOV      r8,r0
         0x200075e4:    2000        .       MOVS     r0,#0
         0x200075e6:    60a0        .`      STR      r0,[r4,#8]
@@ -12797,9 +12797,9 @@
         0x20007640:    b510        ..      PUSH     {r4,lr}
         0x20007642:    4604        .F      MOV      r4,r0
         0x20007644:    6b20         k      LDR      r0,[r4,#0x30]
-        0x20007646:    f000fe3d    ..=.    BL       vPortFree ; 0x200082c4
+        0x20007646:    f000febf    ....    BL       vPortFree ; 0x200083c8
         0x2000764a:    4620         F      MOV      r0,r4
-        0x2000764c:    f000fe3a    ..:.    BL       vPortFree ; 0x200082c4
+        0x2000764c:    f000febc    ....    BL       vPortFree ; 0x200083c8
         0x20007650:    bd10        ..      POP      {r4,pc}
         0x20007652:    0000        ..      MOVS     r0,r0
     i.prvGetNextExpireTime
@@ -12914,7 +12914,7 @@
         0x20007738:    6425        %d      STR      r5,[r4,#0x40]
         0x2000773a:    2101        .!      MOVS     r1,#1
         0x2000773c:    4620         F      MOV      r0,r4
-        0x2000773e:    f001f979    ..y.    BL       xQueueGenericReset ; 0x20008a34
+        0x2000773e:    f001fa97    ....    BL       xQueueGenericReset ; 0x20008c70
         0x20007742:    f884804c    ..L.    STRB     r8,[r4,#0x4c]
         0x20007746:    4643        CF      MOV      r3,r8
         0x20007748:    462a        *F      MOV      r2,r5
@@ -12922,3345 +12922,3479 @@
         0x2000774c:    2073        s       MOVS     r0,#0x73
         0x2000774e:    f7fdf955    ..U.    BL       SEGGER_SYSVIEW_RecordU32x3 ; 0x200049fc
         0x20007752:    e8bd81f0    ....    POP      {r4-r8,pc}
+        0x20007756:    0000        ..      MOVS     r0,r0
     i.prvInitialiseNewTask
     prvInitialiseNewTask
-        0x20007756:    e92d5ff0    -.._    PUSH     {r4-r12,lr}
-        0x2000775a:    4682        .F      MOV      r10,r0
-        0x2000775c:    460e        .F      MOV      r6,r1
-        0x2000775e:    4690        .F      MOV      r8,r2
-        0x20007760:    469b        .F      MOV      r11,r3
-        0x20007762:    9f0a        ..      LDR      r7,[sp,#0x28]
-        0x20007764:    9c0c        ..      LDR      r4,[sp,#0x30]
-        0x20007766:    ea4f0188    O...    LSL      r1,r8,#2
-        0x2000776a:    22a5        ."      MOVS     r2,#0xa5
-        0x2000776c:    6b20         k      LDR      r0,[r4,#0x30]
-        0x2000776e:    f7f8fe64    ..d.    BL       __aeabi_memset ; 0x2000043a
-        0x20007772:    f1a80001    ....    SUB      r0,r8,#1
-        0x20007776:    6b21        !k      LDR      r1,[r4,#0x30]
-        0x20007778:    eb010980    ....    ADD      r9,r1,r0,LSL #2
-        0x2000777c:    f0290907    )...    BIC      r9,r9,#7
-        0x20007780:    f0090007    ....    AND      r0,r9,#7
-        0x20007784:    b908        ..      CBNZ     r0,0x2000778a ; prvInitialiseNewTask + 52
-        0x20007786:    2001        .       MOVS     r0,#1
-        0x20007788:    e000        ..      B        0x2000778c ; prvInitialiseNewTask + 54
-        0x2000778a:    2000        .       MOVS     r0,#0
-        0x2000778c:    b950        P.      CBNZ     r0,0x200077a4 ; prvInitialiseNewTask + 78
-        0x2000778e:    bf00        ..      NOP      
-        0x20007790:    2050        P       MOVS     r0,#0x50
-        0x20007792:    f3808811    ....    MSR      BASEPRI,r0
-        0x20007796:    f3bf8f4f    ..O.    DSB      
-        0x2000779a:    f3bf8f6f    ..o.    ISB      
-        0x2000779e:    bf00        ..      NOP      
-        0x200077a0:    bf00        ..      NOP      
-        0x200077a2:    e7fe        ..      B        0x200077a2 ; prvInitialiseNewTask + 76
-        0x200077a4:    b186        ..      CBZ      r6,0x200077c8 ; prvInitialiseNewTask + 114
-        0x200077a6:    2500        .%      MOVS     r5,#0
-        0x200077a8:    e007        ..      B        0x200077ba ; prvInitialiseNewTask + 100
-        0x200077aa:    5d71        q]      LDRB     r1,[r6,r5]
-        0x200077ac:    f1040034    ..4.    ADD      r0,r4,#0x34
-        0x200077b0:    5541        AU      STRB     r1,[r0,r5]
-        0x200077b2:    5d70        p]      LDRB     r0,[r6,r5]
-        0x200077b4:    b900        ..      CBNZ     r0,0x200077b8 ; prvInitialiseNewTask + 98
-        0x200077b6:    e002        ..      B        0x200077be ; prvInitialiseNewTask + 104
-        0x200077b8:    1c6d        m.      ADDS     r5,r5,#1
-        0x200077ba:    2d0a        .-      CMP      r5,#0xa
-        0x200077bc:    d3f5        ..      BCC      0x200077aa ; prvInitialiseNewTask + 84
-        0x200077be:    bf00        ..      NOP      
-        0x200077c0:    2100        .!      MOVS     r1,#0
-        0x200077c2:    203d        =       MOVS     r0,#0x3d
-        0x200077c4:    5501        .U      STRB     r1,[r0,r4]
-        0x200077c6:    e002        ..      B        0x200077ce ; prvInitialiseNewTask + 120
-        0x200077c8:    2000        .       MOVS     r0,#0
-        0x200077ca:    f8840034    ..4.    STRB     r0,[r4,#0x34]
-        0x200077ce:    2f05        ./      CMP      r7,#5
-        0x200077d0:    d300        ..      BCC      0x200077d4 ; prvInitialiseNewTask + 126
-        0x200077d2:    2704        .'      MOVS     r7,#4
-        0x200077d4:    62e7        .b      STR      r7,[r4,#0x2c]
-        0x200077d6:    64a7        .d      STR      r7,[r4,#0x48]
-        0x200077d8:    2000        .       MOVS     r0,#0
-        0x200077da:    64e0        .d      STR      r0,[r4,#0x4c]
-        0x200077dc:    1d20         .      ADDS     r0,r4,#4
-        0x200077de:    f000fd00    ....    BL       vListInitialiseItem ; 0x200081e2
-        0x200077e2:    f1040018    ....    ADD      r0,r4,#0x18
-        0x200077e6:    f000fcfc    ....    BL       vListInitialiseItem ; 0x200081e2
-        0x200077ea:    6124        $a      STR      r4,[r4,#0x10]
-        0x200077ec:    f1c70005    ....    RSB      r0,r7,#5
-        0x200077f0:    61a0        .a      STR      r0,[r4,#0x18]
-        0x200077f2:    6264        db      STR      r4,[r4,#0x24]
-        0x200077f4:    2000        .       MOVS     r0,#0
-        0x200077f6:    6520         e      STR      r0,[r4,#0x50]
-        0x200077f8:    f8840054    ..T.    STRB     r0,[r4,#0x54]
-        0x200077fc:    465a        ZF      MOV      r2,r11
-        0x200077fe:    4651        QF      MOV      r1,r10
-        0x20007800:    4648        HF      MOV      r0,r9
-        0x20007802:    f000fb69    ..i.    BL       pxPortInitialiseStack ; 0x20007ed8
-        0x20007806:    6020         `      STR      r0,[r4,#0]
-        0x20007808:    980b        ..      LDR      r0,[sp,#0x2c]
-        0x2000780a:    b108        ..      CBZ      r0,0x20007810 ; prvInitialiseNewTask + 186
-        0x2000780c:    980b        ..      LDR      r0,[sp,#0x2c]
-        0x2000780e:    6004        .`      STR      r4,[r0,#0]
-        0x20007810:    e8bd9ff0    ....    POP      {r4-r12,pc}
+        0x20007758:    e92d5ff0    -.._    PUSH     {r4-r12,lr}
+        0x2000775c:    4682        .F      MOV      r10,r0
+        0x2000775e:    460e        .F      MOV      r6,r1
+        0x20007760:    4690        .F      MOV      r8,r2
+        0x20007762:    469b        .F      MOV      r11,r3
+        0x20007764:    9f0a        ..      LDR      r7,[sp,#0x28]
+        0x20007766:    9c0c        ..      LDR      r4,[sp,#0x30]
+        0x20007768:    ea4f0188    O...    LSL      r1,r8,#2
+        0x2000776c:    22a5        ."      MOVS     r2,#0xa5
+        0x2000776e:    6b20         k      LDR      r0,[r4,#0x30]
+        0x20007770:    f7f8fe63    ..c.    BL       __aeabi_memset ; 0x2000043a
+        0x20007774:    f1a80001    ....    SUB      r0,r8,#1
+        0x20007778:    6b21        !k      LDR      r1,[r4,#0x30]
+        0x2000777a:    eb010980    ....    ADD      r9,r1,r0,LSL #2
+        0x2000777e:    f0290907    )...    BIC      r9,r9,#7
+        0x20007782:    f0090007    ....    AND      r0,r9,#7
+        0x20007786:    b908        ..      CBNZ     r0,0x2000778c ; prvInitialiseNewTask + 52
+        0x20007788:    2001        .       MOVS     r0,#1
+        0x2000778a:    e000        ..      B        0x2000778e ; prvInitialiseNewTask + 54
+        0x2000778c:    2000        .       MOVS     r0,#0
+        0x2000778e:    b928        (.      CBNZ     r0,0x2000779c ; prvInitialiseNewTask + 68
+        0x20007790:    f2403269    @.i2    MOV      r2,#0x369
+        0x20007794:    a11d        ..      ADR      r1,{pc}+0x78 ; 0x2000780c
+        0x20007796:    a022        ".      ADR      r0,{pc}+0x8a ; 0x20007820
+        0x20007798:    f7feff06    ....    BL       __0printf ; 0x200065a8
+        0x2000779c:    b186        ..      CBZ      r6,0x200077c0 ; prvInitialiseNewTask + 104
+        0x2000779e:    2500        .%      MOVS     r5,#0
+        0x200077a0:    e007        ..      B        0x200077b2 ; prvInitialiseNewTask + 90
+        0x200077a2:    5d71        q]      LDRB     r1,[r6,r5]
+        0x200077a4:    f1040034    ..4.    ADD      r0,r4,#0x34
+        0x200077a8:    5541        AU      STRB     r1,[r0,r5]
+        0x200077aa:    5d70        p]      LDRB     r0,[r6,r5]
+        0x200077ac:    b900        ..      CBNZ     r0,0x200077b0 ; prvInitialiseNewTask + 88
+        0x200077ae:    e002        ..      B        0x200077b6 ; prvInitialiseNewTask + 94
+        0x200077b0:    1c6d        m.      ADDS     r5,r5,#1
+        0x200077b2:    2d0a        .-      CMP      r5,#0xa
+        0x200077b4:    d3f5        ..      BCC      0x200077a2 ; prvInitialiseNewTask + 74
+        0x200077b6:    bf00        ..      NOP      
+        0x200077b8:    2100        .!      MOVS     r1,#0
+        0x200077ba:    203d        =       MOVS     r0,#0x3d
+        0x200077bc:    5501        .U      STRB     r1,[r0,r4]
+        0x200077be:    e002        ..      B        0x200077c6 ; prvInitialiseNewTask + 110
+        0x200077c0:    2000        .       MOVS     r0,#0
+        0x200077c2:    f8840034    ..4.    STRB     r0,[r4,#0x34]
+        0x200077c6:    2f05        ./      CMP      r7,#5
+        0x200077c8:    d300        ..      BCC      0x200077cc ; prvInitialiseNewTask + 116
+        0x200077ca:    2704        .'      MOVS     r7,#4
+        0x200077cc:    62e7        .b      STR      r7,[r4,#0x2c]
+        0x200077ce:    64a7        .d      STR      r7,[r4,#0x48]
+        0x200077d0:    2000        .       MOVS     r0,#0
+        0x200077d2:    64e0        .d      STR      r0,[r4,#0x4c]
+        0x200077d4:    1d20         .      ADDS     r0,r4,#4
+        0x200077d6:    f000fd62    ..b.    BL       vListInitialiseItem ; 0x2000829e
+        0x200077da:    f1040018    ....    ADD      r0,r4,#0x18
+        0x200077de:    f000fd5e    ..^.    BL       vListInitialiseItem ; 0x2000829e
+        0x200077e2:    6124        $a      STR      r4,[r4,#0x10]
+        0x200077e4:    f1c70005    ....    RSB      r0,r7,#5
+        0x200077e8:    61a0        .a      STR      r0,[r4,#0x18]
+        0x200077ea:    6264        db      STR      r4,[r4,#0x24]
+        0x200077ec:    2000        .       MOVS     r0,#0
+        0x200077ee:    6520         e      STR      r0,[r4,#0x50]
+        0x200077f0:    f8840054    ..T.    STRB     r0,[r4,#0x54]
+        0x200077f4:    465a        ZF      MOV      r2,r11
+        0x200077f6:    4651        QF      MOV      r1,r10
+        0x200077f8:    4648        HF      MOV      r0,r9
+        0x200077fa:    f000fbb7    ....    BL       pxPortInitialiseStack ; 0x20007f6c
+        0x200077fe:    6020         `      STR      r0,[r4,#0]
+        0x20007800:    980b        ..      LDR      r0,[sp,#0x2c]
+        0x20007802:    b108        ..      CBZ      r0,0x20007808 ; prvInitialiseNewTask + 176
+        0x20007804:    980b        ..      LDR      r0,[sp,#0x2c]
+        0x20007806:    6004        .`      STR      r4,[r0,#0]
+        0x20007808:    e8bd9ff0    ....    POP      {r4-r12,pc}
+    $d
+        0x2000780c:    465c2e2e    ..\F    DCD    1180446254
+        0x20007810:    52656572    reeR    DCD    1382376818
+        0x20007814:    5c534f54    TOS\    DCD    1548963668
+        0x20007818:    6b736174    task    DCD    1802723700
+        0x2000781c:    00632e73    s.c.    DCD    6499955
+        0x20007820:    6f727245    Erro    DCD    1869771333
+        0x20007824:    25203a72    r: %    DCD    622869106
+        0x20007828:    25202c73    s, %    DCD    622865523
+        0x2000782c:    000a0d64    d...    DCD    658788
+    $t
     i.prvInitialiseTaskLists
     prvInitialiseTaskLists
-        0x20007814:    b510        ..      PUSH     {r4,lr}
-        0x20007816:    2400        .$      MOVS     r4,#0
-        0x20007818:    e007        ..      B        0x2000782a ; prvInitialiseTaskLists + 22
-        0x2000781a:    eb040184    ....    ADD      r1,r4,r4,LSL #2
-        0x2000781e:    4a0f        .J      LDR      r2,[pc,#60] ; [0x2000785c] = 0x20010310
-        0x20007820:    eb020081    ....    ADD      r0,r2,r1,LSL #2
-        0x20007824:    f000fcd0    ....    BL       vListInitialise ; 0x200081c8
-        0x20007828:    1c64        d.      ADDS     r4,r4,#1
-        0x2000782a:    2c05        .,      CMP      r4,#5
-        0x2000782c:    d3f5        ..      BCC      0x2000781a ; prvInitialiseTaskLists + 6
-        0x2000782e:    480c        .H      LDR      r0,[pc,#48] ; [0x20007860] = 0x20010374
-        0x20007830:    f000fcca    ....    BL       vListInitialise ; 0x200081c8
-        0x20007834:    480b        .H      LDR      r0,[pc,#44] ; [0x20007864] = 0x20010388
-        0x20007836:    f000fcc7    ....    BL       vListInitialise ; 0x200081c8
-        0x2000783a:    480b        .H      LDR      r0,[pc,#44] ; [0x20007868] = 0x2001039c
-        0x2000783c:    f000fcc4    ....    BL       vListInitialise ; 0x200081c8
-        0x20007840:    480a        .H      LDR      r0,[pc,#40] ; [0x2000786c] = 0x200103b0
-        0x20007842:    f000fcc1    ....    BL       vListInitialise ; 0x200081c8
-        0x20007846:    480a        .H      LDR      r0,[pc,#40] ; [0x20007870] = 0x200103c4
-        0x20007848:    f000fcbe    ....    BL       vListInitialise ; 0x200081c8
-        0x2000784c:    4804        .H      LDR      r0,[pc,#16] ; [0x20007860] = 0x20010374
-        0x2000784e:    4909        .I      LDR      r1,[pc,#36] ; [0x20007874] = 0x20010034
-        0x20007850:    6008        .`      STR      r0,[r1,#0]
-        0x20007852:    4804        .H      LDR      r0,[pc,#16] ; [0x20007864] = 0x20010388
-        0x20007854:    4908        .I      LDR      r1,[pc,#32] ; [0x20007878] = 0x20010038
-        0x20007856:    6008        .`      STR      r0,[r1,#0]
-        0x20007858:    bd10        ..      POP      {r4,pc}
+        0x20007830:    b510        ..      PUSH     {r4,lr}
+        0x20007832:    2400        .$      MOVS     r4,#0
+        0x20007834:    e007        ..      B        0x20007846 ; prvInitialiseTaskLists + 22
+        0x20007836:    eb040184    ....    ADD      r1,r4,r4,LSL #2
+        0x2000783a:    4a0f        .J      LDR      r2,[pc,#60] ; [0x20007878] = 0x20010310
+        0x2000783c:    eb020081    ....    ADD      r0,r2,r1,LSL #2
+        0x20007840:    f000fd20    .. .    BL       vListInitialise ; 0x20008284
+        0x20007844:    1c64        d.      ADDS     r4,r4,#1
+        0x20007846:    2c05        .,      CMP      r4,#5
+        0x20007848:    d3f5        ..      BCC      0x20007836 ; prvInitialiseTaskLists + 6
+        0x2000784a:    480c        .H      LDR      r0,[pc,#48] ; [0x2000787c] = 0x20010374
+        0x2000784c:    f000fd1a    ....    BL       vListInitialise ; 0x20008284
+        0x20007850:    480b        .H      LDR      r0,[pc,#44] ; [0x20007880] = 0x20010388
+        0x20007852:    f000fd17    ....    BL       vListInitialise ; 0x20008284
+        0x20007856:    480b        .H      LDR      r0,[pc,#44] ; [0x20007884] = 0x2001039c
+        0x20007858:    f000fd14    ....    BL       vListInitialise ; 0x20008284
+        0x2000785c:    480a        .H      LDR      r0,[pc,#40] ; [0x20007888] = 0x200103b0
+        0x2000785e:    f000fd11    ....    BL       vListInitialise ; 0x20008284
+        0x20007862:    480a        .H      LDR      r0,[pc,#40] ; [0x2000788c] = 0x200103c4
+        0x20007864:    f000fd0e    ....    BL       vListInitialise ; 0x20008284
+        0x20007868:    4804        .H      LDR      r0,[pc,#16] ; [0x2000787c] = 0x20010374
+        0x2000786a:    4909        .I      LDR      r1,[pc,#36] ; [0x20007890] = 0x20010034
+        0x2000786c:    6008        .`      STR      r0,[r1,#0]
+        0x2000786e:    4804        .H      LDR      r0,[pc,#16] ; [0x20007880] = 0x20010388
+        0x20007870:    4908        .I      LDR      r1,[pc,#32] ; [0x20007894] = 0x20010038
+        0x20007872:    6008        .`      STR      r0,[r1,#0]
+        0x20007874:    bd10        ..      POP      {r4,pc}
     $d
-        0x2000785a:    0000        ..      DCW    0
-        0x2000785c:    20010310    ...     DCD    536937232
-        0x20007860:    20010374    t..     DCD    536937332
-        0x20007864:    20010388    ...     DCD    536937352
-        0x20007868:    2001039c    ...     DCD    536937372
-        0x2000786c:    200103b0    ...     DCD    536937392
-        0x20007870:    200103c4    ...     DCD    536937412
-        0x20007874:    20010034    4..     DCD    536936500
-        0x20007878:    20010038    8..     DCD    536936504
+        0x20007876:    0000        ..      DCW    0
+        0x20007878:    20010310    ...     DCD    536937232
+        0x2000787c:    20010374    t..     DCD    536937332
+        0x20007880:    20010388    ...     DCD    536937352
+        0x20007884:    2001039c    ...     DCD    536937372
+        0x20007888:    200103b0    ...     DCD    536937392
+        0x2000788c:    200103c4    ...     DCD    536937412
+        0x20007890:    20010034    4..     DCD    536936500
+        0x20007894:    20010038    8..     DCD    536936504
     $t
     i.prvInsertBlockIntoFreeList
     prvInsertBlockIntoFreeList
-        0x2000787c:    b510        ..      PUSH     {r4,lr}
-        0x2000787e:    4601        .F      MOV      r1,r0
-        0x20007880:    4816        .H      LDR      r0,[pc,#88] ; [0x200078dc] = 0x20010084
-        0x20007882:    e000        ..      B        0x20007886 ; prvInsertBlockIntoFreeList + 10
-        0x20007884:    6800        .h      LDR      r0,[r0,#0]
-        0x20007886:    6803        .h      LDR      r3,[r0,#0]
-        0x20007888:    428b        .B      CMP      r3,r1
-        0x2000788a:    d3fb        ..      BCC      0x20007884 ; prvInsertBlockIntoFreeList + 8
-        0x2000788c:    4602        .F      MOV      r2,r0
-        0x2000788e:    6843        Ch      LDR      r3,[r0,#4]
-        0x20007890:    4413        .D      ADD      r3,r3,r2
-        0x20007892:    428b        .B      CMP      r3,r1
-        0x20007894:    d104        ..      BNE      0x200078a0 ; prvInsertBlockIntoFreeList + 36
-        0x20007896:    6843        Ch      LDR      r3,[r0,#4]
-        0x20007898:    684c        Lh      LDR      r4,[r1,#4]
-        0x2000789a:    4423        #D      ADD      r3,r3,r4
-        0x2000789c:    6043        C`      STR      r3,[r0,#4]
-        0x2000789e:    4601        .F      MOV      r1,r0
-        0x200078a0:    460a        .F      MOV      r2,r1
-        0x200078a2:    684b        Kh      LDR      r3,[r1,#4]
-        0x200078a4:    4413        .D      ADD      r3,r3,r2
-        0x200078a6:    6804        .h      LDR      r4,[r0,#0]
-        0x200078a8:    42a3        .B      CMP      r3,r4
-        0x200078aa:    d111        ..      BNE      0x200078d0 ; prvInsertBlockIntoFreeList + 84
-        0x200078ac:    4c0c        .L      LDR      r4,[pc,#48] ; [0x200078e0] = 0x2001008c
-        0x200078ae:    6803        .h      LDR      r3,[r0,#0]
-        0x200078b0:    6824        $h      LDR      r4,[r4,#0]
-        0x200078b2:    42a3        .B      CMP      r3,r4
-        0x200078b4:    d008        ..      BEQ      0x200078c8 ; prvInsertBlockIntoFreeList + 76
-        0x200078b6:    684b        Kh      LDR      r3,[r1,#4]
-        0x200078b8:    6804        .h      LDR      r4,[r0,#0]
-        0x200078ba:    6864        dh      LDR      r4,[r4,#4]
-        0x200078bc:    4423        #D      ADD      r3,r3,r4
-        0x200078be:    604b        K`      STR      r3,[r1,#4]
-        0x200078c0:    6803        .h      LDR      r3,[r0,#0]
-        0x200078c2:    681b        .h      LDR      r3,[r3,#0]
-        0x200078c4:    600b        .`      STR      r3,[r1,#0]
-        0x200078c6:    e005        ..      B        0x200078d4 ; prvInsertBlockIntoFreeList + 88
-        0x200078c8:    4b05        .K      LDR      r3,[pc,#20] ; [0x200078e0] = 0x2001008c
-        0x200078ca:    681b        .h      LDR      r3,[r3,#0]
-        0x200078cc:    600b        .`      STR      r3,[r1,#0]
-        0x200078ce:    e001        ..      B        0x200078d4 ; prvInsertBlockIntoFreeList + 88
-        0x200078d0:    6803        .h      LDR      r3,[r0,#0]
-        0x200078d2:    600b        .`      STR      r3,[r1,#0]
-        0x200078d4:    4288        .B      CMP      r0,r1
-        0x200078d6:    d000        ..      BEQ      0x200078da ; prvInsertBlockIntoFreeList + 94
-        0x200078d8:    6001        .`      STR      r1,[r0,#0]
-        0x200078da:    bd10        ..      POP      {r4,pc}
+        0x20007898:    b510        ..      PUSH     {r4,lr}
+        0x2000789a:    4601        .F      MOV      r1,r0
+        0x2000789c:    4816        .H      LDR      r0,[pc,#88] ; [0x200078f8] = 0x20010084
+        0x2000789e:    e000        ..      B        0x200078a2 ; prvInsertBlockIntoFreeList + 10
+        0x200078a0:    6800        .h      LDR      r0,[r0,#0]
+        0x200078a2:    6803        .h      LDR      r3,[r0,#0]
+        0x200078a4:    428b        .B      CMP      r3,r1
+        0x200078a6:    d3fb        ..      BCC      0x200078a0 ; prvInsertBlockIntoFreeList + 8
+        0x200078a8:    4602        .F      MOV      r2,r0
+        0x200078aa:    6843        Ch      LDR      r3,[r0,#4]
+        0x200078ac:    4413        .D      ADD      r3,r3,r2
+        0x200078ae:    428b        .B      CMP      r3,r1
+        0x200078b0:    d104        ..      BNE      0x200078bc ; prvInsertBlockIntoFreeList + 36
+        0x200078b2:    6843        Ch      LDR      r3,[r0,#4]
+        0x200078b4:    684c        Lh      LDR      r4,[r1,#4]
+        0x200078b6:    4423        #D      ADD      r3,r3,r4
+        0x200078b8:    6043        C`      STR      r3,[r0,#4]
+        0x200078ba:    4601        .F      MOV      r1,r0
+        0x200078bc:    460a        .F      MOV      r2,r1
+        0x200078be:    684b        Kh      LDR      r3,[r1,#4]
+        0x200078c0:    4413        .D      ADD      r3,r3,r2
+        0x200078c2:    6804        .h      LDR      r4,[r0,#0]
+        0x200078c4:    42a3        .B      CMP      r3,r4
+        0x200078c6:    d111        ..      BNE      0x200078ec ; prvInsertBlockIntoFreeList + 84
+        0x200078c8:    4c0c        .L      LDR      r4,[pc,#48] ; [0x200078fc] = 0x2001008c
+        0x200078ca:    6803        .h      LDR      r3,[r0,#0]
+        0x200078cc:    6824        $h      LDR      r4,[r4,#0]
+        0x200078ce:    42a3        .B      CMP      r3,r4
+        0x200078d0:    d008        ..      BEQ      0x200078e4 ; prvInsertBlockIntoFreeList + 76
+        0x200078d2:    684b        Kh      LDR      r3,[r1,#4]
+        0x200078d4:    6804        .h      LDR      r4,[r0,#0]
+        0x200078d6:    6864        dh      LDR      r4,[r4,#4]
+        0x200078d8:    4423        #D      ADD      r3,r3,r4
+        0x200078da:    604b        K`      STR      r3,[r1,#4]
+        0x200078dc:    6803        .h      LDR      r3,[r0,#0]
+        0x200078de:    681b        .h      LDR      r3,[r3,#0]
+        0x200078e0:    600b        .`      STR      r3,[r1,#0]
+        0x200078e2:    e005        ..      B        0x200078f0 ; prvInsertBlockIntoFreeList + 88
+        0x200078e4:    4b05        .K      LDR      r3,[pc,#20] ; [0x200078fc] = 0x2001008c
+        0x200078e6:    681b        .h      LDR      r3,[r3,#0]
+        0x200078e8:    600b        .`      STR      r3,[r1,#0]
+        0x200078ea:    e001        ..      B        0x200078f0 ; prvInsertBlockIntoFreeList + 88
+        0x200078ec:    6803        .h      LDR      r3,[r0,#0]
+        0x200078ee:    600b        .`      STR      r3,[r1,#0]
+        0x200078f0:    4288        .B      CMP      r0,r1
+        0x200078f2:    d000        ..      BEQ      0x200078f6 ; prvInsertBlockIntoFreeList + 94
+        0x200078f4:    6001        .`      STR      r1,[r0,#0]
+        0x200078f6:    bd10        ..      POP      {r4,pc}
     $d
-        0x200078dc:    20010084    ...     DCD    536936580
-        0x200078e0:    2001008c    ...     DCD    536936588
+        0x200078f8:    20010084    ...     DCD    536936580
+        0x200078fc:    2001008c    ...     DCD    536936588
     $t
     i.prvInsertTimerInActiveList
     prvInsertTimerInActiveList
-        0x200078e4:    e92d41f0    -..A    PUSH     {r4-r8,lr}
-        0x200078e8:    4604        .F      MOV      r4,r0
-        0x200078ea:    460d        .F      MOV      r5,r1
-        0x200078ec:    4616        .F      MOV      r6,r2
-        0x200078ee:    461f        .F      MOV      r7,r3
-        0x200078f0:    f04f0800    O...    MOV      r8,#0
-        0x200078f4:    6065        e`      STR      r5,[r4,#4]
-        0x200078f6:    6124        $a      STR      r4,[r4,#0x10]
-        0x200078f8:    42b5        .B      CMP      r5,r6
-        0x200078fa:    d80c        ..      BHI      0x20007916 ; prvInsertTimerInActiveList + 50
-        0x200078fc:    1bf0        ..      SUBS     r0,r6,r7
-        0x200078fe:    69a1        .i      LDR      r1,[r4,#0x18]
-        0x20007900:    4288        .B      CMP      r0,r1
-        0x20007902:    d302        ..      BCC      0x2000790a ; prvInsertTimerInActiveList + 38
-        0x20007904:    f04f0801    O...    MOV      r8,#1
-        0x20007908:    e011        ..      B        0x2000792e ; prvInsertTimerInActiveList + 74
-        0x2000790a:    1d21        !.      ADDS     r1,r4,#4
-        0x2000790c:    4809        .H      LDR      r0,[pc,#36] ; [0x20007934] = 0x20010074
-        0x2000790e:    6800        .h      LDR      r0,[r0,#0]
-        0x20007910:    f000fc6a    ..j.    BL       vListInsert ; 0x200081e8
-        0x20007914:    e00b        ..      B        0x2000792e ; prvInsertTimerInActiveList + 74
-        0x20007916:    42be        .B      CMP      r6,r7
-        0x20007918:    d204        ..      BCS      0x20007924 ; prvInsertTimerInActiveList + 64
-        0x2000791a:    42bd        .B      CMP      r5,r7
-        0x2000791c:    d302        ..      BCC      0x20007924 ; prvInsertTimerInActiveList + 64
-        0x2000791e:    f04f0801    O...    MOV      r8,#1
-        0x20007922:    e004        ..      B        0x2000792e ; prvInsertTimerInActiveList + 74
-        0x20007924:    1d21        !.      ADDS     r1,r4,#4
-        0x20007926:    4804        .H      LDR      r0,[pc,#16] ; [0x20007938] = 0x20010070
-        0x20007928:    6800        .h      LDR      r0,[r0,#0]
-        0x2000792a:    f000fc5d    ..].    BL       vListInsert ; 0x200081e8
-        0x2000792e:    4640        @F      MOV      r0,r8
-        0x20007930:    e8bd81f0    ....    POP      {r4-r8,pc}
+        0x20007900:    e92d41f0    -..A    PUSH     {r4-r8,lr}
+        0x20007904:    4604        .F      MOV      r4,r0
+        0x20007906:    460d        .F      MOV      r5,r1
+        0x20007908:    4616        .F      MOV      r6,r2
+        0x2000790a:    461f        .F      MOV      r7,r3
+        0x2000790c:    f04f0800    O...    MOV      r8,#0
+        0x20007910:    6065        e`      STR      r5,[r4,#4]
+        0x20007912:    6124        $a      STR      r4,[r4,#0x10]
+        0x20007914:    42b5        .B      CMP      r5,r6
+        0x20007916:    d80c        ..      BHI      0x20007932 ; prvInsertTimerInActiveList + 50
+        0x20007918:    1bf0        ..      SUBS     r0,r6,r7
+        0x2000791a:    69a1        .i      LDR      r1,[r4,#0x18]
+        0x2000791c:    4288        .B      CMP      r0,r1
+        0x2000791e:    d302        ..      BCC      0x20007926 ; prvInsertTimerInActiveList + 38
+        0x20007920:    f04f0801    O...    MOV      r8,#1
+        0x20007924:    e011        ..      B        0x2000794a ; prvInsertTimerInActiveList + 74
+        0x20007926:    1d21        !.      ADDS     r1,r4,#4
+        0x20007928:    4809        .H      LDR      r0,[pc,#36] ; [0x20007950] = 0x20010074
+        0x2000792a:    6800        .h      LDR      r0,[r0,#0]
+        0x2000792c:    f000fcba    ....    BL       vListInsert ; 0x200082a4
+        0x20007930:    e00b        ..      B        0x2000794a ; prvInsertTimerInActiveList + 74
+        0x20007932:    42be        .B      CMP      r6,r7
+        0x20007934:    d204        ..      BCS      0x20007940 ; prvInsertTimerInActiveList + 64
+        0x20007936:    42bd        .B      CMP      r5,r7
+        0x20007938:    d302        ..      BCC      0x20007940 ; prvInsertTimerInActiveList + 64
+        0x2000793a:    f04f0801    O...    MOV      r8,#1
+        0x2000793e:    e004        ..      B        0x2000794a ; prvInsertTimerInActiveList + 74
+        0x20007940:    1d21        !.      ADDS     r1,r4,#4
+        0x20007942:    4804        .H      LDR      r0,[pc,#16] ; [0x20007954] = 0x20010070
+        0x20007944:    6800        .h      LDR      r0,[r0,#0]
+        0x20007946:    f000fcad    ....    BL       vListInsert ; 0x200082a4
+        0x2000794a:    4640        @F      MOV      r0,r8
+        0x2000794c:    e8bd81f0    ....    POP      {r4-r8,pc}
     $d
-        0x20007934:    20010074    t..     DCD    536936564
-        0x20007938:    20010070    p..     DCD    536936560
+        0x20007950:    20010074    t..     DCD    536936564
+        0x20007954:    20010070    p..     DCD    536936560
     $t
     i.prvIsQueueEmpty
     prvIsQueueEmpty
-        0x2000793c:    b570        p.      PUSH     {r4-r6,lr}
-        0x2000793e:    4605        .F      MOV      r5,r0
-        0x20007940:    f000fc78    ..x.    BL       vPortEnterCritical ; 0x20008234
-        0x20007944:    6ba8        .k      LDR      r0,[r5,#0x38]
-        0x20007946:    b908        ..      CBNZ     r0,0x2000794c ; prvIsQueueEmpty + 16
-        0x20007948:    2401        .$      MOVS     r4,#1
-        0x2000794a:    e000        ..      B        0x2000794e ; prvIsQueueEmpty + 18
-        0x2000794c:    2400        .$      MOVS     r4,#0
-        0x2000794e:    f000fc9b    ....    BL       vPortExitCritical ; 0x20008288
-        0x20007952:    4620         F      MOV      r0,r4
-        0x20007954:    bd70        p.      POP      {r4-r6,pc}
+        0x20007958:    b570        p.      PUSH     {r4-r6,lr}
+        0x2000795a:    4605        .F      MOV      r5,r0
+        0x2000795c:    f000fcc8    ....    BL       vPortEnterCritical ; 0x200082f0
+        0x20007960:    6ba8        .k      LDR      r0,[r5,#0x38]
+        0x20007962:    b908        ..      CBNZ     r0,0x20007968 ; prvIsQueueEmpty + 16
+        0x20007964:    2401        .$      MOVS     r4,#1
+        0x20007966:    e000        ..      B        0x2000796a ; prvIsQueueEmpty + 18
+        0x20007968:    2400        .$      MOVS     r4,#0
+        0x2000796a:    f000fcfd    ....    BL       vPortExitCritical ; 0x20008368
+        0x2000796e:    4620         F      MOV      r0,r4
+        0x20007970:    bd70        p.      POP      {r4-r6,pc}
     i.prvIsQueueFull
     prvIsQueueFull
-        0x20007956:    b570        p.      PUSH     {r4-r6,lr}
-        0x20007958:    4605        .F      MOV      r5,r0
-        0x2000795a:    f000fc6b    ..k.    BL       vPortEnterCritical ; 0x20008234
-        0x2000795e:    6ba8        .k      LDR      r0,[r5,#0x38]
-        0x20007960:    6be9        .k      LDR      r1,[r5,#0x3c]
-        0x20007962:    4288        .B      CMP      r0,r1
-        0x20007964:    d101        ..      BNE      0x2000796a ; prvIsQueueFull + 20
-        0x20007966:    2401        .$      MOVS     r4,#1
-        0x20007968:    e000        ..      B        0x2000796c ; prvIsQueueFull + 22
-        0x2000796a:    2400        .$      MOVS     r4,#0
-        0x2000796c:    f000fc8c    ....    BL       vPortExitCritical ; 0x20008288
-        0x20007970:    4620         F      MOV      r0,r4
-        0x20007972:    bd70        p.      POP      {r4-r6,pc}
+        0x20007972:    b570        p.      PUSH     {r4-r6,lr}
+        0x20007974:    4605        .F      MOV      r5,r0
+        0x20007976:    f000fcbb    ....    BL       vPortEnterCritical ; 0x200082f0
+        0x2000797a:    6ba8        .k      LDR      r0,[r5,#0x38]
+        0x2000797c:    6be9        .k      LDR      r1,[r5,#0x3c]
+        0x2000797e:    4288        .B      CMP      r0,r1
+        0x20007980:    d101        ..      BNE      0x20007986 ; prvIsQueueFull + 20
+        0x20007982:    2401        .$      MOVS     r4,#1
+        0x20007984:    e000        ..      B        0x20007988 ; prvIsQueueFull + 22
+        0x20007986:    2400        .$      MOVS     r4,#0
+        0x20007988:    f000fcee    ....    BL       vPortExitCritical ; 0x20008368
+        0x2000798c:    4620         F      MOV      r0,r4
+        0x2000798e:    bd70        p.      POP      {r4-r6,pc}
     i.prvProcessExpiredTimer
     prvProcessExpiredTimer
-        0x20007974:    b5f8        ..      PUSH     {r3-r7,lr}
-        0x20007976:    4605        .F      MOV      r5,r0
-        0x20007978:    460f        .F      MOV      r7,r1
-        0x2000797a:    481a        .H      LDR      r0,[pc,#104] ; [0x200079e4] = 0x20010070
-        0x2000797c:    6800        .h      LDR      r0,[r0,#0]
-        0x2000797e:    68c0        .h      LDR      r0,[r0,#0xc]
-        0x20007980:    68c4        .h      LDR      r4,[r0,#0xc]
-        0x20007982:    1d20         .      ADDS     r0,r4,#4
-        0x20007984:    f000fc0c    ....    BL       uxListRemove ; 0x200081a0
-        0x20007988:    f8940028    ..(.    LDRB     r0,[r4,#0x28]
-        0x2000798c:    f0000004    ....    AND      r0,r0,#4
-        0x20007990:    b1e8        ..      CBZ      r0,0x200079ce ; prvProcessExpiredTimer + 90
-        0x20007992:    69a0        .i      LDR      r0,[r4,#0x18]
-        0x20007994:    1941        A.      ADDS     r1,r0,r5
-        0x20007996:    462b        +F      MOV      r3,r5
-        0x20007998:    463a        :F      MOV      r2,r7
-        0x2000799a:    4620         F      MOV      r0,r4
-        0x2000799c:    f7ffffa2    ....    BL       prvInsertTimerInActiveList ; 0x200078e4
-        0x200079a0:    b1d8        ..      CBZ      r0,0x200079da ; prvProcessExpiredTimer + 102
-        0x200079a2:    2000        .       MOVS     r0,#0
-        0x200079a4:    4603        .F      MOV      r3,r0
-        0x200079a6:    462a        *F      MOV      r2,r5
-        0x200079a8:    4601        .F      MOV      r1,r0
-        0x200079aa:    9000        ..      STR      r0,[sp,#0]
-        0x200079ac:    4620         F      MOV      r0,r4
-        0x200079ae:    f001fdcd    ....    BL       xTimerGenericCommand ; 0x2000954c
-        0x200079b2:    4606        .F      MOV      r6,r0
-        0x200079b4:    b956        V.      CBNZ     r6,0x200079cc ; prvProcessExpiredTimer + 88
-        0x200079b6:    bf00        ..      NOP      
-        0x200079b8:    2050        P       MOVS     r0,#0x50
-        0x200079ba:    f3808811    ....    MSR      BASEPRI,r0
-        0x200079be:    f3bf8f4f    ..O.    DSB      
-        0x200079c2:    f3bf8f6f    ..o.    ISB      
-        0x200079c6:    bf00        ..      NOP      
-        0x200079c8:    bf00        ..      NOP      
-        0x200079ca:    e7fe        ..      B        0x200079ca ; prvProcessExpiredTimer + 86
-        0x200079cc:    e005        ..      B        0x200079da ; prvProcessExpiredTimer + 102
-        0x200079ce:    f8940028    ..(.    LDRB     r0,[r4,#0x28]
-        0x200079d2:    f0200001     ...    BIC      r0,r0,#1
-        0x200079d6:    f8840028    ..(.    STRB     r0,[r4,#0x28]
-        0x200079da:    4620         F      MOV      r0,r4
-        0x200079dc:    6a21        !j      LDR      r1,[r4,#0x20]
-        0x200079de:    4788        .G      BLX      r1
-        0x200079e0:    bdf8        ..      POP      {r3-r7,pc}
+        0x20007990:    b5f8        ..      PUSH     {r3-r7,lr}
+        0x20007992:    4605        .F      MOV      r5,r0
+        0x20007994:    460f        .F      MOV      r7,r1
+        0x20007996:    4817        .H      LDR      r0,[pc,#92] ; [0x200079f4] = 0x20010070
+        0x20007998:    6800        .h      LDR      r0,[r0,#0]
+        0x2000799a:    68c0        .h      LDR      r0,[r0,#0xc]
+        0x2000799c:    68c4        .h      LDR      r4,[r0,#0xc]
+        0x2000799e:    1d20         .      ADDS     r0,r4,#4
+        0x200079a0:    f000fc48    ..H.    BL       uxListRemove ; 0x20008234
+        0x200079a4:    f8940028    ..(.    LDRB     r0,[r4,#0x28]
+        0x200079a8:    f0000004    ....    AND      r0,r0,#4
+        0x200079ac:    b1c0        ..      CBZ      r0,0x200079e0 ; prvProcessExpiredTimer + 80
+        0x200079ae:    69a0        .i      LDR      r0,[r4,#0x18]
+        0x200079b0:    1941        A.      ADDS     r1,r0,r5
+        0x200079b2:    462b        +F      MOV      r3,r5
+        0x200079b4:    463a        :F      MOV      r2,r7
+        0x200079b6:    4620         F      MOV      r0,r4
+        0x200079b8:    f7ffffa2    ....    BL       prvInsertTimerInActiveList ; 0x20007900
+        0x200079bc:    b1b0        ..      CBZ      r0,0x200079ec ; prvProcessExpiredTimer + 92
+        0x200079be:    2000        .       MOVS     r0,#0
+        0x200079c0:    4603        .F      MOV      r3,r0
+        0x200079c2:    462a        *F      MOV      r2,r5
+        0x200079c4:    4601        .F      MOV      r1,r0
+        0x200079c6:    9000        ..      STR      r0,[sp,#0]
+        0x200079c8:    4620         F      MOV      r0,r4
+        0x200079ca:    f001ff29    ..).    BL       xTimerGenericCommand ; 0x20009820
+        0x200079ce:    4606        .F      MOV      r6,r0
+        0x200079d0:    b92e        ..      CBNZ     r6,0x200079de ; prvProcessExpiredTimer + 78
+        0x200079d2:    f44f7205    O..r    MOV      r2,#0x214
+        0x200079d6:    a108        ..      ADR      r1,{pc}+0x22 ; 0x200079f8
+        0x200079d8:    a00d        ..      ADR      r0,{pc}+0x38 ; 0x20007a10
+        0x200079da:    f7fefde5    ....    BL       __0printf ; 0x200065a8
+        0x200079de:    e005        ..      B        0x200079ec ; prvProcessExpiredTimer + 92
+        0x200079e0:    f8940028    ..(.    LDRB     r0,[r4,#0x28]
+        0x200079e4:    f0200001     ...    BIC      r0,r0,#1
+        0x200079e8:    f8840028    ..(.    STRB     r0,[r4,#0x28]
+        0x200079ec:    4620         F      MOV      r0,r4
+        0x200079ee:    6a21        !j      LDR      r1,[r4,#0x20]
+        0x200079f0:    4788        .G      BLX      r1
+        0x200079f2:    bdf8        ..      POP      {r3-r7,pc}
     $d
-        0x200079e2:    0000        ..      DCW    0
-        0x200079e4:    20010070    p..     DCD    536936560
+        0x200079f4:    20010070    p..     DCD    536936560
+        0x200079f8:    465c2e2e    ..\F    DCD    1180446254
+        0x200079fc:    52656572    reeR    DCD    1382376818
+        0x20007a00:    5c534f54    TOS\    DCD    1548963668
+        0x20007a04:    656d6974    time    DCD    1701669236
+        0x20007a08:    632e7372    rs.c    DCD    1663988594
+        0x20007a0c:    00000000    ....    DCD    0
+        0x20007a10:    6f727245    Erro    DCD    1869771333
+        0x20007a14:    25203a72    r: %    DCD    622869106
+        0x20007a18:    25202c73    s, %    DCD    622865523
+        0x20007a1c:    000a0d64    d...    DCD    658788
     $t
     i.prvProcessReceivedCommands
     prvProcessReceivedCommands
-        0x200079e8:    b570        p.      PUSH     {r4-r6,lr}
-        0x200079ea:    b086        ..      SUB      sp,sp,#0x18
-        0x200079ec:    e08b        ..      B        0x20007b06 ; prvProcessReceivedCommands + 286
-        0x200079ee:    9803        ..      LDR      r0,[sp,#0xc]
-        0x200079f0:    2800        .(      CMP      r0,#0
-        0x200079f2:    dbfb        ..      BLT      0x200079ec ; prvProcessReceivedCommands + 4
-        0x200079f4:    9c05        ..      LDR      r4,[sp,#0x14]
-        0x200079f6:    6960        `i      LDR      r0,[r4,#0x14]
-        0x200079f8:    b908        ..      CBNZ     r0,0x200079fe ; prvProcessReceivedCommands + 22
-        0x200079fa:    2001        .       MOVS     r0,#1
-        0x200079fc:    e000        ..      B        0x20007a00 ; prvProcessReceivedCommands + 24
-        0x200079fe:    2000        .       MOVS     r0,#0
-        0x20007a00:    b910        ..      CBNZ     r0,0x20007a08 ; prvProcessReceivedCommands + 32
-        0x20007a02:    1d20         .      ADDS     r0,r4,#4
-        0x20007a04:    f000fbcc    ....    BL       uxListRemove ; 0x200081a0
-        0x20007a08:    a802        ..      ADD      r0,sp,#8
-        0x20007a0a:    f000f8db    ....    BL       prvSampleTimeNow ; 0x20007bc4
-        0x20007a0e:    4605        .F      MOV      r5,r0
-        0x20007a10:    9803        ..      LDR      r0,[sp,#0xc]
-        0x20007a12:    280a        .(      CMP      r0,#0xa
-        0x20007a14:    d275        u.      BCS      0x20007b02 ; prvProcessReceivedCommands + 282
-        0x20007a16:    e8dff000    ....    TBB      [pc,r0]
+        0x20007a20:    b570        p.      PUSH     {r4-r6,lr}
+        0x20007a22:    b086        ..      SUB      sp,sp,#0x18
+        0x20007a24:    e080        ..      B        0x20007b28 ; prvProcessReceivedCommands + 264
+        0x20007a26:    9803        ..      LDR      r0,[sp,#0xc]
+        0x20007a28:    2800        .(      CMP      r0,#0
+        0x20007a2a:    db7d        }.      BLT      0x20007b28 ; prvProcessReceivedCommands + 264
+        0x20007a2c:    9c05        ..      LDR      r4,[sp,#0x14]
+        0x20007a2e:    6960        `i      LDR      r0,[r4,#0x14]
+        0x20007a30:    b908        ..      CBNZ     r0,0x20007a36 ; prvProcessReceivedCommands + 22
+        0x20007a32:    2001        .       MOVS     r0,#1
+        0x20007a34:    e000        ..      B        0x20007a38 ; prvProcessReceivedCommands + 24
+        0x20007a36:    2000        .       MOVS     r0,#0
+        0x20007a38:    b910        ..      CBNZ     r0,0x20007a40 ; prvProcessReceivedCommands + 32
+        0x20007a3a:    1d20         .      ADDS     r0,r4,#4
+        0x20007a3c:    f000fbfa    ....    BL       uxListRemove ; 0x20008234
+        0x20007a40:    a802        ..      ADD      r0,sp,#8
+        0x20007a42:    f000f8e5    ....    BL       prvSampleTimeNow ; 0x20007c10
+        0x20007a46:    4605        .F      MOV      r5,r0
+        0x20007a48:    9803        ..      LDR      r0,[sp,#0xc]
+        0x20007a4a:    280a        .(      CMP      r0,#0xa
+        0x20007a4c:    d26a        j.      BCS      0x20007b24 ; prvProcessReceivedCommands + 260
+        0x20007a4e:    e8dff000    ....    TBB      [pc,r0]
     $d
-        0x20007a1a:    0509        ..      DCW    1289
-        0x20007a1c:    63413907    .9Ac    DCD    1665218823
-        0x20007a20:    423a0806    ..:B    DCD    1111099398
+        0x20007a52:    0509        ..      DCW    1289
+        0x20007a54:    593c3407    .4<Y    DCD    1497117703
+        0x20007a58:    3d350806    ..5=    DCD    1026885638
     $t
-        0x20007a24:    bf00        ..      NOP      
-        0x20007a26:    bf00        ..      NOP      
-        0x20007a28:    bf00        ..      NOP      
-        0x20007a2a:    bf00        ..      NOP      
-        0x20007a2c:    f8940028    ..(.    LDRB     r0,[r4,#0x28]
-        0x20007a30:    f0400001    @...    ORR      r0,r0,#1
-        0x20007a34:    f8840028    ..(.    STRB     r0,[r4,#0x28]
-        0x20007a38:    9804        ..      LDR      r0,[sp,#0x10]
-        0x20007a3a:    69a2        .i      LDR      r2,[r4,#0x18]
-        0x20007a3c:    1881        ..      ADDS     r1,r0,r2
-        0x20007a3e:    4603        .F      MOV      r3,r0
-        0x20007a40:    462a        *F      MOV      r2,r5
-        0x20007a42:    4620         F      MOV      r0,r4
-        0x20007a44:    f7ffff4e    ..N.    BL       prvInsertTimerInActiveList ; 0x200078e4
-        0x20007a48:    b1f8        ..      CBZ      r0,0x20007a8a ; prvProcessReceivedCommands + 162
-        0x20007a4a:    4620         F      MOV      r0,r4
-        0x20007a4c:    6a21        !j      LDR      r1,[r4,#0x20]
-        0x20007a4e:    4788        .G      BLX      r1
-        0x20007a50:    f8940028    ..(.    LDRB     r0,[r4,#0x28]
-        0x20007a54:    f0000004    ....    AND      r0,r0,#4
-        0x20007a58:    b1b8        ..      CBZ      r0,0x20007a8a ; prvProcessReceivedCommands + 162
-        0x20007a5a:    2000        .       MOVS     r0,#0
-        0x20007a5c:    9000        ..      STR      r0,[sp,#0]
-        0x20007a5e:    9804        ..      LDR      r0,[sp,#0x10]
-        0x20007a60:    69a1        .i      LDR      r1,[r4,#0x18]
-        0x20007a62:    1842        B.      ADDS     r2,r0,r1
-        0x20007a64:    2300        .#      MOVS     r3,#0
-        0x20007a66:    4619        .F      MOV      r1,r3
-        0x20007a68:    4620         F      MOV      r0,r4
-        0x20007a6a:    f001fd6f    ..o.    BL       xTimerGenericCommand ; 0x2000954c
-        0x20007a6e:    4606        .F      MOV      r6,r0
-        0x20007a70:    b956        V.      CBNZ     r6,0x20007a88 ; prvProcessReceivedCommands + 160
-        0x20007a72:    bf00        ..      NOP      
-        0x20007a74:    2050        P       MOVS     r0,#0x50
-        0x20007a76:    f3808811    ....    MSR      BASEPRI,r0
-        0x20007a7a:    f3bf8f4f    ..O.    DSB      
-        0x20007a7e:    f3bf8f6f    ..o.    ISB      
-        0x20007a82:    bf00        ..      NOP      
-        0x20007a84:    bf00        ..      NOP      
-        0x20007a86:    e7fe        ..      B        0x20007a86 ; prvProcessReceivedCommands + 158
-        0x20007a88:    bf00        ..      NOP      
-        0x20007a8a:    e03b        ;.      B        0x20007b04 ; prvProcessReceivedCommands + 284
-        0x20007a8c:    bf00        ..      NOP      
-        0x20007a8e:    f8940028    ..(.    LDRB     r0,[r4,#0x28]
-        0x20007a92:    f0200001     ...    BIC      r0,r0,#1
-        0x20007a96:    f8840028    ..(.    STRB     r0,[r4,#0x28]
-        0x20007a9a:    e033        3.      B        0x20007b04 ; prvProcessReceivedCommands + 284
-        0x20007a9c:    bf00        ..      NOP      
-        0x20007a9e:    f8940028    ..(.    LDRB     r0,[r4,#0x28]
-        0x20007aa2:    f0400001    @...    ORR      r0,r0,#1
-        0x20007aa6:    f8840028    ..(.    STRB     r0,[r4,#0x28]
-        0x20007aaa:    9804        ..      LDR      r0,[sp,#0x10]
-        0x20007aac:    61a0        .a      STR      r0,[r4,#0x18]
-        0x20007aae:    69a0        .i      LDR      r0,[r4,#0x18]
-        0x20007ab0:    b108        ..      CBZ      r0,0x20007ab6 ; prvProcessReceivedCommands + 206
-        0x20007ab2:    2001        .       MOVS     r0,#1
-        0x20007ab4:    e000        ..      B        0x20007ab8 ; prvProcessReceivedCommands + 208
-        0x20007ab6:    2000        .       MOVS     r0,#0
-        0x20007ab8:    b950        P.      CBNZ     r0,0x20007ad0 ; prvProcessReceivedCommands + 232
+        0x20007a5c:    bf00        ..      NOP      
+        0x20007a5e:    bf00        ..      NOP      
+        0x20007a60:    bf00        ..      NOP      
+        0x20007a62:    bf00        ..      NOP      
+        0x20007a64:    f8940028    ..(.    LDRB     r0,[r4,#0x28]
+        0x20007a68:    f0400001    @...    ORR      r0,r0,#1
+        0x20007a6c:    f8840028    ..(.    STRB     r0,[r4,#0x28]
+        0x20007a70:    9804        ..      LDR      r0,[sp,#0x10]
+        0x20007a72:    69a2        .i      LDR      r2,[r4,#0x18]
+        0x20007a74:    1881        ..      ADDS     r1,r0,r2
+        0x20007a76:    4603        .F      MOV      r3,r0
+        0x20007a78:    462a        *F      MOV      r2,r5
+        0x20007a7a:    4620         F      MOV      r0,r4
+        0x20007a7c:    f7ffff40    ..@.    BL       prvInsertTimerInActiveList ; 0x20007900
+        0x20007a80:    b1d0        ..      CBZ      r0,0x20007ab8 ; prvProcessReceivedCommands + 152
+        0x20007a82:    4620         F      MOV      r0,r4
+        0x20007a84:    6a21        !j      LDR      r1,[r4,#0x20]
+        0x20007a86:    4788        .G      BLX      r1
+        0x20007a88:    f8940028    ..(.    LDRB     r0,[r4,#0x28]
+        0x20007a8c:    f0000004    ....    AND      r0,r0,#4
+        0x20007a90:    b190        ..      CBZ      r0,0x20007ab8 ; prvProcessReceivedCommands + 152
+        0x20007a92:    2000        .       MOVS     r0,#0
+        0x20007a94:    9000        ..      STR      r0,[sp,#0]
+        0x20007a96:    9804        ..      LDR      r0,[sp,#0x10]
+        0x20007a98:    69a1        .i      LDR      r1,[r4,#0x18]
+        0x20007a9a:    1842        B.      ADDS     r2,r0,r1
+        0x20007a9c:    2300        .#      MOVS     r3,#0
+        0x20007a9e:    4619        .F      MOV      r1,r3
+        0x20007aa0:    4620         F      MOV      r0,r4
+        0x20007aa2:    f001febd    ....    BL       xTimerGenericCommand ; 0x20009820
+        0x20007aa6:    4606        .F      MOV      r6,r0
+        0x20007aa8:    b92e        ..      CBNZ     r6,0x20007ab6 ; prvProcessReceivedCommands + 150
+        0x20007aaa:    f2403236    @.62    MOV      r2,#0x336
+        0x20007aae:    a124        $.      ADR      r1,{pc}+0x92 ; 0x20007b40
+        0x20007ab0:    a029        ).      ADR      r0,{pc}+0xa8 ; 0x20007b58
+        0x20007ab2:    f7fefd79    ..y.    BL       __0printf ; 0x200065a8
+        0x20007ab6:    bf00        ..      NOP      
+        0x20007ab8:    e035        5.      B        0x20007b26 ; prvProcessReceivedCommands + 262
         0x20007aba:    bf00        ..      NOP      
-        0x20007abc:    2050        P       MOVS     r0,#0x50
-        0x20007abe:    f3808811    ....    MSR      BASEPRI,r0
-        0x20007ac2:    f3bf8f4f    ..O.    DSB      
-        0x20007ac6:    f3bf8f6f    ..o.    ISB      
+        0x20007abc:    f8940028    ..(.    LDRB     r0,[r4,#0x28]
+        0x20007ac0:    f0200001     ...    BIC      r0,r0,#1
+        0x20007ac4:    f8840028    ..(.    STRB     r0,[r4,#0x28]
+        0x20007ac8:    e02d        -.      B        0x20007b26 ; prvProcessReceivedCommands + 262
         0x20007aca:    bf00        ..      NOP      
-        0x20007acc:    bf00        ..      NOP      
-        0x20007ace:    e7fe        ..      B        0x20007ace ; prvProcessReceivedCommands + 230
-        0x20007ad0:    69a0        .i      LDR      r0,[r4,#0x18]
-        0x20007ad2:    1941        A.      ADDS     r1,r0,r5
-        0x20007ad4:    462b        +F      MOV      r3,r5
-        0x20007ad6:    462a        *F      MOV      r2,r5
-        0x20007ad8:    4620         F      MOV      r0,r4
-        0x20007ada:    f7ffff03    ....    BL       prvInsertTimerInActiveList ; 0x200078e4
-        0x20007ade:    e011        ..      B        0x20007b04 ; prvProcessReceivedCommands + 284
-        0x20007ae0:    f8940028    ..(.    LDRB     r0,[r4,#0x28]
-        0x20007ae4:    f0000002    ....    AND      r0,r0,#2
-        0x20007ae8:    b918        ..      CBNZ     r0,0x20007af2 ; prvProcessReceivedCommands + 266
-        0x20007aea:    4620         F      MOV      r0,r4
-        0x20007aec:    f000fbea    ....    BL       vPortFree ; 0x200082c4
-        0x20007af0:    e005        ..      B        0x20007afe ; prvProcessReceivedCommands + 278
-        0x20007af2:    f8940028    ..(.    LDRB     r0,[r4,#0x28]
-        0x20007af6:    f0200001     ...    BIC      r0,r0,#1
-        0x20007afa:    f8840028    ..(.    STRB     r0,[r4,#0x28]
-        0x20007afe:    e001        ..      B        0x20007b04 ; prvProcessReceivedCommands + 284
-        0x20007b00:    e7ff        ..      B        0x20007b02 ; prvProcessReceivedCommands + 282
-        0x20007b02:    bf00        ..      NOP      
-        0x20007b04:    bf00        ..      NOP      
-        0x20007b06:    2200        ."      MOVS     r2,#0
-        0x20007b08:    a903        ..      ADD      r1,sp,#0xc
-        0x20007b0a:    4804        .H      LDR      r0,[pc,#16] ; [0x20007b1c] = 0x20010078
-        0x20007b0c:    6800        .h      LDR      r0,[r0,#0]
-        0x20007b0e:    f001f997    ....    BL       xQueueReceive ; 0x20008e40
-        0x20007b12:    2800        .(      CMP      r0,#0
-        0x20007b14:    f47faf6b    ..k.    BNE      0x200079ee ; prvProcessReceivedCommands + 6
-        0x20007b18:    b006        ..      ADD      sp,sp,#0x18
-        0x20007b1a:    bd70        p.      POP      {r4-r6,pc}
+        0x20007acc:    f8940028    ..(.    LDRB     r0,[r4,#0x28]
+        0x20007ad0:    f0400001    @...    ORR      r0,r0,#1
+        0x20007ad4:    f8840028    ..(.    STRB     r0,[r4,#0x28]
+        0x20007ad8:    9804        ..      LDR      r0,[sp,#0x10]
+        0x20007ada:    61a0        .a      STR      r0,[r4,#0x18]
+        0x20007adc:    69a0        .i      LDR      r0,[r4,#0x18]
+        0x20007ade:    b108        ..      CBZ      r0,0x20007ae4 ; prvProcessReceivedCommands + 196
+        0x20007ae0:    2001        .       MOVS     r0,#1
+        0x20007ae2:    e000        ..      B        0x20007ae6 ; prvProcessReceivedCommands + 198
+        0x20007ae4:    2000        .       MOVS     r0,#0
+        0x20007ae6:    b928        (.      CBNZ     r0,0x20007af4 ; prvProcessReceivedCommands + 212
+        0x20007ae8:    f240324f    @.O2    MOV      r2,#0x34f
+        0x20007aec:    a114        ..      ADR      r1,{pc}+0x54 ; 0x20007b40
+        0x20007aee:    a01a        ..      ADR      r0,{pc}+0x6a ; 0x20007b58
+        0x20007af0:    f7fefd5a    ..Z.    BL       __0printf ; 0x200065a8
+        0x20007af4:    69a0        .i      LDR      r0,[r4,#0x18]
+        0x20007af6:    1941        A.      ADDS     r1,r0,r5
+        0x20007af8:    462b        +F      MOV      r3,r5
+        0x20007afa:    462a        *F      MOV      r2,r5
+        0x20007afc:    4620         F      MOV      r0,r4
+        0x20007afe:    f7fffeff    ....    BL       prvInsertTimerInActiveList ; 0x20007900
+        0x20007b02:    e010        ..      B        0x20007b26 ; prvProcessReceivedCommands + 262
+        0x20007b04:    f8940028    ..(.    LDRB     r0,[r4,#0x28]
+        0x20007b08:    f0000002    ....    AND      r0,r0,#2
+        0x20007b0c:    b918        ..      CBNZ     r0,0x20007b16 ; prvProcessReceivedCommands + 246
+        0x20007b0e:    4620         F      MOV      r0,r4
+        0x20007b10:    f000fc5a    ..Z.    BL       vPortFree ; 0x200083c8
+        0x20007b14:    e005        ..      B        0x20007b22 ; prvProcessReceivedCommands + 258
+        0x20007b16:    f8940028    ..(.    LDRB     r0,[r4,#0x28]
+        0x20007b1a:    f0200001     ...    BIC      r0,r0,#1
+        0x20007b1e:    f8840028    ..(.    STRB     r0,[r4,#0x28]
+        0x20007b22:    e000        ..      B        0x20007b26 ; prvProcessReceivedCommands + 262
+        0x20007b24:    bf00        ..      NOP      
+        0x20007b26:    bf00        ..      NOP      
+        0x20007b28:    2200        ."      MOVS     r2,#0
+        0x20007b2a:    a903        ..      ADD      r1,sp,#0xc
+        0x20007b2c:    480e        .H      LDR      r0,[pc,#56] ; [0x20007b68] = 0x20010078
+        0x20007b2e:    6800        .h      LDR      r0,[r0,#0]
+        0x20007b30:    f001faa8    ....    BL       xQueueReceive ; 0x20009084
+        0x20007b34:    2800        .(      CMP      r0,#0
+        0x20007b36:    f47faf76    ..v.    BNE      0x20007a26 ; prvProcessReceivedCommands + 6
+        0x20007b3a:    b006        ..      ADD      sp,sp,#0x18
+        0x20007b3c:    bd70        p.      POP      {r4-r6,pc}
     $d
-        0x20007b1c:    20010078    x..     DCD    536936568
+        0x20007b3e:    0000        ..      DCW    0
+        0x20007b40:    465c2e2e    ..\F    DCD    1180446254
+        0x20007b44:    52656572    reeR    DCD    1382376818
+        0x20007b48:    5c534f54    TOS\    DCD    1548963668
+        0x20007b4c:    656d6974    time    DCD    1701669236
+        0x20007b50:    632e7372    rs.c    DCD    1663988594
+        0x20007b54:    00000000    ....    DCD    0
+        0x20007b58:    6f727245    Erro    DCD    1869771333
+        0x20007b5c:    25203a72    r: %    DCD    622869106
+        0x20007b60:    25202c73    s, %    DCD    622865523
+        0x20007b64:    000a0d64    d...    DCD    658788
+        0x20007b68:    20010078    x..     DCD    536936568
     $t
     i.prvProcessTimerOrBlockTask
     prvProcessTimerOrBlockTask
-        0x20007b20:    b5f8        ..      PUSH     {r3-r7,lr}
-        0x20007b22:    4605        .F      MOV      r5,r0
-        0x20007b24:    460c        .F      MOV      r4,r1
-        0x20007b26:    f000fe41    ..A.    BL       vTaskSuspendAll ; 0x200087ac
-        0x20007b2a:    4668        hF      MOV      r0,sp
-        0x20007b2c:    f000f84a    ..J.    BL       prvSampleTimeNow ; 0x20007bc4
-        0x20007b30:    4606        .F      MOV      r6,r0
-        0x20007b32:    9800        ..      LDR      r0,[sp,#0]
-        0x20007b34:    bb20         .      CBNZ     r0,0x20007b80 ; prvProcessTimerOrBlockTask + 96
-        0x20007b36:    b944        D.      CBNZ     r4,0x20007b4a ; prvProcessTimerOrBlockTask + 42
-        0x20007b38:    42b5        .B      CMP      r5,r6
-        0x20007b3a:    d806        ..      BHI      0x20007b4a ; prvProcessTimerOrBlockTask + 42
-        0x20007b3c:    f001fc56    ..V.    BL       xTaskResumeAll ; 0x200093ec
-        0x20007b40:    4631        1F      MOV      r1,r6
-        0x20007b42:    4628        (F      MOV      r0,r5
-        0x20007b44:    f7ffff16    ....    BL       prvProcessExpiredTimer ; 0x20007974
-        0x20007b48:    e01c        ..      B        0x20007b84 ; prvProcessTimerOrBlockTask + 100
-        0x20007b4a:    b13c        <.      CBZ      r4,0x20007b5c ; prvProcessTimerOrBlockTask + 60
-        0x20007b4c:    480e        .H      LDR      r0,[pc,#56] ; [0x20007b88] = 0x20010074
-        0x20007b4e:    6800        .h      LDR      r0,[r0,#0]
-        0x20007b50:    6800        .h      LDR      r0,[r0,#0]
-        0x20007b52:    b908        ..      CBNZ     r0,0x20007b58 ; prvProcessTimerOrBlockTask + 56
-        0x20007b54:    2001        .       MOVS     r0,#1
-        0x20007b56:    e000        ..      B        0x20007b5a ; prvProcessTimerOrBlockTask + 58
-        0x20007b58:    2000        .       MOVS     r0,#0
-        0x20007b5a:    4604        .F      MOV      r4,r0
-        0x20007b5c:    1ba9        ..      SUBS     r1,r5,r6
-        0x20007b5e:    4622        "F      MOV      r2,r4
-        0x20007b60:    480a        .H      LDR      r0,[pc,#40] ; [0x20007b8c] = 0x20010078
-        0x20007b62:    6800        .h      LDR      r0,[r0,#0]
-        0x20007b64:    f000fc8a    ....    BL       vQueueWaitForMessageRestricted ; 0x2000847c
-        0x20007b68:    f001fc40    ..@.    BL       xTaskResumeAll ; 0x200093ec
-        0x20007b6c:    b950        P.      CBNZ     r0,0x20007b84 ; prvProcessTimerOrBlockTask + 100
-        0x20007b6e:    f04f5080    O..P    MOV      r0,#0x10000000
-        0x20007b72:    4907        .I      LDR      r1,[pc,#28] ; [0x20007b90] = 0xe000ed04
-        0x20007b74:    6008        .`      STR      r0,[r1,#0]
-        0x20007b76:    f3bf8f4f    ..O.    DSB      
-        0x20007b7a:    f3bf8f6f    ..o.    ISB      
-        0x20007b7e:    e001        ..      B        0x20007b84 ; prvProcessTimerOrBlockTask + 100
-        0x20007b80:    f001fc34    ..4.    BL       xTaskResumeAll ; 0x200093ec
-        0x20007b84:    bdf8        ..      POP      {r3-r7,pc}
+        0x20007b6c:    b5f8        ..      PUSH     {r3-r7,lr}
+        0x20007b6e:    4605        .F      MOV      r5,r0
+        0x20007b70:    460c        .F      MOV      r4,r1
+        0x20007b72:    f000ff03    ....    BL       vTaskSuspendAll ; 0x2000897c
+        0x20007b76:    4668        hF      MOV      r0,sp
+        0x20007b78:    f000f84a    ..J.    BL       prvSampleTimeNow ; 0x20007c10
+        0x20007b7c:    4606        .F      MOV      r6,r0
+        0x20007b7e:    9800        ..      LDR      r0,[sp,#0]
+        0x20007b80:    bb20         .      CBNZ     r0,0x20007bcc ; prvProcessTimerOrBlockTask + 96
+        0x20007b82:    b944        D.      CBNZ     r4,0x20007b96 ; prvProcessTimerOrBlockTask + 42
+        0x20007b84:    42b5        .B      CMP      r5,r6
+        0x20007b86:    d806        ..      BHI      0x20007b96 ; prvProcessTimerOrBlockTask + 42
+        0x20007b88:    f001fd7e    ..~.    BL       xTaskResumeAll ; 0x20009688
+        0x20007b8c:    4631        1F      MOV      r1,r6
+        0x20007b8e:    4628        (F      MOV      r0,r5
+        0x20007b90:    f7fffefe    ....    BL       prvProcessExpiredTimer ; 0x20007990
+        0x20007b94:    e01c        ..      B        0x20007bd0 ; prvProcessTimerOrBlockTask + 100
+        0x20007b96:    b13c        <.      CBZ      r4,0x20007ba8 ; prvProcessTimerOrBlockTask + 60
+        0x20007b98:    480e        .H      LDR      r0,[pc,#56] ; [0x20007bd4] = 0x20010074
+        0x20007b9a:    6800        .h      LDR      r0,[r0,#0]
+        0x20007b9c:    6800        .h      LDR      r0,[r0,#0]
+        0x20007b9e:    b908        ..      CBNZ     r0,0x20007ba4 ; prvProcessTimerOrBlockTask + 56
+        0x20007ba0:    2001        .       MOVS     r0,#1
+        0x20007ba2:    e000        ..      B        0x20007ba6 ; prvProcessTimerOrBlockTask + 58
+        0x20007ba4:    2000        .       MOVS     r0,#0
+        0x20007ba6:    4604        .F      MOV      r4,r0
+        0x20007ba8:    1ba9        ..      SUBS     r1,r5,r6
+        0x20007baa:    4622        "F      MOV      r2,r4
+        0x20007bac:    480a        .H      LDR      r0,[pc,#40] ; [0x20007bd8] = 0x20010078
+        0x20007bae:    6800        .h      LDR      r0,[r0,#0]
+        0x20007bb0:    f000fd0e    ....    BL       vQueueWaitForMessageRestricted ; 0x200085d0
+        0x20007bb4:    f001fd68    ..h.    BL       xTaskResumeAll ; 0x20009688
+        0x20007bb8:    b950        P.      CBNZ     r0,0x20007bd0 ; prvProcessTimerOrBlockTask + 100
+        0x20007bba:    f04f5080    O..P    MOV      r0,#0x10000000
+        0x20007bbe:    4907        .I      LDR      r1,[pc,#28] ; [0x20007bdc] = 0xe000ed04
+        0x20007bc0:    6008        .`      STR      r0,[r1,#0]
+        0x20007bc2:    f3bf8f4f    ..O.    DSB      
+        0x20007bc6:    f3bf8f6f    ..o.    ISB      
+        0x20007bca:    e001        ..      B        0x20007bd0 ; prvProcessTimerOrBlockTask + 100
+        0x20007bcc:    f001fd5c    ..\.    BL       xTaskResumeAll ; 0x20009688
+        0x20007bd0:    bdf8        ..      POP      {r3-r7,pc}
     $d
-        0x20007b86:    0000        ..      DCW    0
-        0x20007b88:    20010074    t..     DCD    536936564
-        0x20007b8c:    20010078    x..     DCD    536936568
-        0x20007b90:    e000ed04    ....    DCD    3758157060
+        0x20007bd2:    0000        ..      DCW    0
+        0x20007bd4:    20010074    t..     DCD    536936564
+        0x20007bd8:    20010078    x..     DCD    536936568
+        0x20007bdc:    e000ed04    ....    DCD    3758157060
     $t
     i.prvResetNextTaskUnblockTime
     prvResetNextTaskUnblockTime
-        0x20007b94:    4809        .H      LDR      r0,[pc,#36] ; [0x20007bbc] = 0x20010034
-        0x20007b96:    6800        .h      LDR      r0,[r0,#0]
-        0x20007b98:    6800        .h      LDR      r0,[r0,#0]
-        0x20007b9a:    b908        ..      CBNZ     r0,0x20007ba0 ; prvResetNextTaskUnblockTime + 12
-        0x20007b9c:    2001        .       MOVS     r0,#1
-        0x20007b9e:    e000        ..      B        0x20007ba2 ; prvResetNextTaskUnblockTime + 14
-        0x20007ba0:    2000        .       MOVS     r0,#0
-        0x20007ba2:    b120         .      CBZ      r0,0x20007bae ; prvResetNextTaskUnblockTime + 26
-        0x20007ba4:    f04f30ff    O..0    MOV      r0,#0xffffffff
-        0x20007ba8:    4905        .I      LDR      r1,[pc,#20] ; [0x20007bc0] = 0x20010060
-        0x20007baa:    6008        .`      STR      r0,[r1,#0]
-        0x20007bac:    e005        ..      B        0x20007bba ; prvResetNextTaskUnblockTime + 38
-        0x20007bae:    4803        .H      LDR      r0,[pc,#12] ; [0x20007bbc] = 0x20010034
-        0x20007bb0:    6800        .h      LDR      r0,[r0,#0]
-        0x20007bb2:    68c0        .h      LDR      r0,[r0,#0xc]
-        0x20007bb4:    6800        .h      LDR      r0,[r0,#0]
-        0x20007bb6:    4902        .I      LDR      r1,[pc,#8] ; [0x20007bc0] = 0x20010060
-        0x20007bb8:    6008        .`      STR      r0,[r1,#0]
-        0x20007bba:    4770        pG      BX       lr
+        0x20007be0:    4809        .H      LDR      r0,[pc,#36] ; [0x20007c08] = 0x20010034
+        0x20007be2:    6800        .h      LDR      r0,[r0,#0]
+        0x20007be4:    6800        .h      LDR      r0,[r0,#0]
+        0x20007be6:    b908        ..      CBNZ     r0,0x20007bec ; prvResetNextTaskUnblockTime + 12
+        0x20007be8:    2001        .       MOVS     r0,#1
+        0x20007bea:    e000        ..      B        0x20007bee ; prvResetNextTaskUnblockTime + 14
+        0x20007bec:    2000        .       MOVS     r0,#0
+        0x20007bee:    b120         .      CBZ      r0,0x20007bfa ; prvResetNextTaskUnblockTime + 26
+        0x20007bf0:    f04f30ff    O..0    MOV      r0,#0xffffffff
+        0x20007bf4:    4905        .I      LDR      r1,[pc,#20] ; [0x20007c0c] = 0x20010060
+        0x20007bf6:    6008        .`      STR      r0,[r1,#0]
+        0x20007bf8:    e005        ..      B        0x20007c06 ; prvResetNextTaskUnblockTime + 38
+        0x20007bfa:    4803        .H      LDR      r0,[pc,#12] ; [0x20007c08] = 0x20010034
+        0x20007bfc:    6800        .h      LDR      r0,[r0,#0]
+        0x20007bfe:    68c0        .h      LDR      r0,[r0,#0xc]
+        0x20007c00:    6800        .h      LDR      r0,[r0,#0]
+        0x20007c02:    4902        .I      LDR      r1,[pc,#8] ; [0x20007c0c] = 0x20010060
+        0x20007c04:    6008        .`      STR      r0,[r1,#0]
+        0x20007c06:    4770        pG      BX       lr
     $d
-        0x20007bbc:    20010034    4..     DCD    536936500
-        0x20007bc0:    20010060    `..     DCD    536936544
+        0x20007c08:    20010034    4..     DCD    536936500
+        0x20007c0c:    20010060    `..     DCD    536936544
     $t
     i.prvSampleTimeNow
     prvSampleTimeNow
-        0x20007bc4:    b570        p.      PUSH     {r4-r6,lr}
-        0x20007bc6:    4604        .F      MOV      r4,r0
-        0x20007bc8:    f001faa6    ....    BL       xTaskGetTickCount ; 0x20009118
-        0x20007bcc:    4605        .F      MOV      r5,r0
-        0x20007bce:    4807        .H      LDR      r0,[pc,#28] ; [0x20007bec] = 0x20010080
-        0x20007bd0:    6800        .h      LDR      r0,[r0,#0]
-        0x20007bd2:    4285        .B      CMP      r5,r0
-        0x20007bd4:    d204        ..      BCS      0x20007be0 ; prvSampleTimeNow + 28
-        0x20007bd6:    f000f80b    ....    BL       prvSwitchTimerLists ; 0x20007bf0
-        0x20007bda:    2001        .       MOVS     r0,#1
-        0x20007bdc:    6020         `      STR      r0,[r4,#0]
-        0x20007bde:    e001        ..      B        0x20007be4 ; prvSampleTimeNow + 32
-        0x20007be0:    2000        .       MOVS     r0,#0
-        0x20007be2:    6020         `      STR      r0,[r4,#0]
-        0x20007be4:    4801        .H      LDR      r0,[pc,#4] ; [0x20007bec] = 0x20010080
-        0x20007be6:    6005        .`      STR      r5,[r0,#0]
-        0x20007be8:    4628        (F      MOV      r0,r5
-        0x20007bea:    bd70        p.      POP      {r4-r6,pc}
+        0x20007c10:    b570        p.      PUSH     {r4-r6,lr}
+        0x20007c12:    4604        .F      MOV      r4,r0
+        0x20007c14:    f001fbae    ....    BL       xTaskGetTickCount ; 0x20009374
+        0x20007c18:    4605        .F      MOV      r5,r0
+        0x20007c1a:    4807        .H      LDR      r0,[pc,#28] ; [0x20007c38] = 0x20010080
+        0x20007c1c:    6800        .h      LDR      r0,[r0,#0]
+        0x20007c1e:    4285        .B      CMP      r5,r0
+        0x20007c20:    d204        ..      BCS      0x20007c2c ; prvSampleTimeNow + 28
+        0x20007c22:    f000f80b    ....    BL       prvSwitchTimerLists ; 0x20007c3c
+        0x20007c26:    2001        .       MOVS     r0,#1
+        0x20007c28:    6020         `      STR      r0,[r4,#0]
+        0x20007c2a:    e001        ..      B        0x20007c30 ; prvSampleTimeNow + 32
+        0x20007c2c:    2000        .       MOVS     r0,#0
+        0x20007c2e:    6020         `      STR      r0,[r4,#0]
+        0x20007c30:    4801        .H      LDR      r0,[pc,#4] ; [0x20007c38] = 0x20010080
+        0x20007c32:    6005        .`      STR      r5,[r0,#0]
+        0x20007c34:    4628        (F      MOV      r0,r5
+        0x20007c36:    bd70        p.      POP      {r4-r6,pc}
     $d
-        0x20007bec:    20010080    ...     DCD    536936576
+        0x20007c38:    20010080    ...     DCD    536936576
     $t
     i.prvSwitchTimerLists
     prvSwitchTimerLists
-        0x20007bf0:    e92d43f8    -..C    PUSH     {r3-r9,lr}
-        0x20007bf4:    e034        4.      B        0x20007c60 ; prvSwitchTimerLists + 112
-        0x20007bf6:    4825        %H      LDR      r0,[pc,#148] ; [0x20007c8c] = 0x20010070
-        0x20007bf8:    6800        .h      LDR      r0,[r0,#0]
-        0x20007bfa:    68c0        .h      LDR      r0,[r0,#0xc]
-        0x20007bfc:    6805        .h      LDR      r5,[r0,#0]
-        0x20007bfe:    4823        #H      LDR      r0,[pc,#140] ; [0x20007c8c] = 0x20010070
-        0x20007c00:    6800        .h      LDR      r0,[r0,#0]
-        0x20007c02:    68c0        .h      LDR      r0,[r0,#0xc]
-        0x20007c04:    68c4        .h      LDR      r4,[r0,#0xc]
-        0x20007c06:    1d20         .      ADDS     r0,r4,#4
-        0x20007c08:    f000faca    ....    BL       uxListRemove ; 0x200081a0
-        0x20007c0c:    4620         F      MOV      r0,r4
-        0x20007c0e:    6a21        !j      LDR      r1,[r4,#0x20]
-        0x20007c10:    4788        .G      BLX      r1
-        0x20007c12:    f8940028    ..(.    LDRB     r0,[r4,#0x28]
-        0x20007c16:    f0000004    ....    AND      r0,r0,#4
-        0x20007c1a:    b308        ..      CBZ      r0,0x20007c60 ; prvSwitchTimerLists + 112
-        0x20007c1c:    69a0        .i      LDR      r0,[r4,#0x18]
-        0x20007c1e:    1946        F.      ADDS     r6,r0,r5
-        0x20007c20:    42ae        .B      CMP      r6,r5
-        0x20007c22:    d907        ..      BLS      0x20007c34 ; prvSwitchTimerLists + 68
-        0x20007c24:    6066        f`      STR      r6,[r4,#4]
-        0x20007c26:    6124        $a      STR      r4,[r4,#0x10]
-        0x20007c28:    1d21        !.      ADDS     r1,r4,#4
-        0x20007c2a:    4818        .H      LDR      r0,[pc,#96] ; [0x20007c8c] = 0x20010070
-        0x20007c2c:    6800        .h      LDR      r0,[r0,#0]
-        0x20007c2e:    f000fadb    ....    BL       vListInsert ; 0x200081e8
-        0x20007c32:    e015        ..      B        0x20007c60 ; prvSwitchTimerLists + 112
-        0x20007c34:    2000        .       MOVS     r0,#0
-        0x20007c36:    4603        .F      MOV      r3,r0
-        0x20007c38:    462a        *F      MOV      r2,r5
-        0x20007c3a:    4601        .F      MOV      r1,r0
-        0x20007c3c:    9000        ..      STR      r0,[sp,#0]
-        0x20007c3e:    4620         F      MOV      r0,r4
-        0x20007c40:    f001fc84    ....    BL       xTimerGenericCommand ; 0x2000954c
-        0x20007c44:    4607        .F      MOV      r7,r0
-        0x20007c46:    b957        W.      CBNZ     r7,0x20007c5e ; prvSwitchTimerLists + 110
-        0x20007c48:    bf00        ..      NOP      
-        0x20007c4a:    2050        P       MOVS     r0,#0x50
-        0x20007c4c:    f3808811    ....    MSR      BASEPRI,r0
-        0x20007c50:    f3bf8f4f    ..O.    DSB      
-        0x20007c54:    f3bf8f6f    ..o.    ISB      
-        0x20007c58:    bf00        ..      NOP      
-        0x20007c5a:    bf00        ..      NOP      
-        0x20007c5c:    e7fe        ..      B        0x20007c5c ; prvSwitchTimerLists + 108
-        0x20007c5e:    bf00        ..      NOP      
-        0x20007c60:    480a        .H      LDR      r0,[pc,#40] ; [0x20007c8c] = 0x20010070
-        0x20007c62:    6800        .h      LDR      r0,[r0,#0]
-        0x20007c64:    6800        .h      LDR      r0,[r0,#0]
-        0x20007c66:    b908        ..      CBNZ     r0,0x20007c6c ; prvSwitchTimerLists + 124
-        0x20007c68:    2001        .       MOVS     r0,#1
-        0x20007c6a:    e000        ..      B        0x20007c6e ; prvSwitchTimerLists + 126
-        0x20007c6c:    2000        .       MOVS     r0,#0
-        0x20007c6e:    2800        .(      CMP      r0,#0
-        0x20007c70:    d0c1        ..      BEQ      0x20007bf6 ; prvSwitchTimerLists + 6
-        0x20007c72:    4806        .H      LDR      r0,[pc,#24] ; [0x20007c8c] = 0x20010070
-        0x20007c74:    f8d08000    ....    LDR      r8,[r0,#0]
-        0x20007c78:    4805        .H      LDR      r0,[pc,#20] ; [0x20007c90] = 0x20010074
-        0x20007c7a:    6800        .h      LDR      r0,[r0,#0]
-        0x20007c7c:    4903        .I      LDR      r1,[pc,#12] ; [0x20007c8c] = 0x20010070
-        0x20007c7e:    6008        .`      STR      r0,[r1,#0]
-        0x20007c80:    4803        .H      LDR      r0,[pc,#12] ; [0x20007c90] = 0x20010074
-        0x20007c82:    f8c08000    ....    STR      r8,[r0,#0]
-        0x20007c86:    e8bd83f8    ....    POP      {r3-r9,pc}
+        0x20007c3c:    e92d43f8    -..C    PUSH     {r3-r9,lr}
+        0x20007c40:    e02f        /.      B        0x20007ca2 ; prvSwitchTimerLists + 102
+        0x20007c42:    4822        "H      LDR      r0,[pc,#136] ; [0x20007ccc] = 0x20010070
+        0x20007c44:    6800        .h      LDR      r0,[r0,#0]
+        0x20007c46:    68c0        .h      LDR      r0,[r0,#0xc]
+        0x20007c48:    6805        .h      LDR      r5,[r0,#0]
+        0x20007c4a:    4820         H      LDR      r0,[pc,#128] ; [0x20007ccc] = 0x20010070
+        0x20007c4c:    6800        .h      LDR      r0,[r0,#0]
+        0x20007c4e:    68c0        .h      LDR      r0,[r0,#0xc]
+        0x20007c50:    68c4        .h      LDR      r4,[r0,#0xc]
+        0x20007c52:    1d20         .      ADDS     r0,r4,#4
+        0x20007c54:    f000faee    ....    BL       uxListRemove ; 0x20008234
+        0x20007c58:    4620         F      MOV      r0,r4
+        0x20007c5a:    6a21        !j      LDR      r1,[r4,#0x20]
+        0x20007c5c:    4788        .G      BLX      r1
+        0x20007c5e:    f8940028    ..(.    LDRB     r0,[r4,#0x28]
+        0x20007c62:    f0000004    ....    AND      r0,r0,#4
+        0x20007c66:    b1e0        ..      CBZ      r0,0x20007ca2 ; prvSwitchTimerLists + 102
+        0x20007c68:    69a0        .i      LDR      r0,[r4,#0x18]
+        0x20007c6a:    1946        F.      ADDS     r6,r0,r5
+        0x20007c6c:    42ae        .B      CMP      r6,r5
+        0x20007c6e:    d907        ..      BLS      0x20007c80 ; prvSwitchTimerLists + 68
+        0x20007c70:    6066        f`      STR      r6,[r4,#4]
+        0x20007c72:    6124        $a      STR      r4,[r4,#0x10]
+        0x20007c74:    1d21        !.      ADDS     r1,r4,#4
+        0x20007c76:    4815        .H      LDR      r0,[pc,#84] ; [0x20007ccc] = 0x20010070
+        0x20007c78:    6800        .h      LDR      r0,[r0,#0]
+        0x20007c7a:    f000fb13    ....    BL       vListInsert ; 0x200082a4
+        0x20007c7e:    e010        ..      B        0x20007ca2 ; prvSwitchTimerLists + 102
+        0x20007c80:    2000        .       MOVS     r0,#0
+        0x20007c82:    4603        .F      MOV      r3,r0
+        0x20007c84:    462a        *F      MOV      r2,r5
+        0x20007c86:    4601        .F      MOV      r1,r0
+        0x20007c88:    9000        ..      STR      r0,[sp,#0]
+        0x20007c8a:    4620         F      MOV      r0,r4
+        0x20007c8c:    f001fdc8    ....    BL       xTimerGenericCommand ; 0x20009820
+        0x20007c90:    4607        .F      MOV      r7,r0
+        0x20007c92:    b92f        /.      CBNZ     r7,0x20007ca0 ; prvSwitchTimerLists + 100
+        0x20007c94:    f24032a9    @..2    MOV      r2,#0x3a9
+        0x20007c98:    a10d        ..      ADR      r1,{pc}+0x38 ; 0x20007cd0
+        0x20007c9a:    a013        ..      ADR      r0,{pc}+0x4e ; 0x20007ce8
+        0x20007c9c:    f7fefc84    ....    BL       __0printf ; 0x200065a8
+        0x20007ca0:    bf00        ..      NOP      
+        0x20007ca2:    480a        .H      LDR      r0,[pc,#40] ; [0x20007ccc] = 0x20010070
+        0x20007ca4:    6800        .h      LDR      r0,[r0,#0]
+        0x20007ca6:    6800        .h      LDR      r0,[r0,#0]
+        0x20007ca8:    b908        ..      CBNZ     r0,0x20007cae ; prvSwitchTimerLists + 114
+        0x20007caa:    2001        .       MOVS     r0,#1
+        0x20007cac:    e000        ..      B        0x20007cb0 ; prvSwitchTimerLists + 116
+        0x20007cae:    2000        .       MOVS     r0,#0
+        0x20007cb0:    2800        .(      CMP      r0,#0
+        0x20007cb2:    d0c6        ..      BEQ      0x20007c42 ; prvSwitchTimerLists + 6
+        0x20007cb4:    4805        .H      LDR      r0,[pc,#20] ; [0x20007ccc] = 0x20010070
+        0x20007cb6:    f8d08000    ....    LDR      r8,[r0,#0]
+        0x20007cba:    480f        .H      LDR      r0,[pc,#60] ; [0x20007cf8] = 0x20010074
+        0x20007cbc:    6800        .h      LDR      r0,[r0,#0]
+        0x20007cbe:    4903        .I      LDR      r1,[pc,#12] ; [0x20007ccc] = 0x20010070
+        0x20007cc0:    6008        .`      STR      r0,[r1,#0]
+        0x20007cc2:    480d        .H      LDR      r0,[pc,#52] ; [0x20007cf8] = 0x20010074
+        0x20007cc4:    f8c08000    ....    STR      r8,[r0,#0]
+        0x20007cc8:    e8bd83f8    ....    POP      {r3-r9,pc}
     $d
-        0x20007c8a:    0000        ..      DCW    0
-        0x20007c8c:    20010070    p..     DCD    536936560
-        0x20007c90:    20010074    t..     DCD    536936564
+        0x20007ccc:    20010070    p..     DCD    536936560
+        0x20007cd0:    465c2e2e    ..\F    DCD    1180446254
+        0x20007cd4:    52656572    reeR    DCD    1382376818
+        0x20007cd8:    5c534f54    TOS\    DCD    1548963668
+        0x20007cdc:    656d6974    time    DCD    1701669236
+        0x20007ce0:    632e7372    rs.c    DCD    1663988594
+        0x20007ce4:    00000000    ....    DCD    0
+        0x20007ce8:    6f727245    Erro    DCD    1869771333
+        0x20007cec:    25203a72    r: %    DCD    622869106
+        0x20007cf0:    25202c73    s, %    DCD    622865523
+        0x20007cf4:    000a0d64    d...    DCD    658788
+        0x20007cf8:    20010074    t..     DCD    536936564
     $t
     i.prvTaskExitError
     prvTaskExitError
-        0x20007c94:    480e        .H      LDR      r0,[pc,#56] ; [0x20007cd0] = 0x200100a4
-        0x20007c96:    6800        .h      LDR      r0,[r0,#0]
-        0x20007c98:    1c40        @.      ADDS     r0,r0,#1
-        0x20007c9a:    b908        ..      CBNZ     r0,0x20007ca0 ; prvTaskExitError + 12
-        0x20007c9c:    2001        .       MOVS     r0,#1
-        0x20007c9e:    e000        ..      B        0x20007ca2 ; prvTaskExitError + 14
-        0x20007ca0:    2000        .       MOVS     r0,#0
-        0x20007ca2:    b950        P.      CBNZ     r0,0x20007cba ; prvTaskExitError + 38
-        0x20007ca4:    bf00        ..      NOP      
-        0x20007ca6:    2050        P       MOVS     r0,#0x50
-        0x20007ca8:    f3808811    ....    MSR      BASEPRI,r0
-        0x20007cac:    f3bf8f4f    ..O.    DSB      
-        0x20007cb0:    f3bf8f6f    ..o.    ISB      
-        0x20007cb4:    bf00        ..      NOP      
-        0x20007cb6:    bf00        ..      NOP      
-        0x20007cb8:    e7fe        ..      B        0x20007cb8 ; prvTaskExitError + 36
-        0x20007cba:    bf00        ..      NOP      
-        0x20007cbc:    2050        P       MOVS     r0,#0x50
-        0x20007cbe:    f3808811    ....    MSR      BASEPRI,r0
-        0x20007cc2:    f3bf8f4f    ..O.    DSB      
-        0x20007cc6:    f3bf8f6f    ..o.    ISB      
-        0x20007cca:    bf00        ..      NOP      
-        0x20007ccc:    bf00        ..      NOP      
-        0x20007cce:    e7fe        ..      B        0x20007cce ; prvTaskExitError + 58
+        0x20007cfc:    480b        .H      LDR      r0,[pc,#44] ; [0x20007d2c] = 0x200100a4
+        0x20007cfe:    6800        .h      LDR      r0,[r0,#0]
+        0x20007d00:    1c40        @.      ADDS     r0,r0,#1
+        0x20007d02:    b908        ..      CBNZ     r0,0x20007d08 ; prvTaskExitError + 12
+        0x20007d04:    2001        .       MOVS     r0,#1
+        0x20007d06:    e000        ..      B        0x20007d0a ; prvTaskExitError + 14
+        0x20007d08:    2000        .       MOVS     r0,#0
+        0x20007d0a:    b920         .      CBNZ     r0,0x20007d16 ; prvTaskExitError + 26
+        0x20007d0c:    22e7        ."      MOVS     r2,#0xe7
+        0x20007d0e:    a108        ..      ADR      r1,{pc}+0x22 ; 0x20007d30
+        0x20007d10:    a00e        ..      ADR      r0,{pc}+0x3c ; 0x20007d4c
+        0x20007d12:    f7fefc49    ..I.    BL       __0printf ; 0x200065a8
+        0x20007d16:    bf00        ..      NOP      
+        0x20007d18:    2050        P       MOVS     r0,#0x50
+        0x20007d1a:    f3808811    ....    MSR      BASEPRI,r0
+        0x20007d1e:    f3bf8f4f    ..O.    DSB      
+        0x20007d22:    f3bf8f6f    ..o.    ISB      
+        0x20007d26:    bf00        ..      NOP      
+        0x20007d28:    bf00        ..      NOP      
+        0x20007d2a:    e7fe        ..      B        0x20007d2a ; prvTaskExitError + 46
     $d
-        0x20007cd0:    200100a4    ...     DCD    536936612
+        0x20007d2c:    200100a4    ...     DCD    536936612
+        0x20007d30:    465c2e2e    ..\F    DCD    1180446254
+        0x20007d34:    52656572    reeR    DCD    1382376818
+        0x20007d38:    5c534f54    TOS\    DCD    1548963668
+        0x20007d3c:    5f4d5241    ARM_    DCD    1598902849
+        0x20007d40:    46344d43    CM4F    DCD    1177832771
+        0x20007d44:    726f705c    \por    DCD    1919905884
+        0x20007d48:    00632e74    t.c.    DCD    6499956
+        0x20007d4c:    6f727245    Erro    DCD    1869771333
+        0x20007d50:    25203a72    r: %    DCD    622869106
+        0x20007d54:    25202c73    s, %    DCD    622865523
+        0x20007d58:    000a0d64    d...    DCD    658788
     $t
     i.prvTimerTask
     prvTimerTask
-        0x20007cd4:    b508        ..      PUSH     {r3,lr}
-        0x20007cd6:    bf00        ..      NOP      
-        0x20007cd8:    4668        hF      MOV      r0,sp
-        0x20007cda:    f7fffcbb    ....    BL       prvGetNextExpireTime ; 0x20007654
-        0x20007cde:    4604        .F      MOV      r4,r0
-        0x20007ce0:    4620         F      MOV      r0,r4
-        0x20007ce2:    9900        ..      LDR      r1,[sp,#0]
-        0x20007ce4:    f7ffff1c    ....    BL       prvProcessTimerOrBlockTask ; 0x20007b20
-        0x20007ce8:    f7fffe7e    ..~.    BL       prvProcessReceivedCommands ; 0x200079e8
-        0x20007cec:    e7f4        ..      B        0x20007cd8 ; prvTimerTask + 4
+        0x20007d5c:    b508        ..      PUSH     {r3,lr}
+        0x20007d5e:    bf00        ..      NOP      
+        0x20007d60:    4668        hF      MOV      r0,sp
+        0x20007d62:    f7fffc77    ..w.    BL       prvGetNextExpireTime ; 0x20007654
+        0x20007d66:    4604        .F      MOV      r4,r0
+        0x20007d68:    4620         F      MOV      r0,r4
+        0x20007d6a:    9900        ..      LDR      r1,[sp,#0]
+        0x20007d6c:    f7fffefe    ....    BL       prvProcessTimerOrBlockTask ; 0x20007b6c
+        0x20007d70:    f7fffe56    ..V.    BL       prvProcessReceivedCommands ; 0x20007a20
+        0x20007d74:    e7f4        ..      B        0x20007d60 ; prvTimerTask + 4
     i.prvUnlockQueue
     prvUnlockQueue
-        0x20007cee:    b570        p.      PUSH     {r4-r6,lr}
-        0x20007cf0:    4604        .F      MOV      r4,r0
-        0x20007cf2:    f000fa9f    ....    BL       vPortEnterCritical ; 0x20008234
-        0x20007cf6:    f9945045    ..EP    LDRSB    r5,[r4,#0x45]
-        0x20007cfa:    e010        ..      B        0x20007d1e ; prvUnlockQueue + 48
-        0x20007cfc:    6a60        `j      LDR      r0,[r4,#0x24]
-        0x20007cfe:    b908        ..      CBNZ     r0,0x20007d04 ; prvUnlockQueue + 22
-        0x20007d00:    2001        .       MOVS     r0,#1
-        0x20007d02:    e000        ..      B        0x20007d06 ; prvUnlockQueue + 24
-        0x20007d04:    2000        .       MOVS     r0,#0
-        0x20007d06:    b938        8.      CBNZ     r0,0x20007d18 ; prvUnlockQueue + 42
-        0x20007d08:    f1040024    ..$.    ADD      r0,r4,#0x24
-        0x20007d0c:    f001fb1e    ....    BL       xTaskRemoveFromEventList ; 0x2000934c
-        0x20007d10:    b118        ..      CBZ      r0,0x20007d1a ; prvUnlockQueue + 44
-        0x20007d12:    f000fca7    ....    BL       vTaskMissedYield ; 0x20008664
-        0x20007d16:    e000        ..      B        0x20007d1a ; prvUnlockQueue + 44
-        0x20007d18:    e003        ..      B        0x20007d22 ; prvUnlockQueue + 52
-        0x20007d1a:    1e68        h.      SUBS     r0,r5,#1
-        0x20007d1c:    b245        E.      SXTB     r5,r0
-        0x20007d1e:    2d00        .-      CMP      r5,#0
-        0x20007d20:    dcec        ..      BGT      0x20007cfc ; prvUnlockQueue + 14
-        0x20007d22:    bf00        ..      NOP      
-        0x20007d24:    20ff        .       MOVS     r0,#0xff
-        0x20007d26:    f8840045    ..E.    STRB     r0,[r4,#0x45]
-        0x20007d2a:    f000faad    ....    BL       vPortExitCritical ; 0x20008288
-        0x20007d2e:    f000fa81    ....    BL       vPortEnterCritical ; 0x20008234
-        0x20007d32:    f9945044    ..DP    LDRSB    r5,[r4,#0x44]
-        0x20007d36:    e010        ..      B        0x20007d5a ; prvUnlockQueue + 108
-        0x20007d38:    6920         i      LDR      r0,[r4,#0x10]
-        0x20007d3a:    b908        ..      CBNZ     r0,0x20007d40 ; prvUnlockQueue + 82
-        0x20007d3c:    2001        .       MOVS     r0,#1
-        0x20007d3e:    e000        ..      B        0x20007d42 ; prvUnlockQueue + 84
-        0x20007d40:    2000        .       MOVS     r0,#0
-        0x20007d42:    b948        H.      CBNZ     r0,0x20007d58 ; prvUnlockQueue + 106
-        0x20007d44:    f1040010    ....    ADD      r0,r4,#0x10
-        0x20007d48:    f001fb00    ....    BL       xTaskRemoveFromEventList ; 0x2000934c
-        0x20007d4c:    b108        ..      CBZ      r0,0x20007d52 ; prvUnlockQueue + 100
-        0x20007d4e:    f000fc89    ....    BL       vTaskMissedYield ; 0x20008664
-        0x20007d52:    1e68        h.      SUBS     r0,r5,#1
-        0x20007d54:    b245        E.      SXTB     r5,r0
-        0x20007d56:    e000        ..      B        0x20007d5a ; prvUnlockQueue + 108
-        0x20007d58:    e001        ..      B        0x20007d5e ; prvUnlockQueue + 112
-        0x20007d5a:    2d00        .-      CMP      r5,#0
-        0x20007d5c:    dcec        ..      BGT      0x20007d38 ; prvUnlockQueue + 74
-        0x20007d5e:    bf00        ..      NOP      
-        0x20007d60:    20ff        .       MOVS     r0,#0xff
-        0x20007d62:    f8840044    ..D.    STRB     r0,[r4,#0x44]
-        0x20007d66:    f000fa8f    ....    BL       vPortExitCritical ; 0x20008288
-        0x20007d6a:    bd70        p.      POP      {r4-r6,pc}
+        0x20007d76:    b570        p.      PUSH     {r4-r6,lr}
+        0x20007d78:    4604        .F      MOV      r4,r0
+        0x20007d7a:    f000fab9    ....    BL       vPortEnterCritical ; 0x200082f0
+        0x20007d7e:    f9945045    ..EP    LDRSB    r5,[r4,#0x45]
+        0x20007d82:    e010        ..      B        0x20007da6 ; prvUnlockQueue + 48
+        0x20007d84:    6a60        `j      LDR      r0,[r4,#0x24]
+        0x20007d86:    b908        ..      CBNZ     r0,0x20007d8c ; prvUnlockQueue + 22
+        0x20007d88:    2001        .       MOVS     r0,#1
+        0x20007d8a:    e000        ..      B        0x20007d8e ; prvUnlockQueue + 24
+        0x20007d8c:    2000        .       MOVS     r0,#0
+        0x20007d8e:    b938        8.      CBNZ     r0,0x20007da0 ; prvUnlockQueue + 42
+        0x20007d90:    f1040024    ..$.    ADD      r0,r4,#0x24
+        0x20007d94:    f001fc1c    ....    BL       xTaskRemoveFromEventList ; 0x200095d0
+        0x20007d98:    b118        ..      CBZ      r0,0x20007da2 ; prvUnlockQueue + 44
+        0x20007d9a:    f000fd25    ..%.    BL       vTaskMissedYield ; 0x200087e8
+        0x20007d9e:    e000        ..      B        0x20007da2 ; prvUnlockQueue + 44
+        0x20007da0:    e003        ..      B        0x20007daa ; prvUnlockQueue + 52
+        0x20007da2:    1e68        h.      SUBS     r0,r5,#1
+        0x20007da4:    b245        E.      SXTB     r5,r0
+        0x20007da6:    2d00        .-      CMP      r5,#0
+        0x20007da8:    dcec        ..      BGT      0x20007d84 ; prvUnlockQueue + 14
+        0x20007daa:    bf00        ..      NOP      
+        0x20007dac:    20ff        .       MOVS     r0,#0xff
+        0x20007dae:    f8840045    ..E.    STRB     r0,[r4,#0x45]
+        0x20007db2:    f000fad9    ....    BL       vPortExitCritical ; 0x20008368
+        0x20007db6:    f000fa9b    ....    BL       vPortEnterCritical ; 0x200082f0
+        0x20007dba:    f9945044    ..DP    LDRSB    r5,[r4,#0x44]
+        0x20007dbe:    e010        ..      B        0x20007de2 ; prvUnlockQueue + 108
+        0x20007dc0:    6920         i      LDR      r0,[r4,#0x10]
+        0x20007dc2:    b908        ..      CBNZ     r0,0x20007dc8 ; prvUnlockQueue + 82
+        0x20007dc4:    2001        .       MOVS     r0,#1
+        0x20007dc6:    e000        ..      B        0x20007dca ; prvUnlockQueue + 84
+        0x20007dc8:    2000        .       MOVS     r0,#0
+        0x20007dca:    b948        H.      CBNZ     r0,0x20007de0 ; prvUnlockQueue + 106
+        0x20007dcc:    f1040010    ....    ADD      r0,r4,#0x10
+        0x20007dd0:    f001fbfe    ....    BL       xTaskRemoveFromEventList ; 0x200095d0
+        0x20007dd4:    b108        ..      CBZ      r0,0x20007dda ; prvUnlockQueue + 100
+        0x20007dd6:    f000fd07    ....    BL       vTaskMissedYield ; 0x200087e8
+        0x20007dda:    1e68        h.      SUBS     r0,r5,#1
+        0x20007ddc:    b245        E.      SXTB     r5,r0
+        0x20007dde:    e000        ..      B        0x20007de2 ; prvUnlockQueue + 108
+        0x20007de0:    e001        ..      B        0x20007de6 ; prvUnlockQueue + 112
+        0x20007de2:    2d00        .-      CMP      r5,#0
+        0x20007de4:    dcec        ..      BGT      0x20007dc0 ; prvUnlockQueue + 74
+        0x20007de6:    bf00        ..      NOP      
+        0x20007de8:    20ff        .       MOVS     r0,#0xff
+        0x20007dea:    f8840044    ..D.    STRB     r0,[r4,#0x44]
+        0x20007dee:    f000fabb    ....    BL       vPortExitCritical ; 0x20008368
+        0x20007df2:    bd70        p.      POP      {r4-r6,pc}
     i.pvPortMalloc
     pvPortMalloc
-        0x20007d6c:    e92d41f0    -..A    PUSH     {r4-r8,lr}
-        0x20007d70:    4604        .F      MOV      r4,r0
-        0x20007d72:    f04f0800    O...    MOV      r8,#0
-        0x20007d76:    f000fd19    ....    BL       vTaskSuspendAll ; 0x200087ac
-        0x20007d7a:    4851        QH      LDR      r0,[pc,#324] ; [0x20007ec0] = 0x2001008c
-        0x20007d7c:    6800        .h      LDR      r0,[r0,#0]
-        0x20007d7e:    b908        ..      CBNZ     r0,0x20007d84 ; pvPortMalloc + 24
-        0x20007d80:    f7fffc7c    ..|.    BL       prvHeapInit ; 0x2000767c
-        0x20007d84:    484f        OH      LDR      r0,[pc,#316] ; [0x20007ec4] = 0x200100a0
-        0x20007d86:    6800        .h      LDR      r0,[r0,#0]
-        0x20007d88:    4020         @      ANDS     r0,r0,r4
-        0x20007d8a:    2800        .(      CMP      r0,#0
-        0x20007d8c:    d17e        ~.      BNE      0x20007e8c ; pvPortMalloc + 288
-        0x20007d8e:    b33c        <.      CBZ      r4,0x20007de0 ; pvPortMalloc + 116
-        0x20007d90:    f1040008    ....    ADD      r0,r4,#8
-        0x20007d94:    42a0        .B      CMP      r0,r4
-        0x20007d96:    d923        #.      BLS      0x20007de0 ; pvPortMalloc + 116
-        0x20007d98:    3408        .4      ADDS     r4,r4,#8
-        0x20007d9a:    f0040007    ....    AND      r0,r4,#7
-        0x20007d9e:    b300        ..      CBZ      r0,0x20007de2 ; pvPortMalloc + 118
-        0x20007da0:    f0040007    ....    AND      r0,r4,#7
-        0x20007da4:    f1c00008    ....    RSB      r0,r0,#8
-        0x20007da8:    4420         D      ADD      r0,r0,r4
-        0x20007daa:    42a0        .B      CMP      r0,r4
-        0x20007dac:    d916        ..      BLS      0x20007ddc ; pvPortMalloc + 112
-        0x20007dae:    f0040007    ....    AND      r0,r4,#7
-        0x20007db2:    f1c00008    ....    RSB      r0,r0,#8
-        0x20007db6:    4404        .D      ADD      r4,r4,r0
-        0x20007db8:    f0040007    ....    AND      r0,r4,#7
-        0x20007dbc:    b908        ..      CBNZ     r0,0x20007dc2 ; pvPortMalloc + 86
-        0x20007dbe:    2001        .       MOVS     r0,#1
-        0x20007dc0:    e000        ..      B        0x20007dc4 ; pvPortMalloc + 88
-        0x20007dc2:    2000        .       MOVS     r0,#0
-        0x20007dc4:    b968        h.      CBNZ     r0,0x20007de2 ; pvPortMalloc + 118
-        0x20007dc6:    bf00        ..      NOP      
-        0x20007dc8:    2050        P       MOVS     r0,#0x50
-        0x20007dca:    f3808811    ....    MSR      BASEPRI,r0
-        0x20007dce:    f3bf8f4f    ..O.    DSB      
-        0x20007dd2:    f3bf8f6f    ..o.    ISB      
-        0x20007dd6:    bf00        ..      NOP      
-        0x20007dd8:    bf00        ..      NOP      
-        0x20007dda:    e7fe        ..      B        0x20007dda ; pvPortMalloc + 110
-        0x20007ddc:    2400        .$      MOVS     r4,#0
-        0x20007dde:    e000        ..      B        0x20007de2 ; pvPortMalloc + 118
-        0x20007de0:    2400        .$      MOVS     r4,#0
-        0x20007de2:    2c00        .,      CMP      r4,#0
-        0x20007de4:    d054        T.      BEQ      0x20007e90 ; pvPortMalloc + 292
-        0x20007de6:    4838        8H      LDR      r0,[pc,#224] ; [0x20007ec8] = 0x20010090
-        0x20007de8:    6800        .h      LDR      r0,[r0,#0]
-        0x20007dea:    4284        .B      CMP      r4,r0
-        0x20007dec:    d850        P.      BHI      0x20007e90 ; pvPortMalloc + 292
-        0x20007dee:    4e37        7N      LDR      r6,[pc,#220] ; [0x20007ecc] = 0x20010084
-        0x20007df0:    4630        0F      MOV      r0,r6
-        0x20007df2:    6805        .h      LDR      r5,[r0,#0]
-        0x20007df4:    e001        ..      B        0x20007dfa ; pvPortMalloc + 142
-        0x20007df6:    462e        .F      MOV      r6,r5
-        0x20007df8:    682d        -h      LDR      r5,[r5,#0]
-        0x20007dfa:    6868        hh      LDR      r0,[r5,#4]
-        0x20007dfc:    42a0        .B      CMP      r0,r4
-        0x20007dfe:    d202        ..      BCS      0x20007e06 ; pvPortMalloc + 154
-        0x20007e00:    6828        (h      LDR      r0,[r5,#0]
-        0x20007e02:    2800        .(      CMP      r0,#0
-        0x20007e04:    d1f7        ..      BNE      0x20007df6 ; pvPortMalloc + 138
-        0x20007e06:    482e        .H      LDR      r0,[pc,#184] ; [0x20007ec0] = 0x2001008c
-        0x20007e08:    6800        .h      LDR      r0,[r0,#0]
-        0x20007e0a:    4285        .B      CMP      r5,r0
-        0x20007e0c:    d040        @.      BEQ      0x20007e90 ; pvPortMalloc + 292
-        0x20007e0e:    6830        0h      LDR      r0,[r6,#0]
-        0x20007e10:    f1000808    ....    ADD      r8,r0,#8
-        0x20007e14:    6828        (h      LDR      r0,[r5,#0]
-        0x20007e16:    6030        0`      STR      r0,[r6,#0]
-        0x20007e18:    6868        hh      LDR      r0,[r5,#4]
-        0x20007e1a:    1b00        ..      SUBS     r0,r0,r4
-        0x20007e1c:    2810        .(      CMP      r0,#0x10
-        0x20007e1e:    d919        ..      BLS      0x20007e54 ; pvPortMalloc + 232
-        0x20007e20:    192f        /.      ADDS     r7,r5,r4
-        0x20007e22:    f0070007    ....    AND      r0,r7,#7
-        0x20007e26:    b908        ..      CBNZ     r0,0x20007e2c ; pvPortMalloc + 192
-        0x20007e28:    2001        .       MOVS     r0,#1
-        0x20007e2a:    e000        ..      B        0x20007e2e ; pvPortMalloc + 194
-        0x20007e2c:    2000        .       MOVS     r0,#0
-        0x20007e2e:    b950        P.      CBNZ     r0,0x20007e46 ; pvPortMalloc + 218
-        0x20007e30:    bf00        ..      NOP      
-        0x20007e32:    2050        P       MOVS     r0,#0x50
-        0x20007e34:    f3808811    ....    MSR      BASEPRI,r0
-        0x20007e38:    f3bf8f4f    ..O.    DSB      
-        0x20007e3c:    f3bf8f6f    ..o.    ISB      
-        0x20007e40:    bf00        ..      NOP      
-        0x20007e42:    bf00        ..      NOP      
-        0x20007e44:    e7fe        ..      B        0x20007e44 ; pvPortMalloc + 216
-        0x20007e46:    6868        hh      LDR      r0,[r5,#4]
-        0x20007e48:    1b00        ..      SUBS     r0,r0,r4
-        0x20007e4a:    6078        x`      STR      r0,[r7,#4]
-        0x20007e4c:    606c        l`      STR      r4,[r5,#4]
-        0x20007e4e:    4638        8F      MOV      r0,r7
-        0x20007e50:    f7fffd14    ....    BL       prvInsertBlockIntoFreeList ; 0x2000787c
-        0x20007e54:    491c        .I      LDR      r1,[pc,#112] ; [0x20007ec8] = 0x20010090
-        0x20007e56:    6868        hh      LDR      r0,[r5,#4]
-        0x20007e58:    6809        .h      LDR      r1,[r1,#0]
-        0x20007e5a:    1a08        ..      SUBS     r0,r1,r0
-        0x20007e5c:    491a        .I      LDR      r1,[pc,#104] ; [0x20007ec8] = 0x20010090
-        0x20007e5e:    6008        .`      STR      r0,[r1,#0]
-        0x20007e60:    4608        .F      MOV      r0,r1
-        0x20007e62:    6800        .h      LDR      r0,[r0,#0]
-        0x20007e64:    491a        .I      LDR      r1,[pc,#104] ; [0x20007ed0] = 0x20010094
-        0x20007e66:    6809        .h      LDR      r1,[r1,#0]
-        0x20007e68:    4288        .B      CMP      r0,r1
-        0x20007e6a:    d203        ..      BCS      0x20007e74 ; pvPortMalloc + 264
-        0x20007e6c:    4816        .H      LDR      r0,[pc,#88] ; [0x20007ec8] = 0x20010090
-        0x20007e6e:    6800        .h      LDR      r0,[r0,#0]
-        0x20007e70:    4917        .I      LDR      r1,[pc,#92] ; [0x20007ed0] = 0x20010094
-        0x20007e72:    6008        .`      STR      r0,[r1,#0]
-        0x20007e74:    4913        .I      LDR      r1,[pc,#76] ; [0x20007ec4] = 0x200100a0
-        0x20007e76:    6868        hh      LDR      r0,[r5,#4]
-        0x20007e78:    6809        .h      LDR      r1,[r1,#0]
-        0x20007e7a:    4308        .C      ORRS     r0,r0,r1
-        0x20007e7c:    6068        h`      STR      r0,[r5,#4]
-        0x20007e7e:    2000        .       MOVS     r0,#0
-        0x20007e80:    6028        (`      STR      r0,[r5,#0]
-        0x20007e82:    4814        .H      LDR      r0,[pc,#80] ; [0x20007ed4] = 0x20010098
-        0x20007e84:    6800        .h      LDR      r0,[r0,#0]
-        0x20007e86:    1c40        @.      ADDS     r0,r0,#1
-        0x20007e88:    4912        .I      LDR      r1,[pc,#72] ; [0x20007ed4] = 0x20010098
-        0x20007e8a:    e000        ..      B        0x20007e8e ; pvPortMalloc + 290
-        0x20007e8c:    e000        ..      B        0x20007e90 ; pvPortMalloc + 292
-        0x20007e8e:    6008        .`      STR      r0,[r1,#0]
-        0x20007e90:    f001faac    ....    BL       xTaskResumeAll ; 0x200093ec
-        0x20007e94:    f0080007    ....    AND      r0,r8,#7
-        0x20007e98:    b908        ..      CBNZ     r0,0x20007e9e ; pvPortMalloc + 306
-        0x20007e9a:    2001        .       MOVS     r0,#1
-        0x20007e9c:    e000        ..      B        0x20007ea0 ; pvPortMalloc + 308
-        0x20007e9e:    2000        .       MOVS     r0,#0
-        0x20007ea0:    b950        P.      CBNZ     r0,0x20007eb8 ; pvPortMalloc + 332
-        0x20007ea2:    bf00        ..      NOP      
-        0x20007ea4:    2050        P       MOVS     r0,#0x50
-        0x20007ea6:    f3808811    ....    MSR      BASEPRI,r0
-        0x20007eaa:    f3bf8f4f    ..O.    DSB      
-        0x20007eae:    f3bf8f6f    ..o.    ISB      
-        0x20007eb2:    bf00        ..      NOP      
-        0x20007eb4:    bf00        ..      NOP      
-        0x20007eb6:    e7fe        ..      B        0x20007eb6 ; pvPortMalloc + 330
-        0x20007eb8:    4640        @F      MOV      r0,r8
-        0x20007eba:    e8bd81f0    ....    POP      {r4-r8,pc}
+        0x20007df4:    e92d41f0    -..A    PUSH     {r4-r8,lr}
+        0x20007df8:    4604        .F      MOV      r4,r0
+        0x20007dfa:    f04f0800    O...    MOV      r8,#0
+        0x20007dfe:    f000fdbd    ....    BL       vTaskSuspendAll ; 0x2000897c
+        0x20007e02:    4848        HH      LDR      r0,[pc,#288] ; [0x20007f24] = 0x2001008c
+        0x20007e04:    6800        .h      LDR      r0,[r0,#0]
+        0x20007e06:    b908        ..      CBNZ     r0,0x20007e0c ; pvPortMalloc + 24
+        0x20007e08:    f7fffc38    ..8.    BL       prvHeapInit ; 0x2000767c
+        0x20007e0c:    4846        FH      LDR      r0,[pc,#280] ; [0x20007f28] = 0x200100a0
+        0x20007e0e:    6800        .h      LDR      r0,[r0,#0]
+        0x20007e10:    4020         @      ANDS     r0,r0,r4
+        0x20007e12:    2800        .(      CMP      r0,#0
+        0x20007e14:    d173        s.      BNE      0x20007efe ; pvPortMalloc + 266
+        0x20007e16:    b314        ..      CBZ      r4,0x20007e5e ; pvPortMalloc + 106
+        0x20007e18:    f1040008    ....    ADD      r0,r4,#8
+        0x20007e1c:    42a0        .B      CMP      r0,r4
+        0x20007e1e:    d91e        ..      BLS      0x20007e5e ; pvPortMalloc + 106
+        0x20007e20:    3408        .4      ADDS     r4,r4,#8
+        0x20007e22:    f0040007    ....    AND      r0,r4,#7
+        0x20007e26:    b1d8        ..      CBZ      r0,0x20007e60 ; pvPortMalloc + 108
+        0x20007e28:    f0040007    ....    AND      r0,r4,#7
+        0x20007e2c:    f1c00008    ....    RSB      r0,r0,#8
+        0x20007e30:    4420         D      ADD      r0,r0,r4
+        0x20007e32:    42a0        .B      CMP      r0,r4
+        0x20007e34:    d911        ..      BLS      0x20007e5a ; pvPortMalloc + 102
+        0x20007e36:    f0040007    ....    AND      r0,r4,#7
+        0x20007e3a:    f1c00008    ....    RSB      r0,r0,#8
+        0x20007e3e:    4404        .D      ADD      r4,r4,r0
+        0x20007e40:    f0040007    ....    AND      r0,r4,#7
+        0x20007e44:    b908        ..      CBNZ     r0,0x20007e4a ; pvPortMalloc + 86
+        0x20007e46:    2001        .       MOVS     r0,#1
+        0x20007e48:    e000        ..      B        0x20007e4c ; pvPortMalloc + 88
+        0x20007e4a:    2000        .       MOVS     r0,#0
+        0x20007e4c:    b940        @.      CBNZ     r0,0x20007e60 ; pvPortMalloc + 108
+        0x20007e4e:    229c        ."      MOVS     r2,#0x9c
+        0x20007e50:    a136        6.      ADR      r1,{pc}+0xdc ; 0x20007f2c
+        0x20007e52:    a03e        >.      ADR      r0,{pc}+0xfa ; 0x20007f4c
+        0x20007e54:    f7fefba8    ....    BL       __0printf ; 0x200065a8
+        0x20007e58:    e002        ..      B        0x20007e60 ; pvPortMalloc + 108
+        0x20007e5a:    2400        .$      MOVS     r4,#0
+        0x20007e5c:    e000        ..      B        0x20007e60 ; pvPortMalloc + 108
+        0x20007e5e:    2400        .$      MOVS     r4,#0
+        0x20007e60:    2c00        .,      CMP      r4,#0
+        0x20007e62:    d04c        L.      BEQ      0x20007efe ; pvPortMalloc + 266
+        0x20007e64:    483d        =H      LDR      r0,[pc,#244] ; [0x20007f5c] = 0x20010090
+        0x20007e66:    6800        .h      LDR      r0,[r0,#0]
+        0x20007e68:    4284        .B      CMP      r4,r0
+        0x20007e6a:    d848        H.      BHI      0x20007efe ; pvPortMalloc + 266
+        0x20007e6c:    4e3c        <N      LDR      r6,[pc,#240] ; [0x20007f60] = 0x20010084
+        0x20007e6e:    4630        0F      MOV      r0,r6
+        0x20007e70:    6805        .h      LDR      r5,[r0,#0]
+        0x20007e72:    e001        ..      B        0x20007e78 ; pvPortMalloc + 132
+        0x20007e74:    462e        .F      MOV      r6,r5
+        0x20007e76:    682d        -h      LDR      r5,[r5,#0]
+        0x20007e78:    6868        hh      LDR      r0,[r5,#4]
+        0x20007e7a:    42a0        .B      CMP      r0,r4
+        0x20007e7c:    d202        ..      BCS      0x20007e84 ; pvPortMalloc + 144
+        0x20007e7e:    6828        (h      LDR      r0,[r5,#0]
+        0x20007e80:    2800        .(      CMP      r0,#0
+        0x20007e82:    d1f7        ..      BNE      0x20007e74 ; pvPortMalloc + 128
+        0x20007e84:    4827        'H      LDR      r0,[pc,#156] ; [0x20007f24] = 0x2001008c
+        0x20007e86:    6800        .h      LDR      r0,[r0,#0]
+        0x20007e88:    4285        .B      CMP      r5,r0
+        0x20007e8a:    d038        8.      BEQ      0x20007efe ; pvPortMalloc + 266
+        0x20007e8c:    6830        0h      LDR      r0,[r6,#0]
+        0x20007e8e:    f1000808    ....    ADD      r8,r0,#8
+        0x20007e92:    6828        (h      LDR      r0,[r5,#0]
+        0x20007e94:    6030        0`      STR      r0,[r6,#0]
+        0x20007e96:    6868        hh      LDR      r0,[r5,#4]
+        0x20007e98:    1b00        ..      SUBS     r0,r0,r4
+        0x20007e9a:    2810        .(      CMP      r0,#0x10
+        0x20007e9c:    d913        ..      BLS      0x20007ec6 ; pvPortMalloc + 210
+        0x20007e9e:    192f        /.      ADDS     r7,r5,r4
+        0x20007ea0:    f0070007    ....    AND      r0,r7,#7
+        0x20007ea4:    b908        ..      CBNZ     r0,0x20007eaa ; pvPortMalloc + 182
+        0x20007ea6:    2001        .       MOVS     r0,#1
+        0x20007ea8:    e000        ..      B        0x20007eac ; pvPortMalloc + 184
+        0x20007eaa:    2000        .       MOVS     r0,#0
+        0x20007eac:    b920         .      CBNZ     r0,0x20007eb8 ; pvPortMalloc + 196
+        0x20007eae:    22cf        ."      MOVS     r2,#0xcf
+        0x20007eb0:    a11e        ..      ADR      r1,{pc}+0x7c ; 0x20007f2c
+        0x20007eb2:    a026        &.      ADR      r0,{pc}+0x9a ; 0x20007f4c
+        0x20007eb4:    f7fefb78    ..x.    BL       __0printf ; 0x200065a8
+        0x20007eb8:    6868        hh      LDR      r0,[r5,#4]
+        0x20007eba:    1b00        ..      SUBS     r0,r0,r4
+        0x20007ebc:    6078        x`      STR      r0,[r7,#4]
+        0x20007ebe:    606c        l`      STR      r4,[r5,#4]
+        0x20007ec0:    4638        8F      MOV      r0,r7
+        0x20007ec2:    f7fffce9    ....    BL       prvInsertBlockIntoFreeList ; 0x20007898
+        0x20007ec6:    4925        %I      LDR      r1,[pc,#148] ; [0x20007f5c] = 0x20010090
+        0x20007ec8:    6868        hh      LDR      r0,[r5,#4]
+        0x20007eca:    6809        .h      LDR      r1,[r1,#0]
+        0x20007ecc:    1a08        ..      SUBS     r0,r1,r0
+        0x20007ece:    4923        #I      LDR      r1,[pc,#140] ; [0x20007f5c] = 0x20010090
+        0x20007ed0:    6008        .`      STR      r0,[r1,#0]
+        0x20007ed2:    4608        .F      MOV      r0,r1
+        0x20007ed4:    6800        .h      LDR      r0,[r0,#0]
+        0x20007ed6:    4923        #I      LDR      r1,[pc,#140] ; [0x20007f64] = 0x20010094
+        0x20007ed8:    6809        .h      LDR      r1,[r1,#0]
+        0x20007eda:    4288        .B      CMP      r0,r1
+        0x20007edc:    d203        ..      BCS      0x20007ee6 ; pvPortMalloc + 242
+        0x20007ede:    481f        .H      LDR      r0,[pc,#124] ; [0x20007f5c] = 0x20010090
+        0x20007ee0:    6800        .h      LDR      r0,[r0,#0]
+        0x20007ee2:    4920         I      LDR      r1,[pc,#128] ; [0x20007f64] = 0x20010094
+        0x20007ee4:    6008        .`      STR      r0,[r1,#0]
+        0x20007ee6:    4910        .I      LDR      r1,[pc,#64] ; [0x20007f28] = 0x200100a0
+        0x20007ee8:    6868        hh      LDR      r0,[r5,#4]
+        0x20007eea:    6809        .h      LDR      r1,[r1,#0]
+        0x20007eec:    4308        .C      ORRS     r0,r0,r1
+        0x20007eee:    6068        h`      STR      r0,[r5,#4]
+        0x20007ef0:    2000        .       MOVS     r0,#0
+        0x20007ef2:    6028        (`      STR      r0,[r5,#0]
+        0x20007ef4:    481c        .H      LDR      r0,[pc,#112] ; [0x20007f68] = 0x20010098
+        0x20007ef6:    6800        .h      LDR      r0,[r0,#0]
+        0x20007ef8:    1c40        @.      ADDS     r0,r0,#1
+        0x20007efa:    491b        .I      LDR      r1,[pc,#108] ; [0x20007f68] = 0x20010098
+        0x20007efc:    6008        .`      STR      r0,[r1,#0]
+        0x20007efe:    f001fbc3    ....    BL       xTaskResumeAll ; 0x20009688
+        0x20007f02:    f0080007    ....    AND      r0,r8,#7
+        0x20007f06:    b908        ..      CBNZ     r0,0x20007f0c ; pvPortMalloc + 280
+        0x20007f08:    2001        .       MOVS     r0,#1
+        0x20007f0a:    e000        ..      B        0x20007f0e ; pvPortMalloc + 282
+        0x20007f0c:    2000        .       MOVS     r0,#0
+        0x20007f0e:    b928        (.      CBNZ     r0,0x20007f1c ; pvPortMalloc + 296
+        0x20007f10:    f44f7288    O..r    MOV      r2,#0x110
+        0x20007f14:    a105        ..      ADR      r1,{pc}+0x18 ; 0x20007f2c
+        0x20007f16:    a00d        ..      ADR      r0,{pc}+0x36 ; 0x20007f4c
+        0x20007f18:    f7fefb46    ..F.    BL       __0printf ; 0x200065a8
+        0x20007f1c:    4640        @F      MOV      r0,r8
+        0x20007f1e:    e8bd81f0    ....    POP      {r4-r8,pc}
     $d
-        0x20007ebe:    0000        ..      DCW    0
-        0x20007ec0:    2001008c    ...     DCD    536936588
-        0x20007ec4:    200100a0    ...     DCD    536936608
-        0x20007ec8:    20010090    ...     DCD    536936592
-        0x20007ecc:    20010084    ...     DCD    536936580
-        0x20007ed0:    20010094    ...     DCD    536936596
-        0x20007ed4:    20010098    ...     DCD    536936600
+        0x20007f22:    0000        ..      DCW    0
+        0x20007f24:    2001008c    ...     DCD    536936588
+        0x20007f28:    200100a0    ...     DCD    536936608
+        0x20007f2c:    465c2e2e    ..\F    DCD    1180446254
+        0x20007f30:    52656572    reeR    DCD    1382376818
+        0x20007f34:    5c534f54    TOS\    DCD    1548963668
+        0x20007f38:    4d6d654d    MemM    DCD    1299014989
+        0x20007f3c:    5c676e61    ang\    DCD    1550282337
+        0x20007f40:    70616568    heap    DCD    1885431144
+        0x20007f44:    632e345f    _4.c    DCD    1663972447
+        0x20007f48:    00000000    ....    DCD    0
+        0x20007f4c:    6f727245    Erro    DCD    1869771333
+        0x20007f50:    25203a72    r: %    DCD    622869106
+        0x20007f54:    25202c73    s, %    DCD    622865523
+        0x20007f58:    000a0d64    d...    DCD    658788
+        0x20007f5c:    20010090    ...     DCD    536936592
+        0x20007f60:    20010084    ...     DCD    536936580
+        0x20007f64:    20010094    ...     DCD    536936596
+        0x20007f68:    20010098    ...     DCD    536936600
     $t
     i.pxPortInitialiseStack
     pxPortInitialiseStack
-        0x20007ed8:    1f00        ..      SUBS     r0,r0,#4
-        0x20007eda:    f04f7380    O..s    MOV      r3,#0x1000000
-        0x20007ede:    6003        .`      STR      r3,[r0,#0]
-        0x20007ee0:    1f00        ..      SUBS     r0,r0,#4
-        0x20007ee2:    f0210301    !...    BIC      r3,r1,#1
-        0x20007ee6:    6003        .`      STR      r3,[r0,#0]
-        0x20007ee8:    1f00        ..      SUBS     r0,r0,#4
-        0x20007eea:    4b05        .K      LDR      r3,[pc,#20] ; [0x20007f00] = 0x20007c95
-        0x20007eec:    6003        .`      STR      r3,[r0,#0]
-        0x20007eee:    3814        .8      SUBS     r0,r0,#0x14
-        0x20007ef0:    6002        .`      STR      r2,[r0,#0]
-        0x20007ef2:    1f00        ..      SUBS     r0,r0,#4
-        0x20007ef4:    f06f0302    o...    MVN      r3,#2
-        0x20007ef8:    6003        .`      STR      r3,[r0,#0]
-        0x20007efa:    3820         8      SUBS     r0,r0,#0x20
-        0x20007efc:    4770        pG      BX       lr
+        0x20007f6c:    1f00        ..      SUBS     r0,r0,#4
+        0x20007f6e:    f04f7380    O..s    MOV      r3,#0x1000000
+        0x20007f72:    6003        .`      STR      r3,[r0,#0]
+        0x20007f74:    1f00        ..      SUBS     r0,r0,#4
+        0x20007f76:    f0210301    !...    BIC      r3,r1,#1
+        0x20007f7a:    6003        .`      STR      r3,[r0,#0]
+        0x20007f7c:    1f00        ..      SUBS     r0,r0,#4
+        0x20007f7e:    4b05        .K      LDR      r3,[pc,#20] ; [0x20007f94] = 0x20007cfd
+        0x20007f80:    6003        .`      STR      r3,[r0,#0]
+        0x20007f82:    3814        .8      SUBS     r0,r0,#0x14
+        0x20007f84:    6002        .`      STR      r2,[r0,#0]
+        0x20007f86:    1f00        ..      SUBS     r0,r0,#4
+        0x20007f88:    f06f0302    o...    MVN      r3,#2
+        0x20007f8c:    6003        .`      STR      r3,[r0,#0]
+        0x20007f8e:    3820         8      SUBS     r0,r0,#0x20
+        0x20007f90:    4770        pG      BX       lr
     $d
-        0x20007efe:    0000        ..      DCW    0
-        0x20007f00:    20007c95    .|.     DCD    536902805
+        0x20007f92:    0000        ..      DCW    0
+        0x20007f94:    20007cfd    .|.     DCD    536902909
     $t
     i.segger_init
     segger_init
-        0x20007f04:    b510        ..      PUSH     {r4,lr}
-        0x20007f06:    f7fcf8b1    ....    BL       SEGGER_RTT_Init ; 0x2000406c
-        0x20007f0a:    bf00        ..      NOP      
-        0x20007f0c:    a307        ..      ADR      r3,{pc}+0x20 ; 0x20007f2c
-        0x20007f0e:    a209        ..      ADR      r2,{pc}+0x26 ; 0x20007f34
-        0x20007f10:    a10a        ..      ADR      r1,{pc}+0x2c ; 0x20007f3c
-        0x20007f12:    2000        .       MOVS     r0,#0
-        0x20007f14:    f7fcf9b4    ....    BL       SEGGER_RTT_printf ; 0x20004280
-        0x20007f18:    bf00        ..      NOP      
-        0x20007f1a:    bf00        ..      NOP      
-        0x20007f1c:    a30f        ..      ADR      r3,{pc}+0x40 ; 0x20007f5c
-        0x20007f1e:    a212        ..      ADR      r2,{pc}+0x4a ; 0x20007f68
-        0x20007f20:    a114        ..      ADR      r1,{pc}+0x54 ; 0x20007f74
-        0x20007f22:    2000        .       MOVS     r0,#0
-        0x20007f24:    f7fcf9ac    ....    BL       SEGGER_RTT_printf ; 0x20004280
-        0x20007f28:    bf00        ..      NOP      
-        0x20007f2a:    bd10        ..      POP      {r4,pc}
+        0x20007f98:    b510        ..      PUSH     {r4,lr}
+        0x20007f9a:    f7fcf867    ..g.    BL       SEGGER_RTT_Init ; 0x2000406c
+        0x20007f9e:    bf00        ..      NOP      
+        0x20007fa0:    a307        ..      ADR      r3,{pc}+0x20 ; 0x20007fc0
+        0x20007fa2:    a209        ..      ADR      r2,{pc}+0x26 ; 0x20007fc8
+        0x20007fa4:    a10a        ..      ADR      r1,{pc}+0x2c ; 0x20007fd0
+        0x20007fa6:    2000        .       MOVS     r0,#0
+        0x20007fa8:    f7fcf96a    ..j.    BL       SEGGER_RTT_printf ; 0x20004280
+        0x20007fac:    bf00        ..      NOP      
+        0x20007fae:    bf00        ..      NOP      
+        0x20007fb0:    a30f        ..      ADR      r3,{pc}+0x40 ; 0x20007ff0
+        0x20007fb2:    a212        ..      ADR      r2,{pc}+0x4a ; 0x20007ffc
+        0x20007fb4:    a114        ..      ADR      r1,{pc}+0x54 ; 0x20008008
+        0x20007fb6:    2000        .       MOVS     r0,#0
+        0x20007fb8:    f7fcf962    ..b.    BL       SEGGER_RTT_printf ; 0x20004280
+        0x20007fbc:    bf00        ..      NOP      
+        0x20007fbe:    bd10        ..      POP      {r4,pc}
     $d
-        0x20007f2c:    6d305b1b    .[0m    DCD    1831885595
-        0x20007f30:    00000000    ....    DCD    0
-        0x20007f34:    3b345b1b    .[4;    DCD    993286939
-        0x20007f38:    006d3134    41m.    DCD    7156020
-        0x20007f3c:    68707325    %sph    DCD    1752199973
-        0x20007f40:    6e65736f    osen    DCD    1852142447
-        0x20007f44:    3a206573    se :    DCD    975201651
-        0x20007f48:    45455246    FREE    DCD    1162170950
-        0x20007f4c:    534f5452    RTOS    DCD    1397707858
-        0x20007f50:    4d454420     DEM    DCD    1296385056
-        0x20007f54:    0d73254f    O%s.    DCD    225649999
-        0x20007f58:    0000000a    ....    DCD    10
-        0x20007f5c:    323a3631    16:2    DCD    842675761
-        0x20007f60:    38303a35    5:08    DCD    942684725
-        0x20007f64:    00000000    ....    DCD    0
-        0x20007f68:    206e614a    Jan     DCD    544104778
-        0x20007f6c:    32203420     4 2    DCD    840971296
-        0x20007f70:    00323230    022.    DCD    3289648
-        0x20007f74:    706d6f63    comp    DCD    1886220131
-        0x20007f78:    64656c69    iled    DCD    1684368489
-        0x20007f7c:    6d697420     tim    DCD    1835627552
-        0x20007f80:    25203a65    e: %    DCD    622869093
-        0x20007f84:    73252073    s %s    DCD    1931812979
-        0x20007f88:    00000a0d    ....    DCD    2573
+        0x20007fc0:    6d305b1b    .[0m    DCD    1831885595
+        0x20007fc4:    00000000    ....    DCD    0
+        0x20007fc8:    3b345b1b    .[4;    DCD    993286939
+        0x20007fcc:    006d3134    41m.    DCD    7156020
+        0x20007fd0:    68707325    %sph    DCD    1752199973
+        0x20007fd4:    6e65736f    osen    DCD    1852142447
+        0x20007fd8:    3a206573    se :    DCD    975201651
+        0x20007fdc:    45455246    FREE    DCD    1162170950
+        0x20007fe0:    534f5452    RTOS    DCD    1397707858
+        0x20007fe4:    4d454420     DEM    DCD    1296385056
+        0x20007fe8:    0d73254f    O%s.    DCD    225649999
+        0x20007fec:    0000000a    ....    DCD    10
+        0x20007ff0:    353a3631    16:5    DCD    893007409
+        0x20007ff4:    34343a37    7:44    DCD    875838007
+        0x20007ff8:    00000000    ....    DCD    0
+        0x20007ffc:    206e614a    Jan     DCD    544104778
+        0x20008000:    32203420     4 2    DCD    840971296
+        0x20008004:    00323230    022.    DCD    3289648
+        0x20008008:    706d6f63    comp    DCD    1886220131
+        0x2000800c:    64656c69    iled    DCD    1684368489
+        0x20008010:    6d697420     tim    DCD    1835627552
+        0x20008014:    25203a65    e: %    DCD    622869093
+        0x20008018:    73252073    s %s    DCD    1931812979
+        0x2000801c:    00000a0d    ....    DCD    2573
     $t
     i.start_task
     start_task
-        0x20007f8c:    b51c        ..      PUSH     {r2-r4,lr}
-        0x20007f8e:    4604        .F      MOV      r4,r0
-        0x20007f90:    f000f950    ..P.    BL       vPortEnterCritical ; 0x20008234
-        0x20007f94:    4812        .H      LDR      r0,[pc,#72] ; [0x20007fe0] = 0x20010018
-        0x20007f96:    2102        .!      MOVS     r1,#2
-        0x20007f98:    2300        .#      MOVS     r3,#0
-        0x20007f9a:    2280        ."      MOVS     r2,#0x80
-        0x20007f9c:    e9cd1000    ....    STRD     r1,r0,[sp,#0]
-        0x20007fa0:    a110        ..      ADR      r1,{pc}+0x44 ; 0x20007fe4
-        0x20007fa2:    4813        .H      LDR      r0,[pc,#76] ; [0x20007ff0] = 0x20007245
-        0x20007fa4:    f001f878    ..x.    BL       xTaskCreate ; 0x20009098
-        0x20007fa8:    4812        .H      LDR      r0,[pc,#72] ; [0x20007ff4] = 0x2001001c
-        0x20007faa:    2102        .!      MOVS     r1,#2
-        0x20007fac:    2300        .#      MOVS     r3,#0
-        0x20007fae:    2280        ."      MOVS     r2,#0x80
-        0x20007fb0:    e9cd1000    ....    STRD     r1,r0,[sp,#0]
-        0x20007fb4:    a110        ..      ADR      r1,{pc}+0x44 ; 0x20007ff8
-        0x20007fb6:    4813        .H      LDR      r0,[pc,#76] ; [0x20008004] = 0x20007255
-        0x20007fb8:    f001f86e    ..n.    BL       xTaskCreate ; 0x20009098
-        0x20007fbc:    480d        .H      LDR      r0,[pc,#52] ; [0x20007ff4] = 0x2001001c
-        0x20007fbe:    2102        .!      MOVS     r1,#2
-        0x20007fc0:    2300        .#      MOVS     r3,#0
-        0x20007fc2:    2280        ."      MOVS     r2,#0x80
-        0x20007fc4:    e9cd1000    ....    STRD     r1,r0,[sp,#0]
-        0x20007fc8:    a10f        ..      ADR      r1,{pc}+0x40 ; 0x20008008
-        0x20007fca:    4812        .H      LDR      r0,[pc,#72] ; [0x20008014] = 0x200071e1
-        0x20007fcc:    f001f864    ..d.    BL       xTaskCreate ; 0x20009098
-        0x20007fd0:    4811        .H      LDR      r0,[pc,#68] ; [0x20008018] = 0x20010014
-        0x20007fd2:    6800        .h      LDR      r0,[r0,#0]
-        0x20007fd4:    f000faaa    ....    BL       vTaskDelete ; 0x2000852c
-        0x20007fd8:    f000f956    ..V.    BL       vPortExitCritical ; 0x20008288
-        0x20007fdc:    bd1c        ..      POP      {r2-r4,pc}
+        0x20008020:    b51c        ..      PUSH     {r2-r4,lr}
+        0x20008022:    4604        .F      MOV      r4,r0
+        0x20008024:    f000f964    ..d.    BL       vPortEnterCritical ; 0x200082f0
+        0x20008028:    4812        .H      LDR      r0,[pc,#72] ; [0x20008074] = 0x20010018
+        0x2000802a:    2102        .!      MOVS     r1,#2
+        0x2000802c:    2300        .#      MOVS     r3,#0
+        0x2000802e:    2214        ."      MOVS     r2,#0x14
+        0x20008030:    e9cd1000    ....    STRD     r1,r0,[sp,#0]
+        0x20008034:    a110        ..      ADR      r1,{pc}+0x44 ; 0x20008078
+        0x20008036:    4813        .H      LDR      r0,[pc,#76] ; [0x20008084] = 0x20007245
+        0x20008038:    f001f95c    ..\.    BL       xTaskCreate ; 0x200092f4
+        0x2000803c:    4812        .H      LDR      r0,[pc,#72] ; [0x20008088] = 0x2001001c
+        0x2000803e:    2102        .!      MOVS     r1,#2
+        0x20008040:    2300        .#      MOVS     r3,#0
+        0x20008042:    2280        ."      MOVS     r2,#0x80
+        0x20008044:    e9cd1000    ....    STRD     r1,r0,[sp,#0]
+        0x20008048:    a110        ..      ADR      r1,{pc}+0x44 ; 0x2000808c
+        0x2000804a:    4813        .H      LDR      r0,[pc,#76] ; [0x20008098] = 0x20007255
+        0x2000804c:    f001f952    ..R.    BL       xTaskCreate ; 0x200092f4
+        0x20008050:    480d        .H      LDR      r0,[pc,#52] ; [0x20008088] = 0x2001001c
+        0x20008052:    2102        .!      MOVS     r1,#2
+        0x20008054:    2300        .#      MOVS     r3,#0
+        0x20008056:    2280        ."      MOVS     r2,#0x80
+        0x20008058:    e9cd1000    ....    STRD     r1,r0,[sp,#0]
+        0x2000805c:    a10f        ..      ADR      r1,{pc}+0x40 ; 0x2000809c
+        0x2000805e:    4812        .H      LDR      r0,[pc,#72] ; [0x200080a8] = 0x200071e1
+        0x20008060:    f001f948    ..H.    BL       xTaskCreate ; 0x200092f4
+        0x20008064:    4811        .H      LDR      r0,[pc,#68] ; [0x200080ac] = 0x20010014
+        0x20008066:    6800        .h      LDR      r0,[r0,#0]
+        0x20008068:    f000fb16    ....    BL       vTaskDelete ; 0x20008698
+        0x2000806c:    f000f97c    ..|.    BL       vPortExitCritical ; 0x20008368
+        0x20008070:    bd1c        ..      POP      {r2-r4,pc}
     $d
-        0x20007fde:    0000        ..      DCW    0
-        0x20007fe0:    20010018    ...     DCD    536936472
-        0x20007fe4:    3064656c    led0    DCD    811885932
-        0x20007fe8:    7361745f    _tas    DCD    1935766623
-        0x20007fec:    0000006b    k...    DCD    107
-        0x20007ff0:    20007245    Er.     DCD    536900165
-        0x20007ff4:    2001001c    ...     DCD    536936476
-        0x20007ff8:    3164656c    led1    DCD    828663148
-        0x20007ffc:    7361745f    _tas    DCD    1935766623
-        0x20008000:    0000006b    k...    DCD    107
-        0x20008004:    20007255    Ur.     DCD    536900181
-        0x20008008:    616f6c66    floa    DCD    1634692198
-        0x2000800c:    61745f74    t_ta    DCD    1635016564
-        0x20008010:    00006b73    sk..    DCD    27507
-        0x20008014:    200071e1    .q.     DCD    536900065
-        0x20008018:    20010014    ...     DCD    536936468
+        0x20008072:    0000        ..      DCW    0
+        0x20008074:    20010018    ...     DCD    536936472
+        0x20008078:    3064656c    led0    DCD    811885932
+        0x2000807c:    7361745f    _tas    DCD    1935766623
+        0x20008080:    0000006b    k...    DCD    107
+        0x20008084:    20007245    Er.     DCD    536900165
+        0x20008088:    2001001c    ...     DCD    536936476
+        0x2000808c:    3164656c    led1    DCD    828663148
+        0x20008090:    7361745f    _tas    DCD    1935766623
+        0x20008094:    0000006b    k...    DCD    107
+        0x20008098:    20007255    Ur.     DCD    536900181
+        0x2000809c:    616f6c66    floa    DCD    1634692198
+        0x200080a0:    61745f74    t_ta    DCD    1635016564
+        0x200080a4:    00006b73    sk..    DCD    27507
+        0x200080a8:    200071e1    .q.     DCD    536900065
+        0x200080ac:    20010014    ...     DCD    536936468
     $t
     i.tick_init
     tick_init
-        0x2000801c:    b510        ..      PUSH     {r4,lr}
-        0x2000801e:    f04f30ff    O..0    MOV      r0,#0xffffffff
-        0x20008022:    210f        .!      MOVS     r1,#0xf
-        0x20008024:    2800        .(      CMP      r0,#0
-        0x20008026:    db04        ..      BLT      0x20008032 ; tick_init + 22
-        0x20008028:    070a        ..      LSLS     r2,r1,#28
-        0x2000802a:    0e13        ..      LSRS     r3,r2,#24
-        0x2000802c:    4a07        .J      LDR      r2,[pc,#28] ; [0x2000804c] = 0xe000e400
-        0x2000802e:    5413        .T      STRB     r3,[r2,r0]
-        0x20008030:    e006        ..      B        0x20008040 ; tick_init + 36
-        0x20008032:    070a        ..      LSLS     r2,r1,#28
-        0x20008034:    0e14        ..      LSRS     r4,r2,#24
-        0x20008036:    4a06        .J      LDR      r2,[pc,#24] ; [0x20008050] = 0xe000ed18
-        0x20008038:    f000030f    ....    AND      r3,r0,#0xf
-        0x2000803c:    1f1b        ..      SUBS     r3,r3,#4
-        0x2000803e:    54d4        .T      STRB     r4,[r2,r3]
-        0x20008040:    bf00        ..      NOP      
-        0x20008042:    f44f707a    O.zp    MOV      r0,#0x3e8
-        0x20008046:    f7fdfb55    ..U.    BL       SysTick_Init ; 0x200056f4
-        0x2000804a:    bd10        ..      POP      {r4,pc}
+        0x200080b0:    b510        ..      PUSH     {r4,lr}
+        0x200080b2:    f04f30ff    O..0    MOV      r0,#0xffffffff
+        0x200080b6:    210f        .!      MOVS     r1,#0xf
+        0x200080b8:    2800        .(      CMP      r0,#0
+        0x200080ba:    db04        ..      BLT      0x200080c6 ; tick_init + 22
+        0x200080bc:    070a        ..      LSLS     r2,r1,#28
+        0x200080be:    0e13        ..      LSRS     r3,r2,#24
+        0x200080c0:    4a07        .J      LDR      r2,[pc,#28] ; [0x200080e0] = 0xe000e400
+        0x200080c2:    5413        .T      STRB     r3,[r2,r0]
+        0x200080c4:    e006        ..      B        0x200080d4 ; tick_init + 36
+        0x200080c6:    070a        ..      LSLS     r2,r1,#28
+        0x200080c8:    0e14        ..      LSRS     r4,r2,#24
+        0x200080ca:    4a06        .J      LDR      r2,[pc,#24] ; [0x200080e4] = 0xe000ed18
+        0x200080cc:    f000030f    ....    AND      r3,r0,#0xf
+        0x200080d0:    1f1b        ..      SUBS     r3,r3,#4
+        0x200080d2:    54d4        .T      STRB     r4,[r2,r3]
+        0x200080d4:    bf00        ..      NOP      
+        0x200080d6:    f44f707a    O.zp    MOV      r0,#0x3e8
+        0x200080da:    f7fdfb0b    ....    BL       SysTick_Init ; 0x200056f4
+        0x200080de:    bd10        ..      POP      {r4,pc}
     $d
-        0x2000804c:    e000e400    ....    DCD    3758154752
-        0x20008050:    e000ed18    ....    DCD    3758157080
+        0x200080e0:    e000e400    ....    DCD    3758154752
+        0x200080e4:    e000ed18    ....    DCD    3758157080
     $t
     i.tuya_UsartRxIrqCallback
     tuya_UsartRxIrqCallback
-        0x20008054:    4770        pG      BX       lr
-        0x20008056:    0000        ..      MOVS     r0,r0
+        0x200080e8:    4770        pG      BX       lr
+        0x200080ea:    0000        ..      MOVS     r0,r0
     i.usart_init
     usart_init
-        0x20008058:    b530        0.      PUSH     {r4,r5,lr}
-        0x2000805a:    b087        ..      SUB      sp,sp,#0x1c
-        0x2000805c:    2400        .$      MOVS     r4,#0
-        0x2000805e:    f04f6570    O.pe    MOV      r5,#0xf000000
-        0x20008062:    4a4a        JJ      LDR      r2,[pc,#296] ; [0x2000818c] = 0x200095ec
-        0x20008064:    ca07        ..      LDM      r2,{r0-r2}
-        0x20008066:    e88d0007    ....    STM      sp,{r0-r2}
-        0x2000806a:    2101        .!      MOVS     r1,#1
-        0x2000806c:    4628        (F      MOV      r0,r5
-        0x2000806e:    f7fbff25    ..%.    BL       PWC_Fcg1PeriphClockCmd ; 0x20003ebc
-        0x20008072:    2300        .#      MOVS     r3,#0
-        0x20008074:    2221        !"      MOVS     r2,#0x21
-        0x20008076:    f44f5100    O..Q    MOV      r1,#0x2000
-        0x2000807a:    2002        .       MOVS     r0,#2
-        0x2000807c:    f7fbfe02    ....    BL       PORT_SetFunc ; 0x20003c84
-        0x20008080:    2300        .#      MOVS     r3,#0
-        0x20008082:    2220         "      MOVS     r2,#0x20
-        0x20008084:    2104        .!      MOVS     r1,#4
-        0x20008086:    2005        .       MOVS     r0,#5
-        0x20008088:    f7fbfdfc    ....    BL       PORT_SetFunc ; 0x20003c84
-        0x2000808c:    2300        .#      MOVS     r3,#0
-        0x2000808e:    2221        !"      MOVS     r2,#0x21
-        0x20008090:    2108        .!      MOVS     r1,#8
-        0x20008092:    4618        .F      MOV      r0,r3
-        0x20008094:    f7fbfdf6    ....    BL       PORT_SetFunc ; 0x20003c84
-        0x20008098:    2300        .#      MOVS     r3,#0
-        0x2000809a:    2220         "      MOVS     r2,#0x20
-        0x2000809c:    2104        .!      MOVS     r1,#4
-        0x2000809e:    4618        .F      MOV      r0,r3
-        0x200080a0:    f7fbfdf0    ....    BL       PORT_SetFunc ; 0x20003c84
-        0x200080a4:    4669        iF      MOV      r1,sp
-        0x200080a6:    483a        :H      LDR      r0,[pc,#232] ; [0x20008190] = 0x40021000
-        0x200080a8:    f7fdfd38    ..8.    BL       USART_UART_Init ; 0x20005b1c
-        0x200080ac:    4604        .F      MOV      r4,r0
-        0x200080ae:    b10c        ..      CBZ      r4,0x200080b4 ; usart_init + 92
-        0x200080b0:    bf00        ..      NOP      
-        0x200080b2:    e7fe        ..      B        0x200080b2 ; usart_init + 90
-        0x200080b4:    4669        iF      MOV      r1,sp
-        0x200080b6:    4837        7H      LDR      r0,[pc,#220] ; [0x20008194] = 0x4001d000
-        0x200080b8:    f7fdfd30    ..0.    BL       USART_UART_Init ; 0x20005b1c
-        0x200080bc:    4604        .F      MOV      r4,r0
-        0x200080be:    b10c        ..      CBZ      r4,0x200080c4 ; usart_init + 108
-        0x200080c0:    bf00        ..      NOP      
-        0x200080c2:    e7fe        ..      B        0x200080c2 ; usart_init + 106
-        0x200080c4:    f44f31e1    O..1    MOV      r1,#0x1c200
-        0x200080c8:    4831        1H      LDR      r0,[pc,#196] ; [0x20008190] = 0x40021000
-        0x200080ca:    f7fdfcf3    ....    BL       USART_SetBaudrate ; 0x20005ab4
-        0x200080ce:    4604        .F      MOV      r4,r0
-        0x200080d0:    b10c        ..      CBZ      r4,0x200080d6 ; usart_init + 126
-        0x200080d2:    bf00        ..      NOP      
-        0x200080d4:    e7fe        ..      B        0x200080d4 ; usart_init + 124
-        0x200080d6:    f44f31e1    O..1    MOV      r1,#0x1c200
-        0x200080da:    482e        .H      LDR      r0,[pc,#184] ; [0x20008194] = 0x4001d000
-        0x200080dc:    f7fdfcea    ....    BL       USART_SetBaudrate ; 0x20005ab4
-        0x200080e0:    4604        .F      MOV      r4,r0
-        0x200080e2:    b10c        ..      CBZ      r4,0x200080e8 ; usart_init + 144
-        0x200080e4:    bf00        ..      NOP      
-        0x200080e6:    e7fe        ..      B        0x200080e6 ; usart_init + 142
-        0x200080e8:    2003        .       MOVS     r0,#3
-        0x200080ea:    f8ad0016    ....    STRH     r0,[sp,#0x16]
-        0x200080ee:    482a        *H      LDR      r0,[pc,#168] ; [0x20008198] = 0x20008055
-        0x200080f0:    9006        ..      STR      r0,[sp,#0x18]
-        0x200080f2:    f2401017    @...    MOV      r0,#0x117
-        0x200080f6:    f8ad0014    ....    STRH     r0,[sp,#0x14]
-        0x200080fa:    a805        ..      ADD      r0,sp,#0x14
-        0x200080fc:    f7fff810    ....    BL       enIrqRegistration ; 0x20007120
-        0x20008100:    f9bd0016    ....    LDRSH    r0,[sp,#0x16]
-        0x20008104:    210f        .!      MOVS     r1,#0xf
-        0x20008106:    f7fefa7f    ....    BL       __NVIC_SetPriority ; 0x20006608
-        0x2000810a:    f9bd0016    ....    LDRSH    r0,[sp,#0x16]
-        0x2000810e:    f7fefa5b    ..[.    BL       __NVIC_ClearPendingIRQ ; 0x200065c8
-        0x20008112:    f9bd0016    ....    LDRSH    r0,[sp,#0x16]
-        0x20008116:    f7fefa65    ..e.    BL       __NVIC_EnableIRQ ; 0x200065e4
-        0x2000811a:    2004        .       MOVS     r0,#4
-        0x2000811c:    f8ad000e    ....    STRH     r0,[sp,#0xe]
-        0x20008120:    481e        .H      LDR      r0,[pc,#120] ; [0x2000819c] = 0x20005f79
-        0x20008122:    9004        ..      STR      r0,[sp,#0x10]
-        0x20008124:    f2401021    @.!.    MOV      r0,#0x121
-        0x20008128:    f8ad000c    ....    STRH     r0,[sp,#0xc]
-        0x2000812c:    a803        ..      ADD      r0,sp,#0xc
-        0x2000812e:    f7fefff7    ....    BL       enIrqRegistration ; 0x20007120
-        0x20008132:    f9bd000e    ....    LDRSH    r0,[sp,#0xe]
-        0x20008136:    210f        .!      MOVS     r1,#0xf
-        0x20008138:    f7fefa66    ..f.    BL       __NVIC_SetPriority ; 0x20006608
-        0x2000813c:    f9bd000e    ....    LDRSH    r0,[sp,#0xe]
-        0x20008140:    f7fefa42    ..B.    BL       __NVIC_ClearPendingIRQ ; 0x200065c8
-        0x20008144:    f9bd000e    ....    LDRSH    r0,[sp,#0xe]
-        0x20008148:    f7fefa4c    ..L.    BL       __NVIC_EnableIRQ ; 0x200065e4
-        0x2000814c:    2201        ."      MOVS     r2,#1
-        0x2000814e:    2100        .!      MOVS     r1,#0
-        0x20008150:    480f        .H      LDR      r0,[pc,#60] ; [0x20008190] = 0x40021000
-        0x20008152:    f7fdfb8d    ....    BL       USART_FuncCmd ; 0x20005870
-        0x20008156:    2201        ."      MOVS     r2,#1
-        0x20008158:    2102        .!      MOVS     r1,#2
-        0x2000815a:    480d        .H      LDR      r0,[pc,#52] ; [0x20008190] = 0x40021000
-        0x2000815c:    f7fdfb88    ....    BL       USART_FuncCmd ; 0x20005870
-        0x20008160:    2201        ."      MOVS     r2,#1
-        0x20008162:    2100        .!      MOVS     r1,#0
-        0x20008164:    480b        .H      LDR      r0,[pc,#44] ; [0x20008194] = 0x4001d000
-        0x20008166:    f7fdfb83    ....    BL       USART_FuncCmd ; 0x20005870
-        0x2000816a:    2201        ."      MOVS     r2,#1
-        0x2000816c:    2102        .!      MOVS     r1,#2
-        0x2000816e:    4809        .H      LDR      r0,[pc,#36] ; [0x20008194] = 0x4001d000
-        0x20008170:    f7fdfb7e    ..~.    BL       USART_FuncCmd ; 0x20005870
-        0x20008174:    2201        ."      MOVS     r2,#1
-        0x20008176:    4611        .F      MOV      r1,r2
-        0x20008178:    4805        .H      LDR      r0,[pc,#20] ; [0x20008190] = 0x40021000
-        0x2000817a:    f7fdfb79    ..y.    BL       USART_FuncCmd ; 0x20005870
-        0x2000817e:    2201        ."      MOVS     r2,#1
-        0x20008180:    4611        .F      MOV      r1,r2
-        0x20008182:    4804        .H      LDR      r0,[pc,#16] ; [0x20008194] = 0x4001d000
-        0x20008184:    f7fdfb74    ..t.    BL       USART_FuncCmd ; 0x20005870
-        0x20008188:    b007        ..      ADD      sp,sp,#0x1c
-        0x2000818a:    bd30        0.      POP      {r4,r5,pc}
+        0x200080ec:    b530        0.      PUSH     {r4,r5,lr}
+        0x200080ee:    b087        ..      SUB      sp,sp,#0x1c
+        0x200080f0:    2400        .$      MOVS     r4,#0
+        0x200080f2:    f04f6570    O.pe    MOV      r5,#0xf000000
+        0x200080f6:    4a4a        JJ      LDR      r2,[pc,#296] ; [0x20008220] = 0x200098dc
+        0x200080f8:    ca07        ..      LDM      r2,{r0-r2}
+        0x200080fa:    e88d0007    ....    STM      sp,{r0-r2}
+        0x200080fe:    2101        .!      MOVS     r1,#1
+        0x20008100:    4628        (F      MOV      r0,r5
+        0x20008102:    f7fbfedb    ....    BL       PWC_Fcg1PeriphClockCmd ; 0x20003ebc
+        0x20008106:    2300        .#      MOVS     r3,#0
+        0x20008108:    2221        !"      MOVS     r2,#0x21
+        0x2000810a:    f44f5100    O..Q    MOV      r1,#0x2000
+        0x2000810e:    2002        .       MOVS     r0,#2
+        0x20008110:    f7fbfdb8    ....    BL       PORT_SetFunc ; 0x20003c84
+        0x20008114:    2300        .#      MOVS     r3,#0
+        0x20008116:    2220         "      MOVS     r2,#0x20
+        0x20008118:    2104        .!      MOVS     r1,#4
+        0x2000811a:    2005        .       MOVS     r0,#5
+        0x2000811c:    f7fbfdb2    ....    BL       PORT_SetFunc ; 0x20003c84
+        0x20008120:    2300        .#      MOVS     r3,#0
+        0x20008122:    2221        !"      MOVS     r2,#0x21
+        0x20008124:    2108        .!      MOVS     r1,#8
+        0x20008126:    4618        .F      MOV      r0,r3
+        0x20008128:    f7fbfdac    ....    BL       PORT_SetFunc ; 0x20003c84
+        0x2000812c:    2300        .#      MOVS     r3,#0
+        0x2000812e:    2220         "      MOVS     r2,#0x20
+        0x20008130:    2104        .!      MOVS     r1,#4
+        0x20008132:    4618        .F      MOV      r0,r3
+        0x20008134:    f7fbfda6    ....    BL       PORT_SetFunc ; 0x20003c84
+        0x20008138:    4669        iF      MOV      r1,sp
+        0x2000813a:    483a        :H      LDR      r0,[pc,#232] ; [0x20008224] = 0x40021000
+        0x2000813c:    f7fdfcee    ....    BL       USART_UART_Init ; 0x20005b1c
+        0x20008140:    4604        .F      MOV      r4,r0
+        0x20008142:    b10c        ..      CBZ      r4,0x20008148 ; usart_init + 92
+        0x20008144:    bf00        ..      NOP      
+        0x20008146:    e7fe        ..      B        0x20008146 ; usart_init + 90
+        0x20008148:    4669        iF      MOV      r1,sp
+        0x2000814a:    4837        7H      LDR      r0,[pc,#220] ; [0x20008228] = 0x4001d000
+        0x2000814c:    f7fdfce6    ....    BL       USART_UART_Init ; 0x20005b1c
+        0x20008150:    4604        .F      MOV      r4,r0
+        0x20008152:    b10c        ..      CBZ      r4,0x20008158 ; usart_init + 108
+        0x20008154:    bf00        ..      NOP      
+        0x20008156:    e7fe        ..      B        0x20008156 ; usart_init + 106
+        0x20008158:    f44f31e1    O..1    MOV      r1,#0x1c200
+        0x2000815c:    4831        1H      LDR      r0,[pc,#196] ; [0x20008224] = 0x40021000
+        0x2000815e:    f7fdfca9    ....    BL       USART_SetBaudrate ; 0x20005ab4
+        0x20008162:    4604        .F      MOV      r4,r0
+        0x20008164:    b10c        ..      CBZ      r4,0x2000816a ; usart_init + 126
+        0x20008166:    bf00        ..      NOP      
+        0x20008168:    e7fe        ..      B        0x20008168 ; usart_init + 124
+        0x2000816a:    f44f31e1    O..1    MOV      r1,#0x1c200
+        0x2000816e:    482e        .H      LDR      r0,[pc,#184] ; [0x20008228] = 0x4001d000
+        0x20008170:    f7fdfca0    ....    BL       USART_SetBaudrate ; 0x20005ab4
+        0x20008174:    4604        .F      MOV      r4,r0
+        0x20008176:    b10c        ..      CBZ      r4,0x2000817c ; usart_init + 144
+        0x20008178:    bf00        ..      NOP      
+        0x2000817a:    e7fe        ..      B        0x2000817a ; usart_init + 142
+        0x2000817c:    2003        .       MOVS     r0,#3
+        0x2000817e:    f8ad0016    ....    STRH     r0,[sp,#0x16]
+        0x20008182:    482a        *H      LDR      r0,[pc,#168] ; [0x2000822c] = 0x200080e9
+        0x20008184:    9006        ..      STR      r0,[sp,#0x18]
+        0x20008186:    f2401017    @...    MOV      r0,#0x117
+        0x2000818a:    f8ad0014    ....    STRH     r0,[sp,#0x14]
+        0x2000818e:    a805        ..      ADD      r0,sp,#0x14
+        0x20008190:    f7feffc6    ....    BL       enIrqRegistration ; 0x20007120
+        0x20008194:    f9bd0016    ....    LDRSH    r0,[sp,#0x16]
+        0x20008198:    210f        .!      MOVS     r1,#0xf
+        0x2000819a:    f7fefa35    ..5.    BL       __NVIC_SetPriority ; 0x20006608
+        0x2000819e:    f9bd0016    ....    LDRSH    r0,[sp,#0x16]
+        0x200081a2:    f7fefa11    ....    BL       __NVIC_ClearPendingIRQ ; 0x200065c8
+        0x200081a6:    f9bd0016    ....    LDRSH    r0,[sp,#0x16]
+        0x200081aa:    f7fefa1b    ....    BL       __NVIC_EnableIRQ ; 0x200065e4
+        0x200081ae:    2004        .       MOVS     r0,#4
+        0x200081b0:    f8ad000e    ....    STRH     r0,[sp,#0xe]
+        0x200081b4:    481e        .H      LDR      r0,[pc,#120] ; [0x20008230] = 0x20005f79
+        0x200081b6:    9004        ..      STR      r0,[sp,#0x10]
+        0x200081b8:    f2401021    @.!.    MOV      r0,#0x121
+        0x200081bc:    f8ad000c    ....    STRH     r0,[sp,#0xc]
+        0x200081c0:    a803        ..      ADD      r0,sp,#0xc
+        0x200081c2:    f7feffad    ....    BL       enIrqRegistration ; 0x20007120
+        0x200081c6:    f9bd000e    ....    LDRSH    r0,[sp,#0xe]
+        0x200081ca:    210f        .!      MOVS     r1,#0xf
+        0x200081cc:    f7fefa1c    ....    BL       __NVIC_SetPriority ; 0x20006608
+        0x200081d0:    f9bd000e    ....    LDRSH    r0,[sp,#0xe]
+        0x200081d4:    f7fef9f8    ....    BL       __NVIC_ClearPendingIRQ ; 0x200065c8
+        0x200081d8:    f9bd000e    ....    LDRSH    r0,[sp,#0xe]
+        0x200081dc:    f7fefa02    ....    BL       __NVIC_EnableIRQ ; 0x200065e4
+        0x200081e0:    2201        ."      MOVS     r2,#1
+        0x200081e2:    2100        .!      MOVS     r1,#0
+        0x200081e4:    480f        .H      LDR      r0,[pc,#60] ; [0x20008224] = 0x40021000
+        0x200081e6:    f7fdfb43    ..C.    BL       USART_FuncCmd ; 0x20005870
+        0x200081ea:    2201        ."      MOVS     r2,#1
+        0x200081ec:    2102        .!      MOVS     r1,#2
+        0x200081ee:    480d        .H      LDR      r0,[pc,#52] ; [0x20008224] = 0x40021000
+        0x200081f0:    f7fdfb3e    ..>.    BL       USART_FuncCmd ; 0x20005870
+        0x200081f4:    2201        ."      MOVS     r2,#1
+        0x200081f6:    2100        .!      MOVS     r1,#0
+        0x200081f8:    480b        .H      LDR      r0,[pc,#44] ; [0x20008228] = 0x4001d000
+        0x200081fa:    f7fdfb39    ..9.    BL       USART_FuncCmd ; 0x20005870
+        0x200081fe:    2201        ."      MOVS     r2,#1
+        0x20008200:    2102        .!      MOVS     r1,#2
+        0x20008202:    4809        .H      LDR      r0,[pc,#36] ; [0x20008228] = 0x4001d000
+        0x20008204:    f7fdfb34    ..4.    BL       USART_FuncCmd ; 0x20005870
+        0x20008208:    2201        ."      MOVS     r2,#1
+        0x2000820a:    4611        .F      MOV      r1,r2
+        0x2000820c:    4805        .H      LDR      r0,[pc,#20] ; [0x20008224] = 0x40021000
+        0x2000820e:    f7fdfb2f    ../.    BL       USART_FuncCmd ; 0x20005870
+        0x20008212:    2201        ."      MOVS     r2,#1
+        0x20008214:    4611        .F      MOV      r1,r2
+        0x20008216:    4804        .H      LDR      r0,[pc,#16] ; [0x20008228] = 0x4001d000
+        0x20008218:    f7fdfb2a    ..*.    BL       USART_FuncCmd ; 0x20005870
+        0x2000821c:    b007        ..      ADD      sp,sp,#0x1c
+        0x2000821e:    bd30        0.      POP      {r4,r5,pc}
     $d
-        0x2000818c:    200095ec    ...     DCD    536909292
-        0x20008190:    40021000    ...@    DCD    1073876992
-        0x20008194:    4001d000    ...@    DCD    1073860608
-        0x20008198:    20008055    U..     DCD    536903765
-        0x2000819c:    20005f79    y_.     DCD    536895353
+        0x20008220:    200098dc    ...     DCD    536910044
+        0x20008224:    40021000    ...@    DCD    1073876992
+        0x20008228:    4001d000    ...@    DCD    1073860608
+        0x2000822c:    200080e9    ...     DCD    536903913
+        0x20008230:    20005f79    y_.     DCD    536895353
     $t
     i.uxListRemove
     uxListRemove
-        0x200081a0:    4601        .F      MOV      r1,r0
-        0x200081a2:    690a        .i      LDR      r2,[r1,#0x10]
-        0x200081a4:    e9d13001    ...0    LDRD     r3,r0,[r1,#4]
-        0x200081a8:    6098        .`      STR      r0,[r3,#8]
-        0x200081aa:    e9d10301    ....    LDRD     r0,r3,[r1,#4]
-        0x200081ae:    6058        X`      STR      r0,[r3,#4]
-        0x200081b0:    6850        Ph      LDR      r0,[r2,#4]
-        0x200081b2:    4288        .B      CMP      r0,r1
-        0x200081b4:    d101        ..      BNE      0x200081ba ; uxListRemove + 26
-        0x200081b6:    6888        .h      LDR      r0,[r1,#8]
-        0x200081b8:    6050        P`      STR      r0,[r2,#4]
-        0x200081ba:    2000        .       MOVS     r0,#0
-        0x200081bc:    6108        .a      STR      r0,[r1,#0x10]
-        0x200081be:    6810        .h      LDR      r0,[r2,#0]
-        0x200081c0:    1e40        @.      SUBS     r0,r0,#1
-        0x200081c2:    6010        .`      STR      r0,[r2,#0]
-        0x200081c4:    6810        .h      LDR      r0,[r2,#0]
-        0x200081c6:    4770        pG      BX       lr
+        0x20008234:    4601        .F      MOV      r1,r0
+        0x20008236:    690a        .i      LDR      r2,[r1,#0x10]
+        0x20008238:    e9d13001    ...0    LDRD     r3,r0,[r1,#4]
+        0x2000823c:    6098        .`      STR      r0,[r3,#8]
+        0x2000823e:    e9d10301    ....    LDRD     r0,r3,[r1,#4]
+        0x20008242:    6058        X`      STR      r0,[r3,#4]
+        0x20008244:    6850        Ph      LDR      r0,[r2,#4]
+        0x20008246:    4288        .B      CMP      r0,r1
+        0x20008248:    d101        ..      BNE      0x2000824e ; uxListRemove + 26
+        0x2000824a:    6888        .h      LDR      r0,[r1,#8]
+        0x2000824c:    6050        P`      STR      r0,[r2,#4]
+        0x2000824e:    2000        .       MOVS     r0,#0
+        0x20008250:    6108        .a      STR      r0,[r1,#0x10]
+        0x20008252:    6810        .h      LDR      r0,[r2,#0]
+        0x20008254:    1e40        @.      SUBS     r0,r0,#1
+        0x20008256:    6010        .`      STR      r0,[r2,#0]
+        0x20008258:    6810        .h      LDR      r0,[r2,#0]
+        0x2000825a:    4770        pG      BX       lr
+    i.vApplicationStackOverflowHook
+    vApplicationStackOverflowHook
+        0x2000825c:    b570        p.      PUSH     {r4-r6,lr}
+        0x2000825e:    4605        .F      MOV      r5,r0
+        0x20008260:    460c        .F      MOV      r4,r1
+        0x20008262:    4621        !F      MOV      r1,r4
+        0x20008264:    a001        ..      ADR      r0,{pc}+8 ; 0x2000826c
+        0x20008266:    f7fef99f    ....    BL       __0printf ; 0x200065a8
+        0x2000826a:    bd70        p.      POP      {r4-r6,pc}
+    $d
+        0x2000826c:    203a7325    %s:     DCD    540701477
+        0x20008270:    63617473    stac    DCD    1667331187
+        0x20008274:    766f206b    k ov    DCD    1986994283
+        0x20008278:    6c667265    erfl    DCD    1818653285
+        0x2000827c:    0a0d776f    ow..    DCD    168654703
+        0x20008280:    00000000    ....    DCD    0
+    $t
     i.vListInitialise
     vListInitialise
-        0x200081c8:    f1000108    ....    ADD      r1,r0,#8
-        0x200081cc:    6041        A`      STR      r1,[r0,#4]
-        0x200081ce:    f04f31ff    O..1    MOV      r1,#0xffffffff
-        0x200081d2:    6081        .`      STR      r1,[r0,#8]
-        0x200081d4:    f1000108    ....    ADD      r1,r0,#8
-        0x200081d8:    60c1        .`      STR      r1,[r0,#0xc]
-        0x200081da:    6101        .a      STR      r1,[r0,#0x10]
-        0x200081dc:    2100        .!      MOVS     r1,#0
-        0x200081de:    6001        .`      STR      r1,[r0,#0]
-        0x200081e0:    4770        pG      BX       lr
+        0x20008284:    f1000108    ....    ADD      r1,r0,#8
+        0x20008288:    6041        A`      STR      r1,[r0,#4]
+        0x2000828a:    f04f31ff    O..1    MOV      r1,#0xffffffff
+        0x2000828e:    6081        .`      STR      r1,[r0,#8]
+        0x20008290:    f1000108    ....    ADD      r1,r0,#8
+        0x20008294:    60c1        .`      STR      r1,[r0,#0xc]
+        0x20008296:    6101        .a      STR      r1,[r0,#0x10]
+        0x20008298:    2100        .!      MOVS     r1,#0
+        0x2000829a:    6001        .`      STR      r1,[r0,#0]
+        0x2000829c:    4770        pG      BX       lr
     i.vListInitialiseItem
     vListInitialiseItem
-        0x200081e2:    2100        .!      MOVS     r1,#0
-        0x200081e4:    6101        .a      STR      r1,[r0,#0x10]
-        0x200081e6:    4770        pG      BX       lr
+        0x2000829e:    2100        .!      MOVS     r1,#0
+        0x200082a0:    6101        .a      STR      r1,[r0,#0x10]
+        0x200082a2:    4770        pG      BX       lr
     i.vListInsert
     vListInsert
-        0x200081e8:    b510        ..      PUSH     {r4,lr}
-        0x200081ea:    4602        .F      MOV      r2,r0
-        0x200081ec:    680b        .h      LDR      r3,[r1,#0]
-        0x200081ee:    1c5c        \.      ADDS     r4,r3,#1
-        0x200081f0:    b90c        ..      CBNZ     r4,0x200081f6 ; vListInsert + 14
-        0x200081f2:    6910        .i      LDR      r0,[r2,#0x10]
-        0x200081f4:    e007        ..      B        0x20008206 ; vListInsert + 30
-        0x200081f6:    f1020008    ....    ADD      r0,r2,#8
-        0x200081fa:    e000        ..      B        0x200081fe ; vListInsert + 22
-        0x200081fc:    6840        @h      LDR      r0,[r0,#4]
-        0x200081fe:    6844        Dh      LDR      r4,[r0,#4]
-        0x20008200:    6824        $h      LDR      r4,[r4,#0]
-        0x20008202:    429c        .B      CMP      r4,r3
-        0x20008204:    d9fa        ..      BLS      0x200081fc ; vListInsert + 20
-        0x20008206:    6844        Dh      LDR      r4,[r0,#4]
-        0x20008208:    604c        L`      STR      r4,[r1,#4]
-        0x2000820a:    684c        Lh      LDR      r4,[r1,#4]
-        0x2000820c:    60a1        .`      STR      r1,[r4,#8]
-        0x2000820e:    6088        .`      STR      r0,[r1,#8]
-        0x20008210:    6041        A`      STR      r1,[r0,#4]
-        0x20008212:    610a        .a      STR      r2,[r1,#0x10]
-        0x20008214:    6814        .h      LDR      r4,[r2,#0]
-        0x20008216:    1c64        d.      ADDS     r4,r4,#1
-        0x20008218:    6014        .`      STR      r4,[r2,#0]
-        0x2000821a:    bd10        ..      POP      {r4,pc}
+        0x200082a4:    b510        ..      PUSH     {r4,lr}
+        0x200082a6:    4602        .F      MOV      r2,r0
+        0x200082a8:    680b        .h      LDR      r3,[r1,#0]
+        0x200082aa:    1c5c        \.      ADDS     r4,r3,#1
+        0x200082ac:    b90c        ..      CBNZ     r4,0x200082b2 ; vListInsert + 14
+        0x200082ae:    6910        .i      LDR      r0,[r2,#0x10]
+        0x200082b0:    e007        ..      B        0x200082c2 ; vListInsert + 30
+        0x200082b2:    f1020008    ....    ADD      r0,r2,#8
+        0x200082b6:    e000        ..      B        0x200082ba ; vListInsert + 22
+        0x200082b8:    6840        @h      LDR      r0,[r0,#4]
+        0x200082ba:    6844        Dh      LDR      r4,[r0,#4]
+        0x200082bc:    6824        $h      LDR      r4,[r4,#0]
+        0x200082be:    429c        .B      CMP      r4,r3
+        0x200082c0:    d9fa        ..      BLS      0x200082b8 ; vListInsert + 20
+        0x200082c2:    6844        Dh      LDR      r4,[r0,#4]
+        0x200082c4:    604c        L`      STR      r4,[r1,#4]
+        0x200082c6:    684c        Lh      LDR      r4,[r1,#4]
+        0x200082c8:    60a1        .`      STR      r1,[r4,#8]
+        0x200082ca:    6088        .`      STR      r0,[r1,#8]
+        0x200082cc:    6041        A`      STR      r1,[r0,#4]
+        0x200082ce:    610a        .a      STR      r2,[r1,#0x10]
+        0x200082d0:    6814        .h      LDR      r4,[r2,#0]
+        0x200082d2:    1c64        d.      ADDS     r4,r4,#1
+        0x200082d4:    6014        .`      STR      r4,[r2,#0]
+        0x200082d6:    bd10        ..      POP      {r4,pc}
     i.vListInsertEnd
     vListInsertEnd
-        0x2000821c:    6842        Bh      LDR      r2,[r0,#4]
-        0x2000821e:    604a        J`      STR      r2,[r1,#4]
-        0x20008220:    6893        .h      LDR      r3,[r2,#8]
-        0x20008222:    608b        .`      STR      r3,[r1,#8]
-        0x20008224:    6893        .h      LDR      r3,[r2,#8]
-        0x20008226:    6059        Y`      STR      r1,[r3,#4]
-        0x20008228:    6091        .`      STR      r1,[r2,#8]
-        0x2000822a:    6108        .a      STR      r0,[r1,#0x10]
-        0x2000822c:    6803        .h      LDR      r3,[r0,#0]
-        0x2000822e:    1c5b        [.      ADDS     r3,r3,#1
-        0x20008230:    6003        .`      STR      r3,[r0,#0]
-        0x20008232:    4770        pG      BX       lr
+        0x200082d8:    6842        Bh      LDR      r2,[r0,#4]
+        0x200082da:    604a        J`      STR      r2,[r1,#4]
+        0x200082dc:    6893        .h      LDR      r3,[r2,#8]
+        0x200082de:    608b        .`      STR      r3,[r1,#8]
+        0x200082e0:    6893        .h      LDR      r3,[r2,#8]
+        0x200082e2:    6059        Y`      STR      r1,[r3,#4]
+        0x200082e4:    6091        .`      STR      r1,[r2,#8]
+        0x200082e6:    6108        .a      STR      r0,[r1,#0x10]
+        0x200082e8:    6803        .h      LDR      r3,[r0,#0]
+        0x200082ea:    1c5b        [.      ADDS     r3,r3,#1
+        0x200082ec:    6003        .`      STR      r3,[r0,#0]
+        0x200082ee:    4770        pG      BX       lr
     i.vPortEnterCritical
     vPortEnterCritical
-        0x20008234:    bf00        ..      NOP      
-        0x20008236:    2050        P       MOVS     r0,#0x50
-        0x20008238:    f3808811    ....    MSR      BASEPRI,r0
-        0x2000823c:    f3bf8f4f    ..O.    DSB      
-        0x20008240:    f3bf8f6f    ..o.    ISB      
-        0x20008244:    bf00        ..      NOP      
-        0x20008246:    480e        .H      LDR      r0,[pc,#56] ; [0x20008280] = 0x200100a4
-        0x20008248:    6800        .h      LDR      r0,[r0,#0]
-        0x2000824a:    1c40        @.      ADDS     r0,r0,#1
-        0x2000824c:    490c        .I      LDR      r1,[pc,#48] ; [0x20008280] = 0x200100a4
-        0x2000824e:    6008        .`      STR      r0,[r1,#0]
-        0x20008250:    4608        .F      MOV      r0,r1
-        0x20008252:    6800        .h      LDR      r0,[r0,#0]
-        0x20008254:    2801        .(      CMP      r0,#1
-        0x20008256:    d112        ..      BNE      0x2000827e ; vPortEnterCritical + 74
-        0x20008258:    480a        .H      LDR      r0,[pc,#40] ; [0x20008284] = 0xe000ed04
-        0x2000825a:    6800        .h      LDR      r0,[r0,#0]
-        0x2000825c:    b2c0        ..      UXTB     r0,r0
-        0x2000825e:    b908        ..      CBNZ     r0,0x20008264 ; vPortEnterCritical + 48
-        0x20008260:    2001        .       MOVS     r0,#1
-        0x20008262:    e000        ..      B        0x20008266 ; vPortEnterCritical + 50
-        0x20008264:    2000        .       MOVS     r0,#0
-        0x20008266:    b950        P.      CBNZ     r0,0x2000827e ; vPortEnterCritical + 74
-        0x20008268:    bf00        ..      NOP      
-        0x2000826a:    2050        P       MOVS     r0,#0x50
-        0x2000826c:    f3808811    ....    MSR      BASEPRI,r0
-        0x20008270:    f3bf8f4f    ..O.    DSB      
-        0x20008274:    f3bf8f6f    ..o.    ISB      
-        0x20008278:    bf00        ..      NOP      
-        0x2000827a:    bf00        ..      NOP      
-        0x2000827c:    e7fe        ..      B        0x2000827c ; vPortEnterCritical + 72
-        0x2000827e:    4770        pG      BX       lr
+        0x200082f0:    b510        ..      PUSH     {r4,lr}
+        0x200082f2:    bf00        ..      NOP      
+        0x200082f4:    2050        P       MOVS     r0,#0x50
+        0x200082f6:    f3808811    ....    MSR      BASEPRI,r0
+        0x200082fa:    f3bf8f4f    ..O.    DSB      
+        0x200082fe:    f3bf8f6f    ..o.    ISB      
+        0x20008302:    bf00        ..      NOP      
+        0x20008304:    480b        .H      LDR      r0,[pc,#44] ; [0x20008334] = 0x200100a4
+        0x20008306:    6800        .h      LDR      r0,[r0,#0]
+        0x20008308:    1c40        @.      ADDS     r0,r0,#1
+        0x2000830a:    490a        .I      LDR      r1,[pc,#40] ; [0x20008334] = 0x200100a4
+        0x2000830c:    6008        .`      STR      r0,[r1,#0]
+        0x2000830e:    4608        .F      MOV      r0,r1
+        0x20008310:    6800        .h      LDR      r0,[r0,#0]
+        0x20008312:    2801        .(      CMP      r0,#1
+        0x20008314:    d10d        ..      BNE      0x20008332 ; vPortEnterCritical + 66
+        0x20008316:    4808        .H      LDR      r0,[pc,#32] ; [0x20008338] = 0xe000ed04
+        0x20008318:    6800        .h      LDR      r0,[r0,#0]
+        0x2000831a:    b2c0        ..      UXTB     r0,r0
+        0x2000831c:    b908        ..      CBNZ     r0,0x20008322 ; vPortEnterCritical + 50
+        0x2000831e:    2001        .       MOVS     r0,#1
+        0x20008320:    e000        ..      B        0x20008324 ; vPortEnterCritical + 52
+        0x20008322:    2000        .       MOVS     r0,#0
+        0x20008324:    b928        (.      CBNZ     r0,0x20008332 ; vPortEnterCritical + 66
+        0x20008326:    f44f72da    O..r    MOV      r2,#0x1b4
+        0x2000832a:    a104        ..      ADR      r1,{pc}+0x12 ; 0x2000833c
+        0x2000832c:    a00a        ..      ADR      r0,{pc}+0x2c ; 0x20008358
+        0x2000832e:    f7fef93b    ..;.    BL       __0printf ; 0x200065a8
+        0x20008332:    bd10        ..      POP      {r4,pc}
     $d
-        0x20008280:    200100a4    ...     DCD    536936612
-        0x20008284:    e000ed04    ....    DCD    3758157060
+        0x20008334:    200100a4    ...     DCD    536936612
+        0x20008338:    e000ed04    ....    DCD    3758157060
+        0x2000833c:    465c2e2e    ..\F    DCD    1180446254
+        0x20008340:    52656572    reeR    DCD    1382376818
+        0x20008344:    5c534f54    TOS\    DCD    1548963668
+        0x20008348:    5f4d5241    ARM_    DCD    1598902849
+        0x2000834c:    46344d43    CM4F    DCD    1177832771
+        0x20008350:    726f705c    \por    DCD    1919905884
+        0x20008354:    00632e74    t.c.    DCD    6499956
+        0x20008358:    6f727245    Erro    DCD    1869771333
+        0x2000835c:    25203a72    r: %    DCD    622869106
+        0x20008360:    25202c73    s, %    DCD    622865523
+        0x20008364:    000a0d64    d...    DCD    658788
     $t
     i.vPortExitCritical
     vPortExitCritical
-        0x20008288:    480d        .H      LDR      r0,[pc,#52] ; [0x200082c0] = 0x200100a4
-        0x2000828a:    6800        .h      LDR      r0,[r0,#0]
-        0x2000828c:    b950        P.      CBNZ     r0,0x200082a4 ; vPortExitCritical + 28
-        0x2000828e:    bf00        ..      NOP      
-        0x20008290:    2050        P       MOVS     r0,#0x50
-        0x20008292:    f3808811    ....    MSR      BASEPRI,r0
-        0x20008296:    f3bf8f4f    ..O.    DSB      
-        0x2000829a:    f3bf8f6f    ..o.    ISB      
-        0x2000829e:    bf00        ..      NOP      
-        0x200082a0:    bf00        ..      NOP      
-        0x200082a2:    e7fe        ..      B        0x200082a2 ; vPortExitCritical + 26
-        0x200082a4:    4806        .H      LDR      r0,[pc,#24] ; [0x200082c0] = 0x200100a4
-        0x200082a6:    6800        .h      LDR      r0,[r0,#0]
-        0x200082a8:    1e40        @.      SUBS     r0,r0,#1
-        0x200082aa:    4905        .I      LDR      r1,[pc,#20] ; [0x200082c0] = 0x200100a4
-        0x200082ac:    6008        .`      STR      r0,[r1,#0]
-        0x200082ae:    4608        .F      MOV      r0,r1
-        0x200082b0:    6800        .h      LDR      r0,[r0,#0]
-        0x200082b2:    b920         .      CBNZ     r0,0x200082be ; vPortExitCritical + 54
-        0x200082b4:    2000        .       MOVS     r0,#0
-        0x200082b6:    f3808811    ....    MSR      BASEPRI,r0
-        0x200082ba:    bf00        ..      NOP      
-        0x200082bc:    bf00        ..      NOP      
-        0x200082be:    4770        pG      BX       lr
+        0x20008368:    b510        ..      PUSH     {r4,lr}
+        0x2000836a:    480b        .H      LDR      r0,[pc,#44] ; [0x20008398] = 0x200100a4
+        0x2000836c:    6800        .h      LDR      r0,[r0,#0]
+        0x2000836e:    b928        (.      CBNZ     r0,0x2000837c ; vPortExitCritical + 20
+        0x20008370:    f24012bb    @...    MOV      r2,#0x1bb
+        0x20008374:    a109        ..      ADR      r1,{pc}+0x28 ; 0x2000839c
+        0x20008376:    a010        ..      ADR      r0,{pc}+0x42 ; 0x200083b8
+        0x20008378:    f7fef916    ....    BL       __0printf ; 0x200065a8
+        0x2000837c:    4806        .H      LDR      r0,[pc,#24] ; [0x20008398] = 0x200100a4
+        0x2000837e:    6800        .h      LDR      r0,[r0,#0]
+        0x20008380:    1e40        @.      SUBS     r0,r0,#1
+        0x20008382:    4905        .I      LDR      r1,[pc,#20] ; [0x20008398] = 0x200100a4
+        0x20008384:    6008        .`      STR      r0,[r1,#0]
+        0x20008386:    4608        .F      MOV      r0,r1
+        0x20008388:    6800        .h      LDR      r0,[r0,#0]
+        0x2000838a:    b920         .      CBNZ     r0,0x20008396 ; vPortExitCritical + 46
+        0x2000838c:    2000        .       MOVS     r0,#0
+        0x2000838e:    f3808811    ....    MSR      BASEPRI,r0
+        0x20008392:    bf00        ..      NOP      
+        0x20008394:    bf00        ..      NOP      
+        0x20008396:    bd10        ..      POP      {r4,pc}
     $d
-        0x200082c0:    200100a4    ...     DCD    536936612
+        0x20008398:    200100a4    ...     DCD    536936612
+        0x2000839c:    465c2e2e    ..\F    DCD    1180446254
+        0x200083a0:    52656572    reeR    DCD    1382376818
+        0x200083a4:    5c534f54    TOS\    DCD    1548963668
+        0x200083a8:    5f4d5241    ARM_    DCD    1598902849
+        0x200083ac:    46344d43    CM4F    DCD    1177832771
+        0x200083b0:    726f705c    \por    DCD    1919905884
+        0x200083b4:    00632e74    t.c.    DCD    6499956
+        0x200083b8:    6f727245    Erro    DCD    1869771333
+        0x200083bc:    25203a72    r: %    DCD    622869106
+        0x200083c0:    25202c73    s, %    DCD    622865523
+        0x200083c4:    000a0d64    d...    DCD    658788
     $t
     i.vPortFree
     vPortFree
-        0x200082c4:    b570        p.      PUSH     {r4-r6,lr}
-        0x200082c6:    4606        .F      MOV      r6,r0
-        0x200082c8:    4635        5F      MOV      r5,r6
-        0x200082ca:    2e00        ..      CMP      r6,#0
-        0x200082cc:    d044        D.      BEQ      0x20008358 ; vPortFree + 148
-        0x200082ce:    3d08        .=      SUBS     r5,r5,#8
-        0x200082d0:    462c        ,F      MOV      r4,r5
-        0x200082d2:    4922        "I      LDR      r1,[pc,#136] ; [0x2000835c] = 0x200100a0
-        0x200082d4:    6860        `h      LDR      r0,[r4,#4]
-        0x200082d6:    6809        .h      LDR      r1,[r1,#0]
-        0x200082d8:    4008        .@      ANDS     r0,r0,r1
-        0x200082da:    b108        ..      CBZ      r0,0x200082e0 ; vPortFree + 28
-        0x200082dc:    2001        .       MOVS     r0,#1
-        0x200082de:    e000        ..      B        0x200082e2 ; vPortFree + 30
-        0x200082e0:    2000        .       MOVS     r0,#0
-        0x200082e2:    b950        P.      CBNZ     r0,0x200082fa ; vPortFree + 54
-        0x200082e4:    bf00        ..      NOP      
-        0x200082e6:    2050        P       MOVS     r0,#0x50
-        0x200082e8:    f3808811    ....    MSR      BASEPRI,r0
-        0x200082ec:    f3bf8f4f    ..O.    DSB      
-        0x200082f0:    f3bf8f6f    ..o.    ISB      
-        0x200082f4:    bf00        ..      NOP      
-        0x200082f6:    bf00        ..      NOP      
-        0x200082f8:    e7fe        ..      B        0x200082f8 ; vPortFree + 52
-        0x200082fa:    6820         h      LDR      r0,[r4,#0]
-        0x200082fc:    b908        ..      CBNZ     r0,0x20008302 ; vPortFree + 62
-        0x200082fe:    2001        .       MOVS     r0,#1
-        0x20008300:    e000        ..      B        0x20008304 ; vPortFree + 64
-        0x20008302:    2000        .       MOVS     r0,#0
-        0x20008304:    b950        P.      CBNZ     r0,0x2000831c ; vPortFree + 88
-        0x20008306:    bf00        ..      NOP      
-        0x20008308:    2050        P       MOVS     r0,#0x50
-        0x2000830a:    f3808811    ....    MSR      BASEPRI,r0
-        0x2000830e:    f3bf8f4f    ..O.    DSB      
-        0x20008312:    f3bf8f6f    ..o.    ISB      
-        0x20008316:    bf00        ..      NOP      
-        0x20008318:    bf00        ..      NOP      
-        0x2000831a:    e7fe        ..      B        0x2000831a ; vPortFree + 86
-        0x2000831c:    490f        .I      LDR      r1,[pc,#60] ; [0x2000835c] = 0x200100a0
-        0x2000831e:    6860        `h      LDR      r0,[r4,#4]
-        0x20008320:    6809        .h      LDR      r1,[r1,#0]
-        0x20008322:    4008        .@      ANDS     r0,r0,r1
-        0x20008324:    b1c0        ..      CBZ      r0,0x20008358 ; vPortFree + 148
-        0x20008326:    6820         h      LDR      r0,[r4,#0]
-        0x20008328:    b9b0        ..      CBNZ     r0,0x20008358 ; vPortFree + 148
-        0x2000832a:    490c        .I      LDR      r1,[pc,#48] ; [0x2000835c] = 0x200100a0
-        0x2000832c:    6860        `h      LDR      r0,[r4,#4]
-        0x2000832e:    6809        .h      LDR      r1,[r1,#0]
-        0x20008330:    4388        .C      BICS     r0,r0,r1
-        0x20008332:    6060        ``      STR      r0,[r4,#4]
-        0x20008334:    f000fa3a    ..:.    BL       vTaskSuspendAll ; 0x200087ac
-        0x20008338:    4909        .I      LDR      r1,[pc,#36] ; [0x20008360] = 0x20010090
-        0x2000833a:    6860        `h      LDR      r0,[r4,#4]
-        0x2000833c:    6809        .h      LDR      r1,[r1,#0]
-        0x2000833e:    4408        .D      ADD      r0,r0,r1
-        0x20008340:    4907        .I      LDR      r1,[pc,#28] ; [0x20008360] = 0x20010090
-        0x20008342:    6008        .`      STR      r0,[r1,#0]
-        0x20008344:    4620         F      MOV      r0,r4
-        0x20008346:    f7fffa99    ....    BL       prvInsertBlockIntoFreeList ; 0x2000787c
-        0x2000834a:    4806        .H      LDR      r0,[pc,#24] ; [0x20008364] = 0x2001009c
-        0x2000834c:    6800        .h      LDR      r0,[r0,#0]
-        0x2000834e:    1c40        @.      ADDS     r0,r0,#1
-        0x20008350:    4904        .I      LDR      r1,[pc,#16] ; [0x20008364] = 0x2001009c
-        0x20008352:    6008        .`      STR      r0,[r1,#0]
-        0x20008354:    f001f84a    ..J.    BL       xTaskResumeAll ; 0x200093ec
-        0x20008358:    bd70        p.      POP      {r4-r6,pc}
+        0x200083c8:    b570        p.      PUSH     {r4-r6,lr}
+        0x200083ca:    4606        .F      MOV      r6,r0
+        0x200083cc:    4635        5F      MOV      r5,r6
+        0x200083ce:    2e00        ..      CMP      r6,#0
+        0x200083d0:    d03a        :.      BEQ      0x20008448 ; vPortFree + 128
+        0x200083d2:    3d08        .=      SUBS     r5,r5,#8
+        0x200083d4:    462c        ,F      MOV      r4,r5
+        0x200083d6:    491d        .I      LDR      r1,[pc,#116] ; [0x2000844c] = 0x200100a0
+        0x200083d8:    6860        `h      LDR      r0,[r4,#4]
+        0x200083da:    6809        .h      LDR      r1,[r1,#0]
+        0x200083dc:    4008        .@      ANDS     r0,r0,r1
+        0x200083de:    b108        ..      CBZ      r0,0x200083e4 ; vPortFree + 28
+        0x200083e0:    2001        .       MOVS     r0,#1
+        0x200083e2:    e000        ..      B        0x200083e6 ; vPortFree + 30
+        0x200083e4:    2000        .       MOVS     r0,#0
+        0x200083e6:    b928        (.      CBNZ     r0,0x200083f4 ; vPortFree + 44
+        0x200083e8:    f44f7292    O..r    MOV      r2,#0x124
+        0x200083ec:    a118        ..      ADR      r1,{pc}+0x64 ; 0x20008450
+        0x200083ee:    a020         .      ADR      r0,{pc}+0x82 ; 0x20008470
+        0x200083f0:    f7fef8da    ....    BL       __0printf ; 0x200065a8
+        0x200083f4:    6820         h      LDR      r0,[r4,#0]
+        0x200083f6:    b908        ..      CBNZ     r0,0x200083fc ; vPortFree + 52
+        0x200083f8:    2001        .       MOVS     r0,#1
+        0x200083fa:    e000        ..      B        0x200083fe ; vPortFree + 54
+        0x200083fc:    2000        .       MOVS     r0,#0
+        0x200083fe:    b928        (.      CBNZ     r0,0x2000840c ; vPortFree + 68
+        0x20008400:    f2401225    @.%.    MOV      r2,#0x125
+        0x20008404:    a112        ..      ADR      r1,{pc}+0x4c ; 0x20008450
+        0x20008406:    a01a        ..      ADR      r0,{pc}+0x6a ; 0x20008470
+        0x20008408:    f7fef8ce    ....    BL       __0printf ; 0x200065a8
+        0x2000840c:    490f        .I      LDR      r1,[pc,#60] ; [0x2000844c] = 0x200100a0
+        0x2000840e:    6860        `h      LDR      r0,[r4,#4]
+        0x20008410:    6809        .h      LDR      r1,[r1,#0]
+        0x20008412:    4008        .@      ANDS     r0,r0,r1
+        0x20008414:    b1c0        ..      CBZ      r0,0x20008448 ; vPortFree + 128
+        0x20008416:    6820         h      LDR      r0,[r4,#0]
+        0x20008418:    b9b0        ..      CBNZ     r0,0x20008448 ; vPortFree + 128
+        0x2000841a:    490c        .I      LDR      r1,[pc,#48] ; [0x2000844c] = 0x200100a0
+        0x2000841c:    6860        `h      LDR      r0,[r4,#4]
+        0x2000841e:    6809        .h      LDR      r1,[r1,#0]
+        0x20008420:    4388        .C      BICS     r0,r0,r1
+        0x20008422:    6060        ``      STR      r0,[r4,#4]
+        0x20008424:    f000faaa    ....    BL       vTaskSuspendAll ; 0x2000897c
+        0x20008428:    4915        .I      LDR      r1,[pc,#84] ; [0x20008480] = 0x20010090
+        0x2000842a:    6860        `h      LDR      r0,[r4,#4]
+        0x2000842c:    6809        .h      LDR      r1,[r1,#0]
+        0x2000842e:    4408        .D      ADD      r0,r0,r1
+        0x20008430:    4913        .I      LDR      r1,[pc,#76] ; [0x20008480] = 0x20010090
+        0x20008432:    6008        .`      STR      r0,[r1,#0]
+        0x20008434:    4620         F      MOV      r0,r4
+        0x20008436:    f7fffa2f    ../.    BL       prvInsertBlockIntoFreeList ; 0x20007898
+        0x2000843a:    4812        .H      LDR      r0,[pc,#72] ; [0x20008484] = 0x2001009c
+        0x2000843c:    6800        .h      LDR      r0,[r0,#0]
+        0x2000843e:    1c40        @.      ADDS     r0,r0,#1
+        0x20008440:    4910        .I      LDR      r1,[pc,#64] ; [0x20008484] = 0x2001009c
+        0x20008442:    6008        .`      STR      r0,[r1,#0]
+        0x20008444:    f001f920    .. .    BL       xTaskResumeAll ; 0x20009688
+        0x20008448:    bd70        p.      POP      {r4-r6,pc}
     $d
-        0x2000835a:    0000        ..      DCW    0
-        0x2000835c:    200100a0    ...     DCD    536936608
-        0x20008360:    20010090    ...     DCD    536936592
-        0x20008364:    2001009c    ...     DCD    536936604
+        0x2000844a:    0000        ..      DCW    0
+        0x2000844c:    200100a0    ...     DCD    536936608
+        0x20008450:    465c2e2e    ..\F    DCD    1180446254
+        0x20008454:    52656572    reeR    DCD    1382376818
+        0x20008458:    5c534f54    TOS\    DCD    1548963668
+        0x2000845c:    4d6d654d    MemM    DCD    1299014989
+        0x20008460:    5c676e61    ang\    DCD    1550282337
+        0x20008464:    70616568    heap    DCD    1885431144
+        0x20008468:    632e345f    _4.c    DCD    1663972447
+        0x2000846c:    00000000    ....    DCD    0
+        0x20008470:    6f727245    Erro    DCD    1869771333
+        0x20008474:    25203a72    r: %    DCD    622869106
+        0x20008478:    25202c73    s, %    DCD    622865523
+        0x2000847c:    000a0d64    d...    DCD    658788
+        0x20008480:    20010090    ...     DCD    536936592
+        0x20008484:    2001009c    ...     DCD    536936604
     $t
     i.vPortSetupTimerInterrupt
     vPortSetupTimerInterrupt
-        0x20008368:    2000        .       MOVS     r0,#0
-        0x2000836a:    f04f21e0    O..!    MOV      r1,#0xe000e000
-        0x2000836e:    6108        .a      STR      r0,[r1,#0x10]
-        0x20008370:    6188        .a      STR      r0,[r1,#0x18]
-        0x20008372:    4806        .H      LDR      r0,[pc,#24] ; [0x2000838c] = 0x20010004
-        0x20008374:    6800        .h      LDR      r0,[r0,#0]
-        0x20008376:    f44f717a    O.zq    MOV      r1,#0x3e8
-        0x2000837a:    fbb0f0f1    ....    UDIV     r0,r0,r1
-        0x2000837e:    1e40        @.      SUBS     r0,r0,#1
-        0x20008380:    f04f21e0    O..!    MOV      r1,#0xe000e000
-        0x20008384:    6148        Ha      STR      r0,[r1,#0x14]
-        0x20008386:    2007        .       MOVS     r0,#7
-        0x20008388:    6108        .a      STR      r0,[r1,#0x10]
-        0x2000838a:    4770        pG      BX       lr
+        0x20008488:    2000        .       MOVS     r0,#0
+        0x2000848a:    f04f21e0    O..!    MOV      r1,#0xe000e000
+        0x2000848e:    6108        .a      STR      r0,[r1,#0x10]
+        0x20008490:    6188        .a      STR      r0,[r1,#0x18]
+        0x20008492:    4806        .H      LDR      r0,[pc,#24] ; [0x200084ac] = 0x20010004
+        0x20008494:    6800        .h      LDR      r0,[r0,#0]
+        0x20008496:    f44f717a    O.zq    MOV      r1,#0x3e8
+        0x2000849a:    fbb0f0f1    ....    UDIV     r0,r0,r1
+        0x2000849e:    1e40        @.      SUBS     r0,r0,#1
+        0x200084a0:    f04f21e0    O..!    MOV      r1,#0xe000e000
+        0x200084a4:    6148        Ha      STR      r0,[r1,#0x14]
+        0x200084a6:    2007        .       MOVS     r0,#7
+        0x200084a8:    6108        .a      STR      r0,[r1,#0x10]
+        0x200084aa:    4770        pG      BX       lr
     $d
-        0x2000838c:    20010004    ...     DCD    536936452
+        0x200084ac:    20010004    ...     DCD    536936452
     $t
     i.vPortValidateInterruptPriority
     vPortValidateInterruptPriority
-        0x20008390:    b570        p.      PUSH     {r4-r6,lr}
-        0x20008392:    f7f7ffdd    ....    BL       vPortGetIPSR ; 0x20000350
-        0x20008396:    4604        .F      MOV      r4,r0
-        0x20008398:    2c10        .,      CMP      r4,#0x10
-        0x2000839a:    d316        ..      BCC      0x200083ca ; vPortValidateInterruptPriority + 58
-        0x2000839c:    f10420e0    ...     ADD      r0,r4,#0xe000e000
-        0x200083a0:    f89053f0    ...S    LDRB     r5,[r0,#0x3f0]
-        0x200083a4:    4815        .H      LDR      r0,[pc,#84] ; [0x200083fc] = 0x200100a8
-        0x200083a6:    7800        .x      LDRB     r0,[r0,#0]
-        0x200083a8:    4285        .B      CMP      r5,r0
-        0x200083aa:    db01        ..      BLT      0x200083b0 ; vPortValidateInterruptPriority + 32
-        0x200083ac:    2001        .       MOVS     r0,#1
-        0x200083ae:    e000        ..      B        0x200083b2 ; vPortValidateInterruptPriority + 34
-        0x200083b0:    2000        .       MOVS     r0,#0
-        0x200083b2:    b950        P.      CBNZ     r0,0x200083ca ; vPortValidateInterruptPriority + 58
-        0x200083b4:    bf00        ..      NOP      
-        0x200083b6:    2050        P       MOVS     r0,#0x50
-        0x200083b8:    f3808811    ....    MSR      BASEPRI,r0
-        0x200083bc:    f3bf8f4f    ..O.    DSB      
-        0x200083c0:    f3bf8f6f    ..o.    ISB      
-        0x200083c4:    bf00        ..      NOP      
-        0x200083c6:    bf00        ..      NOP      
-        0x200083c8:    e7fe        ..      B        0x200083c8 ; vPortValidateInterruptPriority + 56
-        0x200083ca:    480d        .H      LDR      r0,[pc,#52] ; [0x20008400] = 0xe000ed0c
-        0x200083cc:    6800        .h      LDR      r0,[r0,#0]
-        0x200083ce:    f40060e0    ...`    AND      r0,r0,#0x700
-        0x200083d2:    490c        .I      LDR      r1,[pc,#48] ; [0x20008404] = 0x200100ac
-        0x200083d4:    6809        .h      LDR      r1,[r1,#0]
-        0x200083d6:    4288        .B      CMP      r0,r1
-        0x200083d8:    d801        ..      BHI      0x200083de ; vPortValidateInterruptPriority + 78
-        0x200083da:    2001        .       MOVS     r0,#1
-        0x200083dc:    e000        ..      B        0x200083e0 ; vPortValidateInterruptPriority + 80
-        0x200083de:    2000        .       MOVS     r0,#0
-        0x200083e0:    b950        P.      CBNZ     r0,0x200083f8 ; vPortValidateInterruptPriority + 104
-        0x200083e2:    bf00        ..      NOP      
-        0x200083e4:    2050        P       MOVS     r0,#0x50
-        0x200083e6:    f3808811    ....    MSR      BASEPRI,r0
-        0x200083ea:    f3bf8f4f    ..O.    DSB      
-        0x200083ee:    f3bf8f6f    ..o.    ISB      
-        0x200083f2:    bf00        ..      NOP      
-        0x200083f4:    bf00        ..      NOP      
-        0x200083f6:    e7fe        ..      B        0x200083f6 ; vPortValidateInterruptPriority + 102
-        0x200083f8:    bd70        p.      POP      {r4-r6,pc}
+        0x200084b0:    b570        p.      PUSH     {r4-r6,lr}
+        0x200084b2:    f7f7ff4d    ..M.    BL       vPortGetIPSR ; 0x20000350
+        0x200084b6:    4605        .F      MOV      r5,r0
+        0x200084b8:    2d10        .-      CMP      r5,#0x10
+        0x200084ba:    d311        ..      BCC      0x200084e0 ; vPortValidateInterruptPriority + 48
+        0x200084bc:    f10520e0    ...     ADD      r0,r5,#0xe000e000
+        0x200084c0:    f89043f0    ...C    LDRB     r4,[r0,#0x3f0]
+        0x200084c4:    4810        .H      LDR      r0,[pc,#64] ; [0x20008508] = 0x200100a8
+        0x200084c6:    7800        .x      LDRB     r0,[r0,#0]
+        0x200084c8:    4284        .B      CMP      r4,r0
+        0x200084ca:    db01        ..      BLT      0x200084d0 ; vPortValidateInterruptPriority + 32
+        0x200084cc:    2001        .       MOVS     r0,#1
+        0x200084ce:    e000        ..      B        0x200084d2 ; vPortValidateInterruptPriority + 34
+        0x200084d0:    2000        .       MOVS     r0,#0
+        0x200084d2:    b928        (.      CBNZ     r0,0x200084e0 ; vPortValidateInterruptPriority + 48
+        0x200084d4:    f240321b    @..2    MOV      r2,#0x31b
+        0x200084d8:    a10c        ..      ADR      r1,{pc}+0x34 ; 0x2000850c
+        0x200084da:    a013        ..      ADR      r0,{pc}+0x4e ; 0x20008528
+        0x200084dc:    f7fef864    ..d.    BL       __0printf ; 0x200065a8
+        0x200084e0:    4815        .H      LDR      r0,[pc,#84] ; [0x20008538] = 0xe000ed0c
+        0x200084e2:    6800        .h      LDR      r0,[r0,#0]
+        0x200084e4:    f40060e0    ...`    AND      r0,r0,#0x700
+        0x200084e8:    4914        .I      LDR      r1,[pc,#80] ; [0x2000853c] = 0x200100ac
+        0x200084ea:    6809        .h      LDR      r1,[r1,#0]
+        0x200084ec:    4288        .B      CMP      r0,r1
+        0x200084ee:    d801        ..      BHI      0x200084f4 ; vPortValidateInterruptPriority + 68
+        0x200084f0:    2001        .       MOVS     r0,#1
+        0x200084f2:    e000        ..      B        0x200084f6 ; vPortValidateInterruptPriority + 70
+        0x200084f4:    2000        .       MOVS     r0,#0
+        0x200084f6:    b928        (.      CBNZ     r0,0x20008504 ; vPortValidateInterruptPriority + 84
+        0x200084f8:    f240322b    @.+2    MOV      r2,#0x32b
+        0x200084fc:    a103        ..      ADR      r1,{pc}+0x10 ; 0x2000850c
+        0x200084fe:    a00a        ..      ADR      r0,{pc}+0x2a ; 0x20008528
+        0x20008500:    f7fef852    ..R.    BL       __0printf ; 0x200065a8
+        0x20008504:    bd70        p.      POP      {r4-r6,pc}
     $d
-        0x200083fa:    0000        ..      DCW    0
-        0x200083fc:    200100a8    ...     DCD    536936616
-        0x20008400:    e000ed0c    ....    DCD    3758157068
-        0x20008404:    200100ac    ...     DCD    536936620
+        0x20008506:    0000        ..      DCW    0
+        0x20008508:    200100a8    ...     DCD    536936616
+        0x2000850c:    465c2e2e    ..\F    DCD    1180446254
+        0x20008510:    52656572    reeR    DCD    1382376818
+        0x20008514:    5c534f54    TOS\    DCD    1548963668
+        0x20008518:    5f4d5241    ARM_    DCD    1598902849
+        0x2000851c:    46344d43    CM4F    DCD    1177832771
+        0x20008520:    726f705c    \por    DCD    1919905884
+        0x20008524:    00632e74    t.c.    DCD    6499956
+        0x20008528:    6f727245    Erro    DCD    1869771333
+        0x2000852c:    25203a72    r: %    DCD    622869106
+        0x20008530:    25202c73    s, %    DCD    622865523
+        0x20008534:    000a0d64    d...    DCD    658788
+        0x20008538:    e000ed0c    ....    DCD    3758157068
+        0x2000853c:    200100ac    ...     DCD    536936620
     $t
     i.vQueueAddToRegistry
     vQueueAddToRegistry
-        0x20008408:    e92d41f0    -..A    PUSH     {r4-r8,lr}
-        0x2000840c:    4606        .F      MOV      r6,r0
-        0x2000840e:    460f        .F      MOV      r7,r1
-        0x20008410:    b956        V.      CBNZ     r6,0x20008428 ; vQueueAddToRegistry + 32
-        0x20008412:    bf00        ..      NOP      
-        0x20008414:    2050        P       MOVS     r0,#0x50
-        0x20008416:    f3808811    ....    MSR      BASEPRI,r0
-        0x2000841a:    f3bf8f4f    ..O.    DSB      
-        0x2000841e:    f3bf8f6f    ..o.    ISB      
-        0x20008422:    bf00        ..      NOP      
-        0x20008424:    bf00        ..      NOP      
-        0x20008426:    e7fe        ..      B        0x20008426 ; vQueueAddToRegistry + 30
-        0x20008428:    2500        .%      MOVS     r5,#0
-        0x2000842a:    b1bf        ..      CBZ      r7,0x2000845c ; vQueueAddToRegistry + 84
-        0x2000842c:    2400        .$      MOVS     r4,#0
-        0x2000842e:    e012        ..      B        0x20008456 ; vQueueAddToRegistry + 78
-        0x20008430:    4811        .H      LDR      r0,[pc,#68] ; [0x20008478] = 0x200102d0
-        0x20008432:    eb0000c4    ....    ADD      r0,r0,r4,LSL #3
-        0x20008436:    6840        @h      LDR      r0,[r0,#4]
-        0x20008438:    42b0        .B      CMP      r0,r6
-        0x2000843a:    d103        ..      BNE      0x20008444 ; vQueueAddToRegistry + 60
-        0x2000843c:    480e        .H      LDR      r0,[pc,#56] ; [0x20008478] = 0x200102d0
-        0x2000843e:    eb0005c4    ....    ADD      r5,r0,r4,LSL #3
-        0x20008442:    e00a        ..      B        0x2000845a ; vQueueAddToRegistry + 82
-        0x20008444:    b935        5.      CBNZ     r5,0x20008454 ; vQueueAddToRegistry + 76
-        0x20008446:    480c        .H      LDR      r0,[pc,#48] ; [0x20008478] = 0x200102d0
-        0x20008448:    f8500034    P.4.    LDR      r0,[r0,r4,LSL #3]
-        0x2000844c:    b910        ..      CBNZ     r0,0x20008454 ; vQueueAddToRegistry + 76
-        0x2000844e:    480a        .H      LDR      r0,[pc,#40] ; [0x20008478] = 0x200102d0
-        0x20008450:    eb0005c4    ....    ADD      r5,r0,r4,LSL #3
-        0x20008454:    1c64        d.      ADDS     r4,r4,#1
-        0x20008456:    2c08        .,      CMP      r4,#8
-        0x20008458:    d3ea        ..      BCC      0x20008430 ; vQueueAddToRegistry + 40
-        0x2000845a:    bf00        ..      NOP      
-        0x2000845c:    b155        U.      CBZ      r5,0x20008474 ; vQueueAddToRegistry + 108
-        0x2000845e:    602f        /`      STR      r7,[r5,#0]
-        0x20008460:    606e        n`      STR      r6,[r5,#4]
-        0x20008462:    4630        0F      MOV      r0,r6
-        0x20008464:    f7fcfce2    ....    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
-        0x20008468:    4680        .F      MOV      r8,r0
-        0x2000846a:    463a        :F      MOV      r2,r7
-        0x2000846c:    4641        AF      MOV      r1,r8
-        0x2000846e:    2071        q       MOVS     r0,#0x71
-        0x20008470:    f7fcfa86    ....    BL       SEGGER_SYSVIEW_RecordU32x2 ; 0x20004980
-        0x20008474:    e8bd81f0    ....    POP      {r4-r8,pc}
+        0x20008540:    e92d41f0    -..A    PUSH     {r4-r8,lr}
+        0x20008544:    4606        .F      MOV      r6,r0
+        0x20008546:    460f        .F      MOV      r7,r1
+        0x20008548:    b92e        ..      CBNZ     r6,0x20008556 ; vQueueAddToRegistry + 22
+        0x2000854a:    f64022c8    @.."    MOV      r2,#0xac8
+        0x2000854e:    a116        ..      ADR      r1,{pc}+0x5a ; 0x200085a8
+        0x20008550:    a01a        ..      ADR      r0,{pc}+0x6c ; 0x200085bc
+        0x20008552:    f7fef829    ..).    BL       __0printf ; 0x200065a8
+        0x20008556:    2500        .%      MOVS     r5,#0
+        0x20008558:    b1bf        ..      CBZ      r7,0x2000858a ; vQueueAddToRegistry + 74
+        0x2000855a:    2400        .$      MOVS     r4,#0
+        0x2000855c:    e012        ..      B        0x20008584 ; vQueueAddToRegistry + 68
+        0x2000855e:    481b        .H      LDR      r0,[pc,#108] ; [0x200085cc] = 0x200102d0
+        0x20008560:    eb0000c4    ....    ADD      r0,r0,r4,LSL #3
+        0x20008564:    6840        @h      LDR      r0,[r0,#4]
+        0x20008566:    42b0        .B      CMP      r0,r6
+        0x20008568:    d103        ..      BNE      0x20008572 ; vQueueAddToRegistry + 50
+        0x2000856a:    4818        .H      LDR      r0,[pc,#96] ; [0x200085cc] = 0x200102d0
+        0x2000856c:    eb0005c4    ....    ADD      r5,r0,r4,LSL #3
+        0x20008570:    e00a        ..      B        0x20008588 ; vQueueAddToRegistry + 72
+        0x20008572:    b935        5.      CBNZ     r5,0x20008582 ; vQueueAddToRegistry + 66
+        0x20008574:    4815        .H      LDR      r0,[pc,#84] ; [0x200085cc] = 0x200102d0
+        0x20008576:    f8500034    P.4.    LDR      r0,[r0,r4,LSL #3]
+        0x2000857a:    b910        ..      CBNZ     r0,0x20008582 ; vQueueAddToRegistry + 66
+        0x2000857c:    4813        .H      LDR      r0,[pc,#76] ; [0x200085cc] = 0x200102d0
+        0x2000857e:    eb0005c4    ....    ADD      r5,r0,r4,LSL #3
+        0x20008582:    1c64        d.      ADDS     r4,r4,#1
+        0x20008584:    2c08        .,      CMP      r4,#8
+        0x20008586:    d3ea        ..      BCC      0x2000855e ; vQueueAddToRegistry + 30
+        0x20008588:    bf00        ..      NOP      
+        0x2000858a:    b155        U.      CBZ      r5,0x200085a2 ; vQueueAddToRegistry + 98
+        0x2000858c:    602f        /`      STR      r7,[r5,#0]
+        0x2000858e:    606e        n`      STR      r6,[r5,#4]
+        0x20008590:    4630        0F      MOV      r0,r6
+        0x20008592:    f7fcfc4b    ..K.    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
+        0x20008596:    4680        .F      MOV      r8,r0
+        0x20008598:    463a        :F      MOV      r2,r7
+        0x2000859a:    4641        AF      MOV      r1,r8
+        0x2000859c:    2071        q       MOVS     r0,#0x71
+        0x2000859e:    f7fcf9ef    ....    BL       SEGGER_SYSVIEW_RecordU32x2 ; 0x20004980
+        0x200085a2:    e8bd81f0    ....    POP      {r4-r8,pc}
     $d
-        0x20008478:    200102d0    ...     DCD    536937168
+        0x200085a6:    0000        ..      DCW    0
+        0x200085a8:    465c2e2e    ..\F    DCD    1180446254
+        0x200085ac:    52656572    reeR    DCD    1382376818
+        0x200085b0:    5c534f54    TOS\    DCD    1548963668
+        0x200085b4:    75657571    queu    DCD    1969583473
+        0x200085b8:    00632e65    e.c.    DCD    6499941
+        0x200085bc:    6f727245    Erro    DCD    1869771333
+        0x200085c0:    25203a72    r: %    DCD    622869106
+        0x200085c4:    25202c73    s, %    DCD    622865523
+        0x200085c8:    000a0d64    d...    DCD    658788
+        0x200085cc:    200102d0    ...     DCD    536937168
     $t
     i.vQueueWaitForMessageRestricted
     vQueueWaitForMessageRestricted
-        0x2000847c:    e92d41f0    -..A    PUSH     {r4-r8,lr}
-        0x20008480:    4605        .F      MOV      r5,r0
-        0x20008482:    460e        .F      MOV      r6,r1
-        0x20008484:    4617        .F      MOV      r7,r2
-        0x20008486:    462c        ,F      MOV      r4,r5
-        0x20008488:    f7fffed4    ....    BL       vPortEnterCritical ; 0x20008234
-        0x2000848c:    f9940044    ..D.    LDRSB    r0,[r4,#0x44]
-        0x20008490:    1c40        @.      ADDS     r0,r0,#1
-        0x20008492:    b910        ..      CBNZ     r0,0x2000849a ; vQueueWaitForMessageRestricted + 30
-        0x20008494:    2000        .       MOVS     r0,#0
-        0x20008496:    f8840044    ..D.    STRB     r0,[r4,#0x44]
-        0x2000849a:    f9940045    ..E.    LDRSB    r0,[r4,#0x45]
-        0x2000849e:    1c40        @.      ADDS     r0,r0,#1
-        0x200084a0:    b910        ..      CBNZ     r0,0x200084a8 ; vQueueWaitForMessageRestricted + 44
-        0x200084a2:    2000        .       MOVS     r0,#0
-        0x200084a4:    f8840045    ..E.    STRB     r0,[r4,#0x45]
-        0x200084a8:    f7fffeee    ....    BL       vPortExitCritical ; 0x20008288
-        0x200084ac:    6ba0        .k      LDR      r0,[r4,#0x38]
-        0x200084ae:    b928        (.      CBNZ     r0,0x200084bc ; vQueueWaitForMessageRestricted + 64
-        0x200084b0:    463a        :F      MOV      r2,r7
-        0x200084b2:    4631        1F      MOV      r1,r6
-        0x200084b4:    f1040024    ..$.    ADD      r0,r4,#0x24
-        0x200084b8:    f000f8f6    ....    BL       vTaskPlaceOnEventListRestricted ; 0x200086a8
-        0x200084bc:    4620         F      MOV      r0,r4
-        0x200084be:    f7fffc16    ....    BL       prvUnlockQueue ; 0x20007cee
-        0x200084c2:    e8bd81f0    ....    POP      {r4-r8,pc}
-        0x200084c6:    0000        ..      MOVS     r0,r0
+        0x200085d0:    e92d41f0    -..A    PUSH     {r4-r8,lr}
+        0x200085d4:    4605        .F      MOV      r5,r0
+        0x200085d6:    460e        .F      MOV      r6,r1
+        0x200085d8:    4617        .F      MOV      r7,r2
+        0x200085da:    462c        ,F      MOV      r4,r5
+        0x200085dc:    f7fffe88    ....    BL       vPortEnterCritical ; 0x200082f0
+        0x200085e0:    f9940044    ..D.    LDRSB    r0,[r4,#0x44]
+        0x200085e4:    1c40        @.      ADDS     r0,r0,#1
+        0x200085e6:    b910        ..      CBNZ     r0,0x200085ee ; vQueueWaitForMessageRestricted + 30
+        0x200085e8:    2000        .       MOVS     r0,#0
+        0x200085ea:    f8840044    ..D.    STRB     r0,[r4,#0x44]
+        0x200085ee:    f9940045    ..E.    LDRSB    r0,[r4,#0x45]
+        0x200085f2:    1c40        @.      ADDS     r0,r0,#1
+        0x200085f4:    b910        ..      CBNZ     r0,0x200085fc ; vQueueWaitForMessageRestricted + 44
+        0x200085f6:    2000        .       MOVS     r0,#0
+        0x200085f8:    f8840045    ..E.    STRB     r0,[r4,#0x45]
+        0x200085fc:    f7fffeb4    ....    BL       vPortExitCritical ; 0x20008368
+        0x20008600:    6ba0        .k      LDR      r0,[r4,#0x38]
+        0x20008602:    b928        (.      CBNZ     r0,0x20008610 ; vQueueWaitForMessageRestricted + 64
+        0x20008604:    463a        :F      MOV      r2,r7
+        0x20008606:    4631        1F      MOV      r1,r6
+        0x20008608:    f1040024    ..$.    ADD      r0,r4,#0x24
+        0x2000860c:    f000f91c    ....    BL       vTaskPlaceOnEventListRestricted ; 0x20008848
+        0x20008610:    4620         F      MOV      r0,r4
+        0x20008612:    f7fffbb0    ....    BL       prvUnlockQueue ; 0x20007d76
+        0x20008616:    e8bd81f0    ....    POP      {r4-r8,pc}
+        0x2000861a:    0000        ..      MOVS     r0,r0
     i.vTaskDelay
     vTaskDelay
-        0x200084c8:    b570        p.      PUSH     {r4-r6,lr}
-        0x200084ca:    4604        .F      MOV      r4,r0
-        0x200084cc:    2500        .%      MOVS     r5,#0
-        0x200084ce:    b1f4        ..      CBZ      r4,0x2000850e ; vTaskDelay + 70
-        0x200084d0:    4814        .H      LDR      r0,[pc,#80] ; [0x20008524] = 0x2001006c
-        0x200084d2:    6800        .h      LDR      r0,[r0,#0]
-        0x200084d4:    b908        ..      CBNZ     r0,0x200084da ; vTaskDelay + 18
-        0x200084d6:    2001        .       MOVS     r0,#1
-        0x200084d8:    e000        ..      B        0x200084dc ; vTaskDelay + 20
-        0x200084da:    2000        .       MOVS     r0,#0
-        0x200084dc:    b950        P.      CBNZ     r0,0x200084f4 ; vTaskDelay + 44
-        0x200084de:    bf00        ..      NOP      
-        0x200084e0:    2050        P       MOVS     r0,#0x50
-        0x200084e2:    f3808811    ....    MSR      BASEPRI,r0
-        0x200084e6:    f3bf8f4f    ..O.    DSB      
-        0x200084ea:    f3bf8f6f    ..o.    ISB      
-        0x200084ee:    bf00        ..      NOP      
-        0x200084f0:    bf00        ..      NOP      
-        0x200084f2:    e7fe        ..      B        0x200084f2 ; vTaskDelay + 42
-        0x200084f4:    f000f95a    ..Z.    BL       vTaskSuspendAll ; 0x200087ac
-        0x200084f8:    4621        !F      MOV      r1,r4
-        0x200084fa:    2023        #       MOVS     r0,#0x23
-        0x200084fc:    f7fcfa12    ....    BL       SEGGER_SYSVIEW_RecordU32 ; 0x20004924
-        0x20008500:    2100        .!      MOVS     r1,#0
-        0x20008502:    4620         F      MOV      r0,r4
-        0x20008504:    f7feff28    ..(.    BL       prvAddCurrentTaskToDelayedList ; 0x20007358
-        0x20008508:    f000ff70    ..p.    BL       xTaskResumeAll ; 0x200093ec
-        0x2000850c:    4605        .F      MOV      r5,r0
-        0x2000850e:    b93d        =.      CBNZ     r5,0x20008520 ; vTaskDelay + 88
-        0x20008510:    f04f5080    O..P    MOV      r0,#0x10000000
-        0x20008514:    4904        .I      LDR      r1,[pc,#16] ; [0x20008528] = 0xe000ed04
-        0x20008516:    6008        .`      STR      r0,[r1,#0]
-        0x20008518:    f3bf8f4f    ..O.    DSB      
-        0x2000851c:    f3bf8f6f    ..o.    ISB      
-        0x20008520:    bd70        p.      POP      {r4-r6,pc}
+        0x2000861c:    b570        p.      PUSH     {r4-r6,lr}
+        0x2000861e:    4604        .F      MOV      r4,r0
+        0x20008620:    2500        .%      MOVS     r5,#0
+        0x20008622:    b1cc        ..      CBZ      r4,0x20008658 ; vTaskDelay + 60
+        0x20008624:    4811        .H      LDR      r0,[pc,#68] ; [0x2000866c] = 0x2001006c
+        0x20008626:    6800        .h      LDR      r0,[r0,#0]
+        0x20008628:    b908        ..      CBNZ     r0,0x2000862e ; vTaskDelay + 18
+        0x2000862a:    2001        .       MOVS     r0,#1
+        0x2000862c:    e000        ..      B        0x20008630 ; vTaskDelay + 20
+        0x2000862e:    2000        .       MOVS     r0,#0
+        0x20008630:    b928        (.      CBNZ     r0,0x2000863e ; vTaskDelay + 34
+        0x20008632:    f240524a    @.JR    MOV      r2,#0x54a
+        0x20008636:    a10e        ..      ADR      r1,{pc}+0x3a ; 0x20008670
+        0x20008638:    a012        ..      ADR      r0,{pc}+0x4c ; 0x20008684
+        0x2000863a:    f7fdffb5    ....    BL       __0printf ; 0x200065a8
+        0x2000863e:    f000f99d    ....    BL       vTaskSuspendAll ; 0x2000897c
+        0x20008642:    4621        !F      MOV      r1,r4
+        0x20008644:    2023        #       MOVS     r0,#0x23
+        0x20008646:    f7fcf96d    ..m.    BL       SEGGER_SYSVIEW_RecordU32 ; 0x20004924
+        0x2000864a:    2100        .!      MOVS     r1,#0
+        0x2000864c:    4620         F      MOV      r0,r4
+        0x2000864e:    f7fefe83    ....    BL       prvAddCurrentTaskToDelayedList ; 0x20007358
+        0x20008652:    f001f819    ....    BL       xTaskResumeAll ; 0x20009688
+        0x20008656:    4605        .F      MOV      r5,r0
+        0x20008658:    b93d        =.      CBNZ     r5,0x2000866a ; vTaskDelay + 78
+        0x2000865a:    f04f5080    O..P    MOV      r0,#0x10000000
+        0x2000865e:    490d        .I      LDR      r1,[pc,#52] ; [0x20008694] = 0xe000ed04
+        0x20008660:    6008        .`      STR      r0,[r1,#0]
+        0x20008662:    f3bf8f4f    ..O.    DSB      
+        0x20008666:    f3bf8f6f    ..o.    ISB      
+        0x2000866a:    bd70        p.      POP      {r4-r6,pc}
     $d
-        0x20008522:    0000        ..      DCW    0
-        0x20008524:    2001006c    l..     DCD    536936556
-        0x20008528:    e000ed04    ....    DCD    3758157060
+        0x2000866c:    2001006c    l..     DCD    536936556
+        0x20008670:    465c2e2e    ..\F    DCD    1180446254
+        0x20008674:    52656572    reeR    DCD    1382376818
+        0x20008678:    5c534f54    TOS\    DCD    1548963668
+        0x2000867c:    6b736174    task    DCD    1802723700
+        0x20008680:    00632e73    s.c.    DCD    6499955
+        0x20008684:    6f727245    Erro    DCD    1869771333
+        0x20008688:    25203a72    r: %    DCD    622869106
+        0x2000868c:    25202c73    s, %    DCD    622865523
+        0x20008690:    000a0d64    d...    DCD    658788
+        0x20008694:    e000ed04    ....    DCD    3758157060
     $t
     i.vTaskDelete
     vTaskDelete
-        0x2000852c:    b570        p.      PUSH     {r4-r6,lr}
-        0x2000852e:    4605        .F      MOV      r5,r0
-        0x20008530:    f7fffe80    ....    BL       vPortEnterCritical ; 0x20008234
-        0x20008534:    b915        ..      CBNZ     r5,0x2000853c ; vTaskDelete + 16
-        0x20008536:    483b        ;H      LDR      r0,[pc,#236] ; [0x20008624] = 0x20010030
-        0x20008538:    6800        .h      LDR      r0,[r0,#0]
-        0x2000853a:    e000        ..      B        0x2000853e ; vTaskDelete + 18
-        0x2000853c:    4628        (F      MOV      r0,r5
-        0x2000853e:    4604        .F      MOV      r4,r0
-        0x20008540:    1d20         .      ADDS     r0,r4,#4
-        0x20008542:    f7fffe2d    ..-.    BL       uxListRemove ; 0x200081a0
-        0x20008546:    b978        x.      CBNZ     r0,0x20008568 ; vTaskDelete + 60
-        0x20008548:    6ae0        .j      LDR      r0,[r4,#0x2c]
-        0x2000854a:    eb000080    ....    ADD      r0,r0,r0,LSL #2
-        0x2000854e:    4936        6I      LDR      r1,[pc,#216] ; [0x20008628] = 0x20010310
-        0x20008550:    f8510020    Q. .    LDR      r0,[r1,r0,LSL #2]
-        0x20008554:    b940        @.      CBNZ     r0,0x20008568 ; vTaskDelete + 60
-        0x20008556:    f894102c    ..,.    LDRB     r1,[r4,#0x2c]
-        0x2000855a:    2001        .       MOVS     r0,#1
-        0x2000855c:    4088        .@      LSLS     r0,r0,r1
-        0x2000855e:    4933        3I      LDR      r1,[pc,#204] ; [0x2000862c] = 0x20010048
-        0x20008560:    6809        .h      LDR      r1,[r1,#0]
-        0x20008562:    4381        .C      BICS     r1,r1,r0
-        0x20008564:    4831        1H      LDR      r0,[pc,#196] ; [0x2000862c] = 0x20010048
-        0x20008566:    6001        .`      STR      r1,[r0,#0]
-        0x20008568:    6aa0        .j      LDR      r0,[r4,#0x28]
-        0x2000856a:    b118        ..      CBZ      r0,0x20008574 ; vTaskDelete + 72
-        0x2000856c:    f1040018    ....    ADD      r0,r4,#0x18
-        0x20008570:    f7fffe16    ....    BL       uxListRemove ; 0x200081a0
-        0x20008574:    482e        .H      LDR      r0,[pc,#184] ; [0x20008630] = 0x2001005c
-        0x20008576:    6800        .h      LDR      r0,[r0,#0]
-        0x20008578:    1c40        @.      ADDS     r0,r0,#1
-        0x2000857a:    492d        -I      LDR      r1,[pc,#180] ; [0x20008630] = 0x2001005c
-        0x2000857c:    6008        .`      STR      r0,[r1,#0]
-        0x2000857e:    4829        )H      LDR      r0,[pc,#164] ; [0x20008624] = 0x20010030
-        0x20008580:    6800        .h      LDR      r0,[r0,#0]
-        0x20008582:    4284        .B      CMP      r4,r0
-        0x20008584:    d114        ..      BNE      0x200085b0 ; vTaskDelete + 132
-        0x20008586:    1d21        !.      ADDS     r1,r4,#4
-        0x20008588:    482a        *H      LDR      r0,[pc,#168] ; [0x20008634] = 0x200103b0
-        0x2000858a:    f7fffe47    ..G.    BL       vListInsertEnd ; 0x2000821c
-        0x2000858e:    482a        *H      LDR      r0,[pc,#168] ; [0x20008638] = 0x2001003c
-        0x20008590:    6800        .h      LDR      r0,[r0,#0]
-        0x20008592:    1c40        @.      ADDS     r0,r0,#1
-        0x20008594:    4928        (I      LDR      r1,[pc,#160] ; [0x20008638] = 0x2001003c
-        0x20008596:    6008        .`      STR      r0,[r1,#0]
-        0x20008598:    4620         F      MOV      r0,r4
-        0x2000859a:    f7fcfc47    ..G.    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
-        0x2000859e:    4606        .F      MOV      r6,r0
-        0x200085a0:    4631        1F      MOV      r1,r6
-        0x200085a2:    2022        "       MOVS     r0,#0x22
-        0x200085a4:    f7fcf9be    ....    BL       SEGGER_SYSVIEW_RecordU32 ; 0x20004924
-        0x200085a8:    4620         F      MOV      r0,r4
-        0x200085aa:    f7fcfd7d    ..}.    BL       SYSVIEW_DeleteTask ; 0x200050a8
-        0x200085ae:    e014        ..      B        0x200085da ; vTaskDelete + 174
-        0x200085b0:    4822        "H      LDR      r0,[pc,#136] ; [0x2000863c] = 0x20010040
-        0x200085b2:    6800        .h      LDR      r0,[r0,#0]
-        0x200085b4:    1e40        @.      SUBS     r0,r0,#1
-        0x200085b6:    4921        !I      LDR      r1,[pc,#132] ; [0x2000863c] = 0x20010040
-        0x200085b8:    6008        .`      STR      r0,[r1,#0]
-        0x200085ba:    4620         F      MOV      r0,r4
-        0x200085bc:    f7fcfc36    ..6.    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
-        0x200085c0:    4606        .F      MOV      r6,r0
-        0x200085c2:    4631        1F      MOV      r1,r6
-        0x200085c4:    2022        "       MOVS     r0,#0x22
-        0x200085c6:    f7fcf9ad    ....    BL       SEGGER_SYSVIEW_RecordU32 ; 0x20004924
-        0x200085ca:    4620         F      MOV      r0,r4
-        0x200085cc:    f7fcfd6c    ..l.    BL       SYSVIEW_DeleteTask ; 0x200050a8
-        0x200085d0:    4620         F      MOV      r0,r4
-        0x200085d2:    f7fff835    ..5.    BL       prvDeleteTCB ; 0x20007640
-        0x200085d6:    f7fffadd    ....    BL       prvResetNextTaskUnblockTime ; 0x20007b94
-        0x200085da:    f7fffe55    ..U.    BL       vPortExitCritical ; 0x20008288
-        0x200085de:    4818        .H      LDR      r0,[pc,#96] ; [0x20008640] = 0x2001004c
-        0x200085e0:    6800        .h      LDR      r0,[r0,#0]
-        0x200085e2:    b1e8        ..      CBZ      r0,0x20008620 ; vTaskDelete + 244
-        0x200085e4:    480f        .H      LDR      r0,[pc,#60] ; [0x20008624] = 0x20010030
-        0x200085e6:    6800        .h      LDR      r0,[r0,#0]
-        0x200085e8:    4284        .B      CMP      r4,r0
-        0x200085ea:    d119        ..      BNE      0x20008620 ; vTaskDelete + 244
-        0x200085ec:    4815        .H      LDR      r0,[pc,#84] ; [0x20008644] = 0x2001006c
-        0x200085ee:    6800        .h      LDR      r0,[r0,#0]
-        0x200085f0:    b908        ..      CBNZ     r0,0x200085f6 ; vTaskDelete + 202
-        0x200085f2:    2001        .       MOVS     r0,#1
-        0x200085f4:    e000        ..      B        0x200085f8 ; vTaskDelete + 204
-        0x200085f6:    2000        .       MOVS     r0,#0
-        0x200085f8:    b950        P.      CBNZ     r0,0x20008610 ; vTaskDelete + 228
-        0x200085fa:    bf00        ..      NOP      
-        0x200085fc:    2050        P       MOVS     r0,#0x50
-        0x200085fe:    f3808811    ....    MSR      BASEPRI,r0
-        0x20008602:    f3bf8f4f    ..O.    DSB      
-        0x20008606:    f3bf8f6f    ..o.    ISB      
-        0x2000860a:    bf00        ..      NOP      
-        0x2000860c:    bf00        ..      NOP      
-        0x2000860e:    e7fe        ..      B        0x2000860e ; vTaskDelete + 226
-        0x20008610:    f04f5080    O..P    MOV      r0,#0x10000000
-        0x20008614:    490c        .I      LDR      r1,[pc,#48] ; [0x20008648] = 0xe000ed04
-        0x20008616:    6008        .`      STR      r0,[r1,#0]
-        0x20008618:    f3bf8f4f    ..O.    DSB      
-        0x2000861c:    f3bf8f6f    ..o.    ISB      
-        0x20008620:    bd70        p.      POP      {r4-r6,pc}
+        0x20008698:    b570        p.      PUSH     {r4-r6,lr}
+        0x2000869a:    4605        .F      MOV      r5,r0
+        0x2000869c:    f7fffe28    ..(.    BL       vPortEnterCritical ; 0x200082f0
+        0x200086a0:    b915        ..      CBNZ     r5,0x200086a8 ; vTaskDelete + 16
+        0x200086a2:    4838        8H      LDR      r0,[pc,#224] ; [0x20008784] = 0x20010030
+        0x200086a4:    6800        .h      LDR      r0,[r0,#0]
+        0x200086a6:    e000        ..      B        0x200086aa ; vTaskDelete + 18
+        0x200086a8:    4628        (F      MOV      r0,r5
+        0x200086aa:    4604        .F      MOV      r4,r0
+        0x200086ac:    1d20         .      ADDS     r0,r4,#4
+        0x200086ae:    f7fffdc1    ....    BL       uxListRemove ; 0x20008234
+        0x200086b2:    b978        x.      CBNZ     r0,0x200086d4 ; vTaskDelete + 60
+        0x200086b4:    6ae0        .j      LDR      r0,[r4,#0x2c]
+        0x200086b6:    eb000080    ....    ADD      r0,r0,r0,LSL #2
+        0x200086ba:    4933        3I      LDR      r1,[pc,#204] ; [0x20008788] = 0x20010310
+        0x200086bc:    f8510020    Q. .    LDR      r0,[r1,r0,LSL #2]
+        0x200086c0:    b940        @.      CBNZ     r0,0x200086d4 ; vTaskDelete + 60
+        0x200086c2:    f894102c    ..,.    LDRB     r1,[r4,#0x2c]
+        0x200086c6:    2001        .       MOVS     r0,#1
+        0x200086c8:    4088        .@      LSLS     r0,r0,r1
+        0x200086ca:    4930        0I      LDR      r1,[pc,#192] ; [0x2000878c] = 0x20010048
+        0x200086cc:    6809        .h      LDR      r1,[r1,#0]
+        0x200086ce:    4381        .C      BICS     r1,r1,r0
+        0x200086d0:    482e        .H      LDR      r0,[pc,#184] ; [0x2000878c] = 0x20010048
+        0x200086d2:    6001        .`      STR      r1,[r0,#0]
+        0x200086d4:    6aa0        .j      LDR      r0,[r4,#0x28]
+        0x200086d6:    b118        ..      CBZ      r0,0x200086e0 ; vTaskDelete + 72
+        0x200086d8:    f1040018    ....    ADD      r0,r4,#0x18
+        0x200086dc:    f7fffdaa    ....    BL       uxListRemove ; 0x20008234
+        0x200086e0:    482b        +H      LDR      r0,[pc,#172] ; [0x20008790] = 0x2001005c
+        0x200086e2:    6800        .h      LDR      r0,[r0,#0]
+        0x200086e4:    1c40        @.      ADDS     r0,r0,#1
+        0x200086e6:    492a        *I      LDR      r1,[pc,#168] ; [0x20008790] = 0x2001005c
+        0x200086e8:    6008        .`      STR      r0,[r1,#0]
+        0x200086ea:    4826        &H      LDR      r0,[pc,#152] ; [0x20008784] = 0x20010030
+        0x200086ec:    6800        .h      LDR      r0,[r0,#0]
+        0x200086ee:    4284        .B      CMP      r4,r0
+        0x200086f0:    d114        ..      BNE      0x2000871c ; vTaskDelete + 132
+        0x200086f2:    1d21        !.      ADDS     r1,r4,#4
+        0x200086f4:    4827        'H      LDR      r0,[pc,#156] ; [0x20008794] = 0x200103b0
+        0x200086f6:    f7fffdef    ....    BL       vListInsertEnd ; 0x200082d8
+        0x200086fa:    4827        'H      LDR      r0,[pc,#156] ; [0x20008798] = 0x2001003c
+        0x200086fc:    6800        .h      LDR      r0,[r0,#0]
+        0x200086fe:    1c40        @.      ADDS     r0,r0,#1
+        0x20008700:    4925        %I      LDR      r1,[pc,#148] ; [0x20008798] = 0x2001003c
+        0x20008702:    6008        .`      STR      r0,[r1,#0]
+        0x20008704:    4620         F      MOV      r0,r4
+        0x20008706:    f7fcfb91    ....    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
+        0x2000870a:    4606        .F      MOV      r6,r0
+        0x2000870c:    4631        1F      MOV      r1,r6
+        0x2000870e:    2022        "       MOVS     r0,#0x22
+        0x20008710:    f7fcf908    ....    BL       SEGGER_SYSVIEW_RecordU32 ; 0x20004924
+        0x20008714:    4620         F      MOV      r0,r4
+        0x20008716:    f7fcfcc7    ....    BL       SYSVIEW_DeleteTask ; 0x200050a8
+        0x2000871a:    e014        ..      B        0x20008746 ; vTaskDelete + 174
+        0x2000871c:    481f        .H      LDR      r0,[pc,#124] ; [0x2000879c] = 0x20010040
+        0x2000871e:    6800        .h      LDR      r0,[r0,#0]
+        0x20008720:    1e40        @.      SUBS     r0,r0,#1
+        0x20008722:    491e        .I      LDR      r1,[pc,#120] ; [0x2000879c] = 0x20010040
+        0x20008724:    6008        .`      STR      r0,[r1,#0]
+        0x20008726:    4620         F      MOV      r0,r4
+        0x20008728:    f7fcfb80    ....    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
+        0x2000872c:    4606        .F      MOV      r6,r0
+        0x2000872e:    4631        1F      MOV      r1,r6
+        0x20008730:    2022        "       MOVS     r0,#0x22
+        0x20008732:    f7fcf8f7    ....    BL       SEGGER_SYSVIEW_RecordU32 ; 0x20004924
+        0x20008736:    4620         F      MOV      r0,r4
+        0x20008738:    f7fcfcb6    ....    BL       SYSVIEW_DeleteTask ; 0x200050a8
+        0x2000873c:    4620         F      MOV      r0,r4
+        0x2000873e:    f7feff7f    ....    BL       prvDeleteTCB ; 0x20007640
+        0x20008742:    f7fffa4d    ..M.    BL       prvResetNextTaskUnblockTime ; 0x20007be0
+        0x20008746:    f7fffe0f    ....    BL       vPortExitCritical ; 0x20008368
+        0x2000874a:    4815        .H      LDR      r0,[pc,#84] ; [0x200087a0] = 0x2001004c
+        0x2000874c:    6800        .h      LDR      r0,[r0,#0]
+        0x2000874e:    b1c0        ..      CBZ      r0,0x20008782 ; vTaskDelete + 234
+        0x20008750:    480c        .H      LDR      r0,[pc,#48] ; [0x20008784] = 0x20010030
+        0x20008752:    6800        .h      LDR      r0,[r0,#0]
+        0x20008754:    4284        .B      CMP      r4,r0
+        0x20008756:    d114        ..      BNE      0x20008782 ; vTaskDelete + 234
+        0x20008758:    4812        .H      LDR      r0,[pc,#72] ; [0x200087a4] = 0x2001006c
+        0x2000875a:    6800        .h      LDR      r0,[r0,#0]
+        0x2000875c:    b908        ..      CBNZ     r0,0x20008762 ; vTaskDelete + 202
+        0x2000875e:    2001        .       MOVS     r0,#1
+        0x20008760:    e000        ..      B        0x20008764 ; vTaskDelete + 204
+        0x20008762:    2000        .       MOVS     r0,#0
+        0x20008764:    b928        (.      CBNZ     r0,0x20008772 ; vTaskDelete + 218
+        0x20008766:    f24042dd    @..B    MOV      r2,#0x4dd
+        0x2000876a:    a10f        ..      ADR      r1,{pc}+0x3e ; 0x200087a8
+        0x2000876c:    a013        ..      ADR      r0,{pc}+0x50 ; 0x200087bc
+        0x2000876e:    f7fdff1b    ....    BL       __0printf ; 0x200065a8
+        0x20008772:    f04f5080    O..P    MOV      r0,#0x10000000
+        0x20008776:    4915        .I      LDR      r1,[pc,#84] ; [0x200087cc] = 0xe000ed04
+        0x20008778:    6008        .`      STR      r0,[r1,#0]
+        0x2000877a:    f3bf8f4f    ..O.    DSB      
+        0x2000877e:    f3bf8f6f    ..o.    ISB      
+        0x20008782:    bd70        p.      POP      {r4-r6,pc}
     $d
-        0x20008622:    0000        ..      DCW    0
-        0x20008624:    20010030    0..     DCD    536936496
-        0x20008628:    20010310    ...     DCD    536937232
-        0x2000862c:    20010048    H..     DCD    536936520
-        0x20008630:    2001005c    \..     DCD    536936540
-        0x20008634:    200103b0    ...     DCD    536937392
-        0x20008638:    2001003c    <..     DCD    536936508
-        0x2000863c:    20010040    @..     DCD    536936512
-        0x20008640:    2001004c    L..     DCD    536936524
-        0x20008644:    2001006c    l..     DCD    536936556
-        0x20008648:    e000ed04    ....    DCD    3758157060
+        0x20008784:    20010030    0..     DCD    536936496
+        0x20008788:    20010310    ...     DCD    536937232
+        0x2000878c:    20010048    H..     DCD    536936520
+        0x20008790:    2001005c    \..     DCD    536936540
+        0x20008794:    200103b0    ...     DCD    536937392
+        0x20008798:    2001003c    <..     DCD    536936508
+        0x2000879c:    20010040    @..     DCD    536936512
+        0x200087a0:    2001004c    L..     DCD    536936524
+        0x200087a4:    2001006c    l..     DCD    536936556
+        0x200087a8:    465c2e2e    ..\F    DCD    1180446254
+        0x200087ac:    52656572    reeR    DCD    1382376818
+        0x200087b0:    5c534f54    TOS\    DCD    1548963668
+        0x200087b4:    6b736174    task    DCD    1802723700
+        0x200087b8:    00632e73    s.c.    DCD    6499955
+        0x200087bc:    6f727245    Erro    DCD    1869771333
+        0x200087c0:    25203a72    r: %    DCD    622869106
+        0x200087c4:    25202c73    s, %    DCD    622865523
+        0x200087c8:    000a0d64    d...    DCD    658788
+        0x200087cc:    e000ed04    ....    DCD    3758157060
     $t
     i.vTaskInternalSetTimeOutState
     vTaskInternalSetTimeOutState
-        0x2000864c:    4903        .I      LDR      r1,[pc,#12] ; [0x2000865c] = 0x20010058
-        0x2000864e:    6809        .h      LDR      r1,[r1,#0]
-        0x20008650:    6001        .`      STR      r1,[r0,#0]
-        0x20008652:    4903        .I      LDR      r1,[pc,#12] ; [0x20008660] = 0x20010044
-        0x20008654:    6809        .h      LDR      r1,[r1,#0]
-        0x20008656:    6041        A`      STR      r1,[r0,#4]
-        0x20008658:    4770        pG      BX       lr
+        0x200087d0:    4903        .I      LDR      r1,[pc,#12] ; [0x200087e0] = 0x20010058
+        0x200087d2:    6809        .h      LDR      r1,[r1,#0]
+        0x200087d4:    6001        .`      STR      r1,[r0,#0]
+        0x200087d6:    4903        .I      LDR      r1,[pc,#12] ; [0x200087e4] = 0x20010044
+        0x200087d8:    6809        .h      LDR      r1,[r1,#0]
+        0x200087da:    6041        A`      STR      r1,[r0,#4]
+        0x200087dc:    4770        pG      BX       lr
     $d
-        0x2000865a:    0000        ..      DCW    0
-        0x2000865c:    20010058    X..     DCD    536936536
-        0x20008660:    20010044    D..     DCD    536936516
+        0x200087de:    0000        ..      DCW    0
+        0x200087e0:    20010058    X..     DCD    536936536
+        0x200087e4:    20010044    D..     DCD    536936516
     $t
     i.vTaskMissedYield
     vTaskMissedYield
-        0x20008664:    2001        .       MOVS     r0,#1
-        0x20008666:    4901        .I      LDR      r1,[pc,#4] ; [0x2000866c] = 0x20010054
-        0x20008668:    6008        .`      STR      r0,[r1,#0]
-        0x2000866a:    4770        pG      BX       lr
+        0x200087e8:    2001        .       MOVS     r0,#1
+        0x200087ea:    4901        .I      LDR      r1,[pc,#4] ; [0x200087f0] = 0x20010054
+        0x200087ec:    6008        .`      STR      r0,[r1,#0]
+        0x200087ee:    4770        pG      BX       lr
     $d
-        0x2000866c:    20010054    T..     DCD    536936532
+        0x200087f0:    20010054    T..     DCD    536936532
     $t
     i.vTaskPlaceOnEventList
     vTaskPlaceOnEventList
-        0x20008670:    b570        p.      PUSH     {r4-r6,lr}
-        0x20008672:    4604        .F      MOV      r4,r0
-        0x20008674:    460d        .F      MOV      r5,r1
-        0x20008676:    b954        T.      CBNZ     r4,0x2000868e ; vTaskPlaceOnEventList + 30
-        0x20008678:    bf00        ..      NOP      
-        0x2000867a:    2050        P       MOVS     r0,#0x50
-        0x2000867c:    f3808811    ....    MSR      BASEPRI,r0
-        0x20008680:    f3bf8f4f    ..O.    DSB      
-        0x20008684:    f3bf8f6f    ..o.    ISB      
-        0x20008688:    bf00        ..      NOP      
-        0x2000868a:    bf00        ..      NOP      
-        0x2000868c:    e7fe        ..      B        0x2000868c ; vTaskPlaceOnEventList + 28
-        0x2000868e:    4805        .H      LDR      r0,[pc,#20] ; [0x200086a4] = 0x20010030
-        0x20008690:    6801        .h      LDR      r1,[r0,#0]
-        0x20008692:    3118        .1      ADDS     r1,r1,#0x18
-        0x20008694:    4620         F      MOV      r0,r4
-        0x20008696:    f7fffda7    ....    BL       vListInsert ; 0x200081e8
-        0x2000869a:    2101        .!      MOVS     r1,#1
-        0x2000869c:    4628        (F      MOV      r0,r5
-        0x2000869e:    f7fefe5b    ..[.    BL       prvAddCurrentTaskToDelayedList ; 0x20007358
-        0x200086a2:    bd70        p.      POP      {r4-r6,pc}
+        0x200087f4:    b570        p.      PUSH     {r4-r6,lr}
+        0x200087f6:    4604        .F      MOV      r4,r0
+        0x200087f8:    460d        .F      MOV      r5,r1
+        0x200087fa:    b92c        ,.      CBNZ     r4,0x20008808 ; vTaskPlaceOnEventList + 20
+        0x200087fc:    f640421e    @..B    MOV      r2,#0xc1e
+        0x20008800:    a107        ..      ADR      r1,{pc}+0x20 ; 0x20008820
+        0x20008802:    a00c        ..      ADR      r0,{pc}+0x32 ; 0x20008834
+        0x20008804:    f7fdfed0    ....    BL       __0printf ; 0x200065a8
+        0x20008808:    480e        .H      LDR      r0,[pc,#56] ; [0x20008844] = 0x20010030
+        0x2000880a:    6801        .h      LDR      r1,[r0,#0]
+        0x2000880c:    3118        .1      ADDS     r1,r1,#0x18
+        0x2000880e:    4620         F      MOV      r0,r4
+        0x20008810:    f7fffd48    ..H.    BL       vListInsert ; 0x200082a4
+        0x20008814:    2101        .!      MOVS     r1,#1
+        0x20008816:    4628        (F      MOV      r0,r5
+        0x20008818:    f7fefd9e    ....    BL       prvAddCurrentTaskToDelayedList ; 0x20007358
+        0x2000881c:    bd70        p.      POP      {r4-r6,pc}
     $d
-        0x200086a4:    20010030    0..     DCD    536936496
+        0x2000881e:    0000        ..      DCW    0
+        0x20008820:    465c2e2e    ..\F    DCD    1180446254
+        0x20008824:    52656572    reeR    DCD    1382376818
+        0x20008828:    5c534f54    TOS\    DCD    1548963668
+        0x2000882c:    6b736174    task    DCD    1802723700
+        0x20008830:    00632e73    s.c.    DCD    6499955
+        0x20008834:    6f727245    Erro    DCD    1869771333
+        0x20008838:    25203a72    r: %    DCD    622869106
+        0x2000883c:    25202c73    s, %    DCD    622865523
+        0x20008840:    000a0d64    d...    DCD    658788
+        0x20008844:    20010030    0..     DCD    536936496
     $t
     i.vTaskPlaceOnEventListRestricted
     vTaskPlaceOnEventListRestricted
-        0x200086a8:    b570        p.      PUSH     {r4-r6,lr}
-        0x200086aa:    4605        .F      MOV      r5,r0
-        0x200086ac:    460e        .F      MOV      r6,r1
-        0x200086ae:    4614        .F      MOV      r4,r2
-        0x200086b0:    b955        U.      CBNZ     r5,0x200086c8 ; vTaskPlaceOnEventListRestricted + 32
-        0x200086b2:    bf00        ..      NOP      
-        0x200086b4:    2050        P       MOVS     r0,#0x50
-        0x200086b6:    f3808811    ....    MSR      BASEPRI,r0
-        0x200086ba:    f3bf8f4f    ..O.    DSB      
-        0x200086be:    f3bf8f6f    ..o.    ISB      
-        0x200086c2:    bf00        ..      NOP      
-        0x200086c4:    bf00        ..      NOP      
-        0x200086c6:    e7fe        ..      B        0x200086c6 ; vTaskPlaceOnEventListRestricted + 30
-        0x200086c8:    4808        .H      LDR      r0,[pc,#32] ; [0x200086ec] = 0x20010030
-        0x200086ca:    6801        .h      LDR      r1,[r0,#0]
-        0x200086cc:    3118        .1      ADDS     r1,r1,#0x18
-        0x200086ce:    4628        (F      MOV      r0,r5
-        0x200086d0:    f7fffda4    ....    BL       vListInsertEnd ; 0x2000821c
-        0x200086d4:    b10c        ..      CBZ      r4,0x200086da ; vTaskPlaceOnEventListRestricted + 50
-        0x200086d6:    f04f36ff    O..6    MOV      r6,#0xffffffff
-        0x200086da:    2024        $       MOVS     r0,#0x24
-        0x200086dc:    f7fcfa36    ..6.    BL       SEGGER_SYSVIEW_RecordVoid ; 0x20004b4c
-        0x200086e0:    4621        !F      MOV      r1,r4
-        0x200086e2:    4630        0F      MOV      r0,r6
-        0x200086e4:    f7fefe38    ..8.    BL       prvAddCurrentTaskToDelayedList ; 0x20007358
-        0x200086e8:    bd70        p.      POP      {r4-r6,pc}
+        0x20008848:    b570        p.      PUSH     {r4-r6,lr}
+        0x2000884a:    4605        .F      MOV      r5,r0
+        0x2000884c:    460e        .F      MOV      r6,r1
+        0x2000884e:    4614        .F      MOV      r4,r2
+        0x20008850:    b92d        -.      CBNZ     r5,0x2000885e ; vTaskPlaceOnEventListRestricted + 22
+        0x20008852:    f640424d    @.MB    MOV      r2,#0xc4d
+        0x20008856:    a10a        ..      ADR      r1,{pc}+0x2a ; 0x20008880
+        0x20008858:    a00e        ..      ADR      r0,{pc}+0x3c ; 0x20008894
+        0x2000885a:    f7fdfea5    ....    BL       __0printf ; 0x200065a8
+        0x2000885e:    4811        .H      LDR      r0,[pc,#68] ; [0x200088a4] = 0x20010030
+        0x20008860:    6801        .h      LDR      r1,[r0,#0]
+        0x20008862:    3118        .1      ADDS     r1,r1,#0x18
+        0x20008864:    4628        (F      MOV      r0,r5
+        0x20008866:    f7fffd37    ..7.    BL       vListInsertEnd ; 0x200082d8
+        0x2000886a:    b10c        ..      CBZ      r4,0x20008870 ; vTaskPlaceOnEventListRestricted + 40
+        0x2000886c:    f04f36ff    O..6    MOV      r6,#0xffffffff
+        0x20008870:    2024        $       MOVS     r0,#0x24
+        0x20008872:    f7fcf96b    ..k.    BL       SEGGER_SYSVIEW_RecordVoid ; 0x20004b4c
+        0x20008876:    4621        !F      MOV      r1,r4
+        0x20008878:    4630        0F      MOV      r0,r6
+        0x2000887a:    f7fefd6d    ..m.    BL       prvAddCurrentTaskToDelayedList ; 0x20007358
+        0x2000887e:    bd70        p.      POP      {r4-r6,pc}
     $d
-        0x200086ea:    0000        ..      DCW    0
-        0x200086ec:    20010030    0..     DCD    536936496
+        0x20008880:    465c2e2e    ..\F    DCD    1180446254
+        0x20008884:    52656572    reeR    DCD    1382376818
+        0x20008888:    5c534f54    TOS\    DCD    1548963668
+        0x2000888c:    6b736174    task    DCD    1802723700
+        0x20008890:    00632e73    s.c.    DCD    6499955
+        0x20008894:    6f727245    Erro    DCD    1869771333
+        0x20008898:    25203a72    r: %    DCD    622869106
+        0x2000889c:    25202c73    s, %    DCD    622865523
+        0x200088a0:    000a0d64    d...    DCD    658788
+        0x200088a4:    20010030    0..     DCD    536936496
     $t
     i.vTaskStartScheduler
     vTaskStartScheduler
-        0x200086f0:    b51c        ..      PUSH     {r2-r4,lr}
-        0x200086f2:    4825        %H      LDR      r0,[pc,#148] ; [0x20008788] = 0x20010064
-        0x200086f4:    2100        .!      MOVS     r1,#0
-        0x200086f6:    460b        .F      MOV      r3,r1
-        0x200086f8:    f44f7280    O..r    MOV      r2,#0x100
-        0x200086fc:    e9cd1000    ....    STRD     r1,r0,[sp,#0]
-        0x20008700:    a122        ".      ADR      r1,{pc}+0x8c ; 0x2000878c
-        0x20008702:    4824        $H      LDR      r0,[pc,#144] ; [0x20008794] = 0x200076f9
-        0x20008704:    f000fcc8    ....    BL       xTaskCreate ; 0x20009098
-        0x20008708:    4604        .F      MOV      r4,r0
-        0x2000870a:    2c01        .,      CMP      r4,#1
-        0x2000870c:    d102        ..      BNE      0x20008714 ; vTaskStartScheduler + 36
-        0x2000870e:    f000fef3    ....    BL       xTimerCreateTimerTask ; 0x200094f8
-        0x20008712:    4604        .F      MOV      r4,r0
-        0x20008714:    2c01        .,      CMP      r4,#1
-        0x20008716:    d122        ".      BNE      0x2000875e ; vTaskStartScheduler + 110
-        0x20008718:    bf00        ..      NOP      
-        0x2000871a:    2050        P       MOVS     r0,#0x50
-        0x2000871c:    f3808811    ....    MSR      BASEPRI,r0
-        0x20008720:    f3bf8f4f    ..O.    DSB      
-        0x20008724:    f3bf8f6f    ..o.    ISB      
-        0x20008728:    bf00        ..      NOP      
-        0x2000872a:    f04f30ff    O..0    MOV      r0,#0xffffffff
-        0x2000872e:    491a        .I      LDR      r1,[pc,#104] ; [0x20008798] = 0x20010060
-        0x20008730:    6008        .`      STR      r0,[r1,#0]
-        0x20008732:    2001        .       MOVS     r0,#1
-        0x20008734:    4919        .I      LDR      r1,[pc,#100] ; [0x2000879c] = 0x2001004c
-        0x20008736:    6008        .`      STR      r0,[r1,#0]
-        0x20008738:    2000        .       MOVS     r0,#0
-        0x2000873a:    4919        .I      LDR      r1,[pc,#100] ; [0x200087a0] = 0x20010044
-        0x2000873c:    6008        .`      STR      r0,[r1,#0]
-        0x2000873e:    4819        .H      LDR      r0,[pc,#100] ; [0x200087a4] = 0x20010030
-        0x20008740:    6800        .h      LDR      r0,[r0,#0]
-        0x20008742:    4911        .I      LDR      r1,[pc,#68] ; [0x20008788] = 0x20010064
-        0x20008744:    6809        .h      LDR      r1,[r1,#0]
-        0x20008746:    4288        .B      CMP      r0,r1
-        0x20008748:    d102        ..      BNE      0x20008750 ; vTaskStartScheduler + 96
-        0x2000874a:    f7fbff75    ..u.    BL       SEGGER_SYSVIEW_OnIdle ; 0x20004638
-        0x2000874e:    e003        ..      B        0x20008758 ; vTaskStartScheduler + 104
-        0x20008750:    4814        .H      LDR      r0,[pc,#80] ; [0x200087a4] = 0x20010030
-        0x20008752:    6800        .h      LDR      r0,[r0,#0]
-        0x20008754:    f7fbffbc    ....    BL       SEGGER_SYSVIEW_OnTaskStartExec ; 0x200046d0
-        0x20008758:    f000f884    ....    BL       xPortStartScheduler ; 0x20008864
-        0x2000875c:    e010        ..      B        0x20008780 ; vTaskStartScheduler + 144
-        0x2000875e:    1c60        `.      ADDS     r0,r4,#1
-        0x20008760:    b108        ..      CBZ      r0,0x20008766 ; vTaskStartScheduler + 118
-        0x20008762:    2001        .       MOVS     r0,#1
-        0x20008764:    e000        ..      B        0x20008768 ; vTaskStartScheduler + 120
-        0x20008766:    2000        .       MOVS     r0,#0
-        0x20008768:    b950        P.      CBNZ     r0,0x20008780 ; vTaskStartScheduler + 144
-        0x2000876a:    bf00        ..      NOP      
-        0x2000876c:    2050        P       MOVS     r0,#0x50
-        0x2000876e:    f3808811    ....    MSR      BASEPRI,r0
-        0x20008772:    f3bf8f4f    ..O.    DSB      
-        0x20008776:    f3bf8f6f    ..o.    ISB      
-        0x2000877a:    bf00        ..      NOP      
-        0x2000877c:    bf00        ..      NOP      
-        0x2000877e:    e7fe        ..      B        0x2000877e ; vTaskStartScheduler + 142
-        0x20008780:    4809        .H      LDR      r0,[pc,#36] ; [0x200087a8] = 0x20010068
-        0x20008782:    6800        .h      LDR      r0,[r0,#0]
-        0x20008784:    bd1c        ..      POP      {r2-r4,pc}
+        0x200088a8:    b51c        ..      PUSH     {r2-r4,lr}
+        0x200088aa:    4822        "H      LDR      r0,[pc,#136] ; [0x20008934] = 0x20010064
+        0x200088ac:    2100        .!      MOVS     r1,#0
+        0x200088ae:    460b        .F      MOV      r3,r1
+        0x200088b0:    f44f7280    O..r    MOV      r2,#0x100
+        0x200088b4:    e9cd1000    ....    STRD     r1,r0,[sp,#0]
+        0x200088b8:    a11f        ..      ADR      r1,{pc}+0x80 ; 0x20008938
+        0x200088ba:    4821        !H      LDR      r0,[pc,#132] ; [0x20008940] = 0x200076f9
+        0x200088bc:    f000fd1a    ....    BL       xTaskCreate ; 0x200092f4
+        0x200088c0:    4604        .F      MOV      r4,r0
+        0x200088c2:    2c01        .,      CMP      r4,#1
+        0x200088c4:    d102        ..      BNE      0x200088cc ; vTaskStartScheduler + 36
+        0x200088c6:    f000ff71    ..q.    BL       xTimerCreateTimerTask ; 0x200097ac
+        0x200088ca:    4604        .F      MOV      r4,r0
+        0x200088cc:    2c01        .,      CMP      r4,#1
+        0x200088ce:    d122        ".      BNE      0x20008916 ; vTaskStartScheduler + 110
+        0x200088d0:    bf00        ..      NOP      
+        0x200088d2:    2050        P       MOVS     r0,#0x50
+        0x200088d4:    f3808811    ....    MSR      BASEPRI,r0
+        0x200088d8:    f3bf8f4f    ..O.    DSB      
+        0x200088dc:    f3bf8f6f    ..o.    ISB      
+        0x200088e0:    bf00        ..      NOP      
+        0x200088e2:    f04f30ff    O..0    MOV      r0,#0xffffffff
+        0x200088e6:    4917        .I      LDR      r1,[pc,#92] ; [0x20008944] = 0x20010060
+        0x200088e8:    6008        .`      STR      r0,[r1,#0]
+        0x200088ea:    2001        .       MOVS     r0,#1
+        0x200088ec:    4916        .I      LDR      r1,[pc,#88] ; [0x20008948] = 0x2001004c
+        0x200088ee:    6008        .`      STR      r0,[r1,#0]
+        0x200088f0:    2000        .       MOVS     r0,#0
+        0x200088f2:    4916        .I      LDR      r1,[pc,#88] ; [0x2000894c] = 0x20010044
+        0x200088f4:    6008        .`      STR      r0,[r1,#0]
+        0x200088f6:    4816        .H      LDR      r0,[pc,#88] ; [0x20008950] = 0x20010030
+        0x200088f8:    6800        .h      LDR      r0,[r0,#0]
+        0x200088fa:    490e        .I      LDR      r1,[pc,#56] ; [0x20008934] = 0x20010064
+        0x200088fc:    6809        .h      LDR      r1,[r1,#0]
+        0x200088fe:    4288        .B      CMP      r0,r1
+        0x20008900:    d102        ..      BNE      0x20008908 ; vTaskStartScheduler + 96
+        0x20008902:    f7fbfe99    ....    BL       SEGGER_SYSVIEW_OnIdle ; 0x20004638
+        0x20008906:    e003        ..      B        0x20008910 ; vTaskStartScheduler + 104
+        0x20008908:    4811        .H      LDR      r0,[pc,#68] ; [0x20008950] = 0x20010030
+        0x2000890a:    6800        .h      LDR      r0,[r0,#0]
+        0x2000890c:    f7fbfee0    ....    BL       SEGGER_SYSVIEW_OnTaskStartExec ; 0x200046d0
+        0x20008910:    f000f8b8    ....    BL       xPortStartScheduler ; 0x20008a84
+        0x20008914:    e00b        ..      B        0x2000892e ; vTaskStartScheduler + 134
+        0x20008916:    1c60        `.      ADDS     r0,r4,#1
+        0x20008918:    b108        ..      CBZ      r0,0x2000891e ; vTaskStartScheduler + 118
+        0x2000891a:    2001        .       MOVS     r0,#1
+        0x2000891c:    e000        ..      B        0x20008920 ; vTaskStartScheduler + 120
+        0x2000891e:    2000        .       MOVS     r0,#0
+        0x20008920:    b928        (.      CBNZ     r0,0x2000892e ; vTaskStartScheduler + 134
+        0x20008922:    f6400243    @.C.    MOV      r2,#0x843
+        0x20008926:    a10b        ..      ADR      r1,{pc}+0x2e ; 0x20008954
+        0x20008928:    a00f        ..      ADR      r0,{pc}+0x40 ; 0x20008968
+        0x2000892a:    f7fdfe3d    ..=.    BL       __0printf ; 0x200065a8
+        0x2000892e:    4812        .H      LDR      r0,[pc,#72] ; [0x20008978] = 0x20010068
+        0x20008930:    6800        .h      LDR      r0,[r0,#0]
+        0x20008932:    bd1c        ..      POP      {r2-r4,pc}
     $d
-        0x20008786:    0000        ..      DCW    0
-        0x20008788:    20010064    d..     DCD    536936548
-        0x2000878c:    454c4449    IDLE    DCD    1162626121
-        0x20008790:    00000000    ....    DCD    0
-        0x20008794:    200076f9    .v.     DCD    536901369
-        0x20008798:    20010060    `..     DCD    536936544
-        0x2000879c:    2001004c    L..     DCD    536936524
-        0x200087a0:    20010044    D..     DCD    536936516
-        0x200087a4:    20010030    0..     DCD    536936496
-        0x200087a8:    20010068    h..     DCD    536936552
+        0x20008934:    20010064    d..     DCD    536936548
+        0x20008938:    454c4449    IDLE    DCD    1162626121
+        0x2000893c:    00000000    ....    DCD    0
+        0x20008940:    200076f9    .v.     DCD    536901369
+        0x20008944:    20010060    `..     DCD    536936544
+        0x20008948:    2001004c    L..     DCD    536936524
+        0x2000894c:    20010044    D..     DCD    536936516
+        0x20008950:    20010030    0..     DCD    536936496
+        0x20008954:    465c2e2e    ..\F    DCD    1180446254
+        0x20008958:    52656572    reeR    DCD    1382376818
+        0x2000895c:    5c534f54    TOS\    DCD    1548963668
+        0x20008960:    6b736174    task    DCD    1802723700
+        0x20008964:    00632e73    s.c.    DCD    6499955
+        0x20008968:    6f727245    Erro    DCD    1869771333
+        0x2000896c:    25203a72    r: %    DCD    622869106
+        0x20008970:    25202c73    s, %    DCD    622865523
+        0x20008974:    000a0d64    d...    DCD    658788
+        0x20008978:    20010068    h..     DCD    536936552
     $t
     i.vTaskSuspendAll
     vTaskSuspendAll
-        0x200087ac:    4802        .H      LDR      r0,[pc,#8] ; [0x200087b8] = 0x2001006c
-        0x200087ae:    6800        .h      LDR      r0,[r0,#0]
-        0x200087b0:    1c40        @.      ADDS     r0,r0,#1
-        0x200087b2:    4901        .I      LDR      r1,[pc,#4] ; [0x200087b8] = 0x2001006c
-        0x200087b4:    6008        .`      STR      r0,[r1,#0]
-        0x200087b6:    4770        pG      BX       lr
+        0x2000897c:    4802        .H      LDR      r0,[pc,#8] ; [0x20008988] = 0x2001006c
+        0x2000897e:    6800        .h      LDR      r0,[r0,#0]
+        0x20008980:    1c40        @.      ADDS     r0,r0,#1
+        0x20008982:    4901        .I      LDR      r1,[pc,#4] ; [0x20008988] = 0x2001006c
+        0x20008984:    6008        .`      STR      r0,[r1,#0]
+        0x20008986:    4770        pG      BX       lr
     $d
-        0x200087b8:    2001006c    l..     DCD    536936556
+        0x20008988:    2001006c    l..     DCD    536936556
     $t
     i.vTaskSwitchContext
     vTaskSwitchContext
-        0x200087bc:    b510        ..      PUSH     {r4,lr}
-        0x200087be:    4823        #H      LDR      r0,[pc,#140] ; [0x2000884c] = 0x2001006c
-        0x200087c0:    6800        .h      LDR      r0,[r0,#0]
-        0x200087c2:    b118        ..      CBZ      r0,0x200087cc ; vTaskSwitchContext + 16
-        0x200087c4:    2001        .       MOVS     r0,#1
-        0x200087c6:    4922        "I      LDR      r1,[pc,#136] ; [0x20008850] = 0x20010054
-        0x200087c8:    6008        .`      STR      r0,[r1,#0]
-        0x200087ca:    e03e        >.      B        0x2000884a ; vTaskSwitchContext + 142
-        0x200087cc:    2000        .       MOVS     r0,#0
-        0x200087ce:    4920         I      LDR      r1,[pc,#128] ; [0x20008850] = 0x20010054
-        0x200087d0:    6008        .`      STR      r0,[r1,#0]
-        0x200087d2:    4820         H      LDR      r0,[pc,#128] ; [0x20008854] = 0x20010048
-        0x200087d4:    6800        .h      LDR      r0,[r0,#0]
-        0x200087d6:    fab0f080    ....    CLZ      r0,r0
-        0x200087da:    f1c0011f    ....    RSB      r1,r0,#0x1f
-        0x200087de:    eb010081    ....    ADD      r0,r1,r1,LSL #2
-        0x200087e2:    4a1d        .J      LDR      r2,[pc,#116] ; [0x20008858] = 0x20010310
-        0x200087e4:    f8520020    R. .    LDR      r0,[r2,r0,LSL #2]
-        0x200087e8:    b108        ..      CBZ      r0,0x200087ee ; vTaskSwitchContext + 50
-        0x200087ea:    2001        .       MOVS     r0,#1
-        0x200087ec:    e000        ..      B        0x200087f0 ; vTaskSwitchContext + 52
-        0x200087ee:    2000        .       MOVS     r0,#0
-        0x200087f0:    b950        P.      CBNZ     r0,0x20008808 ; vTaskSwitchContext + 76
-        0x200087f2:    bf00        ..      NOP      
-        0x200087f4:    2050        P       MOVS     r0,#0x50
-        0x200087f6:    f3808811    ....    MSR      BASEPRI,r0
-        0x200087fa:    f3bf8f4f    ..O.    DSB      
-        0x200087fe:    f3bf8f6f    ..o.    ISB      
-        0x20008802:    bf00        ..      NOP      
-        0x20008804:    bf00        ..      NOP      
-        0x20008806:    e7fe        ..      B        0x20008806 ; vTaskSwitchContext + 74
-        0x20008808:    eb010281    ....    ADD      r2,r1,r1,LSL #2
-        0x2000880c:    4b12        .K      LDR      r3,[pc,#72] ; [0x20008858] = 0x20010310
-        0x2000880e:    eb030082    ....    ADD      r0,r3,r2,LSL #2
-        0x20008812:    6842        Bh      LDR      r2,[r0,#4]
-        0x20008814:    6852        Rh      LDR      r2,[r2,#4]
-        0x20008816:    6042        B`      STR      r2,[r0,#4]
-        0x20008818:    f1000208    ....    ADD      r2,r0,#8
-        0x2000881c:    6843        Ch      LDR      r3,[r0,#4]
-        0x2000881e:    4293        .B      CMP      r3,r2
-        0x20008820:    d102        ..      BNE      0x20008828 ; vTaskSwitchContext + 108
-        0x20008822:    6842        Bh      LDR      r2,[r0,#4]
-        0x20008824:    6852        Rh      LDR      r2,[r2,#4]
-        0x20008826:    6042        B`      STR      r2,[r0,#4]
-        0x20008828:    6842        Bh      LDR      r2,[r0,#4]
-        0x2000882a:    68d2        .h      LDR      r2,[r2,#0xc]
-        0x2000882c:    4b0b        .K      LDR      r3,[pc,#44] ; [0x2000885c] = 0x20010030
-        0x2000882e:    601a        .`      STR      r2,[r3,#0]
-        0x20008830:    4618        .F      MOV      r0,r3
-        0x20008832:    6800        .h      LDR      r0,[r0,#0]
-        0x20008834:    490a        .I      LDR      r1,[pc,#40] ; [0x20008860] = 0x20010064
-        0x20008836:    6809        .h      LDR      r1,[r1,#0]
-        0x20008838:    4288        .B      CMP      r0,r1
-        0x2000883a:    d102        ..      BNE      0x20008842 ; vTaskSwitchContext + 134
-        0x2000883c:    f7fbfefc    ....    BL       SEGGER_SYSVIEW_OnIdle ; 0x20004638
-        0x20008840:    e003        ..      B        0x2000884a ; vTaskSwitchContext + 142
-        0x20008842:    4806        .H      LDR      r0,[pc,#24] ; [0x2000885c] = 0x20010030
-        0x20008844:    6800        .h      LDR      r0,[r0,#0]
-        0x20008846:    f7fbff43    ..C.    BL       SEGGER_SYSVIEW_OnTaskStartExec ; 0x200046d0
-        0x2000884a:    bd10        ..      POP      {r4,pc}
+        0x2000898c:    b570        p.      PUSH     {r4-r6,lr}
+        0x2000898e:    482e        .H      LDR      r0,[pc,#184] ; [0x20008a48] = 0x2001006c
+        0x20008990:    6800        .h      LDR      r0,[r0,#0]
+        0x20008992:    b118        ..      CBZ      r0,0x2000899c ; vTaskSwitchContext + 16
+        0x20008994:    2001        .       MOVS     r0,#1
+        0x20008996:    492d        -I      LDR      r1,[pc,#180] ; [0x20008a4c] = 0x20010054
+        0x20008998:    6008        .`      STR      r0,[r1,#0]
+        0x2000899a:    e054        T.      B        0x20008a46 ; vTaskSwitchContext + 186
+        0x2000899c:    2000        .       MOVS     r0,#0
+        0x2000899e:    492b        +I      LDR      r1,[pc,#172] ; [0x20008a4c] = 0x20010054
+        0x200089a0:    6008        .`      STR      r0,[r1,#0]
+        0x200089a2:    482b        +H      LDR      r0,[pc,#172] ; [0x20008a50] = 0x20010030
+        0x200089a4:    6800        .h      LDR      r0,[r0,#0]
+        0x200089a6:    6b04        .k      LDR      r4,[r0,#0x30]
+        0x200089a8:    f04f35a5    O..5    MOV      r5,#0xa5a5a5a5
+        0x200089ac:    6820         h      LDR      r0,[r4,#0]
+        0x200089ae:    f1b03fa5    ...?    CMP      r0,#0xa5a5a5a5
+        0x200089b2:    d10b        ..      BNE      0x200089cc ; vTaskSwitchContext + 64
+        0x200089b4:    6860        `h      LDR      r0,[r4,#4]
+        0x200089b6:    f1b03fa5    ...?    CMP      r0,#0xa5a5a5a5
+        0x200089ba:    d107        ..      BNE      0x200089cc ; vTaskSwitchContext + 64
+        0x200089bc:    68a0        .h      LDR      r0,[r4,#8]
+        0x200089be:    f1b03fa5    ...?    CMP      r0,#0xa5a5a5a5
+        0x200089c2:    d103        ..      BNE      0x200089cc ; vTaskSwitchContext + 64
+        0x200089c4:    68e0        .h      LDR      r0,[r4,#0xc]
+        0x200089c6:    f1b03fa5    ...?    CMP      r0,#0xa5a5a5a5
+        0x200089ca:    d005        ..      BEQ      0x200089d8 ; vTaskSwitchContext + 76
+        0x200089cc:    4820         H      LDR      r0,[pc,#128] ; [0x20008a50] = 0x20010030
+        0x200089ce:    6801        .h      LDR      r1,[r0,#0]
+        0x200089d0:    3134        41      ADDS     r1,r1,#0x34
+        0x200089d2:    6800        .h      LDR      r0,[r0,#0]
+        0x200089d4:    f7fffc42    ..B.    BL       vApplicationStackOverflowHook ; 0x2000825c
+        0x200089d8:    481e        .H      LDR      r0,[pc,#120] ; [0x20008a54] = 0x20010048
+        0x200089da:    6800        .h      LDR      r0,[r0,#0]
+        0x200089dc:    fab0f080    ....    CLZ      r0,r0
+        0x200089e0:    f1c0041f    ....    RSB      r4,r0,#0x1f
+        0x200089e4:    eb040084    ....    ADD      r0,r4,r4,LSL #2
+        0x200089e8:    491b        .I      LDR      r1,[pc,#108] ; [0x20008a58] = 0x20010310
+        0x200089ea:    f8510020    Q. .    LDR      r0,[r1,r0,LSL #2]
+        0x200089ee:    b108        ..      CBZ      r0,0x200089f4 ; vTaskSwitchContext + 104
+        0x200089f0:    2001        .       MOVS     r0,#1
+        0x200089f2:    e000        ..      B        0x200089f6 ; vTaskSwitchContext + 106
+        0x200089f4:    2000        .       MOVS     r0,#0
+        0x200089f6:    b928        (.      CBNZ     r0,0x20008a04 ; vTaskSwitchContext + 120
+        0x200089f8:    f6404204    @..B    MOV      r2,#0xc04
+        0x200089fc:    a117        ..      ADR      r1,{pc}+0x60 ; 0x20008a5c
+        0x200089fe:    a01c        ..      ADR      r0,{pc}+0x72 ; 0x20008a70
+        0x20008a00:    f7fdfdd2    ....    BL       __0printf ; 0x200065a8
+        0x20008a04:    eb040184    ....    ADD      r1,r4,r4,LSL #2
+        0x20008a08:    4a13        .J      LDR      r2,[pc,#76] ; [0x20008a58] = 0x20010310
+        0x20008a0a:    eb020081    ....    ADD      r0,r2,r1,LSL #2
+        0x20008a0e:    6841        Ah      LDR      r1,[r0,#4]
+        0x20008a10:    6849        Ih      LDR      r1,[r1,#4]
+        0x20008a12:    6041        A`      STR      r1,[r0,#4]
+        0x20008a14:    f1000108    ....    ADD      r1,r0,#8
+        0x20008a18:    6842        Bh      LDR      r2,[r0,#4]
+        0x20008a1a:    428a        .B      CMP      r2,r1
+        0x20008a1c:    d102        ..      BNE      0x20008a24 ; vTaskSwitchContext + 152
+        0x20008a1e:    6841        Ah      LDR      r1,[r0,#4]
+        0x20008a20:    6849        Ih      LDR      r1,[r1,#4]
+        0x20008a22:    6041        A`      STR      r1,[r0,#4]
+        0x20008a24:    6841        Ah      LDR      r1,[r0,#4]
+        0x20008a26:    68c9        .h      LDR      r1,[r1,#0xc]
+        0x20008a28:    4a09        .J      LDR      r2,[pc,#36] ; [0x20008a50] = 0x20010030
+        0x20008a2a:    6011        .`      STR      r1,[r2,#0]
+        0x20008a2c:    4610        .F      MOV      r0,r2
+        0x20008a2e:    6800        .h      LDR      r0,[r0,#0]
+        0x20008a30:    4913        .I      LDR      r1,[pc,#76] ; [0x20008a80] = 0x20010064
+        0x20008a32:    6809        .h      LDR      r1,[r1,#0]
+        0x20008a34:    4288        .B      CMP      r0,r1
+        0x20008a36:    d102        ..      BNE      0x20008a3e ; vTaskSwitchContext + 178
+        0x20008a38:    f7fbfdfe    ....    BL       SEGGER_SYSVIEW_OnIdle ; 0x20004638
+        0x20008a3c:    e003        ..      B        0x20008a46 ; vTaskSwitchContext + 186
+        0x20008a3e:    4804        .H      LDR      r0,[pc,#16] ; [0x20008a50] = 0x20010030
+        0x20008a40:    6800        .h      LDR      r0,[r0,#0]
+        0x20008a42:    f7fbfe45    ..E.    BL       SEGGER_SYSVIEW_OnTaskStartExec ; 0x200046d0
+        0x20008a46:    bd70        p.      POP      {r4-r6,pc}
     $d
-        0x2000884c:    2001006c    l..     DCD    536936556
-        0x20008850:    20010054    T..     DCD    536936532
-        0x20008854:    20010048    H..     DCD    536936520
-        0x20008858:    20010310    ...     DCD    536937232
-        0x2000885c:    20010030    0..     DCD    536936496
-        0x20008860:    20010064    d..     DCD    536936548
+        0x20008a48:    2001006c    l..     DCD    536936556
+        0x20008a4c:    20010054    T..     DCD    536936532
+        0x20008a50:    20010030    0..     DCD    536936496
+        0x20008a54:    20010048    H..     DCD    536936520
+        0x20008a58:    20010310    ...     DCD    536937232
+        0x20008a5c:    465c2e2e    ..\F    DCD    1180446254
+        0x20008a60:    52656572    reeR    DCD    1382376818
+        0x20008a64:    5c534f54    TOS\    DCD    1548963668
+        0x20008a68:    6b736174    task    DCD    1802723700
+        0x20008a6c:    00632e73    s.c.    DCD    6499955
+        0x20008a70:    6f727245    Erro    DCD    1869771333
+        0x20008a74:    25203a72    r: %    DCD    622869106
+        0x20008a78:    25202c73    s, %    DCD    622865523
+        0x20008a7c:    000a0d64    d...    DCD    658788
+        0x20008a80:    20010064    d..     DCD    536936548
     $t
     i.xPortStartScheduler
     xPortStartScheduler
-        0x20008864:    b51c        ..      PUSH     {r2-r4,lr}
-        0x20008866:    4852        RH      LDR      r0,[pc,#328] ; [0x200089b0] = 0xe000ed00
-        0x20008868:    6800        .h      LDR      r0,[r0,#0]
-        0x2000886a:    4952        RI      LDR      r1,[pc,#328] ; [0x200089b4] = 0x410fc271
-        0x2000886c:    4288        .B      CMP      r0,r1
-        0x2000886e:    d001        ..      BEQ      0x20008874 ; xPortStartScheduler + 16
-        0x20008870:    2001        .       MOVS     r0,#1
-        0x20008872:    e000        ..      B        0x20008876 ; xPortStartScheduler + 18
-        0x20008874:    2000        .       MOVS     r0,#0
-        0x20008876:    b950        P.      CBNZ     r0,0x2000888e ; xPortStartScheduler + 42
-        0x20008878:    bf00        ..      NOP      
-        0x2000887a:    2050        P       MOVS     r0,#0x50
-        0x2000887c:    f3808811    ....    MSR      BASEPRI,r0
-        0x20008880:    f3bf8f4f    ..O.    DSB      
-        0x20008884:    f3bf8f6f    ..o.    ISB      
-        0x20008888:    bf00        ..      NOP      
-        0x2000888a:    bf00        ..      NOP      
-        0x2000888c:    e7fe        ..      B        0x2000888c ; xPortStartScheduler + 40
-        0x2000888e:    4848        HH      LDR      r0,[pc,#288] ; [0x200089b0] = 0xe000ed00
-        0x20008890:    6800        .h      LDR      r0,[r0,#0]
-        0x20008892:    4948        HI      LDR      r1,[pc,#288] ; [0x200089b4] = 0x410fc271
-        0x20008894:    1e49        I.      SUBS     r1,r1,#1
-        0x20008896:    4288        .B      CMP      r0,r1
-        0x20008898:    d001        ..      BEQ      0x2000889e ; xPortStartScheduler + 58
-        0x2000889a:    2001        .       MOVS     r0,#1
-        0x2000889c:    e000        ..      B        0x200088a0 ; xPortStartScheduler + 60
-        0x2000889e:    2000        .       MOVS     r0,#0
-        0x200088a0:    b950        P.      CBNZ     r0,0x200088b8 ; xPortStartScheduler + 84
-        0x200088a2:    bf00        ..      NOP      
-        0x200088a4:    2050        P       MOVS     r0,#0x50
-        0x200088a6:    f3808811    ....    MSR      BASEPRI,r0
-        0x200088aa:    f3bf8f4f    ..O.    DSB      
-        0x200088ae:    f3bf8f6f    ..o.    ISB      
-        0x200088b2:    bf00        ..      NOP      
-        0x200088b4:    bf00        ..      NOP      
-        0x200088b6:    e7fe        ..      B        0x200088b6 ; xPortStartScheduler + 82
-        0x200088b8:    493f        ?I      LDR      r1,[pc,#252] ; [0x200089b8] = 0xe000e400
-        0x200088ba:    4608        .F      MOV      r0,r1
-        0x200088bc:    7800        .x      LDRB     r0,[r0,#0]
-        0x200088be:    9001        ..      STR      r0,[sp,#4]
-        0x200088c0:    20ff        .       MOVS     r0,#0xff
-        0x200088c2:    460a        .F      MOV      r2,r1
-        0x200088c4:    7010        .p      STRB     r0,[r2,#0]
-        0x200088c6:    4608        .F      MOV      r0,r1
-        0x200088c8:    7800        .x      LDRB     r0,[r0,#0]
-        0x200088ca:    9000        ..      STR      r0,[sp,#0]
-        0x200088cc:    f89d0000    ....    LDRB     r0,[sp,#0]
-        0x200088d0:    f00000f0    ....    AND      r0,r0,#0xf0
-        0x200088d4:    f89d2000    ...     LDRB     r2,[sp,#0]
-        0x200088d8:    4290        .B      CMP      r0,r2
-        0x200088da:    d101        ..      BNE      0x200088e0 ; xPortStartScheduler + 124
-        0x200088dc:    2001        .       MOVS     r0,#1
-        0x200088de:    e000        ..      B        0x200088e2 ; xPortStartScheduler + 126
-        0x200088e0:    2000        .       MOVS     r0,#0
-        0x200088e2:    b950        P.      CBNZ     r0,0x200088fa ; xPortStartScheduler + 150
-        0x200088e4:    bf00        ..      NOP      
-        0x200088e6:    2050        P       MOVS     r0,#0x50
-        0x200088e8:    f3808811    ....    MSR      BASEPRI,r0
-        0x200088ec:    f3bf8f4f    ..O.    DSB      
-        0x200088f0:    f3bf8f6f    ..o.    ISB      
-        0x200088f4:    bf00        ..      NOP      
-        0x200088f6:    bf00        ..      NOP      
-        0x200088f8:    e7fe        ..      B        0x200088f8 ; xPortStartScheduler + 148
-        0x200088fa:    f89d0000    ....    LDRB     r0,[sp,#0]
-        0x200088fe:    f0000050    ..P.    AND      r0,r0,#0x50
-        0x20008902:    4a2e        .J      LDR      r2,[pc,#184] ; [0x200089bc] = 0x200100a8
-        0x20008904:    7010        .p      STRB     r0,[r2,#0]
-        0x20008906:    2007        .       MOVS     r0,#7
-        0x20008908:    4a2d        -J      LDR      r2,[pc,#180] ; [0x200089c0] = 0x200100ac
-        0x2000890a:    6010        .`      STR      r0,[r2,#0]
-        0x2000890c:    e009        ..      B        0x20008922 ; xPortStartScheduler + 190
-        0x2000890e:    482c        ,H      LDR      r0,[pc,#176] ; [0x200089c0] = 0x200100ac
-        0x20008910:    6800        .h      LDR      r0,[r0,#0]
-        0x20008912:    1e40        @.      SUBS     r0,r0,#1
-        0x20008914:    4a2a        *J      LDR      r2,[pc,#168] ; [0x200089c0] = 0x200100ac
-        0x20008916:    6010        .`      STR      r0,[r2,#0]
-        0x20008918:    f89d0000    ....    LDRB     r0,[sp,#0]
-        0x2000891c:    0640        @.      LSLS     r0,r0,#25
-        0x2000891e:    0e00        ..      LSRS     r0,r0,#24
-        0x20008920:    9000        ..      STR      r0,[sp,#0]
-        0x20008922:    f89d0000    ....    LDRB     r0,[sp,#0]
-        0x20008926:    f0000080    ....    AND      r0,r0,#0x80
-        0x2000892a:    2880        .(      CMP      r0,#0x80
-        0x2000892c:    d0ef        ..      BEQ      0x2000890e ; xPortStartScheduler + 170
-        0x2000892e:    4824        $H      LDR      r0,[pc,#144] ; [0x200089c0] = 0x200100ac
-        0x20008930:    6800        .h      LDR      r0,[r0,#0]
-        0x20008932:    f1c00007    ....    RSB      r0,r0,#7
-        0x20008936:    2804        .(      CMP      r0,#4
-        0x20008938:    d101        ..      BNE      0x2000893e ; xPortStartScheduler + 218
-        0x2000893a:    2001        .       MOVS     r0,#1
-        0x2000893c:    e000        ..      B        0x20008940 ; xPortStartScheduler + 220
-        0x2000893e:    2000        .       MOVS     r0,#0
-        0x20008940:    b950        P.      CBNZ     r0,0x20008958 ; xPortStartScheduler + 244
-        0x20008942:    bf00        ..      NOP      
-        0x20008944:    2050        P       MOVS     r0,#0x50
-        0x20008946:    f3808811    ....    MSR      BASEPRI,r0
-        0x2000894a:    f3bf8f4f    ..O.    DSB      
-        0x2000894e:    f3bf8f6f    ..o.    ISB      
-        0x20008952:    bf00        ..      NOP      
-        0x20008954:    bf00        ..      NOP      
-        0x20008956:    e7fe        ..      B        0x20008956 ; xPortStartScheduler + 242
-        0x20008958:    4819        .H      LDR      r0,[pc,#100] ; [0x200089c0] = 0x200100ac
-        0x2000895a:    6800        .h      LDR      r0,[r0,#0]
-        0x2000895c:    0200        ..      LSLS     r0,r0,#8
-        0x2000895e:    4a18        .J      LDR      r2,[pc,#96] ; [0x200089c0] = 0x200100ac
-        0x20008960:    6010        .`      STR      r0,[r2,#0]
-        0x20008962:    4610        .F      MOV      r0,r2
-        0x20008964:    8800        ..      LDRH     r0,[r0,#0]
-        0x20008966:    f40060e0    ...`    AND      r0,r0,#0x700
-        0x2000896a:    6010        .`      STR      r0,[r2,#0]
-        0x2000896c:    4a12        .J      LDR      r2,[pc,#72] ; [0x200089b8] = 0xe000e400
-        0x2000896e:    9801        ..      LDR      r0,[sp,#4]
-        0x20008970:    7010        .p      STRB     r0,[r2,#0]
-        0x20008972:    480f        .H      LDR      r0,[pc,#60] ; [0x200089b0] = 0xe000ed00
-        0x20008974:    3020         0      ADDS     r0,r0,#0x20
-        0x20008976:    6800        .h      LDR      r0,[r0,#0]
-        0x20008978:    f4400070    @.p.    ORR      r0,r0,#0xf00000
-        0x2000897c:    490c        .I      LDR      r1,[pc,#48] ; [0x200089b0] = 0xe000ed00
-        0x2000897e:    3120         1      ADDS     r1,r1,#0x20
-        0x20008980:    6008        .`      STR      r0,[r1,#0]
-        0x20008982:    4608        .F      MOV      r0,r1
-        0x20008984:    6800        .h      LDR      r0,[r0,#0]
-        0x20008986:    f0404070    @.p@    ORR      r0,r0,#0xf0000000
-        0x2000898a:    6008        .`      STR      r0,[r1,#0]
-        0x2000898c:    f7fffcec    ....    BL       vPortSetupTimerInterrupt ; 0x20008368
-        0x20008990:    2000        .       MOVS     r0,#0
-        0x20008992:    490c        .I      LDR      r1,[pc,#48] ; [0x200089c4] = 0x200100a4
-        0x20008994:    6008        .`      STR      r0,[r1,#0]
-        0x20008996:    f7f7fca3    ....    BL       __asm___6_port_c_39a90d8d__prvEnableVFP ; 0x200002e0
-        0x2000899a:    480b        .H      LDR      r0,[pc,#44] ; [0x200089c8] = 0xe000ef34
-        0x2000899c:    6800        .h      LDR      r0,[r0,#0]
-        0x2000899e:    f0404040    @.@@    ORR      r0,r0,#0xc0000000
-        0x200089a2:    4909        .I      LDR      r1,[pc,#36] ; [0x200089c8] = 0xe000ef34
-        0x200089a4:    6008        .`      STR      r0,[r1,#0]
-        0x200089a6:    f7f7fc87    ....    BL       __asm___6_port_c_39a90d8d__prvStartFirstTask ; 0x200002b8
-        0x200089aa:    2000        .       MOVS     r0,#0
-        0x200089ac:    bd1c        ..      POP      {r2-r4,pc}
+        0x20008a84:    b51c        ..      PUSH     {r2-r4,lr}
+        0x20008a86:    4848        HH      LDR      r0,[pc,#288] ; [0x20008ba8] = 0xe000ed00
+        0x20008a88:    6800        .h      LDR      r0,[r0,#0]
+        0x20008a8a:    4948        HI      LDR      r1,[pc,#288] ; [0x20008bac] = 0x410fc271
+        0x20008a8c:    4288        .B      CMP      r0,r1
+        0x20008a8e:    d001        ..      BEQ      0x20008a94 ; xPortStartScheduler + 16
+        0x20008a90:    2001        .       MOVS     r0,#1
+        0x20008a92:    e000        ..      B        0x20008a96 ; xPortStartScheduler + 18
+        0x20008a94:    2000        .       MOVS     r0,#0
+        0x20008a96:    b928        (.      CBNZ     r0,0x20008aa4 ; xPortStartScheduler + 32
+        0x20008a98:    f2401241    @.A.    MOV      r2,#0x141
+        0x20008a9c:    a144        D.      ADR      r1,{pc}+0x114 ; 0x20008bb0
+        0x20008a9e:    a04b        K.      ADR      r0,{pc}+0x12e ; 0x20008bcc
+        0x20008aa0:    f7fdfd82    ....    BL       __0printf ; 0x200065a8
+        0x20008aa4:    4840        @H      LDR      r0,[pc,#256] ; [0x20008ba8] = 0xe000ed00
+        0x20008aa6:    6800        .h      LDR      r0,[r0,#0]
+        0x20008aa8:    4940        @I      LDR      r1,[pc,#256] ; [0x20008bac] = 0x410fc271
+        0x20008aaa:    1e49        I.      SUBS     r1,r1,#1
+        0x20008aac:    4288        .B      CMP      r0,r1
+        0x20008aae:    d001        ..      BEQ      0x20008ab4 ; xPortStartScheduler + 48
+        0x20008ab0:    2001        .       MOVS     r0,#1
+        0x20008ab2:    e000        ..      B        0x20008ab6 ; xPortStartScheduler + 50
+        0x20008ab4:    2000        .       MOVS     r0,#0
+        0x20008ab6:    b928        (.      CBNZ     r0,0x20008ac4 ; xPortStartScheduler + 64
+        0x20008ab8:    f44f72a1    O..r    MOV      r2,#0x142
+        0x20008abc:    a13c        <.      ADR      r1,{pc}+0xf4 ; 0x20008bb0
+        0x20008abe:    a043        C.      ADR      r0,{pc}+0x10e ; 0x20008bcc
+        0x20008ac0:    f7fdfd72    ..r.    BL       __0printf ; 0x200065a8
+        0x20008ac4:    4c45        EL      LDR      r4,[pc,#276] ; [0x20008bdc] = 0xe000e400
+        0x20008ac6:    4620         F      MOV      r0,r4
+        0x20008ac8:    7800        .x      LDRB     r0,[r0,#0]
+        0x20008aca:    9001        ..      STR      r0,[sp,#4]
+        0x20008acc:    20ff        .       MOVS     r0,#0xff
+        0x20008ace:    4621        !F      MOV      r1,r4
+        0x20008ad0:    7008        .p      STRB     r0,[r1,#0]
+        0x20008ad2:    4608        .F      MOV      r0,r1
+        0x20008ad4:    7800        .x      LDRB     r0,[r0,#0]
+        0x20008ad6:    9000        ..      STR      r0,[sp,#0]
+        0x20008ad8:    f89d0000    ....    LDRB     r0,[sp,#0]
+        0x20008adc:    f00000f0    ....    AND      r0,r0,#0xf0
+        0x20008ae0:    f89d1000    ....    LDRB     r1,[sp,#0]
+        0x20008ae4:    4288        .B      CMP      r0,r1
+        0x20008ae6:    d101        ..      BNE      0x20008aec ; xPortStartScheduler + 104
+        0x20008ae8:    2001        .       MOVS     r0,#1
+        0x20008aea:    e000        ..      B        0x20008aee ; xPortStartScheduler + 106
+        0x20008aec:    2000        .       MOVS     r0,#0
+        0x20008aee:    b928        (.      CBNZ     r0,0x20008afc ; xPortStartScheduler + 120
+        0x20008af0:    f240125b    @.[.    MOV      r2,#0x15b
+        0x20008af4:    a12e        ..      ADR      r1,{pc}+0xbc ; 0x20008bb0
+        0x20008af6:    a035        5.      ADR      r0,{pc}+0xd6 ; 0x20008bcc
+        0x20008af8:    f7fdfd56    ..V.    BL       __0printf ; 0x200065a8
+        0x20008afc:    f89d0000    ....    LDRB     r0,[sp,#0]
+        0x20008b00:    f0000050    ..P.    AND      r0,r0,#0x50
+        0x20008b04:    4936        6I      LDR      r1,[pc,#216] ; [0x20008be0] = 0x200100a8
+        0x20008b06:    7008        .p      STRB     r0,[r1,#0]
+        0x20008b08:    2007        .       MOVS     r0,#7
+        0x20008b0a:    4936        6I      LDR      r1,[pc,#216] ; [0x20008be4] = 0x200100ac
+        0x20008b0c:    6008        .`      STR      r0,[r1,#0]
+        0x20008b0e:    e009        ..      B        0x20008b24 ; xPortStartScheduler + 160
+        0x20008b10:    4834        4H      LDR      r0,[pc,#208] ; [0x20008be4] = 0x200100ac
+        0x20008b12:    6800        .h      LDR      r0,[r0,#0]
+        0x20008b14:    1e40        @.      SUBS     r0,r0,#1
+        0x20008b16:    4933        3I      LDR      r1,[pc,#204] ; [0x20008be4] = 0x200100ac
+        0x20008b18:    6008        .`      STR      r0,[r1,#0]
+        0x20008b1a:    f89d0000    ....    LDRB     r0,[sp,#0]
+        0x20008b1e:    0640        @.      LSLS     r0,r0,#25
+        0x20008b20:    0e00        ..      LSRS     r0,r0,#24
+        0x20008b22:    9000        ..      STR      r0,[sp,#0]
+        0x20008b24:    f89d0000    ....    LDRB     r0,[sp,#0]
+        0x20008b28:    f0000080    ....    AND      r0,r0,#0x80
+        0x20008b2c:    2880        .(      CMP      r0,#0x80
+        0x20008b2e:    d0ef        ..      BEQ      0x20008b10 ; xPortStartScheduler + 140
+        0x20008b30:    482c        ,H      LDR      r0,[pc,#176] ; [0x20008be4] = 0x200100ac
+        0x20008b32:    6800        .h      LDR      r0,[r0,#0]
+        0x20008b34:    f1c00007    ....    RSB      r0,r0,#7
+        0x20008b38:    2804        .(      CMP      r0,#4
+        0x20008b3a:    d101        ..      BNE      0x20008b40 ; xPortStartScheduler + 188
+        0x20008b3c:    2001        .       MOVS     r0,#1
+        0x20008b3e:    e000        ..      B        0x20008b42 ; xPortStartScheduler + 190
+        0x20008b40:    2000        .       MOVS     r0,#0
+        0x20008b42:    b928        (.      CBNZ     r0,0x20008b50 ; xPortStartScheduler + 204
+        0x20008b44:    f44f72bc    O..r    MOV      r2,#0x178
+        0x20008b48:    a119        ..      ADR      r1,{pc}+0x68 ; 0x20008bb0
+        0x20008b4a:    a020         .      ADR      r0,{pc}+0x82 ; 0x20008bcc
+        0x20008b4c:    f7fdfd2c    ..,.    BL       __0printf ; 0x200065a8
+        0x20008b50:    4824        $H      LDR      r0,[pc,#144] ; [0x20008be4] = 0x200100ac
+        0x20008b52:    6800        .h      LDR      r0,[r0,#0]
+        0x20008b54:    0200        ..      LSLS     r0,r0,#8
+        0x20008b56:    4923        #I      LDR      r1,[pc,#140] ; [0x20008be4] = 0x200100ac
+        0x20008b58:    6008        .`      STR      r0,[r1,#0]
+        0x20008b5a:    4608        .F      MOV      r0,r1
+        0x20008b5c:    8800        ..      LDRH     r0,[r0,#0]
+        0x20008b5e:    f40060e0    ...`    AND      r0,r0,#0x700
+        0x20008b62:    6008        .`      STR      r0,[r1,#0]
+        0x20008b64:    491d        .I      LDR      r1,[pc,#116] ; [0x20008bdc] = 0xe000e400
+        0x20008b66:    9801        ..      LDR      r0,[sp,#4]
+        0x20008b68:    7008        .p      STRB     r0,[r1,#0]
+        0x20008b6a:    480f        .H      LDR      r0,[pc,#60] ; [0x20008ba8] = 0xe000ed00
+        0x20008b6c:    3020         0      ADDS     r0,r0,#0x20
+        0x20008b6e:    6800        .h      LDR      r0,[r0,#0]
+        0x20008b70:    f4400070    @.p.    ORR      r0,r0,#0xf00000
+        0x20008b74:    490c        .I      LDR      r1,[pc,#48] ; [0x20008ba8] = 0xe000ed00
+        0x20008b76:    3120         1      ADDS     r1,r1,#0x20
+        0x20008b78:    6008        .`      STR      r0,[r1,#0]
+        0x20008b7a:    4608        .F      MOV      r0,r1
+        0x20008b7c:    6800        .h      LDR      r0,[r0,#0]
+        0x20008b7e:    f0404070    @.p@    ORR      r0,r0,#0xf0000000
+        0x20008b82:    6008        .`      STR      r0,[r1,#0]
+        0x20008b84:    f7fffc80    ....    BL       vPortSetupTimerInterrupt ; 0x20008488
+        0x20008b88:    2000        .       MOVS     r0,#0
+        0x20008b8a:    4917        .I      LDR      r1,[pc,#92] ; [0x20008be8] = 0x200100a4
+        0x20008b8c:    6008        .`      STR      r0,[r1,#0]
+        0x20008b8e:    f7f7fba7    ....    BL       __asm___6_port_c_39a90d8d__prvEnableVFP ; 0x200002e0
+        0x20008b92:    4816        .H      LDR      r0,[pc,#88] ; [0x20008bec] = 0xe000ef34
+        0x20008b94:    6800        .h      LDR      r0,[r0,#0]
+        0x20008b96:    f0404040    @.@@    ORR      r0,r0,#0xc0000000
+        0x20008b9a:    4914        .I      LDR      r1,[pc,#80] ; [0x20008bec] = 0xe000ef34
+        0x20008b9c:    6008        .`      STR      r0,[r1,#0]
+        0x20008b9e:    f7f7fb8b    ....    BL       __asm___6_port_c_39a90d8d__prvStartFirstTask ; 0x200002b8
+        0x20008ba2:    2000        .       MOVS     r0,#0
+        0x20008ba4:    bd1c        ..      POP      {r2-r4,pc}
     $d
-        0x200089ae:    0000        ..      DCW    0
-        0x200089b0:    e000ed00    ....    DCD    3758157056
-        0x200089b4:    410fc271    q..A    DCD    1091551857
-        0x200089b8:    e000e400    ....    DCD    3758154752
-        0x200089bc:    200100a8    ...     DCD    536936616
-        0x200089c0:    200100ac    ...     DCD    536936620
-        0x200089c4:    200100a4    ...     DCD    536936612
-        0x200089c8:    e000ef34    4...    DCD    3758157620
+        0x20008ba6:    0000        ..      DCW    0
+        0x20008ba8:    e000ed00    ....    DCD    3758157056
+        0x20008bac:    410fc271    q..A    DCD    1091551857
+        0x20008bb0:    465c2e2e    ..\F    DCD    1180446254
+        0x20008bb4:    52656572    reeR    DCD    1382376818
+        0x20008bb8:    5c534f54    TOS\    DCD    1548963668
+        0x20008bbc:    5f4d5241    ARM_    DCD    1598902849
+        0x20008bc0:    46344d43    CM4F    DCD    1177832771
+        0x20008bc4:    726f705c    \por    DCD    1919905884
+        0x20008bc8:    00632e74    t.c.    DCD    6499956
+        0x20008bcc:    6f727245    Erro    DCD    1869771333
+        0x20008bd0:    25203a72    r: %    DCD    622869106
+        0x20008bd4:    25202c73    s, %    DCD    622865523
+        0x20008bd8:    000a0d64    d...    DCD    658788
+        0x20008bdc:    e000e400    ....    DCD    3758154752
+        0x20008be0:    200100a8    ...     DCD    536936616
+        0x20008be4:    200100ac    ...     DCD    536936620
+        0x20008be8:    200100a4    ...     DCD    536936612
+        0x20008bec:    e000ef34    4...    DCD    3758157620
     $t
     i.xQueueGenericCreate
     xQueueGenericCreate
-        0x200089cc:    e92d43f8    -..C    PUSH     {r3-r9,lr}
-        0x200089d0:    4605        .F      MOV      r5,r0
-        0x200089d2:    460e        .F      MOV      r6,r1
-        0x200089d4:    4617        .F      MOV      r7,r2
-        0x200089d6:    2400        .$      MOVS     r4,#0
-        0x200089d8:    b1e5        ..      CBZ      r5,0x20008a14 ; xQueueGenericCreate + 72
-        0x200089da:    1e60        `.      SUBS     r0,r4,#1
-        0x200089dc:    fbb0f0f5    ....    UDIV     r0,r0,r5
-        0x200089e0:    42b0        .B      CMP      r0,r6
-        0x200089e2:    d317        ..      BCC      0x20008a14 ; xQueueGenericCreate + 72
-        0x200089e4:    fb05f006    ....    MUL      r0,r5,r6
-        0x200089e8:    f1100f51    ..Q.    CMN      r0,#0x51
-        0x200089ec:    d812        ..      BHI      0x20008a14 ; xQueueGenericCreate + 72
-        0x200089ee:    fb05f806    ....    MUL      r8,r5,r6
-        0x200089f2:    f1080050    ..P.    ADD      r0,r8,#0x50
-        0x200089f6:    f7fff9b9    ....    BL       pvPortMalloc ; 0x20007d6c
-        0x200089fa:    4604        .F      MOV      r4,r0
-        0x200089fc:    b1b4        ..      CBZ      r4,0x20008a2c ; xQueueGenericCreate + 96
-        0x200089fe:    46a1        .F      MOV      r9,r4
-        0x20008a00:    f1090950    ..P.    ADD      r9,r9,#0x50
-        0x20008a04:    463b        ;F      MOV      r3,r7
-        0x20008a06:    464a        JF      MOV      r2,r9
-        0x20008a08:    4631        1F      MOV      r1,r6
-        0x20008a0a:    4628        (F      MOV      r0,r5
-        0x20008a0c:    9400        ..      STR      r4,[sp,#0]
-        0x20008a0e:    f7fefe87    ....    BL       prvInitialiseNewQueue ; 0x20007720
-        0x20008a12:    e00b        ..      B        0x20008a2c ; xQueueGenericCreate + 96
-        0x20008a14:    b954        T.      CBNZ     r4,0x20008a2c ; xQueueGenericCreate + 96
-        0x20008a16:    bf00        ..      NOP      
-        0x20008a18:    2050        P       MOVS     r0,#0x50
-        0x20008a1a:    f3808811    ....    MSR      BASEPRI,r0
-        0x20008a1e:    f3bf8f4f    ..O.    DSB      
-        0x20008a22:    f3bf8f6f    ..o.    ISB      
-        0x20008a26:    bf00        ..      NOP      
-        0x20008a28:    bf00        ..      NOP      
-        0x20008a2a:    e7fe        ..      B        0x20008a2a ; xQueueGenericCreate + 94
-        0x20008a2c:    4620         F      MOV      r0,r4
-        0x20008a2e:    e8bd83f8    ....    POP      {r3-r9,pc}
-        0x20008a32:    0000        ..      MOVS     r0,r0
+        0x20008bf0:    e92d43f8    -..C    PUSH     {r3-r9,lr}
+        0x20008bf4:    4605        .F      MOV      r5,r0
+        0x20008bf6:    460e        .F      MOV      r6,r1
+        0x20008bf8:    4617        .F      MOV      r7,r2
+        0x20008bfa:    2400        .$      MOVS     r4,#0
+        0x20008bfc:    b1e5        ..      CBZ      r5,0x20008c38 ; xQueueGenericCreate + 72
+        0x20008bfe:    1e60        `.      SUBS     r0,r4,#1
+        0x20008c00:    fbb0f0f5    ....    UDIV     r0,r0,r5
+        0x20008c04:    42b0        .B      CMP      r0,r6
+        0x20008c06:    d317        ..      BCC      0x20008c38 ; xQueueGenericCreate + 72
+        0x20008c08:    fb05f006    ....    MUL      r0,r5,r6
+        0x20008c0c:    f1100f51    ..Q.    CMN      r0,#0x51
+        0x20008c10:    d812        ..      BHI      0x20008c38 ; xQueueGenericCreate + 72
+        0x20008c12:    fb05f906    ....    MUL      r9,r5,r6
+        0x20008c16:    f1090050    ..P.    ADD      r0,r9,#0x50
+        0x20008c1a:    f7fff8eb    ....    BL       pvPortMalloc ; 0x20007df4
+        0x20008c1e:    4604        .F      MOV      r4,r0
+        0x20008c20:    b18c        ..      CBZ      r4,0x20008c46 ; xQueueGenericCreate + 86
+        0x20008c22:    46a0        .F      MOV      r8,r4
+        0x20008c24:    f1080850    ..P.    ADD      r8,r8,#0x50
+        0x20008c28:    463b        ;F      MOV      r3,r7
+        0x20008c2a:    4642        BF      MOV      r2,r8
+        0x20008c2c:    4631        1F      MOV      r1,r6
+        0x20008c2e:    4628        (F      MOV      r0,r5
+        0x20008c30:    9400        ..      STR      r4,[sp,#0]
+        0x20008c32:    f7fefd75    ..u.    BL       prvInitialiseNewQueue ; 0x20007720
+        0x20008c36:    e006        ..      B        0x20008c46 ; xQueueGenericCreate + 86
+        0x20008c38:    b92c        ,.      CBNZ     r4,0x20008c46 ; xQueueGenericCreate + 86
+        0x20008c3a:    f44f72e3    O..r    MOV      r2,#0x1c6
+        0x20008c3e:    a103        ..      ADR      r1,{pc}+0xe ; 0x20008c4c
+        0x20008c40:    a007        ..      ADR      r0,{pc}+0x20 ; 0x20008c60
+        0x20008c42:    f7fdfcb1    ....    BL       __0printf ; 0x200065a8
+        0x20008c46:    4620         F      MOV      r0,r4
+        0x20008c48:    e8bd83f8    ....    POP      {r3-r9,pc}
+    $d
+        0x20008c4c:    465c2e2e    ..\F    DCD    1180446254
+        0x20008c50:    52656572    reeR    DCD    1382376818
+        0x20008c54:    5c534f54    TOS\    DCD    1548963668
+        0x20008c58:    75657571    queu    DCD    1969583473
+        0x20008c5c:    00632e65    e.c.    DCD    6499941
+        0x20008c60:    6f727245    Erro    DCD    1869771333
+        0x20008c64:    25203a72    r: %    DCD    622869106
+        0x20008c68:    25202c73    s, %    DCD    622865523
+        0x20008c6c:    000a0d64    d...    DCD    658788
+    $t
     i.xQueueGenericReset
     xQueueGenericReset
-        0x20008a34:    e92d41f0    -..A    PUSH     {r4-r8,lr}
-        0x20008a38:    4605        .F      MOV      r5,r0
-        0x20008a3a:    460e        .F      MOV      r6,r1
-        0x20008a3c:    2701        .'      MOVS     r7,#1
-        0x20008a3e:    462c        ,F      MOV      r4,r5
-        0x20008a40:    b954        T.      CBNZ     r4,0x20008a58 ; xQueueGenericReset + 36
-        0x20008a42:    bf00        ..      NOP      
-        0x20008a44:    2050        P       MOVS     r0,#0x50
-        0x20008a46:    f3808811    ....    MSR      BASEPRI,r0
-        0x20008a4a:    f3bf8f4f    ..O.    DSB      
-        0x20008a4e:    f3bf8f6f    ..o.    ISB      
-        0x20008a52:    bf00        ..      NOP      
-        0x20008a54:    bf00        ..      NOP      
-        0x20008a56:    e7fe        ..      B        0x20008a56 ; xQueueGenericReset + 34
-        0x20008a58:    2c00        .,      CMP      r4,#0
-        0x20008a5a:    d042        B.      BEQ      0x20008ae2 ; xQueueGenericReset + 174
-        0x20008a5c:    6be0        .k      LDR      r0,[r4,#0x3c]
-        0x20008a5e:    2800        .(      CMP      r0,#0
-        0x20008a60:    d03f        ?.      BEQ      0x20008ae2 ; xQueueGenericReset + 174
-        0x20008a62:    f04f31ff    O..1    MOV      r1,#0xffffffff
-        0x20008a66:    6be0        .k      LDR      r0,[r4,#0x3c]
-        0x20008a68:    fbb1f0f0    ....    UDIV     r0,r1,r0
-        0x20008a6c:    6c21        !l      LDR      r1,[r4,#0x40]
-        0x20008a6e:    4288        .B      CMP      r0,r1
-        0x20008a70:    d337        7.      BCC      0x20008ae2 ; xQueueGenericReset + 174
-        0x20008a72:    f7fffbdf    ....    BL       vPortEnterCritical ; 0x20008234
-        0x20008a76:    e9d4120f    ....    LDRD     r1,r2,[r4,#0x3c]
-        0x20008a7a:    6820         h      LDR      r0,[r4,#0]
-        0x20008a7c:    fb010002    ....    MLA      r0,r1,r2,r0
-        0x20008a80:    60a0        .`      STR      r0,[r4,#8]
-        0x20008a82:    2000        .       MOVS     r0,#0
-        0x20008a84:    63a0        .c      STR      r0,[r4,#0x38]
-        0x20008a86:    6820         h      LDR      r0,[r4,#0]
-        0x20008a88:    6060        ``      STR      r0,[r4,#4]
-        0x20008a8a:    6be0        .k      LDR      r0,[r4,#0x3c]
-        0x20008a8c:    1e40        @.      SUBS     r0,r0,#1
-        0x20008a8e:    6c22        "l      LDR      r2,[r4,#0x40]
-        0x20008a90:    6821        !h      LDR      r1,[r4,#0]
-        0x20008a92:    fb001102    ....    MLA      r1,r0,r2,r1
-        0x20008a96:    60e1        .`      STR      r1,[r4,#0xc]
-        0x20008a98:    20ff        .       MOVS     r0,#0xff
-        0x20008a9a:    f8840044    ..D.    STRB     r0,[r4,#0x44]
-        0x20008a9e:    f8840045    ..E.    STRB     r0,[r4,#0x45]
-        0x20008aa2:    b99e        ..      CBNZ     r6,0x20008acc ; xQueueGenericReset + 152
-        0x20008aa4:    6920         i      LDR      r0,[r4,#0x10]
-        0x20008aa6:    b908        ..      CBNZ     r0,0x20008aac ; xQueueGenericReset + 120
-        0x20008aa8:    2001        .       MOVS     r0,#1
-        0x20008aaa:    e000        ..      B        0x20008aae ; xQueueGenericReset + 122
-        0x20008aac:    2000        .       MOVS     r0,#0
-        0x20008aae:    b9a8        ..      CBNZ     r0,0x20008adc ; xQueueGenericReset + 168
-        0x20008ab0:    f1040010    ....    ADD      r0,r4,#0x10
-        0x20008ab4:    f000fc4a    ..J.    BL       xTaskRemoveFromEventList ; 0x2000934c
-        0x20008ab8:    b180        ..      CBZ      r0,0x20008adc ; xQueueGenericReset + 168
-        0x20008aba:    f04f5080    O..P    MOV      r0,#0x10000000
-        0x20008abe:    4913        .I      LDR      r1,[pc,#76] ; [0x20008b0c] = 0xe000ed04
-        0x20008ac0:    6008        .`      STR      r0,[r1,#0]
-        0x20008ac2:    f3bf8f4f    ..O.    DSB      
-        0x20008ac6:    f3bf8f6f    ..o.    ISB      
-        0x20008aca:    e007        ..      B        0x20008adc ; xQueueGenericReset + 168
-        0x20008acc:    f1040010    ....    ADD      r0,r4,#0x10
-        0x20008ad0:    f7fffb7a    ..z.    BL       vListInitialise ; 0x200081c8
-        0x20008ad4:    f1040024    ..$.    ADD      r0,r4,#0x24
-        0x20008ad8:    f7fffb76    ..v.    BL       vListInitialise ; 0x200081c8
-        0x20008adc:    f7fffbd4    ....    BL       vPortExitCritical ; 0x20008288
-        0x20008ae0:    e000        ..      B        0x20008ae4 ; xQueueGenericReset + 176
-        0x20008ae2:    2700        .'      MOVS     r7,#0
-        0x20008ae4:    b10f        ..      CBZ      r7,0x20008aea ; xQueueGenericReset + 182
-        0x20008ae6:    2001        .       MOVS     r0,#1
-        0x20008ae8:    e000        ..      B        0x20008aec ; xQueueGenericReset + 184
-        0x20008aea:    2000        .       MOVS     r0,#0
-        0x20008aec:    b950        P.      CBNZ     r0,0x20008b04 ; xQueueGenericReset + 208
-        0x20008aee:    bf00        ..      NOP      
-        0x20008af0:    2050        P       MOVS     r0,#0x50
-        0x20008af2:    f3808811    ....    MSR      BASEPRI,r0
-        0x20008af6:    f3bf8f4f    ..O.    DSB      
-        0x20008afa:    f3bf8f6f    ..o.    ISB      
-        0x20008afe:    bf00        ..      NOP      
-        0x20008b00:    bf00        ..      NOP      
-        0x20008b02:    e7fe        ..      B        0x20008b02 ; xQueueGenericReset + 206
-        0x20008b04:    4638        8F      MOV      r0,r7
-        0x20008b06:    e8bd81f0    ....    POP      {r4-r8,pc}
+        0x20008c70:    e92d41f0    -..A    PUSH     {r4-r8,lr}
+        0x20008c74:    4605        .F      MOV      r5,r0
+        0x20008c76:    460e        .F      MOV      r6,r1
+        0x20008c78:    2701        .'      MOVS     r7,#1
+        0x20008c7a:    462c        ,F      MOV      r4,r5
+        0x20008c7c:    b92c        ,.      CBNZ     r4,0x20008c8a ; xQueueGenericReset + 26
+        0x20008c7e:    f44f7288    O..r    MOV      r2,#0x110
+        0x20008c82:    a12c        ,.      ADR      r1,{pc}+0xb2 ; 0x20008d34
+        0x20008c84:    a030        0.      ADR      r0,{pc}+0xc4 ; 0x20008d48
+        0x20008c86:    f7fdfc8f    ....    BL       __0printf ; 0x200065a8
+        0x20008c8a:    2c00        .,      CMP      r4,#0
+        0x20008c8c:    d042        B.      BEQ      0x20008d14 ; xQueueGenericReset + 164
+        0x20008c8e:    6be0        .k      LDR      r0,[r4,#0x3c]
+        0x20008c90:    2800        .(      CMP      r0,#0
+        0x20008c92:    d03f        ?.      BEQ      0x20008d14 ; xQueueGenericReset + 164
+        0x20008c94:    f04f31ff    O..1    MOV      r1,#0xffffffff
+        0x20008c98:    6be0        .k      LDR      r0,[r4,#0x3c]
+        0x20008c9a:    fbb1f0f0    ....    UDIV     r0,r1,r0
+        0x20008c9e:    6c21        !l      LDR      r1,[r4,#0x40]
+        0x20008ca0:    4288        .B      CMP      r0,r1
+        0x20008ca2:    d337        7.      BCC      0x20008d14 ; xQueueGenericReset + 164
+        0x20008ca4:    f7fffb24    ..$.    BL       vPortEnterCritical ; 0x200082f0
+        0x20008ca8:    e9d4120f    ....    LDRD     r1,r2,[r4,#0x3c]
+        0x20008cac:    6820         h      LDR      r0,[r4,#0]
+        0x20008cae:    fb010002    ....    MLA      r0,r1,r2,r0
+        0x20008cb2:    60a0        .`      STR      r0,[r4,#8]
+        0x20008cb4:    2000        .       MOVS     r0,#0
+        0x20008cb6:    63a0        .c      STR      r0,[r4,#0x38]
+        0x20008cb8:    6820         h      LDR      r0,[r4,#0]
+        0x20008cba:    6060        ``      STR      r0,[r4,#4]
+        0x20008cbc:    6be0        .k      LDR      r0,[r4,#0x3c]
+        0x20008cbe:    1e40        @.      SUBS     r0,r0,#1
+        0x20008cc0:    6c22        "l      LDR      r2,[r4,#0x40]
+        0x20008cc2:    6821        !h      LDR      r1,[r4,#0]
+        0x20008cc4:    fb001102    ....    MLA      r1,r0,r2,r1
+        0x20008cc8:    60e1        .`      STR      r1,[r4,#0xc]
+        0x20008cca:    20ff        .       MOVS     r0,#0xff
+        0x20008ccc:    f8840044    ..D.    STRB     r0,[r4,#0x44]
+        0x20008cd0:    f8840045    ..E.    STRB     r0,[r4,#0x45]
+        0x20008cd4:    b99e        ..      CBNZ     r6,0x20008cfe ; xQueueGenericReset + 142
+        0x20008cd6:    6920         i      LDR      r0,[r4,#0x10]
+        0x20008cd8:    b908        ..      CBNZ     r0,0x20008cde ; xQueueGenericReset + 110
+        0x20008cda:    2001        .       MOVS     r0,#1
+        0x20008cdc:    e000        ..      B        0x20008ce0 ; xQueueGenericReset + 112
+        0x20008cde:    2000        .       MOVS     r0,#0
+        0x20008ce0:    b9a8        ..      CBNZ     r0,0x20008d0e ; xQueueGenericReset + 158
+        0x20008ce2:    f1040010    ....    ADD      r0,r4,#0x10
+        0x20008ce6:    f000fc73    ..s.    BL       xTaskRemoveFromEventList ; 0x200095d0
+        0x20008cea:    b180        ..      CBZ      r0,0x20008d0e ; xQueueGenericReset + 158
+        0x20008cec:    f04f5080    O..P    MOV      r0,#0x10000000
+        0x20008cf0:    4919        .I      LDR      r1,[pc,#100] ; [0x20008d58] = 0xe000ed04
+        0x20008cf2:    6008        .`      STR      r0,[r1,#0]
+        0x20008cf4:    f3bf8f4f    ..O.    DSB      
+        0x20008cf8:    f3bf8f6f    ..o.    ISB      
+        0x20008cfc:    e007        ..      B        0x20008d0e ; xQueueGenericReset + 158
+        0x20008cfe:    f1040010    ....    ADD      r0,r4,#0x10
+        0x20008d02:    f7fffabf    ....    BL       vListInitialise ; 0x20008284
+        0x20008d06:    f1040024    ..$.    ADD      r0,r4,#0x24
+        0x20008d0a:    f7fffabb    ....    BL       vListInitialise ; 0x20008284
+        0x20008d0e:    f7fffb2b    ..+.    BL       vPortExitCritical ; 0x20008368
+        0x20008d12:    e000        ..      B        0x20008d16 ; xQueueGenericReset + 166
+        0x20008d14:    2700        .'      MOVS     r7,#0
+        0x20008d16:    b10f        ..      CBZ      r7,0x20008d1c ; xQueueGenericReset + 172
+        0x20008d18:    2001        .       MOVS     r0,#1
+        0x20008d1a:    e000        ..      B        0x20008d1e ; xQueueGenericReset + 174
+        0x20008d1c:    2000        .       MOVS     r0,#0
+        0x20008d1e:    b928        (.      CBNZ     r0,0x20008d2c ; xQueueGenericReset + 188
+        0x20008d20:    f2401245    @.E.    MOV      r2,#0x145
+        0x20008d24:    a103        ..      ADR      r1,{pc}+0x10 ; 0x20008d34
+        0x20008d26:    a008        ..      ADR      r0,{pc}+0x22 ; 0x20008d48
+        0x20008d28:    f7fdfc3e    ..>.    BL       __0printf ; 0x200065a8
+        0x20008d2c:    4638        8F      MOV      r0,r7
+        0x20008d2e:    e8bd81f0    ....    POP      {r4-r8,pc}
     $d
-        0x20008b0a:    0000        ..      DCW    0
-        0x20008b0c:    e000ed04    ....    DCD    3758157060
+        0x20008d32:    0000        ..      DCW    0
+        0x20008d34:    465c2e2e    ..\F    DCD    1180446254
+        0x20008d38:    52656572    reeR    DCD    1382376818
+        0x20008d3c:    5c534f54    TOS\    DCD    1548963668
+        0x20008d40:    75657571    queu    DCD    1969583473
+        0x20008d44:    00632e65    e.c.    DCD    6499941
+        0x20008d48:    6f727245    Erro    DCD    1869771333
+        0x20008d4c:    25203a72    r: %    DCD    622869106
+        0x20008d50:    25202c73    s, %    DCD    622865523
+        0x20008d54:    000a0d64    d...    DCD    658788
+        0x20008d58:    e000ed04    ....    DCD    3758157060
     $t
     i.xQueueGenericSend
     xQueueGenericSend
-        0x20008b10:    e92d47ff    -..G    PUSH     {r0-r10,lr}
-        0x20008b14:    b084        ..      SUB      sp,sp,#0x10
-        0x20008b16:    4606        .F      MOV      r6,r0
-        0x20008b18:    460f        .F      MOV      r7,r1
-        0x20008b1a:    461d        .F      MOV      r5,r3
-        0x20008b1c:    f04f0900    O...    MOV      r9,#0
-        0x20008b20:    4634        4F      MOV      r4,r6
-        0x20008b22:    b954        T.      CBNZ     r4,0x20008b3a ; xQueueGenericSend + 42
-        0x20008b24:    bf00        ..      NOP      
-        0x20008b26:    2050        P       MOVS     r0,#0x50
-        0x20008b28:    f3808811    ....    MSR      BASEPRI,r0
-        0x20008b2c:    f3bf8f4f    ..O.    DSB      
-        0x20008b30:    f3bf8f6f    ..o.    ISB      
-        0x20008b34:    bf00        ..      NOP      
-        0x20008b36:    bf00        ..      NOP      
-        0x20008b38:    e7fe        ..      B        0x20008b38 ; xQueueGenericSend + 40
-        0x20008b3a:    b90f        ..      CBNZ     r7,0x20008b40 ; xQueueGenericSend + 48
-        0x20008b3c:    6c20         l      LDR      r0,[r4,#0x40]
-        0x20008b3e:    b908        ..      CBNZ     r0,0x20008b44 ; xQueueGenericSend + 52
-        0x20008b40:    2001        .       MOVS     r0,#1
-        0x20008b42:    e000        ..      B        0x20008b46 ; xQueueGenericSend + 54
-        0x20008b44:    2000        .       MOVS     r0,#0
-        0x20008b46:    b950        P.      CBNZ     r0,0x20008b5e ; xQueueGenericSend + 78
-        0x20008b48:    bf00        ..      NOP      
-        0x20008b4a:    2050        P       MOVS     r0,#0x50
-        0x20008b4c:    f3808811    ....    MSR      BASEPRI,r0
-        0x20008b50:    f3bf8f4f    ..O.    DSB      
-        0x20008b54:    f3bf8f6f    ..o.    ISB      
-        0x20008b58:    bf00        ..      NOP      
-        0x20008b5a:    bf00        ..      NOP      
-        0x20008b5c:    e7fe        ..      B        0x20008b5c ; xQueueGenericSend + 76
-        0x20008b5e:    2d02        .-      CMP      r5,#2
-        0x20008b60:    d102        ..      BNE      0x20008b68 ; xQueueGenericSend + 88
-        0x20008b62:    6be0        .k      LDR      r0,[r4,#0x3c]
-        0x20008b64:    2801        .(      CMP      r0,#1
-        0x20008b66:    d101        ..      BNE      0x20008b6c ; xQueueGenericSend + 92
-        0x20008b68:    2001        .       MOVS     r0,#1
-        0x20008b6a:    e000        ..      B        0x20008b6e ; xQueueGenericSend + 94
-        0x20008b6c:    2000        .       MOVS     r0,#0
-        0x20008b6e:    b950        P.      CBNZ     r0,0x20008b86 ; xQueueGenericSend + 118
-        0x20008b70:    bf00        ..      NOP      
-        0x20008b72:    2050        P       MOVS     r0,#0x50
-        0x20008b74:    f3808811    ....    MSR      BASEPRI,r0
-        0x20008b78:    f3bf8f4f    ..O.    DSB      
-        0x20008b7c:    f3bf8f6f    ..o.    ISB      
-        0x20008b80:    bf00        ..      NOP      
-        0x20008b82:    bf00        ..      NOP      
-        0x20008b84:    e7fe        ..      B        0x20008b84 ; xQueueGenericSend + 116
-        0x20008b86:    f000fab7    ....    BL       xTaskGetSchedulerState ; 0x200090f8
-        0x20008b8a:    b908        ..      CBNZ     r0,0x20008b90 ; xQueueGenericSend + 128
-        0x20008b8c:    9806        ..      LDR      r0,[sp,#0x18]
-        0x20008b8e:    b908        ..      CBNZ     r0,0x20008b94 ; xQueueGenericSend + 132
-        0x20008b90:    2001        .       MOVS     r0,#1
-        0x20008b92:    e000        ..      B        0x20008b96 ; xQueueGenericSend + 134
-        0x20008b94:    2000        .       MOVS     r0,#0
-        0x20008b96:    b950        P.      CBNZ     r0,0x20008bae ; xQueueGenericSend + 158
-        0x20008b98:    bf00        ..      NOP      
-        0x20008b9a:    2050        P       MOVS     r0,#0x50
-        0x20008b9c:    f3808811    ....    MSR      BASEPRI,r0
-        0x20008ba0:    f3bf8f4f    ..O.    DSB      
-        0x20008ba4:    f3bf8f6f    ..o.    ISB      
-        0x20008ba8:    bf00        ..      NOP      
-        0x20008baa:    bf00        ..      NOP      
-        0x20008bac:    e7fe        ..      B        0x20008bac ; xQueueGenericSend + 156
-        0x20008bae:    bf00        ..      NOP      
-        0x20008bb0:    f7fffb40    ..@.    BL       vPortEnterCritical ; 0x20008234
-        0x20008bb4:    6ba0        .k      LDR      r0,[r4,#0x38]
-        0x20008bb6:    6be1        .k      LDR      r1,[r4,#0x3c]
-        0x20008bb8:    4288        .B      CMP      r0,r1
-        0x20008bba:    d301        ..      BCC      0x20008bc0 ; xQueueGenericSend + 176
-        0x20008bbc:    2d02        .-      CMP      r5,#2
-        0x20008bbe:    d135        5.      BNE      0x20008c2c ; xQueueGenericSend + 284
-        0x20008bc0:    4620         F      MOV      r0,r4
-        0x20008bc2:    f7fcf933    ..3.    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
-        0x20008bc6:    4682        .F      MOV      r10,r0
-        0x20008bc8:    9500        ..      STR      r5,[sp,#0]
-        0x20008bca:    463a        :F      MOV      r2,r7
-        0x20008bcc:    4651        QF      MOV      r1,r10
-        0x20008bce:    205a        Z       MOVS     r0,#0x5a
-        0x20008bd0:    9b06        ..      LDR      r3,[sp,#0x18]
-        0x20008bd2:    f7fbff5f    .._.    BL       SEGGER_SYSVIEW_RecordU32x4 ; 0x20004a94
-        0x20008bd6:    462a        *F      MOV      r2,r5
-        0x20008bd8:    4639        9F      MOV      r1,r7
-        0x20008bda:    4620         F      MOV      r0,r4
-        0x20008bdc:    f7fefcf1    ....    BL       prvCopyDataToQueue ; 0x200075c2
-        0x20008be0:    4680        .F      MOV      r8,r0
-        0x20008be2:    6a60        `j      LDR      r0,[r4,#0x24]
-        0x20008be4:    b908        ..      CBNZ     r0,0x20008bea ; xQueueGenericSend + 218
-        0x20008be6:    2001        .       MOVS     r0,#1
-        0x20008be8:    e000        ..      B        0x20008bec ; xQueueGenericSend + 220
-        0x20008bea:    2000        .       MOVS     r0,#0
-        0x20008bec:    b968        h.      CBNZ     r0,0x20008c0a ; xQueueGenericSend + 250
-        0x20008bee:    f1040024    ..$.    ADD      r0,r4,#0x24
-        0x20008bf2:    f000fbab    ....    BL       xTaskRemoveFromEventList ; 0x2000934c
-        0x20008bf6:    b198        ..      CBZ      r0,0x20008c20 ; xQueueGenericSend + 272
-        0x20008bf8:    f04f5080    O..P    MOV      r0,#0x10000000
-        0x20008bfc:    493e        >I      LDR      r1,[pc,#248] ; [0x20008cf8] = 0xe000ed04
-        0x20008bfe:    6008        .`      STR      r0,[r1,#0]
-        0x20008c00:    f3bf8f4f    ..O.    DSB      
-        0x20008c04:    f3bf8f6f    ..o.    ISB      
-        0x20008c08:    e00a        ..      B        0x20008c20 ; xQueueGenericSend + 272
-        0x20008c0a:    f1b80f00    ....    CMP      r8,#0
-        0x20008c0e:    d007        ..      BEQ      0x20008c20 ; xQueueGenericSend + 272
-        0x20008c10:    f04f5080    O..P    MOV      r0,#0x10000000
-        0x20008c14:    4938        8I      LDR      r1,[pc,#224] ; [0x20008cf8] = 0xe000ed04
-        0x20008c16:    6008        .`      STR      r0,[r1,#0]
-        0x20008c18:    f3bf8f4f    ..O.    DSB      
-        0x20008c1c:    f3bf8f6f    ..o.    ISB      
-        0x20008c20:    f7fffb32    ..2.    BL       vPortExitCritical ; 0x20008288
-        0x20008c24:    2001        .       MOVS     r0,#1
-        0x20008c26:    b008        ..      ADD      sp,sp,#0x20
-        0x20008c28:    e8bd87f0    ....    POP      {r4-r10,pc}
-        0x20008c2c:    9806        ..      LDR      r0,[sp,#0x18]
-        0x20008c2e:    b970        p.      CBNZ     r0,0x20008c4e ; xQueueGenericSend + 318
-        0x20008c30:    f7fffb2a    ..*.    BL       vPortExitCritical ; 0x20008288
-        0x20008c34:    4620         F      MOV      r0,r4
-        0x20008c36:    f7fcf8f9    ....    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
-        0x20008c3a:    4682        .F      MOV      r10,r0
-        0x20008c3c:    9500        ..      STR      r5,[sp,#0]
-        0x20008c3e:    463a        :F      MOV      r2,r7
-        0x20008c40:    4651        QF      MOV      r1,r10
-        0x20008c42:    205a        Z       MOVS     r0,#0x5a
-        0x20008c44:    9b06        ..      LDR      r3,[sp,#0x18]
-        0x20008c46:    f7fbff25    ..%.    BL       SEGGER_SYSVIEW_RecordU32x4 ; 0x20004a94
-        0x20008c4a:    2000        .       MOVS     r0,#0
-        0x20008c4c:    e7eb        ..      B        0x20008c26 ; xQueueGenericSend + 278
-        0x20008c4e:    f1b90f00    ....    CMP      r9,#0
-        0x20008c52:    d104        ..      BNE      0x20008c5e ; xQueueGenericSend + 334
-        0x20008c54:    a802        ..      ADD      r0,sp,#8
-        0x20008c56:    f7fffcf9    ....    BL       vTaskInternalSetTimeOutState ; 0x2000864c
-        0x20008c5a:    f04f0901    O...    MOV      r9,#1
-        0x20008c5e:    f7fffb13    ....    BL       vPortExitCritical ; 0x20008288
-        0x20008c62:    f7fffda3    ....    BL       vTaskSuspendAll ; 0x200087ac
-        0x20008c66:    f7fffae5    ....    BL       vPortEnterCritical ; 0x20008234
-        0x20008c6a:    f9940044    ..D.    LDRSB    r0,[r4,#0x44]
-        0x20008c6e:    1c40        @.      ADDS     r0,r0,#1
-        0x20008c70:    b910        ..      CBNZ     r0,0x20008c78 ; xQueueGenericSend + 360
-        0x20008c72:    2000        .       MOVS     r0,#0
-        0x20008c74:    f8840044    ..D.    STRB     r0,[r4,#0x44]
-        0x20008c78:    f9940045    ..E.    LDRSB    r0,[r4,#0x45]
-        0x20008c7c:    1c40        @.      ADDS     r0,r0,#1
-        0x20008c7e:    b910        ..      CBNZ     r0,0x20008c86 ; xQueueGenericSend + 374
-        0x20008c80:    2000        .       MOVS     r0,#0
-        0x20008c82:    f8840045    ..E.    STRB     r0,[r4,#0x45]
-        0x20008c86:    f7fffaff    ....    BL       vPortExitCritical ; 0x20008288
-        0x20008c8a:    a906        ..      ADD      r1,sp,#0x18
-        0x20008c8c:    a802        ..      ADD      r0,sp,#8
-        0x20008c8e:    f000f9bb    ....    BL       xTaskCheckForTimeOut ; 0x20009008
-        0x20008c92:    b9f8        ..      CBNZ     r0,0x20008cd4 ; xQueueGenericSend + 452
-        0x20008c94:    4620         F      MOV      r0,r4
-        0x20008c96:    f7fefe5e    ..^.    BL       prvIsQueueFull ; 0x20007956
-        0x20008c9a:    b1a8        ..      CBZ      r0,0x20008cc8 ; xQueueGenericSend + 440
-        0x20008c9c:    f1040010    ....    ADD      r0,r4,#0x10
-        0x20008ca0:    9906        ..      LDR      r1,[sp,#0x18]
-        0x20008ca2:    f7fffce5    ....    BL       vTaskPlaceOnEventList ; 0x20008670
-        0x20008ca6:    4620         F      MOV      r0,r4
-        0x20008ca8:    f7fff821    ..!.    BL       prvUnlockQueue ; 0x20007cee
-        0x20008cac:    f000fb9e    ....    BL       xTaskResumeAll ; 0x200093ec
-        0x20008cb0:    2800        .(      CMP      r0,#0
-        0x20008cb2:    f47faf7d    ..}.    BNE      0x20008bb0 ; xQueueGenericSend + 160
-        0x20008cb6:    f04f5080    O..P    MOV      r0,#0x10000000
-        0x20008cba:    490f        .I      LDR      r1,[pc,#60] ; [0x20008cf8] = 0xe000ed04
-        0x20008cbc:    6008        .`      STR      r0,[r1,#0]
-        0x20008cbe:    f3bf8f4f    ..O.    DSB      
-        0x20008cc2:    f3bf8f6f    ..o.    ISB      
-        0x20008cc6:    e773        s.      B        0x20008bb0 ; xQueueGenericSend + 160
-        0x20008cc8:    4620         F      MOV      r0,r4
-        0x20008cca:    f7fff810    ....    BL       prvUnlockQueue ; 0x20007cee
-        0x20008cce:    f000fb8d    ....    BL       xTaskResumeAll ; 0x200093ec
-        0x20008cd2:    e76d        m.      B        0x20008bb0 ; xQueueGenericSend + 160
-        0x20008cd4:    4620         F      MOV      r0,r4
-        0x20008cd6:    f7fff80a    ....    BL       prvUnlockQueue ; 0x20007cee
-        0x20008cda:    f000fb87    ....    BL       xTaskResumeAll ; 0x200093ec
-        0x20008cde:    4620         F      MOV      r0,r4
-        0x20008ce0:    f7fcf8a4    ....    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
-        0x20008ce4:    4682        .F      MOV      r10,r0
-        0x20008ce6:    9500        ..      STR      r5,[sp,#0]
-        0x20008ce8:    463a        :F      MOV      r2,r7
-        0x20008cea:    4651        QF      MOV      r1,r10
-        0x20008cec:    205a        Z       MOVS     r0,#0x5a
-        0x20008cee:    9b06        ..      LDR      r3,[sp,#0x18]
-        0x20008cf0:    f7fbfed0    ....    BL       SEGGER_SYSVIEW_RecordU32x4 ; 0x20004a94
-        0x20008cf4:    2000        .       MOVS     r0,#0
-        0x20008cf6:    e796        ..      B        0x20008c26 ; xQueueGenericSend + 278
+        0x20008d5c:    e92d47ff    -..G    PUSH     {r0-r10,lr}
+        0x20008d60:    b084        ..      SUB      sp,sp,#0x10
+        0x20008d62:    4606        .F      MOV      r6,r0
+        0x20008d64:    460f        .F      MOV      r7,r1
+        0x20008d66:    461d        .F      MOV      r5,r3
+        0x20008d68:    f04f0900    O...    MOV      r9,#0
+        0x20008d6c:    4634        4F      MOV      r4,r6
+        0x20008d6e:    b92c        ,.      CBNZ     r4,0x20008d7c ; xQueueGenericSend + 32
+        0x20008d70:    f240322e    @..2    MOV      r2,#0x32e
+        0x20008d74:    a169        i.      ADR      r1,{pc}+0x1a8 ; 0x20008f1c
+        0x20008d76:    a06e        n.      ADR      r0,{pc}+0x1ba ; 0x20008f30
+        0x20008d78:    f7fdfc16    ....    BL       __0printf ; 0x200065a8
+        0x20008d7c:    b90f        ..      CBNZ     r7,0x20008d82 ; xQueueGenericSend + 38
+        0x20008d7e:    6c20         l      LDR      r0,[r4,#0x40]
+        0x20008d80:    b908        ..      CBNZ     r0,0x20008d86 ; xQueueGenericSend + 42
+        0x20008d82:    2001        .       MOVS     r0,#1
+        0x20008d84:    e000        ..      B        0x20008d88 ; xQueueGenericSend + 44
+        0x20008d86:    2000        .       MOVS     r0,#0
+        0x20008d88:    b928        (.      CBNZ     r0,0x20008d96 ; xQueueGenericSend + 58
+        0x20008d8a:    f240322f    @./2    MOV      r2,#0x32f
+        0x20008d8e:    a163        c.      ADR      r1,{pc}+0x18e ; 0x20008f1c
+        0x20008d90:    a067        g.      ADR      r0,{pc}+0x1a0 ; 0x20008f30
+        0x20008d92:    f7fdfc09    ....    BL       __0printf ; 0x200065a8
+        0x20008d96:    2d02        .-      CMP      r5,#2
+        0x20008d98:    d102        ..      BNE      0x20008da0 ; xQueueGenericSend + 68
+        0x20008d9a:    6be0        .k      LDR      r0,[r4,#0x3c]
+        0x20008d9c:    2801        .(      CMP      r0,#1
+        0x20008d9e:    d101        ..      BNE      0x20008da4 ; xQueueGenericSend + 72
+        0x20008da0:    2001        .       MOVS     r0,#1
+        0x20008da2:    e000        ..      B        0x20008da6 ; xQueueGenericSend + 74
+        0x20008da4:    2000        .       MOVS     r0,#0
+        0x20008da6:    b928        (.      CBNZ     r0,0x20008db4 ; xQueueGenericSend + 88
+        0x20008da8:    f44f724c    O.Lr    MOV      r2,#0x330
+        0x20008dac:    a15b        [.      ADR      r1,{pc}+0x170 ; 0x20008f1c
+        0x20008dae:    a060        `.      ADR      r0,{pc}+0x182 ; 0x20008f30
+        0x20008db0:    f7fdfbfa    ....    BL       __0printf ; 0x200065a8
+        0x20008db4:    f000face    ....    BL       xTaskGetSchedulerState ; 0x20009354
+        0x20008db8:    b908        ..      CBNZ     r0,0x20008dbe ; xQueueGenericSend + 98
+        0x20008dba:    9806        ..      LDR      r0,[sp,#0x18]
+        0x20008dbc:    b908        ..      CBNZ     r0,0x20008dc2 ; xQueueGenericSend + 102
+        0x20008dbe:    2001        .       MOVS     r0,#1
+        0x20008dc0:    e000        ..      B        0x20008dc4 ; xQueueGenericSend + 104
+        0x20008dc2:    2000        .       MOVS     r0,#0
+        0x20008dc4:    b928        (.      CBNZ     r0,0x20008dd2 ; xQueueGenericSend + 118
+        0x20008dc6:    f2403233    @.32    MOV      r2,#0x333
+        0x20008dca:    a154        T.      ADR      r1,{pc}+0x152 ; 0x20008f1c
+        0x20008dcc:    a058        X.      ADR      r0,{pc}+0x164 ; 0x20008f30
+        0x20008dce:    f7fdfbeb    ....    BL       __0printf ; 0x200065a8
+        0x20008dd2:    bf00        ..      NOP      
+        0x20008dd4:    f7fffa8c    ....    BL       vPortEnterCritical ; 0x200082f0
+        0x20008dd8:    6ba0        .k      LDR      r0,[r4,#0x38]
+        0x20008dda:    6be1        .k      LDR      r1,[r4,#0x3c]
+        0x20008ddc:    4288        .B      CMP      r0,r1
+        0x20008dde:    d301        ..      BCC      0x20008de4 ; xQueueGenericSend + 136
+        0x20008de0:    2d02        .-      CMP      r5,#2
+        0x20008de2:    d135        5.      BNE      0x20008e50 ; xQueueGenericSend + 244
+        0x20008de4:    4620         F      MOV      r0,r4
+        0x20008de6:    f7fcf821    ..!.    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
+        0x20008dea:    4682        .F      MOV      r10,r0
+        0x20008dec:    9500        ..      STR      r5,[sp,#0]
+        0x20008dee:    463a        :F      MOV      r2,r7
+        0x20008df0:    4651        QF      MOV      r1,r10
+        0x20008df2:    205a        Z       MOVS     r0,#0x5a
+        0x20008df4:    9b06        ..      LDR      r3,[sp,#0x18]
+        0x20008df6:    f7fbfe4d    ..M.    BL       SEGGER_SYSVIEW_RecordU32x4 ; 0x20004a94
+        0x20008dfa:    462a        *F      MOV      r2,r5
+        0x20008dfc:    4639        9F      MOV      r1,r7
+        0x20008dfe:    4620         F      MOV      r0,r4
+        0x20008e00:    f7fefbdf    ....    BL       prvCopyDataToQueue ; 0x200075c2
+        0x20008e04:    4680        .F      MOV      r8,r0
+        0x20008e06:    6a60        `j      LDR      r0,[r4,#0x24]
+        0x20008e08:    b908        ..      CBNZ     r0,0x20008e0e ; xQueueGenericSend + 178
+        0x20008e0a:    2001        .       MOVS     r0,#1
+        0x20008e0c:    e000        ..      B        0x20008e10 ; xQueueGenericSend + 180
+        0x20008e0e:    2000        .       MOVS     r0,#0
+        0x20008e10:    b968        h.      CBNZ     r0,0x20008e2e ; xQueueGenericSend + 210
+        0x20008e12:    f1040024    ..$.    ADD      r0,r4,#0x24
+        0x20008e16:    f000fbdb    ....    BL       xTaskRemoveFromEventList ; 0x200095d0
+        0x20008e1a:    b198        ..      CBZ      r0,0x20008e44 ; xQueueGenericSend + 232
+        0x20008e1c:    f04f5080    O..P    MOV      r0,#0x10000000
+        0x20008e20:    4947        GI      LDR      r1,[pc,#284] ; [0x20008f40] = 0xe000ed04
+        0x20008e22:    6008        .`      STR      r0,[r1,#0]
+        0x20008e24:    f3bf8f4f    ..O.    DSB      
+        0x20008e28:    f3bf8f6f    ..o.    ISB      
+        0x20008e2c:    e00a        ..      B        0x20008e44 ; xQueueGenericSend + 232
+        0x20008e2e:    f1b80f00    ....    CMP      r8,#0
+        0x20008e32:    d007        ..      BEQ      0x20008e44 ; xQueueGenericSend + 232
+        0x20008e34:    f04f5080    O..P    MOV      r0,#0x10000000
+        0x20008e38:    4941        AI      LDR      r1,[pc,#260] ; [0x20008f40] = 0xe000ed04
+        0x20008e3a:    6008        .`      STR      r0,[r1,#0]
+        0x20008e3c:    f3bf8f4f    ..O.    DSB      
+        0x20008e40:    f3bf8f6f    ..o.    ISB      
+        0x20008e44:    f7fffa90    ....    BL       vPortExitCritical ; 0x20008368
+        0x20008e48:    2001        .       MOVS     r0,#1
+        0x20008e4a:    b008        ..      ADD      sp,sp,#0x20
+        0x20008e4c:    e8bd87f0    ....    POP      {r4-r10,pc}
+        0x20008e50:    9806        ..      LDR      r0,[sp,#0x18]
+        0x20008e52:    b970        p.      CBNZ     r0,0x20008e72 ; xQueueGenericSend + 278
+        0x20008e54:    f7fffa88    ....    BL       vPortExitCritical ; 0x20008368
+        0x20008e58:    4620         F      MOV      r0,r4
+        0x20008e5a:    f7fbffe7    ....    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
+        0x20008e5e:    4682        .F      MOV      r10,r0
+        0x20008e60:    9500        ..      STR      r5,[sp,#0]
+        0x20008e62:    463a        :F      MOV      r2,r7
+        0x20008e64:    4651        QF      MOV      r1,r10
+        0x20008e66:    205a        Z       MOVS     r0,#0x5a
+        0x20008e68:    9b06        ..      LDR      r3,[sp,#0x18]
+        0x20008e6a:    f7fbfe13    ....    BL       SEGGER_SYSVIEW_RecordU32x4 ; 0x20004a94
+        0x20008e6e:    2000        .       MOVS     r0,#0
+        0x20008e70:    e7eb        ..      B        0x20008e4a ; xQueueGenericSend + 238
+        0x20008e72:    f1b90f00    ....    CMP      r9,#0
+        0x20008e76:    d104        ..      BNE      0x20008e82 ; xQueueGenericSend + 294
+        0x20008e78:    a802        ..      ADD      r0,sp,#8
+        0x20008e7a:    f7fffca9    ....    BL       vTaskInternalSetTimeOutState ; 0x200087d0
+        0x20008e7e:    f04f0901    O...    MOV      r9,#1
+        0x20008e82:    f7fffa71    ..q.    BL       vPortExitCritical ; 0x20008368
+        0x20008e86:    f7fffd79    ..y.    BL       vTaskSuspendAll ; 0x2000897c
+        0x20008e8a:    f7fffa31    ..1.    BL       vPortEnterCritical ; 0x200082f0
+        0x20008e8e:    f9940044    ..D.    LDRSB    r0,[r4,#0x44]
+        0x20008e92:    1c40        @.      ADDS     r0,r0,#1
+        0x20008e94:    b910        ..      CBNZ     r0,0x20008e9c ; xQueueGenericSend + 320
+        0x20008e96:    2000        .       MOVS     r0,#0
+        0x20008e98:    f8840044    ..D.    STRB     r0,[r4,#0x44]
+        0x20008e9c:    f9940045    ..E.    LDRSB    r0,[r4,#0x45]
+        0x20008ea0:    1c40        @.      ADDS     r0,r0,#1
+        0x20008ea2:    b910        ..      CBNZ     r0,0x20008eaa ; xQueueGenericSend + 334
+        0x20008ea4:    2000        .       MOVS     r0,#0
+        0x20008ea6:    f8840045    ..E.    STRB     r0,[r4,#0x45]
+        0x20008eaa:    f7fffa5d    ..].    BL       vPortExitCritical ; 0x20008368
+        0x20008eae:    a906        ..      ADD      r1,sp,#0x18
+        0x20008eb0:    a802        ..      ADD      r0,sp,#8
+        0x20008eb2:    f000f9cf    ....    BL       xTaskCheckForTimeOut ; 0x20009254
+        0x20008eb6:    b9f8        ..      CBNZ     r0,0x20008ef8 ; xQueueGenericSend + 412
+        0x20008eb8:    4620         F      MOV      r0,r4
+        0x20008eba:    f7fefd5a    ..Z.    BL       prvIsQueueFull ; 0x20007972
+        0x20008ebe:    b1a8        ..      CBZ      r0,0x20008eec ; xQueueGenericSend + 400
+        0x20008ec0:    f1040010    ....    ADD      r0,r4,#0x10
+        0x20008ec4:    9906        ..      LDR      r1,[sp,#0x18]
+        0x20008ec6:    f7fffc95    ....    BL       vTaskPlaceOnEventList ; 0x200087f4
+        0x20008eca:    4620         F      MOV      r0,r4
+        0x20008ecc:    f7feff53    ..S.    BL       prvUnlockQueue ; 0x20007d76
+        0x20008ed0:    f000fbda    ....    BL       xTaskResumeAll ; 0x20009688
+        0x20008ed4:    2800        .(      CMP      r0,#0
+        0x20008ed6:    f47faf7d    ..}.    BNE      0x20008dd4 ; xQueueGenericSend + 120
+        0x20008eda:    f04f5080    O..P    MOV      r0,#0x10000000
+        0x20008ede:    4918        .I      LDR      r1,[pc,#96] ; [0x20008f40] = 0xe000ed04
+        0x20008ee0:    6008        .`      STR      r0,[r1,#0]
+        0x20008ee2:    f3bf8f4f    ..O.    DSB      
+        0x20008ee6:    f3bf8f6f    ..o.    ISB      
+        0x20008eea:    e773        s.      B        0x20008dd4 ; xQueueGenericSend + 120
+        0x20008eec:    4620         F      MOV      r0,r4
+        0x20008eee:    f7feff42    ..B.    BL       prvUnlockQueue ; 0x20007d76
+        0x20008ef2:    f000fbc9    ....    BL       xTaskResumeAll ; 0x20009688
+        0x20008ef6:    e76d        m.      B        0x20008dd4 ; xQueueGenericSend + 120
+        0x20008ef8:    4620         F      MOV      r0,r4
+        0x20008efa:    f7feff3c    ..<.    BL       prvUnlockQueue ; 0x20007d76
+        0x20008efe:    f000fbc3    ....    BL       xTaskResumeAll ; 0x20009688
+        0x20008f02:    4620         F      MOV      r0,r4
+        0x20008f04:    f7fbff92    ....    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
+        0x20008f08:    4682        .F      MOV      r10,r0
+        0x20008f0a:    9500        ..      STR      r5,[sp,#0]
+        0x20008f0c:    463a        :F      MOV      r2,r7
+        0x20008f0e:    4651        QF      MOV      r1,r10
+        0x20008f10:    205a        Z       MOVS     r0,#0x5a
+        0x20008f12:    9b06        ..      LDR      r3,[sp,#0x18]
+        0x20008f14:    f7fbfdbe    ....    BL       SEGGER_SYSVIEW_RecordU32x4 ; 0x20004a94
+        0x20008f18:    2000        .       MOVS     r0,#0
+        0x20008f1a:    e796        ..      B        0x20008e4a ; xQueueGenericSend + 238
     $d
-        0x20008cf8:    e000ed04    ....    DCD    3758157060
+        0x20008f1c:    465c2e2e    ..\F    DCD    1180446254
+        0x20008f20:    52656572    reeR    DCD    1382376818
+        0x20008f24:    5c534f54    TOS\    DCD    1548963668
+        0x20008f28:    75657571    queu    DCD    1969583473
+        0x20008f2c:    00632e65    e.c.    DCD    6499941
+        0x20008f30:    6f727245    Erro    DCD    1869771333
+        0x20008f34:    25203a72    r: %    DCD    622869106
+        0x20008f38:    25202c73    s, %    DCD    622865523
+        0x20008f3c:    000a0d64    d...    DCD    658788
+        0x20008f40:    e000ed04    ....    DCD    3758157060
     $t
     i.xQueueGenericSendFromISR
     xQueueGenericSendFromISR
-        0x20008cfc:    e92d5ffc    -.._    PUSH     {r2-r12,lr}
-        0x20008d00:    4607        .F      MOV      r7,r0
-        0x20008d02:    468b        .F      MOV      r11,r1
-        0x20008d04:    4690        .F      MOV      r8,r2
-        0x20008d06:    461e        .F      MOV      r6,r3
-        0x20008d08:    463c        <F      MOV      r4,r7
-        0x20008d0a:    b954        T.      CBNZ     r4,0x20008d22 ; xQueueGenericSendFromISR + 38
-        0x20008d0c:    bf00        ..      NOP      
-        0x20008d0e:    2050        P       MOVS     r0,#0x50
-        0x20008d10:    f3808811    ....    MSR      BASEPRI,r0
-        0x20008d14:    f3bf8f4f    ..O.    DSB      
-        0x20008d18:    f3bf8f6f    ..o.    ISB      
-        0x20008d1c:    bf00        ..      NOP      
-        0x20008d1e:    bf00        ..      NOP      
-        0x20008d20:    e7fe        ..      B        0x20008d20 ; xQueueGenericSendFromISR + 36
-        0x20008d22:    f1bb0f00    ....    CMP      r11,#0
-        0x20008d26:    d101        ..      BNE      0x20008d2c ; xQueueGenericSendFromISR + 48
-        0x20008d28:    6c20         l      LDR      r0,[r4,#0x40]
-        0x20008d2a:    b908        ..      CBNZ     r0,0x20008d30 ; xQueueGenericSendFromISR + 52
-        0x20008d2c:    2001        .       MOVS     r0,#1
-        0x20008d2e:    e000        ..      B        0x20008d32 ; xQueueGenericSendFromISR + 54
-        0x20008d30:    2000        .       MOVS     r0,#0
-        0x20008d32:    b950        P.      CBNZ     r0,0x20008d4a ; xQueueGenericSendFromISR + 78
-        0x20008d34:    bf00        ..      NOP      
-        0x20008d36:    2050        P       MOVS     r0,#0x50
-        0x20008d38:    f3808811    ....    MSR      BASEPRI,r0
-        0x20008d3c:    f3bf8f4f    ..O.    DSB      
-        0x20008d40:    f3bf8f6f    ..o.    ISB      
-        0x20008d44:    bf00        ..      NOP      
-        0x20008d46:    bf00        ..      NOP      
-        0x20008d48:    e7fe        ..      B        0x20008d48 ; xQueueGenericSendFromISR + 76
-        0x20008d4a:    2e02        ..      CMP      r6,#2
-        0x20008d4c:    d102        ..      BNE      0x20008d54 ; xQueueGenericSendFromISR + 88
-        0x20008d4e:    6be0        .k      LDR      r0,[r4,#0x3c]
-        0x20008d50:    2801        .(      CMP      r0,#1
-        0x20008d52:    d101        ..      BNE      0x20008d58 ; xQueueGenericSendFromISR + 92
-        0x20008d54:    2001        .       MOVS     r0,#1
-        0x20008d56:    e000        ..      B        0x20008d5a ; xQueueGenericSendFromISR + 94
-        0x20008d58:    2000        .       MOVS     r0,#0
-        0x20008d5a:    b950        P.      CBNZ     r0,0x20008d72 ; xQueueGenericSendFromISR + 118
-        0x20008d5c:    bf00        ..      NOP      
-        0x20008d5e:    2050        P       MOVS     r0,#0x50
-        0x20008d60:    f3808811    ....    MSR      BASEPRI,r0
-        0x20008d64:    f3bf8f4f    ..O.    DSB      
-        0x20008d68:    f3bf8f6f    ..o.    ISB      
-        0x20008d6c:    bf00        ..      NOP      
-        0x20008d6e:    bf00        ..      NOP      
-        0x20008d70:    e7fe        ..      B        0x20008d70 ; xQueueGenericSendFromISR + 116
-        0x20008d72:    f7fffb0d    ....    BL       vPortValidateInterruptPriority ; 0x20008390
-        0x20008d76:    bf00        ..      NOP      
-        0x20008d78:    2150        P!      MOVS     r1,#0x50
-        0x20008d7a:    f3ef8011    ....    MRS      r0,BASEPRI
-        0x20008d7e:    f3818811    ....    MSR      BASEPRI,r1
-        0x20008d82:    f3bf8f4f    ..O.    DSB      
-        0x20008d86:    f3bf8f6f    ..o.    ISB      
-        0x20008d8a:    bf00        ..      NOP      
-        0x20008d8c:    4605        .F      MOV      r5,r0
-        0x20008d8e:    6ba0        .k      LDR      r0,[r4,#0x38]
-        0x20008d90:    6be1        .k      LDR      r1,[r4,#0x3c]
-        0x20008d92:    4288        .B      CMP      r0,r1
-        0x20008d94:    d301        ..      BCC      0x20008d9a ; xQueueGenericSendFromISR + 158
-        0x20008d96:    2e02        ..      CMP      r6,#2
-        0x20008d98:    d140        @.      BNE      0x20008e1c ; xQueueGenericSendFromISR + 288
-        0x20008d9a:    f994a045    ..E.    LDRSB    r10,[r4,#0x45]
-        0x20008d9e:    6ba0        .k      LDR      r0,[r4,#0x38]
-        0x20008da0:    9001        ..      STR      r0,[sp,#4]
-        0x20008da2:    4620         F      MOV      r0,r4
-        0x20008da4:    f7fcf842    ..B.    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
-        0x20008da8:    4642        BF      MOV      r2,r8
-        0x20008daa:    4601        .F      MOV      r1,r0
-        0x20008dac:    9000        ..      STR      r0,[sp,#0]
-        0x20008dae:    2060        `       MOVS     r0,#0x60
-        0x20008db0:    f7fbfde6    ....    BL       SEGGER_SYSVIEW_RecordU32x2 ; 0x20004980
-        0x20008db4:    4632        2F      MOV      r2,r6
-        0x20008db6:    4659        YF      MOV      r1,r11
-        0x20008db8:    4620         F      MOV      r0,r4
-        0x20008dba:    f7fefc02    ....    BL       prvCopyDataToQueue ; 0x200075c2
-        0x20008dbe:    f10a0001    ....    ADD      r0,r10,#1
-        0x20008dc2:    b988        ..      CBNZ     r0,0x20008de8 ; xQueueGenericSendFromISR + 236
-        0x20008dc4:    6a60        `j      LDR      r0,[r4,#0x24]
-        0x20008dc6:    b908        ..      CBNZ     r0,0x20008dcc ; xQueueGenericSendFromISR + 208
-        0x20008dc8:    2001        .       MOVS     r0,#1
-        0x20008dca:    e000        ..      B        0x20008dce ; xQueueGenericSendFromISR + 210
-        0x20008dcc:    2000        .       MOVS     r0,#0
-        0x20008dce:    b950        P.      CBNZ     r0,0x20008de6 ; xQueueGenericSendFromISR + 234
-        0x20008dd0:    f1040024    ..$.    ADD      r0,r4,#0x24
-        0x20008dd4:    f000faba    ....    BL       xTaskRemoveFromEventList ; 0x2000934c
-        0x20008dd8:    b128        (.      CBZ      r0,0x20008de6 ; xQueueGenericSendFromISR + 234
-        0x20008dda:    f1b80f00    ....    CMP      r8,#0
-        0x20008dde:    d002        ..      BEQ      0x20008de6 ; xQueueGenericSendFromISR + 234
-        0x20008de0:    2001        .       MOVS     r0,#1
-        0x20008de2:    f8c80000    ....    STR      r0,[r8,#0]
-        0x20008de6:    e016        ..      B        0x20008e16 ; xQueueGenericSendFromISR + 282
-        0x20008de8:    f1ba0f7f    ....    CMP      r10,#0x7f
-        0x20008dec:    d001        ..      BEQ      0x20008df2 ; xQueueGenericSendFromISR + 246
-        0x20008dee:    2001        .       MOVS     r0,#1
-        0x20008df0:    e000        ..      B        0x20008df4 ; xQueueGenericSendFromISR + 248
-        0x20008df2:    2000        .       MOVS     r0,#0
-        0x20008df4:    b950        P.      CBNZ     r0,0x20008e0c ; xQueueGenericSendFromISR + 272
-        0x20008df6:    bf00        ..      NOP      
-        0x20008df8:    2050        P       MOVS     r0,#0x50
-        0x20008dfa:    f3808811    ....    MSR      BASEPRI,r0
-        0x20008dfe:    f3bf8f4f    ..O.    DSB      
-        0x20008e02:    f3bf8f6f    ..o.    ISB      
-        0x20008e06:    bf00        ..      NOP      
-        0x20008e08:    bf00        ..      NOP      
-        0x20008e0a:    e7fe        ..      B        0x20008e0a ; xQueueGenericSendFromISR + 270
-        0x20008e0c:    f10a0001    ....    ADD      r0,r10,#1
-        0x20008e10:    b240        @.      SXTB     r0,r0
-        0x20008e12:    f8840045    ..E.    STRB     r0,[r4,#0x45]
-        0x20008e16:    f04f0901    O...    MOV      r9,#1
-        0x20008e1a:    e00a        ..      B        0x20008e32 ; xQueueGenericSendFromISR + 310
-        0x20008e1c:    4620         F      MOV      r0,r4
-        0x20008e1e:    f7fcf805    ....    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
-        0x20008e22:    4682        .F      MOV      r10,r0
-        0x20008e24:    4642        BF      MOV      r2,r8
-        0x20008e26:    4651        QF      MOV      r1,r10
-        0x20008e28:    2060        `       MOVS     r0,#0x60
-        0x20008e2a:    f7fbfda9    ....    BL       SEGGER_SYSVIEW_RecordU32x2 ; 0x20004980
-        0x20008e2e:    f04f0900    O...    MOV      r9,#0
-        0x20008e32:    bf00        ..      NOP      
-        0x20008e34:    f3858811    ....    MSR      BASEPRI,r5
-        0x20008e38:    bf00        ..      NOP      
-        0x20008e3a:    4648        HF      MOV      r0,r9
-        0x20008e3c:    e8bd9ffc    ....    POP      {r2-r12,pc}
+        0x20008f44:    e92d5ffc    -.._    PUSH     {r2-r12,lr}
+        0x20008f48:    4607        .F      MOV      r7,r0
+        0x20008f4a:    468b        .F      MOV      r11,r1
+        0x20008f4c:    4690        .F      MOV      r8,r2
+        0x20008f4e:    461e        .F      MOV      r6,r3
+        0x20008f50:    463c        <F      MOV      r4,r7
+        0x20008f52:    b92c        ,.      CBNZ     r4,0x20008f60 ; xQueueGenericSendFromISR + 28
+        0x20008f54:    f2404202    @..B    MOV      r2,#0x402
+        0x20008f58:    a141        A.      ADR      r1,{pc}+0x108 ; 0x20009060
+        0x20008f5a:    a046        F.      ADR      r0,{pc}+0x11a ; 0x20009074
+        0x20008f5c:    f7fdfb24    ..$.    BL       __0printf ; 0x200065a8
+        0x20008f60:    f1bb0f00    ....    CMP      r11,#0
+        0x20008f64:    d101        ..      BNE      0x20008f6a ; xQueueGenericSendFromISR + 38
+        0x20008f66:    6c20         l      LDR      r0,[r4,#0x40]
+        0x20008f68:    b908        ..      CBNZ     r0,0x20008f6e ; xQueueGenericSendFromISR + 42
+        0x20008f6a:    2001        .       MOVS     r0,#1
+        0x20008f6c:    e000        ..      B        0x20008f70 ; xQueueGenericSendFromISR + 44
+        0x20008f6e:    2000        .       MOVS     r0,#0
+        0x20008f70:    b928        (.      CBNZ     r0,0x20008f7e ; xQueueGenericSendFromISR + 58
+        0x20008f72:    f2404203    @..B    MOV      r2,#0x403
+        0x20008f76:    a13a        :.      ADR      r1,{pc}+0xea ; 0x20009060
+        0x20008f78:    a03e        >.      ADR      r0,{pc}+0xfc ; 0x20009074
+        0x20008f7a:    f7fdfb15    ....    BL       __0printf ; 0x200065a8
+        0x20008f7e:    2e02        ..      CMP      r6,#2
+        0x20008f80:    d102        ..      BNE      0x20008f88 ; xQueueGenericSendFromISR + 68
+        0x20008f82:    6be0        .k      LDR      r0,[r4,#0x3c]
+        0x20008f84:    2801        .(      CMP      r0,#1
+        0x20008f86:    d101        ..      BNE      0x20008f8c ; xQueueGenericSendFromISR + 72
+        0x20008f88:    2001        .       MOVS     r0,#1
+        0x20008f8a:    e000        ..      B        0x20008f8e ; xQueueGenericSendFromISR + 74
+        0x20008f8c:    2000        .       MOVS     r0,#0
+        0x20008f8e:    b928        (.      CBNZ     r0,0x20008f9c ; xQueueGenericSendFromISR + 88
+        0x20008f90:    f2404204    @..B    MOV      r2,#0x404
+        0x20008f94:    a132        2.      ADR      r1,{pc}+0xcc ; 0x20009060
+        0x20008f96:    a037        7.      ADR      r0,{pc}+0xde ; 0x20009074
+        0x20008f98:    f7fdfb06    ....    BL       __0printf ; 0x200065a8
+        0x20008f9c:    f7fffa88    ....    BL       vPortValidateInterruptPriority ; 0x200084b0
+        0x20008fa0:    bf00        ..      NOP      
+        0x20008fa2:    2150        P!      MOVS     r1,#0x50
+        0x20008fa4:    f3ef8011    ....    MRS      r0,BASEPRI
+        0x20008fa8:    f3818811    ....    MSR      BASEPRI,r1
+        0x20008fac:    f3bf8f4f    ..O.    DSB      
+        0x20008fb0:    f3bf8f6f    ..o.    ISB      
+        0x20008fb4:    bf00        ..      NOP      
+        0x20008fb6:    4605        .F      MOV      r5,r0
+        0x20008fb8:    6ba0        .k      LDR      r0,[r4,#0x38]
+        0x20008fba:    6be1        .k      LDR      r1,[r4,#0x3c]
+        0x20008fbc:    4288        .B      CMP      r0,r1
+        0x20008fbe:    d301        ..      BCC      0x20008fc4 ; xQueueGenericSendFromISR + 128
+        0x20008fc0:    2e02        ..      CMP      r6,#2
+        0x20008fc2:    d13b        ;.      BNE      0x2000903c ; xQueueGenericSendFromISR + 248
+        0x20008fc4:    f994a045    ..E.    LDRSB    r10,[r4,#0x45]
+        0x20008fc8:    6ba0        .k      LDR      r0,[r4,#0x38]
+        0x20008fca:    9001        ..      STR      r0,[sp,#4]
+        0x20008fcc:    4620         F      MOV      r0,r4
+        0x20008fce:    f7fbff2d    ..-.    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
+        0x20008fd2:    4642        BF      MOV      r2,r8
+        0x20008fd4:    4601        .F      MOV      r1,r0
+        0x20008fd6:    9000        ..      STR      r0,[sp,#0]
+        0x20008fd8:    2060        `       MOVS     r0,#0x60
+        0x20008fda:    f7fbfcd1    ....    BL       SEGGER_SYSVIEW_RecordU32x2 ; 0x20004980
+        0x20008fde:    4632        2F      MOV      r2,r6
+        0x20008fe0:    4659        YF      MOV      r1,r11
+        0x20008fe2:    4620         F      MOV      r0,r4
+        0x20008fe4:    f7fefaed    ....    BL       prvCopyDataToQueue ; 0x200075c2
+        0x20008fe8:    f10a0001    ....    ADD      r0,r10,#1
+        0x20008fec:    b988        ..      CBNZ     r0,0x20009012 ; xQueueGenericSendFromISR + 206
+        0x20008fee:    6a60        `j      LDR      r0,[r4,#0x24]
+        0x20008ff0:    b908        ..      CBNZ     r0,0x20008ff6 ; xQueueGenericSendFromISR + 178
+        0x20008ff2:    2001        .       MOVS     r0,#1
+        0x20008ff4:    e000        ..      B        0x20008ff8 ; xQueueGenericSendFromISR + 180
+        0x20008ff6:    2000        .       MOVS     r0,#0
+        0x20008ff8:    b950        P.      CBNZ     r0,0x20009010 ; xQueueGenericSendFromISR + 204
+        0x20008ffa:    f1040024    ..$.    ADD      r0,r4,#0x24
+        0x20008ffe:    f000fae7    ....    BL       xTaskRemoveFromEventList ; 0x200095d0
+        0x20009002:    b128        (.      CBZ      r0,0x20009010 ; xQueueGenericSendFromISR + 204
+        0x20009004:    f1b80f00    ....    CMP      r8,#0
+        0x20009008:    d002        ..      BEQ      0x20009010 ; xQueueGenericSendFromISR + 204
+        0x2000900a:    2001        .       MOVS     r0,#1
+        0x2000900c:    f8c80000    ....    STR      r0,[r8,#0]
+        0x20009010:    e011        ..      B        0x20009036 ; xQueueGenericSendFromISR + 242
+        0x20009012:    f1ba0f7f    ....    CMP      r10,#0x7f
+        0x20009016:    d001        ..      BEQ      0x2000901c ; xQueueGenericSendFromISR + 216
+        0x20009018:    2001        .       MOVS     r0,#1
+        0x2000901a:    e000        ..      B        0x2000901e ; xQueueGenericSendFromISR + 218
+        0x2000901c:    2000        .       MOVS     r0,#0
+        0x2000901e:    b928        (.      CBNZ     r0,0x2000902c ; xQueueGenericSendFromISR + 232
+        0x20009020:    f240428d    @..B    MOV      r2,#0x48d
+        0x20009024:    a10e        ..      ADR      r1,{pc}+0x3c ; 0x20009060
+        0x20009026:    a013        ..      ADR      r0,{pc}+0x4e ; 0x20009074
+        0x20009028:    f7fdfabe    ....    BL       __0printf ; 0x200065a8
+        0x2000902c:    f10a0001    ....    ADD      r0,r10,#1
+        0x20009030:    b240        @.      SXTB     r0,r0
+        0x20009032:    f8840045    ..E.    STRB     r0,[r4,#0x45]
+        0x20009036:    f04f0901    O...    MOV      r9,#1
+        0x2000903a:    e00a        ..      B        0x20009052 ; xQueueGenericSendFromISR + 270
+        0x2000903c:    4620         F      MOV      r0,r4
+        0x2000903e:    f7fbfef5    ....    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
+        0x20009042:    4682        .F      MOV      r10,r0
+        0x20009044:    4642        BF      MOV      r2,r8
+        0x20009046:    4651        QF      MOV      r1,r10
+        0x20009048:    2060        `       MOVS     r0,#0x60
+        0x2000904a:    f7fbfc99    ....    BL       SEGGER_SYSVIEW_RecordU32x2 ; 0x20004980
+        0x2000904e:    f04f0900    O...    MOV      r9,#0
+        0x20009052:    bf00        ..      NOP      
+        0x20009054:    f3858811    ....    MSR      BASEPRI,r5
+        0x20009058:    bf00        ..      NOP      
+        0x2000905a:    4648        HF      MOV      r0,r9
+        0x2000905c:    e8bd9ffc    ....    POP      {r2-r12,pc}
+    $d
+        0x20009060:    465c2e2e    ..\F    DCD    1180446254
+        0x20009064:    52656572    reeR    DCD    1382376818
+        0x20009068:    5c534f54    TOS\    DCD    1548963668
+        0x2000906c:    75657571    queu    DCD    1969583473
+        0x20009070:    00632e65    e.c.    DCD    6499941
+        0x20009074:    6f727245    Erro    DCD    1869771333
+        0x20009078:    25203a72    r: %    DCD    622869106
+        0x2000907c:    25202c73    s, %    DCD    622865523
+        0x20009080:    000a0d64    d...    DCD    658788
+    $t
     i.xQueueReceive
     xQueueReceive
-        0x20008e40:    e92d47f7    -..G    PUSH     {r0-r2,r4-r10,lr}
-        0x20008e44:    b083        ..      SUB      sp,sp,#0xc
-        0x20008e46:    4605        .F      MOV      r5,r0
-        0x20008e48:    460e        .F      MOV      r6,r1
-        0x20008e4a:    f04f0800    O...    MOV      r8,#0
-        0x20008e4e:    462c        ,F      MOV      r4,r5
-        0x20008e50:    b954        T.      CBNZ     r4,0x20008e68 ; xQueueReceive + 40
-        0x20008e52:    bf00        ..      NOP      
-        0x20008e54:    2050        P       MOVS     r0,#0x50
-        0x20008e56:    f3808811    ....    MSR      BASEPRI,r0
-        0x20008e5a:    f3bf8f4f    ..O.    DSB      
-        0x20008e5e:    f3bf8f6f    ..o.    ISB      
-        0x20008e62:    bf00        ..      NOP      
-        0x20008e64:    bf00        ..      NOP      
-        0x20008e66:    e7fe        ..      B        0x20008e66 ; xQueueReceive + 38
-        0x20008e68:    b90e        ..      CBNZ     r6,0x20008e6e ; xQueueReceive + 46
-        0x20008e6a:    6c20         l      LDR      r0,[r4,#0x40]
-        0x20008e6c:    b908        ..      CBNZ     r0,0x20008e72 ; xQueueReceive + 50
-        0x20008e6e:    2001        .       MOVS     r0,#1
-        0x20008e70:    e000        ..      B        0x20008e74 ; xQueueReceive + 52
-        0x20008e72:    2000        .       MOVS     r0,#0
-        0x20008e74:    b950        P.      CBNZ     r0,0x20008e8c ; xQueueReceive + 76
-        0x20008e76:    bf00        ..      NOP      
-        0x20008e78:    2050        P       MOVS     r0,#0x50
-        0x20008e7a:    f3808811    ....    MSR      BASEPRI,r0
-        0x20008e7e:    f3bf8f4f    ..O.    DSB      
-        0x20008e82:    f3bf8f6f    ..o.    ISB      
-        0x20008e86:    bf00        ..      NOP      
-        0x20008e88:    bf00        ..      NOP      
-        0x20008e8a:    e7fe        ..      B        0x20008e8a ; xQueueReceive + 74
-        0x20008e8c:    f000f934    ..4.    BL       xTaskGetSchedulerState ; 0x200090f8
-        0x20008e90:    b908        ..      CBNZ     r0,0x20008e96 ; xQueueReceive + 86
-        0x20008e92:    9805        ..      LDR      r0,[sp,#0x14]
-        0x20008e94:    b908        ..      CBNZ     r0,0x20008e9a ; xQueueReceive + 90
-        0x20008e96:    2001        .       MOVS     r0,#1
-        0x20008e98:    e000        ..      B        0x20008e9c ; xQueueReceive + 92
-        0x20008e9a:    2000        .       MOVS     r0,#0
-        0x20008e9c:    b950        P.      CBNZ     r0,0x20008eb4 ; xQueueReceive + 116
-        0x20008e9e:    bf00        ..      NOP      
-        0x20008ea0:    2050        P       MOVS     r0,#0x50
-        0x20008ea2:    f3808811    ....    MSR      BASEPRI,r0
-        0x20008ea6:    f3bf8f4f    ..O.    DSB      
-        0x20008eaa:    f3bf8f6f    ..o.    ISB      
-        0x20008eae:    bf00        ..      NOP      
-        0x20008eb0:    bf00        ..      NOP      
-        0x20008eb2:    e7fe        ..      B        0x20008eb2 ; xQueueReceive + 114
-        0x20008eb4:    bf00        ..      NOP      
-        0x20008eb6:    f7fff9bd    ....    BL       vPortEnterCritical ; 0x20008234
-        0x20008eba:    6ba7        .k      LDR      r7,[r4,#0x38]
-        0x20008ebc:    b377        w.      CBZ      r7,0x20008f1c ; xQueueReceive + 220
-        0x20008ebe:    4631        1F      MOV      r1,r6
-        0x20008ec0:    4620         F      MOV      r0,r4
-        0x20008ec2:    f7fefb69    ..i.    BL       prvCopyDataFromQueue ; 0x20007598
-        0x20008ec6:    2000        .       MOVS     r0,#0
-        0x20008ec8:    f7fbffb0    ....    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
-        0x20008ecc:    4681        .F      MOV      r9,r0
-        0x20008ece:    4620         F      MOV      r0,r4
-        0x20008ed0:    f7fbffac    ....    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
-        0x20008ed4:    4682        .F      MOV      r10,r0
-        0x20008ed6:    2001        .       MOVS     r0,#1
-        0x20008ed8:    9000        ..      STR      r0,[sp,#0]
-        0x20008eda:    464a        JF      MOV      r2,r9
-        0x20008edc:    4651        QF      MOV      r1,r10
-        0x20008ede:    205c        \       MOVS     r0,#0x5c
-        0x20008ee0:    9b05        ..      LDR      r3,[sp,#0x14]
-        0x20008ee2:    f7fbfdd7    ....    BL       SEGGER_SYSVIEW_RecordU32x4 ; 0x20004a94
-        0x20008ee6:    1e78        x.      SUBS     r0,r7,#1
-        0x20008ee8:    63a0        .c      STR      r0,[r4,#0x38]
-        0x20008eea:    6920         i      LDR      r0,[r4,#0x10]
-        0x20008eec:    b908        ..      CBNZ     r0,0x20008ef2 ; xQueueReceive + 178
-        0x20008eee:    2001        .       MOVS     r0,#1
-        0x20008ef0:    e000        ..      B        0x20008ef4 ; xQueueReceive + 180
-        0x20008ef2:    2000        .       MOVS     r0,#0
-        0x20008ef4:    b960        `.      CBNZ     r0,0x20008f10 ; xQueueReceive + 208
-        0x20008ef6:    f1040010    ....    ADD      r0,r4,#0x10
-        0x20008efa:    f000fa27    ..'.    BL       xTaskRemoveFromEventList ; 0x2000934c
-        0x20008efe:    b138        8.      CBZ      r0,0x20008f10 ; xQueueReceive + 208
-        0x20008f00:    f04f5080    O..P    MOV      r0,#0x10000000
-        0x20008f04:    493f        ?I      LDR      r1,[pc,#252] ; [0x20009004] = 0xe000ed04
-        0x20008f06:    6008        .`      STR      r0,[r1,#0]
-        0x20008f08:    f3bf8f4f    ..O.    DSB      
-        0x20008f0c:    f3bf8f6f    ..o.    ISB      
-        0x20008f10:    f7fff9ba    ....    BL       vPortExitCritical ; 0x20008288
-        0x20008f14:    2001        .       MOVS     r0,#1
-        0x20008f16:    b006        ..      ADD      sp,sp,#0x18
-        0x20008f18:    e8bd87f0    ....    POP      {r4-r10,pc}
-        0x20008f1c:    9805        ..      LDR      r0,[sp,#0x14]
-        0x20008f1e:    b998        ..      CBNZ     r0,0x20008f48 ; xQueueReceive + 264
-        0x20008f20:    f7fff9b2    ....    BL       vPortExitCritical ; 0x20008288
-        0x20008f24:    2000        .       MOVS     r0,#0
-        0x20008f26:    f7fbff81    ....    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
-        0x20008f2a:    4681        .F      MOV      r9,r0
-        0x20008f2c:    4620         F      MOV      r0,r4
-        0x20008f2e:    f7fbff7d    ..}.    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
-        0x20008f32:    4682        .F      MOV      r10,r0
-        0x20008f34:    2001        .       MOVS     r0,#1
-        0x20008f36:    9000        ..      STR      r0,[sp,#0]
-        0x20008f38:    464a        JF      MOV      r2,r9
-        0x20008f3a:    4651        QF      MOV      r1,r10
-        0x20008f3c:    205c        \       MOVS     r0,#0x5c
-        0x20008f3e:    9b05        ..      LDR      r3,[sp,#0x14]
-        0x20008f40:    f7fbfda8    ....    BL       SEGGER_SYSVIEW_RecordU32x4 ; 0x20004a94
-        0x20008f44:    2000        .       MOVS     r0,#0
-        0x20008f46:    e7e6        ..      B        0x20008f16 ; xQueueReceive + 214
-        0x20008f48:    f1b80f00    ....    CMP      r8,#0
-        0x20008f4c:    d104        ..      BNE      0x20008f58 ; xQueueReceive + 280
-        0x20008f4e:    a801        ..      ADD      r0,sp,#4
-        0x20008f50:    f7fffb7c    ..|.    BL       vTaskInternalSetTimeOutState ; 0x2000864c
-        0x20008f54:    f04f0801    O...    MOV      r8,#1
-        0x20008f58:    f7fff996    ....    BL       vPortExitCritical ; 0x20008288
-        0x20008f5c:    f7fffc26    ..&.    BL       vTaskSuspendAll ; 0x200087ac
-        0x20008f60:    f7fff968    ..h.    BL       vPortEnterCritical ; 0x20008234
-        0x20008f64:    f9940044    ..D.    LDRSB    r0,[r4,#0x44]
-        0x20008f68:    1c40        @.      ADDS     r0,r0,#1
-        0x20008f6a:    b910        ..      CBNZ     r0,0x20008f72 ; xQueueReceive + 306
-        0x20008f6c:    2000        .       MOVS     r0,#0
-        0x20008f6e:    f8840044    ..D.    STRB     r0,[r4,#0x44]
-        0x20008f72:    f9940045    ..E.    LDRSB    r0,[r4,#0x45]
-        0x20008f76:    1c40        @.      ADDS     r0,r0,#1
-        0x20008f78:    b910        ..      CBNZ     r0,0x20008f80 ; xQueueReceive + 320
-        0x20008f7a:    2000        .       MOVS     r0,#0
-        0x20008f7c:    f8840045    ..E.    STRB     r0,[r4,#0x45]
-        0x20008f80:    f7fff982    ....    BL       vPortExitCritical ; 0x20008288
-        0x20008f84:    a905        ..      ADD      r1,sp,#0x14
-        0x20008f86:    a801        ..      ADD      r0,sp,#4
-        0x20008f88:    f000f83e    ..>.    BL       xTaskCheckForTimeOut ; 0x20009008
-        0x20008f8c:    b9f0        ..      CBNZ     r0,0x20008fcc ; xQueueReceive + 396
-        0x20008f8e:    4620         F      MOV      r0,r4
-        0x20008f90:    f7fefcd4    ....    BL       prvIsQueueEmpty ; 0x2000793c
-        0x20008f94:    b1a0        ..      CBZ      r0,0x20008fc0 ; xQueueReceive + 384
-        0x20008f96:    f1040024    ..$.    ADD      r0,r4,#0x24
-        0x20008f9a:    9905        ..      LDR      r1,[sp,#0x14]
-        0x20008f9c:    f7fffb68    ..h.    BL       vTaskPlaceOnEventList ; 0x20008670
-        0x20008fa0:    4620         F      MOV      r0,r4
-        0x20008fa2:    f7fefea4    ....    BL       prvUnlockQueue ; 0x20007cee
-        0x20008fa6:    f000fa21    ..!.    BL       xTaskResumeAll ; 0x200093ec
-        0x20008faa:    2800        .(      CMP      r0,#0
-        0x20008fac:    d183        ..      BNE      0x20008eb6 ; xQueueReceive + 118
-        0x20008fae:    f04f5080    O..P    MOV      r0,#0x10000000
-        0x20008fb2:    4914        .I      LDR      r1,[pc,#80] ; [0x20009004] = 0xe000ed04
-        0x20008fb4:    6008        .`      STR      r0,[r1,#0]
-        0x20008fb6:    f3bf8f4f    ..O.    DSB      
-        0x20008fba:    f3bf8f6f    ..o.    ISB      
-        0x20008fbe:    e77a        z.      B        0x20008eb6 ; xQueueReceive + 118
-        0x20008fc0:    4620         F      MOV      r0,r4
-        0x20008fc2:    f7fefe94    ....    BL       prvUnlockQueue ; 0x20007cee
-        0x20008fc6:    f000fa11    ....    BL       xTaskResumeAll ; 0x200093ec
-        0x20008fca:    e774        t.      B        0x20008eb6 ; xQueueReceive + 118
-        0x20008fcc:    4620         F      MOV      r0,r4
-        0x20008fce:    f7fefe8e    ....    BL       prvUnlockQueue ; 0x20007cee
-        0x20008fd2:    f000fa0b    ....    BL       xTaskResumeAll ; 0x200093ec
-        0x20008fd6:    4620         F      MOV      r0,r4
-        0x20008fd8:    f7fefcb0    ....    BL       prvIsQueueEmpty ; 0x2000793c
-        0x20008fdc:    2800        .(      CMP      r0,#0
-        0x20008fde:    d0ee        ..      BEQ      0x20008fbe ; xQueueReceive + 382
-        0x20008fe0:    2000        .       MOVS     r0,#0
-        0x20008fe2:    f7fbff23    ..#.    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
-        0x20008fe6:    4607        .F      MOV      r7,r0
-        0x20008fe8:    4620         F      MOV      r0,r4
-        0x20008fea:    f7fbff1f    ....    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
-        0x20008fee:    4681        .F      MOV      r9,r0
-        0x20008ff0:    2001        .       MOVS     r0,#1
-        0x20008ff2:    9000        ..      STR      r0,[sp,#0]
-        0x20008ff4:    463a        :F      MOV      r2,r7
-        0x20008ff6:    4649        IF      MOV      r1,r9
-        0x20008ff8:    205c        \       MOVS     r0,#0x5c
-        0x20008ffa:    9b05        ..      LDR      r3,[sp,#0x14]
-        0x20008ffc:    f7fbfd4a    ..J.    BL       SEGGER_SYSVIEW_RecordU32x4 ; 0x20004a94
-        0x20009000:    2000        .       MOVS     r0,#0
-        0x20009002:    e788        ..      B        0x20008f16 ; xQueueReceive + 214
+        0x20009084:    e92d47f7    -..G    PUSH     {r0-r2,r4-r10,lr}
+        0x20009088:    b083        ..      SUB      sp,sp,#0xc
+        0x2000908a:    4605        .F      MOV      r5,r0
+        0x2000908c:    460e        .F      MOV      r6,r1
+        0x2000908e:    f04f0800    O...    MOV      r8,#0
+        0x20009092:    462c        ,F      MOV      r4,r5
+        0x20009094:    b92c        ,.      CBNZ     r4,0x200090a2 ; xQueueReceive + 30
+        0x20009096:    f2405251    @.QR    MOV      r2,#0x551
+        0x2000909a:    a164        d.      ADR      r1,{pc}+0x192 ; 0x2000922c
+        0x2000909c:    a068        h.      ADR      r0,{pc}+0x1a4 ; 0x20009240
+        0x2000909e:    f7fdfa83    ....    BL       __0printf ; 0x200065a8
+        0x200090a2:    b90e        ..      CBNZ     r6,0x200090a8 ; xQueueReceive + 36
+        0x200090a4:    6c20         l      LDR      r0,[r4,#0x40]
+        0x200090a6:    b908        ..      CBNZ     r0,0x200090ac ; xQueueReceive + 40
+        0x200090a8:    2001        .       MOVS     r0,#1
+        0x200090aa:    e000        ..      B        0x200090ae ; xQueueReceive + 42
+        0x200090ac:    2000        .       MOVS     r0,#0
+        0x200090ae:    b928        (.      CBNZ     r0,0x200090bc ; xQueueReceive + 56
+        0x200090b0:    f2405255    @.UR    MOV      r2,#0x555
+        0x200090b4:    a15d        ].      ADR      r1,{pc}+0x178 ; 0x2000922c
+        0x200090b6:    a062        b.      ADR      r0,{pc}+0x18a ; 0x20009240
+        0x200090b8:    f7fdfa76    ..v.    BL       __0printf ; 0x200065a8
+        0x200090bc:    f000f94a    ..J.    BL       xTaskGetSchedulerState ; 0x20009354
+        0x200090c0:    b908        ..      CBNZ     r0,0x200090c6 ; xQueueReceive + 66
+        0x200090c2:    9805        ..      LDR      r0,[sp,#0x14]
+        0x200090c4:    b908        ..      CBNZ     r0,0x200090ca ; xQueueReceive + 70
+        0x200090c6:    2001        .       MOVS     r0,#1
+        0x200090c8:    e000        ..      B        0x200090cc ; xQueueReceive + 72
+        0x200090ca:    2000        .       MOVS     r0,#0
+        0x200090cc:    b928        (.      CBNZ     r0,0x200090da ; xQueueReceive + 86
+        0x200090ce:    f240525a    @.ZR    MOV      r2,#0x55a
+        0x200090d2:    a156        V.      ADR      r1,{pc}+0x15a ; 0x2000922c
+        0x200090d4:    a05a        Z.      ADR      r0,{pc}+0x16c ; 0x20009240
+        0x200090d6:    f7fdfa67    ..g.    BL       __0printf ; 0x200065a8
+        0x200090da:    bf00        ..      NOP      
+        0x200090dc:    f7fff908    ....    BL       vPortEnterCritical ; 0x200082f0
+        0x200090e0:    6ba7        .k      LDR      r7,[r4,#0x38]
+        0x200090e2:    b377        w.      CBZ      r7,0x20009142 ; xQueueReceive + 190
+        0x200090e4:    4631        1F      MOV      r1,r6
+        0x200090e6:    4620         F      MOV      r0,r4
+        0x200090e8:    f7fefa56    ..V.    BL       prvCopyDataFromQueue ; 0x20007598
+        0x200090ec:    2000        .       MOVS     r0,#0
+        0x200090ee:    f7fbfe9d    ....    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
+        0x200090f2:    4681        .F      MOV      r9,r0
+        0x200090f4:    4620         F      MOV      r0,r4
+        0x200090f6:    f7fbfe99    ....    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
+        0x200090fa:    4682        .F      MOV      r10,r0
+        0x200090fc:    2001        .       MOVS     r0,#1
+        0x200090fe:    9000        ..      STR      r0,[sp,#0]
+        0x20009100:    464a        JF      MOV      r2,r9
+        0x20009102:    4651        QF      MOV      r1,r10
+        0x20009104:    205c        \       MOVS     r0,#0x5c
+        0x20009106:    9b05        ..      LDR      r3,[sp,#0x14]
+        0x20009108:    f7fbfcc4    ....    BL       SEGGER_SYSVIEW_RecordU32x4 ; 0x20004a94
+        0x2000910c:    1e78        x.      SUBS     r0,r7,#1
+        0x2000910e:    63a0        .c      STR      r0,[r4,#0x38]
+        0x20009110:    6920         i      LDR      r0,[r4,#0x10]
+        0x20009112:    b908        ..      CBNZ     r0,0x20009118 ; xQueueReceive + 148
+        0x20009114:    2001        .       MOVS     r0,#1
+        0x20009116:    e000        ..      B        0x2000911a ; xQueueReceive + 150
+        0x20009118:    2000        .       MOVS     r0,#0
+        0x2000911a:    b960        `.      CBNZ     r0,0x20009136 ; xQueueReceive + 178
+        0x2000911c:    f1040010    ....    ADD      r0,r4,#0x10
+        0x20009120:    f000fa56    ..V.    BL       xTaskRemoveFromEventList ; 0x200095d0
+        0x20009124:    b138        8.      CBZ      r0,0x20009136 ; xQueueReceive + 178
+        0x20009126:    f04f5080    O..P    MOV      r0,#0x10000000
+        0x2000912a:    4949        II      LDR      r1,[pc,#292] ; [0x20009250] = 0xe000ed04
+        0x2000912c:    6008        .`      STR      r0,[r1,#0]
+        0x2000912e:    f3bf8f4f    ..O.    DSB      
+        0x20009132:    f3bf8f6f    ..o.    ISB      
+        0x20009136:    f7fff917    ....    BL       vPortExitCritical ; 0x20008368
+        0x2000913a:    2001        .       MOVS     r0,#1
+        0x2000913c:    b006        ..      ADD      sp,sp,#0x18
+        0x2000913e:    e8bd87f0    ....    POP      {r4-r10,pc}
+        0x20009142:    e7ff        ..      B        0x20009144 ; xQueueReceive + 192
+        0x20009144:    9805        ..      LDR      r0,[sp,#0x14]
+        0x20009146:    b998        ..      CBNZ     r0,0x20009170 ; xQueueReceive + 236
+        0x20009148:    f7fff90e    ....    BL       vPortExitCritical ; 0x20008368
+        0x2000914c:    2000        .       MOVS     r0,#0
+        0x2000914e:    f7fbfe6d    ..m.    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
+        0x20009152:    4681        .F      MOV      r9,r0
+        0x20009154:    4620         F      MOV      r0,r4
+        0x20009156:    f7fbfe69    ..i.    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
+        0x2000915a:    4682        .F      MOV      r10,r0
+        0x2000915c:    2001        .       MOVS     r0,#1
+        0x2000915e:    9000        ..      STR      r0,[sp,#0]
+        0x20009160:    464a        JF      MOV      r2,r9
+        0x20009162:    4651        QF      MOV      r1,r10
+        0x20009164:    205c        \       MOVS     r0,#0x5c
+        0x20009166:    9b05        ..      LDR      r3,[sp,#0x14]
+        0x20009168:    f7fbfc94    ....    BL       SEGGER_SYSVIEW_RecordU32x4 ; 0x20004a94
+        0x2000916c:    2000        .       MOVS     r0,#0
+        0x2000916e:    e7e5        ..      B        0x2000913c ; xQueueReceive + 184
+        0x20009170:    f1b80f00    ....    CMP      r8,#0
+        0x20009174:    d104        ..      BNE      0x20009180 ; xQueueReceive + 252
+        0x20009176:    a801        ..      ADD      r0,sp,#4
+        0x20009178:    f7fffb2a    ..*.    BL       vTaskInternalSetTimeOutState ; 0x200087d0
+        0x2000917c:    f04f0801    O...    MOV      r8,#1
+        0x20009180:    f7fff8f2    ....    BL       vPortExitCritical ; 0x20008368
+        0x20009184:    f7fffbfa    ....    BL       vTaskSuspendAll ; 0x2000897c
+        0x20009188:    f7fff8b2    ....    BL       vPortEnterCritical ; 0x200082f0
+        0x2000918c:    f9940044    ..D.    LDRSB    r0,[r4,#0x44]
+        0x20009190:    1c40        @.      ADDS     r0,r0,#1
+        0x20009192:    b910        ..      CBNZ     r0,0x2000919a ; xQueueReceive + 278
+        0x20009194:    2000        .       MOVS     r0,#0
+        0x20009196:    f8840044    ..D.    STRB     r0,[r4,#0x44]
+        0x2000919a:    f9940045    ..E.    LDRSB    r0,[r4,#0x45]
+        0x2000919e:    1c40        @.      ADDS     r0,r0,#1
+        0x200091a0:    b910        ..      CBNZ     r0,0x200091a8 ; xQueueReceive + 292
+        0x200091a2:    2000        .       MOVS     r0,#0
+        0x200091a4:    f8840045    ..E.    STRB     r0,[r4,#0x45]
+        0x200091a8:    f7fff8de    ....    BL       vPortExitCritical ; 0x20008368
+        0x200091ac:    a905        ..      ADD      r1,sp,#0x14
+        0x200091ae:    a801        ..      ADD      r0,sp,#4
+        0x200091b0:    f000f850    ..P.    BL       xTaskCheckForTimeOut ; 0x20009254
+        0x200091b4:    b9f0        ..      CBNZ     r0,0x200091f4 ; xQueueReceive + 368
+        0x200091b6:    4620         F      MOV      r0,r4
+        0x200091b8:    f7fefbce    ....    BL       prvIsQueueEmpty ; 0x20007958
+        0x200091bc:    b1a0        ..      CBZ      r0,0x200091e8 ; xQueueReceive + 356
+        0x200091be:    f1040024    ..$.    ADD      r0,r4,#0x24
+        0x200091c2:    9905        ..      LDR      r1,[sp,#0x14]
+        0x200091c4:    f7fffb16    ....    BL       vTaskPlaceOnEventList ; 0x200087f4
+        0x200091c8:    4620         F      MOV      r0,r4
+        0x200091ca:    f7fefdd4    ....    BL       prvUnlockQueue ; 0x20007d76
+        0x200091ce:    f000fa5b    ..[.    BL       xTaskResumeAll ; 0x20009688
+        0x200091d2:    2800        .(      CMP      r0,#0
+        0x200091d4:    d182        ..      BNE      0x200090dc ; xQueueReceive + 88
+        0x200091d6:    f04f5080    O..P    MOV      r0,#0x10000000
+        0x200091da:    491d        .I      LDR      r1,[pc,#116] ; [0x20009250] = 0xe000ed04
+        0x200091dc:    6008        .`      STR      r0,[r1,#0]
+        0x200091de:    f3bf8f4f    ..O.    DSB      
+        0x200091e2:    f3bf8f6f    ..o.    ISB      
+        0x200091e6:    e779        y.      B        0x200090dc ; xQueueReceive + 88
+        0x200091e8:    4620         F      MOV      r0,r4
+        0x200091ea:    f7fefdc4    ....    BL       prvUnlockQueue ; 0x20007d76
+        0x200091ee:    f000fa4b    ..K.    BL       xTaskResumeAll ; 0x20009688
+        0x200091f2:    e773        s.      B        0x200090dc ; xQueueReceive + 88
+        0x200091f4:    4620         F      MOV      r0,r4
+        0x200091f6:    f7fefdbe    ....    BL       prvUnlockQueue ; 0x20007d76
+        0x200091fa:    f000fa45    ..E.    BL       xTaskResumeAll ; 0x20009688
+        0x200091fe:    4620         F      MOV      r0,r4
+        0x20009200:    f7fefbaa    ....    BL       prvIsQueueEmpty ; 0x20007958
+        0x20009204:    2800        .(      CMP      r0,#0
+        0x20009206:    d0ee        ..      BEQ      0x200091e6 ; xQueueReceive + 354
+        0x20009208:    2000        .       MOVS     r0,#0
+        0x2000920a:    f7fbfe0f    ....    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
+        0x2000920e:    4607        .F      MOV      r7,r0
+        0x20009210:    4620         F      MOV      r0,r4
+        0x20009212:    f7fbfe0b    ....    BL       SEGGER_SYSVIEW_ShrinkId ; 0x20004e2c
+        0x20009216:    4681        .F      MOV      r9,r0
+        0x20009218:    2001        .       MOVS     r0,#1
+        0x2000921a:    9000        ..      STR      r0,[sp,#0]
+        0x2000921c:    463a        :F      MOV      r2,r7
+        0x2000921e:    4649        IF      MOV      r1,r9
+        0x20009220:    205c        \       MOVS     r0,#0x5c
+        0x20009222:    9b05        ..      LDR      r3,[sp,#0x14]
+        0x20009224:    f7fbfc36    ..6.    BL       SEGGER_SYSVIEW_RecordU32x4 ; 0x20004a94
+        0x20009228:    2000        .       MOVS     r0,#0
+        0x2000922a:    e787        ..      B        0x2000913c ; xQueueReceive + 184
     $d
-        0x20009004:    e000ed04    ....    DCD    3758157060
+        0x2000922c:    465c2e2e    ..\F    DCD    1180446254
+        0x20009230:    52656572    reeR    DCD    1382376818
+        0x20009234:    5c534f54    TOS\    DCD    1548963668
+        0x20009238:    75657571    queu    DCD    1969583473
+        0x2000923c:    00632e65    e.c.    DCD    6499941
+        0x20009240:    6f727245    Erro    DCD    1869771333
+        0x20009244:    25203a72    r: %    DCD    622869106
+        0x20009248:    25202c73    s, %    DCD    622865523
+        0x2000924c:    000a0d64    d...    DCD    658788
+        0x20009250:    e000ed04    ....    DCD    3758157060
     $t
     i.xTaskCheckForTimeOut
     xTaskCheckForTimeOut
-        0x20009008:    b570        p.      PUSH     {r4-r6,lr}
-        0x2000900a:    4605        .F      MOV      r5,r0
-        0x2000900c:    460c        .F      MOV      r4,r1
-        0x2000900e:    b955        U.      CBNZ     r5,0x20009026 ; xTaskCheckForTimeOut + 30
-        0x20009010:    bf00        ..      NOP      
-        0x20009012:    2050        P       MOVS     r0,#0x50
-        0x20009014:    f3808811    ....    MSR      BASEPRI,r0
-        0x20009018:    f3bf8f4f    ..O.    DSB      
-        0x2000901c:    f3bf8f6f    ..o.    ISB      
-        0x20009020:    bf00        ..      NOP      
-        0x20009022:    bf00        ..      NOP      
-        0x20009024:    e7fe        ..      B        0x20009024 ; xTaskCheckForTimeOut + 28
-        0x20009026:    b954        T.      CBNZ     r4,0x2000903e ; xTaskCheckForTimeOut + 54
-        0x20009028:    bf00        ..      NOP      
-        0x2000902a:    2050        P       MOVS     r0,#0x50
-        0x2000902c:    f3808811    ....    MSR      BASEPRI,r0
-        0x20009030:    f3bf8f4f    ..O.    DSB      
-        0x20009034:    f3bf8f6f    ..o.    ISB      
-        0x20009038:    bf00        ..      NOP      
-        0x2000903a:    bf00        ..      NOP      
-        0x2000903c:    e7fe        ..      B        0x2000903c ; xTaskCheckForTimeOut + 52
-        0x2000903e:    f7fff8f9    ....    BL       vPortEnterCritical ; 0x20008234
-        0x20009042:    4813        .H      LDR      r0,[pc,#76] ; [0x20009090] = 0x20010044
-        0x20009044:    6802        .h      LDR      r2,[r0,#0]
-        0x20009046:    6868        hh      LDR      r0,[r5,#4]
-        0x20009048:    1a13        ..      SUBS     r3,r2,r0
-        0x2000904a:    6820         h      LDR      r0,[r4,#0]
-        0x2000904c:    1c40        @.      ADDS     r0,r0,#1
-        0x2000904e:    b908        ..      CBNZ     r0,0x20009054 ; xTaskCheckForTimeOut + 76
-        0x20009050:    2600        .&      MOVS     r6,#0
-        0x20009052:    e019        ..      B        0x20009088 ; xTaskCheckForTimeOut + 128
-        0x20009054:    490f        .I      LDR      r1,[pc,#60] ; [0x20009094] = 0x20010058
-        0x20009056:    6828        (h      LDR      r0,[r5,#0]
-        0x20009058:    6809        .h      LDR      r1,[r1,#0]
-        0x2000905a:    4288        .B      CMP      r0,r1
-        0x2000905c:    d006        ..      BEQ      0x2000906c ; xTaskCheckForTimeOut + 100
-        0x2000905e:    6868        hh      LDR      r0,[r5,#4]
-        0x20009060:    4290        .B      CMP      r0,r2
-        0x20009062:    d803        ..      BHI      0x2000906c ; xTaskCheckForTimeOut + 100
-        0x20009064:    2601        .&      MOVS     r6,#1
-        0x20009066:    2000        .       MOVS     r0,#0
-        0x20009068:    6020         `      STR      r0,[r4,#0]
-        0x2000906a:    e00d        ..      B        0x20009088 ; xTaskCheckForTimeOut + 128
-        0x2000906c:    6820         h      LDR      r0,[r4,#0]
-        0x2000906e:    4298        .B      CMP      r0,r3
-        0x20009070:    d907        ..      BLS      0x20009082 ; xTaskCheckForTimeOut + 122
-        0x20009072:    6820         h      LDR      r0,[r4,#0]
-        0x20009074:    1ac0        ..      SUBS     r0,r0,r3
-        0x20009076:    6020         `      STR      r0,[r4,#0]
-        0x20009078:    4628        (F      MOV      r0,r5
-        0x2000907a:    f7fffae7    ....    BL       vTaskInternalSetTimeOutState ; 0x2000864c
-        0x2000907e:    2600        .&      MOVS     r6,#0
-        0x20009080:    e002        ..      B        0x20009088 ; xTaskCheckForTimeOut + 128
-        0x20009082:    2000        .       MOVS     r0,#0
-        0x20009084:    6020         `      STR      r0,[r4,#0]
-        0x20009086:    2601        .&      MOVS     r6,#1
-        0x20009088:    f7fff8fe    ....    BL       vPortExitCritical ; 0x20008288
-        0x2000908c:    4630        0F      MOV      r0,r6
-        0x2000908e:    bd70        p.      POP      {r4-r6,pc}
+        0x20009254:    b570        p.      PUSH     {r4-r6,lr}
+        0x20009256:    4605        .F      MOV      r5,r0
+        0x20009258:    460c        .F      MOV      r4,r1
+        0x2000925a:    b92d        -.      CBNZ     r5,0x20009268 ; xTaskCheckForTimeOut + 20
+        0x2000925c:    f64042f8    @..B    MOV      r2,#0xcf8
+        0x20009260:    a119        ..      ADR      r1,{pc}+0x68 ; 0x200092c8
+        0x20009262:    a01e        ..      ADR      r0,{pc}+0x7a ; 0x200092dc
+        0x20009264:    f7fdf9a0    ....    BL       __0printf ; 0x200065a8
+        0x20009268:    b92c        ,.      CBNZ     r4,0x20009276 ; xTaskCheckForTimeOut + 34
+        0x2000926a:    f64042f9    @..B    MOV      r2,#0xcf9
+        0x2000926e:    a116        ..      ADR      r1,{pc}+0x5a ; 0x200092c8
+        0x20009270:    a01a        ..      ADR      r0,{pc}+0x6c ; 0x200092dc
+        0x20009272:    f7fdf999    ....    BL       __0printf ; 0x200065a8
+        0x20009276:    f7fff83b    ..;.    BL       vPortEnterCritical ; 0x200082f0
+        0x2000927a:    481c        .H      LDR      r0,[pc,#112] ; [0x200092ec] = 0x20010044
+        0x2000927c:    6803        .h      LDR      r3,[r0,#0]
+        0x2000927e:    6868        hh      LDR      r0,[r5,#4]
+        0x20009280:    1a1a        ..      SUBS     r2,r3,r0
+        0x20009282:    6820         h      LDR      r0,[r4,#0]
+        0x20009284:    1c40        @.      ADDS     r0,r0,#1
+        0x20009286:    b908        ..      CBNZ     r0,0x2000928c ; xTaskCheckForTimeOut + 56
+        0x20009288:    2600        .&      MOVS     r6,#0
+        0x2000928a:    e019        ..      B        0x200092c0 ; xTaskCheckForTimeOut + 108
+        0x2000928c:    4918        .I      LDR      r1,[pc,#96] ; [0x200092f0] = 0x20010058
+        0x2000928e:    6828        (h      LDR      r0,[r5,#0]
+        0x20009290:    6809        .h      LDR      r1,[r1,#0]
+        0x20009292:    4288        .B      CMP      r0,r1
+        0x20009294:    d006        ..      BEQ      0x200092a4 ; xTaskCheckForTimeOut + 80
+        0x20009296:    6868        hh      LDR      r0,[r5,#4]
+        0x20009298:    4298        .B      CMP      r0,r3
+        0x2000929a:    d803        ..      BHI      0x200092a4 ; xTaskCheckForTimeOut + 80
+        0x2000929c:    2601        .&      MOVS     r6,#1
+        0x2000929e:    2000        .       MOVS     r0,#0
+        0x200092a0:    6020         `      STR      r0,[r4,#0]
+        0x200092a2:    e00d        ..      B        0x200092c0 ; xTaskCheckForTimeOut + 108
+        0x200092a4:    6820         h      LDR      r0,[r4,#0]
+        0x200092a6:    4290        .B      CMP      r0,r2
+        0x200092a8:    d907        ..      BLS      0x200092ba ; xTaskCheckForTimeOut + 102
+        0x200092aa:    6820         h      LDR      r0,[r4,#0]
+        0x200092ac:    1a80        ..      SUBS     r0,r0,r2
+        0x200092ae:    6020         `      STR      r0,[r4,#0]
+        0x200092b0:    4628        (F      MOV      r0,r5
+        0x200092b2:    f7fffa8d    ....    BL       vTaskInternalSetTimeOutState ; 0x200087d0
+        0x200092b6:    2600        .&      MOVS     r6,#0
+        0x200092b8:    e002        ..      B        0x200092c0 ; xTaskCheckForTimeOut + 108
+        0x200092ba:    2000        .       MOVS     r0,#0
+        0x200092bc:    6020         `      STR      r0,[r4,#0]
+        0x200092be:    2601        .&      MOVS     r6,#1
+        0x200092c0:    f7fff852    ..R.    BL       vPortExitCritical ; 0x20008368
+        0x200092c4:    4630        0F      MOV      r0,r6
+        0x200092c6:    bd70        p.      POP      {r4-r6,pc}
     $d
-        0x20009090:    20010044    D..     DCD    536936516
-        0x20009094:    20010058    X..     DCD    536936536
+        0x200092c8:    465c2e2e    ..\F    DCD    1180446254
+        0x200092cc:    52656572    reeR    DCD    1382376818
+        0x200092d0:    5c534f54    TOS\    DCD    1548963668
+        0x200092d4:    6b736174    task    DCD    1802723700
+        0x200092d8:    00632e73    s.c.    DCD    6499955
+        0x200092dc:    6f727245    Erro    DCD    1869771333
+        0x200092e0:    25203a72    r: %    DCD    622869106
+        0x200092e4:    25202c73    s, %    DCD    622865523
+        0x200092e8:    000a0d64    d...    DCD    658788
+        0x200092ec:    20010044    D..     DCD    536936516
+        0x200092f0:    20010058    X..     DCD    536936536
     $t
     i.xTaskCreate
     xTaskCreate
-        0x20009098:    e92d4fff    -..O    PUSH     {r0-r11,lr}
-        0x2000909c:    b085        ..      SUB      sp,sp,#0x14
-        0x2000909e:    4680        .F      MOV      r8,r0
-        0x200090a0:    4689        .F      MOV      r9,r1
-        0x200090a2:    4617        .F      MOV      r7,r2
-        0x200090a4:    e9ddab12    ....    LDRD     r10,r11,[sp,#0x48]
-        0x200090a8:    00b8        ..      LSLS     r0,r7,#2
-        0x200090aa:    f7fefe5f    .._.    BL       pvPortMalloc ; 0x20007d6c
-        0x200090ae:    4606        .F      MOV      r6,r0
-        0x200090b0:    b156        V.      CBZ      r6,0x200090c8 ; xTaskCreate + 48
-        0x200090b2:    2058        X       MOVS     r0,#0x58
-        0x200090b4:    f7fefe5a    ..Z.    BL       pvPortMalloc ; 0x20007d6c
-        0x200090b8:    4604        .F      MOV      r4,r0
-        0x200090ba:    b10c        ..      CBZ      r4,0x200090c0 ; xTaskCreate + 40
-        0x200090bc:    6326        &c      STR      r6,[r4,#0x30]
-        0x200090be:    e004        ..      B        0x200090ca ; xTaskCreate + 50
-        0x200090c0:    4630        0F      MOV      r0,r6
-        0x200090c2:    f7fff8ff    ....    BL       vPortFree ; 0x200082c4
-        0x200090c6:    e000        ..      B        0x200090ca ; xTaskCreate + 50
-        0x200090c8:    2400        .$      MOVS     r4,#0
-        0x200090ca:    b17c        |.      CBZ      r4,0x200090ec ; xTaskCreate + 84
-        0x200090cc:    2000        .       MOVS     r0,#0
-        0x200090ce:    e9cdab00    ....    STRD     r10,r11,[sp,#0]
-        0x200090d2:    e9cd4002    ...@    STRD     r4,r0,[sp,#8]
-        0x200090d6:    463a        :F      MOV      r2,r7
-        0x200090d8:    4649        IF      MOV      r1,r9
-        0x200090da:    4640        @F      MOV      r0,r8
-        0x200090dc:    9b08        ..      LDR      r3,[sp,#0x20]
-        0x200090de:    f7fefb3a    ..:.    BL       prvInitialiseNewTask ; 0x20007756
-        0x200090e2:    4620         F      MOV      r0,r4
-        0x200090e4:    f7fef994    ....    BL       prvAddNewTaskToReadyList ; 0x20007410
-        0x200090e8:    2501        .%      MOVS     r5,#1
-        0x200090ea:    e001        ..      B        0x200090f0 ; xTaskCreate + 88
-        0x200090ec:    f04f35ff    O..5    MOV      r5,#0xffffffff
-        0x200090f0:    4628        (F      MOV      r0,r5
-        0x200090f2:    b009        ..      ADD      sp,sp,#0x24
-        0x200090f4:    e8bd8ff0    ....    POP      {r4-r11,pc}
+        0x200092f4:    e92d4fff    -..O    PUSH     {r0-r11,lr}
+        0x200092f8:    b085        ..      SUB      sp,sp,#0x14
+        0x200092fa:    4680        .F      MOV      r8,r0
+        0x200092fc:    4689        .F      MOV      r9,r1
+        0x200092fe:    4617        .F      MOV      r7,r2
+        0x20009300:    e9ddab12    ....    LDRD     r10,r11,[sp,#0x48]
+        0x20009304:    00b8        ..      LSLS     r0,r7,#2
+        0x20009306:    f7fefd75    ..u.    BL       pvPortMalloc ; 0x20007df4
+        0x2000930a:    4606        .F      MOV      r6,r0
+        0x2000930c:    b156        V.      CBZ      r6,0x20009324 ; xTaskCreate + 48
+        0x2000930e:    2058        X       MOVS     r0,#0x58
+        0x20009310:    f7fefd70    ..p.    BL       pvPortMalloc ; 0x20007df4
+        0x20009314:    4604        .F      MOV      r4,r0
+        0x20009316:    b10c        ..      CBZ      r4,0x2000931c ; xTaskCreate + 40
+        0x20009318:    6326        &c      STR      r6,[r4,#0x30]
+        0x2000931a:    e004        ..      B        0x20009326 ; xTaskCreate + 50
+        0x2000931c:    4630        0F      MOV      r0,r6
+        0x2000931e:    f7fff853    ..S.    BL       vPortFree ; 0x200083c8
+        0x20009322:    e000        ..      B        0x20009326 ; xTaskCreate + 50
+        0x20009324:    2400        .$      MOVS     r4,#0
+        0x20009326:    b17c        |.      CBZ      r4,0x20009348 ; xTaskCreate + 84
+        0x20009328:    2000        .       MOVS     r0,#0
+        0x2000932a:    e9cdab00    ....    STRD     r10,r11,[sp,#0]
+        0x2000932e:    e9cd4002    ...@    STRD     r4,r0,[sp,#8]
+        0x20009332:    463a        :F      MOV      r2,r7
+        0x20009334:    4649        IF      MOV      r1,r9
+        0x20009336:    4640        @F      MOV      r0,r8
+        0x20009338:    9b08        ..      LDR      r3,[sp,#0x20]
+        0x2000933a:    f7fefa0d    ....    BL       prvInitialiseNewTask ; 0x20007758
+        0x2000933e:    4620         F      MOV      r0,r4
+        0x20009340:    f7fef866    ..f.    BL       prvAddNewTaskToReadyList ; 0x20007410
+        0x20009344:    2501        .%      MOVS     r5,#1
+        0x20009346:    e001        ..      B        0x2000934c ; xTaskCreate + 88
+        0x20009348:    f04f35ff    O..5    MOV      r5,#0xffffffff
+        0x2000934c:    4628        (F      MOV      r0,r5
+        0x2000934e:    b009        ..      ADD      sp,sp,#0x24
+        0x20009350:    e8bd8ff0    ....    POP      {r4-r11,pc}
     i.xTaskGetSchedulerState
     xTaskGetSchedulerState
-        0x200090f8:    4905        .I      LDR      r1,[pc,#20] ; [0x20009110] = 0x2001004c
-        0x200090fa:    6809        .h      LDR      r1,[r1,#0]
-        0x200090fc:    b909        ..      CBNZ     r1,0x20009102 ; xTaskGetSchedulerState + 10
-        0x200090fe:    2001        .       MOVS     r0,#1
-        0x20009100:    e005        ..      B        0x2000910e ; xTaskGetSchedulerState + 22
-        0x20009102:    4904        .I      LDR      r1,[pc,#16] ; [0x20009114] = 0x2001006c
-        0x20009104:    6809        .h      LDR      r1,[r1,#0]
-        0x20009106:    b909        ..      CBNZ     r1,0x2000910c ; xTaskGetSchedulerState + 20
-        0x20009108:    2002        .       MOVS     r0,#2
-        0x2000910a:    e000        ..      B        0x2000910e ; xTaskGetSchedulerState + 22
-        0x2000910c:    2000        .       MOVS     r0,#0
-        0x2000910e:    4770        pG      BX       lr
+        0x20009354:    4905        .I      LDR      r1,[pc,#20] ; [0x2000936c] = 0x2001004c
+        0x20009356:    6809        .h      LDR      r1,[r1,#0]
+        0x20009358:    b909        ..      CBNZ     r1,0x2000935e ; xTaskGetSchedulerState + 10
+        0x2000935a:    2001        .       MOVS     r0,#1
+        0x2000935c:    e005        ..      B        0x2000936a ; xTaskGetSchedulerState + 22
+        0x2000935e:    4904        .I      LDR      r1,[pc,#16] ; [0x20009370] = 0x2001006c
+        0x20009360:    6809        .h      LDR      r1,[r1,#0]
+        0x20009362:    b909        ..      CBNZ     r1,0x20009368 ; xTaskGetSchedulerState + 20
+        0x20009364:    2002        .       MOVS     r0,#2
+        0x20009366:    e000        ..      B        0x2000936a ; xTaskGetSchedulerState + 22
+        0x20009368:    2000        .       MOVS     r0,#0
+        0x2000936a:    4770        pG      BX       lr
     $d
-        0x20009110:    2001004c    L..     DCD    536936524
-        0x20009114:    2001006c    l..     DCD    536936556
+        0x2000936c:    2001004c    L..     DCD    536936524
+        0x20009370:    2001006c    l..     DCD    536936556
     $t
     i.xTaskGetTickCount
     xTaskGetTickCount
-        0x20009118:    4901        .I      LDR      r1,[pc,#4] ; [0x20009120] = 0x20010044
-        0x2000911a:    6808        .h      LDR      r0,[r1,#0]
-        0x2000911c:    4770        pG      BX       lr
+        0x20009374:    4901        .I      LDR      r1,[pc,#4] ; [0x2000937c] = 0x20010044
+        0x20009376:    6808        .h      LDR      r0,[r1,#0]
+        0x20009378:    4770        pG      BX       lr
     $d
-        0x2000911e:    0000        ..      DCW    0
-        0x20009120:    20010044    D..     DCD    536936516
+        0x2000937a:    0000        ..      DCW    0
+        0x2000937c:    20010044    D..     DCD    536936516
     $t
     i.xTaskGetTickCountFromISR
     xTaskGetTickCountFromISR
-        0x20009124:    b570        p.      PUSH     {r4-r6,lr}
-        0x20009126:    f7fff933    ..3.    BL       vPortValidateInterruptPriority ; 0x20008390
-        0x2000912a:    2500        .%      MOVS     r5,#0
-        0x2000912c:    4801        .H      LDR      r0,[pc,#4] ; [0x20009134] = 0x20010044
-        0x2000912e:    6804        .h      LDR      r4,[r0,#0]
-        0x20009130:    4620         F      MOV      r0,r4
-        0x20009132:    bd70        p.      POP      {r4-r6,pc}
+        0x20009380:    b570        p.      PUSH     {r4-r6,lr}
+        0x20009382:    f7fff895    ....    BL       vPortValidateInterruptPriority ; 0x200084b0
+        0x20009386:    2500        .%      MOVS     r5,#0
+        0x20009388:    4801        .H      LDR      r0,[pc,#4] ; [0x20009390] = 0x20010044
+        0x2000938a:    6804        .h      LDR      r4,[r0,#0]
+        0x2000938c:    4620         F      MOV      r0,r4
+        0x2000938e:    bd70        p.      POP      {r4-r6,pc}
     $d
-        0x20009134:    20010044    D..     DCD    536936516
+        0x20009390:    20010044    D..     DCD    536936516
     $t
     i.xTaskIncrementTick
     xTaskIncrementTick
-        0x20009138:    e92d41f0    -..A    PUSH     {r4-r8,lr}
-        0x2000913c:    f04f0800    O...    MOV      r8,#0
-        0x20009140:    4846        FH      LDR      r0,[pc,#280] ; [0x2000925c] = 0x2001006c
-        0x20009142:    6800        .h      LDR      r0,[r0,#0]
-        0x20009144:    2800        .(      CMP      r0,#0
-        0x20009146:    d17c        |.      BNE      0x20009242 ; xTaskIncrementTick + 266
-        0x20009148:    4845        EH      LDR      r0,[pc,#276] ; [0x20009260] = 0x20010044
-        0x2000914a:    6800        .h      LDR      r0,[r0,#0]
-        0x2000914c:    1c45        E.      ADDS     r5,r0,#1
-        0x2000914e:    4844        DH      LDR      r0,[pc,#272] ; [0x20009260] = 0x20010044
-        0x20009150:    6005        .`      STR      r5,[r0,#0]
-        0x20009152:    bb15        ..      CBNZ     r5,0x2000919a ; xTaskIncrementTick + 98
-        0x20009154:    4843        CH      LDR      r0,[pc,#268] ; [0x20009264] = 0x20010034
-        0x20009156:    6800        .h      LDR      r0,[r0,#0]
-        0x20009158:    6800        .h      LDR      r0,[r0,#0]
-        0x2000915a:    b908        ..      CBNZ     r0,0x20009160 ; xTaskIncrementTick + 40
-        0x2000915c:    2001        .       MOVS     r0,#1
-        0x2000915e:    e000        ..      B        0x20009162 ; xTaskIncrementTick + 42
-        0x20009160:    2000        .       MOVS     r0,#0
-        0x20009162:    b950        P.      CBNZ     r0,0x2000917a ; xTaskIncrementTick + 66
-        0x20009164:    bf00        ..      NOP      
-        0x20009166:    2050        P       MOVS     r0,#0x50
-        0x20009168:    f3808811    ....    MSR      BASEPRI,r0
-        0x2000916c:    f3bf8f4f    ..O.    DSB      
-        0x20009170:    f3bf8f6f    ..o.    ISB      
-        0x20009174:    bf00        ..      NOP      
-        0x20009176:    bf00        ..      NOP      
-        0x20009178:    e7fe        ..      B        0x20009178 ; xTaskIncrementTick + 64
-        0x2000917a:    483a        :H      LDR      r0,[pc,#232] ; [0x20009264] = 0x20010034
-        0x2000917c:    6807        .h      LDR      r7,[r0,#0]
-        0x2000917e:    483a        :H      LDR      r0,[pc,#232] ; [0x20009268] = 0x20010038
-        0x20009180:    6800        .h      LDR      r0,[r0,#0]
-        0x20009182:    4938        8I      LDR      r1,[pc,#224] ; [0x20009264] = 0x20010034
-        0x20009184:    6008        .`      STR      r0,[r1,#0]
-        0x20009186:    4838        8H      LDR      r0,[pc,#224] ; [0x20009268] = 0x20010038
-        0x20009188:    6007        .`      STR      r7,[r0,#0]
-        0x2000918a:    4838        8H      LDR      r0,[pc,#224] ; [0x2000926c] = 0x20010058
-        0x2000918c:    6800        .h      LDR      r0,[r0,#0]
-        0x2000918e:    1c40        @.      ADDS     r0,r0,#1
-        0x20009190:    4936        6I      LDR      r1,[pc,#216] ; [0x2000926c] = 0x20010058
-        0x20009192:    6008        .`      STR      r0,[r1,#0]
-        0x20009194:    f7fefcfe    ....    BL       prvResetNextTaskUnblockTime ; 0x20007b94
-        0x20009198:    bf00        ..      NOP      
-        0x2000919a:    4835        5H      LDR      r0,[pc,#212] ; [0x20009270] = 0x20010060
-        0x2000919c:    6800        .h      LDR      r0,[r0,#0]
-        0x2000919e:    4285        .B      CMP      r5,r0
-        0x200091a0:    d33f        ?.      BCC      0x20009222 ; xTaskIncrementTick + 234
-        0x200091a2:    bf00        ..      NOP      
-        0x200091a4:    482f        /H      LDR      r0,[pc,#188] ; [0x20009264] = 0x20010034
-        0x200091a6:    6800        .h      LDR      r0,[r0,#0]
-        0x200091a8:    6800        .h      LDR      r0,[r0,#0]
-        0x200091aa:    b908        ..      CBNZ     r0,0x200091b0 ; xTaskIncrementTick + 120
-        0x200091ac:    2001        .       MOVS     r0,#1
-        0x200091ae:    e000        ..      B        0x200091b2 ; xTaskIncrementTick + 122
-        0x200091b0:    2000        .       MOVS     r0,#0
-        0x200091b2:    b120         .      CBZ      r0,0x200091be ; xTaskIncrementTick + 134
-        0x200091b4:    f04f30ff    O..0    MOV      r0,#0xffffffff
-        0x200091b8:    492d        -I      LDR      r1,[pc,#180] ; [0x20009270] = 0x20010060
-        0x200091ba:    6008        .`      STR      r0,[r1,#0]
-        0x200091bc:    e030        0.      B        0x20009220 ; xTaskIncrementTick + 232
-        0x200091be:    4829        )H      LDR      r0,[pc,#164] ; [0x20009264] = 0x20010034
-        0x200091c0:    6800        .h      LDR      r0,[r0,#0]
-        0x200091c2:    68c0        .h      LDR      r0,[r0,#0xc]
-        0x200091c4:    68c4        .h      LDR      r4,[r0,#0xc]
-        0x200091c6:    6866        fh      LDR      r6,[r4,#4]
-        0x200091c8:    42b5        .B      CMP      r5,r6
-        0x200091ca:    d202        ..      BCS      0x200091d2 ; xTaskIncrementTick + 154
-        0x200091cc:    4828        (H      LDR      r0,[pc,#160] ; [0x20009270] = 0x20010060
-        0x200091ce:    6006        .`      STR      r6,[r0,#0]
-        0x200091d0:    e026        &.      B        0x20009220 ; xTaskIncrementTick + 232
-        0x200091d2:    1d20         .      ADDS     r0,r4,#4
-        0x200091d4:    f7feffe4    ....    BL       uxListRemove ; 0x200081a0
-        0x200091d8:    6aa0        .j      LDR      r0,[r4,#0x28]
-        0x200091da:    b118        ..      CBZ      r0,0x200091e4 ; xTaskIncrementTick + 172
-        0x200091dc:    f1040018    ....    ADD      r0,r4,#0x18
-        0x200091e0:    f7feffde    ....    BL       uxListRemove ; 0x200081a0
-        0x200091e4:    4620         F      MOV      r0,r4
-        0x200091e6:    f7fbfaa5    ....    BL       SEGGER_SYSVIEW_OnTaskStartReady ; 0x20004734
-        0x200091ea:    f894102c    ..,.    LDRB     r1,[r4,#0x2c]
-        0x200091ee:    2001        .       MOVS     r0,#1
-        0x200091f0:    4088        .@      LSLS     r0,r0,r1
-        0x200091f2:    4920         I      LDR      r1,[pc,#128] ; [0x20009274] = 0x20010048
-        0x200091f4:    6809        .h      LDR      r1,[r1,#0]
-        0x200091f6:    4308        .C      ORRS     r0,r0,r1
-        0x200091f8:    491e        .I      LDR      r1,[pc,#120] ; [0x20009274] = 0x20010048
-        0x200091fa:    6008        .`      STR      r0,[r1,#0]
-        0x200091fc:    6ae1        .j      LDR      r1,[r4,#0x2c]
-        0x200091fe:    eb010181    ....    ADD      r1,r1,r1,LSL #2
-        0x20009202:    4a1d        .J      LDR      r2,[pc,#116] ; [0x20009278] = 0x20010310
-        0x20009204:    eb020081    ....    ADD      r0,r2,r1,LSL #2
-        0x20009208:    1d21        !.      ADDS     r1,r4,#4
-        0x2000920a:    f7fff807    ....    BL       vListInsertEnd ; 0x2000821c
-        0x2000920e:    491b        .I      LDR      r1,[pc,#108] ; [0x2000927c] = 0x20010030
-        0x20009210:    6ae0        .j      LDR      r0,[r4,#0x2c]
-        0x20009212:    6809        .h      LDR      r1,[r1,#0]
-        0x20009214:    6ac9        .j      LDR      r1,[r1,#0x2c]
-        0x20009216:    4288        .B      CMP      r0,r1
-        0x20009218:    d3c4        ..      BCC      0x200091a4 ; xTaskIncrementTick + 108
-        0x2000921a:    f04f0801    O...    MOV      r8,#1
-        0x2000921e:    e7c1        ..      B        0x200091a4 ; xTaskIncrementTick + 108
-        0x20009220:    bf00        ..      NOP      
-        0x20009222:    4816        .H      LDR      r0,[pc,#88] ; [0x2000927c] = 0x20010030
-        0x20009224:    6800        .h      LDR      r0,[r0,#0]
-        0x20009226:    6ac0        .j      LDR      r0,[r0,#0x2c]
-        0x20009228:    eb000080    ....    ADD      r0,r0,r0,LSL #2
-        0x2000922c:    4912        .I      LDR      r1,[pc,#72] ; [0x20009278] = 0x20010310
-        0x2000922e:    f8510020    Q. .    LDR      r0,[r1,r0,LSL #2]
-        0x20009232:    2801        .(      CMP      r0,#1
-        0x20009234:    d901        ..      BLS      0x2000923a ; xTaskIncrementTick + 258
-        0x20009236:    f04f0801    O...    MOV      r8,#1
-        0x2000923a:    4811        .H      LDR      r0,[pc,#68] ; [0x20009280] = 0x20010054
-        0x2000923c:    6800        .h      LDR      r0,[r0,#0]
-        0x2000923e:    b118        ..      CBZ      r0,0x20009248 ; xTaskIncrementTick + 272
-        0x20009240:    e000        ..      B        0x20009244 ; xTaskIncrementTick + 268
-        0x20009242:    e002        ..      B        0x2000924a ; xTaskIncrementTick + 274
-        0x20009244:    f04f0801    O...    MOV      r8,#1
-        0x20009248:    e004        ..      B        0x20009254 ; xTaskIncrementTick + 284
-        0x2000924a:    480e        .H      LDR      r0,[pc,#56] ; [0x20009284] = 0x20010050
-        0x2000924c:    6800        .h      LDR      r0,[r0,#0]
-        0x2000924e:    1c40        @.      ADDS     r0,r0,#1
-        0x20009250:    490c        .I      LDR      r1,[pc,#48] ; [0x20009284] = 0x20010050
-        0x20009252:    6008        .`      STR      r0,[r1,#0]
-        0x20009254:    4640        @F      MOV      r0,r8
-        0x20009256:    e8bd81f0    ....    POP      {r4-r8,pc}
+        0x20009394:    e92d41f0    -..A    PUSH     {r4-r8,lr}
+        0x20009398:    f04f0800    O...    MOV      r8,#0
+        0x2000939c:    4843        CH      LDR      r0,[pc,#268] ; [0x200094ac] = 0x2001006c
+        0x2000939e:    6800        .h      LDR      r0,[r0,#0]
+        0x200093a0:    2800        .(      CMP      r0,#0
+        0x200093a2:    d17a        z.      BNE      0x2000949a ; xTaskIncrementTick + 262
+        0x200093a4:    4842        BH      LDR      r0,[pc,#264] ; [0x200094b0] = 0x20010044
+        0x200093a6:    6800        .h      LDR      r0,[r0,#0]
+        0x200093a8:    1c45        E.      ADDS     r5,r0,#1
+        0x200093aa:    4841        AH      LDR      r0,[pc,#260] ; [0x200094b0] = 0x20010044
+        0x200093ac:    6005        .`      STR      r5,[r0,#0]
+        0x200093ae:    b9ed        ..      CBNZ     r5,0x200093ec ; xTaskIncrementTick + 88
+        0x200093b0:    4840        @H      LDR      r0,[pc,#256] ; [0x200094b4] = 0x20010034
+        0x200093b2:    6800        .h      LDR      r0,[r0,#0]
+        0x200093b4:    6800        .h      LDR      r0,[r0,#0]
+        0x200093b6:    b908        ..      CBNZ     r0,0x200093bc ; xTaskIncrementTick + 40
+        0x200093b8:    2001        .       MOVS     r0,#1
+        0x200093ba:    e000        ..      B        0x200093be ; xTaskIncrementTick + 42
+        0x200093bc:    2000        .       MOVS     r0,#0
+        0x200093be:    b928        (.      CBNZ     r0,0x200093cc ; xTaskIncrementTick + 56
+        0x200093c0:    f64022c9    @.."    MOV      r2,#0xac9
+        0x200093c4:    a13c        <.      ADR      r1,{pc}+0xf4 ; 0x200094b8
+        0x200093c6:    a041        A.      ADR      r0,{pc}+0x106 ; 0x200094cc
+        0x200093c8:    f7fdf8ee    ....    BL       __0printf ; 0x200065a8
+        0x200093cc:    4839        9H      LDR      r0,[pc,#228] ; [0x200094b4] = 0x20010034
+        0x200093ce:    6807        .h      LDR      r7,[r0,#0]
+        0x200093d0:    4842        BH      LDR      r0,[pc,#264] ; [0x200094dc] = 0x20010038
+        0x200093d2:    6800        .h      LDR      r0,[r0,#0]
+        0x200093d4:    4937        7I      LDR      r1,[pc,#220] ; [0x200094b4] = 0x20010034
+        0x200093d6:    6008        .`      STR      r0,[r1,#0]
+        0x200093d8:    4840        @H      LDR      r0,[pc,#256] ; [0x200094dc] = 0x20010038
+        0x200093da:    6007        .`      STR      r7,[r0,#0]
+        0x200093dc:    4840        @H      LDR      r0,[pc,#256] ; [0x200094e0] = 0x20010058
+        0x200093de:    6800        .h      LDR      r0,[r0,#0]
+        0x200093e0:    1c40        @.      ADDS     r0,r0,#1
+        0x200093e2:    493f        ?I      LDR      r1,[pc,#252] ; [0x200094e0] = 0x20010058
+        0x200093e4:    6008        .`      STR      r0,[r1,#0]
+        0x200093e6:    f7fefbfb    ....    BL       prvResetNextTaskUnblockTime ; 0x20007be0
+        0x200093ea:    bf00        ..      NOP      
+        0x200093ec:    483d        =H      LDR      r0,[pc,#244] ; [0x200094e4] = 0x20010060
+        0x200093ee:    6800        .h      LDR      r0,[r0,#0]
+        0x200093f0:    4285        .B      CMP      r5,r0
+        0x200093f2:    d33f        ?.      BCC      0x20009474 ; xTaskIncrementTick + 224
+        0x200093f4:    bf00        ..      NOP      
+        0x200093f6:    482f        /H      LDR      r0,[pc,#188] ; [0x200094b4] = 0x20010034
+        0x200093f8:    6800        .h      LDR      r0,[r0,#0]
+        0x200093fa:    6800        .h      LDR      r0,[r0,#0]
+        0x200093fc:    b908        ..      CBNZ     r0,0x20009402 ; xTaskIncrementTick + 110
+        0x200093fe:    2001        .       MOVS     r0,#1
+        0x20009400:    e000        ..      B        0x20009404 ; xTaskIncrementTick + 112
+        0x20009402:    2000        .       MOVS     r0,#0
+        0x20009404:    b120         .      CBZ      r0,0x20009410 ; xTaskIncrementTick + 124
+        0x20009406:    f04f30ff    O..0    MOV      r0,#0xffffffff
+        0x2000940a:    4936        6I      LDR      r1,[pc,#216] ; [0x200094e4] = 0x20010060
+        0x2000940c:    6008        .`      STR      r0,[r1,#0]
+        0x2000940e:    e030        0.      B        0x20009472 ; xTaskIncrementTick + 222
+        0x20009410:    4828        (H      LDR      r0,[pc,#160] ; [0x200094b4] = 0x20010034
+        0x20009412:    6800        .h      LDR      r0,[r0,#0]
+        0x20009414:    68c0        .h      LDR      r0,[r0,#0xc]
+        0x20009416:    68c4        .h      LDR      r4,[r0,#0xc]
+        0x20009418:    6866        fh      LDR      r6,[r4,#4]
+        0x2000941a:    42b5        .B      CMP      r5,r6
+        0x2000941c:    d202        ..      BCS      0x20009424 ; xTaskIncrementTick + 144
+        0x2000941e:    4831        1H      LDR      r0,[pc,#196] ; [0x200094e4] = 0x20010060
+        0x20009420:    6006        .`      STR      r6,[r0,#0]
+        0x20009422:    e026        &.      B        0x20009472 ; xTaskIncrementTick + 222
+        0x20009424:    1d20         .      ADDS     r0,r4,#4
+        0x20009426:    f7feff05    ....    BL       uxListRemove ; 0x20008234
+        0x2000942a:    6aa0        .j      LDR      r0,[r4,#0x28]
+        0x2000942c:    b118        ..      CBZ      r0,0x20009436 ; xTaskIncrementTick + 162
+        0x2000942e:    f1040018    ....    ADD      r0,r4,#0x18
+        0x20009432:    f7fefeff    ....    BL       uxListRemove ; 0x20008234
+        0x20009436:    4620         F      MOV      r0,r4
+        0x20009438:    f7fbf97c    ..|.    BL       SEGGER_SYSVIEW_OnTaskStartReady ; 0x20004734
+        0x2000943c:    f894102c    ..,.    LDRB     r1,[r4,#0x2c]
+        0x20009440:    2001        .       MOVS     r0,#1
+        0x20009442:    4088        .@      LSLS     r0,r0,r1
+        0x20009444:    4928        (I      LDR      r1,[pc,#160] ; [0x200094e8] = 0x20010048
+        0x20009446:    6809        .h      LDR      r1,[r1,#0]
+        0x20009448:    4308        .C      ORRS     r0,r0,r1
+        0x2000944a:    4927        'I      LDR      r1,[pc,#156] ; [0x200094e8] = 0x20010048
+        0x2000944c:    6008        .`      STR      r0,[r1,#0]
+        0x2000944e:    6ae1        .j      LDR      r1,[r4,#0x2c]
+        0x20009450:    eb010181    ....    ADD      r1,r1,r1,LSL #2
+        0x20009454:    4a25        %J      LDR      r2,[pc,#148] ; [0x200094ec] = 0x20010310
+        0x20009456:    eb020081    ....    ADD      r0,r2,r1,LSL #2
+        0x2000945a:    1d21        !.      ADDS     r1,r4,#4
+        0x2000945c:    f7feff3c    ..<.    BL       vListInsertEnd ; 0x200082d8
+        0x20009460:    4923        #I      LDR      r1,[pc,#140] ; [0x200094f0] = 0x20010030
+        0x20009462:    6ae0        .j      LDR      r0,[r4,#0x2c]
+        0x20009464:    6809        .h      LDR      r1,[r1,#0]
+        0x20009466:    6ac9        .j      LDR      r1,[r1,#0x2c]
+        0x20009468:    4288        .B      CMP      r0,r1
+        0x2000946a:    d3c4        ..      BCC      0x200093f6 ; xTaskIncrementTick + 98
+        0x2000946c:    f04f0801    O...    MOV      r8,#1
+        0x20009470:    e7c1        ..      B        0x200093f6 ; xTaskIncrementTick + 98
+        0x20009472:    bf00        ..      NOP      
+        0x20009474:    481e        .H      LDR      r0,[pc,#120] ; [0x200094f0] = 0x20010030
+        0x20009476:    6800        .h      LDR      r0,[r0,#0]
+        0x20009478:    6ac0        .j      LDR      r0,[r0,#0x2c]
+        0x2000947a:    eb000080    ....    ADD      r0,r0,r0,LSL #2
+        0x2000947e:    491b        .I      LDR      r1,[pc,#108] ; [0x200094ec] = 0x20010310
+        0x20009480:    f8510020    Q. .    LDR      r0,[r1,r0,LSL #2]
+        0x20009484:    2801        .(      CMP      r0,#1
+        0x20009486:    d901        ..      BLS      0x2000948c ; xTaskIncrementTick + 248
+        0x20009488:    f04f0801    O...    MOV      r8,#1
+        0x2000948c:    4819        .H      LDR      r0,[pc,#100] ; [0x200094f4] = 0x20010054
+        0x2000948e:    6800        .h      LDR      r0,[r0,#0]
+        0x20009490:    b108        ..      CBZ      r0,0x20009496 ; xTaskIncrementTick + 258
+        0x20009492:    f04f0801    O...    MOV      r8,#1
+        0x20009496:    e005        ..      B        0x200094a4 ; xTaskIncrementTick + 272
+        0x20009498:    e7ff        ..      B        0x2000949a ; xTaskIncrementTick + 262
+        0x2000949a:    4817        .H      LDR      r0,[pc,#92] ; [0x200094f8] = 0x20010050
+        0x2000949c:    6800        .h      LDR      r0,[r0,#0]
+        0x2000949e:    1c40        @.      ADDS     r0,r0,#1
+        0x200094a0:    4915        .I      LDR      r1,[pc,#84] ; [0x200094f8] = 0x20010050
+        0x200094a2:    6008        .`      STR      r0,[r1,#0]
+        0x200094a4:    4640        @F      MOV      r0,r8
+        0x200094a6:    e8bd81f0    ....    POP      {r4-r8,pc}
     $d
-        0x2000925a:    0000        ..      DCW    0
-        0x2000925c:    2001006c    l..     DCD    536936556
-        0x20009260:    20010044    D..     DCD    536936516
-        0x20009264:    20010034    4..     DCD    536936500
-        0x20009268:    20010038    8..     DCD    536936504
-        0x2000926c:    20010058    X..     DCD    536936536
-        0x20009270:    20010060    `..     DCD    536936544
-        0x20009274:    20010048    H..     DCD    536936520
-        0x20009278:    20010310    ...     DCD    536937232
-        0x2000927c:    20010030    0..     DCD    536936496
-        0x20009280:    20010054    T..     DCD    536936532
-        0x20009284:    20010050    P..     DCD    536936528
+        0x200094aa:    0000        ..      DCW    0
+        0x200094ac:    2001006c    l..     DCD    536936556
+        0x200094b0:    20010044    D..     DCD    536936516
+        0x200094b4:    20010034    4..     DCD    536936500
+        0x200094b8:    465c2e2e    ..\F    DCD    1180446254
+        0x200094bc:    52656572    reeR    DCD    1382376818
+        0x200094c0:    5c534f54    TOS\    DCD    1548963668
+        0x200094c4:    6b736174    task    DCD    1802723700
+        0x200094c8:    00632e73    s.c.    DCD    6499955
+        0x200094cc:    6f727245    Erro    DCD    1869771333
+        0x200094d0:    25203a72    r: %    DCD    622869106
+        0x200094d4:    25202c73    s, %    DCD    622865523
+        0x200094d8:    000a0d64    d...    DCD    658788
+        0x200094dc:    20010038    8..     DCD    536936504
+        0x200094e0:    20010058    X..     DCD    536936536
+        0x200094e4:    20010060    `..     DCD    536936544
+        0x200094e8:    20010048    H..     DCD    536936520
+        0x200094ec:    20010310    ...     DCD    536937232
+        0x200094f0:    20010030    0..     DCD    536936496
+        0x200094f4:    20010054    T..     DCD    536936532
+        0x200094f8:    20010050    P..     DCD    536936528
     $t
     i.xTaskPriorityDisinherit
     xTaskPriorityDisinherit
-        0x20009288:    b570        p.      PUSH     {r4-r6,lr}
-        0x2000928a:    4605        .F      MOV      r5,r0
-        0x2000928c:    462c        ,F      MOV      r4,r5
-        0x2000928e:    2600        .&      MOVS     r6,#0
-        0x20009290:    2d00        .-      CMP      r5,#0
-        0x20009292:    d052        R.      BEQ      0x2000933a ; xTaskPriorityDisinherit + 178
-        0x20009294:    482a        *H      LDR      r0,[pc,#168] ; [0x20009340] = 0x20010030
-        0x20009296:    6800        .h      LDR      r0,[r0,#0]
-        0x20009298:    4284        .B      CMP      r4,r0
-        0x2000929a:    d101        ..      BNE      0x200092a0 ; xTaskPriorityDisinherit + 24
-        0x2000929c:    2001        .       MOVS     r0,#1
-        0x2000929e:    e000        ..      B        0x200092a2 ; xTaskPriorityDisinherit + 26
-        0x200092a0:    2000        .       MOVS     r0,#0
-        0x200092a2:    b950        P.      CBNZ     r0,0x200092ba ; xTaskPriorityDisinherit + 50
-        0x200092a4:    bf00        ..      NOP      
-        0x200092a6:    2050        P       MOVS     r0,#0x50
-        0x200092a8:    f3808811    ....    MSR      BASEPRI,r0
-        0x200092ac:    f3bf8f4f    ..O.    DSB      
-        0x200092b0:    f3bf8f6f    ..o.    ISB      
-        0x200092b4:    bf00        ..      NOP      
-        0x200092b6:    bf00        ..      NOP      
-        0x200092b8:    e7fe        ..      B        0x200092b8 ; xTaskPriorityDisinherit + 48
-        0x200092ba:    6ce0        .l      LDR      r0,[r4,#0x4c]
-        0x200092bc:    b950        P.      CBNZ     r0,0x200092d4 ; xTaskPriorityDisinherit + 76
-        0x200092be:    bf00        ..      NOP      
-        0x200092c0:    2050        P       MOVS     r0,#0x50
-        0x200092c2:    f3808811    ....    MSR      BASEPRI,r0
-        0x200092c6:    f3bf8f4f    ..O.    DSB      
-        0x200092ca:    f3bf8f6f    ..o.    ISB      
-        0x200092ce:    bf00        ..      NOP      
-        0x200092d0:    bf00        ..      NOP      
-        0x200092d2:    e7fe        ..      B        0x200092d2 ; xTaskPriorityDisinherit + 74
-        0x200092d4:    6ce0        .l      LDR      r0,[r4,#0x4c]
-        0x200092d6:    1e40        @.      SUBS     r0,r0,#1
-        0x200092d8:    64e0        .d      STR      r0,[r4,#0x4c]
-        0x200092da:    6ca1        .l      LDR      r1,[r4,#0x48]
-        0x200092dc:    6ae0        .j      LDR      r0,[r4,#0x2c]
-        0x200092de:    4288        .B      CMP      r0,r1
-        0x200092e0:    d02b        +.      BEQ      0x2000933a ; xTaskPriorityDisinherit + 178
-        0x200092e2:    6ce0        .l      LDR      r0,[r4,#0x4c]
-        0x200092e4:    bb48        H.      CBNZ     r0,0x2000933a ; xTaskPriorityDisinherit + 178
-        0x200092e6:    1d20         .      ADDS     r0,r4,#4
-        0x200092e8:    f7feff5a    ..Z.    BL       uxListRemove ; 0x200081a0
-        0x200092ec:    b940        @.      CBNZ     r0,0x20009300 ; xTaskPriorityDisinherit + 120
-        0x200092ee:    f894102c    ..,.    LDRB     r1,[r4,#0x2c]
-        0x200092f2:    2001        .       MOVS     r0,#1
-        0x200092f4:    4088        .@      LSLS     r0,r0,r1
-        0x200092f6:    4913        .I      LDR      r1,[pc,#76] ; [0x20009344] = 0x20010048
-        0x200092f8:    6809        .h      LDR      r1,[r1,#0]
-        0x200092fa:    4381        .C      BICS     r1,r1,r0
-        0x200092fc:    4811        .H      LDR      r0,[pc,#68] ; [0x20009344] = 0x20010048
-        0x200092fe:    6001        .`      STR      r1,[r0,#0]
-        0x20009300:    4629        )F      MOV      r1,r5
-        0x20009302:    204a        J       MOVS     r0,#0x4a
-        0x20009304:    f7fbfb0e    ....    BL       SEGGER_SYSVIEW_RecordU32 ; 0x20004924
-        0x20009308:    6ca0        .l      LDR      r0,[r4,#0x48]
-        0x2000930a:    62e0        .b      STR      r0,[r4,#0x2c]
-        0x2000930c:    6ae0        .j      LDR      r0,[r4,#0x2c]
-        0x2000930e:    f1c00005    ....    RSB      r0,r0,#5
-        0x20009312:    61a0        .a      STR      r0,[r4,#0x18]
-        0x20009314:    f894102c    ..,.    LDRB     r1,[r4,#0x2c]
-        0x20009318:    2001        .       MOVS     r0,#1
-        0x2000931a:    4088        .@      LSLS     r0,r0,r1
-        0x2000931c:    4909        .I      LDR      r1,[pc,#36] ; [0x20009344] = 0x20010048
-        0x2000931e:    6809        .h      LDR      r1,[r1,#0]
-        0x20009320:    4308        .C      ORRS     r0,r0,r1
-        0x20009322:    4908        .I      LDR      r1,[pc,#32] ; [0x20009344] = 0x20010048
-        0x20009324:    6008        .`      STR      r0,[r1,#0]
-        0x20009326:    6ae1        .j      LDR      r1,[r4,#0x2c]
-        0x20009328:    eb010181    ....    ADD      r1,r1,r1,LSL #2
-        0x2000932c:    4a06        .J      LDR      r2,[pc,#24] ; [0x20009348] = 0x20010310
-        0x2000932e:    eb020081    ....    ADD      r0,r2,r1,LSL #2
-        0x20009332:    1d21        !.      ADDS     r1,r4,#4
-        0x20009334:    f7feff72    ..r.    BL       vListInsertEnd ; 0x2000821c
-        0x20009338:    2601        .&      MOVS     r6,#1
-        0x2000933a:    4630        0F      MOV      r0,r6
-        0x2000933c:    bd70        p.      POP      {r4-r6,pc}
+        0x200094fc:    b570        p.      PUSH     {r4-r6,lr}
+        0x200094fe:    4605        .F      MOV      r5,r0
+        0x20009500:    462c        ,F      MOV      r4,r5
+        0x20009502:    2600        .&      MOVS     r6,#0
+        0x20009504:    2d00        .-      CMP      r5,#0
+        0x20009506:    d048        H.      BEQ      0x2000959a ; xTaskPriorityDisinherit + 158
+        0x20009508:    4825        %H      LDR      r0,[pc,#148] ; [0x200095a0] = 0x20010030
+        0x2000950a:    6800        .h      LDR      r0,[r0,#0]
+        0x2000950c:    4284        .B      CMP      r4,r0
+        0x2000950e:    d101        ..      BNE      0x20009514 ; xTaskPriorityDisinherit + 24
+        0x20009510:    2001        .       MOVS     r0,#1
+        0x20009512:    e000        ..      B        0x20009516 ; xTaskPriorityDisinherit + 26
+        0x20009514:    2000        .       MOVS     r0,#0
+        0x20009516:    b928        (.      CBNZ     r0,0x20009524 ; xTaskPriorityDisinherit + 40
+        0x20009518:    f2410258    A.X.    MOV      r2,#0x1058
+        0x2000951c:    a121        !.      ADR      r1,{pc}+0x88 ; 0x200095a4
+        0x2000951e:    a026        &.      ADR      r0,{pc}+0x9a ; 0x200095b8
+        0x20009520:    f7fdf842    ..B.    BL       __0printf ; 0x200065a8
+        0x20009524:    6ce0        .l      LDR      r0,[r4,#0x4c]
+        0x20009526:    b928        (.      CBNZ     r0,0x20009534 ; xTaskPriorityDisinherit + 56
+        0x20009528:    f2410259    A.Y.    MOV      r2,#0x1059
+        0x2000952c:    a11d        ..      ADR      r1,{pc}+0x78 ; 0x200095a4
+        0x2000952e:    a022        ".      ADR      r0,{pc}+0x8a ; 0x200095b8
+        0x20009530:    f7fdf83a    ..:.    BL       __0printf ; 0x200065a8
+        0x20009534:    6ce0        .l      LDR      r0,[r4,#0x4c]
+        0x20009536:    1e40        @.      SUBS     r0,r0,#1
+        0x20009538:    64e0        .d      STR      r0,[r4,#0x4c]
+        0x2000953a:    6ca1        .l      LDR      r1,[r4,#0x48]
+        0x2000953c:    6ae0        .j      LDR      r0,[r4,#0x2c]
+        0x2000953e:    4288        .B      CMP      r0,r1
+        0x20009540:    d02b        +.      BEQ      0x2000959a ; xTaskPriorityDisinherit + 158
+        0x20009542:    6ce0        .l      LDR      r0,[r4,#0x4c]
+        0x20009544:    bb48        H.      CBNZ     r0,0x2000959a ; xTaskPriorityDisinherit + 158
+        0x20009546:    1d20         .      ADDS     r0,r4,#4
+        0x20009548:    f7fefe74    ..t.    BL       uxListRemove ; 0x20008234
+        0x2000954c:    b940        @.      CBNZ     r0,0x20009560 ; xTaskPriorityDisinherit + 100
+        0x2000954e:    f894102c    ..,.    LDRB     r1,[r4,#0x2c]
+        0x20009552:    2001        .       MOVS     r0,#1
+        0x20009554:    4088        .@      LSLS     r0,r0,r1
+        0x20009556:    491c        .I      LDR      r1,[pc,#112] ; [0x200095c8] = 0x20010048
+        0x20009558:    6809        .h      LDR      r1,[r1,#0]
+        0x2000955a:    4381        .C      BICS     r1,r1,r0
+        0x2000955c:    481a        .H      LDR      r0,[pc,#104] ; [0x200095c8] = 0x20010048
+        0x2000955e:    6001        .`      STR      r1,[r0,#0]
+        0x20009560:    4629        )F      MOV      r1,r5
+        0x20009562:    204a        J       MOVS     r0,#0x4a
+        0x20009564:    f7fbf9de    ....    BL       SEGGER_SYSVIEW_RecordU32 ; 0x20004924
+        0x20009568:    6ca0        .l      LDR      r0,[r4,#0x48]
+        0x2000956a:    62e0        .b      STR      r0,[r4,#0x2c]
+        0x2000956c:    6ae0        .j      LDR      r0,[r4,#0x2c]
+        0x2000956e:    f1c00005    ....    RSB      r0,r0,#5
+        0x20009572:    61a0        .a      STR      r0,[r4,#0x18]
+        0x20009574:    f894102c    ..,.    LDRB     r1,[r4,#0x2c]
+        0x20009578:    2001        .       MOVS     r0,#1
+        0x2000957a:    4088        .@      LSLS     r0,r0,r1
+        0x2000957c:    4912        .I      LDR      r1,[pc,#72] ; [0x200095c8] = 0x20010048
+        0x2000957e:    6809        .h      LDR      r1,[r1,#0]
+        0x20009580:    4308        .C      ORRS     r0,r0,r1
+        0x20009582:    4911        .I      LDR      r1,[pc,#68] ; [0x200095c8] = 0x20010048
+        0x20009584:    6008        .`      STR      r0,[r1,#0]
+        0x20009586:    6ae1        .j      LDR      r1,[r4,#0x2c]
+        0x20009588:    eb010181    ....    ADD      r1,r1,r1,LSL #2
+        0x2000958c:    4a0f        .J      LDR      r2,[pc,#60] ; [0x200095cc] = 0x20010310
+        0x2000958e:    eb020081    ....    ADD      r0,r2,r1,LSL #2
+        0x20009592:    1d21        !.      ADDS     r1,r4,#4
+        0x20009594:    f7fefea0    ....    BL       vListInsertEnd ; 0x200082d8
+        0x20009598:    2601        .&      MOVS     r6,#1
+        0x2000959a:    4630        0F      MOV      r0,r6
+        0x2000959c:    bd70        p.      POP      {r4-r6,pc}
     $d
-        0x2000933e:    0000        ..      DCW    0
-        0x20009340:    20010030    0..     DCD    536936496
-        0x20009344:    20010048    H..     DCD    536936520
-        0x20009348:    20010310    ...     DCD    536937232
+        0x2000959e:    0000        ..      DCW    0
+        0x200095a0:    20010030    0..     DCD    536936496
+        0x200095a4:    465c2e2e    ..\F    DCD    1180446254
+        0x200095a8:    52656572    reeR    DCD    1382376818
+        0x200095ac:    5c534f54    TOS\    DCD    1548963668
+        0x200095b0:    6b736174    task    DCD    1802723700
+        0x200095b4:    00632e73    s.c.    DCD    6499955
+        0x200095b8:    6f727245    Erro    DCD    1869771333
+        0x200095bc:    25203a72    r: %    DCD    622869106
+        0x200095c0:    25202c73    s, %    DCD    622865523
+        0x200095c4:    000a0d64    d...    DCD    658788
+        0x200095c8:    20010048    H..     DCD    536936520
+        0x200095cc:    20010310    ...     DCD    536937232
     $t
     i.xTaskRemoveFromEventList
     xTaskRemoveFromEventList
-        0x2000934c:    b570        p.      PUSH     {r4-r6,lr}
-        0x2000934e:    4606        .F      MOV      r6,r0
-        0x20009350:    68f0        .h      LDR      r0,[r6,#0xc]
-        0x20009352:    68c4        .h      LDR      r4,[r0,#0xc]
-        0x20009354:    b954        T.      CBNZ     r4,0x2000936c ; xTaskRemoveFromEventList + 32
-        0x20009356:    bf00        ..      NOP      
-        0x20009358:    2050        P       MOVS     r0,#0x50
-        0x2000935a:    f3808811    ....    MSR      BASEPRI,r0
-        0x2000935e:    f3bf8f4f    ..O.    DSB      
-        0x20009362:    f3bf8f6f    ..o.    ISB      
-        0x20009366:    bf00        ..      NOP      
-        0x20009368:    bf00        ..      NOP      
-        0x2000936a:    e7fe        ..      B        0x2000936a ; xTaskRemoveFromEventList + 30
-        0x2000936c:    f1040018    ....    ADD      r0,r4,#0x18
-        0x20009370:    f7feff16    ....    BL       uxListRemove ; 0x200081a0
-        0x20009374:    4817        .H      LDR      r0,[pc,#92] ; [0x200093d4] = 0x2001006c
-        0x20009376:    6800        .h      LDR      r0,[r0,#0]
-        0x20009378:    b9c0        ..      CBNZ     r0,0x200093ac ; xTaskRemoveFromEventList + 96
-        0x2000937a:    1d20         .      ADDS     r0,r4,#4
-        0x2000937c:    f7feff10    ....    BL       uxListRemove ; 0x200081a0
-        0x20009380:    4620         F      MOV      r0,r4
-        0x20009382:    f7fbf9d7    ....    BL       SEGGER_SYSVIEW_OnTaskStartReady ; 0x20004734
-        0x20009386:    f894102c    ..,.    LDRB     r1,[r4,#0x2c]
-        0x2000938a:    2001        .       MOVS     r0,#1
-        0x2000938c:    4088        .@      LSLS     r0,r0,r1
-        0x2000938e:    4912        .I      LDR      r1,[pc,#72] ; [0x200093d8] = 0x20010048
-        0x20009390:    6809        .h      LDR      r1,[r1,#0]
-        0x20009392:    4308        .C      ORRS     r0,r0,r1
-        0x20009394:    4910        .I      LDR      r1,[pc,#64] ; [0x200093d8] = 0x20010048
-        0x20009396:    6008        .`      STR      r0,[r1,#0]
-        0x20009398:    6ae1        .j      LDR      r1,[r4,#0x2c]
-        0x2000939a:    eb010181    ....    ADD      r1,r1,r1,LSL #2
-        0x2000939e:    4a0f        .J      LDR      r2,[pc,#60] ; [0x200093dc] = 0x20010310
-        0x200093a0:    eb020081    ....    ADD      r0,r2,r1,LSL #2
-        0x200093a4:    1d21        !.      ADDS     r1,r4,#4
-        0x200093a6:    f7feff39    ..9.    BL       vListInsertEnd ; 0x2000821c
-        0x200093aa:    e004        ..      B        0x200093b6 ; xTaskRemoveFromEventList + 106
-        0x200093ac:    f1040118    ....    ADD      r1,r4,#0x18
-        0x200093b0:    480b        .H      LDR      r0,[pc,#44] ; [0x200093e0] = 0x2001039c
-        0x200093b2:    f7feff33    ..3.    BL       vListInsertEnd ; 0x2000821c
-        0x200093b6:    490b        .I      LDR      r1,[pc,#44] ; [0x200093e4] = 0x20010030
-        0x200093b8:    6ae0        .j      LDR      r0,[r4,#0x2c]
-        0x200093ba:    6809        .h      LDR      r1,[r1,#0]
-        0x200093bc:    6ac9        .j      LDR      r1,[r1,#0x2c]
-        0x200093be:    4288        .B      CMP      r0,r1
-        0x200093c0:    d904        ..      BLS      0x200093cc ; xTaskRemoveFromEventList + 128
-        0x200093c2:    2501        .%      MOVS     r5,#1
-        0x200093c4:    2001        .       MOVS     r0,#1
-        0x200093c6:    4908        .I      LDR      r1,[pc,#32] ; [0x200093e8] = 0x20010054
-        0x200093c8:    6008        .`      STR      r0,[r1,#0]
-        0x200093ca:    e000        ..      B        0x200093ce ; xTaskRemoveFromEventList + 130
-        0x200093cc:    2500        .%      MOVS     r5,#0
-        0x200093ce:    4628        (F      MOV      r0,r5
-        0x200093d0:    bd70        p.      POP      {r4-r6,pc}
+        0x200095d0:    b570        p.      PUSH     {r4-r6,lr}
+        0x200095d2:    4606        .F      MOV      r6,r0
+        0x200095d4:    68f0        .h      LDR      r0,[r6,#0xc]
+        0x200095d6:    68c4        .h      LDR      r4,[r0,#0xc]
+        0x200095d8:    b92c        ,.      CBNZ     r4,0x200095e6 ; xTaskRemoveFromEventList + 22
+        0x200095da:    f640427d    @.}B    MOV      r2,#0xc7d
+        0x200095de:    a11b        ..      ADR      r1,{pc}+0x6e ; 0x2000964c
+        0x200095e0:    a01f        ..      ADR      r0,{pc}+0x80 ; 0x20009660
+        0x200095e2:    f7fcffe1    ....    BL       __0printf ; 0x200065a8
+        0x200095e6:    f1040018    ....    ADD      r0,r4,#0x18
+        0x200095ea:    f7fefe23    ..#.    BL       uxListRemove ; 0x20008234
+        0x200095ee:    4820         H      LDR      r0,[pc,#128] ; [0x20009670] = 0x2001006c
+        0x200095f0:    6800        .h      LDR      r0,[r0,#0]
+        0x200095f2:    b9c0        ..      CBNZ     r0,0x20009626 ; xTaskRemoveFromEventList + 86
+        0x200095f4:    1d20         .      ADDS     r0,r4,#4
+        0x200095f6:    f7fefe1d    ....    BL       uxListRemove ; 0x20008234
+        0x200095fa:    4620         F      MOV      r0,r4
+        0x200095fc:    f7fbf89a    ....    BL       SEGGER_SYSVIEW_OnTaskStartReady ; 0x20004734
+        0x20009600:    f894102c    ..,.    LDRB     r1,[r4,#0x2c]
+        0x20009604:    2001        .       MOVS     r0,#1
+        0x20009606:    4088        .@      LSLS     r0,r0,r1
+        0x20009608:    491a        .I      LDR      r1,[pc,#104] ; [0x20009674] = 0x20010048
+        0x2000960a:    6809        .h      LDR      r1,[r1,#0]
+        0x2000960c:    4308        .C      ORRS     r0,r0,r1
+        0x2000960e:    4919        .I      LDR      r1,[pc,#100] ; [0x20009674] = 0x20010048
+        0x20009610:    6008        .`      STR      r0,[r1,#0]
+        0x20009612:    6ae1        .j      LDR      r1,[r4,#0x2c]
+        0x20009614:    eb010181    ....    ADD      r1,r1,r1,LSL #2
+        0x20009618:    4a17        .J      LDR      r2,[pc,#92] ; [0x20009678] = 0x20010310
+        0x2000961a:    eb020081    ....    ADD      r0,r2,r1,LSL #2
+        0x2000961e:    1d21        !.      ADDS     r1,r4,#4
+        0x20009620:    f7fefe5a    ..Z.    BL       vListInsertEnd ; 0x200082d8
+        0x20009624:    e004        ..      B        0x20009630 ; xTaskRemoveFromEventList + 96
+        0x20009626:    f1040118    ....    ADD      r1,r4,#0x18
+        0x2000962a:    4814        .H      LDR      r0,[pc,#80] ; [0x2000967c] = 0x2001039c
+        0x2000962c:    f7fefe54    ..T.    BL       vListInsertEnd ; 0x200082d8
+        0x20009630:    4913        .I      LDR      r1,[pc,#76] ; [0x20009680] = 0x20010030
+        0x20009632:    6ae0        .j      LDR      r0,[r4,#0x2c]
+        0x20009634:    6809        .h      LDR      r1,[r1,#0]
+        0x20009636:    6ac9        .j      LDR      r1,[r1,#0x2c]
+        0x20009638:    4288        .B      CMP      r0,r1
+        0x2000963a:    d904        ..      BLS      0x20009646 ; xTaskRemoveFromEventList + 118
+        0x2000963c:    2501        .%      MOVS     r5,#1
+        0x2000963e:    2001        .       MOVS     r0,#1
+        0x20009640:    4910        .I      LDR      r1,[pc,#64] ; [0x20009684] = 0x20010054
+        0x20009642:    6008        .`      STR      r0,[r1,#0]
+        0x20009644:    e000        ..      B        0x20009648 ; xTaskRemoveFromEventList + 120
+        0x20009646:    2500        .%      MOVS     r5,#0
+        0x20009648:    4628        (F      MOV      r0,r5
+        0x2000964a:    bd70        p.      POP      {r4-r6,pc}
     $d
-        0x200093d2:    0000        ..      DCW    0
-        0x200093d4:    2001006c    l..     DCD    536936556
-        0x200093d8:    20010048    H..     DCD    536936520
-        0x200093dc:    20010310    ...     DCD    536937232
-        0x200093e0:    2001039c    ...     DCD    536937372
-        0x200093e4:    20010030    0..     DCD    536936496
-        0x200093e8:    20010054    T..     DCD    536936532
+        0x2000964c:    465c2e2e    ..\F    DCD    1180446254
+        0x20009650:    52656572    reeR    DCD    1382376818
+        0x20009654:    5c534f54    TOS\    DCD    1548963668
+        0x20009658:    6b736174    task    DCD    1802723700
+        0x2000965c:    00632e73    s.c.    DCD    6499955
+        0x20009660:    6f727245    Erro    DCD    1869771333
+        0x20009664:    25203a72    r: %    DCD    622869106
+        0x20009668:    25202c73    s, %    DCD    622865523
+        0x2000966c:    000a0d64    d...    DCD    658788
+        0x20009670:    2001006c    l..     DCD    536936556
+        0x20009674:    20010048    H..     DCD    536936520
+        0x20009678:    20010310    ...     DCD    536937232
+        0x2000967c:    2001039c    ...     DCD    536937372
+        0x20009680:    20010030    0..     DCD    536936496
+        0x20009684:    20010054    T..     DCD    536936532
     $t
     i.xTaskResumeAll
     xTaskResumeAll
-        0x200093ec:    b570        p.      PUSH     {r4-r6,lr}
-        0x200093ee:    2400        .$      MOVS     r4,#0
-        0x200093f0:    2600        .&      MOVS     r6,#0
-        0x200093f2:    4838        8H      LDR      r0,[pc,#224] ; [0x200094d4] = 0x2001006c
-        0x200093f4:    6800        .h      LDR      r0,[r0,#0]
-        0x200093f6:    b950        P.      CBNZ     r0,0x2000940e ; xTaskResumeAll + 34
-        0x200093f8:    bf00        ..      NOP      
-        0x200093fa:    2050        P       MOVS     r0,#0x50
-        0x200093fc:    f3808811    ....    MSR      BASEPRI,r0
-        0x20009400:    f3bf8f4f    ..O.    DSB      
-        0x20009404:    f3bf8f6f    ..o.    ISB      
-        0x20009408:    bf00        ..      NOP      
-        0x2000940a:    bf00        ..      NOP      
-        0x2000940c:    e7fe        ..      B        0x2000940c ; xTaskResumeAll + 32
-        0x2000940e:    f7feff11    ....    BL       vPortEnterCritical ; 0x20008234
-        0x20009412:    4830        0H      LDR      r0,[pc,#192] ; [0x200094d4] = 0x2001006c
-        0x20009414:    6800        .h      LDR      r0,[r0,#0]
-        0x20009416:    1e40        @.      SUBS     r0,r0,#1
-        0x20009418:    492e        .I      LDR      r1,[pc,#184] ; [0x200094d4] = 0x2001006c
-        0x2000941a:    6008        .`      STR      r0,[r1,#0]
-        0x2000941c:    4608        .F      MOV      r0,r1
-        0x2000941e:    6800        .h      LDR      r0,[r0,#0]
-        0x20009420:    2800        .(      CMP      r0,#0
-        0x20009422:    d152        R.      BNE      0x200094ca ; xTaskResumeAll + 222
-        0x20009424:    482c        ,H      LDR      r0,[pc,#176] ; [0x200094d8] = 0x20010040
-        0x20009426:    6800        .h      LDR      r0,[r0,#0]
-        0x20009428:    2800        .(      CMP      r0,#0
-        0x2000942a:    d04e        N.      BEQ      0x200094ca ; xTaskResumeAll + 222
-        0x2000942c:    e027        '.      B        0x2000947e ; xTaskResumeAll + 146
-        0x2000942e:    482b        +H      LDR      r0,[pc,#172] ; [0x200094dc] = 0x2001039c
-        0x20009430:    68c0        .h      LDR      r0,[r0,#0xc]
-        0x20009432:    68c4        .h      LDR      r4,[r0,#0xc]
-        0x20009434:    f1040018    ....    ADD      r0,r4,#0x18
-        0x20009438:    f7fefeb2    ....    BL       uxListRemove ; 0x200081a0
-        0x2000943c:    1d20         .      ADDS     r0,r4,#4
-        0x2000943e:    f7fefeaf    ....    BL       uxListRemove ; 0x200081a0
-        0x20009442:    4620         F      MOV      r0,r4
-        0x20009444:    f7fbf976    ..v.    BL       SEGGER_SYSVIEW_OnTaskStartReady ; 0x20004734
-        0x20009448:    f894102c    ..,.    LDRB     r1,[r4,#0x2c]
-        0x2000944c:    2001        .       MOVS     r0,#1
-        0x2000944e:    4088        .@      LSLS     r0,r0,r1
-        0x20009450:    4923        #I      LDR      r1,[pc,#140] ; [0x200094e0] = 0x20010048
-        0x20009452:    6809        .h      LDR      r1,[r1,#0]
-        0x20009454:    4308        .C      ORRS     r0,r0,r1
-        0x20009456:    4922        "I      LDR      r1,[pc,#136] ; [0x200094e0] = 0x20010048
-        0x20009458:    6008        .`      STR      r0,[r1,#0]
-        0x2000945a:    6ae1        .j      LDR      r1,[r4,#0x2c]
-        0x2000945c:    eb010181    ....    ADD      r1,r1,r1,LSL #2
-        0x20009460:    4a20         J      LDR      r2,[pc,#128] ; [0x200094e4] = 0x20010310
-        0x20009462:    eb020081    ....    ADD      r0,r2,r1,LSL #2
-        0x20009466:    1d21        !.      ADDS     r1,r4,#4
-        0x20009468:    f7fefed8    ....    BL       vListInsertEnd ; 0x2000821c
-        0x2000946c:    491e        .I      LDR      r1,[pc,#120] ; [0x200094e8] = 0x20010030
-        0x2000946e:    6ae0        .j      LDR      r0,[r4,#0x2c]
-        0x20009470:    6809        .h      LDR      r1,[r1,#0]
-        0x20009472:    6ac9        .j      LDR      r1,[r1,#0x2c]
-        0x20009474:    4288        .B      CMP      r0,r1
-        0x20009476:    d302        ..      BCC      0x2000947e ; xTaskResumeAll + 146
-        0x20009478:    2001        .       MOVS     r0,#1
-        0x2000947a:    491c        .I      LDR      r1,[pc,#112] ; [0x200094ec] = 0x20010054
-        0x2000947c:    6008        .`      STR      r0,[r1,#0]
-        0x2000947e:    4817        .H      LDR      r0,[pc,#92] ; [0x200094dc] = 0x2001039c
-        0x20009480:    6800        .h      LDR      r0,[r0,#0]
-        0x20009482:    b908        ..      CBNZ     r0,0x20009488 ; xTaskResumeAll + 156
-        0x20009484:    2001        .       MOVS     r0,#1
-        0x20009486:    e000        ..      B        0x2000948a ; xTaskResumeAll + 158
-        0x20009488:    2000        .       MOVS     r0,#0
-        0x2000948a:    2800        .(      CMP      r0,#0
-        0x2000948c:    d0cf        ..      BEQ      0x2000942e ; xTaskResumeAll + 66
-        0x2000948e:    b10c        ..      CBZ      r4,0x20009494 ; xTaskResumeAll + 168
-        0x20009490:    f7fefb80    ....    BL       prvResetNextTaskUnblockTime ; 0x20007b94
-        0x20009494:    4816        .H      LDR      r0,[pc,#88] ; [0x200094f0] = 0x20010050
-        0x20009496:    6805        .h      LDR      r5,[r0,#0]
-        0x20009498:    b165        e.      CBZ      r5,0x200094b4 ; xTaskResumeAll + 200
-        0x2000949a:    bf00        ..      NOP      
-        0x2000949c:    f7fffe4c    ..L.    BL       xTaskIncrementTick ; 0x20009138
-        0x200094a0:    b110        ..      CBZ      r0,0x200094a8 ; xTaskResumeAll + 188
-        0x200094a2:    2001        .       MOVS     r0,#1
-        0x200094a4:    4911        .I      LDR      r1,[pc,#68] ; [0x200094ec] = 0x20010054
-        0x200094a6:    6008        .`      STR      r0,[r1,#0]
-        0x200094a8:    1e6d        m.      SUBS     r5,r5,#1
-        0x200094aa:    2d00        .-      CMP      r5,#0
-        0x200094ac:    d1f6        ..      BNE      0x2000949c ; xTaskResumeAll + 176
-        0x200094ae:    2000        .       MOVS     r0,#0
-        0x200094b0:    490f        .I      LDR      r1,[pc,#60] ; [0x200094f0] = 0x20010050
-        0x200094b2:    6008        .`      STR      r0,[r1,#0]
-        0x200094b4:    480d        .H      LDR      r0,[pc,#52] ; [0x200094ec] = 0x20010054
-        0x200094b6:    6800        .h      LDR      r0,[r0,#0]
-        0x200094b8:    b138        8.      CBZ      r0,0x200094ca ; xTaskResumeAll + 222
-        0x200094ba:    2601        .&      MOVS     r6,#1
-        0x200094bc:    0730        0.      LSLS     r0,r6,#28
-        0x200094be:    490d        .I      LDR      r1,[pc,#52] ; [0x200094f4] = 0xe000ed04
-        0x200094c0:    6008        .`      STR      r0,[r1,#0]
-        0x200094c2:    f3bf8f4f    ..O.    DSB      
-        0x200094c6:    f3bf8f6f    ..o.    ISB      
-        0x200094ca:    f7fefedd    ....    BL       vPortExitCritical ; 0x20008288
-        0x200094ce:    4630        0F      MOV      r0,r6
-        0x200094d0:    bd70        p.      POP      {r4-r6,pc}
+        0x20009688:    b570        p.      PUSH     {r4-r6,lr}
+        0x2000968a:    2400        .$      MOVS     r4,#0
+        0x2000968c:    2600        .&      MOVS     r6,#0
+        0x2000968e:    4835        5H      LDR      r0,[pc,#212] ; [0x20009764] = 0x2001006c
+        0x20009690:    6800        .h      LDR      r0,[r0,#0]
+        0x20009692:    b928        (.      CBNZ     r0,0x200096a0 ; xTaskResumeAll + 24
+        0x20009694:    f64002b6    @...    MOV      r2,#0x8b6
+        0x20009698:    a133        3.      ADR      r1,{pc}+0xd0 ; 0x20009768
+        0x2000969a:    a038        8.      ADR      r0,{pc}+0xe2 ; 0x2000977c
+        0x2000969c:    f7fcff84    ....    BL       __0printf ; 0x200065a8
+        0x200096a0:    f7fefe26    ..&.    BL       vPortEnterCritical ; 0x200082f0
+        0x200096a4:    482f        /H      LDR      r0,[pc,#188] ; [0x20009764] = 0x2001006c
+        0x200096a6:    6800        .h      LDR      r0,[r0,#0]
+        0x200096a8:    1e40        @.      SUBS     r0,r0,#1
+        0x200096aa:    492e        .I      LDR      r1,[pc,#184] ; [0x20009764] = 0x2001006c
+        0x200096ac:    6008        .`      STR      r0,[r1,#0]
+        0x200096ae:    4608        .F      MOV      r0,r1
+        0x200096b0:    6800        .h      LDR      r0,[r0,#0]
+        0x200096b2:    2800        .(      CMP      r0,#0
+        0x200096b4:    d152        R.      BNE      0x2000975c ; xTaskResumeAll + 212
+        0x200096b6:    4835        5H      LDR      r0,[pc,#212] ; [0x2000978c] = 0x20010040
+        0x200096b8:    6800        .h      LDR      r0,[r0,#0]
+        0x200096ba:    2800        .(      CMP      r0,#0
+        0x200096bc:    d04e        N.      BEQ      0x2000975c ; xTaskResumeAll + 212
+        0x200096be:    e027        '.      B        0x20009710 ; xTaskResumeAll + 136
+        0x200096c0:    4833        3H      LDR      r0,[pc,#204] ; [0x20009790] = 0x2001039c
+        0x200096c2:    68c0        .h      LDR      r0,[r0,#0xc]
+        0x200096c4:    68c4        .h      LDR      r4,[r0,#0xc]
+        0x200096c6:    f1040018    ....    ADD      r0,r4,#0x18
+        0x200096ca:    f7fefdb3    ....    BL       uxListRemove ; 0x20008234
+        0x200096ce:    1d20         .      ADDS     r0,r4,#4
+        0x200096d0:    f7fefdb0    ....    BL       uxListRemove ; 0x20008234
+        0x200096d4:    4620         F      MOV      r0,r4
+        0x200096d6:    f7fbf82d    ..-.    BL       SEGGER_SYSVIEW_OnTaskStartReady ; 0x20004734
+        0x200096da:    f894102c    ..,.    LDRB     r1,[r4,#0x2c]
+        0x200096de:    2001        .       MOVS     r0,#1
+        0x200096e0:    4088        .@      LSLS     r0,r0,r1
+        0x200096e2:    492c        ,I      LDR      r1,[pc,#176] ; [0x20009794] = 0x20010048
+        0x200096e4:    6809        .h      LDR      r1,[r1,#0]
+        0x200096e6:    4308        .C      ORRS     r0,r0,r1
+        0x200096e8:    492a        *I      LDR      r1,[pc,#168] ; [0x20009794] = 0x20010048
+        0x200096ea:    6008        .`      STR      r0,[r1,#0]
+        0x200096ec:    6ae1        .j      LDR      r1,[r4,#0x2c]
+        0x200096ee:    eb010181    ....    ADD      r1,r1,r1,LSL #2
+        0x200096f2:    4a29        )J      LDR      r2,[pc,#164] ; [0x20009798] = 0x20010310
+        0x200096f4:    eb020081    ....    ADD      r0,r2,r1,LSL #2
+        0x200096f8:    1d21        !.      ADDS     r1,r4,#4
+        0x200096fa:    f7fefded    ....    BL       vListInsertEnd ; 0x200082d8
+        0x200096fe:    4927        'I      LDR      r1,[pc,#156] ; [0x2000979c] = 0x20010030
+        0x20009700:    6ae0        .j      LDR      r0,[r4,#0x2c]
+        0x20009702:    6809        .h      LDR      r1,[r1,#0]
+        0x20009704:    6ac9        .j      LDR      r1,[r1,#0x2c]
+        0x20009706:    4288        .B      CMP      r0,r1
+        0x20009708:    d302        ..      BCC      0x20009710 ; xTaskResumeAll + 136
+        0x2000970a:    2001        .       MOVS     r0,#1
+        0x2000970c:    4924        $I      LDR      r1,[pc,#144] ; [0x200097a0] = 0x20010054
+        0x2000970e:    6008        .`      STR      r0,[r1,#0]
+        0x20009710:    481f        .H      LDR      r0,[pc,#124] ; [0x20009790] = 0x2001039c
+        0x20009712:    6800        .h      LDR      r0,[r0,#0]
+        0x20009714:    b908        ..      CBNZ     r0,0x2000971a ; xTaskResumeAll + 146
+        0x20009716:    2001        .       MOVS     r0,#1
+        0x20009718:    e000        ..      B        0x2000971c ; xTaskResumeAll + 148
+        0x2000971a:    2000        .       MOVS     r0,#0
+        0x2000971c:    2800        .(      CMP      r0,#0
+        0x2000971e:    d0cf        ..      BEQ      0x200096c0 ; xTaskResumeAll + 56
+        0x20009720:    b10c        ..      CBZ      r4,0x20009726 ; xTaskResumeAll + 158
+        0x20009722:    f7fefa5d    ..].    BL       prvResetNextTaskUnblockTime ; 0x20007be0
+        0x20009726:    481f        .H      LDR      r0,[pc,#124] ; [0x200097a4] = 0x20010050
+        0x20009728:    6805        .h      LDR      r5,[r0,#0]
+        0x2000972a:    b165        e.      CBZ      r5,0x20009746 ; xTaskResumeAll + 190
+        0x2000972c:    bf00        ..      NOP      
+        0x2000972e:    f7fffe31    ..1.    BL       xTaskIncrementTick ; 0x20009394
+        0x20009732:    b110        ..      CBZ      r0,0x2000973a ; xTaskResumeAll + 178
+        0x20009734:    2001        .       MOVS     r0,#1
+        0x20009736:    491a        .I      LDR      r1,[pc,#104] ; [0x200097a0] = 0x20010054
+        0x20009738:    6008        .`      STR      r0,[r1,#0]
+        0x2000973a:    1e6d        m.      SUBS     r5,r5,#1
+        0x2000973c:    2d00        .-      CMP      r5,#0
+        0x2000973e:    d1f6        ..      BNE      0x2000972e ; xTaskResumeAll + 166
+        0x20009740:    2000        .       MOVS     r0,#0
+        0x20009742:    4918        .I      LDR      r1,[pc,#96] ; [0x200097a4] = 0x20010050
+        0x20009744:    6008        .`      STR      r0,[r1,#0]
+        0x20009746:    4816        .H      LDR      r0,[pc,#88] ; [0x200097a0] = 0x20010054
+        0x20009748:    6800        .h      LDR      r0,[r0,#0]
+        0x2000974a:    b138        8.      CBZ      r0,0x2000975c ; xTaskResumeAll + 212
+        0x2000974c:    2601        .&      MOVS     r6,#1
+        0x2000974e:    0730        0.      LSLS     r0,r6,#28
+        0x20009750:    4915        .I      LDR      r1,[pc,#84] ; [0x200097a8] = 0xe000ed04
+        0x20009752:    6008        .`      STR      r0,[r1,#0]
+        0x20009754:    f3bf8f4f    ..O.    DSB      
+        0x20009758:    f3bf8f6f    ..o.    ISB      
+        0x2000975c:    f7fefe04    ....    BL       vPortExitCritical ; 0x20008368
+        0x20009760:    4630        0F      MOV      r0,r6
+        0x20009762:    bd70        p.      POP      {r4-r6,pc}
     $d
-        0x200094d2:    0000        ..      DCW    0
-        0x200094d4:    2001006c    l..     DCD    536936556
-        0x200094d8:    20010040    @..     DCD    536936512
-        0x200094dc:    2001039c    ...     DCD    536937372
-        0x200094e0:    20010048    H..     DCD    536936520
-        0x200094e4:    20010310    ...     DCD    536937232
-        0x200094e8:    20010030    0..     DCD    536936496
-        0x200094ec:    20010054    T..     DCD    536936532
-        0x200094f0:    20010050    P..     DCD    536936528
-        0x200094f4:    e000ed04    ....    DCD    3758157060
+        0x20009764:    2001006c    l..     DCD    536936556
+        0x20009768:    465c2e2e    ..\F    DCD    1180446254
+        0x2000976c:    52656572    reeR    DCD    1382376818
+        0x20009770:    5c534f54    TOS\    DCD    1548963668
+        0x20009774:    6b736174    task    DCD    1802723700
+        0x20009778:    00632e73    s.c.    DCD    6499955
+        0x2000977c:    6f727245    Erro    DCD    1869771333
+        0x20009780:    25203a72    r: %    DCD    622869106
+        0x20009784:    25202c73    s, %    DCD    622865523
+        0x20009788:    000a0d64    d...    DCD    658788
+        0x2000978c:    20010040    @..     DCD    536936512
+        0x20009790:    2001039c    ...     DCD    536937372
+        0x20009794:    20010048    H..     DCD    536936520
+        0x20009798:    20010310    ...     DCD    536937232
+        0x2000979c:    20010030    0..     DCD    536936496
+        0x200097a0:    20010054    T..     DCD    536936532
+        0x200097a4:    20010050    P..     DCD    536936528
+        0x200097a8:    e000ed04    ....    DCD    3758157060
     $t
     i.xTimerCreateTimerTask
     xTimerCreateTimerTask
-        0x200094f8:    b51c        ..      PUSH     {r2-r4,lr}
-        0x200094fa:    2400        .$      MOVS     r4,#0
-        0x200094fc:    f7fdfff6    ....    BL       prvCheckForValidListAndQueue ; 0x200074ec
-        0x20009500:    480d        .H      LDR      r0,[pc,#52] ; [0x20009538] = 0x20010078
-        0x20009502:    6800        .h      LDR      r0,[r0,#0]
-        0x20009504:    b150        P.      CBZ      r0,0x2000951c ; xTimerCreateTimerTask + 36
-        0x20009506:    480d        .H      LDR      r0,[pc,#52] ; [0x2000953c] = 0x2001007c
-        0x20009508:    2102        .!      MOVS     r1,#2
-        0x2000950a:    2300        .#      MOVS     r3,#0
-        0x2000950c:    020a        ..      LSLS     r2,r1,#8
-        0x2000950e:    e9cd1000    ....    STRD     r1,r0,[sp,#0]
-        0x20009512:    a10b        ..      ADR      r1,{pc}+0x2e ; 0x20009540
-        0x20009514:    480c        .H      LDR      r0,[pc,#48] ; [0x20009548] = 0x20007cd5
-        0x20009516:    f7fffdbf    ....    BL       xTaskCreate ; 0x20009098
-        0x2000951a:    4604        .F      MOV      r4,r0
-        0x2000951c:    b954        T.      CBNZ     r4,0x20009534 ; xTimerCreateTimerTask + 60
-        0x2000951e:    bf00        ..      NOP      
-        0x20009520:    2050        P       MOVS     r0,#0x50
-        0x20009522:    f3808811    ....    MSR      BASEPRI,r0
-        0x20009526:    f3bf8f4f    ..O.    DSB      
-        0x2000952a:    f3bf8f6f    ..o.    ISB      
-        0x2000952e:    bf00        ..      NOP      
-        0x20009530:    bf00        ..      NOP      
-        0x20009532:    e7fe        ..      B        0x20009532 ; xTimerCreateTimerTask + 58
-        0x20009534:    4620         F      MOV      r0,r4
-        0x20009536:    bd1c        ..      POP      {r2-r4,pc}
+        0x200097ac:    b51c        ..      PUSH     {r2-r4,lr}
+        0x200097ae:    2400        .$      MOVS     r4,#0
+        0x200097b0:    f7fdfe9c    ....    BL       prvCheckForValidListAndQueue ; 0x200074ec
+        0x200097b4:    480b        .H      LDR      r0,[pc,#44] ; [0x200097e4] = 0x20010078
+        0x200097b6:    6800        .h      LDR      r0,[r0,#0]
+        0x200097b8:    b150        P.      CBZ      r0,0x200097d0 ; xTimerCreateTimerTask + 36
+        0x200097ba:    480b        .H      LDR      r0,[pc,#44] ; [0x200097e8] = 0x2001007c
+        0x200097bc:    2102        .!      MOVS     r1,#2
+        0x200097be:    2300        .#      MOVS     r3,#0
+        0x200097c0:    020a        ..      LSLS     r2,r1,#8
+        0x200097c2:    e9cd1000    ....    STRD     r1,r0,[sp,#0]
+        0x200097c6:    a109        ..      ADR      r1,{pc}+0x26 ; 0x200097ec
+        0x200097c8:    480a        .H      LDR      r0,[pc,#40] ; [0x200097f4] = 0x20007d5d
+        0x200097ca:    f7fffd93    ....    BL       xTaskCreate ; 0x200092f4
+        0x200097ce:    4604        .F      MOV      r4,r0
+        0x200097d0:    b92c        ,.      CBNZ     r4,0x200097de ; xTimerCreateTimerTask + 50
+        0x200097d2:    f240120d    @...    MOV      r2,#0x10d
+        0x200097d6:    a108        ..      ADR      r1,{pc}+0x22 ; 0x200097f8
+        0x200097d8:    a00d        ..      ADR      r0,{pc}+0x38 ; 0x20009810
+        0x200097da:    f7fcfee5    ....    BL       __0printf ; 0x200065a8
+        0x200097de:    4620         F      MOV      r0,r4
+        0x200097e0:    bd1c        ..      POP      {r2-r4,pc}
     $d
-        0x20009538:    20010078    x..     DCD    536936568
-        0x2000953c:    2001007c    |..     DCD    536936572
-        0x20009540:    20726d54    Tmr     DCD    544370004
-        0x20009544:    00637653    Svc.    DCD    6518355
-        0x20009548:    20007cd5    .|.     DCD    536902869
+        0x200097e2:    0000        ..      DCW    0
+        0x200097e4:    20010078    x..     DCD    536936568
+        0x200097e8:    2001007c    |..     DCD    536936572
+        0x200097ec:    20726d54    Tmr     DCD    544370004
+        0x200097f0:    00637653    Svc.    DCD    6518355
+        0x200097f4:    20007d5d    ]}.     DCD    536903005
+        0x200097f8:    465c2e2e    ..\F    DCD    1180446254
+        0x200097fc:    52656572    reeR    DCD    1382376818
+        0x20009800:    5c534f54    TOS\    DCD    1548963668
+        0x20009804:    656d6974    time    DCD    1701669236
+        0x20009808:    632e7372    rs.c    DCD    1663988594
+        0x2000980c:    00000000    ....    DCD    0
+        0x20009810:    6f727245    Erro    DCD    1869771333
+        0x20009814:    25203a72    r: %    DCD    622869106
+        0x20009818:    25202c73    s, %    DCD    622865523
+        0x2000981c:    000a0d64    d...    DCD    658788
     $t
     i.xTimerGenericCommand
     xTimerGenericCommand
-        0x2000954c:    e92d43fe    -..C    PUSH     {r1-r9,lr}
-        0x20009550:    4604        .F      MOV      r4,r0
-        0x20009552:    460d        .F      MOV      r5,r1
-        0x20009554:    4616        .F      MOV      r6,r2
-        0x20009556:    461f        .F      MOV      r7,r3
-        0x20009558:    f8dd8028    ..(.    LDR      r8,[sp,#0x28]
-        0x2000955c:    f04f0900    O...    MOV      r9,#0
-        0x20009560:    b954        T.      CBNZ     r4,0x20009578 ; xTimerGenericCommand + 44
-        0x20009562:    bf00        ..      NOP      
-        0x20009564:    2050        P       MOVS     r0,#0x50
-        0x20009566:    f3808811    ....    MSR      BASEPRI,r0
-        0x2000956a:    f3bf8f4f    ..O.    DSB      
-        0x2000956e:    f3bf8f6f    ..o.    ISB      
-        0x20009572:    bf00        ..      NOP      
-        0x20009574:    bf00        ..      NOP      
-        0x20009576:    e7fe        ..      B        0x20009576 ; xTimerGenericCommand + 42
-        0x20009578:    4814        .H      LDR      r0,[pc,#80] ; [0x200095cc] = 0x20010078
-        0x2000957a:    6800        .h      LDR      r0,[r0,#0]
-        0x2000957c:    b310        ..      CBZ      r0,0x200095c4 ; xTimerGenericCommand + 120
-        0x2000957e:    9500        ..      STR      r5,[sp,#0]
-        0x20009580:    9601        ..      STR      r6,[sp,#4]
-        0x20009582:    9402        ..      STR      r4,[sp,#8]
-        0x20009584:    2d06        .-      CMP      r5,#6
-        0x20009586:    da15        ..      BGE      0x200095b4 ; xTimerGenericCommand + 104
-        0x20009588:    f7fffdb6    ....    BL       xTaskGetSchedulerState ; 0x200090f8
-        0x2000958c:    2802        .(      CMP      r0,#2
-        0x2000958e:    d108        ..      BNE      0x200095a2 ; xTimerGenericCommand + 86
-        0x20009590:    2300        .#      MOVS     r3,#0
-        0x20009592:    4642        BF      MOV      r2,r8
-        0x20009594:    4669        iF      MOV      r1,sp
-        0x20009596:    480d        .H      LDR      r0,[pc,#52] ; [0x200095cc] = 0x20010078
-        0x20009598:    6800        .h      LDR      r0,[r0,#0]
-        0x2000959a:    f7fffab9    ....    BL       xQueueGenericSend ; 0x20008b10
-        0x2000959e:    4681        .F      MOV      r9,r0
-        0x200095a0:    e010        ..      B        0x200095c4 ; xTimerGenericCommand + 120
-        0x200095a2:    2300        .#      MOVS     r3,#0
-        0x200095a4:    461a        .F      MOV      r2,r3
-        0x200095a6:    4669        iF      MOV      r1,sp
-        0x200095a8:    4808        .H      LDR      r0,[pc,#32] ; [0x200095cc] = 0x20010078
-        0x200095aa:    6800        .h      LDR      r0,[r0,#0]
-        0x200095ac:    f7fffab0    ....    BL       xQueueGenericSend ; 0x20008b10
-        0x200095b0:    4681        .F      MOV      r9,r0
-        0x200095b2:    e007        ..      B        0x200095c4 ; xTimerGenericCommand + 120
-        0x200095b4:    2300        .#      MOVS     r3,#0
-        0x200095b6:    463a        :F      MOV      r2,r7
-        0x200095b8:    4669        iF      MOV      r1,sp
-        0x200095ba:    4804        .H      LDR      r0,[pc,#16] ; [0x200095cc] = 0x20010078
-        0x200095bc:    6800        .h      LDR      r0,[r0,#0]
-        0x200095be:    f7fffb9d    ....    BL       xQueueGenericSendFromISR ; 0x20008cfc
-        0x200095c2:    4681        .F      MOV      r9,r0
-        0x200095c4:    4648        HF      MOV      r0,r9
-        0x200095c6:    e8bd83fe    ....    POP      {r1-r9,pc}
+        0x20009820:    e92d43fe    -..C    PUSH     {r1-r9,lr}
+        0x20009824:    4604        .F      MOV      r4,r0
+        0x20009826:    460d        .F      MOV      r5,r1
+        0x20009828:    4616        .F      MOV      r6,r2
+        0x2000982a:    461f        .F      MOV      r7,r3
+        0x2000982c:    f8dd8028    ..(.    LDR      r8,[sp,#0x28]
+        0x20009830:    f04f0900    O...    MOV      r9,#0
+        0x20009834:    b92c        ,.      CBNZ     r4,0x20009842 ; xTimerGenericCommand + 34
+        0x20009836:    f44f72c1    O..r    MOV      r2,#0x182
+        0x2000983a:    a116        ..      ADR      r1,{pc}+0x5a ; 0x20009894
+        0x2000983c:    a01b        ..      ADR      r0,{pc}+0x70 ; 0x200098ac
+        0x2000983e:    f7fcfeb3    ....    BL       __0printf ; 0x200065a8
+        0x20009842:    481e        .H      LDR      r0,[pc,#120] ; [0x200098bc] = 0x20010078
+        0x20009844:    6800        .h      LDR      r0,[r0,#0]
+        0x20009846:    b310        ..      CBZ      r0,0x2000988e ; xTimerGenericCommand + 110
+        0x20009848:    9500        ..      STR      r5,[sp,#0]
+        0x2000984a:    9601        ..      STR      r6,[sp,#4]
+        0x2000984c:    9402        ..      STR      r4,[sp,#8]
+        0x2000984e:    2d06        .-      CMP      r5,#6
+        0x20009850:    da15        ..      BGE      0x2000987e ; xTimerGenericCommand + 94
+        0x20009852:    f7fffd7f    ....    BL       xTaskGetSchedulerState ; 0x20009354
+        0x20009856:    2802        .(      CMP      r0,#2
+        0x20009858:    d108        ..      BNE      0x2000986c ; xTimerGenericCommand + 76
+        0x2000985a:    2300        .#      MOVS     r3,#0
+        0x2000985c:    4642        BF      MOV      r2,r8
+        0x2000985e:    4669        iF      MOV      r1,sp
+        0x20009860:    4816        .H      LDR      r0,[pc,#88] ; [0x200098bc] = 0x20010078
+        0x20009862:    6800        .h      LDR      r0,[r0,#0]
+        0x20009864:    f7fffa7a    ..z.    BL       xQueueGenericSend ; 0x20008d5c
+        0x20009868:    4681        .F      MOV      r9,r0
+        0x2000986a:    e010        ..      B        0x2000988e ; xTimerGenericCommand + 110
+        0x2000986c:    2300        .#      MOVS     r3,#0
+        0x2000986e:    461a        .F      MOV      r2,r3
+        0x20009870:    4669        iF      MOV      r1,sp
+        0x20009872:    4812        .H      LDR      r0,[pc,#72] ; [0x200098bc] = 0x20010078
+        0x20009874:    6800        .h      LDR      r0,[r0,#0]
+        0x20009876:    f7fffa71    ..q.    BL       xQueueGenericSend ; 0x20008d5c
+        0x2000987a:    4681        .F      MOV      r9,r0
+        0x2000987c:    e007        ..      B        0x2000988e ; xTimerGenericCommand + 110
+        0x2000987e:    2300        .#      MOVS     r3,#0
+        0x20009880:    463a        :F      MOV      r2,r7
+        0x20009882:    4669        iF      MOV      r1,sp
+        0x20009884:    480d        .H      LDR      r0,[pc,#52] ; [0x200098bc] = 0x20010078
+        0x20009886:    6800        .h      LDR      r0,[r0,#0]
+        0x20009888:    f7fffb5c    ..\.    BL       xQueueGenericSendFromISR ; 0x20008f44
+        0x2000988c:    4681        .F      MOV      r9,r0
+        0x2000988e:    4648        HF      MOV      r0,r9
+        0x20009890:    e8bd83fe    ....    POP      {r1-r9,pc}
     $d
-        0x200095ca:    0000        ..      DCW    0
-        0x200095cc:    20010078    x..     DCD    536936568
+        0x20009894:    465c2e2e    ..\F    DCD    1180446254
+        0x20009898:    52656572    reeR    DCD    1382376818
+        0x2000989c:    5c534f54    TOS\    DCD    1548963668
+        0x200098a0:    656d6974    time    DCD    1701669236
+        0x200098a4:    632e7372    rs.c    DCD    1663988594
+        0x200098a8:    00000000    ....    DCD    0
+        0x200098ac:    6f727245    Erro    DCD    1869771333
+        0x200098b0:    25203a72    r: %    DCD    622869106
+        0x200098b4:    25202c73    s, %    DCD    622865523
+        0x200098b8:    000a0d64    d...    DCD    658788
+        0x200098bc:    20010078    x..     DCD    536936568
     $d.realdata
     .constdata
-        0x200095d0:    00400020     .@.    DCD    4194336
-        0x200095d4:    0080005d    ]...    DCD    8388701
-        0x200095d8:    010000ba    ....    DCD    16777402
-        0x200095dc:    02000174    t...    DCD    33554804
+        0x200098c0:    00400020     .@.    DCD    4194336
+        0x200098c4:    0080005d    ]...    DCD    8388701
+        0x200098c8:    010000ba    ....    DCD    16777402
+        0x200098cc:    02000174    t...    DCD    33554804
     .constdata
     __FUNCTION__
-        0x200095e0:    5f6b6c63    clk_    DCD    1600875619
-        0x200095e4:    74736574    test    DCD    1953719668
-        0x200095e8:    00000000    ....    DCD    0
+        0x200098d0:    5f6b6c63    clk_    DCD    1600875619
+        0x200098d4:    74736574    test    DCD    1953719668
+        0x200098d8:    00000000    ....    DCD    0
     .constdata
-        0x200095ec:    00000000    ....    DCD    0
-        0x200095f0:    01010000    ....    DCD    16842752
-        0x200095f4:    00          .       DCB    0
+        0x200098dc:    00000000    ....    DCD    0
+        0x200098e0:    01010000    ....    DCD    16842752
+        0x200098e4:    00          .       DCB    0
     .constdata
     _aV2C
-        0x200095f5:    303132      012     DCB    48,49,50
-        0x200095f8:    36353433    3456    DCD    909456435
-        0x200095fc:    41393837    789A    DCD    1094268983
-        0x20009600:    45444342    BCDE    DCD    1162101570
-        0x20009604:    46          F       DCB    70
+        0x200098e5:    303132      012     DCB    48,49,50
+        0x200098e8:    36353433    3456    DCD    909456435
+        0x200098ec:    41393837    789A    DCD    1094268983
+        0x200098f0:    45444342    BCDE    DCD    1162101570
+        0x200098f4:    46          F       DCB    70
     .constdata
     _abSync
-        0x20009605:    000000      ...     DCB    0,0,0
-        0x20009608:    00000000    ....    DCD    0
-        0x2000960c:    0000        ..      DCW    0
-        0x2000960e:    00          .       DCB    0
+        0x200098f5:    000000      ...     DCB    0,0,0
+        0x200098f8:    00000000    ....    DCD    0
+        0x200098fc:    0000        ..      DCW    0
+        0x200098fe:    00          .       DCB    0
     _aV2C
-        0x2000960f:    30          0       DCB    48
-        0x20009610:    34333231    1234    DCD    875770417
-        0x20009614:    38373635    5678    DCD    943142453
-        0x20009618:    43424139    9ABC    DCD    1128415545
-        0x2000961c:    00464544    DEF.    DCD    4605252
+        0x200098ff:    30          0       DCB    48
+        0x20009900:    34333231    1234    DCD    875770417
+        0x20009904:    38373635    5678    DCD    943142453
+        0x20009908:    43424139    9ABC    DCD    1128415545
+        0x2000990c:    00464544    DEF.    DCD    4605252
     .constdata
     SYSVIEW_X_OS_TraceAPI
-        0x20009620:    2000664f    Of.     DCD    536897103
-        0x20009624:    200066e1    .f.     DCD    536897249
+        0x20009910:    2000664f    Of.     DCD    536897103
+        0x20009914:    200066e1    .f.     DCD    536897249
     .conststring
-        0x20009628:    54535953    SYST    DCD    1414748499
-        0x2000962c:    49564d45    EMVI    DCD    1230392645
-        0x20009630:    203a5745    EW:     DCD    540694341
-        0x20009634:    6c756f43    Coul    DCD    1819635523
-        0x20009638:    6f6e2064    d no    DCD    1869488228
-        0x2000963c:    65722074    t re    DCD    1701978228
-        0x20009640:    64726f63    cord    DCD    1685221219
-        0x20009644:    73617420     tas    DCD    1935766560
-        0x20009648:    6e69206b    k in    DCD    1852383339
-        0x2000964c:    6d726f66    form    DCD    1836216166
-        0x20009650:    6f697461    atio    DCD    1869182049
-        0x20009654:    4d202e6e    n. M    DCD    1293954670
-        0x20009658:    6d697861    axim    DCD    1835628641
-        0x2000965c:    6e206d75    um n    DCD    1847618933
-        0x20009660:    65626d75    umbe    DCD    1700949365
-        0x20009664:    666f2072    r of    DCD    1718558834
-        0x20009668:    73617420     tas    DCD    1935766560
-        0x2000966c:    7220736b    ks r    DCD    1914729323
-        0x20009670:    68636165    each    DCD    1751343461
-        0x20009674:    002e6465    ed..    DCD    3040357
+        0x20009918:    54535953    SYST    DCD    1414748499
+        0x2000991c:    49564d45    EMVI    DCD    1230392645
+        0x20009920:    203a5745    EW:     DCD    540694341
+        0x20009924:    6c756f43    Coul    DCD    1819635523
+        0x20009928:    6f6e2064    d no    DCD    1869488228
+        0x2000992c:    65722074    t re    DCD    1701978228
+        0x20009930:    64726f63    cord    DCD    1685221219
+        0x20009934:    73617420     tas    DCD    1935766560
+        0x20009938:    6e69206b    k in    DCD    1852383339
+        0x2000993c:    6d726f66    form    DCD    1836216166
+        0x20009940:    6f697461    atio    DCD    1869182049
+        0x20009944:    4d202e6e    n. M    DCD    1293954670
+        0x20009948:    6d697861    axim    DCD    1835628641
+        0x2000994c:    6e206d75    um n    DCD    1847618933
+        0x20009950:    65626d75    umbe    DCD    1700949365
+        0x20009954:    666f2072    r of    DCD    1718558834
+        0x20009958:    73617420     tas    DCD    1935766560
+        0x2000995c:    7220736b    ks r    DCD    1914729323
+        0x20009960:    68636165    each    DCD    1751343461
+        0x20009964:    002e6465    ed..    DCD    3040357
     Region$$Table$$Base
-        0x20009678:    20009698    ...     DCD    536909464
-        0x2000967c:    20010000    ...     DCD    536936448
-        0x20009680:    000000d0    ....    DCD    208
-        0x20009684:    20006630    0f.     DCD    536897072
-        0x20009688:    20009768    h..     DCD    536909672
-        0x2000968c:    200100d0    ...     DCD    536936656
-        0x20009690:    00004598    .E..    DCD    17816
-        0x20009694:    20006640    @f.     DCD    536897088
+        0x20009968:    20009988    ...     DCD    536910216
+        0x2000996c:    20010000    ...     DCD    536936448
+        0x20009970:    000000d0    ....    DCD    208
+        0x20009974:    20006630    0f.     DCD    536897072
+        0x20009978:    20009a58    X..     DCD    536910424
+        0x2000997c:    200100d0    ...     DCD    536936656
+        0x20009980:    00004598    .E..    DCD    17816
+        0x20009984:    20006640    @f.     DCD    536897088
     Region$$Table$$Limit
 
 ** Section #2 'RW_IRAM1' (SHT_PROGBITS) [SHF_ALLOC + SHF_WRITE]
@@ -16278,19 +16412,19 @@
 
 
 ** Section #5 '.debug_frame' (SHT_PROGBITS)
-    Size   : 10472 bytes
+    Size   : 10532 bytes
 
 
 ** Section #6 '.debug_info' (SHT_PROGBITS)
-    Size   : 286848 bytes
+    Size   : 285828 bytes
 
 
 ** Section #7 '.debug_line' (SHT_PROGBITS)
-    Size   : 57752 bytes
+    Size   : 55232 bytes
 
 
 ** Section #8 '.debug_loc' (SHT_PROGBITS)
-    Size   : 22660 bytes
+    Size   : 22788 bytes
 
 
 ** Section #9 '.debug_macinfo' (SHT_PROGBITS)
@@ -16298,17 +16432,17 @@
 
 
 ** Section #10 '.debug_pubnames' (SHT_PROGBITS)
-    Size   : 11355 bytes
+    Size   : 11407 bytes
 
 
 ** Section #11 '.symtab' (SHT_SYMTAB)
-    Size   : 25296 bytes (alignment 4)
+    Size   : 25456 bytes (alignment 4)
     String table #12 '.strtab'
-    Last local symbol no. 1179
+    Last local symbol no. 1188
 
 
 ** Section #12 '.strtab' (SHT_STRTAB)
-    Size   : 17092 bytes
+    Size   : 17152 bytes
 
 
 ** Section #13 '.note' (SHT_NOTE)
