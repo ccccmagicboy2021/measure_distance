@@ -13,7 +13,7 @@ data_pack: 192字节
 
 .\test_axf(AC6)(flashcode)(ramcode)
 .\test_freertos(AC5)(flashcode)(ramcode)
-.\test_threadx
+.\test_threadx(AC5)(flashcode)(ramcode)
 为试验性工程，暂时也用的华大F460单片机
 
 
