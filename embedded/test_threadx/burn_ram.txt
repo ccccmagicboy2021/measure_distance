@@ -5,6 +5,7 @@ device HC32F46x
 r
 h
 loadbin .\MDK\bin\ramcode.bin 0x20000000
+mem32 0x20000000 2
 wreg MSP, 0x200126E8
 SetPC 0x20000299
 w4 E000ED08 20000000
