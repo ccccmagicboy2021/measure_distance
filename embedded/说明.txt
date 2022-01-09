@@ -16,7 +16,7 @@ data_pack: 192字节
 .\test_threadx(AC5)(flashcode)(ramcode)
 为试验性工程，暂时也用的华大F460单片机
 
-.\test_static_lib(flashcode)(lib)
+.\test_static_lib(AC6)(flashcode)(lib)
 为静态库封装及调试的例子
 
 
