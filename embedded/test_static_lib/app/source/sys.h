@@ -1,0 +1,7 @@
+#ifndef _4AEDFF62_025F_4370_A928_68689060151A_
+#define _4AEDFF62_025F_4370_A928_68689060151A_
+
+#include "add.h"
+#include <stdio.h>
+
+#endif//_4AEDFF62_025F_4370_A928_68689060151A_
