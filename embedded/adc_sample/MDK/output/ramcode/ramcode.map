@@ -949,7 +949,7 @@ Image Symbol Table
     [Anonymous Symbol]                       0x200172f4   Section        0  shell.o(.bss.shellGetCommandName.buffer)
     shellList                                0x20017300   Data          20  shell.o(.bss.shellList)
     [Anonymous Symbol]                       0x20017300   Section        0  shell.o(.bss.shellList)
-    STACK                                    0x20017518   Section    24576  startup_hc32f46x.o(STACK)
+    STACK                                    0x20017518   Section     1536  startup_hc32f46x.o(STACK)
     EventCheckFilter                         0x200f0001   Thumb Code    32  eventrecorder.o(.text.EventCheckFilter)
     [Anonymous Symbol]                       0x200f0000   Section        0  eventrecorder.o(.text.EventCheckFilter)
     EventGetTS                               0x200f0021   Thumb Code    56  eventrecorder.o(.text.EventGetTS)
@@ -1716,7 +1716,7 @@ Image Symbol Table
     _SEGGER_RTT                              0x20016210   Data         120  segger_rtt.o(.bss._SEGGER_RTT)
     shell                                    0x20017288   Data         108  shell_port.o(.bss.shell)
     shell_buffer                             0x20017314   Data         512  shell_port.o(.bss.shell_buffer)
-    __initial_sp                             0x2001d518   Data           0  startup_hc32f46x.o(STACK)
+    __initial_sp                             0x20017b18   Data           0  startup_hc32f46x.o(STACK)
     EventRecord2                             0x200f0059   Thumb Code    58  eventrecorder.o(.text.EventRecord2)
     EventRecordData                          0x200f0095   Thumb Code   264  eventrecorder.o(.text.EventRecordData)
     EventRecorderEnable                      0x200f0299   Thumb Code   100  eventrecorder.o(.text.EventRecorderEnable)
@@ -2194,7 +2194,7 @@ Memory Map of the image
     0x200085f8   0x200085f8   0x00000010   Data   RO         1350    shellCommand        shell_port.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20010000, Load base: 0x20008608, Size: 0x0000d518, Max: 0x00010000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20010000, Load base: 0x20008608, Size: 0x00007b18, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -2223,7 +2223,7 @@ Memory Map of the image
     0x20017300        -       0x00000014   Zero   RW         1280    .bss.shellList      shell.o
     0x20017314        -       0x00000200   Zero   RW         1347    .bss.shell_buffer   shell_port.o
     0x20017514   0x20008628   0x00000004   PAD
-    0x20017518        -       0x00006000   Zero   RW            1    STACK               startup_hc32f46x.o
+    0x20017518        -       0x00000600   Zero   RW            1    STACK               startup_hc32f46x.o
 
 
     Execution Region RW_IRAM2 (Exec base: 0x200f0000, Load base: 0x20008640, Size: 0x00000964, Max: 0x00001000, ABSOLUTE, UNINIT)
@@ -2282,12 +2282,12 @@ Image component sizes
       4352        440       1005          0         29      24763   shell.o
        640          8          0          0          0       5719   shell_ext.o
        122         24         26          0        620       6145   shell_port.o
-        92         26        640          0      24576        844   startup_hc32f46x.o
+        92         26        640          0       1536        844   startup_hc32f46x.o
        144         30          0          8          0      13849   system_hc32f46x.o
        408         28         32          0          0      22756   timera_pwm.o
 
     ----------------------------------------------------------------------
-     29168       2580       2530         28      55740     664989   Object Totals
+     29168       2580       2530         28      32700     664989   Object Totals
          0          0         48          0          0          0   (incl. Generated)
         26          0          3          0         45          0   (incl. Padding)
 
@@ -2346,14 +2346,14 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     32966       2686       2530         32      55740     665709   Grand Totals
-     32966       2686       2530         32      55740     665709   ELF Image Totals
+     32966       2686       2530         32      32700     665709   Grand Totals
+     32966       2686       2530         32      32700     665709   ELF Image Totals
      32966       2686       2530         32          0          0   ROM Totals
 
 ==============================================================================
 
     Total RO  Size (Code + RO Data)                35496 (  34.66kB)
-    Total RW  Size (RW Data + ZI Data)             55772 (  54.46kB)
+    Total RW  Size (RW Data + ZI Data)             32732 (  31.96kB)
     Total ROM Size (Code + RO Data + RW Data)      35528 (  34.70kB)
 
 ==============================================================================
