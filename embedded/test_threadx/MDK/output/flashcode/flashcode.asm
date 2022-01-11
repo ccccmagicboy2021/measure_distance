@@ -31,15 +31,15 @@
     Program header entries: 1
     Section header entries: 16
 
-    Program header offset: 2190228 (0x00216b94)
-    Section header offset: 2190260 (0x00216bb4)
+    Program header offset: 2190232 (0x00216b98)
+    Section header offset: 2190264 (0x00216bb8)
 
     Section header string table index: 15
 
 ========================================================================
 
 ** Program header #0 (PT_LOAD) [PF_X + PF_W + PF_R + PF_ARM_ENTRY]
-    Size : 36116 bytes (26428 bytes in file)
+    Size : 36628 bytes (26428 bytes in file)
     Virtual address: 0x00000000 (Alignment 8)
 
 
@@ -52,7 +52,7 @@
     $d.realdata
     RESET
     __Vectors
-        0x00000000:    200026e8    .&.     DCD    536880872
+        0x00000000:    200028e8    .(.     DCD    536881384
         0x00000004:    00000299    ....    DCD    665
         0x00000008:    000036e1    .6..    DCD    14049
         0x0000000c:    000002c9    ....    DCD    713
@@ -218,7 +218,7 @@
     __Vectors_End
     __main
     _main_stk
-        0x00000280:    f8dfd010    ....    LDR      sp,__lit__00000000 ; [0x294] = 0x200026e8
+        0x00000280:    f8dfd010    ....    LDR      sp,__lit__00000000 ; [0x294] = 0x200028e8
     .ARM.Collect$$$$00000004
     _main_scatterload
         0x00000284:    f000fa10    ....    BL       __scatterload ; 0x6a8
@@ -244,7 +244,7 @@
     .ARM.Collect$$$$00000011
     __rt_final_cpp
     __rt_final_exit
-        0x00000294:    200026e8    .&.     DCD    536880872
+        0x00000294:    200028e8    .(.     DCD    536881384
     $t
     .text
     $v0
@@ -296,7 +296,7 @@
     _tx_initialize_low_level
         0x000002f4:    b672        r.      CPSID    i
         0x000002f6:    4815        .H      LDR      r0,[pc,#84] ; [0x34c] = 0x20000040
-        0x000002f8:    4915        .I      LDR      r1,[pc,#84] ; [0x350] = 0x200026e8
+        0x000002f8:    4915        .I      LDR      r1,[pc,#84] ; [0x350] = 0x200028e8
         0x000002fa:    f1010104    ....    ADD      r1,r1,#4
         0x000002fe:    6001        .`      STR      r1,[r0,#0]
         0x00000300:    f04f20e0    O..     MOV      r0,#0xe000e000
@@ -330,7 +330,7 @@
         0x0000034a:    e7fe        ..      B        __tx_DBGHandler ; 0x34a
     $d
         0x0000034c:    20000040    @..     DCD    536870976
-        0x00000350:    200026e8    .&.     DCD    536880872
+        0x00000350:    200028e8    .(.     DCD    536881384
         0x00000354:    00000000    ....    DCD    0
         0x00000358:    200000a8    ...     DCD    536871080
         0x0000035c:    00030d3f    ?...    DCD    199999
@@ -10849,11 +10849,11 @@
         0x0000638c:    4f4d4544    DEMO    DCD    1330464068
         0x00006390:    0a0d7325    %s..    DCD    168653605
         0x00006394:    00000000    ....    DCD    0
-        0x00006398:    313a3031    10:1    DCD    825897009
-        0x0000639c:    32343a38    8:42    DCD    842283576
+        0x00006398:    343a3031    10:4    DCD    876228657
+        0x0000639c:    30333a32    2:30    DCD    808663602
         0x000063a0:    00000000    ....    DCD    0
         0x000063a4:    206e614a    Jan     DCD    544104778
-        0x000063a8:    32203720     7 2    DCD    840972064
+        0x000063a8:    32203131    11 2    DCD    840970545
         0x000063ac:    00323230    022.    DCD    3289648
         0x000063b0:    706d6f63    comp    DCD    1886220131
         0x000063b4:    64656c69    iled    DCD    1684368489
@@ -11095,7 +11095,7 @@
         0x00006618:    00005174    tQ..    DCD    20852
         0x0000661c:    0000673c    <g..    DCD    26428
         0x00006620:    20000110    ...     DCD    536871184
-        0x00006624:    000025d8    .%..    DCD    9688
+        0x00006624:    000027d8    .'..    DCD    10200
         0x00006628:    00005184    .Q..    DCD    20868
     Region$$Table$$Limit
 
@@ -11105,7 +11105,7 @@
 
 
 ** Section #3 'RW_IRAM1' (SHT_NOBITS) [SHF_ALLOC + SHF_WRITE]
-    Size   : 9688 bytes (alignment 8)
+    Size   : 10200 bytes (alignment 8)
     Address: 0x20000110
 
 
@@ -11152,7 +11152,7 @@
 
 
 ** Section #14 '.comment' (SHT_PROGBITS)
-    Size   : 263780 bytes
+    Size   : 263784 bytes
 
 
 ** Section #15 '.shstrtab' (SHT_STRTAB)
