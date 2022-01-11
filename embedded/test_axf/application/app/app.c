@@ -7,9 +7,8 @@ extern	float	test1_data;
 
 void app(void)
 {
-	test_bss = test0_data;
-	test1_data = 100.332;
-	test1_data += 0.1;
+	test_bss = test_bss + 1;
+	test1_data += 0.2;
 }
 
 
