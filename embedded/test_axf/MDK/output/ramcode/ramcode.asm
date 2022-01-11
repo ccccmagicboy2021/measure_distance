@@ -39,7 +39,7 @@
 ========================================================================
 
 ** Program header #0 (PT_LOAD) [PF_X + PF_W + PF_R + PF_ARM_ENTRY]
-    Size : 47208 bytes (22112 bytes in file)
+    Size : 24168 bytes (22112 bytes in file)
     Virtual address: 0x1fff8000 (Alignment 8)
 
 
@@ -52,7 +52,7 @@
     $d.realdata
     RESET
     __Vectors
-        0x1fff8000:    20006220     b.     DCD    536896032
+        0x1fff8000:    20000820     ..     DCD    536872992
         0x1fff8004:    1fff8295    ....    DCD    536838805
         0x1fff8008:    1fffcac9    ....    DCD    536857289
         0x1fff800c:    1fff82c5    ....    DCD    536838853
@@ -218,7 +218,7 @@
     __Vectors_End
     __main
     _main_stk
-        0x1fff8280:    f8dfd00c    ....    LDR      sp,__lit__00000000 ; [0x1fff8290] = 0x20006220
+        0x1fff8280:    f8dfd00c    ....    LDR      sp,__lit__00000000 ; [0x1fff8290] = 0x20000820
     .ARM.Collect$$$$00000004
     _main_scatterload
         0x1fff8284:    f000fb28    ..(.    BL       __scatterload ; 0x1fff88d8
@@ -239,7 +239,7 @@
     .ARM.Collect$$$$0000000F
     __rt_final_cpp
     __rt_final_exit
-        0x1fff8290:    20006220     b.     DCD    536896032
+        0x1fff8290:    20000820     ..     DCD    536872992
     $t
     .text
     $v0
@@ -8605,7 +8605,7 @@
         0x1fffd630:    1fffcd10    ....    DCD    536857872
         0x1fffd634:    1fffd660    `...    DCD    536860256
         0x1fffd638:    20000018    ...     DCD    536870936
-        0x1fffd63c:    00006208    .b..    DCD    25096
+        0x1fffd63c:    00000808    ....    DCD    2056
         0x1fffd640:    1fffcd20     ...    DCD    536857888
     Region$$Table$$Limit
 
@@ -8615,7 +8615,7 @@
 
 
 ** Section #3 'RW_IRAM1' (SHT_NOBITS) [SHF_ALLOC + SHF_WRITE]
-    Size   : 25096 bytes (alignment 8)
+    Size   : 2056 bytes (alignment 8)
     Address: 0x20000018
 
 
