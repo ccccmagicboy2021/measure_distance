@@ -53,35 +53,105 @@ do \
 #define	USER_PARAMETER_START_SECTOR_ADDRESS1	0x0007C000u
 #define	MAGIC_SECTOR_ADDRESS0									0x0007E000u
 /////////////////////////////////////////////////////////////////////
+// R-红色
+#define LED1_GPIO_PORT    	CMSDK_PC			          /* GPIO端口 */
+#define LED1_GPIO_PIN		GPIO_Pin_6			        /* 连接到红色LED灯的GPIO */
 
-//#define GPIO0_HIGH()		(PORT_SetBits(PortA, Pin07))
-//#define GPIO0_LOW()			(PORT_ResetBits(PortA, Pin07))
+// G-绿色
+#define LED2_GPIO_PORT    	CMSDK_PC			          /* GPIO端口 */
+#define LED2_GPIO_PIN		GPIO_Pin_7			        /* 连接到绿色LED灯的GPIO */
 
-//#define GPIO1_HIGH()		(PORT_SetBits(PortA, Pin08))
-//#define GPIO1_LOW()			(PORT_ResetBits(PortA, Pin08))
+// B-蓝色
+#define LED3_GPIO_PORT    	CMSDK_PC			          /* GPIO端口 */
+#define LED3_GPIO_PIN		GPIO_Pin_8			        /* 连接到蓝色LED灯的GPIO */
+/** 定义控制LED的开关
+  * 1 - off
+  *0 - on
+  */
+#define ON  0
+#define OFF 1
+/*使用标准的固件库控制LED灯的IO*/
+#define LED1(a)	if (a)	\
+					GPIO_SetBits(LED1_GPIO_PORT,LED1_GPIO_PIN);\
+					else		\
+					GPIO_ResetBits(LED1_GPIO_PORT,LED1_GPIO_PIN)
 
-#define GPIO2_HIGH()		(PORT_SetBits(PortB, Pin06))			//not use
-#define GPIO2_LOW()			(PORT_ResetBits(PortB, Pin06))
+#define LED2(a)	if (a)	\
+					GPIO_SetBits(LED2_GPIO_PORT,LED2_GPIO_PIN);\
+					else		\
+					GPIO_ResetBits(LED2_GPIO_PORT,LED2_GPIO_PIN)
 
-//#define GPIO3_HIGH()		(PORT_SetBits(PortB, Pin05))			//not use
-//#define GPIO3_LOW()			(PORT_ResetBits(PortB, Pin05))
+#define LED3(a)	if (a)	\
+					GPIO_SetBits(LED3_GPIO_PORT,LED3_GPIO_PIN);\
+					else		\
+					GPIO_ResetBits(LED3_GPIO_PORT,LED3_GPIO_PIN)
+					
+/* 直接操作寄存器的方法控制IO */
+#define	digitalHi(p,i)		 {p->DATAOUT |=i;}	 //输出为高电平		
+#define digitalLo(p,i)		 {p->DATAOUT &=~i;}	 //输出低电平
+#define digitalToggle(p,i) {p->DATAOUT ^=i;} //输出反转状态
 
-//#define GPIO4_HIGH()		(PORT_SetBits(PortA, Pin00))
-//#define GPIO4_LOW()			(PORT_ResetBits(PortA, Pin00))
 
-//#define GPIO5_HIGH()		(PORT_SetBits(PortA, Pin04))
-//#define GPIO5_LOW()			(PORT_ResetBits(PortA, Pin04))
+/* 定义控制IO的宏 */
+#define LED1_TOGGLE		 digitalToggle(LED1_GPIO_PORT,LED1_GPIO_PIN)
+#define LED1_OFF		   digitalHi(LED1_GPIO_PORT,LED1_GPIO_PIN)
+#define LED1_ON			   digitalLo(LED1_GPIO_PORT,LED1_GPIO_PIN)
 
-//#define GPIO6_HIGH()		(PORT_SetBits(PortB, Pin00))
-//#define GPIO6_LOW()			(PORT_ResetBits(PortB, Pin00))
+#define LED2_TOGGLE		 digitalToggle(LED2_GPIO_PORT,LED2_GPIO_PIN)
+#define LED2_OFF		   digitalHi(LED2_GPIO_PORT,LED2_GPIO_PIN)
+#define LED2_ON			   digitalLo(LED2_GPIO_PORT,LED2_GPIO_PIN)
 
-enum app_state
-{
-	UART_SEND_DATA=0,
-	IDLE,
-	UART_PROTOCOL,
-	ERROR_ERROR,
-};
+#define LED3_TOGGLE		 digitalToggle(LED3_GPIO_PORT,LED3_GPIO_PIN)
+#define LED3_OFF		   digitalHi(LED3_GPIO_PORT,LED3_GPIO_PIN)
+#define LED3_ON			   digitalLo(LED3_GPIO_PORT,LED3_GPIO_PIN)
+
+//红
+#define LED_RED  \
+					LED1_ON;\
+					LED2_OFF\
+					LED3_OFF
+
+//绿
+#define LED_GREEN		\
+					LED1_OFF;\
+					LED2_ON\
+					LED3_OFF
+
+//蓝
+#define LED_BLUE	\
+					LED1_OFF;\
+					LED2_OFF\
+					LED3_ON
+
+					
+//黄(红+绿)					
+#define LED_YELLOW	\
+					LED1_ON;\
+					LED2_ON\
+					LED3_OFF
+//紫(红+蓝)
+#define LED_PURPLE	\
+					LED1_ON;\
+					LED2_OFF\
+					LED3_ON
+
+//青(绿+蓝)
+#define LED_CYAN \
+					LED1_OFF;\
+					LED2_ON\
+					LED3_ON
+					
+//白(红+绿+蓝)
+#define LED_WHITE	\
+					LED1_ON;\
+					LED2_ON\
+					LED3_ON
+					
+//黑(全部关闭)
+#define LED_RGBOFF	\
+					LED1_OFF;\
+					LED2_OFF\
+					LED3_OFF
 
 #endif//_7090986F_63F7_4B1A_92CE_B3C5BE86422C_
 
