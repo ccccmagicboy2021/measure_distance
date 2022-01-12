@@ -88,21 +88,21 @@ Image Symbol Table
     [Anonymous Symbol]                       0x000004f8   Section        0  pt32z192xx_it.o(.text.SVC_Handler)
     [Anonymous Symbol]                       0x000004fc   Section        0  pt32z192xx_it.o(.text.SysTick_Handler)
     [Anonymous Symbol]                       0x00000500   Section        0  system_pt32z192xx.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x0000059c   Section        0  pt32z192xx_it.o(.text.TMR0_Handler)
-    [Anonymous Symbol]                       0x000005a0   Section        0  pt32z192xx_it.o(.text.TMR1_Handler)
-    [Anonymous Symbol]                       0x000005a4   Section        0  pt32z192xx_it.o(.text.TMR2_Handler)
-    [Anonymous Symbol]                       0x000005a8   Section        0  pt32z192xx_it.o(.text.TMR3_Handler)
-    [Anonymous Symbol]                       0x000005ac   Section        0  pt32z192xx_it.o(.text.TMR4_Handler)
-    [Anonymous Symbol]                       0x000005b0   Section        0  pt32z192xx_it.o(.text.TMR5_Handler)
-    [Anonymous Symbol]                       0x000005b4   Section        0  pt32z192xx_it.o(.text.UART0_Handler)
-    [Anonymous Symbol]                       0x000005b8   Section        0  pt32z192xx_it.o(.text.UART1_Handler)
-    [Anonymous Symbol]                       0x000005bc   Section        0  pt32z192xx_it.o(.text.UART2_Handler)
-    [Anonymous Symbol]                       0x000005c0   Section        0  system_pt32z192xx.o(.text.Wait_ClockReady)
-    [Anonymous Symbol]                       0x000005e8   Section        0  app.o(.text.app)
-    [Anonymous Symbol]                       0x0000062c   Section        0  main.o(.text.main)
-    i.__scatterload_copy                     0x0000065a   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x00000668   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x0000066a   Section       14  handlers.o(i.__scatterload_zeroinit)
+    [Anonymous Symbol]                       0x00000588   Section        0  pt32z192xx_it.o(.text.TMR0_Handler)
+    [Anonymous Symbol]                       0x0000058c   Section        0  pt32z192xx_it.o(.text.TMR1_Handler)
+    [Anonymous Symbol]                       0x00000590   Section        0  pt32z192xx_it.o(.text.TMR2_Handler)
+    [Anonymous Symbol]                       0x00000594   Section        0  pt32z192xx_it.o(.text.TMR3_Handler)
+    [Anonymous Symbol]                       0x00000598   Section        0  pt32z192xx_it.o(.text.TMR4_Handler)
+    [Anonymous Symbol]                       0x0000059c   Section        0  pt32z192xx_it.o(.text.TMR5_Handler)
+    [Anonymous Symbol]                       0x000005a0   Section        0  pt32z192xx_it.o(.text.UART0_Handler)
+    [Anonymous Symbol]                       0x000005a4   Section        0  pt32z192xx_it.o(.text.UART1_Handler)
+    [Anonymous Symbol]                       0x000005a8   Section        0  pt32z192xx_it.o(.text.UART2_Handler)
+    [Anonymous Symbol]                       0x000005ac   Section        0  system_pt32z192xx.o(.text.Wait_ClockReady)
+    [Anonymous Symbol]                       0x000005d4   Section        0  app.o(.text.app)
+    [Anonymous Symbol]                       0x00000618   Section        0  main.o(.text.main)
+    i.__scatterload_copy                     0x00000646   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00000654   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00000656   Section       14  handlers.o(i.__scatterload_zeroinit)
     STACK                                    0x20000010   Section     1024  startup_pt32z192.o(STACK)
 
     Global Symbols
@@ -171,24 +171,24 @@ Image Symbol Table
     SPI1_Handler                             0x000004f5   Thumb Code     2  pt32z192xx_it.o(.text.SPI1_Handler)
     SVC_Handler                              0x000004f9   Thumb Code     2  pt32z192xx_it.o(.text.SVC_Handler)
     SysTick_Handler                          0x000004fd   Thumb Code     2  pt32z192xx_it.o(.text.SysTick_Handler)
-    SystemInit                               0x00000501   Thumb Code   154  system_pt32z192xx.o(.text.SystemInit)
-    TMR0_Handler                             0x0000059d   Thumb Code     2  pt32z192xx_it.o(.text.TMR0_Handler)
-    TMR1_Handler                             0x000005a1   Thumb Code     2  pt32z192xx_it.o(.text.TMR1_Handler)
-    TMR2_Handler                             0x000005a5   Thumb Code     2  pt32z192xx_it.o(.text.TMR2_Handler)
-    TMR3_Handler                             0x000005a9   Thumb Code     2  pt32z192xx_it.o(.text.TMR3_Handler)
-    TMR4_Handler                             0x000005ad   Thumb Code     2  pt32z192xx_it.o(.text.TMR4_Handler)
-    TMR5_Handler                             0x000005b1   Thumb Code     2  pt32z192xx_it.o(.text.TMR5_Handler)
-    UART0_Handler                            0x000005b5   Thumb Code     2  pt32z192xx_it.o(.text.UART0_Handler)
-    UART1_Handler                            0x000005b9   Thumb Code     2  pt32z192xx_it.o(.text.UART1_Handler)
-    UART2_Handler                            0x000005bd   Thumb Code     2  pt32z192xx_it.o(.text.UART2_Handler)
-    Wait_ClockReady                          0x000005c1   Thumb Code    38  system_pt32z192xx.o(.text.Wait_ClockReady)
-    app                                      0x000005e9   Thumb Code    68  app.o(.text.app)
-    main                                     0x0000062d   Thumb Code    46  main.o(.text.main)
-    __scatterload_copy                       0x0000065b   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x00000669   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x0000066b   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    Region$$Table$$Base                      0x00000678   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00000698   Number         0  anon$$obj.o(Region$$Table)
+    SystemInit                               0x00000501   Thumb Code   136  system_pt32z192xx.o(.text.SystemInit)
+    TMR0_Handler                             0x00000589   Thumb Code     2  pt32z192xx_it.o(.text.TMR0_Handler)
+    TMR1_Handler                             0x0000058d   Thumb Code     2  pt32z192xx_it.o(.text.TMR1_Handler)
+    TMR2_Handler                             0x00000591   Thumb Code     2  pt32z192xx_it.o(.text.TMR2_Handler)
+    TMR3_Handler                             0x00000595   Thumb Code     2  pt32z192xx_it.o(.text.TMR3_Handler)
+    TMR4_Handler                             0x00000599   Thumb Code     2  pt32z192xx_it.o(.text.TMR4_Handler)
+    TMR5_Handler                             0x0000059d   Thumb Code     2  pt32z192xx_it.o(.text.TMR5_Handler)
+    UART0_Handler                            0x000005a1   Thumb Code     2  pt32z192xx_it.o(.text.UART0_Handler)
+    UART1_Handler                            0x000005a5   Thumb Code     2  pt32z192xx_it.o(.text.UART1_Handler)
+    UART2_Handler                            0x000005a9   Thumb Code     2  pt32z192xx_it.o(.text.UART2_Handler)
+    Wait_ClockReady                          0x000005ad   Thumb Code    38  system_pt32z192xx.o(.text.Wait_ClockReady)
+    app                                      0x000005d5   Thumb Code    68  app.o(.text.app)
+    main                                     0x00000619   Thumb Code    46  main.o(.text.main)
+    __scatterload_copy                       0x00000647   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00000655   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00000657   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    Region$$Table$$Base                      0x00000664   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00000684   Number         0  anon$$obj.o(Region$$Table)
     test1_data                               0x20000000   Data           4  main.o(.data.test1_data)
     test_bss                                 0x20000008   Data           4  main.o(.bss.test_bss)
     __initial_sp                             0x20000410   Data           0  startup_pt32z192.o(STACK)
@@ -201,9 +201,9 @@ Memory Map of the image
 
   Image Entry point : 0x00000131
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x000006a0, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00000690, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000698, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000684, Max: 0x00080000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -258,44 +258,43 @@ Memory Map of the image
     0x000004fa   0x000004fa   0x00000002   PAD
     0x000004fc   0x000004fc   0x00000002   Code   RO           29    .text.SysTick_Handler  pt32z192xx_it.o
     0x000004fe   0x000004fe   0x00000002   PAD
-    0x00000500   0x00000500   0x0000009a   Code   RO           96    .text.SystemInit    system_pt32z192xx.o
+    0x00000500   0x00000500   0x00000088   Code   RO           96    .text.SystemInit    system_pt32z192xx.o
+    0x00000588   0x00000588   0x00000002   Code   RO           67    .text.TMR0_Handler  pt32z192xx_it.o
+    0x0000058a   0x0000058a   0x00000002   PAD
+    0x0000058c   0x0000058c   0x00000002   Code   RO           69    .text.TMR1_Handler  pt32z192xx_it.o
+    0x0000058e   0x0000058e   0x00000002   PAD
+    0x00000590   0x00000590   0x00000002   Code   RO           71    .text.TMR2_Handler  pt32z192xx_it.o
+    0x00000592   0x00000592   0x00000002   PAD
+    0x00000594   0x00000594   0x00000002   Code   RO           73    .text.TMR3_Handler  pt32z192xx_it.o
+    0x00000596   0x00000596   0x00000002   PAD
+    0x00000598   0x00000598   0x00000002   Code   RO           75    .text.TMR4_Handler  pt32z192xx_it.o
     0x0000059a   0x0000059a   0x00000002   PAD
-    0x0000059c   0x0000059c   0x00000002   Code   RO           67    .text.TMR0_Handler  pt32z192xx_it.o
+    0x0000059c   0x0000059c   0x00000002   Code   RO           77    .text.TMR5_Handler  pt32z192xx_it.o
     0x0000059e   0x0000059e   0x00000002   PAD
-    0x000005a0   0x000005a0   0x00000002   Code   RO           69    .text.TMR1_Handler  pt32z192xx_it.o
+    0x000005a0   0x000005a0   0x00000002   Code   RO           55    .text.UART0_Handler  pt32z192xx_it.o
     0x000005a2   0x000005a2   0x00000002   PAD
-    0x000005a4   0x000005a4   0x00000002   Code   RO           71    .text.TMR2_Handler  pt32z192xx_it.o
+    0x000005a4   0x000005a4   0x00000002   Code   RO           57    .text.UART1_Handler  pt32z192xx_it.o
     0x000005a6   0x000005a6   0x00000002   PAD
-    0x000005a8   0x000005a8   0x00000002   Code   RO           73    .text.TMR3_Handler  pt32z192xx_it.o
+    0x000005a8   0x000005a8   0x00000002   Code   RO           59    .text.UART2_Handler  pt32z192xx_it.o
     0x000005aa   0x000005aa   0x00000002   PAD
-    0x000005ac   0x000005ac   0x00000002   Code   RO           75    .text.TMR4_Handler  pt32z192xx_it.o
-    0x000005ae   0x000005ae   0x00000002   PAD
-    0x000005b0   0x000005b0   0x00000002   Code   RO           77    .text.TMR5_Handler  pt32z192xx_it.o
-    0x000005b2   0x000005b2   0x00000002   PAD
-    0x000005b4   0x000005b4   0x00000002   Code   RO           55    .text.UART0_Handler  pt32z192xx_it.o
-    0x000005b6   0x000005b6   0x00000002   PAD
-    0x000005b8   0x000005b8   0x00000002   Code   RO           57    .text.UART1_Handler  pt32z192xx_it.o
-    0x000005ba   0x000005ba   0x00000002   PAD
-    0x000005bc   0x000005bc   0x00000002   Code   RO           59    .text.UART2_Handler  pt32z192xx_it.o
-    0x000005be   0x000005be   0x00000002   PAD
-    0x000005c0   0x000005c0   0x00000026   Code   RO           94    .text.Wait_ClockReady  system_pt32z192xx.o
-    0x000005e6   0x000005e6   0x00000002   PAD
-    0x000005e8   0x000005e8   0x00000044   Code   RO            2    .text.app           app.o
-    0x0000062c   0x0000062c   0x0000002e   Code   RO           10    .text.main          main.o
-    0x0000065a   0x0000065a   0x0000000e   Code   RO          720    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x00000668   0x00000668   0x00000002   Code   RO          721    i.__scatterload_null  mc_w.l(handlers.o)
-    0x0000066a   0x0000066a   0x0000000e   Code   RO          722    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x00000678   0x00000678   0x00000020   Data   RO          719    Region$$Table       anon$$obj.o
+    0x000005ac   0x000005ac   0x00000026   Code   RO           94    .text.Wait_ClockReady  system_pt32z192xx.o
+    0x000005d2   0x000005d2   0x00000002   PAD
+    0x000005d4   0x000005d4   0x00000044   Code   RO            2    .text.app           app.o
+    0x00000618   0x00000618   0x0000002e   Code   RO           10    .text.main          main.o
+    0x00000646   0x00000646   0x0000000e   Code   RO          720    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00000654   0x00000654   0x00000002   Code   RO          721    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00000656   0x00000656   0x0000000e   Code   RO          722    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00000664   0x00000664   0x00000020   Data   RO          719    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x00000698, Size: 0x00000410, Max: 0x00010000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x00000688, Size: 0x00000410, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x00000698   0x00000004   Data   RW           13    .data.test1_data    main.o
-    0x20000004   0x0000069c   0x00000004   PAD
+    0x20000000   0x00000688   0x00000004   Data   RW           13    .data.test1_data    main.o
+    0x20000004   0x0000068c   0x00000004   PAD
     0x20000008        -       0x00000004   Zero   RW           14    .bss.test_bss       main.o
-    0x2000000c   0x0000069c   0x00000004   PAD
+    0x2000000c   0x0000068c   0x00000004   PAD
     0x20000010        -       0x00000400   Zero   RW          106    STACK               startup_pt32z192.o
 
 
@@ -310,12 +309,12 @@ Image component sizes
         46          0          0          4          4        504   main.o
         50          0          0          0          0       2859   pt32z192xx_it.o
         36          8        304          0       1024        804   startup_pt32z192.o
-       192          0          0          0          0       1896   system_pt32z192xx.o
+       174          0          0          0          0       1889   system_pt32z192xx.o
 
     ----------------------------------------------------------------------
-       442          8        336          4       1036       6442   Object Totals
+       422          8        336          4       1036       6435   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        50          0          0          0          8          0   (incl. Padding)
+        48          0          0          0          8          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -362,15 +361,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      1352         24        336          4       1036       7154   Grand Totals
-      1352         24        336          4       1036       7154   ELF Image Totals
-      1352         24        336          4          0          0   ROM Totals
+      1332         24        336          4       1036       7147   Grand Totals
+      1332         24        336          4       1036       7147   ELF Image Totals
+      1332         24        336          4          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 1688 (   1.65kB)
+    Total RO  Size (Code + RO Data)                 1668 (   1.63kB)
     Total RW  Size (RW Data + ZI Data)              1040 (   1.02kB)
-    Total ROM Size (Code + RO Data + RW Data)       1692 (   1.65kB)
+    Total ROM Size (Code + RO Data + RW Data)       1672 (   1.63kB)
 
 ==============================================================================
 
