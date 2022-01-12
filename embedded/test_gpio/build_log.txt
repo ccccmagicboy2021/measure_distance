@@ -1,0 +1,5 @@
+Build started: Project: test_gpio
+*** Using Compiler 'V6.14.1', folder: 'd:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'flashcode'
+".\output\flashcode\flashcode.axf" - 0 Error(s), 0 Warning(s).
+Build Time Elapsed:  00:00:00

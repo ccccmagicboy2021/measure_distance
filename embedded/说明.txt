@@ -1,3 +1,3 @@
-.\fsk_distance_measure(KEIL5)(AC5)(flashcode)
-
+.\fsk_distance_measure(KEIL5)(AC5)(flashcode)(PT32)(代码不OK)
+.\test_gpio(KEIL5)(AC6)(flashcode)(PT32)(重启不OK)
 
