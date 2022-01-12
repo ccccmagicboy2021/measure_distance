@@ -8,6 +8,7 @@
 #define DISTANCE_START                              (0)
 #define DISTANCE_END                                (5)
 #define MAX_ROW_COL_INDEX                           (24)
+#define MAX_ROW_LEN                                 (25)
 
 void distance_compensation(measure_info_t *measure_info)
 {
@@ -26,5 +27,5 @@ void distance_compensation(measure_info_t *measure_info)
     if (n > MAX_ROW_COL_INDEX)
         n = MAX_ROW_COL_INDEX;
 
-    measure_info->distance_abf_comp = measure_info->distance_abf + comp_table[m * MAX_ROW_COL_INDEX + n];
+    measure_info->distance_abf_comp = measure_info->distance_abf + comp_table[m * MAX_ROW_LEN + n];
 }
