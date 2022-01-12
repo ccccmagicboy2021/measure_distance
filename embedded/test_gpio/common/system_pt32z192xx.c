@@ -151,15 +151,15 @@
 #define EOSC_CLK_ENABLE               (0)     /*!< 0: DISABLE,  1: ENABLE                                        */  
 #define EOSC_CLK_frequency            (24)     /*!< External crystal frequency                                        */ 
 #define EOSC_32K_ENABLE               (0)     /*!< 0: DISABLE,  1: ENABLE                                        */      
-#define PLL_CLK_ENABLE                (0)     /*!< 0: DISABLE,  1: ENABLE                                        */     
-#define PLL_CLK_SRC                   (1)     /*!< 0: IOCS_24M, 1: EXT_CLK                                       */
-#define PLL_DIV_LOOP                  (24)    /*!< 1~255                                                         */
+#define PLL_CLK_ENABLE                (1)     /*!< 0: DISABLE,  1: ENABLE                                        */     
+#define PLL_CLK_SRC                   (0)     /*!< 0: IOCS_24M, 1: EXT_CLK                                       */
+#define PLL_DIV_LOOP                  (160)    /*!< 1~255                                                         */
 #define PLL_DIV_OUT                   (1)     /*!< 1~63                                                          */
 #define PLL_DIV_PRE                   (24)     /*!< 1~63                                                          */
-#define HCLK_SRC                      (0)     /*!< 0: IOCS_24M, 1: EXT_CLK,  2:PLL_CLK                           */
+#define HCLK_SRC                      (2)     /*!< 0: IOCS_24M, 1: EXT_CLK,  2:PLL_CLK                           */
 #define PCLK_DIV_ENABLE               (1)     /*!< 0: DISABLE,  1: ENABLE                                        */
 #define PCLK_DIV                      (0)     /*!< 1~7                                                           */  
-#define WAIT_STATE                    (1)     /*!< 0: 0 WS, 1: 1 WS, 2: 2 WS, 3:3WS, 4:4WS, 5:5WS, 6:6WS, 7:7WS  */
+#define WAIT_STATE                    (7)     /*!< 0: 0 WS, 1: 1 WS, 2: 2 WS, 3:3WS, 4:4WS, 5:5WS, 6:6WS, 7:7WS  */
 
                                                  
 /** @addtogroup PT32F0xx_System_Private_Variables       
@@ -296,7 +296,10 @@ void SystemInit (void)
 			  #elif (460000000<(VCO_VALUE*PLL_DIV_LOOP/PLL_DIV_PRE)<600000000)
 				CMSDK_ANAMIX->PLL_CON |= (0x07<<4);
         #endif	
-	while(!(CMSDK_ANAMIX ->PLL_CON & 0x80000000));
+	while(!(CMSDK_ANAMIX ->PLL_CON & 0x80000000))
+    {
+        //
+    }
 		
 #else
 
