@@ -89,6 +89,22 @@ void switch_gpio_config()
 	GPIO_ITConfig(CMSDK_PC, GPIO_IT_ITE11, ENABLE);
 }
 
+void SysTick_Init(void)
+{
+	/* SystemFrequency / 1       1s中断一次
+	 * SystemFrequency / 2       0.5s中断一次
+	 * SystemFrequency / 1000	 1ms中断一次
+	 * SystemFrequency / 100000	 10us中断一次	
+	 * SystemFrequency / 100000	 10us中断一次
+	 * SystemFrequency / 1000000 1us中断一次
+	 */
+	if (SysTick_Config(SystemCoreClock / 1000))	
+	{ 
+		/* Capture error */ 
+		while (1);
+	}
+}
+
 int main(void)
 {    
     segger_init();
@@ -96,6 +112,7 @@ int main(void)
     switch_gpio_config();
     UART_INT_Config();
     UART_Config();
+    SysTick_Init();
     
     CV_LOG("program begin...\r\n");
     

@@ -166,7 +166,7 @@
   * @{                                                   
   */     
 #define SYS_CLK	160000000
-uint32_t SystemCoreClock    = 24000000;
+uint32_t SystemCoreClock    = 160000000;
 /**
   * @}
   */

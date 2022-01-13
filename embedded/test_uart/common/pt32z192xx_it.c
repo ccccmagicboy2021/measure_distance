@@ -32,6 +32,8 @@
 #include <stdio.h>
 #include "sys.h"
 
+extern __IO uint32_t TimingDelay;
+
 /** @addtogroup Template_Project
   * @{
   */
@@ -95,6 +97,10 @@ void PendSV_Handler(void)
   */
 void SysTick_Handler(void)
 {
+	if (TimingDelay != 0x00)
+	{ 
+		TimingDelay--;
+	}
 }
 
 /******************************************************************************/
