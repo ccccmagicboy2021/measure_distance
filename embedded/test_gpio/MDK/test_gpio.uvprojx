@@ -337,7 +337,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define></Define>
+              <Define>PT32Z192</Define>
               <Undefine></Undefine>
               <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt</IncludePath>
             </VariousControls>
@@ -833,7 +833,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define></Define>
+              <Define>PT32Z192</Define>
               <Undefine></Undefine>
               <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt</IncludePath>
             </VariousControls>

@@ -97,6 +97,21 @@ void app2(void)
     SOFT_DELAY;	
 }
 
+void    switch_gpio_config()
+{
+	NVIC_InitTypeDef NVIC_InitStruct;
+    NVIC_InitStruct.NVIC_IRQChannel = PC_IRQn;
+	NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_InitStruct.NVIC_IRQChannelPriority = 0x00;
+	NVIC_Init(&NVIC_InitStruct);
+	/*配置PC11的中断类型为下降沿触发*/
+    GPIO_TriTypeConfig(CMSDK_PC, GPIO_Pin_10, GPIOTI_Trigger_Rising);   //key1
+	GPIO_TriTypeConfig(CMSDK_PC, GPIO_Pin_11, GPIOTI_Trigger_Rising);   //key2
+    /*使能PC11管脚的中断*/
+    GPIO_ITConfig(CMSDK_PC, GPIO_IT_ITE10, ENABLE);
+	GPIO_ITConfig(CMSDK_PC, GPIO_IT_ITE11, ENABLE);
+}
+
 int main(void)
 {
     test1_data = 100.332;
@@ -105,6 +120,7 @@ int main(void)
     
     segger_init();
     LED_GPIO_Config();
+    switch_gpio_config();
     
     CV_LOG("program begin...\r\n");
 	while(1)

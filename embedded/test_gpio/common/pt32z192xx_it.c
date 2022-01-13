@@ -30,6 +30,8 @@
 /* Includes ------------------------------------------------------------------*/
 #include "pt32z192xx_it.h"
 #include <stdio.h>
+#include "sys.h"
+
 /** @addtogroup Template_Project
   * @{
   */
@@ -61,10 +63,11 @@ void NMI_Handler(void)
   */
 void HardFault_Handler(void)
 {
-  /* Go to infinite loop when Hard Fault exception occurs */
-  while (1)
-  {
-  }
+    /* Go to infinite loop when Hard Fault exception occurs */
+    while (1)
+    {
+        //printf("HardFault\r\n");
+    }
 }
 
 /**
@@ -152,6 +155,10 @@ void PB_Handler(void)
   */
 void PC_Handler(void)
 {
+    GPIO_ClearITPendingBit(CMSDK_PC,GPIO_IT_ITE10);
+    GPIO_ClearITPendingBit(CMSDK_PC,GPIO_IT_ITE11);
+    
+    CV_LOG("user button pressed!!!\r\n");
 }
 /**
   * @brief  This function handles PD interrupt.
