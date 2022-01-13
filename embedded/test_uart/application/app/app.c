@@ -21,6 +21,12 @@ void app(void)
     ch=getchar();
     printf("\r\npressed char: %c\r\n", ch);
     
+    UART_SendData(UART2, 0x55);
+    UART_SendData(UART2, 0xAA);
+    UART_SendData(UART2, 0xCC);
+    UART_SendData(UART2, 0xCC);
+    UART_SendData(UART2, '\r');
+    
     /* 根据字符指令控制RGB彩灯颜色 */
     switch(ch)
     {

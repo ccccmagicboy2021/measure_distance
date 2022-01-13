@@ -139,68 +139,69 @@ Image Symbol Table
     [Anonymous Symbol]                       0x0000121c   Section        0  main.o(.text.UART_INT_Config)
     [Anonymous Symbol]                       0x00001250   Section        0  pt32z192xx_uart.o(.text.UART_ITConfig)
     [Anonymous Symbol]                       0x00001284   Section        0  pt32z192xx_uart.o(.text.UART_Init)
-    [Anonymous Symbol]                       0x00001398   Section        0  system_pt32z192xx.o(.text.Wait_ClockReady)
-    _DoInit                                  0x000013c1   Thumb Code   150  segger_rtt.o(.text._DoInit)
-    [Anonymous Symbol]                       0x000013c0   Section        0  segger_rtt.o(.text._DoInit)
-    _GetAvailWriteSpace                      0x00001459   Thumb Code    62  segger_rtt.o(.text._GetAvailWriteSpace)
-    [Anonymous Symbol]                       0x00001458   Section        0  segger_rtt.o(.text._GetAvailWriteSpace)
-    _PrintInt                                0x00001499   Thumb Code   484  segger_rtt_printf.o(.text._PrintInt)
-    [Anonymous Symbol]                       0x00001498   Section        0  segger_rtt_printf.o(.text._PrintInt)
-    _PrintUnsigned                           0x0000167d   Thumb Code   446  segger_rtt_printf.o(.text._PrintUnsigned)
-    [Anonymous Symbol]                       0x0000167c   Section        0  segger_rtt_printf.o(.text._PrintUnsigned)
-    _StoreChar                               0x0000183d   Thumb Code   120  segger_rtt_printf.o(.text._StoreChar)
-    [Anonymous Symbol]                       0x0000183c   Section        0  segger_rtt_printf.o(.text._StoreChar)
-    _WriteBlocking                           0x000018b5   Thumb Code   224  segger_rtt.o(.text._WriteBlocking)
-    [Anonymous Symbol]                       0x000018b4   Section        0  segger_rtt.o(.text._WriteBlocking)
-    _WriteNoCheck                            0x00001995   Thumb Code   140  segger_rtt.o(.text._WriteNoCheck)
-    [Anonymous Symbol]                       0x00001994   Section        0  segger_rtt.o(.text._WriteNoCheck)
-    [Anonymous Symbol]                       0x00001a20   Section        0  app.o(.text.app)
-    [Anonymous Symbol]                       0x00001b7c   Section        0  pt32z192xx_retarget.o(.text.fgetc)
-    [Anonymous Symbol]                       0x00001b8c   Section        0  pt32z192xx_retarget.o(.text.fputc)
-    [Anonymous Symbol]                       0x00001ba0   Section        0  main.o(.text.main)
-    [Anonymous Symbol]                       0x00001bd8   Section        0  main.o(.text.segger_init)
-    [Anonymous Symbol]                       0x00001c24   Section        0  main.o(.text.switch_gpio_config)
-    i.__0printf                              0x00001c88   Section        0  printfa.o(i.__0printf)
-    i.__scatterload_copy                     0x00001ca8   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x00001cb6   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x00001cb8   Section       14  handlers.o(i.__scatterload_zeroinit)
-    _fp_digits                               0x00001cc9   Thumb Code   366  printfa.o(i._fp_digits)
-    i._fp_digits                             0x00001cc8   Section        0  printfa.o(i._fp_digits)
-    _printf_core                             0x00001e4d   Thumb Code  1744  printfa.o(i._printf_core)
-    i._printf_core                           0x00001e4c   Section        0  printfa.o(i._printf_core)
-    _printf_post_padding                     0x00002529   Thumb Code    36  printfa.o(i._printf_post_padding)
-    i._printf_post_padding                   0x00002528   Section        0  printfa.o(i._printf_post_padding)
-    _printf_pre_padding                      0x0000254d   Thumb Code    46  printfa.o(i._printf_pre_padding)
-    i._printf_pre_padding                    0x0000254c   Section        0  printfa.o(i._printf_pre_padding)
-    i.getc                                   0x0000257a   Section        0  getc.o(i.getc)
-    _PrintUnsigned._aV2C                     0x0000257e   Data          16  segger_rtt_printf.o(.rodata._PrintUnsigned._aV2C)
-    [Anonymous Symbol]                       0x0000257e   Section        0  segger_rtt_printf.o(.rodata._PrintUnsigned._aV2C)
-    .L.str.7                                 0x0000258e   Data          28  app.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x0000258e   Section        0  app.o(.rodata.str1.1)
-    .L.str.2                                 0x000025aa   Data          29  app.o(.rodata.str1.1)
-    .L.str.8                                 0x000025c7   Data          31  app.o(.rodata.str1.1)
-    .L.str.4                                 0x000025e6   Data          30  app.o(.rodata.str1.1)
-    .L.str.6                                 0x00002604   Data          30  app.o(.rodata.str1.1)
-    .L.str.3                                 0x00002622   Data          31  app.o(.rodata.str1.1)
-    .L.str.1                                 0x00002641   Data          31  app.o(.rodata.str1.1)
-    .L.str.5                                 0x00002660   Data          32  app.o(.rodata.str1.1)
-    .L.str.9                                 0x00002680   Data          28  app.o(.rodata.str1.1)
-    .L.str                                   0x0000269c   Data          21  app.o(.rodata.str1.1)
-    .L.str.6                                 0x000026b1   Data          19  main.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x000026b1   Section        0  main.o(.rodata.str1.1)
-    .L.str.3                                 0x000026c4   Data          23  main.o(.rodata.str1.1)
-    .L.str                                   0x000026db   Data          30  main.o(.rodata.str1.1)
-    .L.str.4                                 0x000026f9   Data          12  main.o(.rodata.str1.1)
-    .L.str.5                                 0x00002705   Data           9  main.o(.rodata.str1.1)
-    .L.str.2                                 0x0000270e   Data           5  main.o(.rodata.str1.1)
-    .L.str.1                                 0x00002713   Data           8  main.o(.rodata.str1.1)
-    .L.str                                   0x0000271b   Data          25  pt32z192xx_it.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x0000271b   Section        0  pt32z192xx_it.o(.rodata.str1.1)
-    .L.str.1                                 0x00002734   Data          14  pt32z192xx_it.o(.rodata.str1.1)
-    .L.str.2                                 0x00002742   Data           7  segger_rtt.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x00002742   Section        0  segger_rtt.o(.rodata.str1.1)
-    .L.str.1                                 0x00002749   Data           4  segger_rtt.o(.rodata.str1.1)
-    .L.str                                   0x0000274d   Data           9  segger_rtt.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x00001398   Section        0  pt32z192xx_uart.o(.text.UART_SendData)
+    [Anonymous Symbol]                       0x000013c4   Section        0  system_pt32z192xx.o(.text.Wait_ClockReady)
+    _DoInit                                  0x000013ed   Thumb Code   150  segger_rtt.o(.text._DoInit)
+    [Anonymous Symbol]                       0x000013ec   Section        0  segger_rtt.o(.text._DoInit)
+    _GetAvailWriteSpace                      0x00001485   Thumb Code    62  segger_rtt.o(.text._GetAvailWriteSpace)
+    [Anonymous Symbol]                       0x00001484   Section        0  segger_rtt.o(.text._GetAvailWriteSpace)
+    _PrintInt                                0x000014c5   Thumb Code   484  segger_rtt_printf.o(.text._PrintInt)
+    [Anonymous Symbol]                       0x000014c4   Section        0  segger_rtt_printf.o(.text._PrintInt)
+    _PrintUnsigned                           0x000016a9   Thumb Code   446  segger_rtt_printf.o(.text._PrintUnsigned)
+    [Anonymous Symbol]                       0x000016a8   Section        0  segger_rtt_printf.o(.text._PrintUnsigned)
+    _StoreChar                               0x00001869   Thumb Code   120  segger_rtt_printf.o(.text._StoreChar)
+    [Anonymous Symbol]                       0x00001868   Section        0  segger_rtt_printf.o(.text._StoreChar)
+    _WriteBlocking                           0x000018e1   Thumb Code   224  segger_rtt.o(.text._WriteBlocking)
+    [Anonymous Symbol]                       0x000018e0   Section        0  segger_rtt.o(.text._WriteBlocking)
+    _WriteNoCheck                            0x000019c1   Thumb Code   140  segger_rtt.o(.text._WriteNoCheck)
+    [Anonymous Symbol]                       0x000019c0   Section        0  segger_rtt.o(.text._WriteNoCheck)
+    [Anonymous Symbol]                       0x00001a4c   Section        0  app.o(.text.app)
+    [Anonymous Symbol]                       0x00001be4   Section        0  pt32z192xx_retarget.o(.text.fgetc)
+    [Anonymous Symbol]                       0x00001bf4   Section        0  pt32z192xx_retarget.o(.text.fputc)
+    [Anonymous Symbol]                       0x00001c08   Section        0  main.o(.text.main)
+    [Anonymous Symbol]                       0x00001c40   Section        0  main.o(.text.segger_init)
+    [Anonymous Symbol]                       0x00001c8c   Section        0  main.o(.text.switch_gpio_config)
+    i.__0printf                              0x00001cf0   Section        0  printfa.o(i.__0printf)
+    i.__scatterload_copy                     0x00001d10   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00001d1e   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00001d20   Section       14  handlers.o(i.__scatterload_zeroinit)
+    _fp_digits                               0x00001d31   Thumb Code   366  printfa.o(i._fp_digits)
+    i._fp_digits                             0x00001d30   Section        0  printfa.o(i._fp_digits)
+    _printf_core                             0x00001eb5   Thumb Code  1744  printfa.o(i._printf_core)
+    i._printf_core                           0x00001eb4   Section        0  printfa.o(i._printf_core)
+    _printf_post_padding                     0x00002591   Thumb Code    36  printfa.o(i._printf_post_padding)
+    i._printf_post_padding                   0x00002590   Section        0  printfa.o(i._printf_post_padding)
+    _printf_pre_padding                      0x000025b5   Thumb Code    46  printfa.o(i._printf_pre_padding)
+    i._printf_pre_padding                    0x000025b4   Section        0  printfa.o(i._printf_pre_padding)
+    i.getc                                   0x000025e2   Section        0  getc.o(i.getc)
+    _PrintUnsigned._aV2C                     0x000025e6   Data          16  segger_rtt_printf.o(.rodata._PrintUnsigned._aV2C)
+    [Anonymous Symbol]                       0x000025e6   Section        0  segger_rtt_printf.o(.rodata._PrintUnsigned._aV2C)
+    .L.str.7                                 0x000025f6   Data          28  app.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x000025f6   Section        0  app.o(.rodata.str1.1)
+    .L.str.2                                 0x00002612   Data          29  app.o(.rodata.str1.1)
+    .L.str.8                                 0x0000262f   Data          31  app.o(.rodata.str1.1)
+    .L.str.4                                 0x0000264e   Data          30  app.o(.rodata.str1.1)
+    .L.str.6                                 0x0000266c   Data          30  app.o(.rodata.str1.1)
+    .L.str.3                                 0x0000268a   Data          31  app.o(.rodata.str1.1)
+    .L.str.1                                 0x000026a9   Data          31  app.o(.rodata.str1.1)
+    .L.str.5                                 0x000026c8   Data          32  app.o(.rodata.str1.1)
+    .L.str.9                                 0x000026e8   Data          28  app.o(.rodata.str1.1)
+    .L.str                                   0x00002704   Data          21  app.o(.rodata.str1.1)
+    .L.str.6                                 0x00002719   Data          19  main.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x00002719   Section        0  main.o(.rodata.str1.1)
+    .L.str.3                                 0x0000272c   Data          23  main.o(.rodata.str1.1)
+    .L.str                                   0x00002743   Data          30  main.o(.rodata.str1.1)
+    .L.str.4                                 0x00002761   Data          12  main.o(.rodata.str1.1)
+    .L.str.5                                 0x0000276d   Data           9  main.o(.rodata.str1.1)
+    .L.str.2                                 0x00002776   Data           5  main.o(.rodata.str1.1)
+    .L.str.1                                 0x0000277b   Data           8  main.o(.rodata.str1.1)
+    .L.str                                   0x00002783   Data          25  pt32z192xx_it.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x00002783   Section        0  pt32z192xx_it.o(.rodata.str1.1)
+    .L.str.1                                 0x0000279c   Data          14  pt32z192xx_it.o(.rodata.str1.1)
+    .L.str.2                                 0x000027aa   Data           7  segger_rtt.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x000027aa   Section        0  segger_rtt.o(.rodata.str1.1)
+    .L.str.1                                 0x000027b1   Data           4  segger_rtt.o(.rodata.str1.1)
+    .L.str                                   0x000027b5   Data           9  segger_rtt.o(.rodata.str1.1)
     .data                                    0x20000000   Section        4  stdin.o(.data)
     .data                                    0x20000004   Section        4  stdout.o(.data)
     _acDownBuffer                            0x20000088   Data          16  segger_rtt.o(.bss._acDownBuffer)
@@ -312,24 +313,25 @@ Image Symbol Table
     UART_INT_Config                          0x0000121d   Thumb Code    52  main.o(.text.UART_INT_Config)
     UART_ITConfig                            0x00001251   Thumb Code    52  pt32z192xx_uart.o(.text.UART_ITConfig)
     UART_Init                                0x00001285   Thumb Code   274  pt32z192xx_uart.o(.text.UART_Init)
-    Wait_ClockReady                          0x00001399   Thumb Code    38  system_pt32z192xx.o(.text.Wait_ClockReady)
-    app                                      0x00001a21   Thumb Code   348  app.o(.text.app)
-    fgetc                                    0x00001b7d   Thumb Code    14  pt32z192xx_retarget.o(.text.fgetc)
-    fputc                                    0x00001b8d   Thumb Code    20  pt32z192xx_retarget.o(.text.fputc)
-    main                                     0x00001ba1   Thumb Code    54  main.o(.text.main)
-    segger_init                              0x00001bd9   Thumb Code    76  main.o(.text.segger_init)
-    switch_gpio_config                       0x00001c25   Thumb Code    98  main.o(.text.switch_gpio_config)
-    __0printf                                0x00001c89   Thumb Code    22  printfa.o(i.__0printf)
-    __1printf                                0x00001c89   Thumb Code     0  printfa.o(i.__0printf)
-    __2printf                                0x00001c89   Thumb Code     0  printfa.o(i.__0printf)
-    __c89printf                              0x00001c89   Thumb Code     0  printfa.o(i.__0printf)
-    printf                                   0x00001c89   Thumb Code     0  printfa.o(i.__0printf)
-    __scatterload_copy                       0x00001ca9   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x00001cb7   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x00001cb9   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    getc                                     0x0000257b   Thumb Code     4  getc.o(i.getc)
-    Region$$Table$$Base                      0x00002758   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00002778   Number         0  anon$$obj.o(Region$$Table)
+    UART_SendData                            0x00001399   Thumb Code    42  pt32z192xx_uart.o(.text.UART_SendData)
+    Wait_ClockReady                          0x000013c5   Thumb Code    38  system_pt32z192xx.o(.text.Wait_ClockReady)
+    app                                      0x00001a4d   Thumb Code   408  app.o(.text.app)
+    fgetc                                    0x00001be5   Thumb Code    14  pt32z192xx_retarget.o(.text.fgetc)
+    fputc                                    0x00001bf5   Thumb Code    20  pt32z192xx_retarget.o(.text.fputc)
+    main                                     0x00001c09   Thumb Code    54  main.o(.text.main)
+    segger_init                              0x00001c41   Thumb Code    76  main.o(.text.segger_init)
+    switch_gpio_config                       0x00001c8d   Thumb Code    98  main.o(.text.switch_gpio_config)
+    __0printf                                0x00001cf1   Thumb Code    22  printfa.o(i.__0printf)
+    __1printf                                0x00001cf1   Thumb Code     0  printfa.o(i.__0printf)
+    __2printf                                0x00001cf1   Thumb Code     0  printfa.o(i.__0printf)
+    __c89printf                              0x00001cf1   Thumb Code     0  printfa.o(i.__0printf)
+    printf                                   0x00001cf1   Thumb Code     0  printfa.o(i.__0printf)
+    __scatterload_copy                       0x00001d11   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00001d1f   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00001d21   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    getc                                     0x000025e3   Thumb Code     4  getc.o(i.getc)
+    Region$$Table$$Base                      0x000027c0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x000027e0   Number         0  anon$$obj.o(Region$$Table)
     __stdin                                  0x20000000   Data           4  stdin.o(.data)
     __stdout                                 0x20000004   Data           4  stdout.o(.data)
     VCO_VALUE                                0x20000008   Data           4  system_pt32z192xx.o(.data.VCO_VALUE)
@@ -344,9 +346,9 @@ Memory Map of the image
 
   Image Entry point : 0x00000131
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00002788, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x000027f0, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00002778, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x000027e0, Max: 0x00080000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -456,54 +458,56 @@ Memory Map of the image
     0x00001250   0x00001250   0x00000034   Code   RO          576    .text.UART_ITConfig  pt32z192xx_uart.o
     0x00001284   0x00001284   0x00000112   Code   RO          544    .text.UART_Init     pt32z192xx_uart.o
     0x00001396   0x00001396   0x00000002   PAD
-    0x00001398   0x00001398   0x00000026   Code   RO          108    .text.Wait_ClockReady  system_pt32z192xx.o
-    0x000013be   0x000013be   0x00000002   PAD
-    0x000013c0   0x000013c0   0x00000096   Code   RO          725    .text._DoInit       segger_rtt.o
-    0x00001456   0x00001456   0x00000002   PAD
-    0x00001458   0x00001458   0x0000003e   Code   RO          737    .text._GetAvailWriteSpace  segger_rtt.o
-    0x00001496   0x00001496   0x00000002   PAD
-    0x00001498   0x00001498   0x000001e4   Code   RO          812    .text._PrintInt     segger_rtt_printf.o
-    0x0000167c   0x0000167c   0x000001be   Code   RO          814    .text._PrintUnsigned  segger_rtt_printf.o
-    0x0000183a   0x0000183a   0x00000002   PAD
-    0x0000183c   0x0000183c   0x00000078   Code   RO          810    .text._StoreChar    segger_rtt_printf.o
-    0x000018b4   0x000018b4   0x000000e0   Code   RO          741    .text._WriteBlocking  segger_rtt.o
-    0x00001994   0x00001994   0x0000008c   Code   RO          739    .text._WriteNoCheck  segger_rtt.o
-    0x00001a20   0x00001a20   0x0000015c   Code   RO            2    .text.app           app.o
-    0x00001b7c   0x00001b7c   0x0000000e   Code   RO          701    .text.fgetc         pt32z192xx_retarget.o
-    0x00001b8a   0x00001b8a   0x00000002   PAD
-    0x00001b8c   0x00001b8c   0x00000014   Code   RO          699    .text.fputc         pt32z192xx_retarget.o
-    0x00001ba0   0x00001ba0   0x00000036   Code   RO           24    .text.main          main.o
-    0x00001bd6   0x00001bd6   0x00000002   PAD
-    0x00001bd8   0x00001bd8   0x0000004c   Code   RO           14    .text.segger_init   main.o
-    0x00001c24   0x00001c24   0x00000062   Code   RO           22    .text.switch_gpio_config  main.o
-    0x00001c86   0x00001c86   0x00000002   PAD
-    0x00001c88   0x00001c88   0x00000020   Code   RO          840    i.__0printf         mc_w.l(printfa.o)
-    0x00001ca8   0x00001ca8   0x0000000e   Code   RO          909    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x00001cb6   0x00001cb6   0x00000002   Code   RO          910    i.__scatterload_null  mc_w.l(handlers.o)
-    0x00001cb8   0x00001cb8   0x0000000e   Code   RO          911    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x00001cc6   0x00001cc6   0x00000002   PAD
-    0x00001cc8   0x00001cc8   0x00000184   Code   RO          847    i._fp_digits        mc_w.l(printfa.o)
-    0x00001e4c   0x00001e4c   0x000006dc   Code   RO          848    i._printf_core      mc_w.l(printfa.o)
-    0x00002528   0x00002528   0x00000024   Code   RO          849    i._printf_post_padding  mc_w.l(printfa.o)
-    0x0000254c   0x0000254c   0x0000002e   Code   RO          850    i._printf_pre_padding  mc_w.l(printfa.o)
-    0x0000257a   0x0000257a   0x00000004   Code   RO          828    i.getc              mc_w.l(getc.o)
-    0x0000257e   0x0000257e   0x00000010   Data   RO          818    .rodata._PrintUnsigned._aV2C  segger_rtt_printf.o
-    0x0000258e   0x0000258e   0x00000123   Data   RO            6    .rodata.str1.1      app.o
-    0x000026b1   0x000026b1   0x0000006a   Data   RO           26    .rodata.str1.1      main.o
-    0x0000271b   0x0000271b   0x00000027   Data   RO          100    .rodata.str1.1      pt32z192xx_it.o
-    0x00002742   0x00002742   0x00000014   Data   RO          798    .rodata.str1.1      segger_rtt.o
-    0x00002756   0x00002756   0x00000002   PAD
-    0x00002758   0x00002758   0x00000020   Data   RO          908    Region$$Table       anon$$obj.o
+    0x00001398   0x00001398   0x0000002a   Code   RO          558    .text.UART_SendData  pt32z192xx_uart.o
+    0x000013c2   0x000013c2   0x00000002   PAD
+    0x000013c4   0x000013c4   0x00000026   Code   RO          108    .text.Wait_ClockReady  system_pt32z192xx.o
+    0x000013ea   0x000013ea   0x00000002   PAD
+    0x000013ec   0x000013ec   0x00000096   Code   RO          725    .text._DoInit       segger_rtt.o
+    0x00001482   0x00001482   0x00000002   PAD
+    0x00001484   0x00001484   0x0000003e   Code   RO          737    .text._GetAvailWriteSpace  segger_rtt.o
+    0x000014c2   0x000014c2   0x00000002   PAD
+    0x000014c4   0x000014c4   0x000001e4   Code   RO          812    .text._PrintInt     segger_rtt_printf.o
+    0x000016a8   0x000016a8   0x000001be   Code   RO          814    .text._PrintUnsigned  segger_rtt_printf.o
+    0x00001866   0x00001866   0x00000002   PAD
+    0x00001868   0x00001868   0x00000078   Code   RO          810    .text._StoreChar    segger_rtt_printf.o
+    0x000018e0   0x000018e0   0x000000e0   Code   RO          741    .text._WriteBlocking  segger_rtt.o
+    0x000019c0   0x000019c0   0x0000008c   Code   RO          739    .text._WriteNoCheck  segger_rtt.o
+    0x00001a4c   0x00001a4c   0x00000198   Code   RO            2    .text.app           app.o
+    0x00001be4   0x00001be4   0x0000000e   Code   RO          701    .text.fgetc         pt32z192xx_retarget.o
+    0x00001bf2   0x00001bf2   0x00000002   PAD
+    0x00001bf4   0x00001bf4   0x00000014   Code   RO          699    .text.fputc         pt32z192xx_retarget.o
+    0x00001c08   0x00001c08   0x00000036   Code   RO           24    .text.main          main.o
+    0x00001c3e   0x00001c3e   0x00000002   PAD
+    0x00001c40   0x00001c40   0x0000004c   Code   RO           14    .text.segger_init   main.o
+    0x00001c8c   0x00001c8c   0x00000062   Code   RO           22    .text.switch_gpio_config  main.o
+    0x00001cee   0x00001cee   0x00000002   PAD
+    0x00001cf0   0x00001cf0   0x00000020   Code   RO          840    i.__0printf         mc_w.l(printfa.o)
+    0x00001d10   0x00001d10   0x0000000e   Code   RO          909    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00001d1e   0x00001d1e   0x00000002   Code   RO          910    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00001d20   0x00001d20   0x0000000e   Code   RO          911    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00001d2e   0x00001d2e   0x00000002   PAD
+    0x00001d30   0x00001d30   0x00000184   Code   RO          847    i._fp_digits        mc_w.l(printfa.o)
+    0x00001eb4   0x00001eb4   0x000006dc   Code   RO          848    i._printf_core      mc_w.l(printfa.o)
+    0x00002590   0x00002590   0x00000024   Code   RO          849    i._printf_post_padding  mc_w.l(printfa.o)
+    0x000025b4   0x000025b4   0x0000002e   Code   RO          850    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x000025e2   0x000025e2   0x00000004   Code   RO          828    i.getc              mc_w.l(getc.o)
+    0x000025e6   0x000025e6   0x00000010   Data   RO          818    .rodata._PrintUnsigned._aV2C  segger_rtt_printf.o
+    0x000025f6   0x000025f6   0x00000123   Data   RO            6    .rodata.str1.1      app.o
+    0x00002719   0x00002719   0x0000006a   Data   RO           26    .rodata.str1.1      main.o
+    0x00002783   0x00002783   0x00000027   Data   RO          100    .rodata.str1.1      pt32z192xx_it.o
+    0x000027aa   0x000027aa   0x00000014   Data   RO          798    .rodata.str1.1      segger_rtt.o
+    0x000027be   0x000027be   0x00000002   PAD
+    0x000027c0   0x000027c0   0x00000020   Data   RO          908    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x00002778, Size: 0x00001498, Max: 0x00010000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x000027e0, Size: 0x00001498, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x00002778   0x00000004   Data   RW          830    .data               mc_w.l(stdin.o)
-    0x20000004   0x0000277c   0x00000004   Data   RW          881    .data               mc_w.l(stdout.o)
-    0x20000008   0x00002780   0x00000004   Data   RW          113    .data.VCO_VALUE     system_pt32z192xx.o
-    0x2000000c   0x00002784   0x00000004   PAD
+    0x20000000   0x000027e0   0x00000004   Data   RW          830    .data               mc_w.l(stdin.o)
+    0x20000004   0x000027e4   0x00000004   Data   RW          881    .data               mc_w.l(stdout.o)
+    0x20000008   0x000027e8   0x00000004   Data   RW          113    .data.VCO_VALUE     system_pt32z192xx.o
+    0x2000000c   0x000027ec   0x00000004   PAD
     0x20000010        -       0x00000078   Zero   RW          795    .bss._SEGGER_RTT    segger_rtt.o
     0x20000088        -       0x00000010   Zero   RW          800    .bss._acDownBuffer  segger_rtt.o
     0x20000098        -       0x00001000   Zero   RW          799    .bss._acUpBuffer    segger_rtt.o
@@ -517,23 +521,23 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       496          8        291          0          0       1805   app.o
+       556          8        291          0          0       2014   app.o
        494          0        106          0          0       4114   main.o
        448          6          0          0          0       6570   pt32z192xx_gpio.o
        140          0         39          0          0       4331   pt32z192xx_it.o
        158          0          0          0          0       2261   pt32z192xx_misc.o
         34          0          0          0          0       1178   pt32z192xx_retarget.o
         88          0          0          0          0       1075   pt32z192xx_serial.o
-       374          0          0          0          0       5197   pt32z192xx_uart.o
+       416          0          0          0          0       5197   pt32z192xx_uart.o
        840          0         20          0       4232      13144   segger_rtt.o
       2134         14         16          0          0       3813   segger_rtt_printf.o
         36          8        304          0       1024        804   startup_pt32z192.o
        260          0          0          4          0       1934   system_pt32z192xx.o
 
     ----------------------------------------------------------------------
-      5584         36        810          4       5260      46226   Object Totals
+      5688         36        810          4       5260      46435   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        82          0          2          0          4          0   (incl. Padding)
+        84          0          2          0          4          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -589,15 +593,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      9294        142        810         12       5260      47038   Grand Totals
-      9294        142        810         12       5260      47038   ELF Image Totals
-      9294        142        810         12          0          0   ROM Totals
+      9398        142        810         12       5260      47247   Grand Totals
+      9398        142        810         12       5260      47247   ELF Image Totals
+      9398        142        810         12          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                10104 (   9.87kB)
+    Total RO  Size (Code + RO Data)                10208 (   9.97kB)
     Total RW  Size (RW Data + ZI Data)              5272 (   5.15kB)
-    Total ROM Size (Code + RO Data + RW Data)      10116 (   9.88kB)
+    Total ROM Size (Code + RO Data + RW Data)      10220 (   9.98kB)
 
 ==============================================================================
 
