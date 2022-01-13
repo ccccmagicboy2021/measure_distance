@@ -2,10 +2,13 @@
 #define _7090986F_63F7_4B1A_92CE_B3C5BE86422C_
 
 #include "stdint.h"
-#include "app.h"
 
 #include "pt32z192xx.h"
 #include "pt32z192xx_conf.h"
+
+#include "app.h"
+#include "SEGGER_RTT.h"
+#include "SEGGER_RTT_Conf.h"
 
 typedef int32_t  s32;
 typedef int16_t s16;

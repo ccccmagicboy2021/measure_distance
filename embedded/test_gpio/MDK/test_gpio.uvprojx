@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis</IncludePath>
+              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -482,6 +482,21 @@
               <FileName>pt32z192xx_qspi.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\driver\src\pt32z192xx_qspi.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>debug</GroupName>
+          <Files>
+            <File>
+              <FileName>SEGGER_RTT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\rtt\SEGGER_RTT.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_RTT_printf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\rtt\SEGGER_RTT_printf.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -820,7 +835,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis</IncludePath>
+              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -963,6 +978,21 @@
               <FileName>pt32z192xx_qspi.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\driver\src\pt32z192xx_qspi.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>debug</GroupName>
+          <Files>
+            <File>
+              <FileName>SEGGER_RTT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\rtt\SEGGER_RTT.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_RTT_printf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\rtt\SEGGER_RTT_printf.c</FilePath>
             </File>
           </Files>
         </Group>

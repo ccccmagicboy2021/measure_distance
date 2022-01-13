@@ -6,6 +6,13 @@ float test1_data = 0.1111;
 
 #define SOFT_DELAY Delay(0x0FFFFF);
 
+void segger_init(void)
+{
+	SEGGER_RTT_Init();
+	CV_LOG("%sMCU chip: PT32Z192 DEMO%s\r\n", RTT_CTRL_BG_BRIGHT_RED, RTT_CTRL_RESET);
+	CV_LOG("compiled time: %s %s\r\n", __DATE__, __TIME__);
+}
+
 void LED_GPIO_Config(void)
 {		
     /*定义一个GPIO_InitTypeDef类型的结构体*/
@@ -96,8 +103,10 @@ int main(void)
     
     test_bss = 1;
     
+    segger_init();
     LED_GPIO_Config();
     
+    CV_LOG("program begin...\r\n");
 	while(1)
 	{
 		app();
