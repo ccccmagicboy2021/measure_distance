@@ -1,0 +1,49 @@
+Nationstech.N32G4FR_Library.1.1.1版本：
+1、驱动n32g4fr_tim.c(V1.0.2)，改变TIM_EnableOc1Preload函数为TIM_ConfigOc1Preload；增加TIM_GetAutoReload、TIM_GetCCENStatus函数；
+2、SPI 新增 SPI_FLASH_DMA 例程
+3、USB 新增 HID_Keyboard_TwoWay 与 Printer 例程，修改字符描述符
+
+Nationstech.N32G4FR_Library.1.1.0版本：
+1、示例代码Flash_Write_Protectio工程nmain.c(V1.0.1)，清除标志作了修改；
+2、示例代码Flash_Program工程main.c(V1.0.1)，错误处理作了修改；
+3、示例代码Flash_DMA_Program工程main.c(V1.0.1)，清除标志作了修改；
+4、驱动n32g45x_flash.c(V1.0.1)，擦写操作增加先清除标志，然后再进行后续操作；
+5、驱动n32g4fr_adc.c(V1.0.1),
+   1)修改了void ADC_InitEx(ADC_Module* ADCx, ADC_InitTypeEx* ADC_InitStructEx)函数；
+   2)增加void ADC_SetDifChsEnable(ADC_Module* ADCx,uint32_t DifChs)；
+   3)修正ADC_CTRL3_CKMOD_AHB 和 ADC_CTRL3_CKMOD_PLL设定的错误
+   4)增加void ADC_ConfigClk(ADC_CTRL3_CKMOD ADC_ClkMode, uint32_t RCC_ADCHCLKPrescaler)函数，用来合并RCC对ADC时钟的配置
+6、驱动n32g4f_qspi.c，删除了data变量
+7、驱动n32g4fr_tim.h(V1.0.1)，TIM_BDTRInitType结构体修改注释；
+8、驱动n32g4fr_rcc.h(V1.0.1)，
+   1)修改了TRNG1MCLK分频的宏定义；
+   2)修改了IS_RCC_TRNG1MCLKPRE(VAL)宏定义；
+9、驱动n32g4fr_gpio.h(V1.0.1),修改了IS_GPIO_REMAP(REMAP)宏定义；
+10、驱动n32g4fr_flash.h(V1.0.1),
+   1)修改了FLASH_ST枚举定义；
+   2)删除FLASH_INT_ECCERRIE宏定义；
+   3)修改IS_FLASH_INT(IT)宏定义；
+   4)删除FLASH_FLAG_ECCERR宏定义；
+   5)修改了IS_FLASH_CLEAR_FLAG宏定义；
+   6)修改IS_FLASH_GET_FLAG(FLAG宏定义；
+   7)增加了FLASH_STS_CLRFLAG宏定义；
+11、驱动n32g4fr_adc.h(V1.0.1)，
+   1)修改了ADC_DIFSEL_CHS_MASK宏定义名称；
+   2)删除ADC_DIFSEL_CHS_0宏定义；
+   3)增加ADC_CTRL3_PDRDY_MSK、ADC_CTRL3_RDY_MSK宏定义；
+   4)修改了ADC_CTRL3_RES枚举定义；
+   5)修改了ADC_InitTypeEx结构体；
+   6)增void ADC_SetDifChs(ADC_Module* ADCx,uint32_t DifChs)声明；
+   7)增void ADC_ConfigClk(ADC_CTRL3_CKMOD ADC_ClkMode, uint32_t RCC_ADCHCLKPrescaler)声明；
+12、驱动n32g4fr.h，
+    1)FLASH_Module结构体将ECCR变量改为RESERVED2；  
+    2)QSPI_Module结构体变量DAT32~DAT35改为RESERVED2~RESERVED5；
+    3)增加Bit definition for ADC_DIFSEL register宏定义；
+    4)增加Bit definition for ADC_CALFACT register宏定义；
+    5)增加Bit definition for ADC_CTRL3 register宏定义；
+    6)增加Bit definition for ADC_SAMPT3 register宏定义；
+    7)删除FLASH_AC_LATENCY_5、FLASH_STS_ECCERR、FLASH_CTRL_ECCERRITE、FLASH_ECCR_ECCLW_MSK、FLASH_ECCR_ECCHW_MSK宏定义；
+    8)修改了HSE_STARTUP_TIMEOUT宏定义值;
+    9)修改了CAN模块寄存器定义结构体;
+    10)ADC_Module结构体去除IPTST变量；
+    11)修改ADC_Module结构体里面的 WDHIGH
