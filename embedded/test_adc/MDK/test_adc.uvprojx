@@ -513,6 +513,16 @@
               <FileType>1</FileType>
               <FilePath>..\application\rtt\SEGGER_RTT_printf.c</FilePath>
             </File>
+            <File>
+              <FileName>SEGGER_HardFaultHandler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\HardFaultHandlerMDK\SEGGER_HardFaultHandler.c</FilePath>
+            </File>
+            <File>
+              <FileName>HardFaultHandler.S</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\application\HardFaultHandlerMDK\HardFaultHandler.S</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
@@ -640,8 +650,8 @@
         </DebugOption>
         <Utilities>
           <Flash1>
-            <UseTargetDll>1</UseTargetDll>
-            <UseExternalTool>0</UseExternalTool>
+            <UseTargetDll>0</UseTargetDll>
+            <UseExternalTool>1</UseExternalTool>
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>0</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
@@ -649,7 +659,7 @@
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3>"" ()</Flash3>
+          <Flash3>"burnaxf" (-hc32 "#L")</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -1023,6 +1033,16 @@
               <FileName>SEGGER_RTT_printf.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\rtt\SEGGER_RTT_printf.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_HardFaultHandler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\HardFaultHandlerMDK\SEGGER_HardFaultHandler.c</FilePath>
+            </File>
+            <File>
+              <FileName>HardFaultHandler.S</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\application\HardFaultHandlerMDK\HardFaultHandler.S</FilePath>
             </File>
           </Files>
         </Group>

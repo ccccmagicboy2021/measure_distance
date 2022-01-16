@@ -65,14 +65,14 @@ void NMI_Handler(void)
   * @param  None
   * @retval None
   */
-void HardFault_Handler(void)
-{
-    /* Go to infinite loop when Hard Fault exception occurs */
-    while (1)
-    {
-        //printf("HardFault\r\n");
-    }
-}
+//void HardFault_Handler(void)
+//{
+//    /* Go to infinite loop when Hard Fault exception occurs */
+//    while (1)
+//    {
+//        //printf("HardFault\r\n");
+//    }
+//}
 
 /**
   * @brief  This function handles SVCall exception.
