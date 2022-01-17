@@ -1,0 +1,5 @@
+--cpu Cortex-M3 --li -g --apcs=interwork --pd "__MICROLIB SETA 1" 
+-I C:\Keil\ARM\RV31\INC 
+-I C:\Keil\ARM\CMSIS\Include 
+-I C:\Keil\ARM\Inc\ST\STM32F0xx 
+--list ".\List\startup_pt32z192.lst" --xref -o ".\Out\startup_pt32z192.o" --depend ".\Out\startup_pt32z192.d" "..\..\..\..\..\Libraries\PT32Z192xx_StdPeriph_Lib_Driver\cmsis\startup_pt32z192.s"
