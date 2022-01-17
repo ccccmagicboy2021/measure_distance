@@ -1,0 +1,1559 @@
+Component: ARM Compiler 6.15 Tool: armlink [5dd79300]
+
+==============================================================================
+
+Section Cross References
+
+    startup_acm32f4.o(RESET) refers to startup_acm32f4.o(STACK) for __initial_sp
+    startup_acm32f4.o(RESET) refers to startup_acm32f4.o(.text) for Reset_Handler
+    startup_acm32f4.o(RESET) refers to system_acm32f4.o(.text.HardFault_Handler) for HardFault_Handler
+    startup_acm32f4.o(RESET) refers to system_acm32f4.o(.text.SysTick_Handler) for SysTick_Handler
+    startup_acm32f4.o(RESET) refers to usb_app.o(.text.USB_IRQHandler) for USB_IRQHandler
+    startup_acm32f4.o(.text) refers to system_acm32f4.o(.text.System_Core_Config) for System_Core_Config
+    startup_acm32f4.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    system_acm32f4.o(.ARM.exidx.text.HardFault_Handler) refers to system_acm32f4.o(.text.HardFault_Handler) for [Anonymous Symbol]
+    system_acm32f4.o(.text.SysTick_Handler) refers to system_acm32f4.o(.bss.gu32_SystemCount) for gu32_SystemCount
+    system_acm32f4.o(.ARM.exidx.text.SysTick_Handler) refers to system_acm32f4.o(.text.SysTick_Handler) for [Anonymous Symbol]
+    system_acm32f4.o(.text.System_SysTick_Init) refers to system_acm32f4.o(.bss.gu32_SystemCount) for gu32_SystemCount
+    system_acm32f4.o(.text.System_SysTick_Init) refers to system_acm32f4.o(.bss.gu32_SystemClock) for gu32_SystemClock
+    system_acm32f4.o(.text.System_SysTick_Init) refers to system_acm32f4.o(.text.SysTick_Config) for SysTick_Config
+    system_acm32f4.o(.ARM.exidx.text.System_SysTick_Init) refers to system_acm32f4.o(.text.System_SysTick_Init) for [Anonymous Symbol]
+    system_acm32f4.o(.text.SysTick_Config) refers to system_acm32f4.o(.text.__NVIC_SetPriority) for __NVIC_SetPriority
+    system_acm32f4.o(.ARM.exidx.text.SysTick_Config) refers to system_acm32f4.o(.text.SysTick_Config) for [Anonymous Symbol]
+    system_acm32f4.o(.ARM.exidx.text.System_SysTick_Off) refers to system_acm32f4.o(.text.System_SysTick_Off) for [Anonymous Symbol]
+    system_acm32f4.o(.text.System_Init) refers to system_acm32f4.o(.text.System_Set_Buzzer_Divider) for System_Set_Buzzer_Divider
+    system_acm32f4.o(.text.System_Init) refers to system_acm32f4.o(.text.__NVIC_SetPriorityGrouping) for __NVIC_SetPriorityGrouping
+    system_acm32f4.o(.text.System_Init) refers to system_acm32f4.o(.text.System_Clock_Init) for System_Clock_Init
+    system_acm32f4.o(.text.System_Init) refers to system_accelerate.o(.text.System_EnableIAccelerate) for System_EnableIAccelerate
+    system_acm32f4.o(.text.System_Init) refers to system_acm32f4.o(.text.System_SysTick_Init) for System_SysTick_Init
+    system_acm32f4.o(.ARM.exidx.text.System_Init) refers to system_acm32f4.o(.text.System_Init) for [Anonymous Symbol]
+    system_acm32f4.o(.ARM.exidx.text.System_Set_Buzzer_Divider) refers to system_acm32f4.o(.text.System_Set_Buzzer_Divider) for [Anonymous Symbol]
+    system_acm32f4.o(.ARM.exidx.text.__NVIC_SetPriorityGrouping) refers to system_acm32f4.o(.text.__NVIC_SetPriorityGrouping) for [Anonymous Symbol]
+    system_acm32f4.o(.text.System_Clock_Init) refers to system_acm32f4.o(.bss.gu32_SystemClock) for gu32_SystemClock
+    system_acm32f4.o(.text.System_Clock_Init) refers to system_acm32f4.o(.text.Set_Pll_Div) for Set_Pll_Div
+    system_acm32f4.o(.text.System_Clock_Init) refers to system_acm32f4.o(.bss.gu32_APBClock) for gu32_APBClock
+    system_acm32f4.o(.text.System_Clock_Init) refers to hal_eflash.o(.text.HAL_EFlash_Init) for HAL_EFlash_Init
+    system_acm32f4.o(.ARM.exidx.text.System_Clock_Init) refers to system_acm32f4.o(.text.System_Clock_Init) for [Anonymous Symbol]
+    system_acm32f4.o(.ARM.exidx.text.System_Core_Config) refers to system_acm32f4.o(.text.System_Core_Config) for [Anonymous Symbol]
+    system_acm32f4.o(.text.Set_Pll_Div) refers to system_acm32f4.o(.rodata.System_Clock_Map) for System_Clock_Map
+    system_acm32f4.o(.ARM.exidx.text.Set_Pll_Div) refers to system_acm32f4.o(.text.Set_Pll_Div) for [Anonymous Symbol]
+    system_acm32f4.o(.text.System_Get_SystemClock) refers to system_acm32f4.o(.bss.gu32_SystemClock) for gu32_SystemClock
+    system_acm32f4.o(.ARM.exidx.text.System_Get_SystemClock) refers to system_acm32f4.o(.text.System_Get_SystemClock) for [Anonymous Symbol]
+    system_acm32f4.o(.text.System_Get_APBClock) refers to system_acm32f4.o(.bss.gu32_APBClock) for gu32_APBClock
+    system_acm32f4.o(.ARM.exidx.text.System_Get_APBClock) refers to system_acm32f4.o(.text.System_Get_APBClock) for [Anonymous Symbol]
+    system_acm32f4.o(.text.System_Module_Reset) refers to system_acm32f4.o(.text.System_Delay) for System_Delay
+    system_acm32f4.o(.ARM.exidx.text.System_Module_Reset) refers to system_acm32f4.o(.text.System_Module_Reset) for [Anonymous Symbol]
+    system_acm32f4.o(.ARM.exidx.text.System_Delay) refers to system_acm32f4.o(.text.System_Delay) for [Anonymous Symbol]
+    system_acm32f4.o(.text.System_Module_Enable) refers to system_acm32f4.o(.text.System_Delay) for System_Delay
+    system_acm32f4.o(.ARM.exidx.text.System_Module_Enable) refers to system_acm32f4.o(.text.System_Module_Enable) for [Anonymous Symbol]
+    system_acm32f4.o(.ARM.exidx.text.System_Module_Disable) refers to system_acm32f4.o(.text.System_Module_Disable) for [Anonymous Symbol]
+    system_acm32f4.o(.text.System_Delay_MS) refers to system_acm32f4.o(.bss.gu32_SystemCount) for gu32_SystemCount
+    system_acm32f4.o(.ARM.exidx.text.System_Delay_MS) refers to system_acm32f4.o(.text.System_Delay_MS) for [Anonymous Symbol]
+    system_acm32f4.o(.ARM.exidx.text.System_Enable_RC32K) refers to system_acm32f4.o(.text.System_Enable_RC32K) for [Anonymous Symbol]
+    system_acm32f4.o(.ARM.exidx.text.System_Disable_RC32K) refers to system_acm32f4.o(.text.System_Disable_RC32K) for [Anonymous Symbol]
+    system_acm32f4.o(.ARM.exidx.text.System_Enable_XTAL) refers to system_acm32f4.o(.text.System_Enable_XTAL) for [Anonymous Symbol]
+    system_acm32f4.o(.ARM.exidx.text.System_Disable_XTAL) refers to system_acm32f4.o(.text.System_Disable_XTAL) for [Anonymous Symbol]
+    system_acm32f4.o(.text.System_Enable_Disable_RTC_Domain_Access) refers to system_acm32f4.o(.text.System_Delay) for System_Delay
+    system_acm32f4.o(.ARM.exidx.text.System_Enable_Disable_RTC_Domain_Access) refers to system_acm32f4.o(.text.System_Enable_Disable_RTC_Domain_Access) for [Anonymous Symbol]
+    system_acm32f4.o(.ARM.exidx.text.System_Enable_Disable_Reset) refers to system_acm32f4.o(.text.System_Enable_Disable_Reset) for [Anonymous Symbol]
+    system_acm32f4.o(.text.System_Reset_MCU) refers to system_acm32f4.o(.text.__NVIC_SystemReset) for __NVIC_SystemReset
+    system_acm32f4.o(.ARM.exidx.text.System_Reset_MCU) refers to system_acm32f4.o(.text.System_Reset_MCU) for [Anonymous Symbol]
+    system_acm32f4.o(.ARM.exidx.text.__NVIC_SystemReset) refers to system_acm32f4.o(.text.__NVIC_SystemReset) for [Anonymous Symbol]
+    system_acm32f4.o(.text.System_Enter_Standby_Mode) refers to system_acm32f4.o(.text.System_Delay) for System_Delay
+    system_acm32f4.o(.text.System_Enter_Standby_Mode) refers to puts.o(i.puts) for puts
+    system_acm32f4.o(.ARM.exidx.text.System_Enter_Standby_Mode) refers to system_acm32f4.o(.text.System_Enter_Standby_Mode) for [Anonymous Symbol]
+    system_acm32f4.o(.ARM.exidx.text.System_Clear_Stop_Wakeup) refers to system_acm32f4.o(.text.System_Clear_Stop_Wakeup) for [Anonymous Symbol]
+    system_acm32f4.o(.text.System_Enter_Stop_Mode) refers to system_acm32f4.o(.text.System_SysTick_Off) for System_SysTick_Off
+    system_acm32f4.o(.text.System_Enter_Stop_Mode) refers to system_acm32f4.o(.text.System_SysTick_Init) for System_SysTick_Init
+    system_acm32f4.o(.ARM.exidx.text.System_Enter_Stop_Mode) refers to system_acm32f4.o(.text.System_Enter_Stop_Mode) for [Anonymous Symbol]
+    system_acm32f4.o(.ARM.exidx.text.System_Enter_Sleep_Mode) refers to system_acm32f4.o(.text.System_Enter_Sleep_Mode) for [Anonymous Symbol]
+    system_acm32f4.o(.ARM.exidx.text.System_Return_Last_Reset_Reason) refers to system_acm32f4.o(.text.System_Return_Last_Reset_Reason) for [Anonymous Symbol]
+    system_acm32f4.o(.ARM.exidx.text.System_USB_PHY_Config) refers to system_acm32f4.o(.text.System_USB_PHY_Config) for [Anonymous Symbol]
+    system_acm32f4.o(.ARM.exidx.text.__NVIC_SetPriority) refers to system_acm32f4.o(.text.__NVIC_SetPriority) for [Anonymous Symbol]
+    hal_dma.o(.ARM.exidx.text.HAL_DMA_IRQHandler) refers to hal_dma.o(.text.HAL_DMA_IRQHandler) for [Anonymous Symbol]
+    hal_dma.o(.text.HAL_DMA_Init) refers to system_acm32f4.o(.text.System_Module_Enable) for System_Module_Enable
+    hal_dma.o(.text.HAL_DMA_Init) refers to hal_dma.o(.text.__NVIC_ClearPendingIRQ) for __NVIC_ClearPendingIRQ
+    hal_dma.o(.text.HAL_DMA_Init) refers to hal_dma.o(.text.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    hal_dma.o(.ARM.exidx.text.HAL_DMA_Init) refers to hal_dma.o(.text.HAL_DMA_Init) for [Anonymous Symbol]
+    hal_dma.o(.ARM.exidx.text.__NVIC_ClearPendingIRQ) refers to hal_dma.o(.text.__NVIC_ClearPendingIRQ) for [Anonymous Symbol]
+    hal_dma.o(.ARM.exidx.text.__NVIC_EnableIRQ) refers to hal_dma.o(.text.__NVIC_EnableIRQ) for [Anonymous Symbol]
+    hal_dma.o(.text.HAL_DMA_DeInit) refers to system_acm32f4.o(.text.System_Module_Reset) for System_Module_Reset
+    hal_dma.o(.text.HAL_DMA_DeInit) refers to system_acm32f4.o(.text.System_Module_Disable) for System_Module_Disable
+    hal_dma.o(.text.HAL_DMA_DeInit) refers to hal_dma.o(.text.__NVIC_ClearPendingIRQ) for __NVIC_ClearPendingIRQ
+    hal_dma.o(.text.HAL_DMA_DeInit) refers to hal_dma.o(.text.__NVIC_DisableIRQ) for __NVIC_DisableIRQ
+    hal_dma.o(.text.HAL_DMA_DeInit) refers to memseta.o(.text) for __aeabi_memclr4
+    hal_dma.o(.ARM.exidx.text.HAL_DMA_DeInit) refers to hal_dma.o(.text.HAL_DMA_DeInit) for [Anonymous Symbol]
+    hal_dma.o(.ARM.exidx.text.__NVIC_DisableIRQ) refers to hal_dma.o(.text.__NVIC_DisableIRQ) for [Anonymous Symbol]
+    hal_dma.o(.ARM.exidx.text.HAL_DMA_NormalMode_Start) refers to hal_dma.o(.text.HAL_DMA_NormalMode_Start) for [Anonymous Symbol]
+    hal_dma.o(.ARM.exidx.text.HAL_DMA_NormalMode_Start_IT) refers to hal_dma.o(.text.HAL_DMA_NormalMode_Start_IT) for [Anonymous Symbol]
+    hal_dma.o(.text.HAL_DMA_CycleMode_Start) refers to hal_dma.o(.bss.Cycle_Channel) for Cycle_Channel
+    hal_dma.o(.ARM.exidx.text.HAL_DMA_CycleMode_Start) refers to hal_dma.o(.text.HAL_DMA_CycleMode_Start) for [Anonymous Symbol]
+    hal_dma.o(.text.HAL_DMA_CycleMode_Start_IT) refers to hal_dma.o(.bss.Cycle_Channel) for Cycle_Channel
+    hal_dma.o(.ARM.exidx.text.HAL_DMA_CycleMode_Start_IT) refers to hal_dma.o(.text.HAL_DMA_CycleMode_Start_IT) for [Anonymous Symbol]
+    hal_dma.o(.text.HAL_DMA_Start) refers to hal_dma.o(.text.HAL_DMA_CycleMode_Start) for HAL_DMA_CycleMode_Start
+    hal_dma.o(.text.HAL_DMA_Start) refers to hal_dma.o(.text.HAL_DMA_NormalMode_Start) for HAL_DMA_NormalMode_Start
+    hal_dma.o(.ARM.exidx.text.HAL_DMA_Start) refers to hal_dma.o(.text.HAL_DMA_Start) for [Anonymous Symbol]
+    hal_dma.o(.text.HAL_DMA_Start_IT) refers to hal_dma.o(.text.HAL_DMA_CycleMode_Start_IT) for HAL_DMA_CycleMode_Start_IT
+    hal_dma.o(.text.HAL_DMA_Start_IT) refers to hal_dma.o(.text.HAL_DMA_NormalMode_Start_IT) for HAL_DMA_NormalMode_Start_IT
+    hal_dma.o(.ARM.exidx.text.HAL_DMA_Start_IT) refers to hal_dma.o(.text.HAL_DMA_Start_IT) for [Anonymous Symbol]
+    hal_dma.o(.ARM.exidx.text.HAL_DMA_Abort) refers to hal_dma.o(.text.HAL_DMA_Abort) for [Anonymous Symbol]
+    hal_dma.o(.ARM.exidx.text.HAL_DMA_GetState) refers to hal_dma.o(.text.HAL_DMA_GetState) for [Anonymous Symbol]
+    hal_gpio.o(.ARM.exidx.text.HAL_GPIO_IRQHandler) refers to hal_gpio.o(.text.HAL_GPIO_IRQHandler) for [Anonymous Symbol]
+    hal_gpio.o(.text.HAL_GPIO_Init) refers to system_acm32f4.o(.text.System_Module_Enable) for System_Module_Enable
+    hal_gpio.o(.ARM.exidx.text.HAL_GPIO_Init) refers to hal_gpio.o(.text.HAL_GPIO_Init) for [Anonymous Symbol]
+    hal_gpio.o(.text.HAL_GPIO_DeInit) refers to system_acm32f4.o(.text.System_Module_Enable) for System_Module_Enable
+    hal_gpio.o(.ARM.exidx.text.HAL_GPIO_DeInit) refers to hal_gpio.o(.text.HAL_GPIO_DeInit) for [Anonymous Symbol]
+    hal_gpio.o(.text.HAL_GPIO_AnalogEnable) refers to system_acm32f4.o(.text.System_Module_Enable) for System_Module_Enable
+    hal_gpio.o(.ARM.exidx.text.HAL_GPIO_AnalogEnable) refers to hal_gpio.o(.text.HAL_GPIO_AnalogEnable) for [Anonymous Symbol]
+    hal_gpio.o(.ARM.exidx.text.HAL_GPIO_WritePin) refers to hal_gpio.o(.text.HAL_GPIO_WritePin) for [Anonymous Symbol]
+    hal_gpio.o(.ARM.exidx.text.HAL_GPIO_ReadPin) refers to hal_gpio.o(.text.HAL_GPIO_ReadPin) for [Anonymous Symbol]
+    hal_uart.o(.text.HAL_UART_IRQHandler) refers to hal_uart.o(.text.HAL_UART_TxCpltCallback) for HAL_UART_TxCpltCallback
+    hal_uart.o(.text.HAL_UART_IRQHandler) refers to hal_uart.o(.text.HAL_UART_RxCpltCallback) for HAL_UART_RxCpltCallback
+    hal_uart.o(.ARM.exidx.text.HAL_UART_IRQHandler) refers to hal_uart.o(.text.HAL_UART_IRQHandler) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.HAL_UART_TxCpltCallback) refers to hal_uart.o(.text.HAL_UART_TxCpltCallback) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.HAL_UART_RxCpltCallback) refers to hal_uart.o(.text.HAL_UART_RxCpltCallback) for [Anonymous Symbol]
+    hal_uart.o(.text.HAL_UART_MspInit) refers to system_acm32f4.o(.text.System_Module_Enable) for System_Module_Enable
+    hal_uart.o(.text.HAL_UART_MspInit) refers to hal_gpio.o(.text.HAL_GPIO_Init) for HAL_GPIO_Init
+    hal_uart.o(.text.HAL_UART_MspInit) refers to hal_uart.o(.text.__NVIC_ClearPendingIRQ) for __NVIC_ClearPendingIRQ
+    hal_uart.o(.text.HAL_UART_MspInit) refers to hal_uart.o(.text.__NVIC_SetPriority) for __NVIC_SetPriority
+    hal_uart.o(.text.HAL_UART_MspInit) refers to hal_uart.o(.text.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    hal_uart.o(.ARM.exidx.text.HAL_UART_MspInit) refers to hal_uart.o(.text.HAL_UART_MspInit) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.__NVIC_ClearPendingIRQ) refers to hal_uart.o(.text.__NVIC_ClearPendingIRQ) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.__NVIC_SetPriority) refers to hal_uart.o(.text.__NVIC_SetPriority) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.__NVIC_EnableIRQ) refers to hal_uart.o(.text.__NVIC_EnableIRQ) for [Anonymous Symbol]
+    hal_uart.o(.text.HAL_UART_Init) refers to hal_uart.o(.text.HAL_UART_MspInit) for HAL_UART_MspInit
+    hal_uart.o(.text.HAL_UART_Init) refers to hal_uart.o(.text.UART_Config_BaudRate) for UART_Config_BaudRate
+    hal_uart.o(.text.HAL_UART_Init) refers to hal_uart.o(.bss.Uart_Debug) for Uart_Debug
+    hal_uart.o(.ARM.exidx.text.HAL_UART_Init) refers to hal_uart.o(.text.HAL_UART_Init) for [Anonymous Symbol]
+    hal_uart.o(.text.UART_Config_BaudRate) refers to system_acm32f4.o(.text.System_Get_APBClock) for System_Get_APBClock
+    hal_uart.o(.text.UART_Config_BaudRate) refers to uldiv.o(.text) for __aeabi_uldivmod
+    hal_uart.o(.ARM.exidx.text.UART_Config_BaudRate) refers to hal_uart.o(.text.UART_Config_BaudRate) for [Anonymous Symbol]
+    hal_uart.o(.text.HAL_UART_MspDeInit) refers to system_acm32f4.o(.text.System_Module_Disable) for System_Module_Disable
+    hal_uart.o(.text.HAL_UART_MspDeInit) refers to hal_gpio.o(.text.HAL_GPIO_DeInit) for HAL_GPIO_DeInit
+    hal_uart.o(.text.HAL_UART_MspDeInit) refers to hal_uart.o(.text.__NVIC_DisableIRQ) for __NVIC_DisableIRQ
+    hal_uart.o(.ARM.exidx.text.HAL_UART_MspDeInit) refers to hal_uart.o(.text.HAL_UART_MspDeInit) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.__NVIC_DisableIRQ) refers to hal_uart.o(.text.__NVIC_DisableIRQ) for [Anonymous Symbol]
+    hal_uart.o(.text.HAL_UART_DeInit) refers to hal_uart.o(.text.HAL_UART_MspDeInit) for HAL_UART_MspDeInit
+    hal_uart.o(.ARM.exidx.text.HAL_UART_DeInit) refers to hal_uart.o(.text.HAL_UART_DeInit) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.HAL_UART_Transmit) refers to hal_uart.o(.text.HAL_UART_Transmit) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.HAL_UART_Receive) refers to hal_uart.o(.text.HAL_UART_Receive) for [Anonymous Symbol]
+    hal_uart.o(.text.HAL_UART_Transmit_IT) refers to hal_uart.o(.text.HAL_UART_TxCpltCallback) for HAL_UART_TxCpltCallback
+    hal_uart.o(.ARM.exidx.text.HAL_UART_Transmit_IT) refers to hal_uart.o(.text.HAL_UART_Transmit_IT) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.HAL_UART_Receive_IT) refers to hal_uart.o(.text.HAL_UART_Receive_IT) for [Anonymous Symbol]
+    hal_uart.o(.text.HAL_UART_Transmit_DMA) refers to hal_dma.o(.text.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
+    hal_uart.o(.ARM.exidx.text.HAL_UART_Transmit_DMA) refers to hal_uart.o(.text.HAL_UART_Transmit_DMA) for [Anonymous Symbol]
+    hal_uart.o(.text.HAL_UART_Receive_DMA) refers to hal_dma.o(.text.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
+    hal_uart.o(.ARM.exidx.text.HAL_UART_Receive_DMA) refers to hal_uart.o(.text.HAL_UART_Receive_DMA) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.HAL_UART_ErrorCallBack) refers to hal_uart.o(.text.HAL_UART_ErrorCallBack) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.HAL_UART_GetState) refers to hal_uart.o(.text.HAL_UART_GetState) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.HAL_UART_GetError) refers to hal_uart.o(.text.HAL_UART_GetError) for [Anonymous Symbol]
+    hal_uart.o(.text.HAL_UART_Abort) refers to hal_dma.o(.text.HAL_DMA_Abort) for HAL_DMA_Abort
+    hal_uart.o(.ARM.exidx.text.HAL_UART_Abort) refers to hal_uart.o(.text.HAL_UART_Abort) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.HAL_UART_DMAPause) refers to hal_uart.o(.text.HAL_UART_DMAPause) for [Anonymous Symbol]
+    hal_uart.o(.ARM.exidx.text.HAL_UART_DMAResume) refers to hal_uart.o(.text.HAL_UART_DMAResume) for [Anonymous Symbol]
+    hal_uart.o(.text.fputc) refers to hal_uart.o(.bss.Uart_Debug) for Uart_Debug
+    hal_uart.o(.ARM.exidx.text.fputc) refers to hal_uart.o(.text.fputc) for [Anonymous Symbol]
+    hal_fsusb.o(.text.HAL_FSUSB_MSP_Init) refers to system_acm32f4.o(.text.System_Module_Reset) for System_Module_Reset
+    hal_fsusb.o(.text.HAL_FSUSB_MSP_Init) refers to system_acm32f4.o(.text.System_Module_Enable) for System_Module_Enable
+    hal_fsusb.o(.text.HAL_FSUSB_MSP_Init) refers to system_acm32f4.o(.text.System_USB_PHY_Config) for System_USB_PHY_Config
+    hal_fsusb.o(.text.HAL_FSUSB_MSP_Init) refers to hal_fsusb.o(.text.__NVIC_ClearPendingIRQ) for __NVIC_ClearPendingIRQ
+    hal_fsusb.o(.text.HAL_FSUSB_MSP_Init) refers to hal_fsusb.o(.text.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    hal_fsusb.o(.ARM.exidx.text.HAL_FSUSB_MSP_Init) refers to hal_fsusb.o(.text.HAL_FSUSB_MSP_Init) for [Anonymous Symbol]
+    hal_fsusb.o(.ARM.exidx.text.__NVIC_ClearPendingIRQ) refers to hal_fsusb.o(.text.__NVIC_ClearPendingIRQ) for [Anonymous Symbol]
+    hal_fsusb.o(.ARM.exidx.text.__NVIC_EnableIRQ) refers to hal_fsusb.o(.text.__NVIC_EnableIRQ) for [Anonymous Symbol]
+    hal_fsusb.o(.text.HAL_FSUSB_Init) refers to hal_fsusb.o(.text.HAL_FSUSB_MSP_Init) for HAL_FSUSB_MSP_Init
+    hal_fsusb.o(.text.HAL_FSUSB_Init) refers to system_acm32f4.o(.text.System_Delay) for System_Delay
+    hal_fsusb.o(.ARM.exidx.text.HAL_FSUSB_Init) refers to hal_fsusb.o(.text.HAL_FSUSB_Init) for [Anonymous Symbol]
+    hal_fsusb.o(.ARM.exidx.text.HAL_FSUSB_Get_FIFO_Length) refers to hal_fsusb.o(.text.HAL_FSUSB_Get_FIFO_Length) for [Anonymous Symbol]
+    hal_fsusb.o(.ARM.exidx.text.HAL_USB_Clear_FIFO) refers to hal_fsusb.o(.text.HAL_USB_Clear_FIFO) for [Anonymous Symbol]
+    hal_fsusb.o(.text.HAL_USB_Get_Stall_Status) refers to hal_fsusb.o(.bss.ep1_stall.0) for ep1_stall.0
+    hal_fsusb.o(.text.HAL_USB_Get_Stall_Status) refers to hal_fsusb.o(.bss.ep1_stall.1) for ep1_stall.1
+    hal_fsusb.o(.text.HAL_USB_Get_Stall_Status) refers to hal_fsusb.o(.bss.ep3_stall.0) for ep3_stall.0
+    hal_fsusb.o(.text.HAL_USB_Get_Stall_Status) refers to hal_fsusb.o(.bss.ep3_stall.1) for ep3_stall.1
+    hal_fsusb.o(.text.HAL_USB_Get_Stall_Status) refers to hal_fsusb.o(.bss.ep4_stall.0) for ep4_stall.0
+    hal_fsusb.o(.text.HAL_USB_Get_Stall_Status) refers to hal_fsusb.o(.bss.ep4_stall.1) for ep4_stall.1
+    hal_fsusb.o(.text.HAL_USB_Get_Stall_Status) refers to hal_fsusb.o(.bss.ep2_stall.0) for ep2_stall.0
+    hal_fsusb.o(.text.HAL_USB_Get_Stall_Status) refers to hal_fsusb.o(.bss.ep2_stall.1) for ep2_stall.1
+    hal_fsusb.o(.ARM.exidx.text.HAL_USB_Get_Stall_Status) refers to hal_fsusb.o(.text.HAL_USB_Get_Stall_Status) for [Anonymous Symbol]
+    hal_fsusb.o(.text.usb_clear_stall) refers to hal_fsusb.o(.bss.ep1_stall.0) for ep1_stall.0
+    hal_fsusb.o(.text.usb_clear_stall) refers to hal_fsusb.o(.bss.ep1_stall.1) for ep1_stall.1
+    hal_fsusb.o(.text.usb_clear_stall) refers to hal_fsusb.o(.bss.ep3_stall.0) for ep3_stall.0
+    hal_fsusb.o(.text.usb_clear_stall) refers to hal_fsusb.o(.bss.ep3_stall.1) for ep3_stall.1
+    hal_fsusb.o(.text.usb_clear_stall) refers to hal_fsusb.o(.bss.ep4_stall.0) for ep4_stall.0
+    hal_fsusb.o(.text.usb_clear_stall) refers to hal_fsusb.o(.bss.ep4_stall.1) for ep4_stall.1
+    hal_fsusb.o(.text.usb_clear_stall) refers to hal_fsusb.o(.bss.ep2_stall.0) for ep2_stall.0
+    hal_fsusb.o(.text.usb_clear_stall) refers to hal_fsusb.o(.bss.ep2_stall.1) for ep2_stall.1
+    hal_fsusb.o(.ARM.exidx.text.usb_clear_stall) refers to hal_fsusb.o(.text.usb_clear_stall) for [Anonymous Symbol]
+    hal_fsusb.o(.text.usb_send_stall) refers to hal_fsusb.o(.bss.ep1_stall.0) for ep1_stall.0
+    hal_fsusb.o(.text.usb_send_stall) refers to hal_fsusb.o(.bss.ep1_stall.1) for ep1_stall.1
+    hal_fsusb.o(.text.usb_send_stall) refers to hal_fsusb.o(.bss.ep3_stall.0) for ep3_stall.0
+    hal_fsusb.o(.text.usb_send_stall) refers to hal_fsusb.o(.bss.ep3_stall.1) for ep3_stall.1
+    hal_fsusb.o(.text.usb_send_stall) refers to hal_fsusb.o(.bss.ep4_stall.0) for ep4_stall.0
+    hal_fsusb.o(.text.usb_send_stall) refers to hal_fsusb.o(.bss.ep4_stall.1) for ep4_stall.1
+    hal_fsusb.o(.text.usb_send_stall) refers to hal_fsusb.o(.bss.ep2_stall.0) for ep2_stall.0
+    hal_fsusb.o(.text.usb_send_stall) refers to hal_fsusb.o(.bss.ep2_stall.1) for ep2_stall.1
+    hal_fsusb.o(.ARM.exidx.text.usb_send_stall) refers to hal_fsusb.o(.text.usb_send_stall) for [Anonymous Symbol]
+    hal_fsusb.o(.ARM.exidx.text.HAL_FSUSB_Read_EP_MEM8) refers to hal_fsusb.o(.text.HAL_FSUSB_Read_EP_MEM8) for [Anonymous Symbol]
+    hal_fsusb.o(.ARM.exidx.text.HAL_FSUSB_Write_EP_MEM8) refers to hal_fsusb.o(.text.HAL_FSUSB_Write_EP_MEM8) for [Anonymous Symbol]
+    hal_fsusb.o(.ARM.exidx.text.HAL_FSUSB_Start_EP_Transfer) refers to hal_fsusb.o(.text.HAL_FSUSB_Start_EP_Transfer) for [Anonymous Symbol]
+    hal_fsusb.o(.text.HAL_FSUSB_Send_Data) refers to hal_fsusb.o(.text.HAL_FSUSB_Write_EP_MEM8) for HAL_FSUSB_Write_EP_MEM8
+    hal_fsusb.o(.text.HAL_FSUSB_Send_Data) refers to hal_fsusb.o(.text.HAL_FSUSB_Start_EP_Transfer) for HAL_FSUSB_Start_EP_Transfer
+    hal_fsusb.o(.ARM.exidx.text.HAL_FSUSB_Send_Data) refers to hal_fsusb.o(.text.HAL_FSUSB_Send_Data) for [Anonymous Symbol]
+    hal_fsusb.o(.text.HAL_FSUSB_Receive_Data) refers to hal_fsusb.o(.text.HAL_FSUSB_Get_FIFO_Length) for HAL_FSUSB_Get_FIFO_Length
+    hal_fsusb.o(.text.HAL_FSUSB_Receive_Data) refers to hal_fsusb.o(.text.HAL_FSUSB_Read_EP_MEM8) for HAL_FSUSB_Read_EP_MEM8
+    hal_fsusb.o(.ARM.exidx.text.HAL_FSUSB_Receive_Data) refers to hal_fsusb.o(.text.HAL_FSUSB_Receive_Data) for [Anonymous Symbol]
+    hal_fsusb.o(.text.HAL_FSUSB_EP0_Send_Empty_Packet) refers to hal_fsusb.o(.text.HAL_FSUSB_Start_EP_Transfer) for HAL_FSUSB_Start_EP_Transfer
+    hal_fsusb.o(.ARM.exidx.text.HAL_FSUSB_EP0_Send_Empty_Packet) refers to hal_fsusb.o(.text.HAL_FSUSB_EP0_Send_Empty_Packet) for [Anonymous Symbol]
+    hal_fsusb.o(.ARM.exidx.text.HAL_FSUSB_EP0_Send_Stall) refers to hal_fsusb.o(.text.HAL_FSUSB_EP0_Send_Stall) for [Anonymous Symbol]
+    hal_eflash.o(.text.HAL_EFlash_Init) refers to hal_eflash_ex.o(.text.HAL_EFlash_Init_Para) for HAL_EFlash_Init_Para
+    hal_eflash.o(.ARM.exidx.text.HAL_EFlash_Init) refers to hal_eflash.o(.text.HAL_EFlash_Init) for [Anonymous Symbol]
+    hal_eflash.o(.ARM.exidx.text.HAL_EFlash_ErasePage) refers to hal_eflash.o(.text.HAL_EFlash_ErasePage) for [Anonymous Symbol]
+    hal_eflash.o(.ARM.exidx.text.HAL_EFlash_Program_Word) refers to hal_eflash.o(.text.HAL_EFlash_Program_Word) for [Anonymous Symbol]
+    app.o(.text.USB_CMD_proc) refers to usb_app.o(.bss.out_ep_index) for out_ep_index
+    app.o(.text.USB_CMD_proc) refers to app.o(.bss.bulk_io_request) for bulk_io_request
+    app.o(.text.USB_CMD_proc) refers to hal_fsusb.o(.text.HAL_FSUSB_Receive_Data) for HAL_FSUSB_Receive_Data
+    app.o(.text.USB_CMD_proc) refers to usb_app.o(.bss.in_ep_index) for in_ep_index
+    app.o(.text.USB_CMD_proc) refers to app.o(.bss.g_usb_data_buffer) for g_usb_data_buffer
+    app.o(.text.USB_CMD_proc) refers to printf5.o(i.__0printf$5) for __2printf
+    app.o(.text.USB_CMD_proc) refers to hal_fsusb.o(.text.HAL_FSUSB_Send_Data) for HAL_FSUSB_Send_Data
+    app.o(.text.USB_CMD_proc) refers to app.o(.data.g_bulk_ack) for g_bulk_ack
+    app.o(.ARM.exidx.text.USB_CMD_proc) refers to app.o(.text.USB_CMD_proc) for [Anonymous Symbol]
+    usb_app.o(.text.USB_IRQHandler) refers to usb_app.o(.bss.flag_usb_int) for flag_usb_int
+    usb_app.o(.text.USB_IRQHandler) refers to usb_app.o(.bss.flag_usb_ep1_int) for flag_usb_ep1_int
+    usb_app.o(.text.USB_IRQHandler) refers to usb_app.o(.bss.flag_usb_ep2_int) for flag_usb_ep2_int
+    usb_app.o(.text.USB_IRQHandler) refers to usb_app.o(.bss.flag_usb_ep3_int) for flag_usb_ep3_int
+    usb_app.o(.text.USB_IRQHandler) refers to usb_app.o(.bss.flag_usb_ep4_int) for flag_usb_ep4_int
+    usb_app.o(.text.USB_IRQHandler) refers to usb_app.o(.text.USB_Monitor) for USB_Monitor
+    usb_app.o(.ARM.exidx.text.USB_IRQHandler) refers to usb_app.o(.text.USB_IRQHandler) for [Anonymous Symbol]
+    usb_app.o(.text.USB_Monitor) refers to usb_app.o(.bss.flag_usb_int) for flag_usb_int
+    usb_app.o(.text.USB_Monitor) refers to usb_app.o(.text.USB_Bus_Reset) for USB_Bus_Reset
+    usb_app.o(.text.USB_Monitor) refers to puts.o(i.puts) for puts
+    usb_app.o(.text.USB_Monitor) refers to usb_app.o(.text.USB_Suspend) for USB_Suspend
+    usb_app.o(.text.USB_Monitor) refers to usb_app.o(.text.USB_Resume) for USB_Resume
+    usb_app.o(.text.USB_Monitor) refers to usb_app.o(.text.usb_control_transfer) for usb_control_transfer
+    usb_app.o(.ARM.exidx.text.USB_Monitor) refers to usb_app.o(.text.USB_Monitor) for [Anonymous Symbol]
+    usb_app.o(.text.usb_get_status) refers to puts.o(i.puts) for puts
+    usb_app.o(.text.usb_get_status) refers to usb_app.o(.bss.dev_req.0) for dev_req.0
+    usb_app.o(.text.usb_get_status) refers to usb_app.o(.bss.usb_device_status) for usb_device_status
+    usb_app.o(.text.usb_get_status) refers to usb_app.o(.bss.dev_req.3) for dev_req.3
+    usb_app.o(.text.usb_get_status) refers to hal_fsusb.o(.text.HAL_USB_Get_Stall_Status) for HAL_USB_Get_Stall_Status
+    usb_app.o(.text.usb_get_status) refers to hal_fsusb.o(.text.HAL_FSUSB_Send_Data) for HAL_FSUSB_Send_Data
+    usb_app.o(.text.usb_get_status) refers to hal_fsusb.o(.text.HAL_FSUSB_EP0_Send_Stall) for HAL_FSUSB_EP0_Send_Stall
+    usb_app.o(.ARM.exidx.text.usb_get_status) refers to usb_app.o(.text.usb_get_status) for [Anonymous Symbol]
+    usb_app.o(.text.usb_clear_feature) refers to puts.o(i.puts) for puts
+    usb_app.o(.text.usb_clear_feature) refers to usb_app.o(.bss.dev_req.0) for dev_req.0
+    usb_app.o(.text.usb_clear_feature) refers to usb_app.o(.bss.dev_req.2) for dev_req.2
+    usb_app.o(.text.usb_clear_feature) refers to usb_app.o(.bss.usb_device_status) for usb_device_status
+    usb_app.o(.text.usb_clear_feature) refers to hal_fsusb.o(.text.HAL_FSUSB_EP0_Send_Empty_Packet) for HAL_FSUSB_EP0_Send_Empty_Packet
+    usb_app.o(.text.usb_clear_feature) refers to usb_app.o(.bss.dev_req.3) for dev_req.3
+    usb_app.o(.text.usb_clear_feature) refers to hal_fsusb.o(.text.usb_clear_stall) for usb_clear_stall
+    usb_app.o(.text.usb_clear_feature) refers to hal_fsusb.o(.text.HAL_FSUSB_EP0_Send_Stall) for HAL_FSUSB_EP0_Send_Stall
+    usb_app.o(.ARM.exidx.text.usb_clear_feature) refers to usb_app.o(.text.usb_clear_feature) for [Anonymous Symbol]
+    usb_app.o(.text.usb_set_feature) refers to puts.o(i.puts) for puts
+    usb_app.o(.text.usb_set_feature) refers to usb_app.o(.bss.dev_req.0) for dev_req.0
+    usb_app.o(.text.usb_set_feature) refers to usb_app.o(.bss.dev_req.2) for dev_req.2
+    usb_app.o(.text.usb_set_feature) refers to usb_app.o(.bss.usb_device_status) for usb_device_status
+    usb_app.o(.text.usb_set_feature) refers to hal_fsusb.o(.text.HAL_FSUSB_EP0_Send_Empty_Packet) for HAL_FSUSB_EP0_Send_Empty_Packet
+    usb_app.o(.text.usb_set_feature) refers to usb_app.o(.bss.dev_req.3) for dev_req.3
+    usb_app.o(.text.usb_set_feature) refers to hal_fsusb.o(.text.usb_send_stall) for usb_send_stall
+    usb_app.o(.text.usb_set_feature) refers to hal_fsusb.o(.text.HAL_FSUSB_EP0_Send_Stall) for HAL_FSUSB_EP0_Send_Stall
+    usb_app.o(.ARM.exidx.text.usb_set_feature) refers to usb_app.o(.text.usb_set_feature) for [Anonymous Symbol]
+    usb_app.o(.text.usb_set_address) refers to usb_app.o(.bss.dev_req.2) for dev_req.2
+    usb_app.o(.text.usb_set_address) refers to printf5.o(i.__0printf$5) for __2printf
+    usb_app.o(.ARM.exidx.text.usb_set_address) refers to usb_app.o(.text.usb_set_address) for [Anonymous Symbol]
+    usb_app.o(.text.usb_get_configuration) refers to puts.o(i.puts) for puts
+    usb_app.o(.text.usb_get_configuration) refers to usb_app.o(.bss.config_value) for config_value
+    usb_app.o(.text.usb_get_configuration) refers to hal_fsusb.o(.text.HAL_FSUSB_Send_Data) for HAL_FSUSB_Send_Data
+    usb_app.o(.ARM.exidx.text.usb_get_configuration) refers to usb_app.o(.text.usb_get_configuration) for [Anonymous Symbol]
+    usb_app.o(.text.usb_set_configuration) refers to puts.o(i.puts) for puts
+    usb_app.o(.text.usb_set_configuration) refers to usb_app.o(.bss.dev_req.2) for dev_req.2
+    usb_app.o(.text.usb_set_configuration) refers to usb_app.o(.bss.config_value) for config_value
+    usb_app.o(.text.usb_set_configuration) refers to hal_fsusb.o(.text.HAL_FSUSB_EP0_Send_Empty_Packet) for HAL_FSUSB_EP0_Send_Empty_Packet
+    usb_app.o(.text.usb_set_configuration) refers to hal_fsusb.o(.text.HAL_FSUSB_EP0_Send_Stall) for HAL_FSUSB_EP0_Send_Stall
+    usb_app.o(.ARM.exidx.text.usb_set_configuration) refers to usb_app.o(.text.usb_set_configuration) for [Anonymous Symbol]
+    usb_app.o(.text.usb_get_interface) refers to puts.o(i.puts) for puts
+    usb_app.o(.text.usb_get_interface) refers to usb_app.o(.bss.dev_req.0) for dev_req.0
+    usb_app.o(.text.usb_get_interface) refers to usb_app.o(.bss.AltSetting) for AltSetting
+    usb_app.o(.text.usb_get_interface) refers to usb_app.o(.bss.dev_req.3) for dev_req.3
+    usb_app.o(.text.usb_get_interface) refers to hal_fsusb.o(.text.HAL_FSUSB_Send_Data) for HAL_FSUSB_Send_Data
+    usb_app.o(.text.usb_get_interface) refers to hal_fsusb.o(.text.HAL_FSUSB_EP0_Send_Stall) for HAL_FSUSB_EP0_Send_Stall
+    usb_app.o(.ARM.exidx.text.usb_get_interface) refers to usb_app.o(.text.usb_get_interface) for [Anonymous Symbol]
+    usb_app.o(.text.usb_set_interface) refers to puts.o(i.puts) for puts
+    usb_app.o(.text.usb_set_interface) refers to usb_app.o(.bss.dev_req.0) for dev_req.0
+    usb_app.o(.text.usb_set_interface) refers to usb_desc.o(.data.usb_descriptor_nconfig) for usb_descriptor_nconfig
+    usb_app.o(.text.usb_set_interface) refers to usb_app.o(.bss.dev_req.3) for dev_req.3
+    usb_app.o(.text.usb_set_interface) refers to usb_app.o(.bss.dev_req.2) for dev_req.2
+    usb_app.o(.text.usb_set_interface) refers to usb_app.o(.bss.AltSetting) for AltSetting
+    usb_app.o(.text.usb_set_interface) refers to hal_fsusb.o(.text.HAL_FSUSB_EP0_Send_Empty_Packet) for HAL_FSUSB_EP0_Send_Empty_Packet
+    usb_app.o(.text.usb_set_interface) refers to hal_fsusb.o(.text.HAL_FSUSB_EP0_Send_Stall) for HAL_FSUSB_EP0_Send_Stall
+    usb_app.o(.ARM.exidx.text.usb_set_interface) refers to usb_app.o(.text.usb_set_interface) for [Anonymous Symbol]
+    usb_app.o(.text.usb_get_description) refers to puts.o(i.puts) for puts
+    usb_app.o(.text.usb_get_description) refers to usb_app.o(.bss.dev_req.2) for dev_req.2
+    usb_app.o(.text.usb_get_description) refers to usb_app.o(.bss.dev_req.4) for dev_req.4
+    usb_app.o(.text.usb_get_description) refers to usb_app.o(.rodata.str1.1) for .Lstr.49
+    usb_app.o(.text.usb_get_description) refers to usb_desc.o(.rodata.device_descr) for device_descr
+    usb_app.o(.text.usb_get_description) refers to usb_desc.o(.rodata.StrDesc_LanguageID) for StrDesc_LanguageID
+    usb_app.o(.text.usb_get_description) refers to hal_fsusb.o(.text.HAL_FSUSB_EP0_Send_Stall) for HAL_FSUSB_EP0_Send_Stall
+    usb_app.o(.text.usb_get_description) refers to usb_desc.o(.data.usb_descriptor_nconfig) for usb_descriptor_nconfig
+    usb_app.o(.text.usb_get_description) refers to hal_fsusb.o(.text.HAL_FSUSB_Send_Data) for HAL_FSUSB_Send_Data
+    usb_app.o(.text.usb_get_description) refers to usb_desc.o(.rodata.StrDesc_Manufacturer) for StrDesc_Manufacturer
+    usb_app.o(.text.usb_get_description) refers to usb_desc.o(.rodata.StrDesc_Product) for StrDesc_Product
+    usb_app.o(.text.usb_get_description) refers to usb_desc.o(.rodata.StrDesc_SerialNumber) for StrDesc_SerialNumber
+    usb_app.o(.ARM.exidx.text.usb_get_description) refers to usb_app.o(.text.usb_get_description) for [Anonymous Symbol]
+    usb_app.o(.text.reserved) refers to puts.o(i.puts) for puts
+    usb_app.o(.text.reserved) refers to hal_fsusb.o(.text.HAL_FSUSB_EP0_Send_Stall) for HAL_FSUSB_EP0_Send_Stall
+    usb_app.o(.ARM.exidx.text.reserved) refers to usb_app.o(.text.reserved) for [Anonymous Symbol]
+    usb_app.o(.text.usb_control_transfer) refers to usb_app.o(.bss.dev_req.0) for dev_req.0
+    usb_app.o(.text.usb_control_transfer) refers to usb_app.o(.bss.dev_req.2) for dev_req.2
+    usb_app.o(.text.usb_control_transfer) refers to usb_app.o(.bss.dev_req.3) for dev_req.3
+    usb_app.o(.text.usb_control_transfer) refers to usb_app.o(.bss.dev_req.4) for dev_req.4
+    usb_app.o(.text.usb_control_transfer) refers to hal_fsusb.o(.text.HAL_FSUSB_EP0_Send_Stall) for HAL_FSUSB_EP0_Send_Stall
+    usb_app.o(.text.usb_control_transfer) refers to printf5.o(i.__0printf$5) for __2printf
+    usb_app.o(.text.usb_control_transfer) refers to usb_app.o(.data.StandardDeviceRequest) for StandardDeviceRequest
+    usb_app.o(.ARM.exidx.text.usb_control_transfer) refers to usb_app.o(.text.usb_control_transfer) for [Anonymous Symbol]
+    usb_app.o(.ARM.exidx.text.USB_Bus_Reset) refers to usb_app.o(.text.USB_Bus_Reset) for [Anonymous Symbol]
+    usb_app.o(.text.USB_Suspend) refers to usb_app.o(.rodata.str1.1) for .L.str.18
+    usb_app.o(.text.USB_Suspend) refers to printf5.o(i.__0printf$5) for __2printf
+    usb_app.o(.ARM.exidx.text.USB_Suspend) refers to usb_app.o(.text.USB_Suspend) for [Anonymous Symbol]
+    usb_app.o(.text.USB_Resume) refers to usb_app.o(.rodata.str1.1) for .L.str.18
+    usb_app.o(.text.USB_Resume) refers to printf5.o(i.__0printf$5) for __2printf
+    usb_app.o(.ARM.exidx.text.USB_Resume) refers to usb_app.o(.text.USB_Resume) for [Anonymous Symbol]
+    usb_app.o(.text.usb_transfer_monitor) refers to usb_app.o(.bss.flag_usb_ep1_int) for flag_usb_ep1_int
+    usb_app.o(.text.usb_transfer_monitor) refers to usb_app.o(.bss.out_ep_index) for out_ep_index
+    usb_app.o(.text.usb_transfer_monitor) refers to usb_app.o(.bss.in_ep_index) for in_ep_index
+    usb_app.o(.text.usb_transfer_monitor) refers to puts.o(i.puts) for puts
+    usb_app.o(.text.usb_transfer_monitor) refers to app.o(.text.USB_CMD_proc) for USB_CMD_proc
+    usb_app.o(.text.usb_transfer_monitor) refers to usb_app.o(.bss.flag_usb_ep2_int) for flag_usb_ep2_int
+    usb_app.o(.text.usb_transfer_monitor) refers to usb_app.o(.rodata.str1.1) for .Lstr.55
+    usb_app.o(.text.usb_transfer_monitor) refers to usb_app.o(.bss.flag_usb_ep3_int) for flag_usb_ep3_int
+    usb_app.o(.text.usb_transfer_monitor) refers to usb_app.o(.bss.flag_usb_ep4_int) for flag_usb_ep4_int
+    usb_app.o(.ARM.exidx.text.usb_transfer_monitor) refers to usb_app.o(.text.usb_transfer_monitor) for [Anonymous Symbol]
+    usb_app.o(.data.StandardDeviceRequest) refers to usb_app.o(.text.usb_get_status) for usb_get_status
+    usb_app.o(.data.StandardDeviceRequest) refers to usb_app.o(.text.usb_clear_feature) for usb_clear_feature
+    usb_app.o(.data.StandardDeviceRequest) refers to usb_app.o(.text.reserved) for reserved
+    usb_app.o(.data.StandardDeviceRequest) refers to usb_app.o(.text.usb_set_feature) for usb_set_feature
+    usb_app.o(.data.StandardDeviceRequest) refers to usb_app.o(.text.usb_set_address) for usb_set_address
+    usb_app.o(.data.StandardDeviceRequest) refers to usb_app.o(.text.usb_get_description) for usb_get_description
+    usb_app.o(.data.StandardDeviceRequest) refers to usb_app.o(.text.usb_get_configuration) for usb_get_configuration
+    usb_app.o(.data.StandardDeviceRequest) refers to usb_app.o(.text.usb_set_configuration) for usb_set_configuration
+    usb_app.o(.data.StandardDeviceRequest) refers to usb_app.o(.text.usb_get_interface) for usb_get_interface
+    usb_app.o(.data.StandardDeviceRequest) refers to usb_app.o(.text.usb_set_interface) for usb_set_interface
+    main.o(.text.Uart_Init) refers to main.o(.bss.UART1_Handle) for UART1_Handle
+    main.o(.text.Uart_Init) refers to hal_uart.o(.text.HAL_UART_Init) for HAL_UART_Init
+    main.o(.text.Uart_Init) refers to system_acm32f4.o(.text.System_Get_SystemClock) for System_Get_SystemClock
+    main.o(.text.Uart_Init) refers to system_acm32f4.o(.text.System_Get_APBClock) for System_Get_APBClock
+    main.o(.text.Uart_Init) refers to printf5.o(i.__0printf$5) for __2printf
+    main.o(.ARM.exidx.text.Uart_Init) refers to main.o(.text.Uart_Init) for [Anonymous Symbol]
+    main.o(.text.main) refers to system_acm32f4.o(.text.System_Init) for System_Init
+    main.o(.text.main) refers to main.o(.text.Uart_Init) for Uart_Init
+    main.o(.text.main) refers to puts.o(i.puts) for puts
+    main.o(.text.main) refers to hal_fsusb.o(.text.HAL_FSUSB_Init) for HAL_FSUSB_Init
+    main.o(.text.main) refers to usb_app.o(.text.usb_transfer_monitor) for usb_transfer_monitor
+    main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
+    system_accelerate.o(.ARM.exidx.text.System_EnableIAccelerate) refers to system_accelerate.o(.text.System_EnableIAccelerate) for [Anonymous Symbol]
+    system_accelerate.o(.ARM.exidx.text.System_DisableIAccelerate) refers to system_accelerate.o(.text.System_DisableIAccelerate) for [Anonymous Symbol]
+    system_accelerate.o(.ARM.exidx.text.System_InvalidateIAccelerate) refers to system_accelerate.o(.text.System_InvalidateIAccelerate) for [Anonymous Symbol]
+    system_accelerate.o(.ARM.exidx.text.System_EnableDAccelerate) refers to system_accelerate.o(.text.System_EnableDAccelerate) for [Anonymous Symbol]
+    system_accelerate.o(.ARM.exidx.text.System_DisableDAccelerate) refers to system_accelerate.o(.text.System_DisableDAccelerate) for [Anonymous Symbol]
+    system_accelerate.o(.ARM.exidx.text.System_InvalidateDAccelerate) refers to system_accelerate.o(.text.System_InvalidateDAccelerate) for [Anonymous Symbol]
+    system_accelerate.o(.ARM.exidx.text.System_CleanDAccelerate) refers to system_accelerate.o(.text.System_CleanDAccelerate) for [Anonymous Symbol]
+    system_accelerate.o(.ARM.exidx.text.System_CleanInvalidateDAccelerate) refers to system_accelerate.o(.text.System_CleanInvalidateDAccelerate) for [Anonymous Symbol]
+    system_accelerate.o(.ARM.exidx.text.System_InvalidateDAccelerate_by_Addr) refers to system_accelerate.o(.text.System_InvalidateDAccelerate_by_Addr) for [Anonymous Symbol]
+    system_accelerate.o(.ARM.exidx.text.System_CleanDAccelerate_by_Addr) refers to system_accelerate.o(.text.System_CleanDAccelerate_by_Addr) for [Anonymous Symbol]
+    system_accelerate.o(.ARM.exidx.text.System_CleanInvalidateDAccelerate_by_Addr) refers to system_accelerate.o(.text.System_CleanInvalidateDAccelerate_by_Addr) for [Anonymous Symbol]
+    hal_eflash_ex.o(.text.HAL_EFlash_ReWrite_Word) refers to hal_eflash.o(.text.HAL_EFlash_ErasePage) for HAL_EFlash_ErasePage
+    hal_eflash_ex.o(.text.HAL_EFlash_ReWrite_Word) refers to hal_eflash.o(.text.HAL_EFlash_Program_Word) for HAL_EFlash_Program_Word
+    hal_eflash_ex.o(.ARM.exidx.text.HAL_EFlash_ReWrite_Word) refers to hal_eflash_ex.o(.text.HAL_EFlash_ReWrite_Word) for [Anonymous Symbol]
+    hal_eflash_ex.o(.text.HAL_EFlash_Return_to_Boot) refers to hal_eflash_ex.o(.text.HAL_EFlash_ReWrite_Word) for HAL_EFlash_ReWrite_Word
+    hal_eflash_ex.o(.ARM.exidx.text.HAL_EFlash_Return_to_Boot) refers to hal_eflash_ex.o(.text.HAL_EFlash_Return_to_Boot) for [Anonymous Symbol]
+    hal_eflash_ex.o(.ARM.exidx.text.HAL_Verify_Chip) refers to hal_eflash_ex.o(.text.HAL_Verify_Chip) for [Anonymous Symbol]
+    hal_eflash_ex.o(.text.HAL_EFlash_Init_Para) refers to hal_eflash_ex.o(.text.HAL_Verify_Chip) for HAL_Verify_Chip
+    hal_eflash_ex.o(.ARM.exidx.text.HAL_EFlash_Init_Para) refers to hal_eflash_ex.o(.text.HAL_EFlash_Init_Para) for [Anonymous Symbol]
+    hal_eflash_ex.o(.text.HAL_EFlash_ErasePage_EX) refers to system_accelerate.o(.text.System_InvalidateDAccelerate_by_Addr) for System_InvalidateDAccelerate_by_Addr
+    hal_eflash_ex.o(.ARM.exidx.text.HAL_EFlash_ErasePage_EX) refers to hal_eflash_ex.o(.text.HAL_EFlash_ErasePage_EX) for [Anonymous Symbol]
+    hal_eflash_ex.o(.text.HAL_EFlash_Program_Word_EX) refers to system_accelerate.o(.text.System_InvalidateDAccelerate_by_Addr) for System_InvalidateDAccelerate_by_Addr
+    hal_eflash_ex.o(.ARM.exidx.text.HAL_EFlash_Program_Word_EX) refers to hal_eflash_ex.o(.text.HAL_EFlash_Program_Word_EX) for [Anonymous Symbol]
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    puts.o(i.puts) refers to hal_uart.o(.text.fputc) for fputc
+    puts.o(i.puts) refers to stdout.o(.data) for __stdout
+    puts_e.o(.text) refers to hal_uart.o(.text.fputc) for fputc
+    puts_e.o(.text) refers to stdout.o(.data) for __stdout
+    uldiv.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    uldiv.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    printfb.o(i.__0fprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0fprintf$bare) refers to hal_uart.o(.text.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0printf$bare) refers to hal_uart.o(.text.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to stdout.o(.data) for __stdout
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printfb.o(i.__0vfprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vfprintf$bare) refers to hal_uart.o(.text.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vprintf$bare) refers to hal_uart.o(.text.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to stdout.o(.data) for __stdout
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printf0.o(i.__0fprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0fprintf$0) refers to hal_uart.o(.text.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0printf$0) refers to hal_uart.o(.text.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to stdout.o(.data) for __stdout
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf0.o(i.__0vfprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vfprintf$0) refers to hal_uart.o(.text.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vprintf$0) refers to hal_uart.o(.text.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to stdout.o(.data) for __stdout
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf1.o(i.__0fprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0fprintf$1) refers to hal_uart.o(.text.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0printf$1) refers to hal_uart.o(.text.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to stdout.o(.data) for __stdout
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i.__0vfprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vfprintf$1) refers to hal_uart.o(.text.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vprintf$1) refers to hal_uart.o(.text.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to stdout.o(.data) for __stdout
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf2.o(i.__0fprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0fprintf$2) refers to hal_uart.o(.text.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0printf$2) refers to hal_uart.o(.text.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to stdout.o(.data) for __stdout
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf2.o(i.__0vfprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vfprintf$2) refers to hal_uart.o(.text.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vprintf$2) refers to hal_uart.o(.text.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to stdout.o(.data) for __stdout
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf3.o(i.__0fprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0fprintf$3) refers to hal_uart.o(.text.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0printf$3) refers to hal_uart.o(.text.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to stdout.o(.data) for __stdout
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i.__0vfprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vfprintf$3) refers to hal_uart.o(.text.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vprintf$3) refers to hal_uart.o(.text.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to stdout.o(.data) for __stdout
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf4.o(i.__0fprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0fprintf$4) refers to hal_uart.o(.text.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0printf$4) refers to hal_uart.o(.text.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to stdout.o(.data) for __stdout
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i.__0vfprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vfprintf$4) refers to hal_uart.o(.text.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vprintf$4) refers to hal_uart.o(.text.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to stdout.o(.data) for __stdout
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf5.o(i.__0fprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0fprintf$5) refers to hal_uart.o(.text.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0printf$5) refers to hal_uart.o(.text.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to stdout.o(.data) for __stdout
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i.__0vfprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vfprintf$5) refers to hal_uart.o(.text.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vprintf$5) refers to hal_uart.o(.text.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to stdout.o(.data) for __stdout
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf6.o(i.__0fprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0fprintf$6) refers to hal_uart.o(.text.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0printf$6) refers to hal_uart.o(.text.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to stdout.o(.data) for __stdout
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i.__0vfprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vfprintf$6) refers to hal_uart.o(.text.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vprintf$6) refers to hal_uart.o(.text.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to stdout.o(.data) for __stdout
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_pre_padding) for _printf_pre_padding
+    printf6.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_post_padding) for _printf_post_padding
+    printf7.o(i.__0fprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0fprintf$7) refers to hal_uart.o(.text.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0printf$7) refers to hal_uart.o(.text.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to stdout.o(.data) for __stdout
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i.__0vfprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vfprintf$7) refers to hal_uart.o(.text.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vprintf$7) refers to hal_uart.o(.text.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to stdout.o(.data) for __stdout
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_pre_padding) for _printf_pre_padding
+    printf7.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_post_padding) for _printf_post_padding
+    printf8.o(i.__0fprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0fprintf$8) refers to hal_uart.o(.text.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0printf$8) refers to hal_uart.o(.text.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to stdout.o(.data) for __stdout
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i.__0vfprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vfprintf$8) refers to hal_uart.o(.text.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vprintf$8) refers to hal_uart.o(.text.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to stdout.o(.data) for __stdout
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_pre_padding) for _printf_pre_padding
+    printf8.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i.__0fprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0fprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0fprintf) refers to hal_uart.o(.text.fputc) for fputc
+    printfa.o(i.__0printf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0printf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0printf) refers to hal_uart.o(.text.fputc) for fputc
+    printfa.o(i.__0printf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0snprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0snprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0snprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0sprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0sprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0sprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i.__0vfprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vfprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vfprintf) refers to hal_uart.o(.text.fputc) for fputc
+    printfa.o(i.__0vprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vprintf) refers to hal_uart.o(.text.fputc) for fputc
+    printfa.o(i.__0vprintf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0vsnprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0vsprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i._fp_digits) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._fp_digits) refers to dmul.o(.text) for __aeabi_dmul
+    printfa.o(i._fp_digits) refers to ddiv.o(.text) for __aeabi_ddiv
+    printfa.o(i._fp_digits) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    printfa.o(i._fp_digits) refers to dadd.o(.text) for __aeabi_dadd
+    printfa.o(i._fp_digits) refers to dfixul.o(.text) for __aeabi_d2ulz
+    printfa.o(i._fp_digits) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_pre_padding) for _printf_pre_padding
+    printfa.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i._printf_core) refers to printfa.o(i._fp_digits) for _fp_digits
+    printfa.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printfa.o(i._printf_post_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_pre_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._snputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._sputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_acm32f4.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_acm32f4.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(.text.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(.text.main) for main
+    dadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dfixul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixul.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixul.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    cdrcmple.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    depilogue.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup_acm32f4.o(HEAP), (0 bytes).
+    Removing system_acm32f4.o(.text), (0 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.HardFault_Handler), (8 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.SysTick_Handler), (8 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_SysTick_Init), (8 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.SysTick_Config), (8 bytes).
+    Removing system_acm32f4.o(.text.System_SysTick_Off), (14 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_SysTick_Off), (8 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Init), (8 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Set_Buzzer_Divider), (8 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.__NVIC_SetPriorityGrouping), (8 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Clock_Init), (8 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Core_Config), (8 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.Set_Pll_Div), (8 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Get_SystemClock), (8 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Get_APBClock), (8 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Module_Reset), (8 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Delay), (8 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Module_Enable), (8 bytes).
+    Removing system_acm32f4.o(.text.System_Module_Disable), (46 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Module_Disable), (8 bytes).
+    Removing system_acm32f4.o(.text.System_Delay_MS), (30 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Delay_MS), (8 bytes).
+    Removing system_acm32f4.o(.text.System_Enable_RC32K), (24 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Enable_RC32K), (8 bytes).
+    Removing system_acm32f4.o(.text.System_Disable_RC32K), (18 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Disable_RC32K), (8 bytes).
+    Removing system_acm32f4.o(.text.System_Enable_XTAL), (48 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Enable_XTAL), (8 bytes).
+    Removing system_acm32f4.o(.text.System_Disable_XTAL), (18 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Disable_XTAL), (8 bytes).
+    Removing system_acm32f4.o(.text.System_Enable_Disable_RTC_Domain_Access), (54 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Enable_Disable_RTC_Domain_Access), (8 bytes).
+    Removing system_acm32f4.o(.text.System_Enable_Disable_Reset), (36 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Enable_Disable_Reset), (8 bytes).
+    Removing system_acm32f4.o(.text.System_Reset_MCU), (54 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Reset_MCU), (8 bytes).
+    Removing system_acm32f4.o(.text.__NVIC_SystemReset), (36 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.__NVIC_SystemReset), (8 bytes).
+    Removing system_acm32f4.o(.text.System_Enter_Standby_Mode), (112 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Enter_Standby_Mode), (8 bytes).
+    Removing system_acm32f4.o(.text.System_Clear_Stop_Wakeup), (30 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Clear_Stop_Wakeup), (8 bytes).
+    Removing system_acm32f4.o(.text.System_Enter_Stop_Mode), (66 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Enter_Stop_Mode), (8 bytes).
+    Removing system_acm32f4.o(.text.System_Enter_Sleep_Mode), (30 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Enter_Sleep_Mode), (8 bytes).
+    Removing system_acm32f4.o(.text.System_Return_Last_Reset_Reason), (62 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_Return_Last_Reset_Reason), (8 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.System_USB_PHY_Config), (8 bytes).
+    Removing system_acm32f4.o(.ARM.exidx.text.__NVIC_SetPriority), (8 bytes).
+    Removing hal_dma.o(.text), (0 bytes).
+    Removing hal_dma.o(.text.HAL_DMA_IRQHandler), (86 bytes).
+    Removing hal_dma.o(.ARM.exidx.text.HAL_DMA_IRQHandler), (8 bytes).
+    Removing hal_dma.o(.text.HAL_DMA_Init), (200 bytes).
+    Removing hal_dma.o(.ARM.exidx.text.HAL_DMA_Init), (8 bytes).
+    Removing hal_dma.o(.text.__NVIC_ClearPendingIRQ), (16 bytes).
+    Removing hal_dma.o(.ARM.exidx.text.__NVIC_ClearPendingIRQ), (8 bytes).
+    Removing hal_dma.o(.text.__NVIC_EnableIRQ), (16 bytes).
+    Removing hal_dma.o(.ARM.exidx.text.__NVIC_EnableIRQ), (8 bytes).
+    Removing hal_dma.o(.text.HAL_DMA_DeInit), (124 bytes).
+    Removing hal_dma.o(.ARM.exidx.text.HAL_DMA_DeInit), (8 bytes).
+    Removing hal_dma.o(.text.__NVIC_DisableIRQ), (24 bytes).
+    Removing hal_dma.o(.ARM.exidx.text.__NVIC_DisableIRQ), (8 bytes).
+    Removing hal_dma.o(.text.HAL_DMA_NormalMode_Start), (84 bytes).
+    Removing hal_dma.o(.ARM.exidx.text.HAL_DMA_NormalMode_Start), (8 bytes).
+    Removing hal_dma.o(.text.HAL_DMA_NormalMode_Start_IT), (68 bytes).
+    Removing hal_dma.o(.ARM.exidx.text.HAL_DMA_NormalMode_Start_IT), (8 bytes).
+    Removing hal_dma.o(.text.HAL_DMA_CycleMode_Start), (112 bytes).
+    Removing hal_dma.o(.ARM.exidx.text.HAL_DMA_CycleMode_Start), (8 bytes).
+    Removing hal_dma.o(.text.HAL_DMA_CycleMode_Start_IT), (114 bytes).
+    Removing hal_dma.o(.ARM.exidx.text.HAL_DMA_CycleMode_Start_IT), (8 bytes).
+    Removing hal_dma.o(.text.HAL_DMA_Start), (34 bytes).
+    Removing hal_dma.o(.ARM.exidx.text.HAL_DMA_Start), (8 bytes).
+    Removing hal_dma.o(.text.HAL_DMA_Start_IT), (34 bytes).
+    Removing hal_dma.o(.ARM.exidx.text.HAL_DMA_Start_IT), (8 bytes).
+    Removing hal_dma.o(.text.HAL_DMA_Abort), (64 bytes).
+    Removing hal_dma.o(.ARM.exidx.text.HAL_DMA_Abort), (8 bytes).
+    Removing hal_dma.o(.text.HAL_DMA_GetState), (60 bytes).
+    Removing hal_dma.o(.ARM.exidx.text.HAL_DMA_GetState), (8 bytes).
+    Removing hal_dma.o(.bss.Cycle_Channel), (128 bytes).
+    Removing hal_gpio.o(.text), (0 bytes).
+    Removing hal_gpio.o(.text.HAL_GPIO_IRQHandler), (62 bytes).
+    Removing hal_gpio.o(.ARM.exidx.text.HAL_GPIO_IRQHandler), (8 bytes).
+    Removing hal_gpio.o(.ARM.exidx.text.HAL_GPIO_Init), (8 bytes).
+    Removing hal_gpio.o(.text.HAL_GPIO_DeInit), (458 bytes).
+    Removing hal_gpio.o(.ARM.exidx.text.HAL_GPIO_DeInit), (8 bytes).
+    Removing hal_gpio.o(.text.HAL_GPIO_AnalogEnable), (124 bytes).
+    Removing hal_gpio.o(.ARM.exidx.text.HAL_GPIO_AnalogEnable), (8 bytes).
+    Removing hal_gpio.o(.text.HAL_GPIO_WritePin), (106 bytes).
+    Removing hal_gpio.o(.ARM.exidx.text.HAL_GPIO_WritePin), (8 bytes).
+    Removing hal_gpio.o(.text.HAL_GPIO_ReadPin), (62 bytes).
+    Removing hal_gpio.o(.ARM.exidx.text.HAL_GPIO_ReadPin), (8 bytes).
+    Removing hal_uart.o(.text), (0 bytes).
+    Removing hal_uart.o(.text.HAL_UART_IRQHandler), (454 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.HAL_UART_IRQHandler), (8 bytes).
+    Removing hal_uart.o(.text.HAL_UART_TxCpltCallback), (2 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.HAL_UART_TxCpltCallback), (8 bytes).
+    Removing hal_uart.o(.text.HAL_UART_RxCpltCallback), (2 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.HAL_UART_RxCpltCallback), (8 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.HAL_UART_MspInit), (8 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.__NVIC_ClearPendingIRQ), (8 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.__NVIC_SetPriority), (8 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.__NVIC_EnableIRQ), (8 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.HAL_UART_Init), (8 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.UART_Config_BaudRate), (8 bytes).
+    Removing hal_uart.o(.text.HAL_UART_MspDeInit), (74 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.HAL_UART_MspDeInit), (8 bytes).
+    Removing hal_uart.o(.text.__NVIC_DisableIRQ), (24 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.__NVIC_DisableIRQ), (8 bytes).
+    Removing hal_uart.o(.text.HAL_UART_DeInit), (72 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.HAL_UART_DeInit), (8 bytes).
+    Removing hal_uart.o(.text.HAL_UART_Transmit), (144 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.HAL_UART_Transmit), (8 bytes).
+    Removing hal_uart.o(.text.HAL_UART_Receive), (186 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.HAL_UART_Receive), (8 bytes).
+    Removing hal_uart.o(.text.HAL_UART_Transmit_IT), (212 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.HAL_UART_Transmit_IT), (8 bytes).
+    Removing hal_uart.o(.text.HAL_UART_Receive_IT), (212 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.HAL_UART_Receive_IT), (8 bytes).
+    Removing hal_uart.o(.text.HAL_UART_Transmit_DMA), (122 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.HAL_UART_Transmit_DMA), (8 bytes).
+    Removing hal_uart.o(.text.HAL_UART_Receive_DMA), (126 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.HAL_UART_Receive_DMA), (8 bytes).
+    Removing hal_uart.o(.text.HAL_UART_ErrorCallBack), (2 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.HAL_UART_ErrorCallBack), (8 bytes).
+    Removing hal_uart.o(.text.HAL_UART_GetState), (86 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.HAL_UART_GetState), (8 bytes).
+    Removing hal_uart.o(.text.HAL_UART_GetError), (4 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.HAL_UART_GetError), (8 bytes).
+    Removing hal_uart.o(.text.HAL_UART_Abort), (148 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.HAL_UART_Abort), (8 bytes).
+    Removing hal_uart.o(.text.HAL_UART_DMAPause), (106 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.HAL_UART_DMAPause), (8 bytes).
+    Removing hal_uart.o(.text.HAL_UART_DMAResume), (108 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.HAL_UART_DMAResume), (8 bytes).
+    Removing hal_uart.o(.ARM.exidx.text.fputc), (8 bytes).
+    Removing hal_fsusb.o(.text), (0 bytes).
+    Removing hal_fsusb.o(.ARM.exidx.text.HAL_FSUSB_MSP_Init), (8 bytes).
+    Removing hal_fsusb.o(.ARM.exidx.text.__NVIC_ClearPendingIRQ), (8 bytes).
+    Removing hal_fsusb.o(.ARM.exidx.text.__NVIC_EnableIRQ), (8 bytes).
+    Removing hal_fsusb.o(.ARM.exidx.text.HAL_FSUSB_Init), (8 bytes).
+    Removing hal_fsusb.o(.ARM.exidx.text.HAL_FSUSB_Get_FIFO_Length), (8 bytes).
+    Removing hal_fsusb.o(.text.HAL_USB_Clear_FIFO), (20 bytes).
+    Removing hal_fsusb.o(.ARM.exidx.text.HAL_USB_Clear_FIFO), (8 bytes).
+    Removing hal_fsusb.o(.ARM.exidx.text.HAL_USB_Get_Stall_Status), (8 bytes).
+    Removing hal_fsusb.o(.ARM.exidx.text.usb_clear_stall), (8 bytes).
+    Removing hal_fsusb.o(.ARM.exidx.text.usb_send_stall), (8 bytes).
+    Removing hal_fsusb.o(.ARM.exidx.text.HAL_FSUSB_Read_EP_MEM8), (8 bytes).
+    Removing hal_fsusb.o(.ARM.exidx.text.HAL_FSUSB_Write_EP_MEM8), (8 bytes).
+    Removing hal_fsusb.o(.ARM.exidx.text.HAL_FSUSB_Start_EP_Transfer), (8 bytes).
+    Removing hal_fsusb.o(.ARM.exidx.text.HAL_FSUSB_Send_Data), (8 bytes).
+    Removing hal_fsusb.o(.ARM.exidx.text.HAL_FSUSB_Receive_Data), (8 bytes).
+    Removing hal_fsusb.o(.ARM.exidx.text.HAL_FSUSB_EP0_Send_Empty_Packet), (8 bytes).
+    Removing hal_fsusb.o(.ARM.exidx.text.HAL_FSUSB_EP0_Send_Stall), (8 bytes).
+    Removing hal_eflash.o(.text), (0 bytes).
+    Removing hal_eflash.o(.ARM.exidx.text.HAL_EFlash_Init), (8 bytes).
+    Removing hal_eflash.o(.text.HAL_EFlash_ErasePage), (54 bytes).
+    Removing hal_eflash.o(.ARM.exidx.text.HAL_EFlash_ErasePage), (8 bytes).
+    Removing hal_eflash.o(.text.HAL_EFlash_Program_Word), (70 bytes).
+    Removing hal_eflash.o(.ARM.exidx.text.HAL_EFlash_Program_Word), (8 bytes).
+    Removing app.o(.text), (0 bytes).
+    Removing app.o(.ARM.exidx.text.USB_CMD_proc), (8 bytes).
+    Removing usb_app.o(.text), (0 bytes).
+    Removing usb_app.o(.ARM.exidx.text.USB_IRQHandler), (8 bytes).
+    Removing usb_app.o(.ARM.exidx.text.USB_Monitor), (8 bytes).
+    Removing usb_app.o(.ARM.exidx.text.usb_get_status), (8 bytes).
+    Removing usb_app.o(.ARM.exidx.text.usb_clear_feature), (8 bytes).
+    Removing usb_app.o(.ARM.exidx.text.usb_set_feature), (8 bytes).
+    Removing usb_app.o(.ARM.exidx.text.usb_set_address), (8 bytes).
+    Removing usb_app.o(.ARM.exidx.text.usb_get_configuration), (8 bytes).
+    Removing usb_app.o(.ARM.exidx.text.usb_set_configuration), (8 bytes).
+    Removing usb_app.o(.ARM.exidx.text.usb_get_interface), (8 bytes).
+    Removing usb_app.o(.ARM.exidx.text.usb_set_interface), (8 bytes).
+    Removing usb_app.o(.ARM.exidx.text.usb_get_description), (8 bytes).
+    Removing usb_app.o(.ARM.exidx.text.reserved), (8 bytes).
+    Removing usb_app.o(.ARM.exidx.text.usb_control_transfer), (8 bytes).
+    Removing usb_app.o(.ARM.exidx.text.USB_Bus_Reset), (8 bytes).
+    Removing usb_app.o(.ARM.exidx.text.USB_Suspend), (8 bytes).
+    Removing usb_app.o(.ARM.exidx.text.USB_Resume), (8 bytes).
+    Removing usb_app.o(.ARM.exidx.text.usb_transfer_monitor), (8 bytes).
+    Removing usb_app.o(.bss.MaxLun), (1 bytes).
+    Removing usb_desc.o(.text), (0 bytes).
+    Removing main.o(.text), (0 bytes).
+    Removing main.o(.ARM.exidx.text.Uart_Init), (8 bytes).
+    Removing main.o(.ARM.exidx.text.main), (8 bytes).
+    Removing main.o(.ARM.use_no_argv), (4 bytes).
+    Removing system_accelerate.o(.text), (0 bytes).
+    Removing system_accelerate.o(.ARM.exidx.text.System_EnableIAccelerate), (8 bytes).
+    Removing system_accelerate.o(.text.System_DisableIAccelerate), (46 bytes).
+    Removing system_accelerate.o(.ARM.exidx.text.System_DisableIAccelerate), (8 bytes).
+    Removing system_accelerate.o(.text.System_InvalidateIAccelerate), (30 bytes).
+    Removing system_accelerate.o(.ARM.exidx.text.System_InvalidateIAccelerate), (8 bytes).
+    Removing system_accelerate.o(.text.System_EnableDAccelerate), (130 bytes).
+    Removing system_accelerate.o(.ARM.exidx.text.System_EnableDAccelerate), (8 bytes).
+    Removing system_accelerate.o(.text.System_DisableDAccelerate), (130 bytes).
+    Removing system_accelerate.o(.ARM.exidx.text.System_DisableDAccelerate), (8 bytes).
+    Removing system_accelerate.o(.text.System_InvalidateDAccelerate), (110 bytes).
+    Removing system_accelerate.o(.ARM.exidx.text.System_InvalidateDAccelerate), (8 bytes).
+    Removing system_accelerate.o(.text.System_CleanDAccelerate), (110 bytes).
+    Removing system_accelerate.o(.ARM.exidx.text.System_CleanDAccelerate), (8 bytes).
+    Removing system_accelerate.o(.text.System_CleanInvalidateDAccelerate), (110 bytes).
+    Removing system_accelerate.o(.ARM.exidx.text.System_CleanInvalidateDAccelerate), (8 bytes).
+    Removing system_accelerate.o(.text.System_InvalidateDAccelerate_by_Addr), (74 bytes).
+    Removing system_accelerate.o(.ARM.exidx.text.System_InvalidateDAccelerate_by_Addr), (8 bytes).
+    Removing system_accelerate.o(.text.System_CleanDAccelerate_by_Addr), (74 bytes).
+    Removing system_accelerate.o(.ARM.exidx.text.System_CleanDAccelerate_by_Addr), (8 bytes).
+    Removing system_accelerate.o(.text.System_CleanInvalidateDAccelerate_by_Addr), (74 bytes).
+    Removing system_accelerate.o(.ARM.exidx.text.System_CleanInvalidateDAccelerate_by_Addr), (8 bytes).
+    Removing hal_eflash_ex.o(.text), (0 bytes).
+    Removing hal_eflash_ex.o(.text.HAL_EFlash_ReWrite_Word), (74 bytes).
+    Removing hal_eflash_ex.o(.ARM.exidx.text.HAL_EFlash_ReWrite_Word), (8 bytes).
+    Removing hal_eflash_ex.o(.text.HAL_EFlash_Return_to_Boot), (20 bytes).
+    Removing hal_eflash_ex.o(.ARM.exidx.text.HAL_EFlash_Return_to_Boot), (8 bytes).
+    Removing hal_eflash_ex.o(.ARM.exidx.text.HAL_Verify_Chip), (8 bytes).
+    Removing hal_eflash_ex.o(.ARM.exidx.text.HAL_EFlash_Init_Para), (8 bytes).
+    Removing hal_eflash_ex.o(.text.HAL_EFlash_ErasePage_EX), (100 bytes).
+    Removing hal_eflash_ex.o(.ARM.exidx.text.HAL_EFlash_ErasePage_EX), (8 bytes).
+    Removing hal_eflash_ex.o(.text.HAL_EFlash_Program_Word_EX), (86 bytes).
+    Removing hal_eflash_ex.o(.ARM.exidx.text.HAL_EFlash_Program_Word_EX), (8 bytes).
+    Removing dadd.o(.text), (334 bytes).
+    Removing dmul.o(.text), (228 bytes).
+    Removing ddiv.o(.text), (222 bytes).
+    Removing dfixul.o(.text), (48 bytes).
+    Removing cdrcmple.o(.text), (48 bytes).
+    Removing depilogue.o(.text), (186 bytes).
+
+226 unused section(s) (total 8193 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/division.s                       0x00000000   Number         0  aeabi_sdiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
+    ../clib/microlib/printf/stubs.s          0x00000000   Number         0  printfstubs.o ABSOLUTE
+    ../clib/microlib/stdio/puts.c            0x00000000   Number         0  puts.o ABSOLUTE
+    ../clib/microlib/stdio/puts.c            0x00000000   Number         0  puts_e.o ABSOLUTE
+    ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stdout.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    ..\..\..\Core_Drivers\Device\Startup_ACM32F4.s 0x00000000   Number         0  startup_acm32f4.o ABSOLUTE
+    HAL_DMA.c                                0x00000000   Number         0  hal_dma.o ABSOLUTE
+    HAL_EFlash.c                             0x00000000   Number         0  hal_eflash.o ABSOLUTE
+    HAL_EFlash_Ex.c                          0x00000000   Number         0  hal_eflash_ex.o ABSOLUTE
+    HAL_FSUSB.c                              0x00000000   Number         0  hal_fsusb.o ABSOLUTE
+    HAL_GPIO.c                               0x00000000   Number         0  hal_gpio.o ABSOLUTE
+    HAL_Uart.c                               0x00000000   Number         0  hal_uart.o ABSOLUTE
+    System_ACM32F4.c                         0x00000000   Number         0  system_acm32f4.o ABSOLUTE
+    System_Accelerate.c                      0x00000000   Number         0  system_accelerate.o ABSOLUTE
+    app.c                                    0x00000000   Number         0  app.o ABSOLUTE
+    cdrcmple.s                               0x00000000   Number         0  cdrcmple.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    usb_app.c                                0x00000000   Number         0  usb_app.o ABSOLUTE
+    usb_desc.c                               0x00000000   Number         0  usb_desc.o ABSOLUTE
+    RESET                                    0x00000000   Section      228  startup_acm32f4.o(RESET)
+    .ARM.Collect$$$$00000000                 0x000000e4   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x000000e4   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x000000e8   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x000000ec   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x000000ec   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x000000ec   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    __lit__00000000                          0x000000f4   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .ARM.Collect$$$$0000000D                 0x000000f4   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x000000f4   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x000000f4   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    $v0                                      0x000000f8   Number         0  startup_acm32f4.o(.text)
+    .text                                    0x000000f8   Section       36  startup_acm32f4.o(.text)
+    .text                                    0x0000011c   Section        0  uldiv.o(.text)
+    .text                                    0x0000017e   Section        0  llshl.o(.text)
+    .text                                    0x0000019c   Section        0  llushr.o(.text)
+    .text                                    0x000001bc   Section       36  init.o(.text)
+    [Anonymous Symbol]                       0x000001e0   Section        0  hal_eflash.o(.text.HAL_EFlash_Init)
+    [Anonymous Symbol]                       0x000001e8   Section        0  hal_eflash_ex.o(.text.HAL_EFlash_Init_Para)
+    [Anonymous Symbol]                       0x00000304   Section        0  hal_fsusb.o(.text.HAL_FSUSB_EP0_Send_Empty_Packet)
+    [Anonymous Symbol]                       0x00000310   Section        0  hal_fsusb.o(.text.HAL_FSUSB_EP0_Send_Stall)
+    [Anonymous Symbol]                       0x00000330   Section        0  hal_fsusb.o(.text.HAL_FSUSB_Get_FIFO_Length)
+    [Anonymous Symbol]                       0x00000340   Section        0  hal_fsusb.o(.text.HAL_FSUSB_Init)
+    [Anonymous Symbol]                       0x000003b8   Section        0  hal_fsusb.o(.text.HAL_FSUSB_MSP_Init)
+    [Anonymous Symbol]                       0x000003f0   Section        0  hal_fsusb.o(.text.HAL_FSUSB_Read_EP_MEM8)
+    [Anonymous Symbol]                       0x00000418   Section        0  hal_fsusb.o(.text.HAL_FSUSB_Receive_Data)
+    [Anonymous Symbol]                       0x000004e8   Section        0  hal_fsusb.o(.text.HAL_FSUSB_Send_Data)
+    [Anonymous Symbol]                       0x000005d4   Section        0  hal_fsusb.o(.text.HAL_FSUSB_Start_EP_Transfer)
+    [Anonymous Symbol]                       0x00000694   Section        0  hal_fsusb.o(.text.HAL_FSUSB_Write_EP_MEM8)
+    [Anonymous Symbol]                       0x000006bc   Section        0  hal_gpio.o(.text.HAL_GPIO_Init)
+    [Anonymous Symbol]                       0x00000a24   Section        0  hal_uart.o(.text.HAL_UART_Init)
+    [Anonymous Symbol]                       0x00000b30   Section        0  hal_uart.o(.text.HAL_UART_MspInit)
+    [Anonymous Symbol]                       0x00000ba0   Section        0  hal_fsusb.o(.text.HAL_USB_Get_Stall_Status)
+    [Anonymous Symbol]                       0x00000c14   Section        0  hal_eflash_ex.o(.text.HAL_Verify_Chip)
+    [Anonymous Symbol]                       0x00000c28   Section        0  system_acm32f4.o(.text.HardFault_Handler)
+    [Anonymous Symbol]                       0x00000c2c   Section        0  system_acm32f4.o(.text.Set_Pll_Div)
+    SysTick_Config                           0x00000d19   Thumb Code    36  system_acm32f4.o(.text.SysTick_Config)
+    [Anonymous Symbol]                       0x00000d18   Section        0  system_acm32f4.o(.text.SysTick_Config)
+    [Anonymous Symbol]                       0x00000d3c   Section        0  system_acm32f4.o(.text.SysTick_Handler)
+    [Anonymous Symbol]                       0x00000d4c   Section        0  system_acm32f4.o(.text.System_Clock_Init)
+    [Anonymous Symbol]                       0x00000e54   Section        0  system_acm32f4.o(.text.System_Core_Config)
+    [Anonymous Symbol]                       0x00000e6c   Section        0  system_acm32f4.o(.text.System_Delay)
+    [Anonymous Symbol]                       0x00000e80   Section        0  system_accelerate.o(.text.System_EnableIAccelerate)
+    [Anonymous Symbol]                       0x00000eb8   Section        0  system_acm32f4.o(.text.System_Get_APBClock)
+    [Anonymous Symbol]                       0x00000ec4   Section        0  system_acm32f4.o(.text.System_Get_SystemClock)
+    [Anonymous Symbol]                       0x00000ed0   Section        0  system_acm32f4.o(.text.System_Init)
+    [Anonymous Symbol]                       0x00000f0c   Section        0  system_acm32f4.o(.text.System_Module_Enable)
+    [Anonymous Symbol]                       0x00000f40   Section        0  system_acm32f4.o(.text.System_Module_Reset)
+    [Anonymous Symbol]                       0x00000f88   Section        0  system_acm32f4.o(.text.System_Set_Buzzer_Divider)
+    [Anonymous Symbol]                       0x00000fb4   Section        0  system_acm32f4.o(.text.System_SysTick_Init)
+    [Anonymous Symbol]                       0x00000fe0   Section        0  system_acm32f4.o(.text.System_USB_PHY_Config)
+    UART_Config_BaudRate                     0x00001019   Thumb Code   106  hal_uart.o(.text.UART_Config_BaudRate)
+    [Anonymous Symbol]                       0x00001018   Section        0  hal_uart.o(.text.UART_Config_BaudRate)
+    [Anonymous Symbol]                       0x00001084   Section        0  usb_app.o(.text.USB_Bus_Reset)
+    [Anonymous Symbol]                       0x000010e8   Section        0  app.o(.text.USB_CMD_proc)
+    [Anonymous Symbol]                       0x000011bc   Section        0  usb_app.o(.text.USB_IRQHandler)
+    [Anonymous Symbol]                       0x00001388   Section        0  usb_app.o(.text.USB_Monitor)
+    [Anonymous Symbol]                       0x00001468   Section        0  usb_app.o(.text.USB_Resume)
+    [Anonymous Symbol]                       0x00001498   Section        0  usb_app.o(.text.USB_Suspend)
+    [Anonymous Symbol]                       0x000014c8   Section        0  main.o(.text.Uart_Init)
+    __NVIC_ClearPendingIRQ                   0x0000153d   Thumb Code    16  hal_uart.o(.text.__NVIC_ClearPendingIRQ)
+    [Anonymous Symbol]                       0x0000153c   Section        0  hal_uart.o(.text.__NVIC_ClearPendingIRQ)
+    __NVIC_ClearPendingIRQ                   0x0000154d   Thumb Code    14  hal_fsusb.o(.text.__NVIC_ClearPendingIRQ)
+    [Anonymous Symbol]                       0x0000154c   Section        0  hal_fsusb.o(.text.__NVIC_ClearPendingIRQ)
+    __NVIC_EnableIRQ                         0x0000155d   Thumb Code    16  hal_uart.o(.text.__NVIC_EnableIRQ)
+    [Anonymous Symbol]                       0x0000155c   Section        0  hal_uart.o(.text.__NVIC_EnableIRQ)
+    __NVIC_EnableIRQ                         0x0000156d   Thumb Code    14  hal_fsusb.o(.text.__NVIC_EnableIRQ)
+    [Anonymous Symbol]                       0x0000156c   Section        0  hal_fsusb.o(.text.__NVIC_EnableIRQ)
+    __NVIC_SetPriority                       0x0000157d   Thumb Code    14  system_acm32f4.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x0000157c   Section        0  system_acm32f4.o(.text.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x0000158d   Thumb Code    14  hal_uart.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x0000158c   Section        0  hal_uart.o(.text.__NVIC_SetPriority)
+    __NVIC_SetPriorityGrouping               0x0000159d   Thumb Code    28  system_acm32f4.o(.text.__NVIC_SetPriorityGrouping)
+    [Anonymous Symbol]                       0x0000159c   Section        0  system_acm32f4.o(.text.__NVIC_SetPriorityGrouping)
+    [Anonymous Symbol]                       0x000015b8   Section        0  hal_uart.o(.text.fputc)
+    [Anonymous Symbol]                       0x000015d4   Section        0  main.o(.text.main)
+    [Anonymous Symbol]                       0x00001604   Section        0  usb_app.o(.text.reserved)
+    [Anonymous Symbol]                       0x00001620   Section        0  usb_app.o(.text.usb_clear_feature)
+    [Anonymous Symbol]                       0x00001694   Section        0  hal_fsusb.o(.text.usb_clear_stall)
+    [Anonymous Symbol]                       0x00001710   Section        0  usb_app.o(.text.usb_control_transfer)
+    [Anonymous Symbol]                       0x00001788   Section        0  usb_app.o(.text.usb_get_configuration)
+    [Anonymous Symbol]                       0x000017b8   Section        0  usb_app.o(.text.usb_get_description)
+    [Anonymous Symbol]                       0x00001908   Section        0  usb_app.o(.text.usb_get_interface)
+    [Anonymous Symbol]                       0x0000196c   Section        0  usb_app.o(.text.usb_get_status)
+    [Anonymous Symbol]                       0x000019e4   Section        0  hal_fsusb.o(.text.usb_send_stall)
+    [Anonymous Symbol]                       0x00001a58   Section        0  usb_app.o(.text.usb_set_address)
+    [Anonymous Symbol]                       0x00001aa0   Section        0  usb_app.o(.text.usb_set_configuration)
+    [Anonymous Symbol]                       0x00001ae0   Section        0  usb_app.o(.text.usb_set_feature)
+    [Anonymous Symbol]                       0x00001b54   Section        0  usb_app.o(.text.usb_set_interface)
+    [Anonymous Symbol]                       0x00001bbc   Section        0  usb_app.o(.text.usb_transfer_monitor)
+    i.__0printf$5                            0x00001d60   Section        0  printf5.o(i.__0printf$5)
+    i.__scatterload_copy                     0x00001d80   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00001d8e   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00001d90   Section       14  handlers.o(i.__scatterload_zeroinit)
+    _printf_core                             0x00001da1   Thumb Code   658  printf5.o(i._printf_core)
+    i._printf_core                           0x00001da0   Section        0  printf5.o(i._printf_core)
+    i.puts                                   0x00002060   Section        0  puts.o(i.puts)
+    .L.str.18                                0x0000217e   Data          16  usb_app.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x0000217e   Section        0  usb_app.o(.rodata.str1.1)
+    .Lstr.55                                 0x0000218e   Data          26  usb_app.o(.rodata.str1.1)
+    .Lstr.53                                 0x000021a8   Data          26  usb_app.o(.rodata.str1.1)
+    .Lstr.51                                 0x000021c2   Data          26  usb_app.o(.rodata.str1.1)
+    .Lstr.48                                 0x000021dc   Data          19  usb_app.o(.rodata.str1.1)
+    .Lstr.49                                 0x000021ef   Data          16  usb_app.o(.rodata.str1.1)
+    .Lstr.54                                 0x000021ff   Data          47  usb_app.o(.rodata.str1.1)
+    .Lstr.52                                 0x0000222e   Data          47  usb_app.o(.rodata.str1.1)
+    .data                                    0x20000000   Section        4  stdout.o(.data)
+    AltSetting                               0x20000068   Data           1  usb_app.o(.bss.AltSetting)
+    [Anonymous Symbol]                       0x20000068   Section        0  usb_app.o(.bss.AltSetting)
+    config_value                             0x200000c0   Data           1  usb_app.o(.bss.config_value)
+    [Anonymous Symbol]                       0x200000c0   Section        0  usb_app.o(.bss.config_value)
+    dev_req.0                                0x200000c1   Data           1  usb_app.o(.bss.dev_req.0)
+    [Anonymous Symbol]                       0x200000c1   Section        0  usb_app.o(.bss.dev_req.0)
+    dev_req.2                                0x200000c2   Data           2  usb_app.o(.bss.dev_req.2)
+    [Anonymous Symbol]                       0x200000c2   Section        0  usb_app.o(.bss.dev_req.2)
+    dev_req.3                                0x200000c4   Data           2  usb_app.o(.bss.dev_req.3)
+    [Anonymous Symbol]                       0x200000c4   Section        0  usb_app.o(.bss.dev_req.3)
+    dev_req.4                                0x200000c6   Data           2  usb_app.o(.bss.dev_req.4)
+    [Anonymous Symbol]                       0x200000c6   Section        0  usb_app.o(.bss.dev_req.4)
+    ep1_stall.0                              0x200000c8   Data           1  hal_fsusb.o(.bss.ep1_stall.0)
+    [Anonymous Symbol]                       0x200000c8   Section        0  hal_fsusb.o(.bss.ep1_stall.0)
+    ep1_stall.1                              0x200000ca   Data           1  hal_fsusb.o(.bss.ep1_stall.1)
+    [Anonymous Symbol]                       0x200000ca   Section        0  hal_fsusb.o(.bss.ep1_stall.1)
+    ep2_stall.0                              0x200000cc   Data           1  hal_fsusb.o(.bss.ep2_stall.0)
+    [Anonymous Symbol]                       0x200000cc   Section        0  hal_fsusb.o(.bss.ep2_stall.0)
+    ep2_stall.1                              0x200000ce   Data           1  hal_fsusb.o(.bss.ep2_stall.1)
+    [Anonymous Symbol]                       0x200000ce   Section        0  hal_fsusb.o(.bss.ep2_stall.1)
+    ep3_stall.0                              0x200000d0   Data           1  hal_fsusb.o(.bss.ep3_stall.0)
+    [Anonymous Symbol]                       0x200000d0   Section        0  hal_fsusb.o(.bss.ep3_stall.0)
+    ep3_stall.1                              0x200000d2   Data           1  hal_fsusb.o(.bss.ep3_stall.1)
+    [Anonymous Symbol]                       0x200000d2   Section        0  hal_fsusb.o(.bss.ep3_stall.1)
+    ep4_stall.0                              0x200000d4   Data           1  hal_fsusb.o(.bss.ep4_stall.0)
+    [Anonymous Symbol]                       0x200000d4   Section        0  hal_fsusb.o(.bss.ep4_stall.0)
+    ep4_stall.1                              0x200000d6   Data           1  hal_fsusb.o(.bss.ep4_stall.1)
+    [Anonymous Symbol]                       0x200000d6   Section        0  hal_fsusb.o(.bss.ep4_stall.1)
+    usb_device_status                        0x200004fa   Data           2  usb_app.o(.bss.usb_device_status)
+    [Anonymous Symbol]                       0x200004fa   Section        0  usb_app.o(.bss.usb_device_status)
+    STACK                                    0x20000500   Section     2048  startup_acm32f4.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$8M$VFPi5$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x00000000   Data           0  startup_acm32f4.o(RESET)
+    _printf_a                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_c                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_charcount                        0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_d                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_e                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_f                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_flags                            0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_fp_dec                           0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_fp_hex                           0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_g                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_i                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_int_dec                          0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_l                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_lc                               0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_ll                               0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_lld                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_lli                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_llo                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_llu                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_llx                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_longlong_dec                     0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_longlong_hex                     0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_longlong_oct                     0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_ls                               0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_mbtowc                           0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_n                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_o                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_p                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_percent                          0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_pre_padding                      0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_return_value                     0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_s                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_sizespec                         0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_str                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_truncate_signed                  0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_truncate_unsigned                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_u                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_wc                               0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_wctomb                           0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_widthprec                        0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_x                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    HAL_UART_ErrorCallback                    - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __main                                   0x000000e5   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x000000e5   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x000000e9   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x000000ed   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x000000ed   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x000000ed   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x000000ed   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x000000f5   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x000000f5   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x000000f9   Thumb Code     8  startup_acm32f4.o(.text)
+    NMI_Handler                              0x00000101   Thumb Code     2  startup_acm32f4.o(.text)
+    MemManage_Handler                        0x00000105   Thumb Code     2  startup_acm32f4.o(.text)
+    BusFault_Handler                         0x00000107   Thumb Code     2  startup_acm32f4.o(.text)
+    UsageFault_Handler                       0x00000109   Thumb Code     2  startup_acm32f4.o(.text)
+    SVC_Handler                              0x0000010b   Thumb Code     2  startup_acm32f4.o(.text)
+    DebugMon_Handler                         0x0000010d   Thumb Code     2  startup_acm32f4.o(.text)
+    PendSV_Handler                           0x0000010f   Thumb Code     2  startup_acm32f4.o(.text)
+    ADC_IRQHandler                           0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    AES_IRQHandler                           0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    CAN1_IRQHandler                          0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    CAN2_IRQHandler                          0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    CLKRDY_IRQHandler                        0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    DAC_IRQHandler                           0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    DMA_IRQHandler                           0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    EFC_IRQHandler                           0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    EXTI_IRQHandler                          0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    FPU_IRQHandler                           0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    GPIOAB_IRQHandler                        0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    GPIOCD_IRQHandler                        0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    GPIOEF_IRQHandler                        0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    I2C1_IRQHandler                          0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    I2C2_IRQHandler                          0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    I2S_IRQHandler                           0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    LPUART_IRQHandler                        0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    RSV_IRQHandler                           0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    RTC_IRQHandler                           0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    SPI1_IRQHandler                          0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    SPI2_IRQHandler                          0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    SPI3_IRQHandler                          0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    SPI4_IRQHandler                          0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    SRAM_PARITY_IRQHandler                   0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    TIM14_IRQHandler                         0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    TIM15_IRQHandler                         0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    TIM16_IRQHandler                         0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    TIM17_IRQHandler                         0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    TIM1_BRK_UP_TRG_COM_IRQHandler           0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    TIM1_CC_IRQHandler                       0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    TIM2_IRQHandler                          0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    TIM3_IRQHandler                          0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    TIM4_IRQHandler                          0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    TIM6_IRQHandler                          0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    TIM7_IRQHandler                          0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    UART1_IRQHandler                         0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    UART2_IRQHandler                         0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    UART3_IRQHandler                         0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    UART4_IRQHandler                         0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    WDT_IRQHandler                           0x00000113   Thumb Code     0  startup_acm32f4.o(.text)
+    __aeabi_uldivmod                         0x0000011d   Thumb Code    98  uldiv.o(.text)
+    __aeabi_llsl                             0x0000017f   Thumb Code    30  llshl.o(.text)
+    _ll_shift_l                              0x0000017f   Thumb Code     0  llshl.o(.text)
+    __aeabi_llsr                             0x0000019d   Thumb Code    32  llushr.o(.text)
+    _ll_ushift_r                             0x0000019d   Thumb Code     0  llushr.o(.text)
+    __scatterload                            0x000001bd   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x000001bd   Thumb Code     0  init.o(.text)
+    HAL_EFlash_Init                          0x000001e1   Thumb Code     8  hal_eflash.o(.text.HAL_EFlash_Init)
+    HAL_EFlash_Init_Para                     0x000001e9   Thumb Code   284  hal_eflash_ex.o(.text.HAL_EFlash_Init_Para)
+    HAL_FSUSB_EP0_Send_Empty_Packet          0x00000305   Thumb Code    12  hal_fsusb.o(.text.HAL_FSUSB_EP0_Send_Empty_Packet)
+    HAL_FSUSB_EP0_Send_Stall                 0x00000311   Thumb Code    32  hal_fsusb.o(.text.HAL_FSUSB_EP0_Send_Stall)
+    HAL_FSUSB_Get_FIFO_Length                0x00000331   Thumb Code    14  hal_fsusb.o(.text.HAL_FSUSB_Get_FIFO_Length)
+    HAL_FSUSB_Init                           0x00000341   Thumb Code   118  hal_fsusb.o(.text.HAL_FSUSB_Init)
+    HAL_FSUSB_MSP_Init                       0x000003b9   Thumb Code    54  hal_fsusb.o(.text.HAL_FSUSB_MSP_Init)
+    HAL_FSUSB_Read_EP_MEM8                   0x000003f1   Thumb Code    38  hal_fsusb.o(.text.HAL_FSUSB_Read_EP_MEM8)
+    HAL_FSUSB_Receive_Data                   0x00000419   Thumb Code   208  hal_fsusb.o(.text.HAL_FSUSB_Receive_Data)
+    HAL_FSUSB_Send_Data                      0x000004e9   Thumb Code   236  hal_fsusb.o(.text.HAL_FSUSB_Send_Data)
+    HAL_FSUSB_Start_EP_Transfer              0x000005d5   Thumb Code   190  hal_fsusb.o(.text.HAL_FSUSB_Start_EP_Transfer)
+    HAL_FSUSB_Write_EP_MEM8                  0x00000695   Thumb Code    38  hal_fsusb.o(.text.HAL_FSUSB_Write_EP_MEM8)
+    HAL_GPIO_Init                            0x000006bd   Thumb Code   872  hal_gpio.o(.text.HAL_GPIO_Init)
+    HAL_UART_Init                            0x00000a25   Thumb Code   266  hal_uart.o(.text.HAL_UART_Init)
+    HAL_UART_MspInit                         0x00000b31   Thumb Code   112  hal_uart.o(.text.HAL_UART_MspInit)
+    HAL_USB_Get_Stall_Status                 0x00000ba1   Thumb Code   114  hal_fsusb.o(.text.HAL_USB_Get_Stall_Status)
+    HAL_Verify_Chip                          0x00000c15   Thumb Code    18  hal_eflash_ex.o(.text.HAL_Verify_Chip)
+    HardFault_Handler                        0x00000c29   Thumb Code     2  system_acm32f4.o(.text.HardFault_Handler)
+    Set_Pll_Div                              0x00000c2d   Thumb Code   234  system_acm32f4.o(.text.Set_Pll_Div)
+    SysTick_Handler                          0x00000d3d   Thumb Code    16  system_acm32f4.o(.text.SysTick_Handler)
+    System_Clock_Init                        0x00000d4d   Thumb Code   264  system_acm32f4.o(.text.System_Clock_Init)
+    System_Core_Config                       0x00000e55   Thumb Code    24  system_acm32f4.o(.text.System_Core_Config)
+    System_Delay                             0x00000e6d   Thumb Code    18  system_acm32f4.o(.text.System_Delay)
+    System_EnableIAccelerate                 0x00000e81   Thumb Code    54  system_accelerate.o(.text.System_EnableIAccelerate)
+    System_Get_APBClock                      0x00000eb9   Thumb Code    12  system_acm32f4.o(.text.System_Get_APBClock)
+    System_Get_SystemClock                   0x00000ec5   Thumb Code    12  system_acm32f4.o(.text.System_Get_SystemClock)
+    System_Init                              0x00000ed1   Thumb Code    58  system_acm32f4.o(.text.System_Init)
+    System_Module_Enable                     0x00000f0d   Thumb Code    50  system_acm32f4.o(.text.System_Module_Enable)
+    System_Module_Reset                      0x00000f41   Thumb Code    72  system_acm32f4.o(.text.System_Module_Reset)
+    System_Set_Buzzer_Divider                0x00000f89   Thumb Code    42  system_acm32f4.o(.text.System_Set_Buzzer_Divider)
+    System_SysTick_Init                      0x00000fb5   Thumb Code    44  system_acm32f4.o(.text.System_SysTick_Init)
+    System_USB_PHY_Config                    0x00000fe1   Thumb Code    56  system_acm32f4.o(.text.System_USB_PHY_Config)
+    USB_Bus_Reset                            0x00001085   Thumb Code    98  usb_app.o(.text.USB_Bus_Reset)
+    USB_CMD_proc                             0x000010e9   Thumb Code   212  app.o(.text.USB_CMD_proc)
+    USB_IRQHandler                           0x000011bd   Thumb Code   458  usb_app.o(.text.USB_IRQHandler)
+    USB_Monitor                              0x00001389   Thumb Code   224  usb_app.o(.text.USB_Monitor)
+    USB_Resume                               0x00001469   Thumb Code    48  usb_app.o(.text.USB_Resume)
+    USB_Suspend                              0x00001499   Thumb Code    48  usb_app.o(.text.USB_Suspend)
+    Uart_Init                                0x000014c9   Thumb Code   116  main.o(.text.Uart_Init)
+    fputc                                    0x000015b9   Thumb Code    28  hal_uart.o(.text.fputc)
+    main                                     0x000015d5   Thumb Code    48  main.o(.text.main)
+    reserved                                 0x00001605   Thumb Code    28  usb_app.o(.text.reserved)
+    usb_clear_feature                        0x00001621   Thumb Code   116  usb_app.o(.text.usb_clear_feature)
+    usb_clear_stall                          0x00001695   Thumb Code   124  hal_fsusb.o(.text.usb_clear_stall)
+    usb_control_transfer                     0x00001711   Thumb Code   120  usb_app.o(.text.usb_control_transfer)
+    usb_get_configuration                    0x00001789   Thumb Code    48  usb_app.o(.text.usb_get_configuration)
+    usb_get_description                      0x000017b9   Thumb Code   336  usb_app.o(.text.usb_get_description)
+    usb_get_interface                        0x00001909   Thumb Code   100  usb_app.o(.text.usb_get_interface)
+    usb_get_status                           0x0000196d   Thumb Code   120  usb_app.o(.text.usb_get_status)
+    usb_send_stall                           0x000019e5   Thumb Code   116  hal_fsusb.o(.text.usb_send_stall)
+    usb_set_address                          0x00001a59   Thumb Code    72  usb_app.o(.text.usb_set_address)
+    usb_set_configuration                    0x00001aa1   Thumb Code    64  usb_app.o(.text.usb_set_configuration)
+    usb_set_feature                          0x00001ae1   Thumb Code   116  usb_app.o(.text.usb_set_feature)
+    usb_set_interface                        0x00001b55   Thumb Code   104  usb_app.o(.text.usb_set_interface)
+    usb_transfer_monitor                     0x00001bbd   Thumb Code   420  usb_app.o(.text.usb_transfer_monitor)
+    __0printf$5                              0x00001d61   Thumb Code    22  printf5.o(i.__0printf$5)
+    __1printf$5                              0x00001d61   Thumb Code     0  printf5.o(i.__0printf$5)
+    __2printf                                0x00001d61   Thumb Code     0  printf5.o(i.__0printf$5)
+    __scatterload_copy                       0x00001d81   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00001d8f   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00001d91   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    puts                                     0x00002061   Thumb Code    30  puts.o(i.puts)
+    StrDesc_LanguageID                       0x00002084   Data           4  usb_desc.o(.rodata.StrDesc_LanguageID)
+    StrDesc_Manufacturer                     0x00002088   Data          22  usb_desc.o(.rodata.StrDesc_Manufacturer)
+    StrDesc_Product                          0x0000209e   Data          30  usb_desc.o(.rodata.StrDesc_Product)
+    StrDesc_SerialNumber                     0x000020bc   Data          34  usb_desc.o(.rodata.StrDesc_SerialNumber)
+    System_Clock_Map                         0x000020e0   Data         140  system_acm32f4.o(.rodata.System_Clock_Map)
+    device_descr                             0x0000216c   Data          18  usb_desc.o(.rodata.device_descr)
+    Region$$Table$$Base                      0x00002260   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00002280   Number         0  anon$$obj.o(Region$$Table)
+    __stdout                                 0x20000000   Data           4  stdout.o(.data)
+    StandardDeviceRequest                    0x20000004   Data          64  usb_app.o(.data.StandardDeviceRequest)
+    g_bulk_ack                               0x20000044   Data           4  app.o(.data.g_bulk_ack)
+    usb_descriptor_nconfig                   0x20000048   Data          32  usb_desc.o(.data.usb_descriptor_nconfig)
+    UART1_Handle                             0x2000006c   Data          72  main.o(.bss.UART1_Handle)
+    Uart_Debug                               0x200000b4   Data           4  hal_uart.o(.bss.Uart_Debug)
+    bulk_io_request                          0x200000b8   Data           8  app.o(.bss.bulk_io_request)
+    flag_usb_ep1_int                         0x200000d8   Data           4  usb_app.o(.bss.flag_usb_ep1_int)
+    flag_usb_ep2_int                         0x200000dc   Data           4  usb_app.o(.bss.flag_usb_ep2_int)
+    flag_usb_ep3_int                         0x200000e0   Data           4  usb_app.o(.bss.flag_usb_ep3_int)
+    flag_usb_ep4_int                         0x200000e4   Data           4  usb_app.o(.bss.flag_usb_ep4_int)
+    flag_usb_int                             0x200000e8   Data           4  usb_app.o(.bss.flag_usb_int)
+    g_usb_data_buffer                        0x200000ec   Data        1024  app.o(.bss.g_usb_data_buffer)
+    gu32_APBClock                            0x200004ec   Data           4  system_acm32f4.o(.bss.gu32_APBClock)
+    gu32_SystemClock                         0x200004f0   Data           4  system_acm32f4.o(.bss.gu32_SystemClock)
+    gu32_SystemCount                         0x200004f4   Data           4  system_acm32f4.o(.bss.gu32_SystemCount)
+    in_ep_index                              0x200004f8   Data           1  usb_app.o(.bss.in_ep_index)
+    out_ep_index                             0x200004f9   Data           1  usb_app.o(.bss.out_ep_index)
+    __initial_sp                             0x20000d00   Data           0  startup_acm32f4.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000000e5
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x000022e8, Max: 0x00020000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00002280, Max: 0x00020000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x000000e4   Data   RO            3    RESET               startup_acm32f4.o
+    0x000000e4   0x000000e4   0x00000000   Code   RO          410  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x000000e4   0x000000e4   0x00000004   Code   RO          682    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x000000e8   0x000000e8   0x00000004   Code   RO          685    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x000000ec   0x000000ec   0x00000000   Code   RO          687    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x000000ec   0x000000ec   0x00000000   Code   RO          689    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x000000ec   0x000000ec   0x00000008   Code   RO          690    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x000000f4   0x000000f4   0x00000000   Code   RO          692    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x000000f4   0x000000f4   0x00000000   Code   RO          694    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x000000f4   0x000000f4   0x00000004   Code   RO          683    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x000000f8   0x000000f8   0x00000024   Code   RO            4    .text               startup_acm32f4.o
+    0x0000011c   0x0000011c   0x00000062   Code   RO          417    .text               mc_w.l(uldiv.o)
+    0x0000017e   0x0000017e   0x0000001e   Code   RO          708    .text               mc_w.l(llshl.o)
+    0x0000019c   0x0000019c   0x00000020   Code   RO          710    .text               mc_w.l(llushr.o)
+    0x000001bc   0x000001bc   0x00000024   Code   RO          723    .text               mc_w.l(init.o)
+    0x000001e0   0x000001e0   0x00000008   Code   RO          253    .text.HAL_EFlash_Init  hal_eflash.o
+    0x000001e8   0x000001e8   0x0000011c   Code   RO          397    .text.HAL_EFlash_Init_Para  HAL_EFlash_EX.lib(hal_eflash_ex.o)
+    0x00000304   0x00000304   0x0000000c   Code   RO          233    .text.HAL_FSUSB_EP0_Send_Empty_Packet  hal_fsusb.o
+    0x00000310   0x00000310   0x00000020   Code   RO          235    .text.HAL_FSUSB_EP0_Send_Stall  hal_fsusb.o
+    0x00000330   0x00000330   0x0000000e   Code   RO          213    .text.HAL_FSUSB_Get_FIFO_Length  hal_fsusb.o
+    0x0000033e   0x0000033e   0x00000002   PAD
+    0x00000340   0x00000340   0x00000076   Code   RO          211    .text.HAL_FSUSB_Init  hal_fsusb.o
+    0x000003b6   0x000003b6   0x00000002   PAD
+    0x000003b8   0x000003b8   0x00000036   Code   RO          205    .text.HAL_FSUSB_MSP_Init  hal_fsusb.o
+    0x000003ee   0x000003ee   0x00000002   PAD
+    0x000003f0   0x000003f0   0x00000026   Code   RO          223    .text.HAL_FSUSB_Read_EP_MEM8  hal_fsusb.o
+    0x00000416   0x00000416   0x00000002   PAD
+    0x00000418   0x00000418   0x000000d0   Code   RO          231    .text.HAL_FSUSB_Receive_Data  hal_fsusb.o
+    0x000004e8   0x000004e8   0x000000ec   Code   RO          229    .text.HAL_FSUSB_Send_Data  hal_fsusb.o
+    0x000005d4   0x000005d4   0x000000be   Code   RO          227    .text.HAL_FSUSB_Start_EP_Transfer  hal_fsusb.o
+    0x00000692   0x00000692   0x00000002   PAD
+    0x00000694   0x00000694   0x00000026   Code   RO          225    .text.HAL_FSUSB_Write_EP_MEM8  hal_fsusb.o
+    0x000006ba   0x000006ba   0x00000002   PAD
+    0x000006bc   0x000006bc   0x00000368   Code   RO          128    .text.HAL_GPIO_Init  hal_gpio.o
+    0x00000a24   0x00000a24   0x0000010a   Code   RO          160    .text.HAL_UART_Init  hal_uart.o
+    0x00000b2e   0x00000b2e   0x00000002   PAD
+    0x00000b30   0x00000b30   0x00000070   Code   RO          152    .text.HAL_UART_MspInit  hal_uart.o
+    0x00000ba0   0x00000ba0   0x00000072   Code   RO          217    .text.HAL_USB_Get_Stall_Status  hal_fsusb.o
+    0x00000c12   0x00000c12   0x00000002   PAD
+    0x00000c14   0x00000c14   0x00000012   Code   RO          395    .text.HAL_Verify_Chip  HAL_EFlash_EX.lib(hal_eflash_ex.o)
+    0x00000c26   0x00000c26   0x00000002   PAD
+    0x00000c28   0x00000c28   0x00000002   Code   RO           11    .text.HardFault_Handler  system_acm32f4.o
+    0x00000c2a   0x00000c2a   0x00000002   PAD
+    0x00000c2c   0x00000c2c   0x000000ea   Code   RO           31    .text.Set_Pll_Div   system_acm32f4.o
+    0x00000d16   0x00000d16   0x00000002   PAD
+    0x00000d18   0x00000d18   0x00000024   Code   RO           17    .text.SysTick_Config  system_acm32f4.o
+    0x00000d3c   0x00000d3c   0x00000010   Code   RO           13    .text.SysTick_Handler  system_acm32f4.o
+    0x00000d4c   0x00000d4c   0x00000108   Code   RO           27    .text.System_Clock_Init  system_acm32f4.o
+    0x00000e54   0x00000e54   0x00000018   Code   RO           29    .text.System_Core_Config  system_acm32f4.o
+    0x00000e6c   0x00000e6c   0x00000012   Code   RO           39    .text.System_Delay  system_acm32f4.o
+    0x00000e7e   0x00000e7e   0x00000002   PAD
+    0x00000e80   0x00000e80   0x00000036   Code   RO          362    .text.System_EnableIAccelerate  System_Accelerate.lib(system_accelerate.o)
+    0x00000eb6   0x00000eb6   0x00000002   PAD
+    0x00000eb8   0x00000eb8   0x0000000c   Code   RO           35    .text.System_Get_APBClock  system_acm32f4.o
+    0x00000ec4   0x00000ec4   0x0000000c   Code   RO           33    .text.System_Get_SystemClock  system_acm32f4.o
+    0x00000ed0   0x00000ed0   0x0000003a   Code   RO           21    .text.System_Init   system_acm32f4.o
+    0x00000f0a   0x00000f0a   0x00000002   PAD
+    0x00000f0c   0x00000f0c   0x00000032   Code   RO           41    .text.System_Module_Enable  system_acm32f4.o
+    0x00000f3e   0x00000f3e   0x00000002   PAD
+    0x00000f40   0x00000f40   0x00000048   Code   RO           37    .text.System_Module_Reset  system_acm32f4.o
+    0x00000f88   0x00000f88   0x0000002a   Code   RO           23    .text.System_Set_Buzzer_Divider  system_acm32f4.o
+    0x00000fb2   0x00000fb2   0x00000002   PAD
+    0x00000fb4   0x00000fb4   0x0000002c   Code   RO           15    .text.System_SysTick_Init  system_acm32f4.o
+    0x00000fe0   0x00000fe0   0x00000038   Code   RO           73    .text.System_USB_PHY_Config  system_acm32f4.o
+    0x00001018   0x00001018   0x0000006a   Code   RO          162    .text.UART_Config_BaudRate  hal_uart.o
+    0x00001082   0x00001082   0x00000002   PAD
+    0x00001084   0x00001084   0x00000062   Code   RO          305    .text.USB_Bus_Reset  usb_app.o
+    0x000010e6   0x000010e6   0x00000002   PAD
+    0x000010e8   0x000010e8   0x000000d4   Code   RO          267    .text.USB_CMD_proc  app.o
+    0x000011bc   0x000011bc   0x000001ca   Code   RO          279    .text.USB_IRQHandler  usb_app.o
+    0x00001386   0x00001386   0x00000002   PAD
+    0x00001388   0x00001388   0x000000e0   Code   RO          281    .text.USB_Monitor   usb_app.o
+    0x00001468   0x00001468   0x00000030   Code   RO          309    .text.USB_Resume    usb_app.o
+    0x00001498   0x00001498   0x00000030   Code   RO          307    .text.USB_Suspend   usb_app.o
+    0x000014c8   0x000014c8   0x00000074   Code   RO          349    .text.Uart_Init     main.o
+    0x0000153c   0x0000153c   0x00000010   Code   RO          154    .text.__NVIC_ClearPendingIRQ  hal_uart.o
+    0x0000154c   0x0000154c   0x0000000e   Code   RO          207    .text.__NVIC_ClearPendingIRQ  hal_fsusb.o
+    0x0000155a   0x0000155a   0x00000002   PAD
+    0x0000155c   0x0000155c   0x00000010   Code   RO          158    .text.__NVIC_EnableIRQ  hal_uart.o
+    0x0000156c   0x0000156c   0x0000000e   Code   RO          209    .text.__NVIC_EnableIRQ  hal_fsusb.o
+    0x0000157a   0x0000157a   0x00000002   PAD
+    0x0000157c   0x0000157c   0x0000000e   Code   RO           75    .text.__NVIC_SetPriority  system_acm32f4.o
+    0x0000158a   0x0000158a   0x00000002   PAD
+    0x0000158c   0x0000158c   0x0000000e   Code   RO          156    .text.__NVIC_SetPriority  hal_uart.o
+    0x0000159a   0x0000159a   0x00000002   PAD
+    0x0000159c   0x0000159c   0x0000001c   Code   RO           25    .text.__NVIC_SetPriorityGrouping  system_acm32f4.o
+    0x000015b8   0x000015b8   0x0000001c   Code   RO          194    .text.fputc         hal_uart.o
+    0x000015d4   0x000015d4   0x00000030   Code   RO          351    .text.main          main.o
+    0x00001604   0x00001604   0x0000001c   Code   RO          301    .text.reserved      usb_app.o
+    0x00001620   0x00001620   0x00000074   Code   RO          285    .text.usb_clear_feature  usb_app.o
+    0x00001694   0x00001694   0x0000007c   Code   RO          219    .text.usb_clear_stall  hal_fsusb.o
+    0x00001710   0x00001710   0x00000078   Code   RO          303    .text.usb_control_transfer  usb_app.o
+    0x00001788   0x00001788   0x00000030   Code   RO          291    .text.usb_get_configuration  usb_app.o
+    0x000017b8   0x000017b8   0x00000150   Code   RO          299    .text.usb_get_description  usb_app.o
+    0x00001908   0x00001908   0x00000064   Code   RO          295    .text.usb_get_interface  usb_app.o
+    0x0000196c   0x0000196c   0x00000078   Code   RO          283    .text.usb_get_status  usb_app.o
+    0x000019e4   0x000019e4   0x00000074   Code   RO          221    .text.usb_send_stall  hal_fsusb.o
+    0x00001a58   0x00001a58   0x00000048   Code   RO          289    .text.usb_set_address  usb_app.o
+    0x00001aa0   0x00001aa0   0x00000040   Code   RO          293    .text.usb_set_configuration  usb_app.o
+    0x00001ae0   0x00001ae0   0x00000074   Code   RO          287    .text.usb_set_feature  usb_app.o
+    0x00001b54   0x00001b54   0x00000068   Code   RO          297    .text.usb_set_interface  usb_app.o
+    0x00001bbc   0x00001bbc   0x000001a4   Code   RO          311    .text.usb_transfer_monitor  usb_app.o
+    0x00001d60   0x00001d60   0x00000020   Code   RO          554    i.__0printf$5       mc_w.l(printf5.o)
+    0x00001d80   0x00001d80   0x0000000e   Code   RO          731    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00001d8e   0x00001d8e   0x00000002   Code   RO          732    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00001d90   0x00001d90   0x0000000e   Code   RO          733    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00001d9e   0x00001d9e   0x00000002   PAD
+    0x00001da0   0x00001da0   0x000002c0   Code   RO          561    i._printf_core      mc_w.l(printf5.o)
+    0x00002060   0x00002060   0x00000024   Code   RO          413    i.puts              mc_w.l(puts.o)
+    0x00002084   0x00002084   0x00000004   Data   RO          340    .rodata.StrDesc_LanguageID  usb_desc.o
+    0x00002088   0x00002088   0x00000016   Data   RO          341    .rodata.StrDesc_Manufacturer  usb_desc.o
+    0x0000209e   0x0000209e   0x0000001e   Data   RO          342    .rodata.StrDesc_Product  usb_desc.o
+    0x000020bc   0x000020bc   0x00000022   Data   RO          343    .rodata.StrDesc_SerialNumber  usb_desc.o
+    0x000020de   0x000020de   0x00000002   PAD
+    0x000020e0   0x000020e0   0x0000008c   Data   RO           79    .rodata.System_Clock_Map  system_acm32f4.o
+    0x0000216c   0x0000216c   0x00000012   Data   RO          338    .rodata.device_descr  usb_desc.o
+    0x0000217e   0x0000217e   0x000000df   Data   RO          325    .rodata.str1.1      usb_app.o
+    0x0000225d   0x0000225d   0x00000003   PAD
+    0x00002260   0x00002260   0x00000020   Data   RO          730    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x00002280, Size: 0x00000d00, Max: 0x00030000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00002280   0x00000004   Data   RW          696    .data               mc_w.l(stdout.o)
+    0x20000004   0x00002284   0x00000040   Data   RW          324    .data.StandardDeviceRequest  usb_app.o
+    0x20000044   0x000022c4   0x00000004   Data   RW          269    .data.g_bulk_ack    app.o
+    0x20000048   0x000022c8   0x00000020   Data   RW          339    .data.usb_descriptor_nconfig  usb_desc.o
+    0x20000068        -       0x00000001   Zero   RW          323    .bss.AltSetting     usb_app.o
+    0x20000069   0x000022e8   0x00000003   PAD
+    0x2000006c        -       0x00000048   Zero   RW          353    .bss.UART1_Handle   main.o
+    0x200000b4        -       0x00000004   Zero   RW          196    .bss.Uart_Debug     hal_uart.o
+    0x200000b8        -       0x00000008   Zero   RW          270    .bss.bulk_io_request  app.o
+    0x200000c0        -       0x00000001   Zero   RW          322    .bss.config_value   usb_app.o
+    0x200000c1        -       0x00000001   Zero   RW          326    .bss.dev_req.0      usb_app.o
+    0x200000c2        -       0x00000002   Zero   RW          327    .bss.dev_req.2      usb_app.o
+    0x200000c4        -       0x00000002   Zero   RW          328    .bss.dev_req.3      usb_app.o
+    0x200000c6        -       0x00000002   Zero   RW          329    .bss.dev_req.4      usb_app.o
+    0x200000c8        -       0x00000001   Zero   RW          237    .bss.ep1_stall.0    hal_fsusb.o
+    0x200000c9   0x000022e8   0x00000001   PAD
+    0x200000ca        -       0x00000001   Zero   RW          238    .bss.ep1_stall.1    hal_fsusb.o
+    0x200000cb   0x000022e8   0x00000001   PAD
+    0x200000cc        -       0x00000001   Zero   RW          239    .bss.ep2_stall.0    hal_fsusb.o
+    0x200000cd   0x000022e8   0x00000001   PAD
+    0x200000ce        -       0x00000001   Zero   RW          240    .bss.ep2_stall.1    hal_fsusb.o
+    0x200000cf   0x000022e8   0x00000001   PAD
+    0x200000d0        -       0x00000001   Zero   RW          241    .bss.ep3_stall.0    hal_fsusb.o
+    0x200000d1   0x000022e8   0x00000001   PAD
+    0x200000d2        -       0x00000001   Zero   RW          242    .bss.ep3_stall.1    hal_fsusb.o
+    0x200000d3   0x000022e8   0x00000001   PAD
+    0x200000d4        -       0x00000001   Zero   RW          243    .bss.ep4_stall.0    hal_fsusb.o
+    0x200000d5   0x000022e8   0x00000001   PAD
+    0x200000d6        -       0x00000001   Zero   RW          244    .bss.ep4_stall.1    hal_fsusb.o
+    0x200000d7   0x000022e8   0x00000001   PAD
+    0x200000d8        -       0x00000004   Zero   RW          314    .bss.flag_usb_ep1_int  usb_app.o
+    0x200000dc        -       0x00000004   Zero   RW          315    .bss.flag_usb_ep2_int  usb_app.o
+    0x200000e0        -       0x00000004   Zero   RW          316    .bss.flag_usb_ep3_int  usb_app.o
+    0x200000e4        -       0x00000004   Zero   RW          317    .bss.flag_usb_ep4_int  usb_app.o
+    0x200000e8        -       0x00000004   Zero   RW          313    .bss.flag_usb_int   usb_app.o
+    0x200000ec        -       0x00000400   Zero   RW          271    .bss.g_usb_data_buffer  app.o
+    0x200004ec        -       0x00000004   Zero   RW           80    .bss.gu32_APBClock  system_acm32f4.o
+    0x200004f0        -       0x00000004   Zero   RW           78    .bss.gu32_SystemClock  system_acm32f4.o
+    0x200004f4        -       0x00000004   Zero   RW           77    .bss.gu32_SystemCount  system_acm32f4.o
+    0x200004f8        -       0x00000001   Zero   RW          320    .bss.in_ep_index    usb_app.o
+    0x200004f9        -       0x00000001   Zero   RW          319    .bss.out_ep_index   usb_app.o
+    0x200004fa        -       0x00000002   Zero   RW          321    .bss.usb_device_status  usb_app.o
+    0x200004fc   0x000022e8   0x00000004   PAD
+    0x20000500        -       0x00000800   Zero   RW            1    STACK               startup_acm32f4.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       212         72          0          4       1032       1406   app.o
+         8          0          0          0          0       1645   hal_eflash.o
+      1322         12          0          0          8      10008   hal_fsusb.o
+       872          0          0          0          0       7563   hal_gpio.o
+       558          0          0          0          4      12938   hal_uart.o
+       164         60          0          0         72       2407   main.o
+        36          8        228          0       2048        928   startup_acm32f4.o
+       982          0        140          0         12      14347   system_acm32f4.o
+      2520        560        223         64         33       5885   usb_app.o
+         0          0        108         32          0       2211   usb_desc.o
+
+    ----------------------------------------------------------------------
+      6716        712        736        100       3224      59338   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        42          0          5          0         15          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+       302          0          0          0          0       4364   hal_eflash_ex.o
+        54          0          0          0          0       3896   system_accelerate.o
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        30          0          0          0          0         68   llshl.o
+        32          0          0          0          0         68   llushr.o
+       736         56          0          0          0        184   printf5.o
+        36          6          0          0          0         80   puts.o
+         0          0          0          4          0          0   stdout.o
+        98          0          0          0          0         92   uldiv.o
+
+    ----------------------------------------------------------------------
+      1380         78          0          4          0       8820   Library Totals
+         6          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       302          0          0          0          0       4364   HAL_EFlash_EX.lib
+        54          0          0          0          0       3896   System_Accelerate.lib
+      1018         78          0          4          0        560   mc_w.l
+
+    ----------------------------------------------------------------------
+      1380         78          0          4          0       8820   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      8096        790        736        104       3224      68010   Grand Totals
+      8096        790        736        104       3224      68010   ELF Image Totals
+      8096        790        736        104          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 8832 (   8.63kB)
+    Total RW  Size (RW Data + ZI Data)              3328 (   3.25kB)
+    Total ROM Size (Code + RO Data + RW Data)       8936 (   8.73kB)
+
+==============================================================================
+
