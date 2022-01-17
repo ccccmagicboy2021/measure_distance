@@ -162,6 +162,7 @@ static void PWM_Mode_Config(void)
     PWM_TimeBaseInitTypeDef  TimeBaseInit;
     PWM_OutputInitTypeDef OutInit;
     NVIC_InitTypeDef NVIC_InitStruct;
+    unsigned int fs = 0;
     
     /* PA8复用为PWM功能 */	
     GPIO_PinAFConfig(PWM0_CH1_GPIO_Port, PWM0_CH1_PinSource, GPIO_AF_2);
@@ -174,8 +175,9 @@ static void PWM_Mode_Config(void)
     NVIC_Init(&NVIC_InitStruct);
     
     //初始化时基
-    TimeBaseInit.CounterReload = 1024-1;            //分辨率
-    TimeBaseInit.Prescaler = 200-1;
+    fs = 2000;
+    TimeBaseInit.CounterReload = 1000-1;            //分辨率
+    TimeBaseInit.Prescaler = (SystemCoreClock/(1000*fs))-1;
     TimeBaseInit.CounterMode = PWM_CNT_MODE_UP;     //锯齿波
     TimeBaseInit.CounterDirRv_EN = PWM_CounterDirRv_DIS;
     PMW_TimeBaseInit(PWM0, &TimeBaseInit);
@@ -195,16 +197,14 @@ static void PWM_Mode_Config(void)
     OutInit.ControlN = PWM_CHNCTL_DISABLE;
     OutInit.DeathTime = 0;
     OutInit.IdleState = PWM_IDLE_HIGH;
-    OutInit.CompareValue = 512-1;
+    OutInit.CompareValue = 500-1;
     PWM_OutputInit(PWM0, &OutInit);
     
-    PWM_IntConfig(PWM0, PWM_FLAG_MR0, ENABLE);
+    PWM_IntConfig(PWM0, PWM_FLAG_MR4, DISABLE);
 	PWM_BreakInput_Cmd(PWM0, DISABLE);
 	PWM_BKI_LevelConfig(PWM0, PWM_BKI_LOWLEVEL);
     /*使能PWM计数器*/
     PWM_Cmd(PWM0, ENABLE);
-    
-    //PWM_SetCompare(PWM0, PWM_CH_4, 0);	
 }
 
 int main(void)

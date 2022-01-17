@@ -577,7 +577,7 @@ void PWM_IntConfig(CMSDK_PWM_TypeDef* PWMx, uint32_t PWM_INT, FunctionalState Ne
   assert_param(IS_PWM_PWM_INT(PWM_INT));	
   assert_param(IS_FUNCTIONAL_STATE(NewState));
 	
-	if((PWM_INT==PWM_INT_MR0) | (PWM_INT==PWM_INT_MR0) | (PWM_INT==PWM_INT_MR0) | (PWM_INT==PWM_INT_MR0))
+	if((PWM_INT==PWM_INT_MR0) | (PWM_INT==PWM_INT_MR1) | (PWM_INT==PWM_INT_MR2) | (PWM_INT==PWM_INT_MR3) | (PWM_INT==PWM_INT_MR4))
 	{
     if (NewState != DISABLE)
     {
