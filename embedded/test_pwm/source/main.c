@@ -200,7 +200,7 @@ static void PWM_Mode_Config(void)
     OutInit.CompareValue = 500-1;
     PWM_OutputInit(PWM0, &OutInit);
     
-    PWM_IntConfig(PWM0, PWM_FLAG_MR4, DISABLE);
+    PWM_IntConfig(PWM0, PWM_FLAG_MR4, ENABLE);
 	PWM_BreakInput_Cmd(PWM0, DISABLE);
 	PWM_BKI_LevelConfig(PWM0, PWM_BKI_LOWLEVEL);
     /*使能PWM计数器*/
