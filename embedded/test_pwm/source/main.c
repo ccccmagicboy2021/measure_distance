@@ -13,7 +13,7 @@ uint16_t m_AdcValue;
 void segger_init(void)
 {
 	SEGGER_RTT_Init();
-	CV_LOG("%sMCU CHIP: PT32Z192 DEMO%s\r\n", RTT_CTRL_BG_BRIGHT_RED, RTT_CTRL_RESET);
+	CV_LOG("%sMCU CHIP: PT32Z192 PWM DEMO%s\r\n", RTT_CTRL_BG_BRIGHT_RED, RTT_CTRL_RESET);
 	CV_LOG("compiled time: %s %s\r\n", __DATE__, __TIME__);
 }
 
