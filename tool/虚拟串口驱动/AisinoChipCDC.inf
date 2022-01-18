@@ -1,0 +1,71 @@
+;
+; Windows USB CDC Driver Setup File for AisinoChip-CDC (XP/2000)
+;
+;	(c) Copyright 2017 Recursion Co., Ltd.
+;
+
+[Version] 
+Signature	= "$Windows NT$"
+Provider	= %COMPANY%
+DriverVer	= 03/23/2017,1.0.0.1
+
+Class		= Ports
+ClassGuid	= {4D36E978-E325-11CE-BFC1-08002BE10318}
+
+[Manufacturer] 
+%MFGNAME%	= Devices,NT,NTamd64
+
+;--------------------------------------------------------------------------
+; Files
+;--------------------------------------------------------------------------
+
+[DestinationDirs]
+DefaultDestDir	= 12
+
+;--------------------------------------------------------------------------
+; Device driver
+;--------------------------------------------------------------------------
+
+[AisinoChipCDC_DEV.NT]
+Include	= mdmcpq.inf
+CopyFiles	= FakeModemCopyFileSection
+AddReg		= AisinoChipCDC_DEV.NT.AddReg
+
+[AisinoChipCDC_DEV.NT.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,usbser.sys
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[AisinoChipCDC_DEV.NT.Services]
+AddService=usbser, 0x00000002, DriverService
+
+;--------------------------------------------------------------------------
+; Services
+;--------------------------------------------------------------------------
+
+[DriverService]
+DisplayName	= %SERVICE%
+ServiceType	= 1
+StartType	= 3
+ErrorControl	= 1
+ServiceBinary	= %12%\usbser.sys 
+
+;--------------------------------------------------------------------------
+; Devices
+;--------------------------------------------------------------------------
+
+[Devices.NT]
+%DESCRIPTION%	= AisinoChipCDC_DEV, USB\VID_2345&PID_ABCD
+
+[Devices.NTamd64]
+%DESCRIPTION%	= AisinoChipCDC_DEV, USB\VID_2345&PID_ABCD
+
+;--------------------------------------------------------------------------
+; Strings
+;--------------------------------------------------------------------------
+
+[Strings] 
+COMPANY	= "AisinoChip Co., Ltd."
+MFGNAME	= "www.AisinoChip.com"
+DESCRIPTION	= "AisinoChip Virtual Com Port"
+SERVICE	= "USB RS-232 Emulation Driver"
