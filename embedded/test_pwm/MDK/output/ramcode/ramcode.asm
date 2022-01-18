@@ -3,7 +3,7 @@
 
 ** ELF Header Information
 
-    File Name: D:\cccc2020\CODE\workspace\bfsk_pt32\embedded\test_pwm\MDK\output\ramcode\ramcode.axf
+    File Name: d:\cccc2020\CODE\workspace\bfsk_pt32\embedded\test_pwm\MDK\output\ramcode\ramcode.axf
 
     Machine class: ELFCLASS32 (32-bit)
     Data encoding: ELFDATA2LSB (Little endian)
@@ -31,8 +31,8 @@
     Program header entries: 1
     Section header entries: 16
 
-    Program header offset: 99792 (0x000185d0)
-    Section header offset: 99824 (0x000185f0)
+    Program header offset: 99808 (0x000185e0)
+    Section header offset: 99840 (0x00018600)
 
     Section header string table index: 15
 
@@ -2608,8 +2608,8 @@
         0x200017c4:    206e614a    Jan     DCD    544104778
         0x200017c8:    32203831    18 2    DCD    840972337
         0x200017cc:    00323230    022.    DCD    3289648
-        0x200017d0:    333a3231    12:3    DCD    859451953
-        0x200017d4:    32343a36    6:42    DCD    842283574
+        0x200017d0:    333a3731    17:3    DCD    859453233
+        0x200017d4:    31353a38    8:51    DCD    825571896
         0x200017d8:    00000000    ....    DCD    0
     $t.8
     switch_gpio_config
@@ -3643,7 +3643,7 @@
 
 
 ** Section #7 '.debug_line' (SHT_PROGBITS)
-    Size   : 12728 bytes
+    Size   : 12741 bytes
 
 
 ** Section #8 '.debug_loc' (SHT_PROGBITS)

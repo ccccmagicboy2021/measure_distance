@@ -1,3 +1,3 @@
 cd MDK
-burnaxf.exe -hc32 .\output\ramcode\ramcode.axf
+burnaxf.exe -pt32 .\output\ramcode\ramcode.axf
 
