@@ -413,6 +413,11 @@
               <FileType>2</FileType>
               <FilePath>..\common\startup_n32g4fr.s</FilePath>
             </File>
+            <File>
+              <FileName>n32g4fr_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\common\n32g4fr_it.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -992,6 +997,11 @@
               <FileName>startup_n32g4fr.s</FileName>
               <FileType>2</FileType>
               <FilePath>..\common\startup_n32g4fr.s</FilePath>
+            </File>
+            <File>
+              <FileName>n32g4fr_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\common\n32g4fr_it.c</FilePath>
             </File>
           </Files>
         </Group>
