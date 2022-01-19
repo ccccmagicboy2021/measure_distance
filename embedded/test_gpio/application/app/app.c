@@ -12,6 +12,7 @@ void app(void)
     //printf("adc: %04d(%.3lfv)\r\n", m_AdcValue, (float)(((float)m_AdcValue/4095.f)*3.3f));        //dma”√
     sprintf(float_str, "adc: %04d(%.3lfv)\r\n", m_AdcValue, (float)(((float)m_AdcValue/4095.f)*3.3f));        //dma”√
     CV_LOG("%s", float_str);
+    systick_delay_ms(500);
 }
 
 

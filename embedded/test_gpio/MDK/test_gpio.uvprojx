@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source</IncludePath>
+              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -567,6 +567,21 @@
               <FileName>SEGGER_RTT_printf.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\rtt\SEGGER_RTT_printf.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>bsp</GroupName>
+          <Files>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\src\delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>log.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\src\log.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -904,7 +919,7 @@
               <MiscControls></MiscControls>
               <Define>__ARM_PCS_VFP,__FPU_PRESENT</Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source</IncludePath>
+              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1132,6 +1147,21 @@
               <FileName>SEGGER_RTT_printf.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\rtt\SEGGER_RTT_printf.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>bsp</GroupName>
+          <Files>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\src\delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>log.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\src\log.c</FilePath>
             </File>
           </Files>
         </Group>
