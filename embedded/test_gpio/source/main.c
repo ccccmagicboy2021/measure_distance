@@ -7,14 +7,66 @@ void segger_init(void)
 	CV_LOG("compiled time: %s %s\r\n", __DATE__, __TIME__);
 }
 
+void led_init(void)
+{
+    GPIO_InitTypeDef GPIOF_Handle;
+    
+    GPIOF_Handle.Pin       = GPIO_PIN_3;
+    GPIOF_Handle.Mode      = GPIO_MODE_OUTPUT_PP;
+    GPIOF_Handle.Pull      = GPIO_PULLUP;
+    GPIOF_Handle.Alternate = GPIO_FUNCTION_0;
+
+    HAL_GPIO_Init(GPIOF, &GPIOF_Handle);
+    
+    HAL_GPIO_WritePin(GPIOF, GPIO_PIN_3, GPIO_PIN_SET);
+}
+
+void user_button_init(void)
+{
+    GPIO_InitTypeDef GPIOB_Handle;
+    
+    GPIOB_Handle.Pin       = GPIO_PIN_9;
+    GPIOB_Handle.Mode      = GPIO_MODE_IT_FALLING;
+    GPIOB_Handle.Pull      = GPIO_PULLUP;
+    GPIOB_Handle.Alternate = GPIO_FUNCTION_0; 
+    
+    HAL_GPIO_Init(GPIOB, &GPIOB_Handle);
+    
+    NVIC_ClearPendingIRQ(GPIOAB_IRQn);
+    NVIC_EnableIRQ(GPIOAB_IRQn);
+}
+
+volatile uint32_t gu32_GPIOIRQ_Flag = false; 
+
+void GPIO_IRQ_User_Function(void)
+{
+    gu32_GPIOIRQ_Flag = true;   
+}
+
 int main(void)
 {    
+    System_Init();  //180MHz enable systick
     segger_init();
-    
+    ////////////////
+    //initial here
+    led_init();
+    user_button_init();
+    ///////////////
     CV_LOG("program begin...\r\n");
     
 	while(1)
 	{
 		app();
+        
+        HAL_GPIO_WritePin(GPIOF, GPIO_PIN_3, GPIO_PIN_SET);
+        System_Delay_MS(500);
+        HAL_GPIO_WritePin(GPIOF, GPIO_PIN_3, GPIO_PIN_CLEAR);
+        System_Delay_MS(500);
+        
+        if (gu32_GPIOIRQ_Flag) 
+        {
+            gu32_GPIOIRQ_Flag = false;
+            CV_LOG("Get interrupt flag!!! \r\n");
+        }
 	}
 }
