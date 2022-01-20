@@ -1,5 +1,6 @@
 1. n32基本工程模板(keil5)(AC6)
 2. usart1输出
 3. usart1中断接收
+4. 存在的问题：使用jlink时ramcode无法设置断点调试
 
 
