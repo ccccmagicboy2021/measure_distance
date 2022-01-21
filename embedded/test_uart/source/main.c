@@ -231,8 +231,13 @@ int main(void)
     led_init();
     user_button_init();
     ///////////////
-    CV_LOG("program begin...\r\n");
-    printf("program begin...\r\n");
+#ifdef VECT_TAB_SRAM
+    CV_LOG("ramcode program begin...\r\n");
+    printf("ramcode program begin...\r\n");
+#else
+    CV_LOG("flashcode program begin...\r\n");
+    printf("flashcode program begin...\r\n");   
+#endif
     
 	while(1)
 	{
