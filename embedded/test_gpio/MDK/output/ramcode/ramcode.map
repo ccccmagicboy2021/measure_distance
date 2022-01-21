@@ -136,17 +136,17 @@ Image Symbol Table
     [Anonymous Symbol]                       0x20001b74   Section        0  main.o(.rodata.str1.1)
     .L.str.8                                 0x20001b84   Data          16  main.o(.rodata.str1.1)
     .L.str.9                                 0x20001b94   Data          16  main.o(.rodata.str1.1)
-    .L.str.6                                 0x20001ba4   Data          19  main.o(.rodata.str1.1)
-    .L.str.3                                 0x20001bb7   Data          23  main.o(.rodata.str1.1)
-    .L.str                                   0x20001bce   Data          31  main.o(.rodata.str1.1)
-    .L.str.4                                 0x20001bed   Data          12  main.o(.rodata.str1.1)
-    .L.str.5                                 0x20001bf9   Data           9  main.o(.rodata.str1.1)
-    .L.str.2                                 0x20001c02   Data           5  main.o(.rodata.str1.1)
-    .L.str.1                                 0x20001c07   Data           8  main.o(.rodata.str1.1)
-    .L.str.2                                 0x20001c0f   Data           7  segger_rtt.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x20001c0f   Section        0  segger_rtt.o(.rodata.str1.1)
-    .L.str.1                                 0x20001c16   Data           4  segger_rtt.o(.rodata.str1.1)
-    .L.str                                   0x20001c1a   Data           9  segger_rtt.o(.rodata.str1.1)
+    .L.str.6                                 0x20001ba4   Data          27  main.o(.rodata.str1.1)
+    .L.str.3                                 0x20001bbf   Data          23  main.o(.rodata.str1.1)
+    .L.str                                   0x20001bd6   Data          31  main.o(.rodata.str1.1)
+    .L.str.4                                 0x20001bf5   Data          12  main.o(.rodata.str1.1)
+    .L.str.5                                 0x20001c01   Data           9  main.o(.rodata.str1.1)
+    .L.str.2                                 0x20001c0a   Data           5  main.o(.rodata.str1.1)
+    .L.str.1                                 0x20001c0f   Data           8  main.o(.rodata.str1.1)
+    .L.str.2                                 0x20001c17   Data           7  segger_rtt.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x20001c17   Section        0  segger_rtt.o(.rodata.str1.1)
+    .L.str.1                                 0x20001c1e   Data           4  segger_rtt.o(.rodata.str1.1)
+    .L.str                                   0x20001c22   Data           9  segger_rtt.o(.rodata.str1.1)
     HardFaultRegs                            0x20010008   Data          64  segger_hardfaulthandler.o(.bss.HardFaultRegs)
     [Anonymous Symbol]                       0x20010008   Section        0  segger_hardfaulthandler.o(.bss.HardFaultRegs)
     _Continue                                0x20010048   Data           4  segger_hardfaulthandler.o(.bss._Continue)
@@ -306,8 +306,8 @@ Image Symbol Table
     __scatterload_copy                       0x20001b47   Thumb Code    14  handlers.o(i.__scatterload_copy)
     __scatterload_null                       0x20001b55   Thumb Code     2  handlers.o(i.__scatterload_null)
     __scatterload_zeroinit                   0x20001b57   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    Region$$Table$$Base                      0x20001c24   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x20001c44   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Base                      0x20001c2c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x20001c4c   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x20010000   Data           4  system_n32g4fr.o(.data.SystemCoreClock)
     _SEGGER_RTT                              0x2001004c   Data         168  segger_rtt.o(.bss._SEGGER_RTT)
     __initial_sp                             0x20010d08   Data           0  startup_n32g4fr.o(STACK)
@@ -320,9 +320,9 @@ Memory Map of the image
 
   Image Entry point : 0x20000199
 
-  Load Region LR_IROM1 (Base: 0x20000000, Size: 0x00001c50, Max: 0x00010000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x20000000, Size: 0x00001c58, Max: 0x00010000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x20000000, Load base: 0x20000000, Size: 0x00001c44, Max: 0x00010000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x20000000, Load base: 0x20000000, Size: 0x00001c4c, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -404,24 +404,24 @@ Memory Map of the image
     0x20001b54   0x20001b54   0x00000002   Code   RO         1576    i.__scatterload_null  mc_w.l(handlers.o)
     0x20001b56   0x20001b56   0x0000000e   Code   RO         1577    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x20001b64   0x20001b64   0x00000010   Data   RO         1516    .rodata._PrintUnsigned._aV2C  segger_rtt_printf.o
-    0x20001b74   0x20001b74   0x0000009b   Data   RO           31    .rodata.str1.1      main.o
-    0x20001c0f   0x20001c0f   0x00000014   Data   RO         1496    .rodata.str1.1      segger_rtt.o
-    0x20001c23   0x20001c23   0x00000001   PAD
-    0x20001c24   0x20001c24   0x00000020   Data   RO         1574    Region$$Table       anon$$obj.o
+    0x20001b74   0x20001b74   0x000000a3   Data   RO           31    .rodata.str1.1      main.o
+    0x20001c17   0x20001c17   0x00000014   Data   RO         1496    .rodata.str1.1      segger_rtt.o
+    0x20001c2b   0x20001c2b   0x00000001   PAD
+    0x20001c2c   0x20001c2c   0x00000020   Data   RO         1574    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20010000, Load base: 0x20001c48, Size: 0x00000d08, Max: 0x00010000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20010000, Load base: 0x20001c50, Size: 0x00000d08, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20010000   0x20001c48   0x00000004   Data   RW           45    .data.SystemCoreClock  system_n32g4fr.o
-    0x20010004   0x20001c4c   0x00000004   PAD
+    0x20010000   0x20001c50   0x00000004   Data   RW           45    .data.SystemCoreClock  system_n32g4fr.o
+    0x20010004   0x20001c54   0x00000004   PAD
     0x20010008        -       0x00000040   Zero   RW         1410    .bss.HardFaultRegs  segger_hardfaulthandler.o
     0x20010048        -       0x00000004   Zero   RW         1411    .bss._Continue      segger_hardfaulthandler.o
     0x2001004c        -       0x000000a8   Zero   RW         1493    .bss._SEGGER_RTT    segger_rtt.o
     0x200100f4        -       0x00000010   Zero   RW         1498    .bss._acDownBuffer  segger_rtt.o
     0x20010104        -       0x00000400   Zero   RW         1497    .bss._acUpBuffer    segger_rtt.o
-    0x20010504   0x20001c4c   0x00000004   PAD
+    0x20010504   0x20001c54   0x00000004   PAD
     0x20010508        -       0x00000800   Zero   RW           53    STACK               startup_n32g4fr.o
 
 
@@ -435,7 +435,7 @@ Image component sizes
         12          0          0          0          0        526   app.o
        180          0          0          0          0       1166   delay.o
         18          0          0          0          0        304   hardfaulthandler.o
-       954          0        155          0          0       2978   main.o
+       954          0        163          0          0       2978   main.o
         36          0          0          0          0       2906   misc.o
       1508          0          0          0          0       6281   n32g4fr_gpio.o
         20          0          0          0          0        928   n32g4fr_it.o
@@ -447,7 +447,7 @@ Image component sizes
        520          0          0          4          0       2898   system_n32g4fr.o
 
     ----------------------------------------------------------------------
-      6462         22        632          4       3332      47254   Object Totals
+      6462         22        640          4       3332      47254   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         42          0          1          0          8          0   (incl. Padding)
 
@@ -488,15 +488,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      6604         38        632          4       3332      47450   Grand Totals
-      6604         38        632          4       3332      47450   ELF Image Totals
-      6604         38        632          4          0          0   ROM Totals
+      6604         38        640          4       3332      47450   Grand Totals
+      6604         38        640          4       3332      47450   ELF Image Totals
+      6604         38        640          4          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 7236 (   7.07kB)
+    Total RO  Size (Code + RO Data)                 7244 (   7.07kB)
     Total RW  Size (RW Data + ZI Data)              3336 (   3.26kB)
-    Total ROM Size (Code + RO Data + RW Data)       7240 (   7.07kB)
+    Total ROM Size (Code + RO Data + RW Data)       7248 (   7.08kB)
 
 ==============================================================================
 
