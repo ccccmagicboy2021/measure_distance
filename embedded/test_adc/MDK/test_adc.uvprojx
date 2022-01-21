@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc</IncludePath>
+              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc;..\application\systick</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -387,6 +387,11 @@
               <FileName>app.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\app\app.c</FilePath>
+            </File>
+            <File>
+              <FileName>systick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\systick\systick.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -925,7 +930,7 @@
               <MiscControls></MiscControls>
               <Define>VECT_TAB_SRAM</Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc</IncludePath>
+              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc;..\application\systick</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -973,6 +978,11 @@
               <FileName>app.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\app\app.c</FilePath>
+            </File>
+            <File>
+              <FileName>systick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\systick\systick.c</FilePath>
             </File>
           </Files>
         </Group>

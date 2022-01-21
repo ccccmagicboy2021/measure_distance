@@ -78,6 +78,7 @@ Image Symbol Table
     n32g4fr_wwdg.c                           0x00000000   Number         0  n32g4fr_wwdg.o ABSOLUTE
     n32g4fr_xfmc.c                           0x00000000   Number         0  n32g4fr_xfmc.o ABSOLUTE
     system_n32g4fr.c                         0x00000000   Number         0  system_n32g4fr.o ABSOLUTE
+    systick.c                                0x00000000   Number         0  systick.o ABSOLUTE
     RESET                                    0x20000000   Section      408  startup_n32g4fr.o(RESET)
     .ARM.Collect$$$$00000000                 0x20000198   Section        0  entry.o(.ARM.Collect$$$$00000000)
     .ARM.Collect$$$$00000001                 0x20000198   Section        4  entry2.o(.ARM.Collect$$$$00000001)
@@ -145,75 +146,81 @@ Image Symbol Table
     [Anonymous Symbol]                       0x20001ca8   Section        0  n32g4fr_it.o(.text.SVC_Handler)
     SetSysClock                              0x20001cad   Thumb Code   330  system_n32g4fr.o(.text.SetSysClock)
     [Anonymous Symbol]                       0x20001cac   Section        0  system_n32g4fr.o(.text.SetSysClock)
-    [Anonymous Symbol]                       0x20001df8   Section        0  misc.o(.text.SysTick_CLKSourceConfig)
-    [Anonymous Symbol]                       0x20001e1c   Section        0  n32g4fr_it.o(.text.SysTick_Handler)
-    [Anonymous Symbol]                       0x20001e20   Section        0  system_n32g4fr.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x20001ee0   Section        0  n32g4fr_usart.o(.text.USART_Enable)
-    [Anonymous Symbol]                       0x20001f10   Section        0  n32g4fr_usart.o(.text.USART_GetFlagStatus)
-    [Anonymous Symbol]                       0x20001f58   Section        0  n32g4fr_usart.o(.text.USART_Init)
-    [Anonymous Symbol]                       0x20002080   Section        0  n32g4fr_usart.o(.text.USART_SendData)
-    [Anonymous Symbol]                       0x2000209c   Section        0  n32g4fr_it.o(.text.UsageFault_Handler)
-    _DoInit                                  0x200020a1   Thumb Code   162  segger_rtt.o(.text._DoInit)
-    [Anonymous Symbol]                       0x200020a0   Section        0  segger_rtt.o(.text._DoInit)
-    _GetAvailWriteSpace                      0x20002145   Thumb Code    62  segger_rtt.o(.text._GetAvailWriteSpace)
-    [Anonymous Symbol]                       0x20002144   Section        0  segger_rtt.o(.text._GetAvailWriteSpace)
-    _PrintInt                                0x20002185   Thumb Code   484  segger_rtt_printf.o(.text._PrintInt)
-    [Anonymous Symbol]                       0x20002184   Section        0  segger_rtt_printf.o(.text._PrintInt)
-    _PrintUnsigned                           0x20002369   Thumb Code   446  segger_rtt_printf.o(.text._PrintUnsigned)
-    [Anonymous Symbol]                       0x20002368   Section        0  segger_rtt_printf.o(.text._PrintUnsigned)
-    _StoreChar                               0x20002529   Thumb Code   120  segger_rtt_printf.o(.text._StoreChar)
-    [Anonymous Symbol]                       0x20002528   Section        0  segger_rtt_printf.o(.text._StoreChar)
-    _WriteBlocking                           0x200025a1   Thumb Code   228  segger_rtt.o(.text._WriteBlocking)
-    [Anonymous Symbol]                       0x200025a0   Section        0  segger_rtt.o(.text._WriteBlocking)
-    _WriteNoCheck                            0x20002685   Thumb Code   148  segger_rtt.o(.text._WriteNoCheck)
-    [Anonymous Symbol]                       0x20002684   Section        0  segger_rtt.o(.text._WriteNoCheck)
-    [Anonymous Symbol]                       0x20002718   Section        0  main.o(.text.analog_pin_config)
-    [Anonymous Symbol]                       0x20002750   Section        0  app.o(.text.app)
-    [Anonymous Symbol]                       0x2000275c   Section        0  main.o(.text.fputc)
-    [Anonymous Symbol]                       0x20002794   Section        0  main.o(.text.led_init)
-    [Anonymous Symbol]                       0x200027dc   Section        0  main.o(.text.main)
-    [Anonymous Symbol]                       0x20002970   Section        0  main.o(.text.segger_init)
-    [Anonymous Symbol]                       0x200029bc   Section        0  delay.o(.text.systick_delay_ms)
-    [Anonymous Symbol]                       0x20002a70   Section        0  main.o(.text.uart_init)
-    [Anonymous Symbol]                       0x20002aec   Section        0  main.o(.text.user_button_init)
-    $v0                                      0x20002b14   Number         0  hardfaulthandler.o(OSKERNEL)
-    OSKERNEL                                 0x20002b14   Section       18  hardfaulthandler.o(OSKERNEL)
-    i.__0printf                              0x20002b28   Section        0  printfa.o(i.__0printf)
-    i.__scatterload_copy                     0x20002b48   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x20002b56   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x20002b58   Section       14  handlers.o(i.__scatterload_zeroinit)
-    _fp_digits                               0x20002b69   Thumb Code   366  printfa.o(i._fp_digits)
-    i._fp_digits                             0x20002b68   Section        0  printfa.o(i._fp_digits)
-    _printf_core                             0x20002ced   Thumb Code  1744  printfa.o(i._printf_core)
-    i._printf_core                           0x20002cec   Section        0  printfa.o(i._printf_core)
-    _printf_post_padding                     0x200033c9   Thumb Code    36  printfa.o(i._printf_post_padding)
-    i._printf_post_padding                   0x200033c8   Section        0  printfa.o(i._printf_post_padding)
-    _printf_pre_padding                      0x200033ed   Thumb Code    46  printfa.o(i._printf_pre_padding)
-    i._printf_pre_padding                    0x200033ec   Section        0  printfa.o(i._printf_pre_padding)
-    _PrintUnsigned._aV2C                     0x2000341a   Data          16  segger_rtt_printf.o(.rodata._PrintUnsigned._aV2C)
-    [Anonymous Symbol]                       0x2000341a   Section        0  segger_rtt_printf.o(.rodata._PrintUnsigned._aV2C)
-    s_AdcHclkPresTable                       0x2000342a   Data          16  n32g4fr_rcc.o(.rodata.s_AdcHclkPresTable)
-    [Anonymous Symbol]                       0x2000342a   Section        0  n32g4fr_rcc.o(.rodata.s_AdcHclkPresTable)
-    s_AdcPllClkPresTable                     0x2000343a   Data          32  n32g4fr_rcc.o(.rodata.s_AdcPllClkPresTable)
-    [Anonymous Symbol]                       0x2000343a   Section        0  n32g4fr_rcc.o(.rodata.s_AdcPllClkPresTable)
-    s_ApbAhbPresTable                        0x2000345a   Data          16  n32g4fr_rcc.o(.rodata.s_ApbAhbPresTable)
-    [Anonymous Symbol]                       0x2000345a   Section        0  n32g4fr_rcc.o(.rodata.s_ApbAhbPresTable)
-    .L.str.7                                 0x2000346a   Data          16  main.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x2000346a   Section        0  main.o(.rodata.str1.1)
-    .L.str.8                                 0x2000347a   Data          16  main.o(.rodata.str1.1)
-    .L.str.9                                 0x2000348a   Data          16  main.o(.rodata.str1.1)
-    .L.str.6                                 0x2000349a   Data          27  main.o(.rodata.str1.1)
-    .L.str.10                                0x200034b5   Data          28  main.o(.rodata.str1.1)
-    .L.str.3                                 0x200034d1   Data          23  main.o(.rodata.str1.1)
-    .L.str                                   0x200034e8   Data          31  main.o(.rodata.str1.1)
-    .L.str.4                                 0x20003507   Data          12  main.o(.rodata.str1.1)
-    .L.str.5                                 0x20003513   Data           9  main.o(.rodata.str1.1)
-    .L.str.2                                 0x2000351c   Data           5  main.o(.rodata.str1.1)
-    .L.str.1                                 0x20003521   Data           8  main.o(.rodata.str1.1)
-    .L.str.2                                 0x20003529   Data           7  segger_rtt.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x20003529   Section        0  segger_rtt.o(.rodata.str1.1)
-    .L.str.1                                 0x20003530   Data           4  segger_rtt.o(.rodata.str1.1)
-    .L.str                                   0x20003534   Data           9  segger_rtt.o(.rodata.str1.1)
+    SysTick_Config                           0x20001df9   Thumb Code    82  systick.o(.text.SysTick_Config)
+    [Anonymous Symbol]                       0x20001df8   Section        0  systick.o(.text.SysTick_Config)
+    [Anonymous Symbol]                       0x20001e4c   Section        0  n32g4fr_it.o(.text.SysTick_Handler)
+    [Anonymous Symbol]                       0x20001e54   Section        0  system_n32g4fr.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x20001f14   Section        0  n32g4fr_usart.o(.text.USART_Enable)
+    [Anonymous Symbol]                       0x20001f44   Section        0  n32g4fr_usart.o(.text.USART_GetFlagStatus)
+    [Anonymous Symbol]                       0x20001f8c   Section        0  n32g4fr_usart.o(.text.USART_Init)
+    [Anonymous Symbol]                       0x200020b4   Section        0  n32g4fr_usart.o(.text.USART_SendData)
+    [Anonymous Symbol]                       0x200020d0   Section        0  n32g4fr_it.o(.text.UsageFault_Handler)
+    _DoInit                                  0x200020d5   Thumb Code   162  segger_rtt.o(.text._DoInit)
+    [Anonymous Symbol]                       0x200020d4   Section        0  segger_rtt.o(.text._DoInit)
+    _GetAvailWriteSpace                      0x20002179   Thumb Code    62  segger_rtt.o(.text._GetAvailWriteSpace)
+    [Anonymous Symbol]                       0x20002178   Section        0  segger_rtt.o(.text._GetAvailWriteSpace)
+    _PrintInt                                0x200021b9   Thumb Code   484  segger_rtt_printf.o(.text._PrintInt)
+    [Anonymous Symbol]                       0x200021b8   Section        0  segger_rtt_printf.o(.text._PrintInt)
+    _PrintUnsigned                           0x2000239d   Thumb Code   446  segger_rtt_printf.o(.text._PrintUnsigned)
+    [Anonymous Symbol]                       0x2000239c   Section        0  segger_rtt_printf.o(.text._PrintUnsigned)
+    _StoreChar                               0x2000255d   Thumb Code   120  segger_rtt_printf.o(.text._StoreChar)
+    [Anonymous Symbol]                       0x2000255c   Section        0  segger_rtt_printf.o(.text._StoreChar)
+    _WriteBlocking                           0x200025d5   Thumb Code   228  segger_rtt.o(.text._WriteBlocking)
+    [Anonymous Symbol]                       0x200025d4   Section        0  segger_rtt.o(.text._WriteBlocking)
+    _WriteNoCheck                            0x200026b9   Thumb Code   148  segger_rtt.o(.text._WriteNoCheck)
+    [Anonymous Symbol]                       0x200026b8   Section        0  segger_rtt.o(.text._WriteNoCheck)
+    __NVIC_SetPriority                       0x2000274d   Thumb Code    68  systick.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x2000274c   Section        0  systick.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x20002790   Section        0  main.o(.text.analog_pin_config)
+    [Anonymous Symbol]                       0x200027c8   Section        0  app.o(.text.app)
+    [Anonymous Symbol]                       0x200027d4   Section        0  systick.o(.text.delay_1ms)
+    [Anonymous Symbol]                       0x200027fc   Section        0  systick.o(.text.delay_decrement)
+    [Anonymous Symbol]                       0x20002820   Section        0  main.o(.text.fputc)
+    [Anonymous Symbol]                       0x20002858   Section        0  main.o(.text.led_init)
+    [Anonymous Symbol]                       0x200028a0   Section        0  main.o(.text.main)
+    [Anonymous Symbol]                       0x20002a38   Section        0  main.o(.text.segger_init)
+    [Anonymous Symbol]                       0x20002a84   Section        0  systick.o(.text.systick_config)
+    [Anonymous Symbol]                       0x20002ac0   Section        0  main.o(.text.tick_init)
+    [Anonymous Symbol]                       0x20002ac8   Section        0  main.o(.text.uart_init)
+    [Anonymous Symbol]                       0x20002b44   Section        0  main.o(.text.user_button_init)
+    $v0                                      0x20002b6c   Number         0  hardfaulthandler.o(OSKERNEL)
+    OSKERNEL                                 0x20002b6c   Section       18  hardfaulthandler.o(OSKERNEL)
+    i.__0printf                              0x20002b80   Section        0  printfa.o(i.__0printf)
+    i.__scatterload_copy                     0x20002ba0   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x20002bae   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x20002bb0   Section       14  handlers.o(i.__scatterload_zeroinit)
+    _fp_digits                               0x20002bc1   Thumb Code   366  printfa.o(i._fp_digits)
+    i._fp_digits                             0x20002bc0   Section        0  printfa.o(i._fp_digits)
+    _printf_core                             0x20002d45   Thumb Code  1744  printfa.o(i._printf_core)
+    i._printf_core                           0x20002d44   Section        0  printfa.o(i._printf_core)
+    _printf_post_padding                     0x20003421   Thumb Code    36  printfa.o(i._printf_post_padding)
+    i._printf_post_padding                   0x20003420   Section        0  printfa.o(i._printf_post_padding)
+    _printf_pre_padding                      0x20003445   Thumb Code    46  printfa.o(i._printf_pre_padding)
+    i._printf_pre_padding                    0x20003444   Section        0  printfa.o(i._printf_pre_padding)
+    _PrintUnsigned._aV2C                     0x20003472   Data          16  segger_rtt_printf.o(.rodata._PrintUnsigned._aV2C)
+    [Anonymous Symbol]                       0x20003472   Section        0  segger_rtt_printf.o(.rodata._PrintUnsigned._aV2C)
+    s_AdcHclkPresTable                       0x20003482   Data          16  n32g4fr_rcc.o(.rodata.s_AdcHclkPresTable)
+    [Anonymous Symbol]                       0x20003482   Section        0  n32g4fr_rcc.o(.rodata.s_AdcHclkPresTable)
+    s_AdcPllClkPresTable                     0x20003492   Data          32  n32g4fr_rcc.o(.rodata.s_AdcPllClkPresTable)
+    [Anonymous Symbol]                       0x20003492   Section        0  n32g4fr_rcc.o(.rodata.s_AdcPllClkPresTable)
+    s_ApbAhbPresTable                        0x200034b2   Data          16  n32g4fr_rcc.o(.rodata.s_ApbAhbPresTable)
+    [Anonymous Symbol]                       0x200034b2   Section        0  n32g4fr_rcc.o(.rodata.s_ApbAhbPresTable)
+    .L.str.7                                 0x200034c2   Data          16  main.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x200034c2   Section        0  main.o(.rodata.str1.1)
+    .L.str.8                                 0x200034d2   Data          16  main.o(.rodata.str1.1)
+    .L.str.9                                 0x200034e2   Data          16  main.o(.rodata.str1.1)
+    .L.str.6                                 0x200034f2   Data          27  main.o(.rodata.str1.1)
+    .L.str.10                                0x2000350d   Data          28  main.o(.rodata.str1.1)
+    .L.str.3                                 0x20003529   Data          23  main.o(.rodata.str1.1)
+    .L.str                                   0x20003540   Data          31  main.o(.rodata.str1.1)
+    .L.str.4                                 0x2000355f   Data          12  main.o(.rodata.str1.1)
+    .L.str.5                                 0x2000356b   Data           9  main.o(.rodata.str1.1)
+    .L.str.2                                 0x20003574   Data           5  main.o(.rodata.str1.1)
+    .L.str.1                                 0x20003579   Data           8  main.o(.rodata.str1.1)
+    .L.str.2                                 0x20003581   Data           7  segger_rtt.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x20003581   Section        0  segger_rtt.o(.rodata.str1.1)
+    .L.str.1                                 0x20003588   Data           4  segger_rtt.o(.rodata.str1.1)
+    .L.str                                   0x2000358c   Data           9  segger_rtt.o(.rodata.str1.1)
     .data                                    0x20010000   Section        4  stdout.o(.data)
     HardFaultRegs                            0x20010014   Data          64  segger_hardfaulthandler.o(.bss.HardFaultRegs)
     [Anonymous Symbol]                       0x20010014   Section        0  segger_hardfaulthandler.o(.bss.HardFaultRegs)
@@ -223,7 +230,9 @@ Image Symbol Table
     [Anonymous Symbol]                       0x20010100   Section        0  segger_rtt.o(.bss._acDownBuffer)
     _acUpBuffer                              0x20010110   Data        1024  segger_rtt.o(.bss._acUpBuffer)
     [Anonymous Symbol]                       0x20010110   Section        0  segger_rtt.o(.bss._acUpBuffer)
-    STACK                                    0x20010510   Section     2048  startup_n32g4fr.o(STACK)
+    delay                                    0x20010510   Data           4  systick.o(.bss.delay)
+    [Anonymous Symbol]                       0x20010510   Section        0  systick.o(.bss.delay)
+    STACK                                    0x20010518   Section     2048  startup_n32g4fr.o(STACK)
 
     Global Symbols
 
@@ -397,39 +406,41 @@ Image Symbol Table
     SEGGER_RTT_printf                        0x20001935   Thumb Code    42  segger_rtt_printf.o(.text.SEGGER_RTT_printf)
     SEGGER_RTT_vprintf                       0x20001961   Thumb Code   840  segger_rtt_printf.o(.text.SEGGER_RTT_vprintf)
     SVC_Handler                              0x20001ca9   Thumb Code     2  n32g4fr_it.o(.text.SVC_Handler)
-    SysTick_CLKSourceConfig                  0x20001df9   Thumb Code    36  misc.o(.text.SysTick_CLKSourceConfig)
-    SysTick_Handler                          0x20001e1d   Thumb Code     2  n32g4fr_it.o(.text.SysTick_Handler)
-    SystemInit                               0x20001e21   Thumb Code   190  system_n32g4fr.o(.text.SystemInit)
-    USART_Enable                             0x20001ee1   Thumb Code    48  n32g4fr_usart.o(.text.USART_Enable)
-    USART_GetFlagStatus                      0x20001f11   Thumb Code    72  n32g4fr_usart.o(.text.USART_GetFlagStatus)
-    USART_Init                               0x20001f59   Thumb Code   296  n32g4fr_usart.o(.text.USART_Init)
-    USART_SendData                           0x20002081   Thumb Code    26  n32g4fr_usart.o(.text.USART_SendData)
-    UsageFault_Handler                       0x2000209d   Thumb Code     4  n32g4fr_it.o(.text.UsageFault_Handler)
-    analog_pin_config                        0x20002719   Thumb Code    56  main.o(.text.analog_pin_config)
-    app                                      0x20002751   Thumb Code    12  app.o(.text.app)
-    fputc                                    0x2000275d   Thumb Code    54  main.o(.text.fputc)
-    led_init                                 0x20002795   Thumb Code    72  main.o(.text.led_init)
-    main                                     0x200027dd   Thumb Code   404  main.o(.text.main)
-    segger_init                              0x20002971   Thumb Code    76  main.o(.text.segger_init)
-    systick_delay_ms                         0x200029bd   Thumb Code   180  delay.o(.text.systick_delay_ms)
-    uart_init                                0x20002a71   Thumb Code   122  main.o(.text.uart_init)
-    user_button_init                         0x20002aed   Thumb Code    40  main.o(.text.user_button_init)
-    HardFault_Handler                        0x20002b15   Thumb Code     0  hardfaulthandler.o(OSKERNEL)
-    __0printf                                0x20002b29   Thumb Code    22  printfa.o(i.__0printf)
-    __1printf                                0x20002b29   Thumb Code     0  printfa.o(i.__0printf)
-    __2printf                                0x20002b29   Thumb Code     0  printfa.o(i.__0printf)
-    __c89printf                              0x20002b29   Thumb Code     0  printfa.o(i.__0printf)
-    printf                                   0x20002b29   Thumb Code     0  printfa.o(i.__0printf)
-    __scatterload_copy                       0x20002b49   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x20002b57   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x20002b59   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    Region$$Table$$Base                      0x20003540   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x20003560   Number         0  anon$$obj.o(Region$$Table)
+    SysTick_Handler                          0x20001e4d   Thumb Code     8  n32g4fr_it.o(.text.SysTick_Handler)
+    SystemInit                               0x20001e55   Thumb Code   190  system_n32g4fr.o(.text.SystemInit)
+    USART_Enable                             0x20001f15   Thumb Code    48  n32g4fr_usart.o(.text.USART_Enable)
+    USART_GetFlagStatus                      0x20001f45   Thumb Code    72  n32g4fr_usart.o(.text.USART_GetFlagStatus)
+    USART_Init                               0x20001f8d   Thumb Code   296  n32g4fr_usart.o(.text.USART_Init)
+    USART_SendData                           0x200020b5   Thumb Code    26  n32g4fr_usart.o(.text.USART_SendData)
+    UsageFault_Handler                       0x200020d1   Thumb Code     4  n32g4fr_it.o(.text.UsageFault_Handler)
+    analog_pin_config                        0x20002791   Thumb Code    56  main.o(.text.analog_pin_config)
+    app                                      0x200027c9   Thumb Code    12  app.o(.text.app)
+    delay_1ms                                0x200027d5   Thumb Code    40  systick.o(.text.delay_1ms)
+    delay_decrement                          0x200027fd   Thumb Code    34  systick.o(.text.delay_decrement)
+    fputc                                    0x20002821   Thumb Code    54  main.o(.text.fputc)
+    led_init                                 0x20002859   Thumb Code    72  main.o(.text.led_init)
+    main                                     0x200028a1   Thumb Code   408  main.o(.text.main)
+    segger_init                              0x20002a39   Thumb Code    76  main.o(.text.segger_init)
+    systick_config                           0x20002a85   Thumb Code    60  systick.o(.text.systick_config)
+    tick_init                                0x20002ac1   Thumb Code     8  main.o(.text.tick_init)
+    uart_init                                0x20002ac9   Thumb Code   122  main.o(.text.uart_init)
+    user_button_init                         0x20002b45   Thumb Code    40  main.o(.text.user_button_init)
+    HardFault_Handler                        0x20002b6d   Thumb Code     0  hardfaulthandler.o(OSKERNEL)
+    __0printf                                0x20002b81   Thumb Code    22  printfa.o(i.__0printf)
+    __1printf                                0x20002b81   Thumb Code     0  printfa.o(i.__0printf)
+    __2printf                                0x20002b81   Thumb Code     0  printfa.o(i.__0printf)
+    __c89printf                              0x20002b81   Thumb Code     0  printfa.o(i.__0printf)
+    printf                                   0x20002b81   Thumb Code     0  printfa.o(i.__0printf)
+    __scatterload_copy                       0x20002ba1   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x20002baf   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x20002bb1   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    Region$$Table$$Base                      0x20003598   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x200035b8   Number         0  anon$$obj.o(Region$$Table)
     __stdout                                 0x20010000   Data           4  stdout.o(.data)
     SystemCoreClock                          0x20010004   Data           4  system_n32g4fr.o(.data.SystemCoreClock)
     ADC2ConvertedValue                       0x20010008   Data          10  main.o(.bss.ADC2ConvertedValue)
     _SEGGER_RTT                              0x20010058   Data         168  segger_rtt.o(.bss._SEGGER_RTT)
-    __initial_sp                             0x20010d10   Data           0  startup_n32g4fr.o(STACK)
+    __initial_sp                             0x20010d18   Data           0  startup_n32g4fr.o(STACK)
 
 
 
@@ -439,168 +450,175 @@ Memory Map of the image
 
   Image Entry point : 0x20000199
 
-  Load Region LR_IROM1 (Base: 0x20000000, Size: 0x00003568, Max: 0x00010000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x20000000, Size: 0x000035c0, Max: 0x00010000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x20000000, Load base: 0x20000000, Size: 0x00003560, Max: 0x00010000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x20000000, Load base: 0x20000000, Size: 0x000035b8, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x20000000   0x00000198   Data   RO           68    RESET               startup_n32g4fr.o
-    0x20000198   0x20000198   0x00000000   Code   RO         1555  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x20000198   0x20000198   0x00000004   Code   RO         1594    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x2000019c   0x2000019c   0x00000004   Code   RO         1597    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x200001a0   0x200001a0   0x00000000   Code   RO         1599    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x200001a0   0x200001a0   0x00000000   Code   RO         1601    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x200001a0   0x200001a0   0x00000008   Code   RO         1602    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x200001a8   0x200001a8   0x00000000   Code   RO         1604    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x200001a8   0x200001a8   0x00000000   Code   RO         1606    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x200001a8   0x200001a8   0x00000004   Code   RO         1595    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x200001ac   0x200001ac   0x00000024   Code   RO           69    .text               startup_n32g4fr.o
-    0x200001d0   0x200001d0   0x00000024   Code   RO         1558    .text               mc_w.l(memcpya.o)
-    0x200001f4   0x200001f4   0x00000012   Code   RO         1562    .text               mc_w.l(strcpy.o)
-    0x20000206   0x20000206   0x0000002c   Code   RO         1609    .text               mc_w.l(uidiv.o)
-    0x20000232   0x20000232   0x00000062   Code   RO         1611    .text               mc_w.l(uldiv.o)
-    0x20000294   0x20000294   0x00000000   Code   RO         1613    .text               mc_w.l(iusefp.o)
-    0x20000294   0x20000294   0x0000014e   Code   RO         1614    .text               mf_w.l(dadd.o)
-    0x200003e2   0x200003e2   0x000000e4   Code   RO         1616    .text               mf_w.l(dmul.o)
-    0x200004c6   0x200004c6   0x000000de   Code   RO         1618    .text               mf_w.l(ddiv.o)
-    0x200005a4   0x200005a4   0x00000030   Code   RO         1620    .text               mf_w.l(dfixul.o)
-    0x200005d4   0x200005d4   0x00000030   Code   RO         1622    .text               mf_w.l(cdrcmple.o)
-    0x20000604   0x20000604   0x00000024   Code   RO         1624    .text               mc_w.l(init.o)
-    0x20000628   0x20000628   0x0000001e   Code   RO         1626    .text               mc_w.l(llshl.o)
-    0x20000646   0x20000646   0x00000020   Code   RO         1628    .text               mc_w.l(llushr.o)
-    0x20000666   0x20000666   0x00000024   Code   RO         1630    .text               mc_w.l(llsshr.o)
-    0x2000068a   0x2000068a   0x000000ba   Code   RO         1632    .text               mf_w.l(depilogue.o)
-    0x20000744   0x20000744   0x0000001c   Code   RO          178    .text.ADC_ClearFlag  n32g4fr_adc.o
-    0x20000760   0x20000760   0x0000003c   Code   RO          194    .text.ADC_ConfigClk  n32g4fr_adc.o
-    0x2000079c   0x2000079c   0x000001be   Code   RO          140    .text.ADC_ConfigRegularChannel  n32g4fr_adc.o
+    0x20000000   0x20000000   0x00000198   Data   RO           88    RESET               startup_n32g4fr.o
+    0x20000198   0x20000198   0x00000000   Code   RO         1575  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x20000198   0x20000198   0x00000004   Code   RO         1614    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x2000019c   0x2000019c   0x00000004   Code   RO         1617    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x200001a0   0x200001a0   0x00000000   Code   RO         1619    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x200001a0   0x200001a0   0x00000000   Code   RO         1621    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x200001a0   0x200001a0   0x00000008   Code   RO         1622    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x200001a8   0x200001a8   0x00000000   Code   RO         1624    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x200001a8   0x200001a8   0x00000000   Code   RO         1626    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x200001a8   0x200001a8   0x00000004   Code   RO         1615    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x200001ac   0x200001ac   0x00000024   Code   RO           89    .text               startup_n32g4fr.o
+    0x200001d0   0x200001d0   0x00000024   Code   RO         1578    .text               mc_w.l(memcpya.o)
+    0x200001f4   0x200001f4   0x00000012   Code   RO         1582    .text               mc_w.l(strcpy.o)
+    0x20000206   0x20000206   0x0000002c   Code   RO         1629    .text               mc_w.l(uidiv.o)
+    0x20000232   0x20000232   0x00000062   Code   RO         1631    .text               mc_w.l(uldiv.o)
+    0x20000294   0x20000294   0x00000000   Code   RO         1633    .text               mc_w.l(iusefp.o)
+    0x20000294   0x20000294   0x0000014e   Code   RO         1634    .text               mf_w.l(dadd.o)
+    0x200003e2   0x200003e2   0x000000e4   Code   RO         1636    .text               mf_w.l(dmul.o)
+    0x200004c6   0x200004c6   0x000000de   Code   RO         1638    .text               mf_w.l(ddiv.o)
+    0x200005a4   0x200005a4   0x00000030   Code   RO         1640    .text               mf_w.l(dfixul.o)
+    0x200005d4   0x200005d4   0x00000030   Code   RO         1642    .text               mf_w.l(cdrcmple.o)
+    0x20000604   0x20000604   0x00000024   Code   RO         1644    .text               mc_w.l(init.o)
+    0x20000628   0x20000628   0x0000001e   Code   RO         1646    .text               mc_w.l(llshl.o)
+    0x20000646   0x20000646   0x00000020   Code   RO         1648    .text               mc_w.l(llushr.o)
+    0x20000666   0x20000666   0x00000024   Code   RO         1650    .text               mc_w.l(llsshr.o)
+    0x2000068a   0x2000068a   0x000000ba   Code   RO         1652    .text               mf_w.l(depilogue.o)
+    0x20000744   0x20000744   0x0000001c   Code   RO          198    .text.ADC_ClearFlag  n32g4fr_adc.o
+    0x20000760   0x20000760   0x0000003c   Code   RO          214    .text.ADC_ConfigClk  n32g4fr_adc.o
+    0x2000079c   0x2000079c   0x000001be   Code   RO          160    .text.ADC_ConfigRegularChannel  n32g4fr_adc.o
     0x2000095a   0x2000095a   0x00000002   PAD
-    0x2000095c   0x2000095c   0x00000030   Code   RO          122    .text.ADC_Enable    n32g4fr_adc.o
-    0x2000098c   0x2000098c   0x00000030   Code   RO          132    .text.ADC_EnableSoftwareStartConv  n32g4fr_adc.o
-    0x200009bc   0x200009bc   0x0000002e   Code   RO          130    .text.ADC_GetCalibrationStatus  n32g4fr_adc.o
+    0x2000095c   0x2000095c   0x00000030   Code   RO          142    .text.ADC_Enable    n32g4fr_adc.o
+    0x2000098c   0x2000098c   0x00000030   Code   RO          152    .text.ADC_EnableSoftwareStartConv  n32g4fr_adc.o
+    0x200009bc   0x200009bc   0x0000002e   Code   RO          150    .text.ADC_GetCalibrationStatus  n32g4fr_adc.o
     0x200009ea   0x200009ea   0x00000002   PAD
-    0x200009ec   0x200009ec   0x0000000e   Code   RO          144    .text.ADC_GetDat    n32g4fr_adc.o
+    0x200009ec   0x200009ec   0x0000000e   Code   RO          164    .text.ADC_GetDat    n32g4fr_adc.o
     0x200009fa   0x200009fa   0x00000002   PAD
-    0x200009fc   0x200009fc   0x00000060   Code   RO           39    .text.ADC_GetData   main.o
-    0x20000a5c   0x20000a5c   0x00000036   Code   RO          176    .text.ADC_GetFlagStatus  n32g4fr_adc.o
+    0x200009fc   0x200009fc   0x00000060   Code   RO           57    .text.ADC_GetData   main.o
+    0x20000a5c   0x20000a5c   0x00000036   Code   RO          196    .text.ADC_GetFlagStatus  n32g4fr_adc.o
     0x20000a92   0x20000a92   0x00000002   PAD
-    0x20000a94   0x20000a94   0x00000036   Code   RO          188    .text.ADC_GetFlagStatusNew  n32g4fr_adc.o
+    0x20000a94   0x20000a94   0x00000036   Code   RO          208    .text.ADC_GetFlagStatusNew  n32g4fr_adc.o
     0x20000aca   0x20000aca   0x00000002   PAD
-    0x20000acc   0x20000acc   0x0000009a   Code   RO          118    .text.ADC_Init      n32g4fr_adc.o
+    0x20000acc   0x20000acc   0x0000009a   Code   RO          138    .text.ADC_Init      n32g4fr_adc.o
     0x20000b66   0x20000b66   0x00000002   PAD
-    0x20000b68   0x20000b68   0x00000062   Code   RO           37    .text.ADC_Initial   main.o
+    0x20000b68   0x20000b68   0x00000062   Code   RO           55    .text.ADC_Initial   main.o
     0x20000bca   0x20000bca   0x00000002   PAD
-    0x20000bcc   0x20000bcc   0x00000012   Code   RO          128    .text.ADC_StartCalibration  n32g4fr_adc.o
+    0x20000bcc   0x20000bcc   0x00000012   Code   RO          148    .text.ADC_StartCalibration  n32g4fr_adc.o
     0x20000bde   0x20000bde   0x00000002   PAD
-    0x20000be0   0x20000be0   0x00000004   Code   RO           80    .text.BusFault_Handler  n32g4fr_it.o
-    0x20000be4   0x20000be4   0x00000002   Code   RO           86    .text.DebugMon_Handler  n32g4fr_it.o
+    0x20000be0   0x20000be0   0x00000004   Code   RO          100    .text.BusFault_Handler  n32g4fr_it.o
+    0x20000be4   0x20000be4   0x00000002   Code   RO          106    .text.DebugMon_Handler  n32g4fr_it.o
     0x20000be6   0x20000be6   0x00000002   PAD
-    0x20000be8   0x20000be8   0x0000041e   Code   RO          550    .text.GPIO_ConfigPinRemap  n32g4fr_gpio.o
+    0x20000be8   0x20000be8   0x0000041e   Code   RO          570    .text.GPIO_ConfigPinRemap  n32g4fr_gpio.o
     0x20001006   0x20001006   0x00000002   PAD
-    0x20001008   0x20001008   0x00000190   Code   RO          522    .text.GPIO_InitPeripheral  n32g4fr_gpio.o
-    0x20001198   0x20001198   0x00000036   Code   RO          526    .text.GPIO_ReadInputDataBit  n32g4fr_gpio.o
+    0x20001008   0x20001008   0x00000190   Code   RO          542    .text.GPIO_InitPeripheral  n32g4fr_gpio.o
+    0x20001198   0x20001198   0x00000036   Code   RO          546    .text.GPIO_ReadInputDataBit  n32g4fr_gpio.o
     0x200011ce   0x200011ce   0x00000002   PAD
-    0x200011d0   0x200011d0   0x00000116   Code   RO         1421    .text.HardFaultHandler  segger_hardfaulthandler.o
+    0x200011d0   0x200011d0   0x00000116   Code   RO         1441    .text.HardFaultHandler  segger_hardfaulthandler.o
     0x200012e6   0x200012e6   0x00000002   PAD
-    0x200012e8   0x200012e8   0x000000fe   Code   RO           25    .text.KeyInputInit  main.o
+    0x200012e8   0x200012e8   0x000000fe   Code   RO           43    .text.KeyInputInit  main.o
     0x200013e6   0x200013e6   0x00000002   PAD
-    0x200013e8   0x200013e8   0x0000001a   Code   RO           19    .text.LedBlink      main.o
+    0x200013e8   0x200013e8   0x0000001a   Code   RO           37    .text.LedBlink      main.o
     0x20001402   0x20001402   0x00000002   PAD
-    0x20001404   0x20001404   0x000000fe   Code   RO           13    .text.LedInit       main.o
+    0x20001404   0x20001404   0x000000fe   Code   RO           31    .text.LedInit       main.o
     0x20001502   0x20001502   0x00000002   PAD
-    0x20001504   0x20001504   0x00000016   Code   RO           15    .text.LedOn         main.o
+    0x20001504   0x20001504   0x00000016   Code   RO           33    .text.LedOn         main.o
     0x2000151a   0x2000151a   0x00000002   PAD
-    0x2000151c   0x2000151c   0x00000004   Code   RO           78    .text.MemManage_Handler  n32g4fr_it.o
-    0x20001520   0x20001520   0x00000002   Code   RO           76    .text.NMI_Handler   n32g4fr_it.o
+    0x2000151c   0x2000151c   0x00000004   Code   RO           98    .text.MemManage_Handler  n32g4fr_it.o
+    0x20001520   0x20001520   0x00000002   Code   RO           96    .text.NMI_Handler   n32g4fr_it.o
     0x20001522   0x20001522   0x00000002   PAD
-    0x20001524   0x20001524   0x0000002c   Code   RO          781    .text.RCC_ConfigAdcHclk  n32g4fr_rcc.o
-    0x20001550   0x20001550   0x00000058   Code   RO          779    .text.RCC_ConfigAdcPllClk  n32g4fr_rcc.o
-    0x200015a8   0x200015a8   0x00000036   Code   RO           29    .text.RCC_Configuration  main.o
+    0x20001524   0x20001524   0x0000002c   Code   RO          801    .text.RCC_ConfigAdcHclk  n32g4fr_rcc.o
+    0x20001550   0x20001550   0x00000058   Code   RO          799    .text.RCC_ConfigAdcPllClk  n32g4fr_rcc.o
+    0x200015a8   0x200015a8   0x00000036   Code   RO           47    .text.RCC_Configuration  main.o
     0x200015de   0x200015de   0x00000002   PAD
-    0x200015e0   0x200015e0   0x0000003e   Code   RO          797    .text.RCC_EnableAHBPeriphClk  n32g4fr_rcc.o
+    0x200015e0   0x200015e0   0x0000003e   Code   RO          817    .text.RCC_EnableAHBPeriphClk  n32g4fr_rcc.o
     0x2000161e   0x2000161e   0x00000002   PAD
-    0x20001620   0x20001620   0x0000003e   Code   RO          799    .text.RCC_EnableAPB2PeriphClk  n32g4fr_rcc.o
+    0x20001620   0x20001620   0x0000003e   Code   RO          819    .text.RCC_EnableAPB2PeriphClk  n32g4fr_rcc.o
     0x2000165e   0x2000165e   0x00000002   PAD
-    0x20001660   0x20001660   0x000001c8   Code   RO          795    .text.RCC_GetClocksFreqValue  n32g4fr_rcc.o
-    0x20001828   0x20001828   0x00000008   Code   RO         1494    .text.SEGGER_RTT_Init  segger_rtt.o
-    0x20001830   0x20001830   0x0000004e   Code   RO         1458    .text.SEGGER_RTT_Write  segger_rtt.o
+    0x20001660   0x20001660   0x000001c8   Code   RO          815    .text.RCC_GetClocksFreqValue  n32g4fr_rcc.o
+    0x20001828   0x20001828   0x00000008   Code   RO         1514    .text.SEGGER_RTT_Init  segger_rtt.o
+    0x20001830   0x20001830   0x0000004e   Code   RO         1478    .text.SEGGER_RTT_Write  segger_rtt.o
     0x2000187e   0x2000187e   0x00000002   PAD
-    0x20001880   0x20001880   0x000000b2   Code   RO         1454    .text.SEGGER_RTT_WriteNoLock  segger_rtt.o
+    0x20001880   0x20001880   0x000000b2   Code   RO         1474    .text.SEGGER_RTT_WriteNoLock  segger_rtt.o
     0x20001932   0x20001932   0x00000002   PAD
-    0x20001934   0x20001934   0x0000002a   Code   RO         1527    .text.SEGGER_RTT_printf  segger_rtt_printf.o
+    0x20001934   0x20001934   0x0000002a   Code   RO         1547    .text.SEGGER_RTT_printf  segger_rtt_printf.o
     0x2000195e   0x2000195e   0x00000002   PAD
-    0x20001960   0x20001960   0x00000348   Code   RO         1519    .text.SEGGER_RTT_vprintf  segger_rtt_printf.o
-    0x20001ca8   0x20001ca8   0x00000002   Code   RO           84    .text.SVC_Handler   n32g4fr_it.o
+    0x20001960   0x20001960   0x00000348   Code   RO         1539    .text.SEGGER_RTT_vprintf  segger_rtt_printf.o
+    0x20001ca8   0x20001ca8   0x00000002   Code   RO          104    .text.SVC_Handler   n32g4fr_it.o
     0x20001caa   0x20001caa   0x00000002   PAD
-    0x20001cac   0x20001cac   0x0000014a   Code   RO           54    .text.SetSysClock   system_n32g4fr.o
+    0x20001cac   0x20001cac   0x0000014a   Code   RO           74    .text.SetSysClock   system_n32g4fr.o
     0x20001df6   0x20001df6   0x00000002   PAD
-    0x20001df8   0x20001df8   0x00000024   Code   RO          107    .text.SysTick_CLKSourceConfig  misc.o
-    0x20001e1c   0x20001e1c   0x00000002   Code   RO           88    .text.SysTick_Handler  n32g4fr_it.o
-    0x20001e1e   0x20001e1e   0x00000002   PAD
-    0x20001e20   0x20001e20   0x000000be   Code   RO           52    .text.SystemInit    system_n32g4fr.o
-    0x20001ede   0x20001ede   0x00000002   PAD
-    0x20001ee0   0x20001ee0   0x00000030   Code   RO         1314    .text.USART_Enable  n32g4fr_usart.o
-    0x20001f10   0x20001f10   0x00000048   Code   RO         1350    .text.USART_GetFlagStatus  n32g4fr_usart.o
-    0x20001f58   0x20001f58   0x00000128   Code   RO         1306    .text.USART_Init    n32g4fr_usart.o
-    0x20002080   0x20002080   0x0000001a   Code   RO         1330    .text.USART_SendData  n32g4fr_usart.o
-    0x2000209a   0x2000209a   0x00000002   PAD
-    0x2000209c   0x2000209c   0x00000004   Code   RO           82    .text.UsageFault_Handler  n32g4fr_it.o
-    0x200020a0   0x200020a0   0x000000a2   Code   RO         1436    .text._DoInit       segger_rtt.o
-    0x20002142   0x20002142   0x00000002   PAD
-    0x20002144   0x20002144   0x0000003e   Code   RO         1448    .text._GetAvailWriteSpace  segger_rtt.o
-    0x20002182   0x20002182   0x00000002   PAD
-    0x20002184   0x20002184   0x000001e4   Code   RO         1523    .text._PrintInt     segger_rtt_printf.o
-    0x20002368   0x20002368   0x000001be   Code   RO         1525    .text._PrintUnsigned  segger_rtt_printf.o
-    0x20002526   0x20002526   0x00000002   PAD
-    0x20002528   0x20002528   0x00000078   Code   RO         1521    .text._StoreChar    segger_rtt_printf.o
-    0x200025a0   0x200025a0   0x000000e4   Code   RO         1452    .text._WriteBlocking  segger_rtt.o
-    0x20002684   0x20002684   0x00000094   Code   RO         1450    .text._WriteNoCheck  segger_rtt.o
-    0x20002718   0x20002718   0x00000038   Code   RO           35    .text.analog_pin_config  main.o
-    0x20002750   0x20002750   0x0000000c   Code   RO            2    .text.app           app.o
-    0x2000275c   0x2000275c   0x00000036   Code   RO           31    .text.fputc         main.o
-    0x20002792   0x20002792   0x00000002   PAD
-    0x20002794   0x20002794   0x00000048   Code   RO           23    .text.led_init      main.o
-    0x200027dc   0x200027dc   0x00000194   Code   RO           41    .text.main          main.o
-    0x20002970   0x20002970   0x0000004c   Code   RO           11    .text.segger_init   main.o
-    0x200029bc   0x200029bc   0x000000b4   Code   RO         1539    .text.systick_delay_ms  delay.o
-    0x20002a70   0x20002a70   0x0000007a   Code   RO           33    .text.uart_init     main.o
-    0x20002aea   0x20002aea   0x00000002   PAD
-    0x20002aec   0x20002aec   0x00000028   Code   RO           27    .text.user_button_init  main.o
-    0x20002b14   0x20002b14   0x00000012   Code   RO         1430    OSKERNEL            hardfaulthandler.o
-    0x20002b26   0x20002b26   0x00000002   PAD
-    0x20002b28   0x20002b28   0x00000020   Code   RO         1567    i.__0printf         mc_w.l(printfa.o)
-    0x20002b48   0x20002b48   0x0000000e   Code   RO         1636    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x20002b56   0x20002b56   0x00000002   Code   RO         1637    i.__scatterload_null  mc_w.l(handlers.o)
-    0x20002b58   0x20002b58   0x0000000e   Code   RO         1638    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x20002b66   0x20002b66   0x00000002   PAD
-    0x20002b68   0x20002b68   0x00000184   Code   RO         1574    i._fp_digits        mc_w.l(printfa.o)
-    0x20002cec   0x20002cec   0x000006dc   Code   RO         1575    i._printf_core      mc_w.l(printfa.o)
-    0x200033c8   0x200033c8   0x00000024   Code   RO         1576    i._printf_post_padding  mc_w.l(printfa.o)
-    0x200033ec   0x200033ec   0x0000002e   Code   RO         1577    i._printf_pre_padding  mc_w.l(printfa.o)
-    0x2000341a   0x2000341a   0x00000010   Data   RO         1529    .rodata._PrintUnsigned._aV2C  segger_rtt_printf.o
-    0x2000342a   0x2000342a   0x00000010   Data   RO          826    .rodata.s_AdcHclkPresTable  n32g4fr_rcc.o
-    0x2000343a   0x2000343a   0x00000020   Data   RO          827    .rodata.s_AdcPllClkPresTable  n32g4fr_rcc.o
-    0x2000345a   0x2000345a   0x00000010   Data   RO          825    .rodata.s_ApbAhbPresTable  n32g4fr_rcc.o
-    0x2000346a   0x2000346a   0x000000bf   Data   RO           43    .rodata.str1.1      main.o
-    0x20003529   0x20003529   0x00000014   Data   RO         1509    .rodata.str1.1      segger_rtt.o
-    0x2000353d   0x2000353d   0x00000003   PAD
-    0x20003540   0x20003540   0x00000020   Data   RO         1635    Region$$Table       anon$$obj.o
+    0x20001df8   0x20001df8   0x00000052   Code   RO           13    .text.SysTick_Config  systick.o
+    0x20001e4a   0x20001e4a   0x00000002   PAD
+    0x20001e4c   0x20001e4c   0x00000008   Code   RO          108    .text.SysTick_Handler  n32g4fr_it.o
+    0x20001e54   0x20001e54   0x000000be   Code   RO           72    .text.SystemInit    system_n32g4fr.o
+    0x20001f12   0x20001f12   0x00000002   PAD
+    0x20001f14   0x20001f14   0x00000030   Code   RO         1334    .text.USART_Enable  n32g4fr_usart.o
+    0x20001f44   0x20001f44   0x00000048   Code   RO         1370    .text.USART_GetFlagStatus  n32g4fr_usart.o
+    0x20001f8c   0x20001f8c   0x00000128   Code   RO         1326    .text.USART_Init    n32g4fr_usart.o
+    0x200020b4   0x200020b4   0x0000001a   Code   RO         1350    .text.USART_SendData  n32g4fr_usart.o
+    0x200020ce   0x200020ce   0x00000002   PAD
+    0x200020d0   0x200020d0   0x00000004   Code   RO          102    .text.UsageFault_Handler  n32g4fr_it.o
+    0x200020d4   0x200020d4   0x000000a2   Code   RO         1456    .text._DoInit       segger_rtt.o
+    0x20002176   0x20002176   0x00000002   PAD
+    0x20002178   0x20002178   0x0000003e   Code   RO         1468    .text._GetAvailWriteSpace  segger_rtt.o
+    0x200021b6   0x200021b6   0x00000002   PAD
+    0x200021b8   0x200021b8   0x000001e4   Code   RO         1543    .text._PrintInt     segger_rtt_printf.o
+    0x2000239c   0x2000239c   0x000001be   Code   RO         1545    .text._PrintUnsigned  segger_rtt_printf.o
+    0x2000255a   0x2000255a   0x00000002   PAD
+    0x2000255c   0x2000255c   0x00000078   Code   RO         1541    .text._StoreChar    segger_rtt_printf.o
+    0x200025d4   0x200025d4   0x000000e4   Code   RO         1472    .text._WriteBlocking  segger_rtt.o
+    0x200026b8   0x200026b8   0x00000094   Code   RO         1470    .text._WriteNoCheck  segger_rtt.o
+    0x2000274c   0x2000274c   0x00000044   Code   RO           15    .text.__NVIC_SetPriority  systick.o
+    0x20002790   0x20002790   0x00000038   Code   RO           53    .text.analog_pin_config  main.o
+    0x200027c8   0x200027c8   0x0000000c   Code   RO            2    .text.app           app.o
+    0x200027d4   0x200027d4   0x00000028   Code   RO           17    .text.delay_1ms     systick.o
+    0x200027fc   0x200027fc   0x00000022   Code   RO           19    .text.delay_decrement  systick.o
+    0x2000281e   0x2000281e   0x00000002   PAD
+    0x20002820   0x20002820   0x00000036   Code   RO           49    .text.fputc         main.o
+    0x20002856   0x20002856   0x00000002   PAD
+    0x20002858   0x20002858   0x00000048   Code   RO           41    .text.led_init      main.o
+    0x200028a0   0x200028a0   0x00000198   Code   RO           61    .text.main          main.o
+    0x20002a38   0x20002a38   0x0000004c   Code   RO           29    .text.segger_init   main.o
+    0x20002a84   0x20002a84   0x0000003c   Code   RO           11    .text.systick_config  systick.o
+    0x20002ac0   0x20002ac0   0x00000008   Code   RO           59    .text.tick_init     main.o
+    0x20002ac8   0x20002ac8   0x0000007a   Code   RO           51    .text.uart_init     main.o
+    0x20002b42   0x20002b42   0x00000002   PAD
+    0x20002b44   0x20002b44   0x00000028   Code   RO           45    .text.user_button_init  main.o
+    0x20002b6c   0x20002b6c   0x00000012   Code   RO         1450    OSKERNEL            hardfaulthandler.o
+    0x20002b7e   0x20002b7e   0x00000002   PAD
+    0x20002b80   0x20002b80   0x00000020   Code   RO         1587    i.__0printf         mc_w.l(printfa.o)
+    0x20002ba0   0x20002ba0   0x0000000e   Code   RO         1656    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x20002bae   0x20002bae   0x00000002   Code   RO         1657    i.__scatterload_null  mc_w.l(handlers.o)
+    0x20002bb0   0x20002bb0   0x0000000e   Code   RO         1658    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x20002bbe   0x20002bbe   0x00000002   PAD
+    0x20002bc0   0x20002bc0   0x00000184   Code   RO         1594    i._fp_digits        mc_w.l(printfa.o)
+    0x20002d44   0x20002d44   0x000006dc   Code   RO         1595    i._printf_core      mc_w.l(printfa.o)
+    0x20003420   0x20003420   0x00000024   Code   RO         1596    i._printf_post_padding  mc_w.l(printfa.o)
+    0x20003444   0x20003444   0x0000002e   Code   RO         1597    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x20003472   0x20003472   0x00000010   Data   RO         1549    .rodata._PrintUnsigned._aV2C  segger_rtt_printf.o
+    0x20003482   0x20003482   0x00000010   Data   RO          846    .rodata.s_AdcHclkPresTable  n32g4fr_rcc.o
+    0x20003492   0x20003492   0x00000020   Data   RO          847    .rodata.s_AdcPllClkPresTable  n32g4fr_rcc.o
+    0x200034b2   0x200034b2   0x00000010   Data   RO          845    .rodata.s_ApbAhbPresTable  n32g4fr_rcc.o
+    0x200034c2   0x200034c2   0x000000bf   Data   RO           63    .rodata.str1.1      main.o
+    0x20003581   0x20003581   0x00000014   Data   RO         1529    .rodata.str1.1      segger_rtt.o
+    0x20003595   0x20003595   0x00000003   PAD
+    0x20003598   0x20003598   0x00000020   Data   RO         1655    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20010000, Load base: 0x20003560, Size: 0x00000d10, Max: 0x00010000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20010000, Load base: 0x200035b8, Size: 0x00000d18, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20010000   0x20003560   0x00000004   Data   RW         1608    .data               mc_w.l(stdout.o)
-    0x20010004   0x20003564   0x00000004   Data   RW           58    .data.SystemCoreClock  system_n32g4fr.o
-    0x20010008        -       0x0000000a   Zero   RW           44    .bss.ADC2ConvertedValue  main.o
-    0x20010012   0x20003568   0x00000002   PAD
-    0x20010014        -       0x00000040   Zero   RW         1423    .bss.HardFaultRegs  segger_hardfaulthandler.o
-    0x20010054        -       0x00000004   Zero   RW         1424    .bss._Continue      segger_hardfaulthandler.o
-    0x20010058        -       0x000000a8   Zero   RW         1506    .bss._SEGGER_RTT    segger_rtt.o
-    0x20010100        -       0x00000010   Zero   RW         1511    .bss._acDownBuffer  segger_rtt.o
-    0x20010110        -       0x00000400   Zero   RW         1510    .bss._acUpBuffer    segger_rtt.o
-    0x20010510        -       0x00000800   Zero   RW           66    STACK               startup_n32g4fr.o
+    0x20010000   0x200035b8   0x00000004   Data   RW         1628    .data               mc_w.l(stdout.o)
+    0x20010004   0x200035bc   0x00000004   Data   RW           78    .data.SystemCoreClock  system_n32g4fr.o
+    0x20010008        -       0x0000000a   Zero   RW           64    .bss.ADC2ConvertedValue  main.o
+    0x20010012   0x200035c0   0x00000002   PAD
+    0x20010014        -       0x00000040   Zero   RW         1443    .bss.HardFaultRegs  segger_hardfaulthandler.o
+    0x20010054        -       0x00000004   Zero   RW         1444    .bss._Continue      segger_hardfaulthandler.o
+    0x20010058        -       0x000000a8   Zero   RW         1526    .bss._SEGGER_RTT    segger_rtt.o
+    0x20010100        -       0x00000010   Zero   RW         1531    .bss._acDownBuffer  segger_rtt.o
+    0x20010110        -       0x00000400   Zero   RW         1530    .bss._acUpBuffer    segger_rtt.o
+    0x20010510        -       0x00000004   Zero   RW           21    .bss.delay          systick.o
+    0x20010514   0x200035c0   0x00000004   PAD
+    0x20010518        -       0x00000800   Zero   RW           86    STACK               startup_n32g4fr.o
 
 
 ==============================================================================
@@ -611,13 +629,11 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
         12          0          0          0          0        525   app.o
-       180          0          0          0          0       1165   delay.o
         18          0          0          0          0        304   hardfaulthandler.o
-      1628          0        191          0         10       5711   main.o
-        36          0          0          0          0       2905   misc.o
+      1640          0        191          0         10       5820   main.o
        970          0          0          0          0      10261   n32g4fr_adc.o
       1508          0          0          0          0       6280   n32g4fr_gpio.o
-        20          0          0          0          0        927   n32g4fr_it.o
+        26          0          0          0          0        938   n32g4fr_it.o
        712          0         64          0          0       8764   n32g4fr_rcc.o
        442          0          0          0          0       6832   n32g4fr_usart.o
        278          0          0          0         68       2683   segger_hardfaulthandler.o
@@ -625,11 +641,12 @@ Image component sizes
       1932         14         16          0          0       3800   segger_rtt_printf.o
         36          8        408          0       2048        844   startup_n32g4fr.o
        520          0          0          4          0       2897   system_n32g4fr.o
+       284          0          0          0          4       4395   systick.o
 
     ----------------------------------------------------------------------
-      9224         22        734          4       3336      67066   Object Totals
+      9312         22        734          4       3344      67511   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        68          0          3          0          2          0   (incl. Padding)
+        70          0          3          0          6          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -683,15 +700,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     12930        128        734          8       3336      67882   Grand Totals
-     12930        128        734          8       3336      67882   ELF Image Totals
-     12930        128        734          8          0          0   ROM Totals
+     13018        128        734          8       3344      68343   Grand Totals
+     13018        128        734          8       3344      68343   ELF Image Totals
+     13018        128        734          8          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                13664 (  13.34kB)
-    Total RW  Size (RW Data + ZI Data)              3344 (   3.27kB)
-    Total ROM Size (Code + RO Data + RW Data)      13672 (  13.35kB)
+    Total RO  Size (Code + RO Data)                13752 (  13.43kB)
+    Total RW  Size (RW Data + ZI Data)              3352 (   3.27kB)
+    Total ROM Size (Code + RO Data + RW Data)      13760 (  13.44kB)
 
 ==============================================================================
 

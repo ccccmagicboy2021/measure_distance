@@ -283,6 +283,11 @@ uint16_t ADC_GetData(ADC_Module* ADCx, uint8_t ADC_Channel)
 	return dat;
 }
 
+void tick_init(void)
+{
+    systick_config();
+}
+
 int main(void)
 {    
     segger_init();
@@ -294,6 +299,7 @@ int main(void)
     user_button_init();
     analog_pin_config();
     ADC_Initial(ADC2);
+    tick_init();
     ///////////////
 #ifdef VECT_TAB_SRAM
     CV_LOG("ramcode program begin...\r\n");

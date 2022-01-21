@@ -34,6 +34,7 @@
  */
 #include "n32g4fr_it.h"
 #include "n32g4fr.h"
+#include "sys.h"
 
 /** @addtogroup N32G4FR_StdPeriph_Template
  * @{
@@ -115,6 +116,7 @@ void DebugMon_Handler(void)
  */
 void SysTick_Handler(void)
 {
+    delay_decrement();
 }
 
 /**

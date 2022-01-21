@@ -7,6 +7,7 @@
 #include "delay.h"
 
 #include "app.h"
+#include "systick.h"
 #include "SEGGER_RTT.h"
 #include "SEGGER_RTT_Conf.h"
 
