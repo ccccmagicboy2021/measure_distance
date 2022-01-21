@@ -1,0 +1,840 @@
+Component: ARM Compiler 6.14.1 Tool: armlink [5db06d00]
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
+    ../clib/microlib/printf/stubs.s          0x00000000   Number         0  printfstubs.o ABSOLUTE
+    ../clib/microlib/stdio/putchar.c         0x00000000   Number         0  putchar.o ABSOLUTE
+    ../clib/microlib/stdio/puts.c            0x00000000   Number         0  puts.o ABSOLUTE
+    ../clib/microlib/stdio/puts.c            0x00000000   Number         0  puts_e.o ABSOLUTE
+    ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stdout.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    ../clib/microlib/string/strlen.c         0x00000000   Number         0  strlen.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../common/startup_n32g4fr.s              0x00000000   Number         0  startup_n32g4fr.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpcmp.c                0x00000000   Number         0  dcmple.o ABSOLUTE
+    ../fplib/microlib/fpcmp.c                0x00000000   Number         0  dcmpge.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixui.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dfltui.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    ..\application\HardFaultHandlerMDK\HardFaultHandler.S 0x00000000   Number         0  hardfaulthandler.o ABSOLUTE
+    SEGGER_HardFaultHandler.c                0x00000000   Number         0  segger_hardfaulthandler.o ABSOLUTE
+    SEGGER_RTT.c                             0x00000000   Number         0  segger_rtt.o ABSOLUTE
+    SEGGER_RTT_printf.c                      0x00000000   Number         0  segger_rtt_printf.o ABSOLUTE
+    app.c                                    0x00000000   Number         0  app.o ABSOLUTE
+    cdrcmple.s                               0x00000000   Number         0  cdrcmple.o ABSOLUTE
+    core_list_join.c                         0x00000000   Number         0  core_list_join.o ABSOLUTE
+    core_main.c                              0x00000000   Number         0  core_main.o ABSOLUTE
+    core_matrix.c                            0x00000000   Number         0  core_matrix.o ABSOLUTE
+    core_portme.c                            0x00000000   Number         0  core_portme.o ABSOLUTE
+    core_state.c                             0x00000000   Number         0  core_state.o ABSOLUTE
+    core_util.c                              0x00000000   Number         0  core_util.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    delay.c                                  0x00000000   Number         0  delay.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    log.c                                    0x00000000   Number         0  log.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    misc.c                                   0x00000000   Number         0  misc.o ABSOLUTE
+    n32g4fr_adc.c                            0x00000000   Number         0  n32g4fr_adc.o ABSOLUTE
+    n32g4fr_bkp.c                            0x00000000   Number         0  n32g4fr_bkp.o ABSOLUTE
+    n32g4fr_can.c                            0x00000000   Number         0  n32g4fr_can.o ABSOLUTE
+    n32g4fr_crc.c                            0x00000000   Number         0  n32g4fr_crc.o ABSOLUTE
+    n32g4fr_dac.c                            0x00000000   Number         0  n32g4fr_dac.o ABSOLUTE
+    n32g4fr_dbg.c                            0x00000000   Number         0  n32g4fr_dbg.o ABSOLUTE
+    n32g4fr_dma.c                            0x00000000   Number         0  n32g4fr_dma.o ABSOLUTE
+    n32g4fr_dvp.c                            0x00000000   Number         0  n32g4fr_dvp.o ABSOLUTE
+    n32g4fr_exti.c                           0x00000000   Number         0  n32g4fr_exti.o ABSOLUTE
+    n32g4fr_flash.c                          0x00000000   Number         0  n32g4fr_flash.o ABSOLUTE
+    n32g4fr_gpio.c                           0x00000000   Number         0  n32g4fr_gpio.o ABSOLUTE
+    n32g4fr_i2c.c                            0x00000000   Number         0  n32g4fr_i2c.o ABSOLUTE
+    n32g4fr_it.c                             0x00000000   Number         0  n32g4fr_it.o ABSOLUTE
+    n32g4fr_iwdg.c                           0x00000000   Number         0  n32g4fr_iwdg.o ABSOLUTE
+    n32g4fr_pwr.c                            0x00000000   Number         0  n32g4fr_pwr.o ABSOLUTE
+    n32g4fr_qspi.c                           0x00000000   Number         0  n32g4fr_qspi.o ABSOLUTE
+    n32g4fr_rcc.c                            0x00000000   Number         0  n32g4fr_rcc.o ABSOLUTE
+    n32g4fr_rtc.c                            0x00000000   Number         0  n32g4fr_rtc.o ABSOLUTE
+    n32g4fr_sdio.c                           0x00000000   Number         0  n32g4fr_sdio.o ABSOLUTE
+    n32g4fr_spi.c                            0x00000000   Number         0  n32g4fr_spi.o ABSOLUTE
+    n32g4fr_tim.c                            0x00000000   Number         0  n32g4fr_tim.o ABSOLUTE
+    n32g4fr_tsc.c                            0x00000000   Number         0  n32g4fr_tsc.o ABSOLUTE
+    n32g4fr_usart.c                          0x00000000   Number         0  n32g4fr_usart.o ABSOLUTE
+    n32g4fr_wwdg.c                           0x00000000   Number         0  n32g4fr_wwdg.o ABSOLUTE
+    n32g4fr_xfmc.c                           0x00000000   Number         0  n32g4fr_xfmc.o ABSOLUTE
+    system_n32g4fr.c                         0x00000000   Number         0  system_n32g4fr.o ABSOLUTE
+    RESET                                    0x20000000   Section      408  startup_n32g4fr.o(RESET)
+    .ARM.Collect$$$$00000000                 0x20000198   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x20000198   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x2000019c   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x200001a0   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x200001a0   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x200001a0   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    __lit__00000000                          0x200001a8   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .ARM.Collect$$$$0000000D                 0x200001a8   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x200001a8   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x200001a8   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    $v0                                      0x200001ac   Number         0  startup_n32g4fr.o(.text)
+    .text                                    0x200001ac   Section       36  startup_n32g4fr.o(.text)
+    .text                                    0x200001d0   Section        0  memcpya.o(.text)
+    .text                                    0x200001f4   Section        0  memseta.o(.text)
+    .text                                    0x20000218   Section        0  dmul.o(.text)
+    .text                                    0x200002fc   Section        0  ddiv.o(.text)
+    .text                                    0x200003da   Section        0  dcmple.o(.text)
+    .text                                    0x20000410   Section        0  dcmpge.o(.text)
+    .text                                    0x20000446   Section        0  dfltui.o(.text)
+    .text                                    0x20000460   Section        0  dfixui.o(.text)
+    .text                                    0x20000492   Section        0  uidiv.o(.text)
+    .text                                    0x200004be   Section        0  uldiv.o(.text)
+    .text                                    0x20000520   Section        0  llushr.o(.text)
+    .text                                    0x20000540   Section        0  iusefp.o(.text)
+    .text                                    0x20000540   Section        0  depilogue.o(.text)
+    .text                                    0x200005fa   Section        0  dadd.o(.text)
+    .text                                    0x20000748   Section        0  dfixul.o(.text)
+    .text                                    0x20000778   Section       48  cdrcmple.o(.text)
+    .text                                    0x200007a8   Section       36  init.o(.text)
+    .text                                    0x200007cc   Section        0  llshl.o(.text)
+    .text                                    0x200007ea   Section        0  llsshr.o(.text)
+    [Anonymous Symbol]                       0x20000810   Section        0  n32g4fr_it.o(.text.BusFault_Handler)
+    [Anonymous Symbol]                       0x20000818   Section        0  core_main.o(.text.CoreMark)
+    [Anonymous Symbol]                       0x20000f84   Section        0  n32g4fr_it.o(.text.DebugMon_Handler)
+    [Anonymous Symbol]                       0x20000f88   Section        0  n32g4fr_flash.o(.text.FLASH_iCacheCmd)
+    [Anonymous Symbol]                       0x20000fa0   Section        0  n32g4fr_gpio.o(.text.GPIO_ConfigPinRemap)
+    [Anonymous Symbol]                       0x20001120   Section        0  n32g4fr_gpio.o(.text.GPIO_InitPeripheral)
+    [Anonymous Symbol]                       0x2000151c   Section        0  n32g4fr_gpio.o(.text.GPIO_ReadInputDataBit)
+    [Anonymous Symbol]                       0x20001528   Section        0  segger_hardfaulthandler.o(.text.HardFaultHandler)
+    [Anonymous Symbol]                       0x200015d0   Section        0  n32g4fr_it.o(.text.MemManage_Handler)
+    [Anonymous Symbol]                       0x200015d4   Section        0  n32g4fr_it.o(.text.NMI_Handler)
+    [Anonymous Symbol]                       0x200015d8   Section        0  n32g4fr_rcc.o(.text.RCC_EnableAPB2PeriphClk)
+    [Anonymous Symbol]                       0x200015f0   Section        0  n32g4fr_rcc.o(.text.RCC_GetClocksFreqValue)
+    s_AdcHclkPresTable                       0x200016ac   Number         0  n32g4fr_rcc.o(.text.RCC_GetClocksFreqValue)
+    s_AdcPllClkPresTable                     0x200016bc   Number         0  n32g4fr_rcc.o(.text.RCC_GetClocksFreqValue)
+    [Anonymous Symbol]                       0x200016dc   Section        0  segger_rtt.o(.text.SEGGER_RTT_Init)
+    [Anonymous Symbol]                       0x20001758   Section        0  segger_rtt.o(.text.SEGGER_RTT_Write)
+    [Anonymous Symbol]                       0x20001818   Section        0  segger_rtt.o(.text.SEGGER_RTT_WriteNoLock)
+    [Anonymous Symbol]                       0x200019a4   Section        0  segger_rtt_printf.o(.text.SEGGER_RTT_printf)
+    [Anonymous Symbol]                       0x200019c4   Section        0  segger_rtt_printf.o(.text.SEGGER_RTT_vprintf)
+    [Anonymous Symbol]                       0x20001fa8   Section        0  n32g4fr_it.o(.text.SVC_Handler)
+    [Anonymous Symbol]                       0x20001fac   Section        0  misc.o(.text.SysTick_CLKSourceConfig)
+    [Anonymous Symbol]                       0x20001fc4   Section        0  n32g4fr_it.o(.text.SysTick_Handler)
+    [Anonymous Symbol]                       0x20001fd4   Section        0  main.o(.text.SysTick_Init)
+    [Anonymous Symbol]                       0x20002010   Section        0  main.o(.text.SysTick_Stop_time)
+    [Anonymous Symbol]                       0x20002028   Section        0  system_n32g4fr.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x200021c0   Section        0  n32g4fr_usart.o(.text.USART_Enable)
+    [Anonymous Symbol]                       0x200021d4   Section        0  n32g4fr_usart.o(.text.USART_GetFlagStatus)
+    [Anonymous Symbol]                       0x200021e0   Section        0  n32g4fr_usart.o(.text.USART_Init)
+    [Anonymous Symbol]                       0x20002288   Section        0  n32g4fr_usart.o(.text.USART_SendData)
+    [Anonymous Symbol]                       0x20002290   Section        0  n32g4fr_it.o(.text.UsageFault_Handler)
+    _PrintUnsigned                           0x20002295   Thumb Code   432  segger_rtt_printf.o(.text._PrintUnsigned)
+    [Anonymous Symbol]                       0x20002294   Section        0  segger_rtt_printf.o(.text._PrintUnsigned)
+    _PrintUnsigned._aV2C                     0x20002434   Number         0  segger_rtt_printf.o(.text._PrintUnsigned)
+    [Anonymous Symbol]                       0x20002444   Section        0  app.o(.text.app)
+    [Anonymous Symbol]                       0x2000244c   Section        0  core_list_join.o(.text.calc_func)
+    [Anonymous Symbol]                       0x200024d4   Section        0  core_util.o(.text.check_data_types)
+    [Anonymous Symbol]                       0x200024d8   Section        0  core_list_join.o(.text.core_bench_list)
+    [Anonymous Symbol]                       0x20002958   Section        0  core_matrix.o(.text.core_bench_matrix)
+    [Anonymous Symbol]                       0x20002980   Section        0  core_state.o(.text.core_bench_state)
+    [Anonymous Symbol]                       0x20002bb4   Section        0  core_matrix.o(.text.core_init_matrix)
+    [Anonymous Symbol]                       0x20002e1c   Section        0  core_state.o(.text.core_init_state)
+    [Anonymous Symbol]                       0x20002f64   Section        0  core_list_join.o(.text.core_list_init)
+    [Anonymous Symbol]                       0x20003324   Section        0  core_state.o(.text.core_state_transition)
+    [Anonymous Symbol]                       0x20003524   Section        0  core_util.o(.text.crc16)
+    [Anonymous Symbol]                       0x2000352c   Section        0  core_util.o(.text.crcu16)
+    [Anonymous Symbol]                       0x20003644   Section        0  core_util.o(.text.crcu32)
+    [Anonymous Symbol]                       0x2000365c   Section        0  main.o(.text.fputc)
+    [Anonymous Symbol]                       0x20003680   Section        0  core_util.o(.text.get_seed_32)
+    [Anonymous Symbol]                       0x200036a8   Section        0  core_portme.o(.text.get_time)
+    [Anonymous Symbol]                       0x200036b4   Section        0  main.o(.text.main)
+    [Anonymous Symbol]                       0x20003988   Section        0  core_matrix.o(.text.matrix_test)
+    [Anonymous Symbol]                       0x20004850   Section        0  core_portme.o(.text.portable_fini)
+    [Anonymous Symbol]                       0x20004858   Section        0  core_portme.o(.text.portable_init)
+    [Anonymous Symbol]                       0x20004860   Section        0  core_portme.o(.text.start_time)
+    [Anonymous Symbol]                       0x20004874   Section        0  core_portme.o(.text.stop_time)
+    [Anonymous Symbol]                       0x20004878   Section        0  delay.o(.text.systick_delay_ms)
+    [Anonymous Symbol]                       0x200048f0   Section        0  core_portme.o(.text.time_in_secs)
+    $v0                                      0x20004910   Number         0  hardfaulthandler.o(OSKERNEL)
+    OSKERNEL                                 0x20004910   Section       18  hardfaulthandler.o(OSKERNEL)
+    i.__0printf                              0x20004924   Section        0  printfa.o(i.__0printf)
+    i.__scatterload_copy                     0x20004944   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x20004952   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x20004954   Section       14  handlers.o(i.__scatterload_zeroinit)
+    _fp_digits                               0x20004965   Thumb Code   366  printfa.o(i._fp_digits)
+    i._fp_digits                             0x20004964   Section        0  printfa.o(i._fp_digits)
+    _printf_core                             0x20004ae9   Thumb Code  1744  printfa.o(i._printf_core)
+    i._printf_core                           0x20004ae8   Section        0  printfa.o(i._printf_core)
+    _printf_post_padding                     0x200051c5   Thumb Code    36  printfa.o(i._printf_post_padding)
+    i._printf_post_padding                   0x200051c4   Section        0  printfa.o(i._printf_post_padding)
+    _printf_pre_padding                      0x200051e9   Thumb Code    46  printfa.o(i._printf_pre_padding)
+    i._printf_pre_padding                    0x200051e8   Section        0  printfa.o(i._printf_pre_padding)
+    i.putchar                                0x20005218   Section        0  putchar.o(i.putchar)
+    i.puts                                   0x20005224   Section        0  puts.o(i.puts)
+    s_ApbAhbPresTable                        0x20005248   Data          16  n32g4fr_rcc.o(.rodata.cst16)
+    errpat                                   0x20005258   Data          16  core_state.o(.rodata.errpat)
+    [Anonymous Symbol]                       0x20005258   Section        0  core_state.o(.rodata.errpat)
+    floatpat                                 0x20005268   Data          16  core_state.o(.rodata.floatpat)
+    [Anonymous Symbol]                       0x20005268   Section        0  core_state.o(.rodata.floatpat)
+    intpat                                   0x20005278   Data          16  core_state.o(.rodata.intpat)
+    [Anonymous Symbol]                       0x20005278   Section        0  core_state.o(.rodata.intpat)
+    list_known_crc                           0x20005288   Data          10  core_main.o(.rodata.list_known_crc)
+    [Anonymous Symbol]                       0x20005288   Section        0  core_main.o(.rodata.list_known_crc)
+    matrix_known_crc                         0x20005292   Data          10  core_main.o(.rodata.matrix_known_crc)
+    [Anonymous Symbol]                       0x20005292   Section        0  core_main.o(.rodata.matrix_known_crc)
+    scipat                                   0x2000529c   Data          16  core_state.o(.rodata.scipat)
+    [Anonymous Symbol]                       0x2000529c   Section        0  core_state.o(.rodata.scipat)
+    state_known_crc                          0x200052ac   Data          10  core_main.o(.rodata.state_known_crc)
+    [Anonymous Symbol]                       0x200052ac   Section        0  core_main.o(.rodata.state_known_crc)
+    .L.str.10                                0x200052b6   Data          16  main.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x200052b6   Section        0  main.o(.rodata.str1.1)
+    .L.str.3                                 0x200052c6   Data          23  main.o(.rodata.str1.1)
+    .L.str                                   0x200052dd   Data          31  main.o(.rodata.str1.1)
+    .Lstr.11                                 0x200052fc   Data          15  main.o(.rodata.str1.1)
+    .L.str.5                                 0x2000530b   Data           9  main.o(.rodata.str1.1)
+    .L.str.4                                 0x20005314   Data          12  main.o(.rodata.str1.1)
+    .L.str.2                                 0x20005320   Data           5  main.o(.rodata.str1.1)
+    .L.str.1                                 0x20005325   Data           8  main.o(.rodata.str1.1)
+    .L.str                                   0x2000532d   Data           9  segger_rtt.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x2000532d   Section        0  segger_rtt.o(.rodata.str1.1)
+    .L.str                                   0x20005336   Data           7  core_main.o(.rodata.str1.1)
+    .L.str.14                                0x20005336   Data          23  core_main.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x20005336   Section        0  core_main.o(.rodata.str1.1)
+    .L.str.1                                 0x2000533d   Data           5  core_main.o(.rodata.str1.1)
+    .L.str.2                                 0x20005342   Data           6  core_main.o(.rodata.str1.1)
+    .L.str.13                                0x2000534d   Data          23  core_main.o(.rodata.str1.1)
+    .L.str.19                                0x20005364   Data          23  core_main.o(.rodata.str1.1)
+    .L.str.21                                0x2000537b   Data          23  core_main.o(.rodata.str1.1)
+    .L.str.17                                0x20005392   Data          23  core_main.o(.rodata.str1.1)
+    .L.str.16                                0x200053a9   Data          24  core_main.o(.rodata.str1.1)
+    .L.str.12                                0x200053c1   Data          24  core_main.o(.rodata.str1.1)
+    .L.str.11                                0x200053d9   Data          24  core_main.o(.rodata.str1.1)
+    .L.str.23                                0x200053f1   Data          27  core_main.o(.rodata.str1.1)
+    .L.str.24                                0x2000540c   Data          28  core_main.o(.rodata.str1.1)
+    .L.str.26                                0x20005428   Data          28  core_main.o(.rodata.str1.1)
+    .L.str.27                                0x20005444   Data          28  core_main.o(.rodata.str1.1)
+    .L.str.25                                0x20005460   Data          28  core_main.o(.rodata.str1.1)
+    .L.str.10                                0x2000547c   Data          48  core_main.o(.rodata.str1.1)
+    .L.str.8                                 0x200054ac   Data          47  core_main.o(.rodata.str1.1)
+    .L.str.9                                 0x200054db   Data          49  core_main.o(.rodata.str1.1)
+    .L.str.18                                0x2000550c   Data          17  core_main.o(.rodata.str1.1)
+    .Lstr.37                                 0x2000551d   Data          61  core_main.o(.rodata.str1.1)
+    .Lstr.40                                 0x2000555a   Data          43  core_main.o(.rodata.str1.1)
+    .Lstr.39                                 0x20005585   Data          48  core_main.o(.rodata.str1.1)
+    .Lstr.34                                 0x200055b5   Data          98  core_main.o(.rodata.str1.1)
+    .Lstr.36                                 0x20005617   Data          72  core_main.o(.rodata.str1.1)
+    .L.str.22                                0x2000565f   Data           6  core_main.o(.rodata.str1.1)
+    .Lstr.35                                 0x20005665   Data          16  core_main.o(.rodata.str1.1)
+    .L.str.29                                0x20005675   Data          26  core_main.o(.rodata.str1.1)
+    .L.str.20                                0x2000568f   Data          26  core_main.o(.rodata.str1.1)
+    .L.str.4                                 0x200056a9   Data           9  core_state.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x200056a9   Section        0  core_state.o(.rodata.str1.1)
+    .L.str.7                                 0x200056b2   Data           9  core_state.o(.rodata.str1.1)
+    .L.str.5                                 0x200056bb   Data           9  core_state.o(.rodata.str1.1)
+    .L.str.6                                 0x200056c4   Data           9  core_state.o(.rodata.str1.1)
+    .L.str.9                                 0x200056cd   Data           9  core_state.o(.rodata.str1.1)
+    .L.str.11                                0x200056d6   Data           9  core_state.o(.rodata.str1.1)
+    .L.str                                   0x200056df   Data           5  core_state.o(.rodata.str1.1)
+    .L.str.3                                 0x200056e4   Data           5  core_state.o(.rodata.str1.1)
+    .L.str.10                                0x200056e9   Data           9  core_state.o(.rodata.str1.1)
+    .L.str.8                                 0x200056f2   Data           9  core_state.o(.rodata.str1.1)
+    .L.str.1                                 0x200056fb   Data           5  core_state.o(.rodata.str1.1)
+    .L.str.2                                 0x20005700   Data           5  core_state.o(.rodata.str1.1)
+    .L.str.12                                0x20005705   Data           9  core_state.o(.rodata.str1.1)
+    .L.str.15                                0x2000570e   Data           9  core_state.o(.rodata.str1.1)
+    .L.str.13                                0x20005717   Data           9  core_state.o(.rodata.str1.1)
+    .L.str.14                                0x20005720   Data           9  core_state.o(.rodata.str1.1)
+    .data                                    0x20010000   Section        4  stdout.o(.data)
+    .L_MergedGlobals                         0x20010018   Data          68  segger_hardfaulthandler.o(.bss..L_MergedGlobals)
+    _Continue                                0x20010018   Data           4  segger_hardfaulthandler.o(.bss..L_MergedGlobals)
+    [Anonymous Symbol]                       0x20010018   Section        0  segger_hardfaulthandler.o(.bss..L_MergedGlobals)
+    HardFaultRegs                            0x2001001c   Data          64  segger_hardfaulthandler.o(.bss..L_MergedGlobals)
+    .L_MergedGlobals                         0x2001005c   Data          17  segger_rtt.o(.bss..L_MergedGlobals)
+    _ActiveTerminal                          0x2001005c   Data           1  segger_rtt.o(.bss..L_MergedGlobals)
+    [Anonymous Symbol]                       0x2001005c   Section        0  segger_rtt.o(.bss..L_MergedGlobals)
+    _acDownBuffer                            0x2001005d   Data          16  segger_rtt.o(.bss..L_MergedGlobals)
+    _acUpBuffer                              0x2001011c   Data        1024  segger_rtt.o(.bss._acUpBuffer)
+    [Anonymous Symbol]                       0x2001011c   Section        0  segger_rtt.o(.bss._acUpBuffer)
+    STACK                                    0x20010528   Section    32768  startup_n32g4fr.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    _printf_a                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_c                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_charcount                        0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_d                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_e                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_f                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_flags                            0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_fp_dec                           0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_fp_hex                           0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_g                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_i                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_int_dec                          0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_l                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_lc                               0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_ll                               0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_lld                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_lli                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_llo                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_llu                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_llx                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_longlong_dec                     0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_longlong_hex                     0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_longlong_oct                     0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_ls                               0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_mbtowc                           0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_n                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_o                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_p                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_percent                          0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_pre_padding                      0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_return_value                     0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_s                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_sizespec                         0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_str                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_truncate_signed                  0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_truncate_unsigned                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_u                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_wc                               0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_wctomb                           0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_widthprec                        0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_x                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_Size                           0x00000198   Number         0  startup_n32g4fr.o ABSOLUTE
+    __Vectors                                0x20000000   Data           4  startup_n32g4fr.o(RESET)
+    __Vectors_End                            0x20000198   Data           0  startup_n32g4fr.o(RESET)
+    __main                                   0x20000199   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x20000199   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x2000019d   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x200001a1   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x200001a1   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x200001a1   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x200001a1   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x200001a9   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x200001a9   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x200001ad   Thumb Code     8  startup_n32g4fr.o(.text)
+    PendSV_Handler                           0x200001c3   Thumb Code     2  startup_n32g4fr.o(.text)
+    ADC1_2_IRQHandler                        0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    ADC3_4_IRQHandler                        0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    CAN1_RX1_IRQHandler                      0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    CAN1_SCE_IRQHandler                      0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    CAN2_RX0_IRQHandler                      0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    CAN2_RX1_IRQHandler                      0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    CAN2_SCE_IRQHandler                      0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    CAN2_TX_IRQHandler                       0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    COMP7_IRQHandler                         0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    COMP_1_2_3_IRQHandler                    0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    COMP_4_5_6_IRQHandler                    0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    DMA1_Channel1_IRQHandler                 0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    DMA1_Channel2_IRQHandler                 0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    DMA1_Channel3_IRQHandler                 0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    DMA1_Channel4_IRQHandler                 0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    DMA1_Channel5_IRQHandler                 0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    DMA1_Channel6_IRQHandler                 0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    DMA1_Channel7_IRQHandler                 0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    DMA1_Channel8_IRQHandler                 0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    DMA2_Channel1_IRQHandler                 0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    DMA2_Channel2_IRQHandler                 0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    DMA2_Channel3_IRQHandler                 0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    DMA2_Channel4_IRQHandler                 0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    DMA2_Channel5_IRQHandler                 0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    DMA2_Channel6_IRQHandler                 0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    DMA2_Channel7_IRQHandler                 0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    DMA2_Channel8_IRQHandler                 0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    DVP_IRQHandler                           0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    ETH_IRQHandler                           0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    ETH_WKUP_IRQHandler                      0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    EXTI0_IRQHandler                         0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    EXTI15_10_IRQHandler                     0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    EXTI1_IRQHandler                         0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    EXTI2_IRQHandler                         0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    EXTI3_IRQHandler                         0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    EXTI4_IRQHandler                         0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    EXTI9_5_IRQHandler                       0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    FLASH_IRQHandler                         0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    I2C1_ER_IRQHandler                       0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    I2C1_EV_IRQHandler                       0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    I2C2_ER_IRQHandler                       0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    I2C2_EV_IRQHandler                       0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    I2C3_ER_IRQHandler                       0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    I2C3_EV_IRQHandler                       0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    I2C4_ER_IRQHandler                       0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    I2C4_EV_IRQHandler                       0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    MMU_IRQHandler                           0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    PVD_IRQHandler                           0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    QSPI_IRQHandler                          0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    RCC_IRQHandler                           0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    RSRAM_IRQHandler                         0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    RTCAlarm_IRQHandler                      0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    RTC_WKUP_IRQHandler                      0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    SAC_IRQHandler                           0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    SDIO_IRQHandler                          0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    SPI1_IRQHandler                          0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    SPI2_IRQHandler                          0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    SPI3_IRQHandler                          0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    TAMPER_IRQHandler                        0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    TIM1_BRK_IRQHandler                      0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    TIM1_CC_IRQHandler                       0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    TIM1_TRG_COM_IRQHandler                  0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    TIM1_UP_IRQHandler                       0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    TIM2_IRQHandler                          0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    TIM3_IRQHandler                          0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    TIM4_IRQHandler                          0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    TIM5_IRQHandler                          0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    TIM6_IRQHandler                          0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    TIM7_IRQHandler                          0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    TIM8_BRK_IRQHandler                      0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    TIM8_CC_IRQHandler                       0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    TIM8_TRG_COM_IRQHandler                  0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    TIM8_UP_IRQHandler                       0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    TSC_IRQHandler                           0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    UART4_IRQHandler                         0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    UART5_IRQHandler                         0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    UART6_IRQHandler                         0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    UART7_IRQHandler                         0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    USART1_IRQHandler                        0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    USART2_IRQHandler                        0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    USART3_IRQHandler                        0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    USBWakeUp_IRQHandler                     0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    USB_HP_CAN1_TX_IRQHandler                0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    USB_LP_CAN1_RX0_IRQHandler               0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    WWDG_IRQHandler                          0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    XFMC_IRQHandler                          0x200001c7   Thumb Code     0  startup_n32g4fr.o(.text)
+    __aeabi_memcpy                           0x200001d1   Thumb Code    36  memcpya.o(.text)
+    __aeabi_memcpy4                          0x200001d1   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memcpy8                          0x200001d1   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memset                           0x200001f5   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x200001f5   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x200001f5   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x20000203   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x20000203   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x20000203   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x20000207   Thumb Code    18  memseta.o(.text)
+    __aeabi_dmul                             0x20000219   Thumb Code   228  dmul.o(.text)
+    __aeabi_ddiv                             0x200002fd   Thumb Code   222  ddiv.o(.text)
+    __aeabi_dcmple                           0x200003db   Thumb Code    54  dcmple.o(.text)
+    __aeabi_dcmpge                           0x20000411   Thumb Code    54  dcmpge.o(.text)
+    __aeabi_ui2d                             0x20000447   Thumb Code    26  dfltui.o(.text)
+    __aeabi_d2uiz                            0x20000461   Thumb Code    50  dfixui.o(.text)
+    __aeabi_uidiv                            0x20000493   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x20000493   Thumb Code    44  uidiv.o(.text)
+    __aeabi_uldivmod                         0x200004bf   Thumb Code    98  uldiv.o(.text)
+    __aeabi_llsr                             0x20000521   Thumb Code    32  llushr.o(.text)
+    _ll_ushift_r                             0x20000521   Thumb Code     0  llushr.o(.text)
+    __I$use$fp                               0x20000541   Thumb Code     0  iusefp.o(.text)
+    _double_round                            0x20000541   Thumb Code    30  depilogue.o(.text)
+    _double_epilogue                         0x2000055f   Thumb Code   156  depilogue.o(.text)
+    __aeabi_dadd                             0x200005fb   Thumb Code   322  dadd.o(.text)
+    __aeabi_dsub                             0x2000073d   Thumb Code     6  dadd.o(.text)
+    __aeabi_drsub                            0x20000743   Thumb Code     6  dadd.o(.text)
+    __aeabi_d2ulz                            0x20000749   Thumb Code    48  dfixul.o(.text)
+    __aeabi_cdrcmple                         0x20000779   Thumb Code    48  cdrcmple.o(.text)
+    __scatterload                            0x200007a9   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x200007a9   Thumb Code     0  init.o(.text)
+    __aeabi_llsl                             0x200007cd   Thumb Code    30  llshl.o(.text)
+    _ll_shift_l                              0x200007cd   Thumb Code     0  llshl.o(.text)
+    __aeabi_lasr                             0x200007eb   Thumb Code    36  llsshr.o(.text)
+    _ll_sshift_r                             0x200007eb   Thumb Code     0  llsshr.o(.text)
+    BusFault_Handler                         0x20000811   Thumb Code     2  n32g4fr_it.o(.text.BusFault_Handler)
+    CoreMark                                 0x20000819   Thumb Code  1900  core_main.o(.text.CoreMark)
+    DebugMon_Handler                         0x20000f85   Thumb Code     2  n32g4fr_it.o(.text.DebugMon_Handler)
+    FLASH_iCacheCmd                          0x20000f89   Thumb Code    24  n32g4fr_flash.o(.text.FLASH_iCacheCmd)
+    GPIO_ConfigPinRemap                      0x20000fa1   Thumb Code   382  n32g4fr_gpio.o(.text.GPIO_ConfigPinRemap)
+    GPIO_InitPeripheral                      0x20001121   Thumb Code  1018  n32g4fr_gpio.o(.text.GPIO_InitPeripheral)
+    GPIO_ReadInputDataBit                    0x2000151d   Thumb Code    10  n32g4fr_gpio.o(.text.GPIO_ReadInputDataBit)
+    HardFaultHandler                         0x20001529   Thumb Code   168  segger_hardfaulthandler.o(.text.HardFaultHandler)
+    MemManage_Handler                        0x200015d1   Thumb Code     2  n32g4fr_it.o(.text.MemManage_Handler)
+    NMI_Handler                              0x200015d5   Thumb Code     2  n32g4fr_it.o(.text.NMI_Handler)
+    RCC_EnableAPB2PeriphClk                  0x200015d9   Thumb Code    24  n32g4fr_rcc.o(.text.RCC_EnableAPB2PeriphClk)
+    RCC_GetClocksFreqValue                   0x200015f1   Thumb Code   236  n32g4fr_rcc.o(.text.RCC_GetClocksFreqValue)
+    SEGGER_RTT_Init                          0x200016dd   Thumb Code   124  segger_rtt.o(.text.SEGGER_RTT_Init)
+    SEGGER_RTT_Write                         0x20001759   Thumb Code   190  segger_rtt.o(.text.SEGGER_RTT_Write)
+    SEGGER_RTT_WriteNoLock                   0x20001819   Thumb Code   394  segger_rtt.o(.text.SEGGER_RTT_WriteNoLock)
+    SEGGER_RTT_printf                        0x200019a5   Thumb Code    30  segger_rtt_printf.o(.text.SEGGER_RTT_printf)
+    SEGGER_RTT_vprintf                       0x200019c5   Thumb Code  1508  segger_rtt_printf.o(.text.SEGGER_RTT_vprintf)
+    SVC_Handler                              0x20001fa9   Thumb Code     2  n32g4fr_it.o(.text.SVC_Handler)
+    SysTick_CLKSourceConfig                  0x20001fad   Thumb Code    24  misc.o(.text.SysTick_CLKSourceConfig)
+    SysTick_Handler                          0x20001fc5   Thumb Code    16  n32g4fr_it.o(.text.SysTick_Handler)
+    SysTick_Init                             0x20001fd5   Thumb Code    58  main.o(.text.SysTick_Init)
+    SysTick_Stop_time                        0x20002011   Thumb Code    22  main.o(.text.SysTick_Stop_time)
+    SystemInit                               0x20002029   Thumb Code   408  system_n32g4fr.o(.text.SystemInit)
+    USART_Enable                             0x200021c1   Thumb Code    18  n32g4fr_usart.o(.text.USART_Enable)
+    USART_GetFlagStatus                      0x200021d5   Thumb Code    10  n32g4fr_usart.o(.text.USART_GetFlagStatus)
+    USART_Init                               0x200021e1   Thumb Code   168  n32g4fr_usart.o(.text.USART_Init)
+    USART_SendData                           0x20002289   Thumb Code     8  n32g4fr_usart.o(.text.USART_SendData)
+    UsageFault_Handler                       0x20002291   Thumb Code     2  n32g4fr_it.o(.text.UsageFault_Handler)
+    app                                      0x20002445   Thumb Code     8  app.o(.text.app)
+    calc_func                                0x2000244d   Thumb Code   136  core_list_join.o(.text.calc_func)
+    check_data_types                         0x200024d5   Thumb Code     4  core_util.o(.text.check_data_types)
+    core_bench_list                          0x200024d9   Thumb Code  1150  core_list_join.o(.text.core_bench_list)
+    core_bench_matrix                        0x20002959   Thumb Code    38  core_matrix.o(.text.core_bench_matrix)
+    core_bench_state                         0x20002981   Thumb Code   562  core_state.o(.text.core_bench_state)
+    core_init_matrix                         0x20002bb5   Thumb Code   616  core_matrix.o(.text.core_init_matrix)
+    core_init_state                          0x20002e1d   Thumb Code   328  core_state.o(.text.core_init_state)
+    core_list_init                           0x20002f65   Thumb Code   958  core_list_join.o(.text.core_list_init)
+    core_state_transition                    0x20003325   Thumb Code   510  core_state.o(.text.core_state_transition)
+    crc16                                    0x20003525   Thumb Code     6  core_util.o(.text.crc16)
+    crcu16                                   0x2000352d   Thumb Code   278  core_util.o(.text.crcu16)
+    crcu32                                   0x20003645   Thumb Code    22  core_util.o(.text.crcu32)
+    fputc                                    0x2000365d   Thumb Code    36  main.o(.text.fputc)
+    get_seed_32                              0x20003681   Thumb Code    40  core_util.o(.text.get_seed_32)
+    get_time                                 0x200036a9   Thumb Code    12  core_portme.o(.text.get_time)
+    main                                     0x200036b5   Thumb Code   724  main.o(.text.main)
+    matrix_test                              0x20003989   Thumb Code  3782  core_matrix.o(.text.matrix_test)
+    portable_fini                            0x20004851   Thumb Code     6  core_portme.o(.text.portable_fini)
+    portable_init                            0x20004859   Thumb Code     6  core_portme.o(.text.portable_init)
+    start_time                               0x20004861   Thumb Code    20  core_portme.o(.text.start_time)
+    stop_time                                0x20004875   Thumb Code     4  core_portme.o(.text.stop_time)
+    systick_delay_ms                         0x20004879   Thumb Code   118  delay.o(.text.systick_delay_ms)
+    time_in_secs                             0x200048f1   Thumb Code    32  core_portme.o(.text.time_in_secs)
+    HardFault_Handler                        0x20004911   Thumb Code     0  hardfaulthandler.o(OSKERNEL)
+    __0printf                                0x20004925   Thumb Code    22  printfa.o(i.__0printf)
+    __1printf                                0x20004925   Thumb Code     0  printfa.o(i.__0printf)
+    __2printf                                0x20004925   Thumb Code     0  printfa.o(i.__0printf)
+    __c89printf                              0x20004925   Thumb Code     0  printfa.o(i.__0printf)
+    printf                                   0x20004925   Thumb Code     0  printfa.o(i.__0printf)
+    __scatterload_copy                       0x20004945   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x20004953   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x20004955   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    putchar                                  0x20005219   Thumb Code     6  putchar.o(i.putchar)
+    puts                                     0x20005225   Thumb Code    30  puts.o(i.puts)
+    Region$$Table$$Base                      0x2000572c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x2000574c   Number         0  anon$$obj.o(Region$$Table)
+    __stdout                                 0x20010000   Data           4  stdout.o(.data)
+    SystemCoreClock                          0x20010004   Data           4  system_n32g4fr.o(.data.SystemCoreClock)
+    default_num_contexts                     0x20010008   Data           4  core_portme.o(.data.default_num_contexts)
+    seed3_volatile                           0x2001000c   Data           4  core_portme.o(.data.seed3_volatile)
+    seed4_volatile                           0x20010010   Data           4  core_portme.o(.data.seed4_volatile)
+    Tick                                     0x20010070   Data           4  core_portme.o(.bss.Tick)
+    _SEGGER_RTT                              0x20010074   Data         168  segger_rtt.o(.bss._SEGGER_RTT)
+    seed1_volatile                           0x2001051c   Data           4  core_portme.o(.bss.seed1_volatile)
+    seed2_volatile                           0x20010520   Data           4  core_portme.o(.bss.seed2_volatile)
+    seed5_volatile                           0x20010524   Data           4  core_portme.o(.bss.seed5_volatile)
+    __initial_sp                             0x20018528   Data           0  startup_n32g4fr.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x20000199
+
+  Load Region LR_IROM1 (Base: 0x20000000, Size: 0x00005768, Max: 0x00010000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x20000000, Load base: 0x20000000, Size: 0x0000574c, Max: 0x00010000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x20000000   0x00000198   Data   RO           67    RESET               startup_n32g4fr.o
+    0x20000198   0x20000198   0x00000000   Code   RO         1688  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x20000198   0x20000198   0x00000004   Code   RO         1978    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x2000019c   0x2000019c   0x00000004   Code   RO         1981    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x200001a0   0x200001a0   0x00000000   Code   RO         1983    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x200001a0   0x200001a0   0x00000000   Code   RO         1985    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x200001a0   0x200001a0   0x00000008   Code   RO         1986    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x200001a8   0x200001a8   0x00000000   Code   RO         1988    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x200001a8   0x200001a8   0x00000000   Code   RO         1990    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x200001a8   0x200001a8   0x00000004   Code   RO         1979    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x200001ac   0x200001ac   0x00000024   Code   RO           68    .text               startup_n32g4fr.o
+    0x200001d0   0x200001d0   0x00000024   Code   RO         1697    .text               mc_w.l(memcpya.o)
+    0x200001f4   0x200001f4   0x00000024   Code   RO         1699    .text               mc_w.l(memseta.o)
+    0x20000218   0x20000218   0x000000e4   Code   RO         1966    .text               mf_w.l(dmul.o)
+    0x200002fc   0x200002fc   0x000000de   Code   RO         1968    .text               mf_w.l(ddiv.o)
+    0x200003da   0x200003da   0x00000036   Code   RO         1970    .text               mf_w.l(dcmple.o)
+    0x20000410   0x20000410   0x00000036   Code   RO         1972    .text               mf_w.l(dcmpge.o)
+    0x20000446   0x20000446   0x0000001a   Code   RO         1974    .text               mf_w.l(dfltui.o)
+    0x20000460   0x20000460   0x00000032   Code   RO         1976    .text               mf_w.l(dfixui.o)
+    0x20000492   0x20000492   0x0000002c   Code   RO         1993    .text               mc_w.l(uidiv.o)
+    0x200004be   0x200004be   0x00000062   Code   RO         1995    .text               mc_w.l(uldiv.o)
+    0x20000520   0x20000520   0x00000020   Code   RO         1997    .text               mc_w.l(llushr.o)
+    0x20000540   0x20000540   0x00000000   Code   RO         1999    .text               mc_w.l(iusefp.o)
+    0x20000540   0x20000540   0x000000ba   Code   RO         2000    .text               mf_w.l(depilogue.o)
+    0x200005fa   0x200005fa   0x0000014e   Code   RO         2002    .text               mf_w.l(dadd.o)
+    0x20000748   0x20000748   0x00000030   Code   RO         2004    .text               mf_w.l(dfixul.o)
+    0x20000778   0x20000778   0x00000030   Code   RO         2006    .text               mf_w.l(cdrcmple.o)
+    0x200007a8   0x200007a8   0x00000024   Code   RO         2008    .text               mc_w.l(init.o)
+    0x200007cc   0x200007cc   0x0000001e   Code   RO         2010    .text               mc_w.l(llshl.o)
+    0x200007ea   0x200007ea   0x00000024   Code   RO         2012    .text               mc_w.l(llsshr.o)
+    0x2000080e   0x2000080e   0x00000002   PAD
+    0x20000810   0x20000810   0x00000002   Code   RO           79    .text.BusFault_Handler  n32g4fr_it.o
+    0x20000812   0x20000812   0x00000006   PAD
+    0x20000818   0x20000818   0x0000076c   Code   RO         1582    .text.CoreMark      core_main.o
+    0x20000f84   0x20000f84   0x00000002   Code   RO           85    .text.DebugMon_Handler  n32g4fr_it.o
+    0x20000f86   0x20000f86   0x00000002   PAD
+    0x20000f88   0x20000f88   0x00000018   Code   RO          470    .text.FLASH_iCacheCmd  n32g4fr_flash.o
+    0x20000fa0   0x20000fa0   0x0000017e   Code   RO          558    .text.GPIO_ConfigPinRemap  n32g4fr_gpio.o
+    0x2000111e   0x2000111e   0x00000002   PAD
+    0x20001120   0x20001120   0x000003fa   Code   RO          530    .text.GPIO_InitPeripheral  n32g4fr_gpio.o
+    0x2000151a   0x2000151a   0x00000002   PAD
+    0x2000151c   0x2000151c   0x0000000a   Code   RO          534    .text.GPIO_ReadInputDataBit  n32g4fr_gpio.o
+    0x20001526   0x20001526   0x00000002   PAD
+    0x20001528   0x20001528   0x000000a8   Code   RO         1426    .text.HardFaultHandler  segger_hardfaulthandler.o
+    0x200015d0   0x200015d0   0x00000002   Code   RO           77    .text.MemManage_Handler  n32g4fr_it.o
+    0x200015d2   0x200015d2   0x00000002   PAD
+    0x200015d4   0x200015d4   0x00000002   Code   RO           75    .text.NMI_Handler   n32g4fr_it.o
+    0x200015d6   0x200015d6   0x00000002   PAD
+    0x200015d8   0x200015d8   0x00000018   Code   RO          811    .text.RCC_EnableAPB2PeriphClk  n32g4fr_rcc.o
+    0x200015f0   0x200015f0   0x000000ec   Code   RO          807    .text.RCC_GetClocksFreqValue  n32g4fr_rcc.o
+    0x200016dc   0x200016dc   0x0000007c   Code   RO         1491    .text.SEGGER_RTT_Init  segger_rtt.o
+    0x20001758   0x20001758   0x000000be   Code   RO         1455    .text.SEGGER_RTT_Write  segger_rtt.o
+    0x20001816   0x20001816   0x00000002   PAD
+    0x20001818   0x20001818   0x0000018a   Code   RO         1451    .text.SEGGER_RTT_WriteNoLock  segger_rtt.o
+    0x200019a2   0x200019a2   0x00000002   PAD
+    0x200019a4   0x200019a4   0x0000001e   Code   RO         1518    .text.SEGGER_RTT_printf  segger_rtt_printf.o
+    0x200019c2   0x200019c2   0x00000002   PAD
+    0x200019c4   0x200019c4   0x000005e4   Code   RO         1514    .text.SEGGER_RTT_vprintf  segger_rtt_printf.o
+    0x20001fa8   0x20001fa8   0x00000002   Code   RO           83    .text.SVC_Handler   n32g4fr_it.o
+    0x20001faa   0x20001faa   0x00000002   PAD
+    0x20001fac   0x20001fac   0x00000018   Code   RO          106    .text.SysTick_CLKSourceConfig  misc.o
+    0x20001fc4   0x20001fc4   0x00000010   Code   RO           87    .text.SysTick_Handler  n32g4fr_it.o
+    0x20001fd4   0x20001fd4   0x0000003a   Code   RO           35    .text.SysTick_Init  main.o
+    0x2000200e   0x2000200e   0x00000002   PAD
+    0x20002010   0x20002010   0x00000016   Code   RO           37    .text.SysTick_Stop_time  main.o
+    0x20002026   0x20002026   0x00000002   PAD
+    0x20002028   0x20002028   0x00000198   Code   RO           52    .text.SystemInit    system_n32g4fr.o
+    0x200021c0   0x200021c0   0x00000012   Code   RO         1316    .text.USART_Enable  n32g4fr_usart.o
+    0x200021d2   0x200021d2   0x00000002   PAD
+    0x200021d4   0x200021d4   0x0000000a   Code   RO         1352    .text.USART_GetFlagStatus  n32g4fr_usart.o
+    0x200021de   0x200021de   0x00000002   PAD
+    0x200021e0   0x200021e0   0x000000a8   Code   RO         1308    .text.USART_Init    n32g4fr_usart.o
+    0x20002288   0x20002288   0x00000008   Code   RO         1332    .text.USART_SendData  n32g4fr_usart.o
+    0x20002290   0x20002290   0x00000002   Code   RO           81    .text.UsageFault_Handler  n32g4fr_it.o
+    0x20002292   0x20002292   0x00000002   PAD
+    0x20002294   0x20002294   0x000001b0   Code   RO         1516    .text._PrintUnsigned  segger_rtt_printf.o
+    0x20002444   0x20002444   0x00000008   Code   RO            2    .text.app           app.o
+    0x2000244c   0x2000244c   0x00000088   Code   RO         1548    .text.calc_func     core_list_join.o
+    0x200024d4   0x200024d4   0x00000004   Code   RO         1679    .text.check_data_types  core_util.o
+    0x200024d8   0x200024d8   0x0000047e   Code   RO         1556    .text.core_bench_list  core_list_join.o
+    0x20002956   0x20002956   0x00000002   PAD
+    0x20002958   0x20002958   0x00000026   Code   RO         1597    .text.core_bench_matrix  core_matrix.o
+    0x2000297e   0x2000297e   0x00000002   PAD
+    0x20002980   0x20002980   0x00000232   Code   RO         1650    .text.core_bench_state  core_state.o
+    0x20002bb2   0x20002bb2   0x00000002   PAD
+    0x20002bb4   0x20002bb4   0x00000268   Code   RO         1613    .text.core_init_matrix  core_matrix.o
+    0x20002e1c   0x20002e1c   0x00000148   Code   RO         1654    .text.core_init_state  core_state.o
+    0x20002f64   0x20002f64   0x000003be   Code   RO         1568    .text.core_list_init  core_list_join.o
+    0x20003322   0x20003322   0x00000002   PAD
+    0x20003324   0x20003324   0x000001fe   Code   RO         1652    .text.core_state_transition  core_state.o
+    0x20003522   0x20003522   0x00000002   PAD
+    0x20003524   0x20003524   0x00000006   Code   RO         1677    .text.crc16         core_util.o
+    0x2000352a   0x2000352a   0x00000002   PAD
+    0x2000352c   0x2000352c   0x00000116   Code   RO         1673    .text.crcu16        core_util.o
+    0x20003642   0x20003642   0x00000002   PAD
+    0x20003644   0x20003644   0x00000016   Code   RO         1675    .text.crcu32        core_util.o
+    0x2000365a   0x2000365a   0x00000002   PAD
+    0x2000365c   0x2000365c   0x00000024   Code   RO           31    .text.fputc         main.o
+    0x20003680   0x20003680   0x00000028   Code   RO         1669    .text.get_seed_32   core_util.o
+    0x200036a8   0x200036a8   0x0000000c   Code   RO         1627    .text.get_time      core_portme.o
+    0x200036b4   0x200036b4   0x000002d4   Code   RO           39    .text.main          main.o
+    0x20003988   0x20003988   0x00000ec6   Code   RO         1599    .text.matrix_test   core_matrix.o
+    0x2000484e   0x2000484e   0x00000002   PAD
+    0x20004850   0x20004850   0x00000006   Code   RO         1633    .text.portable_fini  core_portme.o
+    0x20004856   0x20004856   0x00000002   PAD
+    0x20004858   0x20004858   0x00000006   Code   RO         1631    .text.portable_init  core_portme.o
+    0x2000485e   0x2000485e   0x00000002   PAD
+    0x20004860   0x20004860   0x00000014   Code   RO         1623    .text.start_time    core_portme.o
+    0x20004874   0x20004874   0x00000004   Code   RO         1625    .text.stop_time     core_portme.o
+    0x20004878   0x20004878   0x00000076   Code   RO         1530    .text.systick_delay_ms  delay.o
+    0x200048ee   0x200048ee   0x00000002   PAD
+    0x200048f0   0x200048f0   0x00000020   Code   RO         1629    .text.time_in_secs  core_portme.o
+    0x20004910   0x20004910   0x00000012   Code   RO         1435    OSKERNEL            hardfaulthandler.o
+    0x20004922   0x20004922   0x00000002   PAD
+    0x20004924   0x20004924   0x00000020   Code   RO         1938    i.__0printf         mc_w.l(printfa.o)
+    0x20004944   0x20004944   0x0000000e   Code   RO         2016    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x20004952   0x20004952   0x00000002   Code   RO         2017    i.__scatterload_null  mc_w.l(handlers.o)
+    0x20004954   0x20004954   0x0000000e   Code   RO         2018    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x20004962   0x20004962   0x00000002   PAD
+    0x20004964   0x20004964   0x00000184   Code   RO         1945    i._fp_digits        mc_w.l(printfa.o)
+    0x20004ae8   0x20004ae8   0x000006dc   Code   RO         1946    i._printf_core      mc_w.l(printfa.o)
+    0x200051c4   0x200051c4   0x00000024   Code   RO         1947    i._printf_post_padding  mc_w.l(printfa.o)
+    0x200051e8   0x200051e8   0x0000002e   Code   RO         1948    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x20005216   0x20005216   0x00000002   PAD
+    0x20005218   0x20005218   0x0000000c   Code   RO         1693    i.putchar           mc_w.l(putchar.o)
+    0x20005224   0x20005224   0x00000024   Code   RO         1691    i.puts              mc_w.l(puts.o)
+    0x20005248   0x20005248   0x00000010   Data   RO          837    .rodata.cst16       n32g4fr_rcc.o
+    0x20005258   0x20005258   0x00000010   Data   RO         1659    .rodata.errpat      core_state.o
+    0x20005268   0x20005268   0x00000010   Data   RO         1657    .rodata.floatpat    core_state.o
+    0x20005278   0x20005278   0x00000010   Data   RO         1656    .rodata.intpat      core_state.o
+    0x20005288   0x20005288   0x0000000a   Data   RO         1586    .rodata.list_known_crc  core_main.o
+    0x20005292   0x20005292   0x0000000a   Data   RO         1587    .rodata.matrix_known_crc  core_main.o
+    0x2000529c   0x2000529c   0x00000010   Data   RO         1658    .rodata.scipat      core_state.o
+    0x200052ac   0x200052ac   0x0000000a   Data   RO         1588    .rodata.state_known_crc  core_main.o
+    0x200052b6   0x200052b6   0x00000077   Data   RO           41    .rodata.str1.1      main.o
+    0x2000532d   0x2000532d   0x00000009   Data   RO         1503    .rodata.str1.1      segger_rtt.o
+    0x20005336   0x20005336   0x00000373   Data   RO         1584    .rodata.str1.1      core_main.o
+    0x200056a9   0x200056a9   0x00000080   Data   RO         1660    .rodata.str1.1      core_state.o
+    0x20005729   0x20005729   0x00000003   PAD
+    0x2000572c   0x2000572c   0x00000020   Data   RO         2015    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20010000, Load base: 0x20005750, Size: 0x00008528, Max: 0x00010000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20010000   0x20005750   0x00000004   Data   RW         1992    .data               mc_w.l(stdout.o)
+    0x20010004   0x20005754   0x00000004   Data   RW           56    .data.SystemCoreClock  system_n32g4fr.o
+    0x20010008   0x20005758   0x00000004   Data   RW         1641    .data.default_num_contexts  core_portme.o
+    0x2001000c   0x2000575c   0x00000004   Data   RW         1637    .data.seed3_volatile  core_portme.o
+    0x20010010   0x20005760   0x00000004   Data   RW         1638    .data.seed4_volatile  core_portme.o
+    0x20010014   0x20005764   0x00000004   PAD
+    0x20010018        -       0x00000044   Zero   RW         1428    .bss..L_MergedGlobals  segger_hardfaulthandler.o
+    0x2001005c        -       0x00000011   Zero   RW         1505    .bss..L_MergedGlobals  segger_rtt.o
+    0x2001006d   0x20005764   0x00000003   PAD
+    0x20010070        -       0x00000004   Zero   RW         1640    .bss.Tick           core_portme.o
+    0x20010074        -       0x000000a8   Zero   RW         1501    .bss._SEGGER_RTT    segger_rtt.o
+    0x2001011c        -       0x00000400   Zero   RW         1504    .bss._acUpBuffer    segger_rtt.o
+    0x2001051c        -       0x00000004   Zero   RW         1635    .bss.seed1_volatile  core_portme.o
+    0x20010520        -       0x00000004   Zero   RW         1636    .bss.seed2_volatile  core_portme.o
+    0x20010524        -       0x00000004   Zero   RW         1639    .bss.seed5_volatile  core_portme.o
+    0x20010528        -       0x00008000   Zero   RW           65    STACK               startup_n32g4fr.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+         8          0          0          0          0        519   app.o
+      2244          0          0          0          0      17352   core_list_join.o
+      1900        164        913          0          0       4961   core_main.o
+      4436          0          0          0          0      17071   core_matrix.o
+        80          8          0         12         16       1902   core_portme.o
+      1400         64        192          0          0       5101   core_state.o
+       350         20          0          0          0       3304   core_util.o
+       118          0          0          0          0       1304   delay.o
+        18          0          0          0          0        308   hardfaulthandler.o
+       840        144        119          0          0       9140   main.o
+        24          0          0          0          0       3164   misc.o
+        24          0          0          0          0      34217   n32g4fr_flash.o
+      1410          0          0          0          0      10629   n32g4fr_gpio.o
+        28          0          0          0          0        935   n32g4fr_it.o
+       260         48         16          0          0      10721   n32g4fr_rcc.o
+       204          0          0          0          0       7466   n32g4fr_usart.o
+       168          0          0          0         68       2740   segger_hardfaulthandler.o
+       708          0          9          0       1209      29456   segger_rtt.o
+      1970        198          0          0          0       7684   segger_rtt_printf.o
+        36          8        408          0      32768        852   startup_n32g4fr.o
+       408          0          0          4          0       3049   system_n32g4fr.o
+
+    ----------------------------------------------------------------------
+     16696        654       1692         16      34068     171875   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        62          0          3          0          7          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+         0          0          0          0          0          0   iusefp.o
+        30          0          0          0          0         68   llshl.o
+        36          0          0          0          0         68   llsshr.o
+        32          0          0          0          0         68   llushr.o
+        36          0          0          0          0         68   memcpya.o
+        36          0          0          0          0        108   memseta.o
+      2258         90          0          0          0        452   printfa.o
+        12          6          0          0          0         68   putchar.o
+        36          6          0          0          0         80   puts.o
+         0          0          0          4          0          0   stdout.o
+        44          0          0          0          0         80   uidiv.o
+        98          0          0          0          0         92   uldiv.o
+        48          0          0          0          0         68   cdrcmple.o
+       334          0          0          0          0        148   dadd.o
+        54          0          0          0          0         80   dcmpge.o
+        54          0          0          0          0         80   dcmple.o
+       222          0          0          0          0        100   ddiv.o
+       186          0          0          0          0        176   depilogue.o
+        50          0          0          0          0         76   dfixui.o
+        48          0          0          0          0         68   dfixul.o
+        26          0          0          0          0         76   dfltui.o
+       228          0          0          0          0         96   dmul.o
+
+    ----------------------------------------------------------------------
+      3960        118          0          4          0       2188   Library Totals
+         6          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+      2704        118          0          4          0       1220   mc_w.l
+      1250          0          0          0          0        968   mf_w.l
+
+    ----------------------------------------------------------------------
+      3960        118          0          4          0       2188   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     20656        772       1692         20      34068     172783   Grand Totals
+     20656        772       1692         20      34068     172783   ELF Image Totals
+     20656        772       1692         20          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                22348 (  21.82kB)
+    Total RW  Size (RW Data + ZI Data)             34088 (  33.29kB)
+    Total ROM Size (Code + RO Data + RW Data)      22368 (  21.84kB)
+
+==============================================================================
+
