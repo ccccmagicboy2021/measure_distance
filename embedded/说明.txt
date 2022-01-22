@@ -1,6 +1,8 @@
 .\fsk_distance_measure(KEIL5)(AC5)(flashcode)(N32)(浮点运算)(代码不OK)
 .\test_gpio(KEIL5)(AC6)(flashcode)(ramcode)(N32)(OK)
 .\test_uart(KEIL5)(AC6)(flashcode)(ramcode)(N32)(OK)
-.\test_adc(KEIL5)(AC6)(flashcode)(ramcode)(N32)(OK?)
+.\test_coremark(KEIL5)(AC6)(flashcode)(ramcode)(N32)(OK)
+.\test_adc(KEIL5)(AC6)(flashcode)(ramcode)(N32)(OK)
+.\test_pwm(KEIL5)(AC6)(flashcode)(ramcode)(N32)(OK?)
 
 
