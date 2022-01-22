@@ -595,6 +595,16 @@
             </File>
           </Files>
         </Group>
+        <Group>
+          <GroupName>doc</GroupName>
+          <Files>
+            <File>
+              <FileName>说明.txt</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\说明.txt</FilePath>
+            </File>
+          </Files>
+        </Group>
       </Groups>
     </Target>
     <Target>
@@ -1183,6 +1193,16 @@
               <FileName>log.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\bsp\src\log.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>doc</GroupName>
+          <Files>
+            <File>
+              <FileName>说明.txt</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\说明.txt</FilePath>
             </File>
           </Files>
         </Group>

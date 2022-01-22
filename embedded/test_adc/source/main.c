@@ -27,10 +27,8 @@
 #define USARTx_RxPin    GPIO_PIN_10
 #define USARTx_TxPin    GPIO_PIN_9
 
-#define GPIO_APBxClkCmd  RCC_EnableAPB2PeriphClk
-#define USART_APBxClkCmd RCC_EnableAPB2PeriphClk
-
 __IO uint16_t ADC2ConvertedValue[5];
+__IO uint16_t ADCConvertedValue;
 
 void segger_init(void)
 {
@@ -178,13 +176,12 @@ void user_button_init(void)
 
 void RCC_Configuration(void)
 {
-    /* Enable GPIO clock */
-    GPIO_APBxClkCmd(USARTx_GPIO_CLK | RCC_APB2_PERIPH_AFIO, ENABLE);
-    /* Enable USARTy and USARTz Clock */
-    USART_APBxClkCmd(USARTx_CLK, ENABLE);
-    
+    RCC_EnableAPB2PeriphClk(USARTx_GPIO_CLK | RCC_APB2_PERIPH_AFIO, ENABLE);
+    RCC_EnableAPB2PeriphClk(USARTx_CLK, ENABLE);
     RCC_EnableAPB2PeriphClk(RCC_APB2_PERIPH_GPIOA | RCC_APB2_PERIPH_GPIOC, ENABLE);
+    
     RCC_EnableAHBPeriphClk(RCC_AHB_PERIPH_ADC2, ENABLE);
+    RCC_EnableAHBPeriphClk(RCC_AHB_PERIPH_DMA1, ENABLE);
 
     /* RCC_ADCHCLK_DIV16*/
     ADC_ConfigClk(ADC_CTRL3_CKMOD_AHB,RCC_ADCHCLK_DIV16);   // 144/16
@@ -242,30 +239,35 @@ void analog_pin_config(void)
 	GPIO_InitPeripheral(GPIOC, &GPIO_InitStructure);
 }
 
-void ADC_Initial(ADC_Module* ADCx)
+void ADC_Initial()
 {
     ADC_InitType ADC_InitStructure;
 	  /* ADC configuration ------------------------------------------------------*/
     ADC_InitStructure.WorkMode       = ADC_WORKMODE_INDEPENDENT;
-    ADC_InitStructure.MultiChEn      = DISABLE;
-    ADC_InitStructure.ContinueConvEn = DISABLE;
+    ADC_InitStructure.MultiChEn      = ENABLE;
+    ADC_InitStructure.ContinueConvEn = ENABLE;
     ADC_InitStructure.ExtTrigSelect  = ADC_EXT_TRIGCONV_NONE;
     ADC_InitStructure.DatAlign       = ADC_DAT_ALIGN_R;
     ADC_InitStructure.ChsNumber      = 1;
-    ADC_Init(ADCx, &ADC_InitStructure);
-//    /* ADC regular channel14 configuration */
-//    ADC_ConfigRegularChannel(ADC1, ADC1_Channel_08_PC2, 1, ADC_SAMP_TIME_55CYCLES5);
+    ADC_Init(ADC2, &ADC_InitStructure);
+    /* ADC regular channel configuration */
+    ADC_ConfigRegularChannel(ADC2, ADC2_Channel_04_PA7, 1, ADC_SAMP_TIME_55CYCLES5);
+    //ADC_ConfigRegularChannel(ADC2, ADC2_Channel_05_PC4, 2, ADC_SAMP_TIME_55CYCLES5);
+    //ADC_ConfigRegularChannel(ADC2, ADC2_Channel_12_PC5, 3, ADC_SAMP_TIME_55CYCLES5);
 
+    ADC_EnableDMA(ADC2, ENABLE);
     /* Enable ADC */
-    ADC_Enable(ADCx, ENABLE);
+    ADC_Enable(ADC2, ENABLE);
     /*Check ADC Ready*/
-    while(ADC_GetFlagStatusNew(ADCx,ADC_FLAG_RDY) == RESET)
+    while(ADC_GetFlagStatusNew(ADC2,ADC_FLAG_RDY) == RESET)
         ;
     /* Start ADC calibration */
-    ADC_StartCalibration(ADCx);
+    ADC_StartCalibration(ADC2);
     /* Check the end of ADC calibration */
-    while (ADC_GetCalibrationStatus(ADCx))
+    while (ADC_GetCalibrationStatus(ADC2))
         ;
+    
+    ADC_EnableSoftwareStartConv(ADC2, ENABLE);
 }
 
 uint16_t ADC_GetData(ADC_Module* ADCx, uint8_t ADC_Channel)
@@ -288,6 +290,27 @@ void tick_init(void)
     systick_config();
 }
 
+void dma_initial(void)
+{
+    DMA_InitType DMA_InitStructure;
+    
+    DMA_DeInit(DMA1_CH8);
+    DMA_InitStructure.PeriphAddr     = (uint32_t)&ADC2->DAT;
+    DMA_InitStructure.MemAddr        = (uint32_t)&ADCConvertedValue;
+    DMA_InitStructure.Direction      = DMA_DIR_PERIPH_SRC;
+    DMA_InitStructure.BufSize        = 1;
+    DMA_InitStructure.PeriphInc      = DMA_PERIPH_INC_DISABLE;
+    DMA_InitStructure.DMA_MemoryInc  = DMA_MEM_INC_DISABLE;
+    DMA_InitStructure.PeriphDataSize = DMA_PERIPH_DATA_SIZE_HALFWORD;
+    DMA_InitStructure.MemDataSize    = DMA_MemoryDataSize_HalfWord;
+    DMA_InitStructure.CircularMode   = DMA_MODE_CIRCULAR;
+    DMA_InitStructure.Priority       = DMA_PRIORITY_HIGH;
+    DMA_InitStructure.Mem2Mem        = DMA_M2M_DISABLE;
+    DMA_Init(DMA1_CH8, &DMA_InitStructure);
+    /* Enable DMA1 channel1 */
+    DMA_EnableChannel(DMA1_CH8, ENABLE);
+}
+
 int main(void)
 {    
     segger_init();
@@ -298,7 +321,8 @@ int main(void)
     led_init();
     user_button_init();
     analog_pin_config();
-    ADC_Initial(ADC2);
+    dma_initial();
+    ADC_Initial();
     tick_init();
     ///////////////
 #ifdef VECT_TAB_SRAM
@@ -331,11 +355,15 @@ int main(void)
             printf("key3 pressed!\r\n");
         }
 			
-        ADC2ConvertedValue[0]=ADC_GetData(ADC2, ADC2_Channel_04_PA7);
-        ADC2ConvertedValue[1]=ADC_GetData(ADC2, ADC2_Channel_05_PC4);
-        ADC2ConvertedValue[2]=ADC_GetData(ADC2, ADC2_Channel_12_PC5);
         
-        CV_LOG("PA7: %d, PC4: %d, PC5: %d\r\n", ADC2ConvertedValue[0], ADC2ConvertedValue[1], ADC2ConvertedValue[2]);
-        printf("PA7: %d, PC4: %d, PC5: %d\r\n", ADC2ConvertedValue[0], ADC2ConvertedValue[1], ADC2ConvertedValue[2]);
+        //ADC2ConvertedValue[0]=ADC_GetData(ADC2, ADC2_Channel_04_PA7);
+        //ADC2ConvertedValue[1]=ADC_GetData(ADC2, ADC2_Channel_05_PC4);
+        //ADC2ConvertedValue[2]=ADC_GetData(ADC2, ADC2_Channel_12_PC5);
+        
+        //CV_LOG("PA7: %d, PC4: %d, PC5: %d\r\n", ADC2ConvertedValue[0], ADC2ConvertedValue[1], ADC2ConvertedValue[2]);
+        //printf("PA7: %d, PC4: %d, PC5: %d\r\n", ADC2ConvertedValue[0], ADC2ConvertedValue[1], ADC2ConvertedValue[2]);
+        
+        CV_LOG("PA7: %d\r\n", ADCConvertedValue);
+        printf("PA7: %d\r\n", ADCConvertedValue);
 	}
 }
