@@ -3,7 +3,7 @@
 
 ** ELF Header Information
 
-    File Name: D:\cccc2020\CODE\workspace\bfsk_n32\embedded\test_coremark\MDK\output\ramcode\ramcode.axf
+    File Name: d:\cccc2020\CODE\workspace\bfsk_n32\embedded\test_coremark\MDK\output\ramcode\ramcode.axf
 
     Machine class: ELFCLASS32 (32-bit)
     Data encoding: ELFDATA2LSB (Little endian)
@@ -31,8 +31,8 @@
     Program header entries: 1
     Section header entries: 16
 
-    Program header offset: 212260 (0x00033d24)
-    Section header offset: 212292 (0x00033d44)
+    Program header offset: 212344 (0x00033d78)
+    Section header offset: 212376 (0x00033d98)
 
     Section header string table index: 15
 
@@ -5321,8 +5321,8 @@
         0x200036e4:    2600        .&      MOVS     r6,#0
         0x200036e6:    f7fef95d    ..].    BL       SEGGER_RTT_printf ; 0x200019a4
         0x200036ea:    f24521c6    E..!    MOV      r1,#0x52c6
-        0x200036ee:    f2453214    E..2    MOV      r2,#0x5314
-        0x200036f2:    f245330b    E..3    MOV      r3,#0x530b
+        0x200036ee:    f245320b    E..2    MOV      r2,#0x530b
+        0x200036f2:    f2453317    E..3    MOV      r3,#0x5317
         0x200036f6:    f2c20100    ....    MOVT     r1,#0x2000
         0x200036fa:    f2c20200    ....    MOVT     r2,#0x2000
         0x200036fe:    f2c20300    ....    MOVT     r3,#0x2000
@@ -8115,14 +8115,16 @@
         0x20005304:    64657373    ssed    DCD    1684370291
         0x20005308:    0d21        !.      DCW    3361
         0x2000530a:    00          .       DCB    0
-    .L.str.5
-        0x2000530b:    31          1       DCB    49
-        0x2000530c:    34333a37    7:34    DCD    875772471
-        0x20005310:    0030333a    :30.    DCD    3158842
     .L.str.4
-        0x20005314:    206e614a    Jan     DCD    544104778
-        0x20005318:    32203132    21 2    DCD    840970546
-        0x2000531c:    00323230    022.    DCD    3289648
+        0x2000530b:    4a          J       DCB    74
+        0x2000530c:    32206e61    an 2    DCD    840986209
+        0x20005310:    30322032    2 20    DCD    808591410
+        0x20005314:    3232        22      DCW    12850
+        0x20005316:    00          .       DCB    0
+    .L.str.5
+        0x20005317:    30          0       DCB    48
+        0x20005318:    32343a39    9:42    DCD    842283577
+        0x2000531c:    0038353a    :58.    DCD    3683642
     .L.str.2
         0x20005320:    6d305b1b    .[0m    DCD    1831885595
         0x20005324:    00          .       DCB    0
@@ -8507,7 +8509,7 @@
 
 
 ** Section #7 '.debug_line' (SHT_PROGBITS)
-    Size   : 40710 bytes
+    Size   : 40794 bytes
 
 
 ** Section #8 '.debug_loc' (SHT_PROGBITS)

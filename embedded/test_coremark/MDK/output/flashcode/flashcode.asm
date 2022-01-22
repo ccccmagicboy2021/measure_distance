@@ -3,7 +3,7 @@
 
 ** ELF Header Information
 
-    File Name: D:\cccc2020\CODE\workspace\bfsk_n32\embedded\test_coremark\MDK\output\flashcode\flashcode.axf
+    File Name: d:\cccc2020\CODE\workspace\bfsk_n32\embedded\test_coremark\MDK\output\flashcode\flashcode.axf
 
     Machine class: ELFCLASS32 (32-bit)
     Data encoding: ELFDATA2LSB (Little endian)
@@ -31,8 +31,8 @@
     Program header entries: 1
     Section header entries: 16
 
-    Program header offset: 212312 (0x00033d58)
-    Section header offset: 212344 (0x00033d78)
+    Program header offset: 212396 (0x00033dac)
+    Section header offset: 212428 (0x00033dcc)
 
     Section header string table index: 15
 
@@ -5325,8 +5325,8 @@
         0x080036f4:    2600        .&      MOVS     r6,#0
         0x080036f6:    f7fef955    ..U.    BL       SEGGER_RTT_printf ; 0x80019a4
         0x080036fa:    f24521de    E..!    MOV      r1,#0x52de
-        0x080036fe:    f2453223    E.#2    MOV      r2,#0x5323
-        0x08003702:    f245332f    E./3    MOV      r3,#0x532f
+        0x080036fe:    f245322c    E.,2    MOV      r2,#0x532c
+        0x08003702:    f2453323    E.#3    MOV      r3,#0x5323
         0x08003706:    f6c00100    ....    MOVT     r1,#0x800
         0x0800370a:    f6c00200    ....    MOVT     r2,#0x800
         0x0800370e:    f6c00300    ....    MOVT     r3,#0x800
@@ -8122,16 +8122,14 @@
         0x0800531c:    64657373    ssed    DCD    1684370291
         0x08005320:    0d21        !.      DCW    3361
         0x08005322:    00          .       DCB    0
-    .L.str.4
-        0x08005323:    4a          J       DCB    74
-        0x08005324:    32206e61    an 2    DCD    840986209
-        0x08005328:    30322031    1 20    DCD    808591409
-        0x0800532c:    3232        22      DCW    12850
-        0x0800532e:    00          .       DCB    0
     .L.str.5
-        0x0800532f:    31          1       DCB    49
-        0x08005330:    34333a37    7:34    DCD    875772471
-        0x08005334:    0036323a    :26.    DCD    3551802
+        0x08005323:    30          0       DCB    48
+        0x08005324:    32343a39    9:42    DCD    842283577
+        0x08005328:    0030353a    :50.    DCD    3159354
+    .L.str.4
+        0x0800532c:    206e614a    Jan     DCD    544104778
+        0x08005330:    32203232    22 2    DCD    840970802
+        0x08005334:    00323230    022.    DCD    3289648
     .L.str.2
         0x08005338:    6d305b1b    .[0m    DCD    1831885595
         0x0800533c:    00          .       DCB    0
@@ -8516,7 +8514,7 @@
 
 
 ** Section #7 '.debug_line' (SHT_PROGBITS)
-    Size   : 40707 bytes
+    Size   : 40791 bytes
 
 
 ** Section #8 '.debug_loc' (SHT_PROGBITS)

@@ -227,8 +227,8 @@ Image Symbol Table
     .L.str.3                                 0x080052de   Data          23  main.o(.rodata.str1.1)
     .L.str                                   0x080052f5   Data          31  main.o(.rodata.str1.1)
     .Lstr.11                                 0x08005314   Data          15  main.o(.rodata.str1.1)
-    .L.str.4                                 0x08005323   Data          12  main.o(.rodata.str1.1)
-    .L.str.5                                 0x0800532f   Data           9  main.o(.rodata.str1.1)
+    .L.str.5                                 0x08005323   Data           9  main.o(.rodata.str1.1)
+    .L.str.4                                 0x0800532c   Data          12  main.o(.rodata.str1.1)
     .L.str.2                                 0x08005338   Data           5  main.o(.rodata.str1.1)
     .L.str.1                                 0x0800533d   Data           8  main.o(.rodata.str1.1)
     .L.str                                   0x08005345   Data           9  segger_rtt.o(.rodata.str1.1)
@@ -742,30 +742,30 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-         8          0          0          0          0        519   app.o
+         8          0          0          0          0        520   app.o
       2244          0          0          0          0      17352   core_list_join.o
-      1900        164        913          0          0       4961   core_main.o
+      1900        164        913          0          0       4962   core_main.o
       4436          0          0          0          0      17071   core_matrix.o
-        80          8          0         12         16       1902   core_portme.o
+        80          8          0         12         16       1939   core_portme.o
       1400         64        192          0          0       5101   core_state.o
        350         20          0          0          0       3304   core_util.o
-       118          0          0          0          0       1304   delay.o
+       118          0          0          0          0       1305   delay.o
         18          0          0          0          0        308   hardfaulthandler.o
-       844        148        119          0          0       9140   main.o
-        24          0          0          0          0       3164   misc.o
-        24          0          0          0          0      34217   n32g4fr_flash.o
-      1410          0          0          0          0      10629   n32g4fr_gpio.o
+       844        148        119          0          0       9177   main.o
+        24          0          0          0          0       3165   misc.o
+        24          0          0          0          0      34218   n32g4fr_flash.o
+      1410          0          0          0          0      10630   n32g4fr_gpio.o
         28          0          0          0          0        935   n32g4fr_it.o
-       260         48         16          0          0      10721   n32g4fr_rcc.o
-       204          0          0          0          0       7466   n32g4fr_usart.o
+       260         48         16          0          0      10722   n32g4fr_rcc.o
+       204          0          0          0          0       7467   n32g4fr_usart.o
        168          0          0          0         68       2740   segger_hardfaulthandler.o
        708          0          9          0       1209      29456   segger_rtt.o
-      1970        198          0          0          0       7684   segger_rtt_printf.o
+      1970        198          0          0          0       7685   segger_rtt_printf.o
         36          8        408          0      32768        852   startup_n32g4fr.o
-       422          0          0          4          0       3079   system_n32g4fr.o
+       422          0          0          4          0       3080   system_n32g4fr.o
 
     ----------------------------------------------------------------------
-     16720        658       1692         16      34068     171905   Object Totals
+     16720        658       1692         16      34068     171989   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         68          0          3          0          7          0   (incl. Padding)
 
@@ -827,8 +827,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     20680        776       1692         20      34068     172813   Grand Totals
-     20680        776       1692         20      34068     172813   ELF Image Totals
+     20680        776       1692         20      34068     172897   Grand Totals
+     20680        776       1692         20      34068     172897   ELF Image Totals
      20680        776       1692         20          0          0   ROM Totals
 
 ==============================================================================
