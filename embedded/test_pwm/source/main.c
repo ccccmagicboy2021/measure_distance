@@ -349,30 +349,30 @@ void timer_init(void)
     TIM_TimeBaseStructure.ClkDiv    = 0;
     TIM_TimeBaseStructure.CntMode   = TIM_CNT_MODE_UP;
 
-    TIM_InitTimeBase(TIM3, &TIM_TimeBaseStructure);
+    TIM_InitTimeBase(TIM2, &TIM_TimeBaseStructure);
 
     /* Output Compare Active Mode configuration: Channel3 */
     TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
     TIM_OCInitStructure.Pulse       = CCR3_Val;
 
-    TIM_InitOc3(TIM3, &TIM_OCInitStructure);
+    TIM_InitOc3(TIM2, &TIM_OCInitStructure);
 
-    TIM_ConfigOc3Preload(TIM3, TIM_OC_PRE_LOAD_DISABLE);
+    TIM_ConfigOc3Preload(TIM2, TIM_OC_PRE_LOAD_DISABLE);
 
     /* Output Compare Active Mode configuration: Channel4 */
     TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
     TIM_OCInitStructure.Pulse       = CCR4_Val;
 
-    TIM_InitOc4(TIM3, &TIM_OCInitStructure);
+    TIM_InitOc4(TIM2, &TIM_OCInitStructure);
 
-    TIM_ConfigOc4Preload(TIM3, TIM_OC_PRE_LOAD_DISABLE);
+    TIM_ConfigOc4Preload(TIM2, TIM_OC_PRE_LOAD_DISABLE);
 
     //////////////////////////////////////////////////////
-    TIM_ConfigArPreload(TIM3, ENABLE);
-    TIM_ConfigInt(TIM3, TIM_INT_CC3 | TIM_INT_CC4, ENABLE);
+    TIM_ConfigArPreload(TIM2, ENABLE);
+    TIM_ConfigInt(TIM2, TIM_INT_CC3 | TIM_INT_CC4, ENABLE);
 
-    /* TIM3 enable counter */
-    TIM_Enable(TIM3, ENABLE);
+    /* TIM2 enable counter */
+    TIM_Enable(TIM2, ENABLE);
 }
 
 int main(void)
