@@ -337,7 +337,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define></Define>
+              <Define>N32G4FR, USE_STDPERIPH_DRIVER, SYSCLK_FREQ=144000000</Define>
               <Undefine></Undefine>
               <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc;..\application\systick</IncludePath>
             </VariousControls>
@@ -938,7 +938,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>VECT_TAB_SRAM</Define>
+              <Define>N32G4FR, USE_STDPERIPH_DRIVER, SYSCLK_FREQ=144000000, VECT_TAB_SRAM</Define>
               <Undefine></Undefine>
               <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc;..\application\systick</IncludePath>
             </VariousControls>

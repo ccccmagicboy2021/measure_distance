@@ -1,4 +1,5 @@
 1. n32基本工程模板(keil5)(AC6)
 2. pwm两个差半个周期的输出，使用timer2的ch3及ch4
+3. 方波时钟是2KHz，通过timer3的ch2回采
 
 

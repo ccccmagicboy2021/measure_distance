@@ -42,6 +42,12 @@
 
 extern __IO uint32_t CurrDataCounterEnd;
 
+__IO uint16_t IC3ReadValue1 = 0, IC3ReadValue2 = 0;
+__IO uint16_t CaptureNumber   = 0;
+__IO uint32_t Capture         = 0;
+__IO uint32_t TIM3Freq        = 0;
+__IO uint32_t TIM3EnterIrqCnt = 0;
+
 /******************************************************************************/
 /*            Cortex-M4 Processor Exceptions Handlers                         */
 /******************************************************************************/
@@ -149,6 +155,40 @@ void TIM2_IRQHandler(void)
     else
     {
         TIM_ClrIntPendingBit(TIM2, TIM_INT_CC4);
+    }
+}
+
+void TIM3_IRQHandler(void)
+{
+    if (TIM_GetIntStatus(TIM3, TIM_INT_CC2) == SET)
+    {
+        TIM3EnterIrqCnt++;
+        /* Clear TIM3 Capture compare interrupt pending bit */
+        TIM_ClrIntPendingBit(TIM3, TIM_INT_CC2);
+        if (CaptureNumber == 0)
+        {
+            /* Get the Input Capture value */
+            IC3ReadValue1 = TIM_GetCap2(TIM3);
+            CaptureNumber = 1;
+        }
+        else if (CaptureNumber == 1)
+        {
+            /* Get the Input Capture value */
+            IC3ReadValue2 = TIM_GetCap2(TIM3);
+
+            /* Capture computation */
+            if (IC3ReadValue2 > IC3ReadValue1)
+            {
+                Capture = (IC3ReadValue2 - IC3ReadValue1);
+            }
+            else
+            {
+                Capture = ((0xFFFF - IC3ReadValue1) + IC3ReadValue2);
+            }
+            /* Frequency computation */
+            TIM3Freq      = (uint32_t)(SystemCoreClock/2) / Capture;
+            CaptureNumber = 0;
+        }
     }
 }
 
