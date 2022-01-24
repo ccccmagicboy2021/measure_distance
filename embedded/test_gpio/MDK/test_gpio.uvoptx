@@ -147,18 +147,34 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>14</LineNumber>
+          <LineNumber>76</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>8772</Address>
+          <Address>7548</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\application\app\app.c</Filename>
+          <Filename>..\source\main.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\flashcode\../application/app/app.c\14</Expression>
+          <Expression>\\flashcode\../source/main.c\76</Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>84</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>0</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>..\source\main.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
         </Bp>
       </Breakpoint>
       <Tracepoint>
@@ -421,7 +437,7 @@
 
   <Group>
     <GroupName>common</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

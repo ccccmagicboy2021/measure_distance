@@ -40,7 +40,16 @@ volatile uint32_t gu32_GPIOIRQ_Flag = false;
 
 void GPIO_IRQ_User_Function(void)
 {
-    gu32_GPIOIRQ_Flag = true;   
+    gu32_GPIOIRQ_Flag = true;
+}
+
+void GPIOAB_IRQHandler(void)
+{
+    HAL_GPIO_IRQHandler(GPIOB, GPIO_PIN_9);
+
+    GPIO_IRQ_User_Function();  
+    
+    NVIC_ClearPendingIRQ(GPIOAB_IRQn);      
 }
 
 int main(void)
