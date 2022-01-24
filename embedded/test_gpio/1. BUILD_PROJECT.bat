@@ -8,9 +8,12 @@ set UV_PRO_PATH="%%j"))
 echo ---------------------------------------------------------------
 echo Author: cccc
 echo Init building ...
-echo >build_log.txt
-%UV% -j0 -b %UV_PRO_PATH% -l %cd%\build_log.txt
-type build_log.txt
+echo >build_log0.txt
+echo >build_log1.txt
+%UV% -j0 -b %UV_PRO_PATH% -t "flashcode" -l %cd%\build_log0.txt
+type build_log0.txt
+%UV% -j0 -b %UV_PRO_PATH% -t "ramcode" -l %cd%\build_log1.txt
+type build_log1.txt
 echo Done.
 pause
 

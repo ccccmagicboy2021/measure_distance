@@ -1,0 +1,12 @@
+usb
+si 1
+speed 25000
+device ACM32F403KEU7
+r
+h
+loadfile .\MDK\output\flashcode\flashcode.hex
+r
+g
+qc
+
+
