@@ -1,0 +1,15 @@
+--cpu=Cortex-M33
+".\objects\startup_acm32f4.o"
+".\objects\system_acm32f4.o"
+"..\..\..\Core_Drivers\Device\System_Accelerate.lib"
+".\objects\hal_dma.o"
+".\objects\hal_gpio.o"
+".\objects\hal_uart.o"
+".\objects\hal_eflash.o"
+"..\..\..\Core_Drivers\HAL_Driver\Src\HAL_EFlash_EX.lib"
+".\objects\app.o"
+".\objects\main.o"
+--library_type=microlib --strict --scatter ".\Objects\Project.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\Project.map" -o .\Objects\Project.axf

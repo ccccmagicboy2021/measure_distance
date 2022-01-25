@@ -45,7 +45,7 @@ int main(void)
     Uart1_Init(115200);
 
     /* GPIO_OUTPUT、GPIO_INT、GPIO_PC13、LED_BLINK */
-    APP_GPIO_Test(LED_BLINK);
+    APP_GPIO_Test(GPIO_INT);
     
     while(1)
     {

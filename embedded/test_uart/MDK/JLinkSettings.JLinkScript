@@ -1,0 +1,5 @@
+void InitTarget(void) {
+  Report("********************************************");
+  JLINK_ExecCommand("device ACM32F403KEU7");
+  Report("********************************************");
+}

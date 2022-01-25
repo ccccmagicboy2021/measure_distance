@@ -1,0 +1,18 @@
+<DataBase>
+    <Device>
+        <ChipInfo Vendor="HDSC" Name="HC32F46x" WorkRAMAddr="0x1FFF8000" WorkRAMSize="0x2F000" Core="JLINK_CORE_CORTEX_M4" JLinkScriptFile="Devices/HDSC/HC32F46x.JLinkScript" />
+        <FlashBankInfo Name="Flash_512K" BaseAddr="0x0" MaxSize="0x80000" Loader="Devices/HDSC/HC32F46x.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+    </Device>
+    <Device>
+        <ChipInfo Vendor="Nationstech" Name="N32G4FRKE" WorkRAMAddr="0x20000000" WorkRAMSize="0x00024000" Core="JLINK_CORE_CORTEX_M4" />
+        <FlashBankInfo Name="Internal Flash" BaseAddr="0x08000000" MaxSize="0x00080000" Loader="Devices/Nationstech/N32G45x_NRP_512K.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+    </Device>
+    <Device>
+        <ChipInfo Vendor="pt" Name="PT32z192xx" WorkRAMAddr="0x20000000" WorkRAMSize="0x20000" Core="JLINK_CORE_CORTEX_M3_R2P1" />
+        <FlashBankInfo Name="PT32z192xx" BaseAddr="0" MaxSize="0x00080000" Loader="Devices/pt/PT32z192xx.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+    </Device>
+    <Device>
+        <ChipInfo Vendor="acm" Name="ACM32F403" WorkRAMAddr="0x20000000" WorkRAMSize="0x30000" Core="JLINK_CORE_CORTEX_M33" />
+        <FlashBankInfo Name="ACM32F403" BaseAddr="0" MaxSize="0x00080000" Loader="Devices/ACM/ACM32F4_eflash.FLM" LoaderType="FLASH_ALGO_TYPE_OPEN" AlwaysPresent="1" />
+    </Device>
+</DataBase>
