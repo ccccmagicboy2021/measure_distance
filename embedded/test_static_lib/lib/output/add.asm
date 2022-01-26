@@ -3,7 +3,7 @@
 
 ** ELF Header Information
 
-    File Name: D:\cccc2020\CODE\workspace\bfsk_8161\embedded\test_static_lib\lib\Objects\add.lib
+    File Name: D:\cccc2020\CODE\workspace\bfsk_8161\embedded\test_static_lib\lib\output\add.lib
     Module Name: add.o
 
     Machine class: ELFCLASS32 (32-bit)

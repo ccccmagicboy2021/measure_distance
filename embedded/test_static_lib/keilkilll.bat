@@ -39,6 +39,6 @@ del hclink_pwd.log /s
 
 del *.SBR /s
 del *.m51 /s
-
+del *.Scr /s
 
 exit
