@@ -3,15 +3,19 @@
 #include "ringbuffer.h"
 #include "sys.h"
 
+#ifdef SEND_TO_MATLAB_TEST
+#include "test_usart.h"
+#endif
+
 uint16_t  Adc1SaValue[ADC1_CH_COUNT] = {0};
 u8 buffer[ELEMENT_SIZE * ELEMENT_COUNT];
 static stc_dma_llp_descriptor_t stcLlpDesc[ELEMENT_COUNT] = {0};
 ring_buf_t ring_buffer = {
-	.rd = 0,
-	.wr = 0,
-	.max_count = ELEMENT_COUNT,
-	.elem_size = ELEMENT_SIZE,
-	.buf = buffer,
+    .rd = 0,
+    .wr = 0,
+    .max_count = ELEMENT_COUNT,
+    .elem_size = ELEMENT_SIZE,
+    .buf = buffer,
 };
 
 #define LIGHT_SAMPLE_NUM			(2u)
@@ -65,7 +69,7 @@ static void AdcIrqConfig(void)
         NVIC_EnableIRQ(stcAdcIrqCfg.enIRQn);
     }
 
-	ADC_SeqITCmd(M4_ADC1, ADC_SEQ_B, Enable);
+    ADC_SeqITCmd(M4_ADC1, ADC_SEQ_B, Enable);
 }
 #endif
 
@@ -76,9 +80,9 @@ void AdcConfig(void)
     AdcChannelConfig();
     AdcTriggerConfig();
 #ifdef TEST_ADC
-	AdcIrqConfig();
+    AdcIrqConfig();
 #endif
-	DmaConfig();
+    DmaConfig();
 }
 
 
@@ -245,11 +249,11 @@ void AdcTriggerConfig(void)
     ADC_TriggerSrcCmd(M4_ADC1, ADC_SEQ_B, Enable);
 
 #if 0
-	stcTrgCfg.u8Sequence = ADC_SEQ_A;
-	stcTrgCfg.enTrgSel	 = AdcTrgsel_TRGX1;
-	stcTrgCfg.enInTrg1	 = EVT_TMR01_GCMA;
-	ADC_ConfigTriggerSrc(M4_ADC1, &stcTrgCfg);
-	ADC_TriggerSrcCmd(M4_ADC1, ADC_SEQ_A, Enable);
+    stcTrgCfg.u8Sequence = ADC_SEQ_A;
+    stcTrgCfg.enTrgSel	 = AdcTrgsel_TRGX1;
+    stcTrgCfg.enInTrg1	 = EVT_TMR01_GCMA;
+    ADC_ConfigTriggerSrc(M4_ADC1, &stcTrgCfg);
+    ADC_TriggerSrcCmd(M4_ADC1, ADC_SEQ_A, Enable);
 #endif
 }
 
@@ -273,29 +277,29 @@ void DmaConfig(void)
 void DmaInitConfig(void)
 {
     stc_dma_config_t stcDmaCfg;
-	int i;
+    int i;
 
     MEM_ZERO_STRUCT(stcDmaCfg);
 
-	for (i = 0; i < ELEMENT_COUNT; i++) {
-	    stcLlpDesc[i].SARx = (u32)(&M4_ADC1->DR6);
-	    stcLlpDesc[i].DTCTLx_f.CNT = ELEMENT_SIZE / sizeof(u16);
-	    stcLlpDesc[i].DTCTLx_f.BLKSIZE = 1;
-	    stcLlpDesc[i].CHxCTL_f.SINC = AddressFix;
-	    stcLlpDesc[i].CHxCTL_f.DINC = AddressIncrease;
-	    stcLlpDesc[i].CHxCTL_f.HSIZE = Dma16Bit;
-	    stcLlpDesc[i].CHxCTL_f.LLPEN = Enable;
-	    stcLlpDesc[i].CHxCTL_f.LLPRUN = LlpWaitNextReq;
-		stcLlpDesc[i].CHxCTL_f.IE = Enable;
+    for (i = 0; i < ELEMENT_COUNT; i++) {
+        stcLlpDesc[i].SARx = (u32)(&M4_ADC1->DR6);
+        stcLlpDesc[i].DTCTLx_f.CNT = ELEMENT_SIZE / sizeof(u16);
+        stcLlpDesc[i].DTCTLx_f.BLKSIZE = 1;
+        stcLlpDesc[i].CHxCTL_f.SINC = AddressFix;
+        stcLlpDesc[i].CHxCTL_f.DINC = AddressIncrease;
+        stcLlpDesc[i].CHxCTL_f.HSIZE = Dma16Bit;
+        stcLlpDesc[i].CHxCTL_f.LLPEN = Enable;
+        stcLlpDesc[i].CHxCTL_f.LLPRUN = LlpWaitNextReq;
+        stcLlpDesc[i].CHxCTL_f.IE = Enable;
 
-		if ((ELEMENT_COUNT - 1) == i) {
-		    stcLlpDesc[i].DARx = (u32)(&buffer[0]);
-		    stcLlpDesc[i].LLPx = (u32)(&stcLlpDesc[0]);
-		} else {
-			stcLlpDesc[i].DARx = (u32)(&buffer[ELEMENT_SIZE * (i + 1)]);
-			stcLlpDesc[i].LLPx = (u32)(&stcLlpDesc[i + 1]);
-		}
-	}
+        if ((ELEMENT_COUNT - 1) == i) {
+            stcLlpDesc[i].DARx = (u32)(&buffer[0]);
+            stcLlpDesc[i].LLPx = (u32)(&stcLlpDesc[0]);
+        } else {
+            stcLlpDesc[i].DARx = (u32)(&buffer[ELEMENT_SIZE * (i + 1)]);
+            stcLlpDesc[i].LLPx = (u32)(&stcLlpDesc[i + 1]);
+        }
+    }
 
     stcDmaCfg.u16BlockSize   = 1;
     stcDmaCfg.u16TransferCnt = ELEMENT_SIZE / sizeof(u16);
@@ -317,7 +321,7 @@ void DmaInitConfig(void)
     stcDmaCfg.stcDmaChCfg.enTrnWidth  = Dma16Bit;
     stcDmaCfg.stcDmaChCfg.enLlpEn     = Enable;	
     stcDmaCfg.stcDmaChCfg.enLlpMd = LlpWaitNextReq;
-	stcDmaCfg.u32DmaLlp = (u32)(&stcLlpDesc[0]);
+    stcDmaCfg.u32DmaLlp = (u32)(&stcLlpDesc[0]);
     /* Enable DMA interrupt. */
     stcDmaCfg.stcDmaChCfg.enIntEn     = Enable;
 
@@ -325,7 +329,7 @@ void DmaInitConfig(void)
     DMA_InitChannel(ADC1_SA_DMA_UNIT, ADC1_SA_DMA_CH, &stcDmaCfg);	
     DMA_Cmd(ADC1_SA_DMA_UNIT, Enable);
     DMA_ChannelCmd(ADC1_SA_DMA_UNIT, ADC1_SA_DMA_CH, Enable);
-	DMA_DisableIrq(ADC1_SA_DMA_UNIT, ADC1_SA_DMA_CH, BlkTrnCpltIrq);
+    DMA_DisableIrq(ADC1_SA_DMA_UNIT, ADC1_SA_DMA_CH, BlkTrnCpltIrq);
     DMA_ClearIrqFlag(ADC1_SA_DMA_UNIT, ADC1_SA_DMA_CH, TrnCpltIrq);
     /* AOS must be enabled to use DMA */
     /* AOS enabled at first. */
@@ -354,49 +358,49 @@ void DmaInitConfig(void)
     stcDmaCfg.stcDmaChCfg.enTrnWidth  = Dma16Bit;
     stcDmaCfg.stcDmaChCfg.enLlpEn     = Enable;	
     stcDmaCfg.stcDmaChCfg.enLlpMd = LlpWaitNextReq;
-	stcDmaCfg.u32DmaLlp = (u32)(&light_llp_desc[0]);
+    stcDmaCfg.u32DmaLlp = (u32)(&light_llp_desc[0]);
     /* Enable DMA interrupt. */
     stcDmaCfg.stcDmaChCfg.enIntEn     = Enable;
 
     DMA_InitChannel(ADC1_SA_DMA_UNIT, ADC1_LIGHT_DMA_CH, &stcDmaCfg);
     DMA_ChannelCmd(ADC1_SA_DMA_UNIT, ADC1_LIGHT_DMA_CH, Enable);
-	DMA_DisableIrq(ADC1_SA_DMA_UNIT, ADC1_LIGHT_DMA_CH, BlkTrnCpltIrq);
+    DMA_DisableIrq(ADC1_SA_DMA_UNIT, ADC1_LIGHT_DMA_CH, BlkTrnCpltIrq);
     DMA_ClearIrqFlag(ADC1_SA_DMA_UNIT, ADC1_LIGHT_DMA_CH, TrnCpltIrq);
     DMA_SetTriggerSrc(ADC1_SA_DMA_UNIT, ADC1_LIGHT_DMA_CH, ADC1_SA_DMA_TRGSRC);
 
-	for (i = 0; i < LIGHT_SAMPLE_NUM; i++) {
-		light_llp_desc[i].SARx = (u32)(&M4_ADC1->DR9);
-	    light_llp_desc[i].DTCTLx_f.CNT = LIGHT_BLK_COUNT;
-	    light_llp_desc[i].DTCTLx_f.BLKSIZE = 1;
-	    light_llp_desc[i].CHxCTL_f.SINC = AddressFix;
-	    light_llp_desc[i].CHxCTL_f.DINC = AddressFix;
-	    light_llp_desc[i].CHxCTL_f.HSIZE = Dma16Bit;
-	    light_llp_desc[i].CHxCTL_f.LLPEN = Enable;
-	    light_llp_desc[i].CHxCTL_f.LLPRUN = LlpWaitNextReq;
-		light_llp_desc[i].CHxCTL_f.IE = Enable;
+    for (i = 0; i < LIGHT_SAMPLE_NUM; i++) {
+        light_llp_desc[i].SARx = (u32)(&M4_ADC1->DR9);
+        light_llp_desc[i].DTCTLx_f.CNT = LIGHT_BLK_COUNT;
+        light_llp_desc[i].DTCTLx_f.BLKSIZE = 1;
+        light_llp_desc[i].CHxCTL_f.SINC = AddressFix;
+        light_llp_desc[i].CHxCTL_f.DINC = AddressFix;
+        light_llp_desc[i].CHxCTL_f.HSIZE = Dma16Bit;
+        light_llp_desc[i].CHxCTL_f.LLPEN = Enable;
+        light_llp_desc[i].CHxCTL_f.LLPRUN = LlpWaitNextReq;
+        light_llp_desc[i].CHxCTL_f.IE = Enable;
 
-		if (0 == i) {
-		    light_llp_desc[i].DARx = (u32)(light_buffer[1]);
-		    light_llp_desc[i].LLPx = (u32)(&light_llp_desc[1]);
-		} else {
-			light_llp_desc[i].DARx = (u32)(light_buffer[0]);
-			light_llp_desc[i].LLPx = (u32)(&light_llp_desc[0]);
-		}
-	}
+        if (0 == i) {
+            light_llp_desc[i].DARx = (u32)(light_buffer[1]);
+            light_llp_desc[i].LLPx = (u32)(&light_llp_desc[1]);
+        } else {
+            light_llp_desc[i].DARx = (u32)(light_buffer[0]);
+            light_llp_desc[i].LLPx = (u32)(&light_llp_desc[0]);
+        }
+    }
 #endif
 }
 
 
-TESK_ID_TYPEDEF TaskVal = TESK1;		//ÈÎÎñID
-Task_TYPEDEF TaskState = Task_STATE1;	//ÈÎÎñ×´Ì¬
-TaskCallBack pTaskCBS;       			//¶¨Òåº¯ÊýÖ¸ÕëÔ­ÐÍ
+TESK_ID_TYPEDEF TaskVal = TESK1;		//ï¿½ï¿½ï¿½ï¿½ID
+Task_TYPEDEF TaskState = Task_STATE1;	//ï¿½ï¿½ï¿½ï¿½×´Ì¬
+TaskCallBack pTaskCBS;       			//ï¿½ï¿½ï¿½åº¯ï¿½ï¿½Ö¸ï¿½ï¿½Ô­ï¿½ï¿½
 
 void TaskRegister(TaskCallBack pCBS)
 {
-	if(pTaskCBS == 0)
-	{
-		pTaskCBS = pCBS;
-	}
+    if(pTaskCBS == 0)
+    {
+        pTaskCBS = pCBS;
+    }
 }
 
 void Dma1Btc1_IrqHandler(void)
@@ -423,10 +427,10 @@ void DmaIrqConfig(void)
     stcAdcIrqCfg.pfnCallback = &ADC1_SA_DMA_INT_CB;
     DmaIrqRegister(&stcAdcIrqCfg, DDL_IRQ_PRIORITY_03);
 #if 0
-	stcAdcIrqCfg.enIntSrc	 = INT_DMA1_TC1;
-	stcAdcIrqCfg.enIRQn 	 = Int031_IRQn;
-	stcAdcIrqCfg.pfnCallback = &Dma1Btc1_IrqHandler;
-	DmaIrqRegister(&stcAdcIrqCfg, DDL_IRQ_PRIORITY_14);
+    stcAdcIrqCfg.enIntSrc	 = INT_DMA1_TC1;
+    stcAdcIrqCfg.enIRQn 	 = Int031_IRQn;
+    stcAdcIrqCfg.pfnCallback = &Dma1Btc1_IrqHandler;
+    DmaIrqRegister(&stcAdcIrqCfg, DDL_IRQ_PRIORITY_14);
 #endif
 }
 
@@ -624,19 +628,21 @@ void AdcSetPinMode(uint8_t u8AdcPin, en_pin_mode_t enMode)
  ******************************************************************************/
 void Dma1Btc0_IrqHandler(void)
 {
-	
+
     DMA_ClearIrqFlag(ADC1_SA_DMA_UNIT, ADC1_SA_DMA_CH, TrnCpltIrq);
 
-	ring_buffer_put(&ring_buffer);
+    ring_buffer_put(&ring_buffer);
 
 }
 
 int get_sample_data(u8 *buf)
 {
-	int ret;
+    int ret;
+#ifdef SEND_TO_MATLAB_TEST
+    usart_polling_send_data((uint8_t *)ring_buffer.buf + ring_buffer.rd * ring_buffer.elem_size, ELEMENT_SIZE);
+#endif
+    ret = ring_buffer_get(&ring_buffer, buf);
 
-	ret = ring_buffer_get(&ring_buffer, buf);
-
-	return ret;
+    return ret;
 }
 

@@ -48,12 +48,12 @@ int find_max_peak(float *data, int len)
 
 int vd_calculation(s16 *data_cumulation_1, int len1, s16 *data_cumulation_2, int len2, measure_info_t *measure_info)
 {
-    int i, I1, I2, q1, q2;
+    int i, I1, I2;
     s16 *signal_1, *signal_2, mean;
     float *spectrum1, *spectrum2, dop_freq, angle1, angle2, M1, M2, *magnitude1, *magnitude2;
     float delta_phi, delta_phi_correct;
-    s32 *temp, min_index;
-    float std1, std2, max, *temp1, *temp2, mean_f, coeff, cov;
+    s32 min_index;
+    float std1, std2, *temp1, *temp2, mean_f, coeff, cov;
     float max_mag, bottom_noise;
     u32 index;
 
@@ -88,19 +88,16 @@ int vd_calculation(s16 *data_cumulation_1, int len1, s16 *data_cumulation_2, int
     temp1 = (float *)signal_1;
     temp2 = (float *)signal_2;
 
-    arm_std_f32(&magnitude1[MIN_BOTTOM_NOISE_INDEX], MAX_BOTTOM_NOISE_INDEX - MIN_BOTTOM_NOISE_INDEX + 1, &std1);
-    arm_std_f32(&magnitude2[MIN_BOTTOM_NOISE_INDEX], MAX_BOTTOM_NOISE_INDEX - MIN_BOTTOM_NOISE_INDEX + 1, &std2);
+    arm_std_f32(&magnitude1[min_index], MAX_INDEX - min_index + 1, &std1);
+    arm_std_f32(&magnitude2[min_index], MAX_INDEX - min_index + 1, &std2);
 
-    arm_offset_f32(&magnitude1[MIN_BOTTOM_NOISE_INDEX], 0 - bottom_noise,
-                    temp1, MAX_BOTTOM_NOISE_INDEX - MIN_BOTTOM_NOISE_INDEX + 1);
-    arm_mean_f32(&magnitude2[MIN_BOTTOM_NOISE_INDEX], MAX_BOTTOM_NOISE_INDEX - MIN_BOTTOM_NOISE_INDEX + 1,
-                    &mean_f);
-    arm_offset_f32(&magnitude2[MIN_BOTTOM_NOISE_INDEX], 0 - mean_f,
-                    temp2, MAX_BOTTOM_NOISE_INDEX - MIN_BOTTOM_NOISE_INDEX + 1);
-    for (i = 0; i < MAX_BOTTOM_NOISE_INDEX - MIN_BOTTOM_NOISE_INDEX + 1; i++) {
+    arm_offset_f32(&magnitude1[min_index], 0 - bottom_noise, temp1, MAX_INDEX - min_index + 1);
+    arm_mean_f32(&magnitude2[min_index], MAX_INDEX - min_index + 1, &mean_f);
+    arm_offset_f32(&magnitude2[min_index], 0 - mean_f, temp2, MAX_INDEX - min_index + 1);
+    for (i = 0; i < MAX_INDEX - min_index + 1; i++) {
         temp1[i] = temp1[i] * temp2[i];
     }
-    arm_mean_f32(temp1, MAX_BOTTOM_NOISE_INDEX - MIN_BOTTOM_NOISE_INDEX + 1, &cov);
+    arm_mean_f32(temp1, MAX_INDEX - min_index + 1, &cov);
     coeff = cov / (std1 * std2);
 
     if (coeff < SNR)

@@ -13,7 +13,7 @@ typedef struct {
 } chunk_t;
 
 static chunk_t chunks[CHUNK_NUM];
-static char reserved_mem[ALLOC_SIZE];
+static u32 reserved_mem[ALLOC_SIZE / 4];
 static u32 total;
 
 void init_mem(void)

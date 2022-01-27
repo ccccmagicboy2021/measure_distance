@@ -34,7 +34,7 @@ void apfft(s16 *data, int len, float *output)
         output[M + i] = output[i];
     }
 
-    for (i = 0; i < len; i++) {
+    for (i = 0; i < (M / 2 - 1); i++) {
         output[M - 2 - 2 * i] = output[M + 2 + 2 * i];
         output[M - 1 - 2 * i] = - output[M + 3 + 2 * i];
     }
