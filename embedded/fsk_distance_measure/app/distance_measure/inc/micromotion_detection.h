@@ -4,10 +4,10 @@
 #include "sys.h"
 
 typedef struct {
-	float PAD;
-	u16 cfar_N;
-	u16 pro_N;	
+    float PAD;
+    u16 cfar_N;
+    u16 pro_N;
 } cfar_param_t;
 
-int micromotion_detection(s16 *data, int len, u8 secnum, s32 offset);
+int micromotion_detection(s16 *data, int len, s32 offset);
 #endif

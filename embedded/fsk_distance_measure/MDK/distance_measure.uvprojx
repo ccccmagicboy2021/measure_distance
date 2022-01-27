@@ -80,7 +80,7 @@
             <nStopB2X>0</nStopB2X>
           </BeforeMake>
           <AfterMake>
-            <RunUserProg1>1</RunUserProg1>
+            <RunUserProg1>0</RunUserProg1>
             <RunUserProg2>0</RunUserProg2>
             <UserProg1Name>$K\ARM\ARMCC\bin\fromelf.exe --bin --output=@L.bin !L</UserProg1Name>
             <UserProg2Name></UserProg2Name>
@@ -183,7 +183,7 @@
             <hadIRAM>1</hadIRAM>
             <hadXRAM>0</hadXRAM>
             <uocXRam>0</uocXRam>
-            <RvdsVP>2</RvdsVP>
+            <RvdsVP>1</RvdsVP>
             <RvdsMve>0</RvdsMve>
             <RvdsCdeCp>0</RvdsCdeCp>
             <hadIRAM2>1</hadIRAM2>
@@ -337,7 +337,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>--diag_suppress=186,66</MiscControls>
-              <Define>__DEBUG,HC32F46x,USE_DEVICE_DRIVER_LIB,ARM_MATH_CM4,_CC_ARM,__TARGET_FPU_VFP,__FPU_PRESENT,ARM_MATH_MATRIX_CHECK,ARM_MATH_ROUNDING</Define>
+              <Define>__DEBUG,HC32F46x,USE_DEVICE_DRIVER_LIB,_CC_ARM,</Define>
               <Undefine></Undefine>
               <IncludePath>..\MDK;..\driver\inc;..\driver\src;..\dsp\Include;..\app\presense_detection\inc;..\common\inc;..\HAL\inc;..\HAL\mcu_sdk;..\app\distance_measure\inc</IncludePath>
             </VariousControls>
@@ -624,6 +624,11 @@
               <FileType>1</FileType>
               <FilePath>..\HAL\src\gpio.c</FilePath>
             </File>
+            <File>
+              <FileName>test_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HAL\src\test_usart.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -633,11 +638,6 @@
               <FileName>distance_measure.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\app\distance_measure\src\distance_measure.c</FilePath>
-            </File>
-            <File>
-              <FileName>filter.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\app\distance_measure\src\filter.c</FilePath>
             </File>
             <File>
               <FileName>micromotion_detection.c</FileName>
@@ -650,14 +650,29 @@
               <FilePath>..\app\distance_measure\src\vd_calculation.c</FilePath>
             </File>
             <File>
+              <FileName>alphabeta_filter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\distance_measure\src\alphabeta_filter.c</FilePath>
+            </File>
+            <File>
+              <FileName>distance_compensation.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\distance_measure\src\distance_compensation.c</FilePath>
+            </File>
+            <File>
+              <FileName>filter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\distance_measure\src\filter.c</FilePath>
+            </File>
+            <File>
               <FileName>apfft.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\app\distance_measure\src\apfft.c</FilePath>
             </File>
             <File>
-              <FileName>alphabeta_filter.c</FileName>
+              <FileName>corrcoef.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\app\distance_measure\src\alphabeta_filter.c</FilePath>
+              <FilePath>..\app\distance_measure\src\corrcoef.c</FilePath>
             </File>
             <File>
               <FileName>hamming.c</FileName>
@@ -673,6 +688,11 @@
               <FileName>freq_linspace.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\app\distance_measure\src\freq_linspace.c</FilePath>
+            </File>
+            <File>
+              <FileName>comp_table.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\distance_measure\src\comp_table.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1268,6 +1288,11 @@
               <FileType>1</FileType>
               <FilePath>..\HAL\src\gpio.c</FilePath>
             </File>
+            <File>
+              <FileName>test_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HAL\src\test_usart.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1277,11 +1302,6 @@
               <FileName>distance_measure.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\app\distance_measure\src\distance_measure.c</FilePath>
-            </File>
-            <File>
-              <FileName>filter.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\app\distance_measure\src\filter.c</FilePath>
             </File>
             <File>
               <FileName>micromotion_detection.c</FileName>
@@ -1294,14 +1314,29 @@
               <FilePath>..\app\distance_measure\src\vd_calculation.c</FilePath>
             </File>
             <File>
+              <FileName>alphabeta_filter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\distance_measure\src\alphabeta_filter.c</FilePath>
+            </File>
+            <File>
+              <FileName>distance_compensation.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\distance_measure\src\distance_compensation.c</FilePath>
+            </File>
+            <File>
+              <FileName>filter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\distance_measure\src\filter.c</FilePath>
+            </File>
+            <File>
               <FileName>apfft.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\app\distance_measure\src\apfft.c</FilePath>
             </File>
             <File>
-              <FileName>alphabeta_filter.c</FileName>
+              <FileName>corrcoef.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\app\distance_measure\src\alphabeta_filter.c</FilePath>
+              <FilePath>..\app\distance_measure\src\corrcoef.c</FilePath>
             </File>
             <File>
               <FileName>hamming.c</FileName>
@@ -1317,6 +1352,11 @@
               <FileName>freq_linspace.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\app\distance_measure\src\freq_linspace.c</FilePath>
+            </File>
+            <File>
+              <FileName>comp_table.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\distance_measure\src\comp_table.c</FilePath>
             </File>
           </Files>
         </Group>

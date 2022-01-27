@@ -6,7 +6,7 @@
 
 #include "sys.h"
 
-#define ELEMENT_SIZE		(512U * 2U)
+#define ELEMENT_SIZE		(256U * 2U)
 #define ELEMENT_COUNT		(4U)
 
 
