@@ -953,7 +953,7 @@
               <MiscControls></MiscControls>
               <Define>VECT_TAB_SRAM</Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source</IncludePath>
+              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\application\coremark</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
