@@ -1,0 +1,8 @@
+1. acm32基本工程模板(keil5)(AC6)
+2. 用户按钮开始启动计算，usart1输出结果
+3. 使用Ofast优化：CoreMark 1.0 : 435.034803
+4. keil5里面的jlink直接支持有问题(daplink以jlink方式运行的话需要jlink v7以上版本)
+5. daplink的flash烧写后程序不会自动运行，但是daplink以jlink方式运行是可以的
+6. 串口波特率115200 8n1
+
+
