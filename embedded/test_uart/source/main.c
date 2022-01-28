@@ -1,5 +1,8 @@
 #include "sys.h"
 
+#define UART_BAUD_RATE  115200
+UART_HandleTypeDef  UART1_Handle;
+
 void segger_init(void)
 {
 	SEGGER_RTT_Init();
@@ -52,6 +55,42 @@ void GPIOAB_IRQHandler(void)
     NVIC_ClearPendingIRQ(GPIOAB_IRQn);      
 }
 
+void uart_init(void)
+{   
+    UART1_Handle.Instance        = UART1;    
+    UART1_Handle.Init.BaudRate   = UART_BAUD_RATE; 
+    UART1_Handle.Init.WordLength = UART_WORDLENGTH_8B;
+    UART1_Handle.Init.StopBits   = UART_STOPBITS_1;
+    UART1_Handle.Init.Parity     = UART_PARITY_NONE;
+    UART1_Handle.Init.Mode       = UART_MODE_TX_RX_DEBUG;
+    UART1_Handle.Init.HwFlowCtl  = UART_HWCONTROL_NONE;
+    
+    HAL_UART_Init(&UART1_Handle);  
+    
+    printf("MCU is running, HCLK=%dHz, PCLK=%dHz\n", System_Get_SystemClock(), System_Get_APBClock());
+
+    SET_BIT(UART1->IE, UART_IE_RXI);        //enable rx int
+    CLEAR_BIT(UART1->LCRH, UART_LCRH_FEN);  //disable fifo
+    
+}
+
+void UART1_IRQHandler(void)
+{
+    //HAL_UART_IRQHandler(&UART1_Handle);
+    int buf;
+    uint8_t tx_buf;
+    buf = UART1->DR;
+    
+    //CV_LOG("rev: 0x%02X\r\n", buf);
+    //printf("r: 0x%02X\r\n", buf);
+    
+    
+    tx_buf = 0xff & buf;
+    HAL_UART_Transmit(&UART1_Handle, &tx_buf, 1, 0);
+    
+    SET_BIT(UART1->ICR, UART_ICR_RXI);
+}
+
 int main(void)
 {    
     System_Init();  //180MHz enable systick
@@ -60,13 +99,14 @@ int main(void)
     //initial here
     led_init();
     user_button_init();
+    uart_init();
     ///////////////
 #ifdef VECT_TAB_SRAM
     CV_LOG("ramcode program begin...\r\n");
-    //printf("ramcode program begin...\r\n");
+    printf("ramcode program begin...\r\n");
 #else
     CV_LOG("flashcode program begin...\r\n");
-    //printf("flashcode program begin...\r\n");   
+    printf("flashcode program begin...\r\n");   
 #endif
     
 	while(1)
