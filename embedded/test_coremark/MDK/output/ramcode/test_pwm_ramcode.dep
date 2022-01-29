@@ -1,0 +1,561 @@
+Dependencies for Project 'test_pwm', Target 'ramcode': (DO NOT MODIFY !)
+CompilerVersion: 6140001::V6.14.1::ARMCLANG
+F (..\application\app\app.c)(0x61E3BBC1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/app.o -MD)
+I (..\application\app\app.h)(0x61DE6AEC)
+I (..\source\sys.h)(0x61E38C75)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (..\common\pt32z192xx.h)(0x61074E4F)
+I (..\cmsis\core_cm3.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_version.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_compiler.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_armclang.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (..\common\system_pt32z192xx.h)(0x5F312747)
+I (..\common\pt32z192xx_conf.h)(0x61E1173F)
+I (..\driver\inc\pt32z192xx_adc.h)(0x5F463A00)
+I (..\driver\inc\pt32z192xx_ana.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_beep.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_flash.h)(0x60C844A0)
+I (..\driver\inc\pt32z192xx_gpio.h)(0x60A36139)
+I (..\driver\inc\pt32z192xx_cmp_opa.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_pwr.h)(0x60F8D280)
+I (..\driver\inc\pt32z192xx_spi.h)(0x60C1E40D)
+I (..\driver\inc\pt32z192xx_syscfg.h)(0x5ED9CE8E)
+I (..\driver\inc\pt32z192xx_tim.h)(0x607E8492)
+I (..\driver\inc\pt32z192xx_pwm.h)(0x5F58AD55)
+I (..\driver\inc\pt32z192xx_uart.h)(0x60C08E3A)
+I (..\driver\inc\pt32z192xx_wdg.h)(0x5F58AC9D)
+I (..\driver\inc\pt32z192xx_led.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_misc.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_sys.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_serial.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_dma.h)(0x60C08951)
+I (..\application\rtt\SEGGER_RTT.h)(0x606EF8BE)
+I (..\application\rtt\SEGGER_RTT_Conf.h)(0x606EF8BE)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x5F51128E)
+F (..\source\main.c)(0x61E632B7)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/main.o -MD)
+I (..\source\sys.h)(0x61E38C75)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (..\common\pt32z192xx.h)(0x61074E4F)
+I (..\cmsis\core_cm3.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_version.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_compiler.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_armclang.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (..\common\system_pt32z192xx.h)(0x5F312747)
+I (..\common\pt32z192xx_conf.h)(0x61E1173F)
+I (..\driver\inc\pt32z192xx_adc.h)(0x5F463A00)
+I (..\driver\inc\pt32z192xx_ana.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_beep.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_flash.h)(0x60C844A0)
+I (..\driver\inc\pt32z192xx_gpio.h)(0x60A36139)
+I (..\driver\inc\pt32z192xx_cmp_opa.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_pwr.h)(0x60F8D280)
+I (..\driver\inc\pt32z192xx_spi.h)(0x60C1E40D)
+I (..\driver\inc\pt32z192xx_syscfg.h)(0x5ED9CE8E)
+I (..\driver\inc\pt32z192xx_tim.h)(0x607E8492)
+I (..\driver\inc\pt32z192xx_pwm.h)(0x5F58AD55)
+I (..\driver\inc\pt32z192xx_uart.h)(0x60C08E3A)
+I (..\driver\inc\pt32z192xx_wdg.h)(0x5F58AC9D)
+I (..\driver\inc\pt32z192xx_led.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_misc.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_sys.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_serial.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_dma.h)(0x60C08951)
+I (..\application\app\app.h)(0x61DE6AEC)
+I (..\application\rtt\SEGGER_RTT.h)(0x606EF8BE)
+I (..\application\rtt\SEGGER_RTT_Conf.h)(0x606EF8BE)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x5F51128E)
+F (..\common\pt32z192xx_it.c)(0x61E3D502)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/pt32z192xx_it.o -MD)
+I (..\common\pt32z192xx_it.h)(0x61DE6E20)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (..\source\sys.h)(0x61E38C75)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\common\pt32z192xx.h)(0x61074E4F)
+I (..\cmsis\core_cm3.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_version.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_compiler.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_armclang.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (..\common\system_pt32z192xx.h)(0x5F312747)
+I (..\common\pt32z192xx_conf.h)(0x61E1173F)
+I (..\driver\inc\pt32z192xx_adc.h)(0x5F463A00)
+I (..\driver\inc\pt32z192xx_ana.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_beep.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_flash.h)(0x60C844A0)
+I (..\driver\inc\pt32z192xx_gpio.h)(0x60A36139)
+I (..\driver\inc\pt32z192xx_cmp_opa.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_pwr.h)(0x60F8D280)
+I (..\driver\inc\pt32z192xx_spi.h)(0x60C1E40D)
+I (..\driver\inc\pt32z192xx_syscfg.h)(0x5ED9CE8E)
+I (..\driver\inc\pt32z192xx_tim.h)(0x607E8492)
+I (..\driver\inc\pt32z192xx_pwm.h)(0x5F58AD55)
+I (..\driver\inc\pt32z192xx_uart.h)(0x60C08E3A)
+I (..\driver\inc\pt32z192xx_wdg.h)(0x5F58AC9D)
+I (..\driver\inc\pt32z192xx_led.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_misc.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_sys.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_serial.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_dma.h)(0x60C08951)
+I (..\application\app\app.h)(0x61DE6AEC)
+I (..\application\rtt\SEGGER_RTT.h)(0x606EF8BE)
+I (..\application\rtt\SEGGER_RTT_Conf.h)(0x606EF8BE)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x5F51128E)
+F (..\common\system_pt32z192xx.c)(0x61DFF9AA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/system_pt32z192xx.o -MD)
+I (..\common\pt32z192xx.h)(0x61074E4F)
+I (..\cmsis\core_cm3.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_compiler.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_armclang.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (..\common\system_pt32z192xx.h)(0x5F312747)
+F (..\common\startup_pt32z192.s)(0x61E6438C)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto -c-mlittle-endian -gdwarf-3 -Wa,armasm,--pd,"__MICROLIB SETA 1" -I ../common-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 532" -Wa,armasm,--pd,"ARMCM3 SETA 1"-o ./output/ramcode/startup_pt32z192.o)
+F (..\driver\src\pt32z192xx_adc.c)(0x61DE7019)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/pt32z192xx_adc.o -MD)
+I (..\driver\inc\pt32z192xx_adc.h)(0x5F463A00)
+I (..\common\pt32z192xx.h)(0x61074E4F)
+I (..\cmsis\core_cm3.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_compiler.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_armclang.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (..\common\system_pt32z192xx.h)(0x5F312747)
+I (..\common\pt32z192xx_conf.h)(0x61E1173F)
+I (..\driver\inc\pt32z192xx_ana.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_beep.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_flash.h)(0x60C844A0)
+I (..\driver\inc\pt32z192xx_gpio.h)(0x60A36139)
+I (..\driver\inc\pt32z192xx_cmp_opa.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_pwr.h)(0x60F8D280)
+I (..\driver\inc\pt32z192xx_spi.h)(0x60C1E40D)
+I (..\driver\inc\pt32z192xx_syscfg.h)(0x5ED9CE8E)
+I (..\driver\inc\pt32z192xx_tim.h)(0x607E8492)
+I (..\driver\inc\pt32z192xx_pwm.h)(0x5F58AD55)
+I (..\driver\inc\pt32z192xx_uart.h)(0x60C08E3A)
+I (..\driver\inc\pt32z192xx_wdg.h)(0x5F58AC9D)
+I (..\driver\inc\pt32z192xx_led.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_misc.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_sys.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_serial.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_dma.h)(0x60C08951)
+F (..\driver\src\pt32z192xx_dsp.c)(0x61DE6FDA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/pt32z192xx_dsp.o -MD)
+I (..\driver\inc\pt32z192xx_dsp.h)(0x5F3F7D09)
+I (..\common\pt32z192xx.h)(0x61074E4F)
+I (..\cmsis\core_cm3.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_compiler.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_armclang.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (..\common\system_pt32z192xx.h)(0x5F312747)
+I (..\common\pt32z192xx_conf.h)(0x61E1173F)
+I (..\driver\inc\pt32z192xx_adc.h)(0x5F463A00)
+I (..\driver\inc\pt32z192xx_ana.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_beep.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_flash.h)(0x60C844A0)
+I (..\driver\inc\pt32z192xx_gpio.h)(0x60A36139)
+I (..\driver\inc\pt32z192xx_cmp_opa.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_pwr.h)(0x60F8D280)
+I (..\driver\inc\pt32z192xx_spi.h)(0x60C1E40D)
+I (..\driver\inc\pt32z192xx_syscfg.h)(0x5ED9CE8E)
+I (..\driver\inc\pt32z192xx_tim.h)(0x607E8492)
+I (..\driver\inc\pt32z192xx_pwm.h)(0x5F58AD55)
+I (..\driver\inc\pt32z192xx_uart.h)(0x60C08E3A)
+I (..\driver\inc\pt32z192xx_wdg.h)(0x5F58AC9D)
+I (..\driver\inc\pt32z192xx_led.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_misc.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_sys.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_serial.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_dma.h)(0x60C08951)
+F (..\driver\src\pt32z192xx_gpio.c)(0x61DE6FF4)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/pt32z192xx_gpio.o -MD)
+I (..\driver\inc\pt32z192xx_gpio.h)(0x60A36139)
+I (..\common\pt32z192xx.h)(0x61074E4F)
+I (..\cmsis\core_cm3.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_compiler.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_armclang.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (..\common\system_pt32z192xx.h)(0x5F312747)
+I (..\common\pt32z192xx_conf.h)(0x61E1173F)
+I (..\driver\inc\pt32z192xx_adc.h)(0x5F463A00)
+I (..\driver\inc\pt32z192xx_ana.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_beep.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_flash.h)(0x60C844A0)
+I (..\driver\inc\pt32z192xx_cmp_opa.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_pwr.h)(0x60F8D280)
+I (..\driver\inc\pt32z192xx_spi.h)(0x60C1E40D)
+I (..\driver\inc\pt32z192xx_syscfg.h)(0x5ED9CE8E)
+I (..\driver\inc\pt32z192xx_tim.h)(0x607E8492)
+I (..\driver\inc\pt32z192xx_pwm.h)(0x5F58AD55)
+I (..\driver\inc\pt32z192xx_uart.h)(0x60C08E3A)
+I (..\driver\inc\pt32z192xx_wdg.h)(0x5F58AC9D)
+I (..\driver\inc\pt32z192xx_led.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_misc.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_sys.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_serial.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_dma.h)(0x60C08951)
+F (..\driver\src\pt32z192xx_i2c.c)(0x61DE7008)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/pt32z192xx_i2c.o -MD)
+I (..\driver\inc\pt32z192xx_i2c.h)(0x6049C99B)
+I (..\common\pt32z192xx.h)(0x61074E4F)
+I (..\cmsis\core_cm3.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_compiler.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_armclang.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (..\common\system_pt32z192xx.h)(0x5F312747)
+I (..\common\pt32z192xx_conf.h)(0x61E1173F)
+I (..\driver\inc\pt32z192xx_adc.h)(0x5F463A00)
+I (..\driver\inc\pt32z192xx_ana.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_beep.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_flash.h)(0x60C844A0)
+I (..\driver\inc\pt32z192xx_gpio.h)(0x60A36139)
+I (..\driver\inc\pt32z192xx_cmp_opa.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_pwr.h)(0x60F8D280)
+I (..\driver\inc\pt32z192xx_spi.h)(0x60C1E40D)
+I (..\driver\inc\pt32z192xx_syscfg.h)(0x5ED9CE8E)
+I (..\driver\inc\pt32z192xx_tim.h)(0x607E8492)
+I (..\driver\inc\pt32z192xx_pwm.h)(0x5F58AD55)
+I (..\driver\inc\pt32z192xx_uart.h)(0x60C08E3A)
+I (..\driver\inc\pt32z192xx_wdg.h)(0x5F58AC9D)
+I (..\driver\inc\pt32z192xx_led.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_misc.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_sys.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_serial.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_dma.h)(0x60C08951)
+F (..\driver\src\pt32z192xx_misc.c)(0x61DE7024)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/pt32z192xx_misc.o -MD)
+I (..\driver\inc\pt32z192xx_misc.h)(0x5F3100D6)
+I (..\common\pt32z192xx.h)(0x61074E4F)
+I (..\cmsis\core_cm3.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_compiler.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_armclang.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (..\common\system_pt32z192xx.h)(0x5F312747)
+I (..\common\pt32z192xx_conf.h)(0x61E1173F)
+I (..\driver\inc\pt32z192xx_adc.h)(0x5F463A00)
+I (..\driver\inc\pt32z192xx_ana.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_beep.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_flash.h)(0x60C844A0)
+I (..\driver\inc\pt32z192xx_gpio.h)(0x60A36139)
+I (..\driver\inc\pt32z192xx_cmp_opa.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_pwr.h)(0x60F8D280)
+I (..\driver\inc\pt32z192xx_spi.h)(0x60C1E40D)
+I (..\driver\inc\pt32z192xx_syscfg.h)(0x5ED9CE8E)
+I (..\driver\inc\pt32z192xx_tim.h)(0x607E8492)
+I (..\driver\inc\pt32z192xx_pwm.h)(0x5F58AD55)
+I (..\driver\inc\pt32z192xx_uart.h)(0x60C08E3A)
+I (..\driver\inc\pt32z192xx_wdg.h)(0x5F58AC9D)
+I (..\driver\inc\pt32z192xx_led.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_sys.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_serial.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_dma.h)(0x60C08951)
+F (..\driver\src\pt32z192xx_pwm.c)(0x61E4C8BA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/pt32z192xx_pwm.o -MD)
+I (..\driver\inc\pt32z192xx_pwm.h)(0x5F58AD55)
+I (..\common\pt32z192xx.h)(0x61074E4F)
+I (..\cmsis\core_cm3.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_compiler.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_armclang.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (..\common\system_pt32z192xx.h)(0x5F312747)
+I (..\common\pt32z192xx_conf.h)(0x61E1173F)
+I (..\driver\inc\pt32z192xx_adc.h)(0x5F463A00)
+I (..\driver\inc\pt32z192xx_ana.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_beep.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_flash.h)(0x60C844A0)
+I (..\driver\inc\pt32z192xx_gpio.h)(0x60A36139)
+I (..\driver\inc\pt32z192xx_cmp_opa.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_pwr.h)(0x60F8D280)
+I (..\driver\inc\pt32z192xx_spi.h)(0x60C1E40D)
+I (..\driver\inc\pt32z192xx_syscfg.h)(0x5ED9CE8E)
+I (..\driver\inc\pt32z192xx_tim.h)(0x607E8492)
+I (..\driver\inc\pt32z192xx_uart.h)(0x60C08E3A)
+I (..\driver\inc\pt32z192xx_wdg.h)(0x5F58AC9D)
+I (..\driver\inc\pt32z192xx_led.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_misc.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_sys.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_serial.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_dma.h)(0x60C08951)
+F (..\driver\src\pt32z192xx_spi.c)(0x61DE7036)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/pt32z192xx_spi.o -MD)
+I (..\driver\inc\pt32z192xx_spi.h)(0x60C1E40D)
+I (..\common\pt32z192xx.h)(0x61074E4F)
+I (..\cmsis\core_cm3.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_compiler.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_armclang.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (..\common\system_pt32z192xx.h)(0x5F312747)
+I (..\common\pt32z192xx_conf.h)(0x61E1173F)
+I (..\driver\inc\pt32z192xx_adc.h)(0x5F463A00)
+I (..\driver\inc\pt32z192xx_ana.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_beep.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_flash.h)(0x60C844A0)
+I (..\driver\inc\pt32z192xx_gpio.h)(0x60A36139)
+I (..\driver\inc\pt32z192xx_cmp_opa.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_pwr.h)(0x60F8D280)
+I (..\driver\inc\pt32z192xx_syscfg.h)(0x5ED9CE8E)
+I (..\driver\inc\pt32z192xx_tim.h)(0x607E8492)
+I (..\driver\inc\pt32z192xx_pwm.h)(0x5F58AD55)
+I (..\driver\inc\pt32z192xx_uart.h)(0x60C08E3A)
+I (..\driver\inc\pt32z192xx_wdg.h)(0x5F58AC9D)
+I (..\driver\inc\pt32z192xx_led.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_misc.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_sys.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_serial.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_dma.h)(0x60C08951)
+F (..\driver\src\pt32z192xx_sys.c)(0x61DE703E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/pt32z192xx_sys.o -MD)
+I (..\driver\inc\pt32z192xx_sys.h)(0x5F3100D6)
+I (..\common\pt32z192xx.h)(0x61074E4F)
+I (..\cmsis\core_cm3.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_compiler.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_armclang.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (..\common\system_pt32z192xx.h)(0x5F312747)
+I (..\common\pt32z192xx_conf.h)(0x61E1173F)
+I (..\driver\inc\pt32z192xx_adc.h)(0x5F463A00)
+I (..\driver\inc\pt32z192xx_ana.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_beep.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_flash.h)(0x60C844A0)
+I (..\driver\inc\pt32z192xx_gpio.h)(0x60A36139)
+I (..\driver\inc\pt32z192xx_cmp_opa.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_pwr.h)(0x60F8D280)
+I (..\driver\inc\pt32z192xx_spi.h)(0x60C1E40D)
+I (..\driver\inc\pt32z192xx_syscfg.h)(0x5ED9CE8E)
+I (..\driver\inc\pt32z192xx_tim.h)(0x607E8492)
+I (..\driver\inc\pt32z192xx_pwm.h)(0x5F58AD55)
+I (..\driver\inc\pt32z192xx_uart.h)(0x60C08E3A)
+I (..\driver\inc\pt32z192xx_wdg.h)(0x5F58AC9D)
+I (..\driver\inc\pt32z192xx_led.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_misc.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_serial.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_dma.h)(0x60C08951)
+F (..\driver\src\pt32z192xx_tim.c)(0x61DE7047)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/pt32z192xx_tim.o -MD)
+I (..\driver\inc\pt32z192xx_tim.h)(0x607E8492)
+I (..\common\pt32z192xx.h)(0x61074E4F)
+I (..\cmsis\core_cm3.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_compiler.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_armclang.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (..\common\system_pt32z192xx.h)(0x5F312747)
+I (..\common\pt32z192xx_conf.h)(0x61E1173F)
+I (..\driver\inc\pt32z192xx_adc.h)(0x5F463A00)
+I (..\driver\inc\pt32z192xx_ana.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_beep.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_flash.h)(0x60C844A0)
+I (..\driver\inc\pt32z192xx_gpio.h)(0x60A36139)
+I (..\driver\inc\pt32z192xx_cmp_opa.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_pwr.h)(0x60F8D280)
+I (..\driver\inc\pt32z192xx_spi.h)(0x60C1E40D)
+I (..\driver\inc\pt32z192xx_syscfg.h)(0x5ED9CE8E)
+I (..\driver\inc\pt32z192xx_pwm.h)(0x5F58AD55)
+I (..\driver\inc\pt32z192xx_uart.h)(0x60C08E3A)
+I (..\driver\inc\pt32z192xx_wdg.h)(0x5F58AC9D)
+I (..\driver\inc\pt32z192xx_led.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_misc.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_sys.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_serial.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_dma.h)(0x60C08951)
+F (..\driver\src\pt32z192xx_uart.c)(0x61DE704E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/pt32z192xx_uart.o -MD)
+I (..\driver\inc\pt32z192xx_uart.h)(0x60C08E3A)
+I (..\common\pt32z192xx.h)(0x61074E4F)
+I (..\cmsis\core_cm3.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_compiler.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_armclang.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (..\common\system_pt32z192xx.h)(0x5F312747)
+I (..\common\pt32z192xx_conf.h)(0x61E1173F)
+I (..\driver\inc\pt32z192xx_adc.h)(0x5F463A00)
+I (..\driver\inc\pt32z192xx_ana.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_beep.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_flash.h)(0x60C844A0)
+I (..\driver\inc\pt32z192xx_gpio.h)(0x60A36139)
+I (..\driver\inc\pt32z192xx_cmp_opa.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_pwr.h)(0x60F8D280)
+I (..\driver\inc\pt32z192xx_spi.h)(0x60C1E40D)
+I (..\driver\inc\pt32z192xx_syscfg.h)(0x5ED9CE8E)
+I (..\driver\inc\pt32z192xx_tim.h)(0x607E8492)
+I (..\driver\inc\pt32z192xx_pwm.h)(0x5F58AD55)
+I (..\driver\inc\pt32z192xx_wdg.h)(0x5F58AC9D)
+I (..\driver\inc\pt32z192xx_led.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_misc.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_sys.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_serial.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_dma.h)(0x60C08951)
+F (..\driver\src\pt32z192xx_wdg.c)(0x61DE7057)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/pt32z192xx_wdg.o -MD)
+I (..\driver\inc\pt32z192xx_wdg.h)(0x5F58AC9D)
+I (..\common\pt32z192xx.h)(0x61074E4F)
+I (..\cmsis\core_cm3.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_compiler.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_armclang.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (..\common\system_pt32z192xx.h)(0x5F312747)
+I (..\common\pt32z192xx_conf.h)(0x61E1173F)
+I (..\driver\inc\pt32z192xx_adc.h)(0x5F463A00)
+I (..\driver\inc\pt32z192xx_ana.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_beep.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_flash.h)(0x60C844A0)
+I (..\driver\inc\pt32z192xx_gpio.h)(0x60A36139)
+I (..\driver\inc\pt32z192xx_cmp_opa.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_pwr.h)(0x60F8D280)
+I (..\driver\inc\pt32z192xx_spi.h)(0x60C1E40D)
+I (..\driver\inc\pt32z192xx_syscfg.h)(0x5ED9CE8E)
+I (..\driver\inc\pt32z192xx_tim.h)(0x607E8492)
+I (..\driver\inc\pt32z192xx_pwm.h)(0x5F58AD55)
+I (..\driver\inc\pt32z192xx_uart.h)(0x60C08E3A)
+I (..\driver\inc\pt32z192xx_led.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_misc.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_sys.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_serial.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_dma.h)(0x60C08951)
+F (..\driver\src\pt32z192xx_qspi.c)(0x61DE705E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/pt32z192xx_qspi.o -MD)
+I (..\driver\inc\pt32z192xx_qspi.h)(0x5F3F7E31)
+I (..\common\pt32z192xx.h)(0x61074E4F)
+I (..\cmsis\core_cm3.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_compiler.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_armclang.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (..\common\system_pt32z192xx.h)(0x5F312747)
+I (..\common\pt32z192xx_conf.h)(0x61E1173F)
+I (..\driver\inc\pt32z192xx_adc.h)(0x5F463A00)
+I (..\driver\inc\pt32z192xx_ana.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_beep.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_flash.h)(0x60C844A0)
+I (..\driver\inc\pt32z192xx_gpio.h)(0x60A36139)
+I (..\driver\inc\pt32z192xx_cmp_opa.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_pwr.h)(0x60F8D280)
+I (..\driver\inc\pt32z192xx_spi.h)(0x60C1E40D)
+I (..\driver\inc\pt32z192xx_syscfg.h)(0x5ED9CE8E)
+I (..\driver\inc\pt32z192xx_tim.h)(0x607E8492)
+I (..\driver\inc\pt32z192xx_pwm.h)(0x5F58AD55)
+I (..\driver\inc\pt32z192xx_uart.h)(0x60C08E3A)
+I (..\driver\inc\pt32z192xx_wdg.h)(0x5F58AC9D)
+I (..\driver\inc\pt32z192xx_led.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_misc.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_sys.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_serial.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_dma.h)(0x60C08951)
+F (..\driver\src\pt32z192xx_retarget.c)(0x61DFC669)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/pt32z192xx_retarget.o -MD)
+I (..\common\pt32z192xx.h)(0x61074E4F)
+I (..\cmsis\core_cm3.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_compiler.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_armclang.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (..\common\system_pt32z192xx.h)(0x5F312747)
+I (..\source\sys.h)(0x61E38C75)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (..\common\pt32z192xx_conf.h)(0x61E1173F)
+I (..\driver\inc\pt32z192xx_adc.h)(0x5F463A00)
+I (..\driver\inc\pt32z192xx_ana.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_beep.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_flash.h)(0x60C844A0)
+I (..\driver\inc\pt32z192xx_gpio.h)(0x60A36139)
+I (..\driver\inc\pt32z192xx_cmp_opa.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_pwr.h)(0x60F8D280)
+I (..\driver\inc\pt32z192xx_spi.h)(0x60C1E40D)
+I (..\driver\inc\pt32z192xx_syscfg.h)(0x5ED9CE8E)
+I (..\driver\inc\pt32z192xx_tim.h)(0x607E8492)
+I (..\driver\inc\pt32z192xx_pwm.h)(0x5F58AD55)
+I (..\driver\inc\pt32z192xx_uart.h)(0x60C08E3A)
+I (..\driver\inc\pt32z192xx_wdg.h)(0x5F58AC9D)
+I (..\driver\inc\pt32z192xx_led.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_misc.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_sys.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_serial.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_dma.h)(0x60C08951)
+I (..\application\app\app.h)(0x61DE6AEC)
+I (..\application\rtt\SEGGER_RTT.h)(0x606EF8BE)
+I (..\application\rtt\SEGGER_RTT_Conf.h)(0x606EF8BE)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x5F51128E)
+F (..\driver\src\pt32z192xx_serial.c)(0x61DFC677)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/pt32z192xx_serial.o -MD)
+I (..\common\pt32z192xx.h)(0x61074E4F)
+I (..\cmsis\core_cm3.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_compiler.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_armclang.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (..\common\system_pt32z192xx.h)(0x5F312747)
+F (..\driver\src\pt32z192xx_dma.c)(0x61E1191D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/pt32z192xx_dma.o -MD)
+I (..\driver\inc\pt32z192xx_dma.h)(0x60C08951)
+I (..\common\pt32z192xx.h)(0x61074E4F)
+I (..\cmsis\core_cm3.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_compiler.h)(0x5ED9CE8D)
+I (..\cmsis\cmsis_armclang.h)(0x5ED9CE8D)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5E0CC2EC)
+I (d:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5E0CC318)
+I (..\common\system_pt32z192xx.h)(0x5F312747)
+I (..\common\pt32z192xx_conf.h)(0x61E1173F)
+I (..\driver\inc\pt32z192xx_adc.h)(0x5F463A00)
+I (..\driver\inc\pt32z192xx_ana.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_beep.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_flash.h)(0x60C844A0)
+I (..\driver\inc\pt32z192xx_gpio.h)(0x60A36139)
+I (..\driver\inc\pt32z192xx_cmp_opa.h)(0x5F3100D5)
+I (..\driver\inc\pt32z192xx_pwr.h)(0x60F8D280)
+I (..\driver\inc\pt32z192xx_spi.h)(0x60C1E40D)
+I (..\driver\inc\pt32z192xx_syscfg.h)(0x5ED9CE8E)
+I (..\driver\inc\pt32z192xx_tim.h)(0x607E8492)
+I (..\driver\inc\pt32z192xx_pwm.h)(0x5F58AD55)
+I (..\driver\inc\pt32z192xx_uart.h)(0x60C08E3A)
+I (..\driver\inc\pt32z192xx_wdg.h)(0x5F58AC9D)
+I (..\driver\inc\pt32z192xx_led.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_misc.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_sys.h)(0x5F3100D6)
+I (..\driver\inc\pt32z192xx_serial.h)(0x5F3100D6)
+F (..\application\rtt\SEGGER_RTT.c)(0x606EF8BE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/segger_rtt.o -MD)
+I (..\application\rtt\SEGGER_RTT.h)(0x606EF8BE)
+I (..\application\rtt\SEGGER_RTT_Conf.h)(0x606EF8BE)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+F (..\application\rtt\SEGGER_RTT_printf.c)(0x606EF8BE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/segger_rtt_printf.o -MD)
+I (..\application\rtt\SEGGER_RTT.h)(0x606EF8BE)
+I (..\application\rtt\SEGGER_RTT_Conf.h)(0x606EF8BE)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x5F51128E)
+F (..\application\HardFaultHandlerMDK\SEGGER_HardFaultHandler.c)(0x61C06197)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../source -I ../driver/inc -I ../common -I ../cmsis -I ../application/rtt-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DARMCM3 -DPT32Z192-o ./output/ramcode/segger_hardfaulthandler.o -MD)
+F (..\application\HardFaultHandlerMDK\HardFaultHandler.S)(0x5B5D7BFC)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto -c-mlittle-endian -gdwarf-3 -D__MICROLIB -I ../common-Id:/Keil_v5/Arm/Packs/ARM/CMSIS/5.7.0/Device/ARM/ARMCM3/Include-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION=532 -DARMCM3-o ./output/ramcode/hardfaulthandler.o)
