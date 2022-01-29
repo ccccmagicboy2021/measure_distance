@@ -2,5 +2,7 @@
 2. USART：TX - PA9，TX - PA10，波特率115200
 3. SysTick：时钟滴答配置为1MS
 4. KEY1按下后运行跑分，完成后通过串口打印出跑分结果
+flashcode: CoreMark 1.0 : 311.332503 / Keil AC6 v6.14.1 -Ofast / STACK
+ramcode: CoreMark 1.0 : 226.933187 / Keil AC6 v6.14.1 -Ofast / STACK
 
 

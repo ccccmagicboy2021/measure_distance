@@ -68,14 +68,16 @@ typedef clock_t CORE_TICKS;
 */
 #ifndef COMPILER_VERSION
 #ifdef __GNUC__
-#define COMPILER_VERSION "GCC"__VERSION__
+//#define COMPILER_VERSION "GCC"__VERSION__
+#define COMPILER_VERSION "Keil AC6 v6.14.1"
 #else
 #define COMPILER_VERSION "Please put compiler version here (e.g. gcc 4.1)"
 #endif
 #endif
 #ifndef COMPILER_FLAGS
 // #define COMPILER_FLAGS FLAGS_STR /* "Please put compiler flags here (e.g. -o3)" */
-#define COMPILER_FLAGS "-Ohs -no_size_constraints"
+//#define COMPILER_FLAGS "-Ohs -no_size_constraints"
+#define COMPILER_FLAGS "-Ofast"
 #endif
 #ifndef MEM_LOCATION
 #define MEM_LOCATION "STACK"
