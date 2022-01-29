@@ -75,7 +75,7 @@
       <OPTFL>
         <tvExp>1</tvExp>
         <tvExpOptDlg>0</tvExpOptDlg>
-        <IsCurrentTarget>1</IsCurrentTarget>
+        <IsCurrentTarget>0</IsCurrentTarget>
       </OPTFL>
       <CpuCode>255</CpuCode>
       <DebugOpt>
@@ -276,7 +276,7 @@
       <OPTFL>
         <tvExp>1</tvExp>
         <tvExpOptDlg>0</tvExpOptDlg>
-        <IsCurrentTarget>0</IsCurrentTarget>
+        <IsCurrentTarget>1</IsCurrentTarget>
       </OPTFL>
       <CpuCode>255</CpuCode>
       <DebugOpt>
@@ -341,7 +341,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>CMSIS_AGDI_V8M</Key>
-          <Name>-X"CMSIS-DAP AISINOCHIP V1.0" -UCMSIS-DAP AISINOCHIP V1.0 -O239 -S0 -C0 -P00000000 -N00("ARM CoreSight SW-DP") -D00(1BE12AEB) -L00(0) -TO65554 -TC10000000 -TT10000000 -TP20 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO15 -FD20000000 -FC1000 -FN1 -FF0ACM32F4_eflash.FLM -FS00 -FL080000 -FP0($$Device:ACM32F403KEU7$Flash\ACM32F4_eflash.FLM)</Name>
+          <Name>-X"CMSIS-DAP AISINOCHIP V1.0" -UCMSIS-DAP AISINOCHIP V1.0 -O239 -S8 -C0 -P00000000 -N00("ARM CoreSight SW-DP") -D00(1BE12AEB) -L00(0) -TO65554 -TC10000000 -TT10000000 -TP20 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO15 -FD20000000 -FC1000 -FN1 -FF0ACM32F4_eflash.FLM -FS00 -FL080000 -FP0($$Device:ACM32F403KEU7$Flash\ACM32F4_eflash.FLM)</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -437,7 +437,7 @@
 
   <Group>
     <GroupName>common</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -889,7 +889,7 @@
       <GroupNumber>6</GroupNumber>
       <FileNumber>38</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\application\coremark\core_main.c</PathWithFileName>

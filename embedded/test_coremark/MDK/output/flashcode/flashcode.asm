@@ -3,7 +3,7 @@
 
 ** ELF Header Information
 
-    File Name: d:\cccc2020\CODE\workspace\bfsk_acm32\embedded\test_coremark\MDK\output\flashcode\flashcode.axf
+    File Name: D:\cccc2020\CODE\workspace\bfsk_acm32\embedded\test_coremark\MDK\output\flashcode\flashcode.axf
 
     Machine class: ELFCLASS32 (32-bit)
     Data encoding: ELFDATA2LSB (Little endian)
@@ -31,8 +31,8 @@
     Program header entries: 1
     Section header entries: 16
 
-    Program header offset: 183776 (0x0002cde0)
-    Section header offset: 183808 (0x0002ce00)
+    Program header offset: 183696 (0x0002cd90)
+    Section header offset: 183728 (0x0002cdb0)
 
     Section header string table index: 15
 
@@ -8618,13 +8618,13 @@
         0x00005880:    000a        ..      DCW    10
     .L.str.4
         0x00005882:    614a        Ja      DCW    24906
-        0x00005884:    3832206e    n 28    DCD    942809198
+        0x00005884:    3932206e    n 29    DCD    959586414
         0x00005888:    32303220     202    DCD    842019360
         0x0000588c:    0032        2.      DCW    50
     .L.str.5
-        0x0000588e:    3831        18      DCW    14385
-        0x00005890:    3a30313a    :10:    DCD    976236858
-        0x00005894:    3733        37      DCW    14131
+        0x0000588e:    3531        15      DCW    13617
+        0x00005890:    3a35323a    :25:    DCD    976564794
+        0x00005894:    3535        55      DCW    13621
         0x00005896:    00          .       DCB    0
     .L.str.2
         0x00005897:    1b          .       DCB    27
@@ -9008,7 +9008,7 @@
 
 
 ** Section #7 '.debug_line' (SHT_PROGBITS)
-    Size   : 31623 bytes
+    Size   : 31543 bytes
 
 
 ** Section #8 '.debug_loc' (SHT_PROGBITS)

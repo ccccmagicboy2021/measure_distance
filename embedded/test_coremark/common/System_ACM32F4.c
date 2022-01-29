@@ -122,7 +122,7 @@ void System_Core_Config(void)
 
     /* Configure the Vector Table location add offset address ------------------*/
 #ifdef VECT_TAB_SRAM
-    SCB->VTOR = SRAM_BASE | VECT_TAB_OFFSET;    /* Vector Table Relocation in Internal SRAM */
+    //SCB->VTOR = SRAM_BASE | VECT_TAB_OFFSET;    /* Vector Table Relocation in Internal SRAM */
 #else
     SCB->VTOR = EFLASH_BASE | VECT_TAB_OFFSET;  /* Vector Table Relocation in Internal FLASH */
 #endif
