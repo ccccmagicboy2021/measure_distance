@@ -1,0 +1,5 @@
+1. 上电后循环启动计算，usart3输出结果：
+flashcode: CoreMark 1.0 : 457.578646 / Keil AC6 v6.14.1 -Ofast / STACK
+ramcode: CoreMark 1.0 : 215.811812 / Keil AC6 v6.14.1 -Ofast / STACK
+
+

@@ -1,0 +1,1546 @@
+Component: ARM Compiler 6.14.1 Tool: armlink [5db06d00]
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
+    ../clib/microlib/printf/stubs.s          0x00000000   Number         0  printfstubs.o ABSOLUTE
+    ../clib/microlib/stdio/putchar.c         0x00000000   Number         0  putchar.o ABSOLUTE
+    ../clib/microlib/stdio/puts.c            0x00000000   Number         0  puts.o ABSOLUTE
+    ../clib/microlib/stdio/puts.c            0x00000000   Number         0  puts_e.o ABSOLUTE
+    ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stdout.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    ../clib/microlib/string/strlen.c         0x00000000   Number         0  strlen.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpcmp.c                0x00000000   Number         0  dcmple.o ABSOLUTE
+    ../fplib/microlib/fpcmp.c                0x00000000   Number         0  dcmpge.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixui.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dfltui.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    ..\application\HardFaultHandlerMDK\HardFaultHandler.S 0x00000000   Number         0  hardfaulthandler.o ABSOLUTE
+    SEGGER_HardFaultHandler.c                0x00000000   Number         0  segger_hardfaulthandler.o ABSOLUTE
+    SEGGER_RTT.c                             0x00000000   Number         0  segger_rtt.o ABSOLUTE
+    SEGGER_RTT_printf.c                      0x00000000   Number         0  segger_rtt_printf.o ABSOLUTE
+    app.c                                    0x00000000   Number         0  app.o ABSOLUTE
+    cdrcmple.s                               0x00000000   Number         0  cdrcmple.o ABSOLUTE
+    core_list_join.c                         0x00000000   Number         0  core_list_join.o ABSOLUTE
+    core_main.c                              0x00000000   Number         0  core_main.o ABSOLUTE
+    core_matrix.c                            0x00000000   Number         0  core_matrix.o ABSOLUTE
+    core_portme.c                            0x00000000   Number         0  core_portme.o ABSOLUTE
+    core_state.c                             0x00000000   Number         0  core_state.o ABSOLUTE
+    core_util.c                              0x00000000   Number         0  core_util.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    hc32f46x_adc.c                           0x00000000   Number         0  hc32f46x_adc.o ABSOLUTE
+    hc32f46x_aes.c                           0x00000000   Number         0  hc32f46x_aes.o ABSOLUTE
+    hc32f46x_can.c                           0x00000000   Number         0  hc32f46x_can.o ABSOLUTE
+    hc32f46x_clk.c                           0x00000000   Number         0  hc32f46x_clk.o ABSOLUTE
+    hc32f46x_cmp.c                           0x00000000   Number         0  hc32f46x_cmp.o ABSOLUTE
+    hc32f46x_crc.c                           0x00000000   Number         0  hc32f46x_crc.o ABSOLUTE
+    hc32f46x_dcu.c                           0x00000000   Number         0  hc32f46x_dcu.o ABSOLUTE
+    hc32f46x_dmac.c                          0x00000000   Number         0  hc32f46x_dmac.o ABSOLUTE
+    hc32f46x_efm.c                           0x00000000   Number         0  hc32f46x_efm.o ABSOLUTE
+    hc32f46x_emb.c                           0x00000000   Number         0  hc32f46x_emb.o ABSOLUTE
+    hc32f46x_event_port.c                    0x00000000   Number         0  hc32f46x_event_port.o ABSOLUTE
+    hc32f46x_exint_nmi_swi.c                 0x00000000   Number         0  hc32f46x_exint_nmi_swi.o ABSOLUTE
+    hc32f46x_gpio.c                          0x00000000   Number         0  hc32f46x_gpio.o ABSOLUTE
+    hc32f46x_hash.c                          0x00000000   Number         0  hc32f46x_hash.o ABSOLUTE
+    hc32f46x_i2c.c                           0x00000000   Number         0  hc32f46x_i2c.o ABSOLUTE
+    hc32f46x_i2s.c                           0x00000000   Number         0  hc32f46x_i2s.o ABSOLUTE
+    hc32f46x_icg.c                           0x00000000   Number         0  hc32f46x_icg.o ABSOLUTE
+    hc32f46x_interrupts.c                    0x00000000   Number         0  hc32f46x_interrupts.o ABSOLUTE
+    hc32f46x_keyscan.c                       0x00000000   Number         0  hc32f46x_keyscan.o ABSOLUTE
+    hc32f46x_mpu.c                           0x00000000   Number         0  hc32f46x_mpu.o ABSOLUTE
+    hc32f46x_ots.c                           0x00000000   Number         0  hc32f46x_ots.o ABSOLUTE
+    hc32f46x_pwc.c                           0x00000000   Number         0  hc32f46x_pwc.o ABSOLUTE
+    hc32f46x_qspi.c                          0x00000000   Number         0  hc32f46x_qspi.o ABSOLUTE
+    hc32f46x_rmu.c                           0x00000000   Number         0  hc32f46x_rmu.o ABSOLUTE
+    hc32f46x_rtc.c                           0x00000000   Number         0  hc32f46x_rtc.o ABSOLUTE
+    hc32f46x_sdioc.c                         0x00000000   Number         0  hc32f46x_sdioc.o ABSOLUTE
+    hc32f46x_spi.c                           0x00000000   Number         0  hc32f46x_spi.o ABSOLUTE
+    hc32f46x_sram.c                          0x00000000   Number         0  hc32f46x_sram.o ABSOLUTE
+    hc32f46x_swdt.c                          0x00000000   Number         0  hc32f46x_swdt.o ABSOLUTE
+    hc32f46x_timer0.c                        0x00000000   Number         0  hc32f46x_timer0.o ABSOLUTE
+    hc32f46x_timer4_cnt.c                    0x00000000   Number         0  hc32f46x_timer4_cnt.o ABSOLUTE
+    hc32f46x_timer4_emb.c                    0x00000000   Number         0  hc32f46x_timer4_emb.o ABSOLUTE
+    hc32f46x_timer4_oco.c                    0x00000000   Number         0  hc32f46x_timer4_oco.o ABSOLUTE
+    hc32f46x_timer4_pwm.c                    0x00000000   Number         0  hc32f46x_timer4_pwm.o ABSOLUTE
+    hc32f46x_timer4_sevt.c                   0x00000000   Number         0  hc32f46x_timer4_sevt.o ABSOLUTE
+    hc32f46x_timer6.c                        0x00000000   Number         0  hc32f46x_timer6.o ABSOLUTE
+    hc32f46x_timera.c                        0x00000000   Number         0  hc32f46x_timera.o ABSOLUTE
+    hc32f46x_trng.c                          0x00000000   Number         0  hc32f46x_trng.o ABSOLUTE
+    hc32f46x_usart.c                         0x00000000   Number         0  hc32f46x_usart.o ABSOLUTE
+    hc32f46x_utility.c                       0x00000000   Number         0  hc32f46x_utility.o ABSOLUTE
+    hc32f46x_wdt.c                           0x00000000   Number         0  hc32f46x_wdt.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    myclk.c                                  0x00000000   Number         0  myclk.o ABSOLUTE
+    myusart.c                                0x00000000   Number         0  myusart.o ABSOLUTE
+    startup_hc32f46x.s                       0x00000000   Number         0  startup_hc32f46x.o ABSOLUTE
+    system_hc32f46x.c                        0x00000000   Number         0  system_hc32f46x.o ABSOLUTE
+    RESET                                    0x20000000   Section      640  startup_hc32f46x.o(RESET)
+    .ARM.Collect$$$$00000000                 0x20000280   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x20000280   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x20000284   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x20000288   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x20000288   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x20000288   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    __lit__00000000                          0x20000290   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .ARM.Collect$$$$0000000D                 0x20000290   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x20000290   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x20000290   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    $v0                                      0x20000294   Number         0  startup_hc32f46x.o(.text)
+    .text                                    0x20000294   Section       92  startup_hc32f46x.o(.text)
+    .text                                    0x200002f0   Section        0  uldiv.o(.text)
+    .text                                    0x20000352   Section        0  memcpya.o(.text)
+    .text                                    0x20000376   Section        0  memseta.o(.text)
+    .text                                    0x2000039a   Section        0  dmul.o(.text)
+    .text                                    0x2000047e   Section        0  ddiv.o(.text)
+    .text                                    0x2000055c   Section        0  dcmple.o(.text)
+    .text                                    0x20000592   Section        0  dcmpge.o(.text)
+    .text                                    0x200005c8   Section        0  dfltui.o(.text)
+    .text                                    0x200005e2   Section        0  dfixui.o(.text)
+    .text                                    0x20000614   Section        0  uidiv.o(.text)
+    .text                                    0x20000640   Section        0  llshl.o(.text)
+    .text                                    0x2000065e   Section        0  llushr.o(.text)
+    .text                                    0x2000067e   Section        0  iusefp.o(.text)
+    .text                                    0x2000067e   Section        0  depilogue.o(.text)
+    .text                                    0x20000738   Section        0  dadd.o(.text)
+    .text                                    0x20000886   Section        0  dfixul.o(.text)
+    .text                                    0x200008b8   Section       48  cdrcmple.o(.text)
+    .text                                    0x200008e8   Section       36  init.o(.text)
+    .text                                    0x2000090c   Section        0  llsshr.o(.text)
+    [Anonymous Symbol]                       0x20000930   Section        0  hc32f46x_interrupts.o(.text.BusFault_Handler)
+    [Anonymous Symbol]                       0x20000938   Section        0  hc32f46x_clk.o(.text.CLK_GetClockFreq)
+    [Anonymous Symbol]                       0x20000a18   Section        0  hc32f46x_clk.o(.text.CLK_GetFlagStatus)
+    [Anonymous Symbol]                       0x20000a5c   Section        0  hc32f46x_clk.o(.text.CLK_MpllCmd)
+    [Anonymous Symbol]                       0x20000b20   Section        0  hc32f46x_clk.o(.text.CLK_MpllConfig)
+    [Anonymous Symbol]                       0x20000bc0   Section        0  hc32f46x_clk.o(.text.CLK_SetPllSource)
+    [Anonymous Symbol]                       0x20000bf8   Section        0  hc32f46x_clk.o(.text.CLK_SetSysClkSource)
+    [Anonymous Symbol]                       0x20000d40   Section        0  hc32f46x_clk.o(.text.CLK_SysClkConfig)
+    [Anonymous Symbol]                       0x20000e98   Section        0  hc32f46x_clk.o(.text.CLK_XtalCmd)
+    [Anonymous Symbol]                       0x20000f7c   Section        0  hc32f46x_clk.o(.text.CLK_XtalConfig)
+    [Anonymous Symbol]                       0x20000fe0   Section        0  core_main.o(.text.CoreMark)
+    [Anonymous Symbol]                       0x2000174c   Section        0  hc32f46x_utility.o(.text.Ddl_Delay1ms)
+    [Anonymous Symbol]                       0x200018b4   Section        0  hc32f46x_interrupts.o(.text.DebugMon_Handler)
+    [Anonymous Symbol]                       0x200018bc   Section        0  hc32f46x_utility.o(.text.DebugOutput)
+    [Anonymous Symbol]                       0x200018e8   Section        0  hc32f46x_efm.o(.text.EFM_FlashCmd)
+    [Anonymous Symbol]                       0x20001900   Section        0  hc32f46x_efm.o(.text.EFM_GetFlagStatus)
+    [Anonymous Symbol]                       0x20001914   Section        0  hc32f46x_efm.o(.text.EFM_InstructionCacheCmd)
+    [Anonymous Symbol]                       0x20001930   Section        0  hc32f46x_efm.o(.text.EFM_Lock)
+    [Anonymous Symbol]                       0x20001948   Section        0  hc32f46x_efm.o(.text.EFM_SetLatency)
+    [Anonymous Symbol]                       0x2000195c   Section        0  hc32f46x_efm.o(.text.EFM_Unlock)
+    [Anonymous Symbol]                       0x20001974   Section        0  segger_hardfaulthandler.o(.text.HardFaultHandler)
+    [Anonymous Symbol]                       0x20001a1c   Section        0  hc32f46x_interrupts.o(.text.IRQ000_Handler)
+    [Anonymous Symbol]                       0x20001a30   Section        0  hc32f46x_interrupts.o(.text.IRQ001_Handler)
+    [Anonymous Symbol]                       0x20001a44   Section        0  hc32f46x_interrupts.o(.text.IRQ002_Handler)
+    [Anonymous Symbol]                       0x20001a58   Section        0  hc32f46x_interrupts.o(.text.IRQ003_Handler)
+    [Anonymous Symbol]                       0x20001a6c   Section        0  hc32f46x_interrupts.o(.text.IRQ004_Handler)
+    [Anonymous Symbol]                       0x20001a80   Section        0  hc32f46x_interrupts.o(.text.IRQ005_Handler)
+    [Anonymous Symbol]                       0x20001a94   Section        0  hc32f46x_interrupts.o(.text.IRQ006_Handler)
+    [Anonymous Symbol]                       0x20001aa8   Section        0  hc32f46x_interrupts.o(.text.IRQ007_Handler)
+    [Anonymous Symbol]                       0x20001abc   Section        0  hc32f46x_interrupts.o(.text.IRQ008_Handler)
+    [Anonymous Symbol]                       0x20001ad0   Section        0  hc32f46x_interrupts.o(.text.IRQ009_Handler)
+    [Anonymous Symbol]                       0x20001ae4   Section        0  hc32f46x_interrupts.o(.text.IRQ010_Handler)
+    [Anonymous Symbol]                       0x20001af8   Section        0  hc32f46x_interrupts.o(.text.IRQ011_Handler)
+    [Anonymous Symbol]                       0x20001b0c   Section        0  hc32f46x_interrupts.o(.text.IRQ012_Handler)
+    [Anonymous Symbol]                       0x20001b20   Section        0  hc32f46x_interrupts.o(.text.IRQ013_Handler)
+    [Anonymous Symbol]                       0x20001b34   Section        0  hc32f46x_interrupts.o(.text.IRQ014_Handler)
+    [Anonymous Symbol]                       0x20001b48   Section        0  hc32f46x_interrupts.o(.text.IRQ015_Handler)
+    [Anonymous Symbol]                       0x20001b5c   Section        0  hc32f46x_interrupts.o(.text.IRQ016_Handler)
+    [Anonymous Symbol]                       0x20001b70   Section        0  hc32f46x_interrupts.o(.text.IRQ017_Handler)
+    [Anonymous Symbol]                       0x20001b84   Section        0  hc32f46x_interrupts.o(.text.IRQ018_Handler)
+    [Anonymous Symbol]                       0x20001b98   Section        0  hc32f46x_interrupts.o(.text.IRQ019_Handler)
+    [Anonymous Symbol]                       0x20001bac   Section        0  hc32f46x_interrupts.o(.text.IRQ020_Handler)
+    [Anonymous Symbol]                       0x20001bc0   Section        0  hc32f46x_interrupts.o(.text.IRQ021_Handler)
+    [Anonymous Symbol]                       0x20001bd4   Section        0  hc32f46x_interrupts.o(.text.IRQ022_Handler)
+    [Anonymous Symbol]                       0x20001be8   Section        0  hc32f46x_interrupts.o(.text.IRQ023_Handler)
+    [Anonymous Symbol]                       0x20001bfc   Section        0  hc32f46x_interrupts.o(.text.IRQ024_Handler)
+    [Anonymous Symbol]                       0x20001c10   Section        0  hc32f46x_interrupts.o(.text.IRQ025_Handler)
+    [Anonymous Symbol]                       0x20001c24   Section        0  hc32f46x_interrupts.o(.text.IRQ026_Handler)
+    [Anonymous Symbol]                       0x20001c38   Section        0  hc32f46x_interrupts.o(.text.IRQ027_Handler)
+    [Anonymous Symbol]                       0x20001c4c   Section        0  hc32f46x_interrupts.o(.text.IRQ028_Handler)
+    [Anonymous Symbol]                       0x20001c60   Section        0  hc32f46x_interrupts.o(.text.IRQ029_Handler)
+    [Anonymous Symbol]                       0x20001c74   Section        0  hc32f46x_interrupts.o(.text.IRQ030_Handler)
+    [Anonymous Symbol]                       0x20001c88   Section        0  hc32f46x_interrupts.o(.text.IRQ031_Handler)
+    [Anonymous Symbol]                       0x20001c9c   Section        0  hc32f46x_interrupts.o(.text.IRQ032_Handler)
+    [Anonymous Symbol]                       0x20001cb0   Section        0  hc32f46x_interrupts.o(.text.IRQ033_Handler)
+    [Anonymous Symbol]                       0x20001cc4   Section        0  hc32f46x_interrupts.o(.text.IRQ034_Handler)
+    [Anonymous Symbol]                       0x20001cd8   Section        0  hc32f46x_interrupts.o(.text.IRQ035_Handler)
+    [Anonymous Symbol]                       0x20001cec   Section        0  hc32f46x_interrupts.o(.text.IRQ036_Handler)
+    [Anonymous Symbol]                       0x20001d00   Section        0  hc32f46x_interrupts.o(.text.IRQ037_Handler)
+    [Anonymous Symbol]                       0x20001d14   Section        0  hc32f46x_interrupts.o(.text.IRQ038_Handler)
+    [Anonymous Symbol]                       0x20001d28   Section        0  hc32f46x_interrupts.o(.text.IRQ039_Handler)
+    [Anonymous Symbol]                       0x20001d3c   Section        0  hc32f46x_interrupts.o(.text.IRQ040_Handler)
+    [Anonymous Symbol]                       0x20001d50   Section        0  hc32f46x_interrupts.o(.text.IRQ041_Handler)
+    [Anonymous Symbol]                       0x20001d64   Section        0  hc32f46x_interrupts.o(.text.IRQ042_Handler)
+    [Anonymous Symbol]                       0x20001d78   Section        0  hc32f46x_interrupts.o(.text.IRQ043_Handler)
+    [Anonymous Symbol]                       0x20001d8c   Section        0  hc32f46x_interrupts.o(.text.IRQ044_Handler)
+    [Anonymous Symbol]                       0x20001da0   Section        0  hc32f46x_interrupts.o(.text.IRQ045_Handler)
+    [Anonymous Symbol]                       0x20001db4   Section        0  hc32f46x_interrupts.o(.text.IRQ046_Handler)
+    [Anonymous Symbol]                       0x20001dc8   Section        0  hc32f46x_interrupts.o(.text.IRQ047_Handler)
+    [Anonymous Symbol]                       0x20001ddc   Section        0  hc32f46x_interrupts.o(.text.IRQ048_Handler)
+    [Anonymous Symbol]                       0x20001df0   Section        0  hc32f46x_interrupts.o(.text.IRQ049_Handler)
+    [Anonymous Symbol]                       0x20001e04   Section        0  hc32f46x_interrupts.o(.text.IRQ050_Handler)
+    [Anonymous Symbol]                       0x20001e18   Section        0  hc32f46x_interrupts.o(.text.IRQ051_Handler)
+    [Anonymous Symbol]                       0x20001e2c   Section        0  hc32f46x_interrupts.o(.text.IRQ052_Handler)
+    [Anonymous Symbol]                       0x20001e40   Section        0  hc32f46x_interrupts.o(.text.IRQ053_Handler)
+    [Anonymous Symbol]                       0x20001e54   Section        0  hc32f46x_interrupts.o(.text.IRQ054_Handler)
+    [Anonymous Symbol]                       0x20001e68   Section        0  hc32f46x_interrupts.o(.text.IRQ055_Handler)
+    [Anonymous Symbol]                       0x20001e7c   Section        0  hc32f46x_interrupts.o(.text.IRQ056_Handler)
+    [Anonymous Symbol]                       0x20001e90   Section        0  hc32f46x_interrupts.o(.text.IRQ057_Handler)
+    [Anonymous Symbol]                       0x20001ea4   Section        0  hc32f46x_interrupts.o(.text.IRQ058_Handler)
+    [Anonymous Symbol]                       0x20001eb8   Section        0  hc32f46x_interrupts.o(.text.IRQ059_Handler)
+    [Anonymous Symbol]                       0x20001ecc   Section        0  hc32f46x_interrupts.o(.text.IRQ060_Handler)
+    [Anonymous Symbol]                       0x20001ee0   Section        0  hc32f46x_interrupts.o(.text.IRQ061_Handler)
+    [Anonymous Symbol]                       0x20001ef4   Section        0  hc32f46x_interrupts.o(.text.IRQ062_Handler)
+    [Anonymous Symbol]                       0x20001f08   Section        0  hc32f46x_interrupts.o(.text.IRQ063_Handler)
+    [Anonymous Symbol]                       0x20001f1c   Section        0  hc32f46x_interrupts.o(.text.IRQ064_Handler)
+    [Anonymous Symbol]                       0x20001f30   Section        0  hc32f46x_interrupts.o(.text.IRQ065_Handler)
+    [Anonymous Symbol]                       0x20001f44   Section        0  hc32f46x_interrupts.o(.text.IRQ066_Handler)
+    [Anonymous Symbol]                       0x20001f58   Section        0  hc32f46x_interrupts.o(.text.IRQ067_Handler)
+    [Anonymous Symbol]                       0x20001f6c   Section        0  hc32f46x_interrupts.o(.text.IRQ068_Handler)
+    [Anonymous Symbol]                       0x20001f80   Section        0  hc32f46x_interrupts.o(.text.IRQ069_Handler)
+    [Anonymous Symbol]                       0x20001f94   Section        0  hc32f46x_interrupts.o(.text.IRQ070_Handler)
+    [Anonymous Symbol]                       0x20001fa8   Section        0  hc32f46x_interrupts.o(.text.IRQ071_Handler)
+    [Anonymous Symbol]                       0x20001fbc   Section        0  hc32f46x_interrupts.o(.text.IRQ072_Handler)
+    [Anonymous Symbol]                       0x20001fd0   Section        0  hc32f46x_interrupts.o(.text.IRQ073_Handler)
+    [Anonymous Symbol]                       0x20001fe4   Section        0  hc32f46x_interrupts.o(.text.IRQ074_Handler)
+    [Anonymous Symbol]                       0x20001ff8   Section        0  hc32f46x_interrupts.o(.text.IRQ075_Handler)
+    [Anonymous Symbol]                       0x2000200c   Section        0  hc32f46x_interrupts.o(.text.IRQ076_Handler)
+    [Anonymous Symbol]                       0x20002020   Section        0  hc32f46x_interrupts.o(.text.IRQ077_Handler)
+    [Anonymous Symbol]                       0x20002034   Section        0  hc32f46x_interrupts.o(.text.IRQ078_Handler)
+    [Anonymous Symbol]                       0x20002048   Section        0  hc32f46x_interrupts.o(.text.IRQ079_Handler)
+    [Anonymous Symbol]                       0x2000205c   Section        0  hc32f46x_interrupts.o(.text.IRQ080_Handler)
+    [Anonymous Symbol]                       0x20002070   Section        0  hc32f46x_interrupts.o(.text.IRQ081_Handler)
+    [Anonymous Symbol]                       0x20002084   Section        0  hc32f46x_interrupts.o(.text.IRQ082_Handler)
+    [Anonymous Symbol]                       0x20002098   Section        0  hc32f46x_interrupts.o(.text.IRQ083_Handler)
+    [Anonymous Symbol]                       0x200020ac   Section        0  hc32f46x_interrupts.o(.text.IRQ084_Handler)
+    [Anonymous Symbol]                       0x200020c0   Section        0  hc32f46x_interrupts.o(.text.IRQ085_Handler)
+    [Anonymous Symbol]                       0x200020d4   Section        0  hc32f46x_interrupts.o(.text.IRQ086_Handler)
+    [Anonymous Symbol]                       0x200020e8   Section        0  hc32f46x_interrupts.o(.text.IRQ087_Handler)
+    [Anonymous Symbol]                       0x200020fc   Section        0  hc32f46x_interrupts.o(.text.IRQ088_Handler)
+    [Anonymous Symbol]                       0x20002110   Section        0  hc32f46x_interrupts.o(.text.IRQ089_Handler)
+    [Anonymous Symbol]                       0x20002124   Section        0  hc32f46x_interrupts.o(.text.IRQ090_Handler)
+    [Anonymous Symbol]                       0x20002138   Section        0  hc32f46x_interrupts.o(.text.IRQ091_Handler)
+    [Anonymous Symbol]                       0x2000214c   Section        0  hc32f46x_interrupts.o(.text.IRQ092_Handler)
+    [Anonymous Symbol]                       0x20002160   Section        0  hc32f46x_interrupts.o(.text.IRQ093_Handler)
+    [Anonymous Symbol]                       0x20002174   Section        0  hc32f46x_interrupts.o(.text.IRQ094_Handler)
+    [Anonymous Symbol]                       0x20002188   Section        0  hc32f46x_interrupts.o(.text.IRQ095_Handler)
+    [Anonymous Symbol]                       0x2000219c   Section        0  hc32f46x_interrupts.o(.text.IRQ096_Handler)
+    [Anonymous Symbol]                       0x200021b0   Section        0  hc32f46x_interrupts.o(.text.IRQ097_Handler)
+    [Anonymous Symbol]                       0x200021c4   Section        0  hc32f46x_interrupts.o(.text.IRQ098_Handler)
+    [Anonymous Symbol]                       0x200021d8   Section        0  hc32f46x_interrupts.o(.text.IRQ099_Handler)
+    [Anonymous Symbol]                       0x200021ec   Section        0  hc32f46x_interrupts.o(.text.IRQ100_Handler)
+    [Anonymous Symbol]                       0x20002200   Section        0  hc32f46x_interrupts.o(.text.IRQ101_Handler)
+    [Anonymous Symbol]                       0x20002214   Section        0  hc32f46x_interrupts.o(.text.IRQ102_Handler)
+    [Anonymous Symbol]                       0x20002228   Section        0  hc32f46x_interrupts.o(.text.IRQ103_Handler)
+    [Anonymous Symbol]                       0x2000223c   Section        0  hc32f46x_interrupts.o(.text.IRQ104_Handler)
+    [Anonymous Symbol]                       0x20002250   Section        0  hc32f46x_interrupts.o(.text.IRQ105_Handler)
+    [Anonymous Symbol]                       0x20002264   Section        0  hc32f46x_interrupts.o(.text.IRQ106_Handler)
+    [Anonymous Symbol]                       0x20002278   Section        0  hc32f46x_interrupts.o(.text.IRQ107_Handler)
+    [Anonymous Symbol]                       0x2000228c   Section        0  hc32f46x_interrupts.o(.text.IRQ108_Handler)
+    [Anonymous Symbol]                       0x200022a0   Section        0  hc32f46x_interrupts.o(.text.IRQ109_Handler)
+    [Anonymous Symbol]                       0x200022b4   Section        0  hc32f46x_interrupts.o(.text.IRQ110_Handler)
+    [Anonymous Symbol]                       0x200022c8   Section        0  hc32f46x_interrupts.o(.text.IRQ111_Handler)
+    [Anonymous Symbol]                       0x200022dc   Section        0  hc32f46x_interrupts.o(.text.IRQ112_Handler)
+    [Anonymous Symbol]                       0x200022f0   Section        0  hc32f46x_interrupts.o(.text.IRQ113_Handler)
+    [Anonymous Symbol]                       0x20002304   Section        0  hc32f46x_interrupts.o(.text.IRQ114_Handler)
+    [Anonymous Symbol]                       0x20002318   Section        0  hc32f46x_interrupts.o(.text.IRQ115_Handler)
+    [Anonymous Symbol]                       0x2000232c   Section        0  hc32f46x_interrupts.o(.text.IRQ116_Handler)
+    [Anonymous Symbol]                       0x20002340   Section        0  hc32f46x_interrupts.o(.text.IRQ117_Handler)
+    [Anonymous Symbol]                       0x20002354   Section        0  hc32f46x_interrupts.o(.text.IRQ118_Handler)
+    [Anonymous Symbol]                       0x20002368   Section        0  hc32f46x_interrupts.o(.text.IRQ119_Handler)
+    [Anonymous Symbol]                       0x2000237c   Section        0  hc32f46x_interrupts.o(.text.IRQ120_Handler)
+    [Anonymous Symbol]                       0x20002390   Section        0  hc32f46x_interrupts.o(.text.IRQ121_Handler)
+    [Anonymous Symbol]                       0x200023a4   Section        0  hc32f46x_interrupts.o(.text.IRQ122_Handler)
+    [Anonymous Symbol]                       0x200023b8   Section        0  hc32f46x_interrupts.o(.text.IRQ123_Handler)
+    [Anonymous Symbol]                       0x200023cc   Section        0  hc32f46x_interrupts.o(.text.IRQ124_Handler)
+    [Anonymous Symbol]                       0x200023e0   Section        0  hc32f46x_interrupts.o(.text.IRQ125_Handler)
+    [Anonymous Symbol]                       0x200023f4   Section        0  hc32f46x_interrupts.o(.text.IRQ126_Handler)
+    [Anonymous Symbol]                       0x20002408   Section        0  hc32f46x_interrupts.o(.text.IRQ127_Handler)
+    [Anonymous Symbol]                       0x2000241c   Section        0  hc32f46x_interrupts.o(.text.IRQ128_Handler)
+    [Anonymous Symbol]                       0x20002518   Section        0  hc32f46x_interrupts.o(.text.IRQ129_Handler)
+    [Anonymous Symbol]                       0x20002894   Section        0  hc32f46x_interrupts.o(.text.IRQ130_Handler)
+    [Anonymous Symbol]                       0x20002954   Section        0  hc32f46x_interrupts.o(.text.IRQ131_Handler)
+    [Anonymous Symbol]                       0x20002b6c   Section        0  hc32f46x_interrupts.o(.text.IRQ132_Handler)
+    [Anonymous Symbol]                       0x20002c80   Section        0  hc32f46x_interrupts.o(.text.IRQ136_Handler)
+    [Anonymous Symbol]                       0x20002f2c   Section        0  hc32f46x_interrupts.o(.text.IRQ137_Handler)
+    [Anonymous Symbol]                       0x200031d4   Section        0  hc32f46x_interrupts.o(.text.IRQ138_Handler)
+    [Anonymous Symbol]                       0x2000336c   Section        0  hc32f46x_interrupts.o(.text.IRQ139_Handler)
+    [Anonymous Symbol]                       0x20003440   Section        0  hc32f46x_interrupts.o(.text.IRQ140_Handler)
+    [Anonymous Symbol]                       0x200035d8   Section        0  hc32f46x_interrupts.o(.text.IRQ141_Handler)
+    [Anonymous Symbol]                       0x200037b4   Section        0  hc32f46x_interrupts.o(.text.IRQ142_Handler)
+    [Anonymous Symbol]                       0x200038e0   Section        0  hc32f46x_interrupts.o(.text.IRQ143_Handler)
+    [Anonymous Symbol]                       0x200039cc   Section        0  hc32f46x_interrupts.o(.text.MemManage_Handler)
+    [Anonymous Symbol]                       0x200039d4   Section        0  hc32f46x_interrupts.o(.text.NMI_Handler)
+    [Anonymous Symbol]                       0x200039dc   Section        0  hc32f46x_gpio.o(.text.PORT_SetFunc)
+    [Anonymous Symbol]                       0x20003c64   Section        0  hc32f46x_pwc.o(.text.PWC_Fcg1PeriphClockCmd)
+    [Anonymous Symbol]                       0x20003c7c   Section        0  hc32f46x_interrupts.o(.text.PendSV_Handler)
+    [Anonymous Symbol]                       0x20003c84   Section        0  segger_rtt.o(.text.SEGGER_RTT_Init)
+    [Anonymous Symbol]                       0x20003d00   Section        0  segger_rtt.o(.text.SEGGER_RTT_Write)
+    [Anonymous Symbol]                       0x20003dc0   Section        0  segger_rtt.o(.text.SEGGER_RTT_WriteNoLock)
+    [Anonymous Symbol]                       0x20003f4c   Section        0  segger_rtt_printf.o(.text.SEGGER_RTT_printf)
+    [Anonymous Symbol]                       0x20003f6c   Section        0  segger_rtt_printf.o(.text.SEGGER_RTT_vprintf)
+    [Anonymous Symbol]                       0x20004618   Section        0  hc32f46x_interrupts.o(.text.SVC_Handler)
+    [Anonymous Symbol]                       0x20004620   Section        0  myclk.o(.text.SysClkIni)
+    [Anonymous Symbol]                       0x20004698   Section        0  hc32f46x_interrupts.o(.text.SysTick_Handler)
+    [Anonymous Symbol]                       0x200046a0   Section        0  hc32f46x_utility.o(.text.SysTick_IncTick)
+    [Anonymous Symbol]                       0x200046b4   Section        0  hc32f46x_utility.o(.text.SysTick_Init)
+    [Anonymous Symbol]                       0x20004704   Section        0  main.o(.text.SysTick_Init_hc32)
+    [Anonymous Symbol]                       0x20004740   Section        0  main.o(.text.SysTick_IrqHandler)
+    [Anonymous Symbol]                       0x20004754   Section        0  main.o(.text.SysTick_Stop_time)
+    [Anonymous Symbol]                       0x2000476c   Section        0  system_hc32f46x.o(.text.SystemCoreClockUpdate)
+    [Anonymous Symbol]                       0x20004810   Section        0  system_hc32f46x.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x200048c4   Section        0  hc32f46x_usart.o(.text.USART_FuncCmd)
+    [Anonymous Symbol]                       0x20004a60   Section        0  hc32f46x_usart.o(.text.USART_RecData)
+    [Anonymous Symbol]                       0x20004a68   Section        0  hc32f46x_usart.o(.text.USART_SetBaudrate)
+    [Anonymous Symbol]                       0x20004e30   Section        0  hc32f46x_usart.o(.text.USART_UART_Init)
+    [Anonymous Symbol]                       0x20004f7c   Section        0  hc32f46x_interrupts.o(.text.UsageFault_Handler)
+    UsartRxIrqCallback                       0x20004f85   Thumb Code    12  myusart.o(.text.UsartRxIrqCallback)
+    [Anonymous Symbol]                       0x20004f84   Section        0  myusart.o(.text.UsartRxIrqCallback)
+    _PrintUnsigned                           0x20004f91   Thumb Code   432  segger_rtt_printf.o(.text._PrintUnsigned)
+    [Anonymous Symbol]                       0x20004f90   Section        0  segger_rtt_printf.o(.text._PrintUnsigned)
+    _PrintUnsigned._aV2C                     0x20005130   Number         0  segger_rtt_printf.o(.text._PrintUnsigned)
+    [Anonymous Symbol]                       0x20005140   Section        0  app.o(.text.app)
+    [Anonymous Symbol]                       0x20005144   Section        0  core_list_join.o(.text.calc_func)
+    [Anonymous Symbol]                       0x200051cc   Section        0  core_util.o(.text.check_data_types)
+    [Anonymous Symbol]                       0x200051d0   Section        0  myclk.o(.text.clk_test)
+    [Anonymous Symbol]                       0x2000531c   Section        0  core_list_join.o(.text.core_bench_list)
+    [Anonymous Symbol]                       0x2000579c   Section        0  core_matrix.o(.text.core_bench_matrix)
+    [Anonymous Symbol]                       0x200057c4   Section        0  core_state.o(.text.core_bench_state)
+    [Anonymous Symbol]                       0x200059f8   Section        0  core_matrix.o(.text.core_init_matrix)
+    [Anonymous Symbol]                       0x20005c60   Section        0  core_state.o(.text.core_init_state)
+    [Anonymous Symbol]                       0x20005da8   Section        0  core_list_join.o(.text.core_list_init)
+    [Anonymous Symbol]                       0x20006168   Section        0  core_state.o(.text.core_state_transition)
+    [Anonymous Symbol]                       0x20006368   Section        0  core_util.o(.text.crc16)
+    [Anonymous Symbol]                       0x20006370   Section        0  core_util.o(.text.crcu16)
+    [Anonymous Symbol]                       0x20006488   Section        0  core_util.o(.text.crcu32)
+    [Anonymous Symbol]                       0x200064a0   Section        0  hc32f46x_interrupts.o(.text.enIrqRegistration)
+    [Anonymous Symbol]                       0x2000651c   Section        0  main.o(.text.fputc)
+    [Anonymous Symbol]                       0x2000652c   Section        0  core_util.o(.text.get_seed_32)
+    [Anonymous Symbol]                       0x20006554   Section        0  core_portme.o(.text.get_time)
+    [Anonymous Symbol]                       0x20006560   Section        0  main.o(.text.main)
+    [Anonymous Symbol]                       0x20006660   Section        0  core_matrix.o(.text.matrix_test)
+    [Anonymous Symbol]                       0x20007528   Section        0  core_portme.o(.text.portable_fini)
+    [Anonymous Symbol]                       0x20007530   Section        0  core_portme.o(.text.portable_init)
+    [Anonymous Symbol]                       0x20007538   Section        0  main.o(.text.read_uid)
+    [Anonymous Symbol]                       0x20007604   Section        0  core_portme.o(.text.start_time)
+    [Anonymous Symbol]                       0x20007618   Section        0  core_portme.o(.text.stop_time)
+    [Anonymous Symbol]                       0x20007620   Section        0  core_portme.o(.text.time_in_secs)
+    tuya_UsartRxIrqCallback                  0x20007641   Thumb Code    12  myusart.o(.text.tuya_UsartRxIrqCallback)
+    [Anonymous Symbol]                       0x20007640   Section        0  myusart.o(.text.tuya_UsartRxIrqCallback)
+    [Anonymous Symbol]                       0x2000764c   Section        0  myusart.o(.text.usart_init)
+    $v0                                      0x200077e0   Number         0  hardfaulthandler.o(OSKERNEL)
+    OSKERNEL                                 0x200077e0   Section       18  hardfaulthandler.o(OSKERNEL)
+    i.__0printf                              0x200077f4   Section        0  printfa.o(i.__0printf)
+    i.__scatterload_copy                     0x20007814   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x20007822   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x20007824   Section       14  handlers.o(i.__scatterload_zeroinit)
+    _fp_digits                               0x20007835   Thumb Code   366  printfa.o(i._fp_digits)
+    i._fp_digits                             0x20007834   Section        0  printfa.o(i._fp_digits)
+    _printf_core                             0x200079b9   Thumb Code  1744  printfa.o(i._printf_core)
+    i._printf_core                           0x200079b8   Section        0  printfa.o(i._printf_core)
+    _printf_post_padding                     0x20008095   Thumb Code    36  printfa.o(i._printf_post_padding)
+    i._printf_post_padding                   0x20008094   Section        0  printfa.o(i._printf_post_padding)
+    _printf_pre_padding                      0x200080b9   Thumb Code    46  printfa.o(i._printf_pre_padding)
+    i._printf_pre_padding                    0x200080b8   Section        0  printfa.o(i._printf_pre_padding)
+    i.putchar                                0x200080e8   Section        0  putchar.o(i.putchar)
+    i.puts                                   0x200080f4   Section        0  puts.o(i.puts)
+    .L__const.usart_init.stcInitCfg          0x20008118   Data           9  myusart.o(.rodata..L__const.usart_init.stcInitCfg)
+    errpat                                   0x20008124   Data          16  core_state.o(.rodata.errpat)
+    [Anonymous Symbol]                       0x20008124   Section        0  core_state.o(.rodata.errpat)
+    floatpat                                 0x20008134   Data          16  core_state.o(.rodata.floatpat)
+    [Anonymous Symbol]                       0x20008134   Section        0  core_state.o(.rodata.floatpat)
+    intpat                                   0x20008144   Data          16  core_state.o(.rodata.intpat)
+    [Anonymous Symbol]                       0x20008144   Section        0  core_state.o(.rodata.intpat)
+    list_known_crc                           0x20008154   Data          10  core_main.o(.rodata.list_known_crc)
+    [Anonymous Symbol]                       0x20008154   Section        0  core_main.o(.rodata.list_known_crc)
+    matrix_known_crc                         0x2000815e   Data          10  core_main.o(.rodata.matrix_known_crc)
+    [Anonymous Symbol]                       0x2000815e   Section        0  core_main.o(.rodata.matrix_known_crc)
+    scipat                                   0x20008168   Data          16  core_state.o(.rodata.scipat)
+    [Anonymous Symbol]                       0x20008168   Section        0  core_state.o(.rodata.scipat)
+    state_known_crc                          0x20008178   Data          10  core_main.o(.rodata.state_known_crc)
+    [Anonymous Symbol]                       0x20008178   Section        0  core_main.o(.rodata.state_known_crc)
+    .L.str.3                                 0x20008182   Data           5  myclk.o(.rodata.str1.1)
+    .L.str.4                                 0x20008182   Data           5  myclk.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x20008182   Section        0  myclk.o(.rodata.str1.1)
+    .L.str.1                                 0x20008187   Data           8  myclk.o(.rodata.str1.1)
+    .L.str.2                                 0x2000818f   Data           8  myclk.o(.rodata.str1.1)
+    .L__FUNCTION__.clk_test                  0x20008197   Data           9  myclk.o(.rodata.str1.1)
+    .L.str.7                                 0x200081a0   Data          23  main.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x200081a0   Section        0  main.o(.rodata.str1.1)
+    .L.str.5                                 0x200081b7   Data          50  main.o(.rodata.str1.1)
+    .L.str.2                                 0x200081e9   Data           6  main.o(.rodata.str1.1)
+    .L.str.9                                 0x200081ef   Data           9  main.o(.rodata.str1.1)
+    .L.str.8                                 0x200081f8   Data          12  main.o(.rodata.str1.1)
+    .L.str.6                                 0x20008204   Data           8  main.o(.rodata.str1.1)
+    .L.str                                   0x2000820c   Data           9  segger_rtt.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x2000820c   Section        0  segger_rtt.o(.rodata.str1.1)
+    .L.str                                   0x20008215   Data           7  core_main.o(.rodata.str1.1)
+    .L.str.14                                0x20008215   Data          23  core_main.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x20008215   Section        0  core_main.o(.rodata.str1.1)
+    .L.str.1                                 0x2000821c   Data           5  core_main.o(.rodata.str1.1)
+    .L.str.2                                 0x20008221   Data           6  core_main.o(.rodata.str1.1)
+    .L.str.13                                0x2000822c   Data          23  core_main.o(.rodata.str1.1)
+    .L.str.19                                0x20008243   Data          23  core_main.o(.rodata.str1.1)
+    .L.str.21                                0x2000825a   Data          23  core_main.o(.rodata.str1.1)
+    .L.str.17                                0x20008271   Data          23  core_main.o(.rodata.str1.1)
+    .L.str.16                                0x20008288   Data          24  core_main.o(.rodata.str1.1)
+    .L.str.12                                0x200082a0   Data          24  core_main.o(.rodata.str1.1)
+    .L.str.11                                0x200082b8   Data          24  core_main.o(.rodata.str1.1)
+    .L.str.23                                0x200082d0   Data          27  core_main.o(.rodata.str1.1)
+    .L.str.24                                0x200082eb   Data          28  core_main.o(.rodata.str1.1)
+    .L.str.26                                0x20008307   Data          28  core_main.o(.rodata.str1.1)
+    .L.str.27                                0x20008323   Data          28  core_main.o(.rodata.str1.1)
+    .L.str.25                                0x2000833f   Data          28  core_main.o(.rodata.str1.1)
+    .L.str.10                                0x2000835b   Data          48  core_main.o(.rodata.str1.1)
+    .L.str.8                                 0x2000838b   Data          47  core_main.o(.rodata.str1.1)
+    .L.str.9                                 0x200083ba   Data          49  core_main.o(.rodata.str1.1)
+    .Lstr.37                                 0x200083eb   Data          61  core_main.o(.rodata.str1.1)
+    .Lstr.40                                 0x20008428   Data          43  core_main.o(.rodata.str1.1)
+    .Lstr.39                                 0x20008453   Data          48  core_main.o(.rodata.str1.1)
+    .Lstr.34                                 0x20008483   Data          98  core_main.o(.rodata.str1.1)
+    .Lstr.36                                 0x200084e5   Data          72  core_main.o(.rodata.str1.1)
+    .L.str.18                                0x2000852d   Data          17  core_main.o(.rodata.str1.1)
+    .L.str.22                                0x2000853e   Data           6  core_main.o(.rodata.str1.1)
+    .Lstr.35                                 0x20008544   Data          16  core_main.o(.rodata.str1.1)
+    .L.str.29                                0x20008554   Data          26  core_main.o(.rodata.str1.1)
+    .L.str.20                                0x2000856e   Data           7  core_main.o(.rodata.str1.1)
+    .L.str.4                                 0x20008575   Data           9  core_state.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x20008575   Section        0  core_state.o(.rodata.str1.1)
+    .L.str.7                                 0x2000857e   Data           9  core_state.o(.rodata.str1.1)
+    .L.str.5                                 0x20008587   Data           9  core_state.o(.rodata.str1.1)
+    .L.str.6                                 0x20008590   Data           9  core_state.o(.rodata.str1.1)
+    .L.str.9                                 0x20008599   Data           9  core_state.o(.rodata.str1.1)
+    .L.str.11                                0x200085a2   Data           9  core_state.o(.rodata.str1.1)
+    .L.str                                   0x200085ab   Data           5  core_state.o(.rodata.str1.1)
+    .L.str.3                                 0x200085b0   Data           5  core_state.o(.rodata.str1.1)
+    .L.str.10                                0x200085b5   Data           9  core_state.o(.rodata.str1.1)
+    .L.str.8                                 0x200085be   Data           9  core_state.o(.rodata.str1.1)
+    .L.str.1                                 0x200085c7   Data           5  core_state.o(.rodata.str1.1)
+    .L.str.2                                 0x200085cc   Data           5  core_state.o(.rodata.str1.1)
+    .L.str.12                                0x200085d1   Data           9  core_state.o(.rodata.str1.1)
+    .L.str.15                                0x200085da   Data           9  core_state.o(.rodata.str1.1)
+    .L.str.13                                0x200085e3   Data           9  core_state.o(.rodata.str1.1)
+    .L.str.14                                0x200085ec   Data           9  core_state.o(.rodata.str1.1)
+    .data                                    0x20010000   Section        4  stdout.o(.data)
+    .L_MergedGlobals                         0x20010004   Data           8  system_hc32f46x.o(.data..L_MergedGlobals)
+    [Anonymous Symbol]                       0x20010004   Section        0  system_hc32f46x.o(.data..L_MergedGlobals)
+    .L_MergedGlobals                         0x20010018   Data           8  hc32f46x_utility.o(.bss..L_MergedGlobals)
+    m_u32TickStep                            0x20010018   Data           4  hc32f46x_utility.o(.bss..L_MergedGlobals)
+    [Anonymous Symbol]                       0x20010018   Section        0  hc32f46x_utility.o(.bss..L_MergedGlobals)
+    m_u32TickCount                           0x2001001c   Data           4  hc32f46x_utility.o(.bss..L_MergedGlobals)
+    .L_MergedGlobals                         0x20010020   Data          68  segger_hardfaulthandler.o(.bss..L_MergedGlobals)
+    _Continue                                0x20010020   Data           4  segger_hardfaulthandler.o(.bss..L_MergedGlobals)
+    [Anonymous Symbol]                       0x20010020   Section        0  segger_hardfaulthandler.o(.bss..L_MergedGlobals)
+    HardFaultRegs                            0x20010024   Data          64  segger_hardfaulthandler.o(.bss..L_MergedGlobals)
+    .L_MergedGlobals                         0x20010064   Data          17  segger_rtt.o(.bss..L_MergedGlobals)
+    _ActiveTerminal                          0x20010064   Data           1  segger_rtt.o(.bss..L_MergedGlobals)
+    [Anonymous Symbol]                       0x20010064   Section        0  segger_rtt.o(.bss..L_MergedGlobals)
+    _acDownBuffer                            0x20010065   Data          16  segger_rtt.o(.bss..L_MergedGlobals)
+    _acUpBuffer                              0x200102f4   Data        4096  segger_rtt.o(.bss._acUpBuffer)
+    [Anonymous Symbol]                       0x200102f4   Section        0  segger_rtt.o(.bss._acUpBuffer)
+    STACK                                    0x20011300   Section    32768  startup_hc32f46x.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    _printf_a                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_c                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_charcount                        0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_d                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_e                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_f                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_flags                            0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_fp_dec                           0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_fp_hex                           0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_g                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_i                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_int_dec                          0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_l                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_lc                               0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_ll                               0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_lld                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_lli                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_llo                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_llu                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_llx                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_longlong_dec                     0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_longlong_hex                     0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_longlong_oct                     0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_ls                               0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_mbtowc                           0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_n                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_o                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_p                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_percent                          0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_pre_padding                      0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_return_value                     0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_s                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_sizespec                         0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_str                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_truncate_signed                  0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_truncate_unsigned                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_u                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_wc                               0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_wctomb                           0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_widthprec                        0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_x                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    ADC1A_IrqHandler                          - Undefined Weak Reference
+    ADC1B_IrqHandler                          - Undefined Weak Reference
+    ADC1ChCmp_IrqHandler                      - Undefined Weak Reference
+    ADC1SeqCmp_IrqHandler                     - Undefined Weak Reference
+    ADC2A_IrqHandler                          - Undefined Weak Reference
+    ADC2B_IrqHandler                          - Undefined Weak Reference
+    ADC2ChCmp_IrqHandler                      - Undefined Weak Reference
+    ADC2SeqCmp_IrqHandler                     - Undefined Weak Reference
+    BusFault_IrqHandler                       - Undefined Weak Reference
+    Can_IrqHandler                            - Undefined Weak Reference
+    Dcu1_IrqHandler                           - Undefined Weak Reference
+    Dcu2_IrqHandler                           - Undefined Weak Reference
+    Dcu3_IrqHandler                           - Undefined Weak Reference
+    Dcu4_IrqHandler                           - Undefined Weak Reference
+    DebugMon_IrqHandler                       - Undefined Weak Reference
+    Dma1Btc0_IrqHandler                       - Undefined Weak Reference
+    Dma1Btc1_IrqHandler                       - Undefined Weak Reference
+    Dma1Btc2_IrqHandler                       - Undefined Weak Reference
+    Dma1Btc3_IrqHandler                       - Undefined Weak Reference
+    Dma1Err0_IrqHandler                       - Undefined Weak Reference
+    Dma1Err1_IrqHandler                       - Undefined Weak Reference
+    Dma1Err2_IrqHandler                       - Undefined Weak Reference
+    Dma1Err3_IrqHandler                       - Undefined Weak Reference
+    Dma1Tc0_IrqHandler                        - Undefined Weak Reference
+    Dma1Tc1_IrqHandler                        - Undefined Weak Reference
+    Dma1Tc2_IrqHandler                        - Undefined Weak Reference
+    Dma1Tc3_IrqHandler                        - Undefined Weak Reference
+    Dma2Btc0_IrqHandler                       - Undefined Weak Reference
+    Dma2Btc1_IrqHandler                       - Undefined Weak Reference
+    Dma2Btc2_IrqHandler                       - Undefined Weak Reference
+    Dma2Btc3_IrqHandler                       - Undefined Weak Reference
+    Dma2Err0_IrqHandler                       - Undefined Weak Reference
+    Dma2Err1_IrqHandler                       - Undefined Weak Reference
+    Dma2Err2_IrqHandler                       - Undefined Weak Reference
+    Dma2Err3_IrqHandler                       - Undefined Weak Reference
+    Dma2Tc0_IrqHandler                        - Undefined Weak Reference
+    Dma2Tc1_IrqHandler                        - Undefined Weak Reference
+    Dma2Tc2_IrqHandler                        - Undefined Weak Reference
+    Dma2Tc3_IrqHandler                        - Undefined Weak Reference
+    EfmColErr_IrqHandler                      - Undefined Weak Reference
+    EfmOpEnd_IrqHandler                       - Undefined Weak Reference
+    EfmPgmEraseErr_IrqHandler                 - Undefined Weak Reference
+    Emb1_IrqHandler                           - Undefined Weak Reference
+    Emb2_IrqHandler                           - Undefined Weak Reference
+    Emb3_IrqHandler                           - Undefined Weak Reference
+    Emb4_IrqHandler                           - Undefined Weak Reference
+    Extint00_IrqHandler                       - Undefined Weak Reference
+    Extint01_IrqHandler                       - Undefined Weak Reference
+    Extint02_IrqHandler                       - Undefined Weak Reference
+    Extint03_IrqHandler                       - Undefined Weak Reference
+    Extint04_IrqHandler                       - Undefined Weak Reference
+    Extint05_IrqHandler                       - Undefined Weak Reference
+    Extint06_IrqHandler                       - Undefined Weak Reference
+    Extint07_IrqHandler                       - Undefined Weak Reference
+    Extint08_IrqHandler                       - Undefined Weak Reference
+    Extint09_IrqHandler                       - Undefined Weak Reference
+    Extint10_IrqHandler                       - Undefined Weak Reference
+    Extint11_IrqHandler                       - Undefined Weak Reference
+    Extint12_IrqHandler                       - Undefined Weak Reference
+    Extint13_IrqHandler                       - Undefined Weak Reference
+    Extint14_IrqHandler                       - Undefined Weak Reference
+    Extint15_IrqHandler                       - Undefined Weak Reference
+    FcmEnd_IrqHandler                         - Undefined Weak Reference
+    FcmErr_IrqHandler                         - Undefined Weak Reference
+    FcmOV_IrqHandler                          - Undefined Weak Reference
+    I2c1Err_IrqHandler                        - Undefined Weak Reference
+    I2c1RxEnd_IrqHandler                      - Undefined Weak Reference
+    I2c1TxEmpty_IrqHandler                    - Undefined Weak Reference
+    I2c1TxEnd_IrqHandler                      - Undefined Weak Reference
+    I2c2Err_IrqHandler                        - Undefined Weak Reference
+    I2c2RxEnd_IrqHandler                      - Undefined Weak Reference
+    I2c2TxEmpty_IrqHandler                    - Undefined Weak Reference
+    I2c2TxEnd_IrqHandler                      - Undefined Weak Reference
+    I2c3Err_IrqHandler                        - Undefined Weak Reference
+    I2c3RxEnd_IrqHandler                      - Undefined Weak Reference
+    I2c3TxEmpty_IrqHandler                    - Undefined Weak Reference
+    I2c3TxEnd_IrqHandler                      - Undefined Weak Reference
+    I2s1Err_IrqHandler                        - Undefined Weak Reference
+    I2s1Rx_IrqHandler                         - Undefined Weak Reference
+    I2s1Tx_IrqHandler                         - Undefined Weak Reference
+    I2s2Err_IrqHandler                        - Undefined Weak Reference
+    I2s2Rx_IrqHandler                         - Undefined Weak Reference
+    I2s2Tx_IrqHandler                         - Undefined Weak Reference
+    I2s3Err_IrqHandler                        - Undefined Weak Reference
+    I2s3Rx_IrqHandler                         - Undefined Weak Reference
+    I2s3Tx_IrqHandler                         - Undefined Weak Reference
+    I2s4Err_IrqHandler                        - Undefined Weak Reference
+    I2s4Rx_IrqHandler                         - Undefined Weak Reference
+    I2s4Tx_IrqHandler                         - Undefined Weak Reference
+    MainOscStop_IrqHandler                    - Undefined Weak Reference
+    MemManage_IrqHandler                      - Undefined Weak Reference
+    NMI_IrqHandler                            - Undefined Weak Reference
+    PendSV_IrqHandler                         - Undefined Weak Reference
+    Pvd1_IrqHandler                           - Undefined Weak Reference
+    Pvd2_IrqHandler                           - Undefined Weak Reference
+    QspiInt_IrqHandler                        - Undefined Weak Reference
+    SVC_IrqHandler                            - Undefined Weak Reference
+    Sdio1_IrqHandler                          - Undefined Weak Reference
+    Sdio2_IrqHandler                          - Undefined Weak Reference
+    Spi1Err_IrqHandler                        - Undefined Weak Reference
+    Spi1Idle_IrqHandler                       - Undefined Weak Reference
+    Spi1RxEnd_IrqHandler                      - Undefined Weak Reference
+    Spi1TxEmpty_IrqHandler                    - Undefined Weak Reference
+    Spi2Err_IrqHandler                        - Undefined Weak Reference
+    Spi2Idle_IrqHandler                       - Undefined Weak Reference
+    Spi2RxEnd_IrqHandler                      - Undefined Weak Reference
+    Spi2TxEmpty_IrqHandler                    - Undefined Weak Reference
+    Spi3Err_IrqHandler                        - Undefined Weak Reference
+    Spi3Idle_IrqHandler                       - Undefined Weak Reference
+    Spi3RxEnd_IrqHandler                      - Undefined Weak Reference
+    Spi3TxEmpty_IrqHandler                    - Undefined Weak Reference
+    Spi4Err_IrqHandler                        - Undefined Weak Reference
+    Spi4Idle_IrqHandler                       - Undefined Weak Reference
+    Spi4RxEnd_IrqHandler                      - Undefined Weak Reference
+    Spi4TxEmpty_IrqHandler                    - Undefined Weak Reference
+    Swdt_IrqHandler                           - Undefined Weak Reference
+    Timer01GCMA_IrqHandler                    - Undefined Weak Reference
+    Timer01GCMB_IrqHandler                    - Undefined Weak Reference
+    Timer02GCMA_IrqHandler                    - Undefined Weak Reference
+    Timer02GCMB_IrqHandler                    - Undefined Weak Reference
+    Timer41GCMUH_IrqHandler                   - Undefined Weak Reference
+    Timer41GCMUL_IrqHandler                   - Undefined Weak Reference
+    Timer41GCMVH_IrqHandler                   - Undefined Weak Reference
+    Timer41GCMVL_IrqHandler                   - Undefined Weak Reference
+    Timer41GCMWH_IrqHandler                   - Undefined Weak Reference
+    Timer41GCMWL_IrqHandler                   - Undefined Weak Reference
+    Timer41GOV_IrqHandler                     - Undefined Weak Reference
+    Timer41GUD_IrqHandler                     - Undefined Weak Reference
+    Timer41ReloadU_IrqHandler                 - Undefined Weak Reference
+    Timer41ReloadV_IrqHandler                 - Undefined Weak Reference
+    Timer41ReloadW_IrqHandler                 - Undefined Weak Reference
+    Timer42GCMVH_IrqHandler                   - Undefined Weak Reference
+    Timer42GCMVL_IrqHandler                   - Undefined Weak Reference
+    Timer42GCMWH_IrqHandler                   - Undefined Weak Reference
+    Timer42GCMWL_IrqHandler                   - Undefined Weak Reference
+    Timer42GOV_IrqHandler                     - Undefined Weak Reference
+    Timer42GUD_IrqHandler                     - Undefined Weak Reference
+    Timer42ReloadU_IrqHandler                 - Undefined Weak Reference
+    Timer42ReloadV_IrqHandler                 - Undefined Weak Reference
+    Timer42ReloadW_IrqHandler                 - Undefined Weak Reference
+    Timer43GCMUH_IrqHandler                   - Undefined Weak Reference
+    Timer43GCMUL_IrqHandler                   - Undefined Weak Reference
+    Timer43GCMVH_IrqHandler                   - Undefined Weak Reference
+    Timer43GCMVL_IrqHandler                   - Undefined Weak Reference
+    Timer43GCMWH_IrqHandler                   - Undefined Weak Reference
+    Timer43GCMWL_IrqHandler                   - Undefined Weak Reference
+    Timer43GOV_IrqHandler                     - Undefined Weak Reference
+    Timer43GUD_IrqHandler                     - Undefined Weak Reference
+    Timer43ReloadV_IrqHandler                 - Undefined Weak Reference
+    Timer43ReloadW_IrqHandler                 - Undefined Weak Reference
+    Timer61GCMA_IrqHandler                    - Undefined Weak Reference
+    Timer61GCMB_IrqHandler                    - Undefined Weak Reference
+    Timer61GCMC_IrqHandler                    - Undefined Weak Reference
+    Timer61GCMD_IrqHandler                    - Undefined Weak Reference
+    Timer61GCME_IrqHandler                    - Undefined Weak Reference
+    Timer61GCMF_IrqHandler                    - Undefined Weak Reference
+    Timer61GDT_IrqHandler                     - Undefined Weak Reference
+    Timer61GOV_IrqHandler                     - Undefined Weak Reference
+    Timer61GUD_IrqHandler                     - Undefined Weak Reference
+    Timer61SCMA_IrqHandler                    - Undefined Weak Reference
+    Timer61SCMB_IrqHandler                    - Undefined Weak Reference
+    Timer62GCMA_IrqHandler                    - Undefined Weak Reference
+    Timer62GCMB_IrqHandler                    - Undefined Weak Reference
+    Timer62GCMC_IrqHandler                    - Undefined Weak Reference
+    Timer62GCMD_IrqHandler                    - Undefined Weak Reference
+    Timer62GCME_IrqHandler                    - Undefined Weak Reference
+    Timer62GCMF_IrqHandler                    - Undefined Weak Reference
+    Timer62GDT_IrqHandler                     - Undefined Weak Reference
+    Timer62GOV_IrqHandler                     - Undefined Weak Reference
+    Timer62GUD_IrqHandler                     - Undefined Weak Reference
+    Timer62SCMA_IrqHandler                    - Undefined Weak Reference
+    Timer62SCMB_IrqHandler                    - Undefined Weak Reference
+    Timer63GCMA_IrqHandler                    - Undefined Weak Reference
+    Timer63GCMB_IrqHandler                    - Undefined Weak Reference
+    Timer63GCMC_IrqHandler                    - Undefined Weak Reference
+    Timer63GCMD_IrqHandler                    - Undefined Weak Reference
+    Timer63GCME_IrqHandler                    - Undefined Weak Reference
+    Timer63GCMF_IrqHandler                    - Undefined Weak Reference
+    Timer63GDT_IrqHandler                     - Undefined Weak Reference
+    Timer63GOV_IrqHandler                     - Undefined Weak Reference
+    Timer63GUD_IrqHandler                     - Undefined Weak Reference
+    Timer63SCMA_IrqHandler                    - Undefined Weak Reference
+    Timer63SCMB_IrqHandler                    - Undefined Weak Reference
+    TimerA1CMP_IrqHandler                     - Undefined Weak Reference
+    TimerA1OV_IrqHandler                      - Undefined Weak Reference
+    TimerA1UD_IrqHandler                      - Undefined Weak Reference
+    TimerA2CMP_IrqHandler                     - Undefined Weak Reference
+    TimerA2OV_IrqHandler                      - Undefined Weak Reference
+    TimerA2UD_IrqHandler                      - Undefined Weak Reference
+    TimerA3CMP_IrqHandler                     - Undefined Weak Reference
+    TimerA3OV_IrqHandler                      - Undefined Weak Reference
+    TimerA3UD_IrqHandler                      - Undefined Weak Reference
+    TimerA4CMP_IrqHandler                     - Undefined Weak Reference
+    TimerA4OV_IrqHandler                      - Undefined Weak Reference
+    TimerA4UD_IrqHandler                      - Undefined Weak Reference
+    TimerA5CMP_IrqHandler                     - Undefined Weak Reference
+    TimerA5OV_IrqHandler                      - Undefined Weak Reference
+    TimerA5UD_IrqHandler                      - Undefined Weak Reference
+    TimerA6CMP_IrqHandler                     - Undefined Weak Reference
+    TimerA6OV_IrqHandler                      - Undefined Weak Reference
+    TimerA6UD_IrqHandler                      - Undefined Weak Reference
+    UsageFault_IrqHandler                     - Undefined Weak Reference
+    Usart1RxEnd_IrqHandler                    - Undefined Weak Reference
+    Usart1RxErr_IrqHandler                    - Undefined Weak Reference
+    Usart1RxTO_IrqHandler                     - Undefined Weak Reference
+    Usart1TxEmpty_IrqHandler                  - Undefined Weak Reference
+    Usart1TxEnd_IrqHandler                    - Undefined Weak Reference
+    Usart2RxEnd_IrqHandler                    - Undefined Weak Reference
+    Usart2RxErr_IrqHandler                    - Undefined Weak Reference
+    Usart2RxTO_IrqHandler                     - Undefined Weak Reference
+    Usart2TxEmpty_IrqHandler                  - Undefined Weak Reference
+    Usart2TxEnd_IrqHandler                    - Undefined Weak Reference
+    Usart3RxEnd_IrqHandler                    - Undefined Weak Reference
+    Usart3RxErr_IrqHandler                    - Undefined Weak Reference
+    Usart3RxTO_IrqHandler                     - Undefined Weak Reference
+    Usart3TxEmpty_IrqHandler                  - Undefined Weak Reference
+    Usart3TxEnd_IrqHandler                    - Undefined Weak Reference
+    Usart4RxEnd_IrqHandler                    - Undefined Weak Reference
+    Usart4RxErr_IrqHandler                    - Undefined Weak Reference
+    Usart4RxTO_IrqHandler                     - Undefined Weak Reference
+    Usart4TxEmpty_IrqHandler                  - Undefined Weak Reference
+    Usart4TxEnd_IrqHandler                    - Undefined Weak Reference
+    UsbGlobal_IrqHandler                      - Undefined Weak Reference
+    WakeupTimer_IrqHandler                    - Undefined Weak Reference
+    Wdt_IrqHandler                            - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_Size                           0x00000280   Number         0  startup_hc32f46x.o ABSOLUTE
+    __Vectors                                0x20000000   Data           4  startup_hc32f46x.o(RESET)
+    __Vectors_End                            0x20000280   Data           0  startup_hc32f46x.o(RESET)
+    __main                                   0x20000281   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x20000281   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x20000285   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x20000289   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x20000289   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x20000289   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x20000289   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x20000291   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x20000291   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x20000295   Thumb Code    46  startup_hc32f46x.o(.text)
+    IRQ133_Handler                           0x200002d5   Thumb Code     0  startup_hc32f46x.o(.text)
+    IRQ134_Handler                           0x200002d5   Thumb Code     0  startup_hc32f46x.o(.text)
+    IRQ135_Handler                           0x200002d5   Thumb Code     0  startup_hc32f46x.o(.text)
+    __aeabi_uldivmod                         0x200002f1   Thumb Code    98  uldiv.o(.text)
+    __aeabi_memcpy                           0x20000353   Thumb Code    36  memcpya.o(.text)
+    __aeabi_memcpy4                          0x20000353   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memcpy8                          0x20000353   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memset                           0x20000377   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x20000377   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x20000377   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x20000385   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x20000385   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x20000385   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x20000389   Thumb Code    18  memseta.o(.text)
+    __aeabi_dmul                             0x2000039b   Thumb Code   228  dmul.o(.text)
+    __aeabi_ddiv                             0x2000047f   Thumb Code   222  ddiv.o(.text)
+    __aeabi_dcmple                           0x2000055d   Thumb Code    54  dcmple.o(.text)
+    __aeabi_dcmpge                           0x20000593   Thumb Code    54  dcmpge.o(.text)
+    __aeabi_ui2d                             0x200005c9   Thumb Code    26  dfltui.o(.text)
+    __aeabi_d2uiz                            0x200005e3   Thumb Code    50  dfixui.o(.text)
+    __aeabi_uidiv                            0x20000615   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x20000615   Thumb Code    44  uidiv.o(.text)
+    __aeabi_llsl                             0x20000641   Thumb Code    30  llshl.o(.text)
+    _ll_shift_l                              0x20000641   Thumb Code     0  llshl.o(.text)
+    __aeabi_llsr                             0x2000065f   Thumb Code    32  llushr.o(.text)
+    _ll_ushift_r                             0x2000065f   Thumb Code     0  llushr.o(.text)
+    __I$use$fp                               0x2000067f   Thumb Code     0  iusefp.o(.text)
+    _double_round                            0x2000067f   Thumb Code    30  depilogue.o(.text)
+    _double_epilogue                         0x2000069d   Thumb Code   156  depilogue.o(.text)
+    __aeabi_dadd                             0x20000739   Thumb Code   322  dadd.o(.text)
+    __aeabi_dsub                             0x2000087b   Thumb Code     6  dadd.o(.text)
+    __aeabi_drsub                            0x20000881   Thumb Code     6  dadd.o(.text)
+    __aeabi_d2ulz                            0x20000887   Thumb Code    48  dfixul.o(.text)
+    __aeabi_cdrcmple                         0x200008b9   Thumb Code    48  cdrcmple.o(.text)
+    __scatterload                            0x200008e9   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x200008e9   Thumb Code     0  init.o(.text)
+    __aeabi_lasr                             0x2000090d   Thumb Code    36  llsshr.o(.text)
+    _ll_sshift_r                             0x2000090d   Thumb Code     0  llsshr.o(.text)
+    BusFault_Handler                         0x20000931   Thumb Code     8  hc32f46x_interrupts.o(.text.BusFault_Handler)
+    CLK_GetClockFreq                         0x20000939   Thumb Code   224  hc32f46x_clk.o(.text.CLK_GetClockFreq)
+    CLK_GetFlagStatus                        0x20000a19   Thumb Code    66  hc32f46x_clk.o(.text.CLK_GetFlagStatus)
+    CLK_MpllCmd                              0x20000a5d   Thumb Code   196  hc32f46x_clk.o(.text.CLK_MpllCmd)
+    CLK_MpllConfig                           0x20000b21   Thumb Code   160  hc32f46x_clk.o(.text.CLK_MpllConfig)
+    CLK_SetPllSource                         0x20000bc1   Thumb Code    56  hc32f46x_clk.o(.text.CLK_SetPllSource)
+    CLK_SetSysClkSource                      0x20000bf9   Thumb Code   328  hc32f46x_clk.o(.text.CLK_SetSysClkSource)
+    CLK_SysClkConfig                         0x20000d41   Thumb Code   344  hc32f46x_clk.o(.text.CLK_SysClkConfig)
+    CLK_XtalCmd                              0x20000e99   Thumb Code   228  hc32f46x_clk.o(.text.CLK_XtalCmd)
+    CLK_XtalConfig                           0x20000f7d   Thumb Code    96  hc32f46x_clk.o(.text.CLK_XtalConfig)
+    CoreMark                                 0x20000fe1   Thumb Code  1900  core_main.o(.text.CoreMark)
+    Ddl_Delay1ms                             0x2000174d   Thumb Code   358  hc32f46x_utility.o(.text.Ddl_Delay1ms)
+    DebugMon_Handler                         0x200018b5   Thumb Code     8  hc32f46x_interrupts.o(.text.DebugMon_Handler)
+    DebugOutput                              0x200018bd   Thumb Code    42  hc32f46x_utility.o(.text.DebugOutput)
+    EFM_FlashCmd                             0x200018e9   Thumb Code    24  hc32f46x_efm.o(.text.EFM_FlashCmd)
+    EFM_GetFlagStatus                        0x20001901   Thumb Code    18  hc32f46x_efm.o(.text.EFM_GetFlagStatus)
+    EFM_InstructionCacheCmd                  0x20001915   Thumb Code    26  hc32f46x_efm.o(.text.EFM_InstructionCacheCmd)
+    EFM_Lock                                 0x20001931   Thumb Code    24  hc32f46x_efm.o(.text.EFM_Lock)
+    EFM_SetLatency                           0x20001949   Thumb Code    18  hc32f46x_efm.o(.text.EFM_SetLatency)
+    EFM_Unlock                               0x2000195d   Thumb Code    22  hc32f46x_efm.o(.text.EFM_Unlock)
+    HardFaultHandler                         0x20001975   Thumb Code   168  segger_hardfaulthandler.o(.text.HardFaultHandler)
+    IRQ000_Handler                           0x20001a1d   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ000_Handler)
+    IRQ001_Handler                           0x20001a31   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ001_Handler)
+    IRQ002_Handler                           0x20001a45   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ002_Handler)
+    IRQ003_Handler                           0x20001a59   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ003_Handler)
+    IRQ004_Handler                           0x20001a6d   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ004_Handler)
+    IRQ005_Handler                           0x20001a81   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ005_Handler)
+    IRQ006_Handler                           0x20001a95   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ006_Handler)
+    IRQ007_Handler                           0x20001aa9   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ007_Handler)
+    IRQ008_Handler                           0x20001abd   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ008_Handler)
+    IRQ009_Handler                           0x20001ad1   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ009_Handler)
+    IRQ010_Handler                           0x20001ae5   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ010_Handler)
+    IRQ011_Handler                           0x20001af9   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ011_Handler)
+    IRQ012_Handler                           0x20001b0d   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ012_Handler)
+    IRQ013_Handler                           0x20001b21   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ013_Handler)
+    IRQ014_Handler                           0x20001b35   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ014_Handler)
+    IRQ015_Handler                           0x20001b49   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ015_Handler)
+    IRQ016_Handler                           0x20001b5d   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ016_Handler)
+    IRQ017_Handler                           0x20001b71   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ017_Handler)
+    IRQ018_Handler                           0x20001b85   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ018_Handler)
+    IRQ019_Handler                           0x20001b99   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ019_Handler)
+    IRQ020_Handler                           0x20001bad   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ020_Handler)
+    IRQ021_Handler                           0x20001bc1   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ021_Handler)
+    IRQ022_Handler                           0x20001bd5   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ022_Handler)
+    IRQ023_Handler                           0x20001be9   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ023_Handler)
+    IRQ024_Handler                           0x20001bfd   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ024_Handler)
+    IRQ025_Handler                           0x20001c11   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ025_Handler)
+    IRQ026_Handler                           0x20001c25   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ026_Handler)
+    IRQ027_Handler                           0x20001c39   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ027_Handler)
+    IRQ028_Handler                           0x20001c4d   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ028_Handler)
+    IRQ029_Handler                           0x20001c61   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ029_Handler)
+    IRQ030_Handler                           0x20001c75   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ030_Handler)
+    IRQ031_Handler                           0x20001c89   Thumb Code    18  hc32f46x_interrupts.o(.text.IRQ031_Handler)
+    IRQ032_Handler                           0x20001c9d   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ032_Handler)
+    IRQ033_Handler                           0x20001cb1   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ033_Handler)
+    IRQ034_Handler                           0x20001cc5   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ034_Handler)
+    IRQ035_Handler                           0x20001cd9   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ035_Handler)
+    IRQ036_Handler                           0x20001ced   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ036_Handler)
+    IRQ037_Handler                           0x20001d01   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ037_Handler)
+    IRQ038_Handler                           0x20001d15   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ038_Handler)
+    IRQ039_Handler                           0x20001d29   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ039_Handler)
+    IRQ040_Handler                           0x20001d3d   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ040_Handler)
+    IRQ041_Handler                           0x20001d51   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ041_Handler)
+    IRQ042_Handler                           0x20001d65   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ042_Handler)
+    IRQ043_Handler                           0x20001d79   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ043_Handler)
+    IRQ044_Handler                           0x20001d8d   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ044_Handler)
+    IRQ045_Handler                           0x20001da1   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ045_Handler)
+    IRQ046_Handler                           0x20001db5   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ046_Handler)
+    IRQ047_Handler                           0x20001dc9   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ047_Handler)
+    IRQ048_Handler                           0x20001ddd   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ048_Handler)
+    IRQ049_Handler                           0x20001df1   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ049_Handler)
+    IRQ050_Handler                           0x20001e05   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ050_Handler)
+    IRQ051_Handler                           0x20001e19   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ051_Handler)
+    IRQ052_Handler                           0x20001e2d   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ052_Handler)
+    IRQ053_Handler                           0x20001e41   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ053_Handler)
+    IRQ054_Handler                           0x20001e55   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ054_Handler)
+    IRQ055_Handler                           0x20001e69   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ055_Handler)
+    IRQ056_Handler                           0x20001e7d   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ056_Handler)
+    IRQ057_Handler                           0x20001e91   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ057_Handler)
+    IRQ058_Handler                           0x20001ea5   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ058_Handler)
+    IRQ059_Handler                           0x20001eb9   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ059_Handler)
+    IRQ060_Handler                           0x20001ecd   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ060_Handler)
+    IRQ061_Handler                           0x20001ee1   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ061_Handler)
+    IRQ062_Handler                           0x20001ef5   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ062_Handler)
+    IRQ063_Handler                           0x20001f09   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ063_Handler)
+    IRQ064_Handler                           0x20001f1d   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ064_Handler)
+    IRQ065_Handler                           0x20001f31   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ065_Handler)
+    IRQ066_Handler                           0x20001f45   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ066_Handler)
+    IRQ067_Handler                           0x20001f59   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ067_Handler)
+    IRQ068_Handler                           0x20001f6d   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ068_Handler)
+    IRQ069_Handler                           0x20001f81   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ069_Handler)
+    IRQ070_Handler                           0x20001f95   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ070_Handler)
+    IRQ071_Handler                           0x20001fa9   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ071_Handler)
+    IRQ072_Handler                           0x20001fbd   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ072_Handler)
+    IRQ073_Handler                           0x20001fd1   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ073_Handler)
+    IRQ074_Handler                           0x20001fe5   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ074_Handler)
+    IRQ075_Handler                           0x20001ff9   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ075_Handler)
+    IRQ076_Handler                           0x2000200d   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ076_Handler)
+    IRQ077_Handler                           0x20002021   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ077_Handler)
+    IRQ078_Handler                           0x20002035   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ078_Handler)
+    IRQ079_Handler                           0x20002049   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ079_Handler)
+    IRQ080_Handler                           0x2000205d   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ080_Handler)
+    IRQ081_Handler                           0x20002071   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ081_Handler)
+    IRQ082_Handler                           0x20002085   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ082_Handler)
+    IRQ083_Handler                           0x20002099   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ083_Handler)
+    IRQ084_Handler                           0x200020ad   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ084_Handler)
+    IRQ085_Handler                           0x200020c1   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ085_Handler)
+    IRQ086_Handler                           0x200020d5   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ086_Handler)
+    IRQ087_Handler                           0x200020e9   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ087_Handler)
+    IRQ088_Handler                           0x200020fd   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ088_Handler)
+    IRQ089_Handler                           0x20002111   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ089_Handler)
+    IRQ090_Handler                           0x20002125   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ090_Handler)
+    IRQ091_Handler                           0x20002139   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ091_Handler)
+    IRQ092_Handler                           0x2000214d   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ092_Handler)
+    IRQ093_Handler                           0x20002161   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ093_Handler)
+    IRQ094_Handler                           0x20002175   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ094_Handler)
+    IRQ095_Handler                           0x20002189   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ095_Handler)
+    IRQ096_Handler                           0x2000219d   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ096_Handler)
+    IRQ097_Handler                           0x200021b1   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ097_Handler)
+    IRQ098_Handler                           0x200021c5   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ098_Handler)
+    IRQ099_Handler                           0x200021d9   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ099_Handler)
+    IRQ100_Handler                           0x200021ed   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ100_Handler)
+    IRQ101_Handler                           0x20002201   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ101_Handler)
+    IRQ102_Handler                           0x20002215   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ102_Handler)
+    IRQ103_Handler                           0x20002229   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ103_Handler)
+    IRQ104_Handler                           0x2000223d   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ104_Handler)
+    IRQ105_Handler                           0x20002251   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ105_Handler)
+    IRQ106_Handler                           0x20002265   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ106_Handler)
+    IRQ107_Handler                           0x20002279   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ107_Handler)
+    IRQ108_Handler                           0x2000228d   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ108_Handler)
+    IRQ109_Handler                           0x200022a1   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ109_Handler)
+    IRQ110_Handler                           0x200022b5   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ110_Handler)
+    IRQ111_Handler                           0x200022c9   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ111_Handler)
+    IRQ112_Handler                           0x200022dd   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ112_Handler)
+    IRQ113_Handler                           0x200022f1   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ113_Handler)
+    IRQ114_Handler                           0x20002305   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ114_Handler)
+    IRQ115_Handler                           0x20002319   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ115_Handler)
+    IRQ116_Handler                           0x2000232d   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ116_Handler)
+    IRQ117_Handler                           0x20002341   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ117_Handler)
+    IRQ118_Handler                           0x20002355   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ118_Handler)
+    IRQ119_Handler                           0x20002369   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ119_Handler)
+    IRQ120_Handler                           0x2000237d   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ120_Handler)
+    IRQ121_Handler                           0x20002391   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ121_Handler)
+    IRQ122_Handler                           0x200023a5   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ122_Handler)
+    IRQ123_Handler                           0x200023b9   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ123_Handler)
+    IRQ124_Handler                           0x200023cd   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ124_Handler)
+    IRQ125_Handler                           0x200023e1   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ125_Handler)
+    IRQ126_Handler                           0x200023f5   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ126_Handler)
+    IRQ127_Handler                           0x20002409   Thumb Code    20  hc32f46x_interrupts.o(.text.IRQ127_Handler)
+    IRQ128_Handler                           0x2000241d   Thumb Code   250  hc32f46x_interrupts.o(.text.IRQ128_Handler)
+    IRQ129_Handler                           0x20002519   Thumb Code   892  hc32f46x_interrupts.o(.text.IRQ129_Handler)
+    IRQ130_Handler                           0x20002895   Thumb Code   190  hc32f46x_interrupts.o(.text.IRQ130_Handler)
+    IRQ131_Handler                           0x20002955   Thumb Code   536  hc32f46x_interrupts.o(.text.IRQ131_Handler)
+    IRQ132_Handler                           0x20002b6d   Thumb Code   274  hc32f46x_interrupts.o(.text.IRQ132_Handler)
+    IRQ136_Handler                           0x20002c81   Thumb Code   684  hc32f46x_interrupts.o(.text.IRQ136_Handler)
+    IRQ137_Handler                           0x20002f2d   Thumb Code   680  hc32f46x_interrupts.o(.text.IRQ137_Handler)
+    IRQ138_Handler                           0x200031d5   Thumb Code   406  hc32f46x_interrupts.o(.text.IRQ138_Handler)
+    IRQ139_Handler                           0x2000336d   Thumb Code   212  hc32f46x_interrupts.o(.text.IRQ139_Handler)
+    IRQ140_Handler                           0x20003441   Thumb Code   408  hc32f46x_interrupts.o(.text.IRQ140_Handler)
+    IRQ141_Handler                           0x200035d9   Thumb Code   474  hc32f46x_interrupts.o(.text.IRQ141_Handler)
+    IRQ142_Handler                           0x200037b5   Thumb Code   298  hc32f46x_interrupts.o(.text.IRQ142_Handler)
+    IRQ143_Handler                           0x200038e1   Thumb Code   234  hc32f46x_interrupts.o(.text.IRQ143_Handler)
+    MemManage_Handler                        0x200039cd   Thumb Code     8  hc32f46x_interrupts.o(.text.MemManage_Handler)
+    NMI_Handler                              0x200039d5   Thumb Code     8  hc32f46x_interrupts.o(.text.NMI_Handler)
+    PORT_SetFunc                             0x200039dd   Thumb Code   646  hc32f46x_gpio.o(.text.PORT_SetFunc)
+    PWC_Fcg1PeriphClockCmd                   0x20003c65   Thumb Code    24  hc32f46x_pwc.o(.text.PWC_Fcg1PeriphClockCmd)
+    PendSV_Handler                           0x20003c7d   Thumb Code     8  hc32f46x_interrupts.o(.text.PendSV_Handler)
+    SEGGER_RTT_Init                          0x20003c85   Thumb Code   124  segger_rtt.o(.text.SEGGER_RTT_Init)
+    SEGGER_RTT_Write                         0x20003d01   Thumb Code   190  segger_rtt.o(.text.SEGGER_RTT_Write)
+    SEGGER_RTT_WriteNoLock                   0x20003dc1   Thumb Code   394  segger_rtt.o(.text.SEGGER_RTT_WriteNoLock)
+    SEGGER_RTT_printf                        0x20003f4d   Thumb Code    30  segger_rtt_printf.o(.text.SEGGER_RTT_printf)
+    SEGGER_RTT_vprintf                       0x20003f6d   Thumb Code  1708  segger_rtt_printf.o(.text.SEGGER_RTT_vprintf)
+    SVC_Handler                              0x20004619   Thumb Code     8  hc32f46x_interrupts.o(.text.SVC_Handler)
+    SysClkIni                                0x20004621   Thumb Code   120  myclk.o(.text.SysClkIni)
+    SysTick_Handler                          0x20004699   Thumb Code     8  hc32f46x_interrupts.o(.text.SysTick_Handler)
+    SysTick_IncTick                          0x200046a1   Thumb Code    18  hc32f46x_utility.o(.text.SysTick_IncTick)
+    SysTick_Init                             0x200046b5   Thumb Code    78  hc32f46x_utility.o(.text.SysTick_Init)
+    SysTick_Init_hc32                        0x20004705   Thumb Code    58  main.o(.text.SysTick_Init_hc32)
+    SysTick_IrqHandler                       0x20004741   Thumb Code    18  main.o(.text.SysTick_IrqHandler)
+    SysTick_Stop_time                        0x20004755   Thumb Code    22  main.o(.text.SysTick_Stop_time)
+    SystemCoreClockUpdate                    0x2000476d   Thumb Code   164  system_hc32f46x.o(.text.SystemCoreClockUpdate)
+    SystemInit                               0x20004811   Thumb Code   180  system_hc32f46x.o(.text.SystemInit)
+    USART_FuncCmd                            0x200048c5   Thumb Code   412  hc32f46x_usart.o(.text.USART_FuncCmd)
+    USART_RecData                            0x20004a61   Thumb Code     8  hc32f46x_usart.o(.text.USART_RecData)
+    USART_SetBaudrate                        0x20004a69   Thumb Code   968  hc32f46x_usart.o(.text.USART_SetBaudrate)
+    USART_UART_Init                          0x20004e31   Thumb Code   330  hc32f46x_usart.o(.text.USART_UART_Init)
+    UsageFault_Handler                       0x20004f7d   Thumb Code     8  hc32f46x_interrupts.o(.text.UsageFault_Handler)
+    app                                      0x20005141   Thumb Code     2  app.o(.text.app)
+    calc_func                                0x20005145   Thumb Code   136  core_list_join.o(.text.calc_func)
+    check_data_types                         0x200051cd   Thumb Code     4  core_util.o(.text.check_data_types)
+    clk_test                                 0x200051d1   Thumb Code   332  myclk.o(.text.clk_test)
+    core_bench_list                          0x2000531d   Thumb Code  1150  core_list_join.o(.text.core_bench_list)
+    core_bench_matrix                        0x2000579d   Thumb Code    38  core_matrix.o(.text.core_bench_matrix)
+    core_bench_state                         0x200057c5   Thumb Code   562  core_state.o(.text.core_bench_state)
+    core_init_matrix                         0x200059f9   Thumb Code   616  core_matrix.o(.text.core_init_matrix)
+    core_init_state                          0x20005c61   Thumb Code   328  core_state.o(.text.core_init_state)
+    core_list_init                           0x20005da9   Thumb Code   958  core_list_join.o(.text.core_list_init)
+    core_state_transition                    0x20006169   Thumb Code   510  core_state.o(.text.core_state_transition)
+    crc16                                    0x20006369   Thumb Code     6  core_util.o(.text.crc16)
+    crcu16                                   0x20006371   Thumb Code   278  core_util.o(.text.crcu16)
+    crcu32                                   0x20006489   Thumb Code    22  core_util.o(.text.crcu32)
+    enIrqRegistration                        0x200064a1   Thumb Code   124  hc32f46x_interrupts.o(.text.enIrqRegistration)
+    fputc                                    0x2000651d   Thumb Code    14  main.o(.text.fputc)
+    get_seed_32                              0x2000652d   Thumb Code    40  core_util.o(.text.get_seed_32)
+    get_time                                 0x20006555   Thumb Code    12  core_portme.o(.text.get_time)
+    main                                     0x20006561   Thumb Code   256  main.o(.text.main)
+    matrix_test                              0x20006661   Thumb Code  3782  core_matrix.o(.text.matrix_test)
+    portable_fini                            0x20007529   Thumb Code     6  core_portme.o(.text.portable_fini)
+    portable_init                            0x20007531   Thumb Code     6  core_portme.o(.text.portable_init)
+    read_uid                                 0x20007539   Thumb Code   204  main.o(.text.read_uid)
+    start_time                               0x20007605   Thumb Code    20  core_portme.o(.text.start_time)
+    stop_time                                0x20007619   Thumb Code     4  core_portme.o(.text.stop_time)
+    time_in_secs                             0x20007621   Thumb Code    32  core_portme.o(.text.time_in_secs)
+    usart_init                               0x2000764d   Thumb Code   404  myusart.o(.text.usart_init)
+    HardFault_Handler                        0x200077e1   Thumb Code     0  hardfaulthandler.o(OSKERNEL)
+    __0printf                                0x200077f5   Thumb Code    22  printfa.o(i.__0printf)
+    __1printf                                0x200077f5   Thumb Code     0  printfa.o(i.__0printf)
+    __2printf                                0x200077f5   Thumb Code     0  printfa.o(i.__0printf)
+    __c89printf                              0x200077f5   Thumb Code     0  printfa.o(i.__0printf)
+    printf                                   0x200077f5   Thumb Code     0  printfa.o(i.__0printf)
+    __scatterload_copy                       0x20007815   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x20007823   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x20007825   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    putchar                                  0x200080e9   Thumb Code     6  putchar.o(i.putchar)
+    puts                                     0x200080f5   Thumb Code    30  puts.o(i.puts)
+    Region$$Table$$Base                      0x200085f8   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x20008618   Number         0  anon$$obj.o(Region$$Table)
+    __stdout                                 0x20010000   Data           4  stdout.o(.data)
+    HRC_VALUE                                0x20010004   Data           4  system_hc32f46x.o(.data..L_MergedGlobals)
+    SystemCoreClock                          0x20010008   Data           4  system_hc32f46x.o(.data..L_MergedGlobals)
+    default_num_contexts                     0x2001000c   Data           4  core_portme.o(.data.default_num_contexts)
+    seed3_volatile                           0x20010010   Data           4  core_portme.o(.data.seed3_volatile)
+    seed4_volatile                           0x20010014   Data           4  core_portme.o(.data.seed4_volatile)
+    IrqHandler                               0x20010078   Data         512  hc32f46x_interrupts.o(.bss.IrqHandler)
+    Tick                                     0x20010278   Data           4  core_portme.o(.bss.Tick)
+    _SEGGER_RTT                              0x2001027c   Data         120  segger_rtt.o(.bss._SEGGER_RTT)
+    seed1_volatile                           0x200112f4   Data           4  core_portme.o(.bss.seed1_volatile)
+    seed2_volatile                           0x200112f8   Data           4  core_portme.o(.bss.seed2_volatile)
+    seed5_volatile                           0x200112fc   Data           4  core_portme.o(.bss.seed5_volatile)
+    __initial_sp                             0x20019300   Data           0  startup_hc32f46x.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x20000281
+
+  Load Region LR_IROM1 (Base: 0x20000000, Size: 0x00008630, Max: 0x00010000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x20000000, Load base: 0x20000000, Size: 0x00008618, Max: 0x00010000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x20000000   0x00000280   Data   RO           70    RESET               startup_hc32f46x.o
+    0x20000280   0x20000280   0x00000000   Code   RO         1313  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x20000280   0x20000280   0x00000004   Code   RO         1605    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x20000284   0x20000284   0x00000004   Code   RO         1608    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x20000288   0x20000288   0x00000000   Code   RO         1610    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x20000288   0x20000288   0x00000000   Code   RO         1612    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x20000288   0x20000288   0x00000008   Code   RO         1613    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x20000290   0x20000290   0x00000000   Code   RO         1615    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x20000290   0x20000290   0x00000000   Code   RO         1617    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x20000290   0x20000290   0x00000004   Code   RO         1606    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x20000294   0x20000294   0x0000005c   Code   RO           71    .text               startup_hc32f46x.o
+    0x200002f0   0x200002f0   0x00000062   Code   RO         1322    .text               mc_w.l(uldiv.o)
+    0x20000352   0x20000352   0x00000024   Code   RO         1324    .text               mc_w.l(memcpya.o)
+    0x20000376   0x20000376   0x00000024   Code   RO         1326    .text               mc_w.l(memseta.o)
+    0x2000039a   0x2000039a   0x000000e4   Code   RO         1593    .text               mf_w.l(dmul.o)
+    0x2000047e   0x2000047e   0x000000de   Code   RO         1595    .text               mf_w.l(ddiv.o)
+    0x2000055c   0x2000055c   0x00000036   Code   RO         1597    .text               mf_w.l(dcmple.o)
+    0x20000592   0x20000592   0x00000036   Code   RO         1599    .text               mf_w.l(dcmpge.o)
+    0x200005c8   0x200005c8   0x0000001a   Code   RO         1601    .text               mf_w.l(dfltui.o)
+    0x200005e2   0x200005e2   0x00000032   Code   RO         1603    .text               mf_w.l(dfixui.o)
+    0x20000614   0x20000614   0x0000002c   Code   RO         1620    .text               mc_w.l(uidiv.o)
+    0x20000640   0x20000640   0x0000001e   Code   RO         1622    .text               mc_w.l(llshl.o)
+    0x2000065e   0x2000065e   0x00000020   Code   RO         1624    .text               mc_w.l(llushr.o)
+    0x2000067e   0x2000067e   0x00000000   Code   RO         1626    .text               mc_w.l(iusefp.o)
+    0x2000067e   0x2000067e   0x000000ba   Code   RO         1627    .text               mf_w.l(depilogue.o)
+    0x20000738   0x20000738   0x0000014e   Code   RO         1629    .text               mf_w.l(dadd.o)
+    0x20000886   0x20000886   0x00000030   Code   RO         1631    .text               mf_w.l(dfixul.o)
+    0x200008b6   0x200008b6   0x00000002   PAD
+    0x200008b8   0x200008b8   0x00000030   Code   RO         1633    .text               mf_w.l(cdrcmple.o)
+    0x200008e8   0x200008e8   0x00000024   Code   RO         1635    .text               mc_w.l(init.o)
+    0x2000090c   0x2000090c   0x00000024   Code   RO         1637    .text               mc_w.l(llsshr.o)
+    0x20000930   0x20000930   0x00000008   Code   RO          121    .text.BusFault_Handler  hc32f46x_interrupts.o
+    0x20000938   0x20000938   0x000000e0   Code   RO          497    .text.CLK_GetClockFreq  hc32f46x_clk.o
+    0x20000a18   0x20000a18   0x00000042   Code   RO          463    .text.CLK_GetFlagStatus  hc32f46x_clk.o
+    0x20000a5a   0x20000a5a   0x00000002   PAD
+    0x20000a5c   0x20000a5c   0x000000c4   Code   RO          485    .text.CLK_MpllCmd   hc32f46x_clk.o
+    0x20000b20   0x20000b20   0x000000a0   Code   RO          483    .text.CLK_MpllConfig  hc32f46x_clk.o
+    0x20000bc0   0x20000bc0   0x00000038   Code   RO          481    .text.CLK_SetPllSource  hc32f46x_clk.o
+    0x20000bf8   0x20000bf8   0x00000148   Code   RO          491    .text.CLK_SetSysClkSource  hc32f46x_clk.o
+    0x20000d40   0x20000d40   0x00000158   Code   RO          495    .text.CLK_SysClkConfig  hc32f46x_clk.o
+    0x20000e98   0x20000e98   0x000000e4   Code   RO          461    .text.CLK_XtalCmd   hc32f46x_clk.o
+    0x20000f7c   0x20000f7c   0x00000060   Code   RO          455    .text.CLK_XtalConfig  hc32f46x_clk.o
+    0x20000fdc   0x20000fdc   0x00000004   PAD
+    0x20000fe0   0x20000fe0   0x0000076c   Code   RO         1207    .text.CoreMark      core_main.o
+    0x2000174c   0x2000174c   0x00000166   Code   RO          430    .text.Ddl_Delay1ms  hc32f46x_utility.o
+    0x200018b2   0x200018b2   0x00000002   PAD
+    0x200018b4   0x200018b4   0x00000008   Code   RO          127    .text.DebugMon_Handler  hc32f46x_interrupts.o
+    0x200018bc   0x200018bc   0x0000002a   Code   RO          424    .text.DebugOutput   hc32f46x_utility.o
+    0x200018e6   0x200018e6   0x00000002   PAD
+    0x200018e8   0x200018e8   0x00000018   Code   RO          613    .text.EFM_FlashCmd  hc32f46x_efm.o
+    0x20001900   0x20001900   0x00000012   Code   RO          629    .text.EFM_GetFlagStatus  hc32f46x_efm.o
+    0x20001912   0x20001912   0x00000002   PAD
+    0x20001914   0x20001914   0x0000001a   Code   RO          617    .text.EFM_InstructionCacheCmd  hc32f46x_efm.o
+    0x2000192e   0x2000192e   0x00000002   PAD
+    0x20001930   0x20001930   0x00000018   Code   RO          611    .text.EFM_Lock      hc32f46x_efm.o
+    0x20001948   0x20001948   0x00000012   Code   RO          615    .text.EFM_SetLatency  hc32f46x_efm.o
+    0x2000195a   0x2000195a   0x00000002   PAD
+    0x2000195c   0x2000195c   0x00000016   Code   RO          609    .text.EFM_Unlock    hc32f46x_efm.o
+    0x20001972   0x20001972   0x00000002   PAD
+    0x20001974   0x20001974   0x000000a8   Code   RO         1071    .text.HardFaultHandler  segger_hardfaulthandler.o
+    0x20001a1c   0x20001a1c   0x00000012   Code   RO          133    .text.IRQ000_Handler  hc32f46x_interrupts.o
+    0x20001a2e   0x20001a2e   0x00000002   PAD
+    0x20001a30   0x20001a30   0x00000012   Code   RO          135    .text.IRQ001_Handler  hc32f46x_interrupts.o
+    0x20001a42   0x20001a42   0x00000002   PAD
+    0x20001a44   0x20001a44   0x00000012   Code   RO          137    .text.IRQ002_Handler  hc32f46x_interrupts.o
+    0x20001a56   0x20001a56   0x00000002   PAD
+    0x20001a58   0x20001a58   0x00000012   Code   RO          139    .text.IRQ003_Handler  hc32f46x_interrupts.o
+    0x20001a6a   0x20001a6a   0x00000002   PAD
+    0x20001a6c   0x20001a6c   0x00000012   Code   RO          141    .text.IRQ004_Handler  hc32f46x_interrupts.o
+    0x20001a7e   0x20001a7e   0x00000002   PAD
+    0x20001a80   0x20001a80   0x00000012   Code   RO          143    .text.IRQ005_Handler  hc32f46x_interrupts.o
+    0x20001a92   0x20001a92   0x00000002   PAD
+    0x20001a94   0x20001a94   0x00000012   Code   RO          145    .text.IRQ006_Handler  hc32f46x_interrupts.o
+    0x20001aa6   0x20001aa6   0x00000002   PAD
+    0x20001aa8   0x20001aa8   0x00000012   Code   RO          147    .text.IRQ007_Handler  hc32f46x_interrupts.o
+    0x20001aba   0x20001aba   0x00000002   PAD
+    0x20001abc   0x20001abc   0x00000012   Code   RO          149    .text.IRQ008_Handler  hc32f46x_interrupts.o
+    0x20001ace   0x20001ace   0x00000002   PAD
+    0x20001ad0   0x20001ad0   0x00000012   Code   RO          151    .text.IRQ009_Handler  hc32f46x_interrupts.o
+    0x20001ae2   0x20001ae2   0x00000002   PAD
+    0x20001ae4   0x20001ae4   0x00000012   Code   RO          153    .text.IRQ010_Handler  hc32f46x_interrupts.o
+    0x20001af6   0x20001af6   0x00000002   PAD
+    0x20001af8   0x20001af8   0x00000012   Code   RO          155    .text.IRQ011_Handler  hc32f46x_interrupts.o
+    0x20001b0a   0x20001b0a   0x00000002   PAD
+    0x20001b0c   0x20001b0c   0x00000012   Code   RO          157    .text.IRQ012_Handler  hc32f46x_interrupts.o
+    0x20001b1e   0x20001b1e   0x00000002   PAD
+    0x20001b20   0x20001b20   0x00000012   Code   RO          159    .text.IRQ013_Handler  hc32f46x_interrupts.o
+    0x20001b32   0x20001b32   0x00000002   PAD
+    0x20001b34   0x20001b34   0x00000012   Code   RO          161    .text.IRQ014_Handler  hc32f46x_interrupts.o
+    0x20001b46   0x20001b46   0x00000002   PAD
+    0x20001b48   0x20001b48   0x00000012   Code   RO          163    .text.IRQ015_Handler  hc32f46x_interrupts.o
+    0x20001b5a   0x20001b5a   0x00000002   PAD
+    0x20001b5c   0x20001b5c   0x00000012   Code   RO          165    .text.IRQ016_Handler  hc32f46x_interrupts.o
+    0x20001b6e   0x20001b6e   0x00000002   PAD
+    0x20001b70   0x20001b70   0x00000012   Code   RO          167    .text.IRQ017_Handler  hc32f46x_interrupts.o
+    0x20001b82   0x20001b82   0x00000002   PAD
+    0x20001b84   0x20001b84   0x00000012   Code   RO          169    .text.IRQ018_Handler  hc32f46x_interrupts.o
+    0x20001b96   0x20001b96   0x00000002   PAD
+    0x20001b98   0x20001b98   0x00000012   Code   RO          171    .text.IRQ019_Handler  hc32f46x_interrupts.o
+    0x20001baa   0x20001baa   0x00000002   PAD
+    0x20001bac   0x20001bac   0x00000012   Code   RO          173    .text.IRQ020_Handler  hc32f46x_interrupts.o
+    0x20001bbe   0x20001bbe   0x00000002   PAD
+    0x20001bc0   0x20001bc0   0x00000012   Code   RO          175    .text.IRQ021_Handler  hc32f46x_interrupts.o
+    0x20001bd2   0x20001bd2   0x00000002   PAD
+    0x20001bd4   0x20001bd4   0x00000012   Code   RO          177    .text.IRQ022_Handler  hc32f46x_interrupts.o
+    0x20001be6   0x20001be6   0x00000002   PAD
+    0x20001be8   0x20001be8   0x00000012   Code   RO          179    .text.IRQ023_Handler  hc32f46x_interrupts.o
+    0x20001bfa   0x20001bfa   0x00000002   PAD
+    0x20001bfc   0x20001bfc   0x00000012   Code   RO          181    .text.IRQ024_Handler  hc32f46x_interrupts.o
+    0x20001c0e   0x20001c0e   0x00000002   PAD
+    0x20001c10   0x20001c10   0x00000012   Code   RO          183    .text.IRQ025_Handler  hc32f46x_interrupts.o
+    0x20001c22   0x20001c22   0x00000002   PAD
+    0x20001c24   0x20001c24   0x00000012   Code   RO          185    .text.IRQ026_Handler  hc32f46x_interrupts.o
+    0x20001c36   0x20001c36   0x00000002   PAD
+    0x20001c38   0x20001c38   0x00000012   Code   RO          187    .text.IRQ027_Handler  hc32f46x_interrupts.o
+    0x20001c4a   0x20001c4a   0x00000002   PAD
+    0x20001c4c   0x20001c4c   0x00000012   Code   RO          189    .text.IRQ028_Handler  hc32f46x_interrupts.o
+    0x20001c5e   0x20001c5e   0x00000002   PAD
+    0x20001c60   0x20001c60   0x00000012   Code   RO          191    .text.IRQ029_Handler  hc32f46x_interrupts.o
+    0x20001c72   0x20001c72   0x00000002   PAD
+    0x20001c74   0x20001c74   0x00000012   Code   RO          193    .text.IRQ030_Handler  hc32f46x_interrupts.o
+    0x20001c86   0x20001c86   0x00000002   PAD
+    0x20001c88   0x20001c88   0x00000012   Code   RO          195    .text.IRQ031_Handler  hc32f46x_interrupts.o
+    0x20001c9a   0x20001c9a   0x00000002   PAD
+    0x20001c9c   0x20001c9c   0x00000014   Code   RO          197    .text.IRQ032_Handler  hc32f46x_interrupts.o
+    0x20001cb0   0x20001cb0   0x00000014   Code   RO          199    .text.IRQ033_Handler  hc32f46x_interrupts.o
+    0x20001cc4   0x20001cc4   0x00000014   Code   RO          201    .text.IRQ034_Handler  hc32f46x_interrupts.o
+    0x20001cd8   0x20001cd8   0x00000014   Code   RO          203    .text.IRQ035_Handler  hc32f46x_interrupts.o
+    0x20001cec   0x20001cec   0x00000014   Code   RO          205    .text.IRQ036_Handler  hc32f46x_interrupts.o
+    0x20001d00   0x20001d00   0x00000014   Code   RO          207    .text.IRQ037_Handler  hc32f46x_interrupts.o
+    0x20001d14   0x20001d14   0x00000014   Code   RO          209    .text.IRQ038_Handler  hc32f46x_interrupts.o
+    0x20001d28   0x20001d28   0x00000014   Code   RO          211    .text.IRQ039_Handler  hc32f46x_interrupts.o
+    0x20001d3c   0x20001d3c   0x00000014   Code   RO          213    .text.IRQ040_Handler  hc32f46x_interrupts.o
+    0x20001d50   0x20001d50   0x00000014   Code   RO          215    .text.IRQ041_Handler  hc32f46x_interrupts.o
+    0x20001d64   0x20001d64   0x00000014   Code   RO          217    .text.IRQ042_Handler  hc32f46x_interrupts.o
+    0x20001d78   0x20001d78   0x00000014   Code   RO          219    .text.IRQ043_Handler  hc32f46x_interrupts.o
+    0x20001d8c   0x20001d8c   0x00000014   Code   RO          221    .text.IRQ044_Handler  hc32f46x_interrupts.o
+    0x20001da0   0x20001da0   0x00000014   Code   RO          223    .text.IRQ045_Handler  hc32f46x_interrupts.o
+    0x20001db4   0x20001db4   0x00000014   Code   RO          225    .text.IRQ046_Handler  hc32f46x_interrupts.o
+    0x20001dc8   0x20001dc8   0x00000014   Code   RO          227    .text.IRQ047_Handler  hc32f46x_interrupts.o
+    0x20001ddc   0x20001ddc   0x00000014   Code   RO          229    .text.IRQ048_Handler  hc32f46x_interrupts.o
+    0x20001df0   0x20001df0   0x00000014   Code   RO          231    .text.IRQ049_Handler  hc32f46x_interrupts.o
+    0x20001e04   0x20001e04   0x00000014   Code   RO          233    .text.IRQ050_Handler  hc32f46x_interrupts.o
+    0x20001e18   0x20001e18   0x00000014   Code   RO          235    .text.IRQ051_Handler  hc32f46x_interrupts.o
+    0x20001e2c   0x20001e2c   0x00000014   Code   RO          237    .text.IRQ052_Handler  hc32f46x_interrupts.o
+    0x20001e40   0x20001e40   0x00000014   Code   RO          239    .text.IRQ053_Handler  hc32f46x_interrupts.o
+    0x20001e54   0x20001e54   0x00000014   Code   RO          241    .text.IRQ054_Handler  hc32f46x_interrupts.o
+    0x20001e68   0x20001e68   0x00000014   Code   RO          243    .text.IRQ055_Handler  hc32f46x_interrupts.o
+    0x20001e7c   0x20001e7c   0x00000014   Code   RO          245    .text.IRQ056_Handler  hc32f46x_interrupts.o
+    0x20001e90   0x20001e90   0x00000014   Code   RO          247    .text.IRQ057_Handler  hc32f46x_interrupts.o
+    0x20001ea4   0x20001ea4   0x00000014   Code   RO          249    .text.IRQ058_Handler  hc32f46x_interrupts.o
+    0x20001eb8   0x20001eb8   0x00000014   Code   RO          251    .text.IRQ059_Handler  hc32f46x_interrupts.o
+    0x20001ecc   0x20001ecc   0x00000014   Code   RO          253    .text.IRQ060_Handler  hc32f46x_interrupts.o
+    0x20001ee0   0x20001ee0   0x00000014   Code   RO          255    .text.IRQ061_Handler  hc32f46x_interrupts.o
+    0x20001ef4   0x20001ef4   0x00000014   Code   RO          257    .text.IRQ062_Handler  hc32f46x_interrupts.o
+    0x20001f08   0x20001f08   0x00000014   Code   RO          259    .text.IRQ063_Handler  hc32f46x_interrupts.o
+    0x20001f1c   0x20001f1c   0x00000014   Code   RO          261    .text.IRQ064_Handler  hc32f46x_interrupts.o
+    0x20001f30   0x20001f30   0x00000014   Code   RO          263    .text.IRQ065_Handler  hc32f46x_interrupts.o
+    0x20001f44   0x20001f44   0x00000014   Code   RO          265    .text.IRQ066_Handler  hc32f46x_interrupts.o
+    0x20001f58   0x20001f58   0x00000014   Code   RO          267    .text.IRQ067_Handler  hc32f46x_interrupts.o
+    0x20001f6c   0x20001f6c   0x00000014   Code   RO          269    .text.IRQ068_Handler  hc32f46x_interrupts.o
+    0x20001f80   0x20001f80   0x00000014   Code   RO          271    .text.IRQ069_Handler  hc32f46x_interrupts.o
+    0x20001f94   0x20001f94   0x00000014   Code   RO          273    .text.IRQ070_Handler  hc32f46x_interrupts.o
+    0x20001fa8   0x20001fa8   0x00000014   Code   RO          275    .text.IRQ071_Handler  hc32f46x_interrupts.o
+    0x20001fbc   0x20001fbc   0x00000014   Code   RO          277    .text.IRQ072_Handler  hc32f46x_interrupts.o
+    0x20001fd0   0x20001fd0   0x00000014   Code   RO          279    .text.IRQ073_Handler  hc32f46x_interrupts.o
+    0x20001fe4   0x20001fe4   0x00000014   Code   RO          281    .text.IRQ074_Handler  hc32f46x_interrupts.o
+    0x20001ff8   0x20001ff8   0x00000014   Code   RO          283    .text.IRQ075_Handler  hc32f46x_interrupts.o
+    0x2000200c   0x2000200c   0x00000014   Code   RO          285    .text.IRQ076_Handler  hc32f46x_interrupts.o
+    0x20002020   0x20002020   0x00000014   Code   RO          287    .text.IRQ077_Handler  hc32f46x_interrupts.o
+    0x20002034   0x20002034   0x00000014   Code   RO          289    .text.IRQ078_Handler  hc32f46x_interrupts.o
+    0x20002048   0x20002048   0x00000014   Code   RO          291    .text.IRQ079_Handler  hc32f46x_interrupts.o
+    0x2000205c   0x2000205c   0x00000014   Code   RO          293    .text.IRQ080_Handler  hc32f46x_interrupts.o
+    0x20002070   0x20002070   0x00000014   Code   RO          295    .text.IRQ081_Handler  hc32f46x_interrupts.o
+    0x20002084   0x20002084   0x00000014   Code   RO          297    .text.IRQ082_Handler  hc32f46x_interrupts.o
+    0x20002098   0x20002098   0x00000014   Code   RO          299    .text.IRQ083_Handler  hc32f46x_interrupts.o
+    0x200020ac   0x200020ac   0x00000014   Code   RO          301    .text.IRQ084_Handler  hc32f46x_interrupts.o
+    0x200020c0   0x200020c0   0x00000014   Code   RO          303    .text.IRQ085_Handler  hc32f46x_interrupts.o
+    0x200020d4   0x200020d4   0x00000014   Code   RO          305    .text.IRQ086_Handler  hc32f46x_interrupts.o
+    0x200020e8   0x200020e8   0x00000014   Code   RO          307    .text.IRQ087_Handler  hc32f46x_interrupts.o
+    0x200020fc   0x200020fc   0x00000014   Code   RO          309    .text.IRQ088_Handler  hc32f46x_interrupts.o
+    0x20002110   0x20002110   0x00000014   Code   RO          311    .text.IRQ089_Handler  hc32f46x_interrupts.o
+    0x20002124   0x20002124   0x00000014   Code   RO          313    .text.IRQ090_Handler  hc32f46x_interrupts.o
+    0x20002138   0x20002138   0x00000014   Code   RO          315    .text.IRQ091_Handler  hc32f46x_interrupts.o
+    0x2000214c   0x2000214c   0x00000014   Code   RO          317    .text.IRQ092_Handler  hc32f46x_interrupts.o
+    0x20002160   0x20002160   0x00000014   Code   RO          319    .text.IRQ093_Handler  hc32f46x_interrupts.o
+    0x20002174   0x20002174   0x00000014   Code   RO          321    .text.IRQ094_Handler  hc32f46x_interrupts.o
+    0x20002188   0x20002188   0x00000014   Code   RO          323    .text.IRQ095_Handler  hc32f46x_interrupts.o
+    0x2000219c   0x2000219c   0x00000014   Code   RO          325    .text.IRQ096_Handler  hc32f46x_interrupts.o
+    0x200021b0   0x200021b0   0x00000014   Code   RO          327    .text.IRQ097_Handler  hc32f46x_interrupts.o
+    0x200021c4   0x200021c4   0x00000014   Code   RO          329    .text.IRQ098_Handler  hc32f46x_interrupts.o
+    0x200021d8   0x200021d8   0x00000014   Code   RO          331    .text.IRQ099_Handler  hc32f46x_interrupts.o
+    0x200021ec   0x200021ec   0x00000014   Code   RO          333    .text.IRQ100_Handler  hc32f46x_interrupts.o
+    0x20002200   0x20002200   0x00000014   Code   RO          335    .text.IRQ101_Handler  hc32f46x_interrupts.o
+    0x20002214   0x20002214   0x00000014   Code   RO          337    .text.IRQ102_Handler  hc32f46x_interrupts.o
+    0x20002228   0x20002228   0x00000014   Code   RO          339    .text.IRQ103_Handler  hc32f46x_interrupts.o
+    0x2000223c   0x2000223c   0x00000014   Code   RO          341    .text.IRQ104_Handler  hc32f46x_interrupts.o
+    0x20002250   0x20002250   0x00000014   Code   RO          343    .text.IRQ105_Handler  hc32f46x_interrupts.o
+    0x20002264   0x20002264   0x00000014   Code   RO          345    .text.IRQ106_Handler  hc32f46x_interrupts.o
+    0x20002278   0x20002278   0x00000014   Code   RO          347    .text.IRQ107_Handler  hc32f46x_interrupts.o
+    0x2000228c   0x2000228c   0x00000014   Code   RO          349    .text.IRQ108_Handler  hc32f46x_interrupts.o
+    0x200022a0   0x200022a0   0x00000014   Code   RO          351    .text.IRQ109_Handler  hc32f46x_interrupts.o
+    0x200022b4   0x200022b4   0x00000014   Code   RO          353    .text.IRQ110_Handler  hc32f46x_interrupts.o
+    0x200022c8   0x200022c8   0x00000014   Code   RO          355    .text.IRQ111_Handler  hc32f46x_interrupts.o
+    0x200022dc   0x200022dc   0x00000014   Code   RO          357    .text.IRQ112_Handler  hc32f46x_interrupts.o
+    0x200022f0   0x200022f0   0x00000014   Code   RO          359    .text.IRQ113_Handler  hc32f46x_interrupts.o
+    0x20002304   0x20002304   0x00000014   Code   RO          361    .text.IRQ114_Handler  hc32f46x_interrupts.o
+    0x20002318   0x20002318   0x00000014   Code   RO          363    .text.IRQ115_Handler  hc32f46x_interrupts.o
+    0x2000232c   0x2000232c   0x00000014   Code   RO          365    .text.IRQ116_Handler  hc32f46x_interrupts.o
+    0x20002340   0x20002340   0x00000014   Code   RO          367    .text.IRQ117_Handler  hc32f46x_interrupts.o
+    0x20002354   0x20002354   0x00000014   Code   RO          369    .text.IRQ118_Handler  hc32f46x_interrupts.o
+    0x20002368   0x20002368   0x00000014   Code   RO          371    .text.IRQ119_Handler  hc32f46x_interrupts.o
+    0x2000237c   0x2000237c   0x00000014   Code   RO          373    .text.IRQ120_Handler  hc32f46x_interrupts.o
+    0x20002390   0x20002390   0x00000014   Code   RO          375    .text.IRQ121_Handler  hc32f46x_interrupts.o
+    0x200023a4   0x200023a4   0x00000014   Code   RO          377    .text.IRQ122_Handler  hc32f46x_interrupts.o
+    0x200023b8   0x200023b8   0x00000014   Code   RO          379    .text.IRQ123_Handler  hc32f46x_interrupts.o
+    0x200023cc   0x200023cc   0x00000014   Code   RO          381    .text.IRQ124_Handler  hc32f46x_interrupts.o
+    0x200023e0   0x200023e0   0x00000014   Code   RO          383    .text.IRQ125_Handler  hc32f46x_interrupts.o
+    0x200023f4   0x200023f4   0x00000014   Code   RO          385    .text.IRQ126_Handler  hc32f46x_interrupts.o
+    0x20002408   0x20002408   0x00000014   Code   RO          387    .text.IRQ127_Handler  hc32f46x_interrupts.o
+    0x2000241c   0x2000241c   0x000000fa   Code   RO          389    .text.IRQ128_Handler  hc32f46x_interrupts.o
+    0x20002516   0x20002516   0x00000002   PAD
+    0x20002518   0x20002518   0x0000037c   Code   RO          391    .text.IRQ129_Handler  hc32f46x_interrupts.o
+    0x20002894   0x20002894   0x000000be   Code   RO          393    .text.IRQ130_Handler  hc32f46x_interrupts.o
+    0x20002952   0x20002952   0x00000002   PAD
+    0x20002954   0x20002954   0x00000218   Code   RO          395    .text.IRQ131_Handler  hc32f46x_interrupts.o
+    0x20002b6c   0x20002b6c   0x00000112   Code   RO          397    .text.IRQ132_Handler  hc32f46x_interrupts.o
+    0x20002c7e   0x20002c7e   0x00000002   PAD
+    0x20002c80   0x20002c80   0x000002ac   Code   RO          399    .text.IRQ136_Handler  hc32f46x_interrupts.o
+    0x20002f2c   0x20002f2c   0x000002a8   Code   RO          401    .text.IRQ137_Handler  hc32f46x_interrupts.o
+    0x200031d4   0x200031d4   0x00000196   Code   RO          403    .text.IRQ138_Handler  hc32f46x_interrupts.o
+    0x2000336a   0x2000336a   0x00000002   PAD
+    0x2000336c   0x2000336c   0x000000d4   Code   RO          405    .text.IRQ139_Handler  hc32f46x_interrupts.o
+    0x20003440   0x20003440   0x00000198   Code   RO          407    .text.IRQ140_Handler  hc32f46x_interrupts.o
+    0x200035d8   0x200035d8   0x000001da   Code   RO          409    .text.IRQ141_Handler  hc32f46x_interrupts.o
+    0x200037b2   0x200037b2   0x00000002   PAD
+    0x200037b4   0x200037b4   0x0000012a   Code   RO          411    .text.IRQ142_Handler  hc32f46x_interrupts.o
+    0x200038de   0x200038de   0x00000002   PAD
+    0x200038e0   0x200038e0   0x000000ea   Code   RO          413    .text.IRQ143_Handler  hc32f46x_interrupts.o
+    0x200039ca   0x200039ca   0x00000002   PAD
+    0x200039cc   0x200039cc   0x00000008   Code   RO          119    .text.MemManage_Handler  hc32f46x_interrupts.o
+    0x200039d4   0x200039d4   0x00000008   Code   RO          117    .text.NMI_Handler   hc32f46x_interrupts.o
+    0x200039dc   0x200039dc   0x00000286   Code   RO          691    .text.PORT_SetFunc  hc32f46x_gpio.o
+    0x20003c62   0x20003c62   0x00000002   PAD
+    0x20003c64   0x20003c64   0x00000018   Code   RO          884    .text.PWC_Fcg1PeriphClockCmd  hc32f46x_pwc.o
+    0x20003c7c   0x20003c7c   0x00000008   Code   RO          129    .text.PendSV_Handler  hc32f46x_interrupts.o
+    0x20003c84   0x20003c84   0x0000007c   Code   RO         1136    .text.SEGGER_RTT_Init  segger_rtt.o
+    0x20003d00   0x20003d00   0x000000be   Code   RO         1100    .text.SEGGER_RTT_Write  segger_rtt.o
+    0x20003dbe   0x20003dbe   0x00000002   PAD
+    0x20003dc0   0x20003dc0   0x0000018a   Code   RO         1096    .text.SEGGER_RTT_WriteNoLock  segger_rtt.o
+    0x20003f4a   0x20003f4a   0x00000002   PAD
+    0x20003f4c   0x20003f4c   0x0000001e   Code   RO         1163    .text.SEGGER_RTT_printf  segger_rtt_printf.o
+    0x20003f6a   0x20003f6a   0x00000002   PAD
+    0x20003f6c   0x20003f6c   0x000006ac   Code   RO         1159    .text.SEGGER_RTT_vprintf  segger_rtt_printf.o
+    0x20004618   0x20004618   0x00000008   Code   RO          125    .text.SVC_Handler   hc32f46x_interrupts.o
+    0x20004620   0x20004620   0x00000078   Code   RO           10    .text.SysClkIni     myclk.o
+    0x20004698   0x20004698   0x00000008   Code   RO          131    .text.SysTick_Handler  hc32f46x_interrupts.o
+    0x200046a0   0x200046a0   0x00000012   Code   RO          440    .text.SysTick_IncTick  hc32f46x_utility.o
+    0x200046b2   0x200046b2   0x00000002   PAD
+    0x200046b4   0x200046b4   0x0000004e   Code   RO          434    .text.SysTick_Init  hc32f46x_utility.o
+    0x20004702   0x20004702   0x00000002   PAD
+    0x20004704   0x20004704   0x0000003a   Code   RO           43    .text.SysTick_Init_hc32  main.o
+    0x2000473e   0x2000473e   0x00000002   PAD
+    0x20004740   0x20004740   0x00000012   Code   RO           47    .text.SysTick_IrqHandler  main.o
+    0x20004752   0x20004752   0x00000002   PAD
+    0x20004754   0x20004754   0x00000016   Code   RO           45    .text.SysTick_Stop_time  main.o
+    0x2000476a   0x2000476a   0x00000002   PAD
+    0x2000476c   0x2000476c   0x000000a4   Code   RO           80    .text.SystemCoreClockUpdate  system_hc32f46x.o
+    0x20004810   0x20004810   0x000000b4   Code   RO           78    .text.SystemInit    system_hc32f46x.o
+    0x200048c4   0x200048c4   0x0000019c   Code   RO          549    .text.USART_FuncCmd  hc32f46x_usart.o
+    0x20004a60   0x20004a60   0x00000008   Code   RO          597    .text.USART_RecData  hc32f46x_usart.o
+    0x20004a68   0x20004a68   0x000003c8   Code   RO          599    .text.USART_SetBaudrate  hc32f46x_usart.o
+    0x20004e30   0x20004e30   0x0000014a   Code   RO          537    .text.USART_UART_Init  hc32f46x_usart.o
+    0x20004f7a   0x20004f7a   0x00000002   PAD
+    0x20004f7c   0x20004f7c   0x00000008   Code   RO          123    .text.UsageFault_Handler  hc32f46x_interrupts.o
+    0x20004f84   0x20004f84   0x0000000c   Code   RO           30    .text.UsartRxIrqCallback  myusart.o
+    0x20004f90   0x20004f90   0x000001b0   Code   RO         1161    .text._PrintUnsigned  segger_rtt_printf.o
+    0x20005140   0x20005140   0x00000002   Code   RO            2    .text.app           app.o
+    0x20005142   0x20005142   0x00000002   PAD
+    0x20005144   0x20005144   0x00000088   Code   RO         1173    .text.calc_func     core_list_join.o
+    0x200051cc   0x200051cc   0x00000004   Code   RO         1304    .text.check_data_types  core_util.o
+    0x200051d0   0x200051d0   0x0000014c   Code   RO           12    .text.clk_test      myclk.o
+    0x2000531c   0x2000531c   0x0000047e   Code   RO         1181    .text.core_bench_list  core_list_join.o
+    0x2000579a   0x2000579a   0x00000002   PAD
+    0x2000579c   0x2000579c   0x00000026   Code   RO         1222    .text.core_bench_matrix  core_matrix.o
+    0x200057c2   0x200057c2   0x00000002   PAD
+    0x200057c4   0x200057c4   0x00000232   Code   RO         1275    .text.core_bench_state  core_state.o
+    0x200059f6   0x200059f6   0x00000002   PAD
+    0x200059f8   0x200059f8   0x00000268   Code   RO         1238    .text.core_init_matrix  core_matrix.o
+    0x20005c60   0x20005c60   0x00000148   Code   RO         1279    .text.core_init_state  core_state.o
+    0x20005da8   0x20005da8   0x000003be   Code   RO         1193    .text.core_list_init  core_list_join.o
+    0x20006166   0x20006166   0x00000002   PAD
+    0x20006168   0x20006168   0x000001fe   Code   RO         1277    .text.core_state_transition  core_state.o
+    0x20006366   0x20006366   0x00000002   PAD
+    0x20006368   0x20006368   0x00000006   Code   RO         1302    .text.crc16         core_util.o
+    0x2000636e   0x2000636e   0x00000002   PAD
+    0x20006370   0x20006370   0x00000116   Code   RO         1298    .text.crcu16        core_util.o
+    0x20006486   0x20006486   0x00000002   PAD
+    0x20006488   0x20006488   0x00000016   Code   RO         1300    .text.crcu32        core_util.o
+    0x2000649e   0x2000649e   0x00000002   PAD
+    0x200064a0   0x200064a0   0x0000007c   Code   RO           97    .text.enIrqRegistration  hc32f46x_interrupts.o
+    0x2000651c   0x2000651c   0x0000000e   Code   RO           41    .text.fputc         main.o
+    0x2000652a   0x2000652a   0x00000002   PAD
+    0x2000652c   0x2000652c   0x00000028   Code   RO         1294    .text.get_seed_32   core_util.o
+    0x20006554   0x20006554   0x0000000c   Code   RO         1252    .text.get_time      core_portme.o
+    0x20006560   0x20006560   0x00000100   Code   RO           57    .text.main          main.o
+    0x20006660   0x20006660   0x00000ec6   Code   RO         1224    .text.matrix_test   core_matrix.o
+    0x20007526   0x20007526   0x00000002   PAD
+    0x20007528   0x20007528   0x00000006   Code   RO         1258    .text.portable_fini  core_portme.o
+    0x2000752e   0x2000752e   0x00000002   PAD
+    0x20007530   0x20007530   0x00000006   Code   RO         1256    .text.portable_init  core_portme.o
+    0x20007536   0x20007536   0x00000002   PAD
+    0x20007538   0x20007538   0x000000cc   Code   RO           49    .text.read_uid      main.o
+    0x20007604   0x20007604   0x00000014   Code   RO         1248    .text.start_time    core_portme.o
+    0x20007618   0x20007618   0x00000004   Code   RO         1250    .text.stop_time     core_portme.o
+    0x2000761c   0x2000761c   0x00000004   PAD
+    0x20007620   0x20007620   0x00000020   Code   RO         1254    .text.time_in_secs  core_portme.o
+    0x20007640   0x20007640   0x0000000c   Code   RO           28    .text.tuya_UsartRxIrqCallback  myusart.o
+    0x2000764c   0x2000764c   0x00000194   Code   RO           26    .text.usart_init    myusart.o
+    0x200077e0   0x200077e0   0x00000012   Code   RO         1080    OSKERNEL            hardfaulthandler.o
+    0x200077f2   0x200077f2   0x00000002   PAD
+    0x200077f4   0x200077f4   0x00000020   Code   RO         1565    i.__0printf         mc_w.l(printfa.o)
+    0x20007814   0x20007814   0x0000000e   Code   RO         1641    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x20007822   0x20007822   0x00000002   Code   RO         1642    i.__scatterload_null  mc_w.l(handlers.o)
+    0x20007824   0x20007824   0x0000000e   Code   RO         1643    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x20007832   0x20007832   0x00000002   PAD
+    0x20007834   0x20007834   0x00000184   Code   RO         1572    i._fp_digits        mc_w.l(printfa.o)
+    0x200079b8   0x200079b8   0x000006dc   Code   RO         1573    i._printf_core      mc_w.l(printfa.o)
+    0x20008094   0x20008094   0x00000024   Code   RO         1574    i._printf_post_padding  mc_w.l(printfa.o)
+    0x200080b8   0x200080b8   0x0000002e   Code   RO         1575    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x200080e6   0x200080e6   0x00000002   PAD
+    0x200080e8   0x200080e8   0x0000000c   Code   RO         1318    i.putchar           mc_w.l(putchar.o)
+    0x200080f4   0x200080f4   0x00000024   Code   RO         1316    i.puts              mc_w.l(puts.o)
+    0x20008118   0x20008118   0x00000009   Data   RO           32    .rodata..L__const.usart_init.stcInitCfg  myusart.o
+    0x20008121   0x20008121   0x00000003   PAD
+    0x20008124   0x20008124   0x00000010   Data   RO         1284    .rodata.errpat      core_state.o
+    0x20008134   0x20008134   0x00000010   Data   RO         1282    .rodata.floatpat    core_state.o
+    0x20008144   0x20008144   0x00000010   Data   RO         1281    .rodata.intpat      core_state.o
+    0x20008154   0x20008154   0x0000000a   Data   RO         1211    .rodata.list_known_crc  core_main.o
+    0x2000815e   0x2000815e   0x0000000a   Data   RO         1212    .rodata.matrix_known_crc  core_main.o
+    0x20008168   0x20008168   0x00000010   Data   RO         1283    .rodata.scipat      core_state.o
+    0x20008178   0x20008178   0x0000000a   Data   RO         1213    .rodata.state_known_crc  core_main.o
+    0x20008182   0x20008182   0x0000001e   Data   RO           14    .rodata.str1.1      myclk.o
+    0x200081a0   0x200081a0   0x0000006c   Data   RO           59    .rodata.str1.1      main.o
+    0x2000820c   0x2000820c   0x00000009   Data   RO         1148    .rodata.str1.1      segger_rtt.o
+    0x20008215   0x20008215   0x00000360   Data   RO         1209    .rodata.str1.1      core_main.o
+    0x20008575   0x20008575   0x00000080   Data   RO         1285    .rodata.str1.1      core_state.o
+    0x200085f5   0x200085f5   0x00000003   PAD
+    0x200085f8   0x200085f8   0x00000020   Data   RO         1640    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20010000, Load base: 0x20008618, Size: 0x00009300, Max: 0x00010000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20010000   0x20008618   0x00000004   Data   RW         1619    .data               mc_w.l(stdout.o)
+    0x20010004   0x2000861c   0x00000008   Data   RW           82    .data..L_MergedGlobals  system_hc32f46x.o
+    0x2001000c   0x20008624   0x00000004   Data   RW         1266    .data.default_num_contexts  core_portme.o
+    0x20010010   0x20008628   0x00000004   Data   RW         1262    .data.seed3_volatile  core_portme.o
+    0x20010014   0x2000862c   0x00000004   Data   RW         1263    .data.seed4_volatile  core_portme.o
+    0x20010018        -       0x00000008   Zero   RW          446    .bss..L_MergedGlobals  hc32f46x_utility.o
+    0x20010020        -       0x00000044   Zero   RW         1073    .bss..L_MergedGlobals  segger_hardfaulthandler.o
+    0x20010064        -       0x00000011   Zero   RW         1150    .bss..L_MergedGlobals  segger_rtt.o
+    0x20010075   0x20008630   0x00000003   PAD
+    0x20010078        -       0x00000200   Zero   RW          415    .bss.IrqHandler     hc32f46x_interrupts.o
+    0x20010278        -       0x00000004   Zero   RW         1265    .bss.Tick           core_portme.o
+    0x2001027c        -       0x00000078   Zero   RW         1146    .bss._SEGGER_RTT    segger_rtt.o
+    0x200102f4        -       0x00001000   Zero   RW         1149    .bss._acUpBuffer    segger_rtt.o
+    0x200112f4        -       0x00000004   Zero   RW         1260    .bss.seed1_volatile  core_portme.o
+    0x200112f8        -       0x00000004   Zero   RW         1261    .bss.seed2_volatile  core_portme.o
+    0x200112fc        -       0x00000004   Zero   RW         1264    .bss.seed5_volatile  core_portme.o
+    0x20011300        -       0x00008000   Zero   RW           68    STACK               startup_hc32f46x.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+         2          0          0          0          0        355   app.o
+      2244          0          0          0          0      17353   core_list_join.o
+      1900        164        894          0          0       4963   core_main.o
+      4436          0          0          0          0      17072   core_matrix.o
+        80          8          0         12         16       1940   core_portme.o
+      1400         64        192          0          0       5102   core_state.o
+       350         20          0          0          0       3305   core_util.o
+        18          0          0          0          0        308   hardfaulthandler.o
+      1698         10          0          0          0      35678   hc32f46x_clk.o
+       132          0          0          0          0      12794   hc32f46x_efm.o
+       646          0          0          0          0      25048   hc32f46x_gpio.o
+      8222          0          0          0        512     123025   hc32f46x_interrupts.o
+        24          0          0          0          0      56535   hc32f46x_pwc.o
+      1718         36          0          0          0      31239   hc32f46x_usart.o
+       496          0          0          0          8      41555   hc32f46x_utility.o
+       572        116        108          0          0       7069   main.o
+       452        124         30          0          0       2812   myclk.o
+       428          0          9          0          0      18152   myusart.o
+       168          0          0          0         68       2741   segger_hardfaulthandler.o
+       708          0          9          0       4233      29457   segger_rtt.o
+      2170        198          0          0          0       7726   segger_rtt_printf.o
+        92         26        640          0      32768        848   startup_hc32f46x.o
+       344         12          0          8          0      14401   system_hc32f46x.o
+
+    ----------------------------------------------------------------------
+     28448        778       1920         20      37608     459478   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+       148          0          6          0          3          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+         0          0          0          0          0          0   iusefp.o
+        30          0          0          0          0         68   llshl.o
+        36          0          0          0          0         68   llsshr.o
+        32          0          0          0          0         68   llushr.o
+        36          0          0          0          0         68   memcpya.o
+        36          0          0          0          0        108   memseta.o
+      2258         90          0          0          0        452   printfa.o
+        12          6          0          0          0         68   putchar.o
+        36          6          0          0          0         80   puts.o
+         0          0          0          4          0          0   stdout.o
+        44          0          0          0          0         80   uidiv.o
+        98          0          0          0          0         92   uldiv.o
+        48          0          0          0          0         68   cdrcmple.o
+       334          0          0          0          0        148   dadd.o
+        54          0          0          0          0         80   dcmpge.o
+        54          0          0          0          0         80   dcmple.o
+       222          0          0          0          0        100   ddiv.o
+       186          0          0          0          0        176   depilogue.o
+        50          0          0          0          0         76   dfixui.o
+        48          0          0          0          0         68   dfixul.o
+        26          0          0          0          0         76   dfltui.o
+       228          0          0          0          0         96   dmul.o
+
+    ----------------------------------------------------------------------
+      3960        118          0          4          0       2188   Library Totals
+         6          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+      2704        118          0          4          0       1220   mc_w.l
+      1250          0          0          0          0        968   mf_w.l
+
+    ----------------------------------------------------------------------
+      3960        118          0          4          0       2188   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     32408        896       1920         24      37608     460354   Grand Totals
+     32408        896       1920         24      37608     460354   ELF Image Totals
+     32408        896       1920         24          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                34328 (  33.52kB)
+    Total RW  Size (RW Data + ZI Data)             37632 (  36.75kB)
+    Total ROM Size (Code + RO Data + RW Data)      34352 (  33.55kB)
+
+==============================================================================
+

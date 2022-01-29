@@ -19,4 +19,7 @@ data_pack: 192字节
 .\test_static_lib(AC6)(flashcode)(lib)
 为静态库封装及调试的例子
 
+.\test_coremark(AC6)(flashcode)(ramcode)
+为基准测试例子程序
+
 
