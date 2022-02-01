@@ -336,7 +336,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define></Define>
+              <Define>__FPU_PRESENT,__FPU_USED,__ACCELERATE_PRESENT</Define>
               <Undefine></Undefine>
               <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\application\coremark</IncludePath>
             </VariousControls>
@@ -951,7 +951,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>VECT_TAB_SRAM</Define>
+              <Define>VECT_TAB_SRAM,__FPU_PRESENT,__FPU_USED,__ACCELERATE_PRESENT</Define>
               <Undefine></Undefine>
               <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\application\coremark</IncludePath>
             </VariousControls>

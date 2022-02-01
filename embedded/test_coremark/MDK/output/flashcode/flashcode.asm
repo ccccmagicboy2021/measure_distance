@@ -3,7 +3,7 @@
 
 ** ELF Header Information
 
-    File Name: D:\cccc2020\CODE\workspace\bfsk_acm32\embedded\test_coremark\MDK\output\flashcode\flashcode.axf
+    File Name: d:\cccc2020\CODE\workspace\bfsk_acm32\embedded\test_coremark\MDK\output\flashcode\flashcode.axf
 
     Machine class: ELFCLASS32 (32-bit)
     Data encoding: ELFDATA2LSB (Little endian)
@@ -31,8 +31,8 @@
     Program header entries: 1
     Section header entries: 16
 
-    Program header offset: 183696 (0x0002cd90)
-    Section header offset: 183728 (0x0002cdb0)
+    Program header offset: 183776 (0x0002cde0)
+    Section header offset: 183808 (0x0002ce00)
 
     Section header string table index: 15
 
@@ -5903,8 +5903,8 @@
         0x00003cb8:    f04f0800    O...    MOV      r8,#0
         0x00003cbc:    f7fdffbe    ....    BL       SEGGER_RTT_printf ; 0x1c3c
         0x00003cc0:    f6450122    E.".    MOV      r1,#0x5822
-        0x00003cc4:    f6450282    E...    MOV      r2,#0x5882
-        0x00003cc8:    f645038e    E...    MOV      r3,#0x588e
+        0x00003cc4:    f645028b    E...    MOV      r2,#0x588b
+        0x00003cc8:    f6450382    E...    MOV      r3,#0x5882
         0x00003ccc:    f2c00100    ....    MOVT     r1,#0
         0x00003cd0:    2000        .       MOVS     r0,#0
         0x00003cd2:    f2c00200    ....    MOVT     r2,#0
@@ -8616,15 +8616,16 @@
         0x00005878:    3d4b4c43    CLK=    DCD    1028344899
         0x0000587c:    7a486425    %dHz    DCD    2051564581
         0x00005880:    000a        ..      DCW    10
-    .L.str.4
-        0x00005882:    614a        Ja      DCW    24906
-        0x00005884:    3932206e    n 29    DCD    959586414
-        0x00005888:    32303220     202    DCD    842019360
-        0x0000588c:    0032        2.      DCW    50
     .L.str.5
-        0x0000588e:    3531        15      DCW    13617
-        0x00005890:    3a35323a    :25:    DCD    976564794
-        0x00005894:    3535        55      DCW    13621
+        0x00005882:    3331        13      DCW    13105
+        0x00005884:    3a35353a    :55:    DCD    976565562
+        0x00005888:    3030        00      DCW    12336
+        0x0000588a:    00          .       DCB    0
+    .L.str.4
+        0x0000588b:    46          F       DCB    70
+        0x0000588c:    20206265    eb      DCD    538993253
+        0x00005890:    30322031    1 20    DCD    808591409
+        0x00005894:    3232        22      DCW    12850
         0x00005896:    00          .       DCB    0
     .L.str.2
         0x00005897:    1b          .       DCB    27
@@ -9008,7 +9009,7 @@
 
 
 ** Section #7 '.debug_line' (SHT_PROGBITS)
-    Size   : 31543 bytes
+    Size   : 31623 bytes
 
 
 ** Section #8 '.debug_loc' (SHT_PROGBITS)

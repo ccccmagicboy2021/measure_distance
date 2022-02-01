@@ -3,7 +3,7 @@
 
 ** ELF Header Information
 
-    File Name: D:\cccc2020\CODE\workspace\bfsk_acm32\embedded\test_coremark\MDK\output\ramcode\ramcode.axf
+    File Name: d:\cccc2020\CODE\workspace\bfsk_acm32\embedded\test_coremark\MDK\output\ramcode\ramcode.axf
 
     Machine class: ELFCLASS32 (32-bit)
     Data encoding: ELFDATA2LSB (Little endian)
@@ -31,8 +31,8 @@
     Program header entries: 1
     Section header entries: 16
 
-    Program header offset: 183672 (0x0002cd78)
-    Section header offset: 183704 (0x0002cd98)
+    Program header offset: 183752 (0x0002cdc8)
+    Section header offset: 183784 (0x0002cde8)
 
     Section header string table index: 15
 
@@ -5902,8 +5902,8 @@
         0x20003cb4:    f04f0800    O...    MOV      r8,#0
         0x20003cb8:    f7fdffc0    ....    BL       SEGGER_RTT_printf ; 0x20001c3c
         0x20003cbc:    f645011a    E...    MOV      r1,#0x581a
-        0x20003cc0:    f6450283    E...    MOV      r2,#0x5883
-        0x20003cc4:    f645037a    E.z.    MOV      r3,#0x587a
+        0x20003cc0:    f645027a    E.z.    MOV      r2,#0x587a
+        0x20003cc4:    f6450386    E...    MOV      r3,#0x5886
         0x20003cc8:    f2c20100    ....    MOVT     r1,#0x2000
         0x20003ccc:    2000        .       MOVS     r0,#0
         0x20003cce:    f2c20200    ....    MOVT     r2,#0x2000
@@ -8614,16 +8614,15 @@
         0x20005870:    3d4b4c43    CLK=    DCD    1028344899
         0x20005874:    7a486425    %dHz    DCD    2051564581
         0x20005878:    000a        ..      DCW    10
-    .L.str.5
-        0x2000587a:    3531        15      DCW    13617
-        0x2000587c:    3a30343a    :40:    DCD    976237626
-        0x20005880:    3032        20      DCW    12338
-        0x20005882:    00          .       DCB    0
     .L.str.4
-        0x20005883:    4a          J       DCB    74
-        0x20005884:    32206e61    an 2    DCD    840986209
-        0x20005888:    30322039    9 20    DCD    808591417
-        0x2000588c:    3232        22      DCW    12850
+        0x2000587a:    6546        Fe      DCW    25926
+        0x2000587c:    31202062    b  1    DCD    824189026
+        0x20005880:    32303220     202    DCD    842019360
+        0x20005884:    0032        2.      DCW    50
+    .L.str.5
+        0x20005886:    3331        13      DCW    13105
+        0x20005888:    3a35353a    :55:    DCD    976565562
+        0x2000588c:    3630        06      DCW    13872
         0x2000588e:    00          .       DCB    0
     .L.str.2
         0x2000588f:    1b          .       DCB    27
@@ -9007,7 +9006,7 @@
 
 
 ** Section #7 '.debug_line' (SHT_PROGBITS)
-    Size   : 31539 bytes
+    Size   : 31619 bytes
 
 
 ** Section #8 '.debug_loc' (SHT_PROGBITS)
