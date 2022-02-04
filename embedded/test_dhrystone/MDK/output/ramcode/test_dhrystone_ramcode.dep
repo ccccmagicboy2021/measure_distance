@@ -1,0 +1,1098 @@
+Dependencies for Project 'test_dhrystone', Target 'ramcode': (DO NOT MODIFY !)
+CompilerVersion: 6140001::V6.14.1::ARMCLANG
+F (..\application\app\app.c)(0x61F39D67)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/app.o -MD)
+I (..\application\app\app.h)(0x61DE6AEC)
+I (..\source\sys.h)(0x61E77AAF)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+I (..\application\rtt\SEGGER_RTT.h)(0x606EF8BE)
+I (..\application\rtt\SEGGER_RTT_Conf.h)(0x606EF8BE)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x5F51128E)
+F (..\source\main.c)(0x61FCA3BA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/main.o -MD)
+I (..\source\sys.h)(0x61E77AAF)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+I (..\application\app\app.h)(0x61DE6AEC)
+I (..\application\rtt\SEGGER_RTT.h)(0x606EF8BE)
+I (..\application\rtt\SEGGER_RTT_Conf.h)(0x606EF8BE)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x5F51128E)
+F (..\common\System_ACM32F4.c)(0x61FCA724)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/system_acm32f4.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\common\Startup_ACM32F4.s)(0x61F3BFCC)(--target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -masm=auto -c-gdwarf-3 -Wa,armasm,--pd,"__MICROLIB SETA 1"-Id:/Keil_v5/ARM/CMSIS/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 532"-o ./output/ramcode/startup_acm32f4.o)
+F (..\common\System_Accelerate.lib)(0x613B1094)()
+F (..\driver\src\HAL_CAN.c)(0x613B1095)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/hal_can.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\driver\src\HAL_COMP.c)(0x613B1094)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/hal_comp.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\driver\src\HAL_CRC.c)(0x613B1095)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/hal_crc.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\driver\src\HAL_DAC.c)(0x613B1094)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/hal_dac.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\driver\src\HAL_DMA.c)(0x613B1095)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/hal_dma.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\driver\src\HAL_EFlash.c)(0x613B1095)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/hal_eflash.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\driver\src\HAL_EXTI.c)(0x613B1095)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/hal_exti.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\driver\src\HAL_FSUSB.c)(0x613B1094)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/hal_fsusb.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\driver\src\HAL_GPIO.c)(0x613B1094)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/hal_gpio.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\driver\src\HAL_I2C.c)(0x613B1094)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/hal_i2c.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\driver\src\HAL_I2S.c)(0x613B1094)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/hal_i2s.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\driver\src\HAL_IWDT.c)(0x613B1095)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/hal_iwdt.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\driver\src\HAL_LPUART.c)(0x613B1095)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/hal_lpuart.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\driver\src\HAL_OPA.c)(0x613B1094)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/hal_opa.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\driver\src\HAL_RTC.c)(0x613B1094)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/hal_rtc.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\driver\src\HAL_SPI.c)(0x613B1094)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/hal_spi.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\driver\src\HAL_TIMER.c)(0x613B1094)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/hal_timer.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\driver\src\HAL_TIMER_EX.c)(0x613B1095)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/hal_timer_ex.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\driver\src\HAL_UART.c)(0x613B3657)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/hal_uart.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\driver\src\HAL_UART_EX.c)(0x613B1095)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/hal_uart_ex.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\driver\src\HAL_WDT.c)(0x613B1094)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/hal_wdt.o -MD)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+F (..\driver\src\HAL_AES_20210325.lib)(0x613B1095)()
+F (..\driver\src\HAL_EFlash_EX.lib)(0x613B1094)()
+F (..\driver\src\HAL_FAU_20210325.lib)(0x613B1094)()
+F (..\driver\src\HAL_HRNG_20210325.lib)(0x613B1094)()
+F (..\driver\src\HAL_SHA1_20210325.lib)(0x613B1094)()
+F (..\driver\src\HAL_SHA256_20210325.lib)(0x613B1095)()
+F (..\application\HardFaultHandlerMDK\SEGGER_HardFaultHandler.c)(0x61F3AADF)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/segger_hardfaulthandler.o -MD)
+F (..\application\HardFaultHandlerMDK\HardFaultHandler.S)(0x5B5D7BFC)(--target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -masm=auto -c-gdwarf-3 -D__MICROLIB-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION=532-o ./output/ramcode/hardfaulthandler.o)
+F (..\application\rtt\SEGGER_RTT.c)(0x606EF8BE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/segger_rtt.o -MD)
+I (..\application\rtt\SEGGER_RTT.h)(0x606EF8BE)
+I (..\application\rtt\SEGGER_RTT_Conf.h)(0x606EF8BE)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+F (..\application\rtt\SEGGER_RTT_printf.c)(0x606EF8BE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/segger_rtt_printf.o -MD)
+I (..\application\rtt\SEGGER_RTT.h)(0x606EF8BE)
+I (..\application\rtt\SEGGER_RTT_Conf.h)(0x606EF8BE)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x5F51128E)
+F (..\application\dhrystone\dhry_1.c)(0x61FCA6F4)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/dhry_1.o -MD)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5F51128E)
+I (..\application\dhrystone\dhry.h)(0x61FCA363)
+I (d:\Keil_v5\ARM\ARMCLANG\include\time.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
+I (..\source\sys.h)(0x61E77AAF)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5F51128E)
+I (..\common\System_ACM32F4.h)(0x613B3748)
+I (..\driver\Inc\ACM32Fxx_HAL.h)(0x613B1095)
+I (..\common\ACM32F4.h)(0x613B1094)
+I (..\cmsis\core_cm33.h)(0x613B1094)
+I (..\cmsis\cmsis_version.h)(0x613B1094)
+I (..\cmsis\cmsis_compiler.h)(0x613B1094)
+I (..\cmsis\cmsis_armclang.h)(0x613B1094)
+I (..\cmsis\mpu_armv8.h)(0x613B1094)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5F51128E)
+I (..\common\System_Accelerate.h)(0x613B1094)
+I (..\driver\Inc\HAL_DMA.h)(0x613B1095)
+I (..\driver\Inc\HAL_GPIO.h)(0x613B1095)
+I (..\driver\Inc\HAL_UART.h)(0x61F39835)
+I (..\driver\Inc\HAL_UART_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_ADC.h)(0x613B1095)
+I (..\driver\Inc\HAL_DAC.h)(0x613B1095)
+I (..\driver\Inc\HAL_EXTI.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2C.h)(0x613B1095)
+I (..\driver\Inc\HAL_I2S.h)(0x613B1095)
+I (..\driver\Inc\HAL_RTC.h)(0x613B1095)
+I (..\driver\Inc\HAL_SPI.h)(0x613B1095)
+I (..\driver\Inc\HAL_IWDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash.h)(0x613B1095)
+I (..\driver\Inc\HAL_EFlash_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_OPA.h)(0x613B1095)
+I (..\driver\Inc\HAL_COMP.h)(0x613B1095)
+I (..\driver\Inc\HAL_CAN.h)(0x613B1095)
+I (..\driver\Inc\HAL_LPUART.h)(0x613B1095)
+I (..\driver\Inc\HAL_WDT.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER.h)(0x613B1095)
+I (..\driver\Inc\HAL_TIMER_EX.h)(0x613B1095)
+I (..\driver\Inc\HAL_FSUSB.h)(0x613B1095)
+I (..\driver\Inc\HAL_CRC.h)(0x613B1095)
+I (..\driver\Inc\HAL_AES.h)(0x613B1095)
+I (..\driver\Inc\HAL_FAU.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA1.h)(0x613B1095)
+I (..\driver\Inc\HAL_SHA256.h)(0x613B1095)
+I (..\driver\Inc\HAL_HRNG.h)(0x613B1095)
+I (..\application\app\app.h)(0x61DE6AEC)
+I (..\application\rtt\SEGGER_RTT.h)(0x606EF8BE)
+I (..\application\rtt\SEGGER_RTT_Conf.h)(0x606EF8BE)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x5F51128E)
+F (..\application\dhrystone\dhry_2.c)(0x4C80BE90)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Ofast -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../application/app -I ../application/HardFaultHandlerMDK -I ../application/rtt -I ../cmsis -I ../common -I ../driver/Inc -I ../source -I ../application/coremark -I ../application/dhrystone-Id:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="532" -DVECT_TAB_SRAM -D__FPU_PRESENT -D__FPU_USED -D__ACCELERATE_PRESENT -DMSC_CLOCK-o ./output/ramcode/dhry_2.o -MD)
+I (d:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5F51128E)
+I (..\application\dhrystone\dhry.h)(0x61FCA363)
+I (d:\Keil_v5\ARM\ARMCLANG\include\time.h)(0x5F51128E)
+I (d:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5F51128E)
