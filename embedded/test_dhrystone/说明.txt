@@ -1,0 +1,9 @@
+1. 上电后循环启动计算，usart3输出结果：
+flashcode: 
+DMIPS = 194.18
+DMIPS/MHz = 0.97
+ramcode: 
+DMIPS = 81.26
+DMIPS/MHz = 0.41
+
+
