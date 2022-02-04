@@ -1,0 +1,12 @@
+1. pt32基本工程模板(keil5)
+2. USART：TX - PA9，TX - PA10，波特率115200
+3. SysTick：时钟滴答配置为1MS
+4. USER1按下后运行跑分，完成后通过串口打印出跑分结果
+flashcode: 
+DMIPS = 61.68
+DMIPS/MHz = 0.39
+ramcode: 
+DMIPS = 136.85
+DMIPS/MHz = 0.86
+
+
