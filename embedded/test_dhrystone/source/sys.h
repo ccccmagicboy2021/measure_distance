@@ -4,12 +4,16 @@
 #include "stdint.h"
 #include <stdio.h>
 
-#include "delay.h"
+#include "stm32f10x.h"
 
 #include "app.h"
 #include "SEGGER_RTT.h"
 #include "SEGGER_RTT_Conf.h"
 
+extern  uint32_t SystemCoreClock;
+
+#define assert_param(expr) ((void)0)
+    
 #define CV_LOG(fmt, ...) \
 do \
 { \

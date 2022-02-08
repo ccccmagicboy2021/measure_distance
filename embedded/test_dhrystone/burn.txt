@@ -1,11 +1,10 @@
 usb
 si 1
 speed 25000
-device N32G4FRKE
+device STM32F103CB
 r
 h
 loadfile .\MDK\output\flashcode\flashcode.hex
-loadbin .\MDK\bin\flashcode.bin 0x08000000
 r
 g
 qc

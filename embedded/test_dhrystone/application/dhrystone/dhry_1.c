@@ -385,7 +385,7 @@ int dhry (void)
     
     Vax_Mips = Dhrystones_Per_Second / 1757.0;
     
-    DMIPS_MHz = Vax_Mips/(SYSCLK_FREQ/1000/1000);
+    DMIPS_MHz = Vax_Mips/(SystemCoreClock/1000/1000);
 #endif
     printf ("Microseconds for one run through Dhrystone: ");
     printf ("%6.1f \n", Microseconds);
