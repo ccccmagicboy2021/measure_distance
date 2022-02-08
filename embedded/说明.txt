@@ -1,4 +1,3 @@
-.\test_coremark(KEIL5)(AC6)(flashcode)(ramcode)(STM32)(OK?)
-.\test_dhrystone(KEIL5)(AC6)(flashcode)(ramcode)(STM32)(OK?)
+.\test_dhrystone(KEIL5)(AC6)(flashcode)(ramcode)(STM32)(OK)
 
 
