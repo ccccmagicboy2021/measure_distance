@@ -101,7 +101,7 @@ HAL_StatusTypeDef HAL_DMA_Init(DMA_HandleTypeDef *hdma)
     hdma->Instance->CONFIG = hdma->Init.Data_Flow | hdma->Init.Request_ID;
     
     /* Config Channel Control */
-    //hdma->Instance->CTRL = DMA_CHANNEL_CTRL_ITC;
+    hdma->Instance->CTRL = DMA_CHANNEL_CTRL_ITC;
     /* Source or Desination address increase */
     hdma->Instance->CTRL |= (hdma->Init.Desination_Inc | hdma->Init.Source_Inc);
     /* Source or Desination date width */

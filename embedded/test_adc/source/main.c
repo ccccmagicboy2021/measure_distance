@@ -272,15 +272,16 @@ static void dma_initial(ADC_HandleTypeDef* hadc)
     Dma_Adc_Handle.DMA_ITC_Callback = NULL;
     Dma_Adc_Handle.DMA_IE_Callback  = NULL;
 
-    HAL_DMA_Init(&Dma_Adc_Handle);//hal disable the interrupt
+    HAL_DMA_Init(&Dma_Adc_Handle);
+    CLEAR_BIT(DMA_Channel2->CTRL, DMA_CHANNEL_CTRL_ITC);   //disable the interrupt
 
     hadc->DMA_Handle = &Dma_Adc_Handle;
 }
 
 void ADC_IRQHandler(void)
 {
-    HAL_ADC_IRQHandler(&ADC_Handle);
-    NVIC_ClearPendingIRQ(ADC_IRQn); 
+    //HAL_ADC_IRQHandler(&ADC_Handle);
+    //NVIC_ClearPendingIRQ(ADC_IRQn); 
 }
 
 /************************************************************************
@@ -289,7 +290,7 @@ void ADC_IRQHandler(void)
  ************************************************************************/ 
 void DMA_IRQHandler(void)
 {
-    HAL_DMA_IRQHandler(ADC_Handle.DMA_Handle);
+    //HAL_DMA_IRQHandler(ADC_Handle.DMA_Handle);
 }
 
 int main(void)
