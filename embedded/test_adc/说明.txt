@@ -1,0 +1,7 @@
+1. acm32基本工程模板(keil5)(AC6)
+2. ADC只能使用12bit位宽，可自校准Vref，dma以1msample/s连接搬运到变量（中间无dma中断）
+3. keil5里面的jlink直接支持有问题(daplink以jlink方式运行的话需要j-link 软件v7以上版本)
+4. 开发板板载daplink在flash烧写后程序不会自动运行，但是daplink以jlink方式运行是可以的
+5. 串口uart1波特率115200 8n1
+
+

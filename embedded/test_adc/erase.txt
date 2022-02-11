@@ -1,0 +1,11 @@
+usb
+si swd
+speed 25000
+device ACM32F403KEU7
+r
+h
+erase
+go
+qc
+
+
