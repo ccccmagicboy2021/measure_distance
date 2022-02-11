@@ -1,4 +1,11 @@
 import os
+from win32api import GetFileVersionInfo, LOWORD, HIWORD
+
+def get_version_number (filename):
+  info = GetFileVersionInfo (filename, "\\")
+  ms = info['FileVersionMS']
+  ls = info['FileVersionLS']
+  return HIWORD (ms), LOWORD (ms), HIWORD (ls), LOWORD (ls)
 
 DLL_FILE = "JLinkARM.dll"
 DLL_FILE_OUTPUT = "JLinkARM_CV.dll"
@@ -32,6 +39,12 @@ with open(DLL_FILE, "rb") as f1:
                                     byte_list[i-15] = 0xEB
                                     print(f'crack magic byte to {byte_list[i-15]}')
 
+ver_str = ".".join ([str (i) for i in get_version_number (DLL_FILE)])
+#print(ver_str)
+name, ext = os.path.splitext(DLL_FILE)
+DLL_FILE_OUTPUT = name + '_v' + ver_str + ext
+#print(DLL_FILE_OUTPUT)
+
 if os.path.isfile(DLL_FILE_OUTPUT):
     print('file exist!')
     os.remove(DLL_FILE_OUTPUT)
@@ -39,6 +52,6 @@ if os.path.isfile(DLL_FILE_OUTPUT):
 
 with open(DLL_FILE_OUTPUT,"wb+") as f2:
     f2.write(bytearray(byte_list))
-    print('new file ok!')
+    print(f'{DLL_FILE_OUTPUT} new file ok!')
 
 
