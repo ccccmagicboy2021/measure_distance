@@ -13,7 +13,6 @@ static DMA_HandleTypeDef  Dma_Adc_Handle;
 static volatile uint32_t gu32_ITC_Conunt = 0;    // transfer complete interrupt count
 static volatile uint32_t gu32_IE_Conunt = 0;     // transfer error interrupt count
 
-#define TIM_CLOCK_FREQ            (8000000U)
 TIM_HandleTypeDef TIM_Handler;
 
 void segger_init(void)
@@ -32,9 +31,9 @@ void led_init(void)
     GPIOF_Handle.Pull      = GPIO_PULLUP;
     GPIOF_Handle.Alternate = GPIO_FUNCTION_0;
 
-    HAL_GPIO_Init(GPIOF, &GPIOF_Handle);
+    HAL_GPIO_Init(GPIOF, &GPIOF_Handle);        //PF3
     
-    HAL_GPIO_WritePin(GPIOF, GPIO_PIN_3, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOF, GPIO_PIN_3, GPIO_PIN_SET); //OFF
 }
 
 void user_button_init(void)
@@ -46,7 +45,7 @@ void user_button_init(void)
     GPIOB_Handle.Pull      = GPIO_PULLUP;
     GPIOB_Handle.Alternate = GPIO_FUNCTION_0; 
     
-    HAL_GPIO_Init(GPIOB, &GPIOB_Handle);
+    HAL_GPIO_Init(GPIOB, &GPIOB_Handle);    //PB9
     
     NVIC_ClearPendingIRQ(GPIOAB_IRQn);
     NVIC_EnableIRQ(GPIOAB_IRQn);
@@ -317,6 +316,7 @@ void tim1_initial(void)
 {
 	TIM_OC_InitTypeDef Tim_OC_Init_Para;   
     uint32_t timer_clock;
+    TIM_MasterConfigTypeDef sMasterConfig = {0};
     
     timer_clock = System_Get_APBClock(); 
     
@@ -329,17 +329,12 @@ void tim1_initial(void)
     
 	TIM_Handler.Instance = TIM1;
 	TIM_Handler.Init.ARRPreLoadEn = TIM_ARR_PRELOAD_ENABLE;        
-	TIM_Handler.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1; 
+	TIM_Handler.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;    //clk for dead zone
 	TIM_Handler.Init.CounterMode = TIM_COUNTERMODE_UP; 
 	TIM_Handler.Init.RepetitionCounter = 0;  
-	TIM_Handler.Init.Prescaler = (timer_clock/TIM_CLOCK_FREQ) - 1;
-    
-	if (timer_clock%TIM_CLOCK_FREQ > TIM_CLOCK_FREQ/2) 
-	{
-		TIM_Handler.Init.Prescaler = TIM_Handler.Init.Prescaler + 1;  
-	}
-    
-	TIM_Handler.Init.Period = (TIM_CLOCK_FREQ/1000000)*10 - 1;  // period = 10us      
+	TIM_Handler.Init.Prescaler = 180 - 1;
+	//TIM_Handler.Init.Period = 495 - 1;  //490~500 adjust for 1KHZ ch2ch3
+    TIM_Handler.Init.Period = 248 - 1;  //246~250 adjust for 2KHZ ch2ch3
 	
 	HAL_TIMER_MSP_Init(&TIM_Handler);
 	HAL_TIMER_Base_Init(&TIM_Handler);
@@ -361,8 +356,12 @@ void tim1_initial(void)
 	Tim_OC_Init_Para.OCFastMode =  OUTPUT_FAST_MODE_DISABLE;
 	Tim_OC_Init_Para.Pulse = (TIM_Handler.Init.Period + 1)/2;   // 50%
 	HAL_TIMER_Output_Config(TIM_Handler.Instance, &Tim_OC_Init_Para, TIM_CHANNEL_3);
-    
-	TIM1_MSP_Post_Init();  
+
+    sMasterConfig.MasterOutputTrigger = TIM_TRGO_UPDATE;
+    sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;	
+	HAL_TIMER_Master_Mode_Config(TIM_Handler.Instance, &sMasterConfig);  
+
+    TIM1_MSP_Post_Init();
 }
 
 int main(void)
