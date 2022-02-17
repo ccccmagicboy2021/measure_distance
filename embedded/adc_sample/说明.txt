@@ -1,0 +1,10 @@
+1. pt32基本工程模板(keil5)
+2. USART：TX - PA9，TX - PA10，波特率115200
+3. SysTick：时钟滴答配置为1MS
+4. USER1按下后运行fft一次
+flashcode: 
+3ms~4ms
+ramcode: 
+<1ms
+
+

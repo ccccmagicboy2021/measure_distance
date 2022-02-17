@@ -6,5 +6,6 @@
 .\test_coremark(KEIL5)(AC6)(flashcode)(ramcode)(PT32)(OK)
 .\test_dhrystone(KEIL5)(AC6)(flashcode)(ramcode)(PT32)(OK)
 .\test_fft(KEIL5)(AC6)(flashcode)(ramcode)(PT32)(OK)
+.\adc_sample(KEIL5)(AC6)(flashcode)(ramcode)(PT32)(OK?)
 
 
