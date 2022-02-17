@@ -1,0 +1,10 @@
+usb
+si swd
+speed 25000
+device STM32F103CB
+r
+h
+go
+qc
+
+

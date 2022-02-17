@@ -1,3 +1,4 @@
-.\test_dhrystone(KEIL5)(AC6)(flashcode)(ramcode)(STM32)(OK)
+.\test_dhrystone(KEIL5)(AC6)(flashcode)(STM32)(OK)
+.\test_fft(KEIL5)(AC6)(flashcode)(STM32)(OK)
 
 
