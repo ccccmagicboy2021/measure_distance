@@ -57,6 +57,7 @@ int main(void)
 #endif
     
     SysTick_Init(SYSTICK_1MS);
+    DWT_INIT(SystemCoreClock);
     
 	while(1)
 	{

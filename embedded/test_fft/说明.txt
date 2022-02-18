@@ -2,8 +2,8 @@
 2. SysTick：时钟滴答配置为1MS
 3. 启动后自动运行1024点fft
 flashcode: 
-4ms
-ramcode: 
-资源不足够编译
+4263us
+ramcode: (fft 函数 only)
+4334us
 
 
