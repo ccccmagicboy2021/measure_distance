@@ -12,6 +12,7 @@
 #include "SEGGER_RTT_Conf.h"
 
 #include "stm32_dsp.h"
+#include "DWTDelay.h"
 
 typedef int32_t  s32;
 typedef int16_t s16;

@@ -42,11 +42,14 @@ void fft_demo(void)
 		lBufInArray[i] = i;
 	}
     
-    start_tick = get_tick();
+    start_tick = DWT_get_tick();
+    //start_tick = get_tick();
     cr4_fft_256_stm32(lBufOutArray,lBufInArray, NPT);
     cr4_fft_1024_stm32(lBufOutArray,lBufInArray, NPT);
-    end_tick = get_tick();
-    printf("the %d points fft is use %d ms\r\n", NPT, end_tick - start_tick);
+    end_tick = DWT_get_tick();
+    //end_tick = get_tick();
+    //printf("the %d points fft is use %d ms\r\n", NPT, end_tick - start_tick);
+    printf("the %d points fft is use %d us\r\n", NPT, (int)((end_tick - start_tick)/160));
     
     start_tick = get_tick();
     do

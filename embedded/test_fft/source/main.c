@@ -233,6 +233,7 @@ int main(void)
 #endif
     
     SysTick_Init(SYSTICK_1MS);     //for delay
+    DWT_INIT(SystemCoreClock);        //for time measure
     
 	while(1)
 	{

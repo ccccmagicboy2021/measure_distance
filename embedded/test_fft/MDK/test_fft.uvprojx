@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>PT32Z192,MSC_CLOCK</Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt;..\application\dhrystone;..\application\fft</IncludePath>
+              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt;..\application\dhrystone;..\application\fft;..\application\DWTDelay</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -387,6 +387,11 @@
               <FileName>app.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\app\app.c</FilePath>
+            </File>
+            <File>
+              <FileName>DWTDelay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\DWTDelay\DWTDelay.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -890,7 +895,7 @@
               <MiscControls></MiscControls>
               <Define>PT32Z192,VECT_TAB_SRAM,MSC_CLOCK</Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt;..\application\dhrystone;..\application\fft</IncludePath>
+              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt;..\application\dhrystone;..\application\fft;..\application\DWTDelay</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -938,6 +943,11 @@
               <FileName>app.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\app\app.c</FilePath>
+            </File>
+            <File>
+              <FileName>DWTDelay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\DWTDelay\DWTDelay.c</FilePath>
             </File>
           </Files>
         </Group>

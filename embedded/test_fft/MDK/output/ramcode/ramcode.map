@@ -55,6 +55,7 @@ Image Symbol Table
     ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
     ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
     ..\application\HardFaultHandlerMDK\HardFaultHandler.S 0x00000000   Number         0  hardfaulthandler.o ABSOLUTE
+    DWTDelay.c                               0x00000000   Number         0  dwtdelay.o ABSOLUTE
     SEGGER_HardFaultHandler.c                0x00000000   Number         0  segger_hardfaulthandler.o ABSOLUTE
     SEGGER_RTT.c                             0x00000000   Number         0  segger_rtt.o ABSOLUTE
     SEGGER_RTT_printf.c                      0x00000000   Number         0  segger_rtt_printf.o ABSOLUTE
@@ -109,80 +110,82 @@ Image Symbol Table
     [Anonymous Symbol]                       0x20001aac   Section        0  pt32z192xx_dma.o(.text.DMA_DirectionConfig)
     [Anonymous Symbol]                       0x20001ac8   Section        0  pt32z192xx_it.o(.text.DMA_Handler)
     [Anonymous Symbol]                       0x20001acc   Section        0  pt32z192xx_dma.o(.text.DMA_PeripheralConfig)
-    [Anonymous Symbol]                       0x20001af8   Section        0  pt32z192xx_it.o(.text.FLASH_Handler)
-    [Anonymous Symbol]                       0x20001afc   Section        0  pt32z192xx_gpio.o(.text.GPIO_ClearITPendingBit)
-    [Anonymous Symbol]                       0x20001b00   Section        0  pt32z192xx_gpio.o(.text.GPIO_ITConfig)
-    [Anonymous Symbol]                       0x20001b0c   Section        0  pt32z192xx_gpio.o(.text.GPIO_Init)
-    [Anonymous Symbol]                       0x20001b70   Section        0  pt32z192xx_gpio.o(.text.GPIO_PinAFConfig)
-    [Anonymous Symbol]                       0x20001b80   Section        0  pt32z192xx_gpio.o(.text.GPIO_SetBits)
-    [Anonymous Symbol]                       0x20001b88   Section        0  pt32z192xx_gpio.o(.text.GPIO_TriTypeConfig)
-    [Anonymous Symbol]                       0x20001bbc   Section        0  segger_hardfaulthandler.o(.text.HardFaultHandler)
-    [Anonymous Symbol]                       0x20001c64   Section        0  pt32z192xx_it.o(.text.NMI_Handler)
-    [Anonymous Symbol]                       0x20001c68   Section        0  pt32z192xx_misc.o(.text.NVIC_Init)
-    [Anonymous Symbol]                       0x20001cd4   Section        0  pt32z192xx_it.o(.text.PA_Handler)
-    [Anonymous Symbol]                       0x20001cd8   Section        0  pt32z192xx_it.o(.text.PB_Handler)
-    [Anonymous Symbol]                       0x20001cdc   Section        0  pt32z192xx_it.o(.text.PC_Handler)
-    [Anonymous Symbol]                       0x20001d2c   Section        0  pt32z192xx_it.o(.text.PD_Handler)
-    [Anonymous Symbol]                       0x20001d30   Section        0  pt32z192xx_pwm.o(.text.PMW_TimeBaseInit)
-    [Anonymous Symbol]                       0x20001d4c   Section        0  pt32z192xx_pwm.o(.text.PWM_BKI_LevelConfig)
-    [Anonymous Symbol]                       0x20001d58   Section        0  pt32z192xx_pwm.o(.text.PWM_BreakInput_Cmd)
-    [Anonymous Symbol]                       0x20001d6c   Section        0  pt32z192xx_pwm.o(.text.PWM_ClearFlag)
-    [Anonymous Symbol]                       0x20001d70   Section        0  pt32z192xx_pwm.o(.text.PWM_Cmd)
-    [Anonymous Symbol]                       0x20001d80   Section        0  pt32z192xx_pwm.o(.text.PWM_GetFlagStatus)
-    [Anonymous Symbol]                       0x20001d8c   Section        0  pt32z192xx_pwm.o(.text.PWM_IntConfig)
-    [Anonymous Symbol]                       0x20001e00   Section        0  pt32z192xx_pwm.o(.text.PWM_OutputInit)
-    [Anonymous Symbol]                       0x20001e68   Section        0  pt32z192xx_it.o(.text.PendSV_Handler)
-    [Anonymous Symbol]                       0x20001e6c   Section        0  pt32z192xx_it.o(.text.RTC_Handler)
-    [Anonymous Symbol]                       0x20001e70   Section        0  segger_rtt.o(.text.SEGGER_RTT_Init)
-    [Anonymous Symbol]                       0x20001ee0   Section        0  segger_rtt.o(.text.SEGGER_RTT_Write)
-    [Anonymous Symbol]                       0x20001f94   Section        0  segger_rtt.o(.text.SEGGER_RTT_WriteNoLock)
-    [Anonymous Symbol]                       0x2000210c   Section        0  segger_rtt_printf.o(.text.SEGGER_RTT_printf)
-    [Anonymous Symbol]                       0x2000212c   Section        0  segger_rtt_printf.o(.text.SEGGER_RTT_vprintf)
-    [Anonymous Symbol]                       0x20002b18   Section        0  pt32z192xx_serial.o(.text.SERIAL_PutChar)
-    [Anonymous Symbol]                       0x20002b40   Section        0  pt32z192xx_it.o(.text.SPI0_Handler)
-    [Anonymous Symbol]                       0x20002b44   Section        0  pt32z192xx_it.o(.text.SPI1_Handler)
-    [Anonymous Symbol]                       0x20002b48   Section        0  pt32z192xx_it.o(.text.SVC_Handler)
-    [Anonymous Symbol]                       0x20002b4c   Section        0  pt32z192xx_it.o(.text.SysTick_Handler)
-    [Anonymous Symbol]                       0x20002b70   Section        0  system_pt32z192xx.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x20002cf0   Section        0  pt32z192xx_it.o(.text.TMR0_Handler)
-    [Anonymous Symbol]                       0x20002d14   Section        0  pt32z192xx_it.o(.text.TMR1_Handler)
-    [Anonymous Symbol]                       0x20002d18   Section        0  pt32z192xx_it.o(.text.TMR2_Handler)
-    [Anonymous Symbol]                       0x20002d1c   Section        0  pt32z192xx_it.o(.text.TMR3_Handler)
-    [Anonymous Symbol]                       0x20002d20   Section        0  pt32z192xx_it.o(.text.TMR4_Handler)
-    [Anonymous Symbol]                       0x20002d24   Section        0  pt32z192xx_it.o(.text.TMR5_Handler)
-    [Anonymous Symbol]                       0x20002d28   Section        0  pt32z192xx_it.o(.text.UART0_Handler)
-    [Anonymous Symbol]                       0x20002d2c   Section        0  pt32z192xx_it.o(.text.UART1_Handler)
-    [Anonymous Symbol]                       0x20002d30   Section        0  pt32z192xx_it.o(.text.UART2_Handler)
-    [Anonymous Symbol]                       0x20002d54   Section        0  pt32z192xx_uart.o(.text.UART_Cmd)
-    [Anonymous Symbol]                       0x20002d64   Section        0  pt32z192xx_uart.o(.text.UART_ITConfig)
-    [Anonymous Symbol]                       0x20002d74   Section        0  pt32z192xx_uart.o(.text.UART_Init)
-    _PrintUnsigned                           0x20002e11   Thumb Code   508  segger_rtt_printf.o(.text._PrintUnsigned)
-    [Anonymous Symbol]                       0x20002e10   Section        0  segger_rtt_printf.o(.text._PrintUnsigned)
-    _PrintUnsigned._aV2C                     0x2000300c   Number         0  segger_rtt_printf.o(.text._PrintUnsigned)
-    [Anonymous Symbol]                       0x2000301c   Section        0  app.o(.text.app)
-    [Anonymous Symbol]                       0x200031ac   Section        0  pt32z192xx_retarget.o(.text.fputc)
-    [Anonymous Symbol]                       0x200031b8   Section        0  main.o(.text.main)
-    [Anonymous Symbol]                       0x200034e0   Section        0  main.o(.text.read_uid)
-    OSKERNEL                                 0x200035d4   Section       18  hardfaulthandler.o(OSKERNEL)
-    i.__0printf$1                            0x200035e8   Section        0  printf1.o(i.__0printf$1)
-    i.__scatterload_copy                     0x20003608   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x20003616   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x20003618   Section       14  handlers.o(i.__scatterload_zeroinit)
-    _printf_core                             0x20003629   Thumb Code   336  printf1.o(i._printf_core)
-    i._printf_core                           0x20003628   Section        0  printf1.o(i._printf_core)
-    i.puts                                   0x2000377c   Section        0  puts.o(i.puts)
-    .L.str                                   0x200037a0   Data          33  app.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x200037a0   Section        0  app.o(.rodata.str1.1)
-    .L.str.3                                 0x200037c1   Data          23  main.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x200037c1   Section        0  main.o(.rodata.str1.1)
-    .L.str                                   0x200037d8   Data          34  main.o(.rodata.str1.1)
-    .L.str.8                                 0x200037fa   Data           6  main.o(.rodata.str1.1)
-    .L.str.4                                 0x20003800   Data          12  main.o(.rodata.str1.1)
-    .L.str.5                                 0x2000380c   Data           9  main.o(.rodata.str1.1)
-    .L.str.2                                 0x20003815   Data           5  main.o(.rodata.str1.1)
-    .L.str.1                                 0x2000381a   Data           8  main.o(.rodata.str1.1)
-    .L.str                                   0x20003822   Data           9  segger_rtt.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x20003822   Section        0  segger_rtt.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x20001af8   Section        0  dwtdelay.o(.text.DWT_INIT)
+    [Anonymous Symbol]                       0x20001b24   Section        0  dwtdelay.o(.text.DWT_get_tick)
+    [Anonymous Symbol]                       0x20001b30   Section        0  pt32z192xx_it.o(.text.FLASH_Handler)
+    [Anonymous Symbol]                       0x20001b34   Section        0  pt32z192xx_gpio.o(.text.GPIO_ClearITPendingBit)
+    [Anonymous Symbol]                       0x20001b38   Section        0  pt32z192xx_gpio.o(.text.GPIO_ITConfig)
+    [Anonymous Symbol]                       0x20001b44   Section        0  pt32z192xx_gpio.o(.text.GPIO_Init)
+    [Anonymous Symbol]                       0x20001ba8   Section        0  pt32z192xx_gpio.o(.text.GPIO_PinAFConfig)
+    [Anonymous Symbol]                       0x20001bb8   Section        0  pt32z192xx_gpio.o(.text.GPIO_SetBits)
+    [Anonymous Symbol]                       0x20001bc0   Section        0  pt32z192xx_gpio.o(.text.GPIO_TriTypeConfig)
+    [Anonymous Symbol]                       0x20001bf4   Section        0  segger_hardfaulthandler.o(.text.HardFaultHandler)
+    [Anonymous Symbol]                       0x20001c9c   Section        0  pt32z192xx_it.o(.text.NMI_Handler)
+    [Anonymous Symbol]                       0x20001ca0   Section        0  pt32z192xx_misc.o(.text.NVIC_Init)
+    [Anonymous Symbol]                       0x20001d0c   Section        0  pt32z192xx_it.o(.text.PA_Handler)
+    [Anonymous Symbol]                       0x20001d10   Section        0  pt32z192xx_it.o(.text.PB_Handler)
+    [Anonymous Symbol]                       0x20001d14   Section        0  pt32z192xx_it.o(.text.PC_Handler)
+    [Anonymous Symbol]                       0x20001d64   Section        0  pt32z192xx_it.o(.text.PD_Handler)
+    [Anonymous Symbol]                       0x20001d68   Section        0  pt32z192xx_pwm.o(.text.PMW_TimeBaseInit)
+    [Anonymous Symbol]                       0x20001d84   Section        0  pt32z192xx_pwm.o(.text.PWM_BKI_LevelConfig)
+    [Anonymous Symbol]                       0x20001d90   Section        0  pt32z192xx_pwm.o(.text.PWM_BreakInput_Cmd)
+    [Anonymous Symbol]                       0x20001da4   Section        0  pt32z192xx_pwm.o(.text.PWM_ClearFlag)
+    [Anonymous Symbol]                       0x20001da8   Section        0  pt32z192xx_pwm.o(.text.PWM_Cmd)
+    [Anonymous Symbol]                       0x20001db8   Section        0  pt32z192xx_pwm.o(.text.PWM_GetFlagStatus)
+    [Anonymous Symbol]                       0x20001dc4   Section        0  pt32z192xx_pwm.o(.text.PWM_IntConfig)
+    [Anonymous Symbol]                       0x20001e38   Section        0  pt32z192xx_pwm.o(.text.PWM_OutputInit)
+    [Anonymous Symbol]                       0x20001ea0   Section        0  pt32z192xx_it.o(.text.PendSV_Handler)
+    [Anonymous Symbol]                       0x20001ea4   Section        0  pt32z192xx_it.o(.text.RTC_Handler)
+    [Anonymous Symbol]                       0x20001ea8   Section        0  segger_rtt.o(.text.SEGGER_RTT_Init)
+    [Anonymous Symbol]                       0x20001f18   Section        0  segger_rtt.o(.text.SEGGER_RTT_Write)
+    [Anonymous Symbol]                       0x20001fcc   Section        0  segger_rtt.o(.text.SEGGER_RTT_WriteNoLock)
+    [Anonymous Symbol]                       0x20002144   Section        0  segger_rtt_printf.o(.text.SEGGER_RTT_printf)
+    [Anonymous Symbol]                       0x20002164   Section        0  segger_rtt_printf.o(.text.SEGGER_RTT_vprintf)
+    [Anonymous Symbol]                       0x20002b50   Section        0  pt32z192xx_serial.o(.text.SERIAL_PutChar)
+    [Anonymous Symbol]                       0x20002b78   Section        0  pt32z192xx_it.o(.text.SPI0_Handler)
+    [Anonymous Symbol]                       0x20002b7c   Section        0  pt32z192xx_it.o(.text.SPI1_Handler)
+    [Anonymous Symbol]                       0x20002b80   Section        0  pt32z192xx_it.o(.text.SVC_Handler)
+    [Anonymous Symbol]                       0x20002b84   Section        0  pt32z192xx_it.o(.text.SysTick_Handler)
+    [Anonymous Symbol]                       0x20002ba8   Section        0  system_pt32z192xx.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x20002d28   Section        0  pt32z192xx_it.o(.text.TMR0_Handler)
+    [Anonymous Symbol]                       0x20002d4c   Section        0  pt32z192xx_it.o(.text.TMR1_Handler)
+    [Anonymous Symbol]                       0x20002d50   Section        0  pt32z192xx_it.o(.text.TMR2_Handler)
+    [Anonymous Symbol]                       0x20002d54   Section        0  pt32z192xx_it.o(.text.TMR3_Handler)
+    [Anonymous Symbol]                       0x20002d58   Section        0  pt32z192xx_it.o(.text.TMR4_Handler)
+    [Anonymous Symbol]                       0x20002d5c   Section        0  pt32z192xx_it.o(.text.TMR5_Handler)
+    [Anonymous Symbol]                       0x20002d60   Section        0  pt32z192xx_it.o(.text.UART0_Handler)
+    [Anonymous Symbol]                       0x20002d64   Section        0  pt32z192xx_it.o(.text.UART1_Handler)
+    [Anonymous Symbol]                       0x20002d68   Section        0  pt32z192xx_it.o(.text.UART2_Handler)
+    [Anonymous Symbol]                       0x20002d8c   Section        0  pt32z192xx_uart.o(.text.UART_Cmd)
+    [Anonymous Symbol]                       0x20002d9c   Section        0  pt32z192xx_uart.o(.text.UART_ITConfig)
+    [Anonymous Symbol]                       0x20002dac   Section        0  pt32z192xx_uart.o(.text.UART_Init)
+    _PrintUnsigned                           0x20002e49   Thumb Code   508  segger_rtt_printf.o(.text._PrintUnsigned)
+    [Anonymous Symbol]                       0x20002e48   Section        0  segger_rtt_printf.o(.text._PrintUnsigned)
+    _PrintUnsigned._aV2C                     0x20003044   Number         0  segger_rtt_printf.o(.text._PrintUnsigned)
+    [Anonymous Symbol]                       0x20003054   Section        0  app.o(.text.app)
+    [Anonymous Symbol]                       0x20003200   Section        0  pt32z192xx_retarget.o(.text.fputc)
+    [Anonymous Symbol]                       0x2000320c   Section        0  main.o(.text.main)
+    [Anonymous Symbol]                       0x2000353c   Section        0  main.o(.text.read_uid)
+    OSKERNEL                                 0x20003630   Section       18  hardfaulthandler.o(OSKERNEL)
+    i.__0printf$1                            0x20003644   Section        0  printf1.o(i.__0printf$1)
+    i.__scatterload_copy                     0x20003664   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x20003672   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x20003674   Section       14  handlers.o(i.__scatterload_zeroinit)
+    _printf_core                             0x20003685   Thumb Code   336  printf1.o(i._printf_core)
+    i._printf_core                           0x20003684   Section        0  printf1.o(i._printf_core)
+    i.puts                                   0x200037d8   Section        0  puts.o(i.puts)
+    .L.str                                   0x200037fc   Data          33  app.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x200037fc   Section        0  app.o(.rodata.str1.1)
+    .L.str.3                                 0x2000381d   Data          23  main.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x2000381d   Section        0  main.o(.rodata.str1.1)
+    .L.str                                   0x20003834   Data          34  main.o(.rodata.str1.1)
+    .L.str.8                                 0x20003856   Data           6  main.o(.rodata.str1.1)
+    .L.str.5                                 0x2000385c   Data           9  main.o(.rodata.str1.1)
+    .L.str.4                                 0x20003865   Data          12  main.o(.rodata.str1.1)
+    .L.str.2                                 0x20003871   Data           5  main.o(.rodata.str1.1)
+    .L.str.1                                 0x20003876   Data           8  main.o(.rodata.str1.1)
+    .L.str                                   0x2000387e   Data           9  segger_rtt.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x2000387e   Section        0  segger_rtt.o(.rodata.str1.1)
     .data                                    0x20010000   Section        4  stdout.o(.data)
     .L_MergedGlobals                         0x20010010   Data           8  app.o(.bss..L_MergedGlobals)
     [Anonymous Symbol]                       0x20010010   Section        0  app.o(.bss..L_MergedGlobals)
@@ -194,9 +197,11 @@ Image Symbol Table
     _Continue                                0x2001002c   Data           4  segger_hardfaulthandler.o(.bss..L_MergedGlobals)
     [Anonymous Symbol]                       0x2001002c   Section        0  segger_hardfaulthandler.o(.bss..L_MergedGlobals)
     HardFaultRegs                            0x20010030   Data          64  segger_hardfaulthandler.o(.bss..L_MergedGlobals)
-    _acUpBuffer                              0x2001011c   Data        1024  segger_rtt.o(.bss._acUpBuffer)
-    [Anonymous Symbol]                       0x2001011c   Section        0  segger_rtt.o(.bss._acUpBuffer)
-    STACK                                    0x20011d20   Section    32768  startup_pt32z192.o(STACK)
+    SYSCLK                                   0x20010070   Data           4  dwtdelay.o(.bss.SYSCLK)
+    [Anonymous Symbol]                       0x20010070   Section        0  dwtdelay.o(.bss.SYSCLK)
+    _acUpBuffer                              0x20010120   Data        1024  segger_rtt.o(.bss._acUpBuffer)
+    [Anonymous Symbol]                       0x20010120   Section        0  segger_rtt.o(.bss._acUpBuffer)
+    STACK                                    0x20011d28   Section    32768  startup_pt32z192.o(STACK)
 
     Global Symbols
 
@@ -292,78 +297,80 @@ Image Symbol Table
     DMA_DirectionConfig                      0x20001aad   Thumb Code    26  pt32z192xx_dma.o(.text.DMA_DirectionConfig)
     DMA_Handler                              0x20001ac9   Thumb Code     2  pt32z192xx_it.o(.text.DMA_Handler)
     DMA_PeripheralConfig                     0x20001acd   Thumb Code    42  pt32z192xx_dma.o(.text.DMA_PeripheralConfig)
-    FLASH_Handler                            0x20001af9   Thumb Code     2  pt32z192xx_it.o(.text.FLASH_Handler)
-    GPIO_ClearITPendingBit                   0x20001afd   Thumb Code     4  pt32z192xx_gpio.o(.text.GPIO_ClearITPendingBit)
-    GPIO_ITConfig                            0x20001b01   Thumb Code    12  pt32z192xx_gpio.o(.text.GPIO_ITConfig)
-    GPIO_Init                                0x20001b0d   Thumb Code   100  pt32z192xx_gpio.o(.text.GPIO_Init)
-    GPIO_PinAFConfig                         0x20001b71   Thumb Code    14  pt32z192xx_gpio.o(.text.GPIO_PinAFConfig)
-    GPIO_SetBits                             0x20001b81   Thumb Code     8  pt32z192xx_gpio.o(.text.GPIO_SetBits)
-    GPIO_TriTypeConfig                       0x20001b89   Thumb Code    52  pt32z192xx_gpio.o(.text.GPIO_TriTypeConfig)
-    HardFaultHandler                         0x20001bbd   Thumb Code   168  segger_hardfaulthandler.o(.text.HardFaultHandler)
-    NMI_Handler                              0x20001c65   Thumb Code     2  pt32z192xx_it.o(.text.NMI_Handler)
-    NVIC_Init                                0x20001c69   Thumb Code   108  pt32z192xx_misc.o(.text.NVIC_Init)
-    PA_Handler                               0x20001cd5   Thumb Code     2  pt32z192xx_it.o(.text.PA_Handler)
-    PB_Handler                               0x20001cd9   Thumb Code     2  pt32z192xx_it.o(.text.PB_Handler)
-    PC_Handler                               0x20001cdd   Thumb Code    52  pt32z192xx_it.o(.text.PC_Handler)
-    PD_Handler                               0x20001d2d   Thumb Code     2  pt32z192xx_it.o(.text.PD_Handler)
-    PMW_TimeBaseInit                         0x20001d31   Thumb Code    26  pt32z192xx_pwm.o(.text.PMW_TimeBaseInit)
-    PWM_BKI_LevelConfig                      0x20001d4d   Thumb Code    12  pt32z192xx_pwm.o(.text.PWM_BKI_LevelConfig)
-    PWM_BreakInput_Cmd                       0x20001d59   Thumb Code    18  pt32z192xx_pwm.o(.text.PWM_BreakInput_Cmd)
-    PWM_ClearFlag                            0x20001d6d   Thumb Code     4  pt32z192xx_pwm.o(.text.PWM_ClearFlag)
-    PWM_Cmd                                  0x20001d71   Thumb Code    16  pt32z192xx_pwm.o(.text.PWM_Cmd)
-    PWM_GetFlagStatus                        0x20001d81   Thumb Code    10  pt32z192xx_pwm.o(.text.PWM_GetFlagStatus)
-    PWM_IntConfig                            0x20001d8d   Thumb Code   116  pt32z192xx_pwm.o(.text.PWM_IntConfig)
-    PWM_OutputInit                           0x20001e01   Thumb Code   104  pt32z192xx_pwm.o(.text.PWM_OutputInit)
-    PendSV_Handler                           0x20001e69   Thumb Code     2  pt32z192xx_it.o(.text.PendSV_Handler)
-    RTC_Handler                              0x20001e6d   Thumb Code     2  pt32z192xx_it.o(.text.RTC_Handler)
-    SEGGER_RTT_Init                          0x20001e71   Thumb Code   112  segger_rtt.o(.text.SEGGER_RTT_Init)
-    SEGGER_RTT_Write                         0x20001ee1   Thumb Code   178  segger_rtt.o(.text.SEGGER_RTT_Write)
-    SEGGER_RTT_WriteNoLock                   0x20001f95   Thumb Code   376  segger_rtt.o(.text.SEGGER_RTT_WriteNoLock)
-    SEGGER_RTT_printf                        0x2000210d   Thumb Code    30  segger_rtt_printf.o(.text.SEGGER_RTT_printf)
-    SEGGER_RTT_vprintf                       0x2000212d   Thumb Code  2538  segger_rtt_printf.o(.text.SEGGER_RTT_vprintf)
-    SERIAL_PutChar                           0x20002b19   Thumb Code    40  pt32z192xx_serial.o(.text.SERIAL_PutChar)
-    SPI0_Handler                             0x20002b41   Thumb Code     2  pt32z192xx_it.o(.text.SPI0_Handler)
-    SPI1_Handler                             0x20002b45   Thumb Code     2  pt32z192xx_it.o(.text.SPI1_Handler)
-    SVC_Handler                              0x20002b49   Thumb Code     2  pt32z192xx_it.o(.text.SVC_Handler)
-    SysTick_Handler                          0x20002b4d   Thumb Code    34  pt32z192xx_it.o(.text.SysTick_Handler)
-    SystemInit                               0x20002b71   Thumb Code   384  system_pt32z192xx.o(.text.SystemInit)
-    TMR0_Handler                             0x20002cf1   Thumb Code    36  pt32z192xx_it.o(.text.TMR0_Handler)
-    TMR1_Handler                             0x20002d15   Thumb Code     2  pt32z192xx_it.o(.text.TMR1_Handler)
-    TMR2_Handler                             0x20002d19   Thumb Code     2  pt32z192xx_it.o(.text.TMR2_Handler)
-    TMR3_Handler                             0x20002d1d   Thumb Code     2  pt32z192xx_it.o(.text.TMR3_Handler)
-    TMR4_Handler                             0x20002d21   Thumb Code     2  pt32z192xx_it.o(.text.TMR4_Handler)
-    TMR5_Handler                             0x20002d25   Thumb Code     2  pt32z192xx_it.o(.text.TMR5_Handler)
-    UART0_Handler                            0x20002d29   Thumb Code     2  pt32z192xx_it.o(.text.UART0_Handler)
-    UART1_Handler                            0x20002d2d   Thumb Code     2  pt32z192xx_it.o(.text.UART1_Handler)
-    UART2_Handler                            0x20002d31   Thumb Code    20  pt32z192xx_it.o(.text.UART2_Handler)
-    UART_Cmd                                 0x20002d55   Thumb Code    16  pt32z192xx_uart.o(.text.UART_Cmd)
-    UART_ITConfig                            0x20002d65   Thumb Code    16  pt32z192xx_uart.o(.text.UART_ITConfig)
-    UART_Init                                0x20002d75   Thumb Code   154  pt32z192xx_uart.o(.text.UART_Init)
-    app                                      0x2000301d   Thumb Code   384  app.o(.text.app)
-    fputc                                    0x200031ad   Thumb Code    10  pt32z192xx_retarget.o(.text.fputc)
-    main                                     0x200031b9   Thumb Code   752  main.o(.text.main)
-    read_uid                                 0x200034e1   Thumb Code   208  main.o(.text.read_uid)
-    HardFault_Handler                        0x200035d5   Thumb Code     0  hardfaulthandler.o(OSKERNEL)
-    __0printf$1                              0x200035e9   Thumb Code    22  printf1.o(i.__0printf$1)
-    __1printf$1                              0x200035e9   Thumb Code     0  printf1.o(i.__0printf$1)
-    __2printf                                0x200035e9   Thumb Code     0  printf1.o(i.__0printf$1)
-    __scatterload_copy                       0x20003609   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x20003617   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x20003619   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    puts                                     0x2000377d   Thumb Code    30  puts.o(i.puts)
-    Region$$Table$$Base                      0x2000382c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x2000384c   Number         0  anon$$obj.o(Region$$Table)
+    DWT_INIT                                 0x20001af9   Thumb Code    44  dwtdelay.o(.text.DWT_INIT)
+    DWT_get_tick                             0x20001b25   Thumb Code    12  dwtdelay.o(.text.DWT_get_tick)
+    FLASH_Handler                            0x20001b31   Thumb Code     2  pt32z192xx_it.o(.text.FLASH_Handler)
+    GPIO_ClearITPendingBit                   0x20001b35   Thumb Code     4  pt32z192xx_gpio.o(.text.GPIO_ClearITPendingBit)
+    GPIO_ITConfig                            0x20001b39   Thumb Code    12  pt32z192xx_gpio.o(.text.GPIO_ITConfig)
+    GPIO_Init                                0x20001b45   Thumb Code   100  pt32z192xx_gpio.o(.text.GPIO_Init)
+    GPIO_PinAFConfig                         0x20001ba9   Thumb Code    14  pt32z192xx_gpio.o(.text.GPIO_PinAFConfig)
+    GPIO_SetBits                             0x20001bb9   Thumb Code     8  pt32z192xx_gpio.o(.text.GPIO_SetBits)
+    GPIO_TriTypeConfig                       0x20001bc1   Thumb Code    52  pt32z192xx_gpio.o(.text.GPIO_TriTypeConfig)
+    HardFaultHandler                         0x20001bf5   Thumb Code   168  segger_hardfaulthandler.o(.text.HardFaultHandler)
+    NMI_Handler                              0x20001c9d   Thumb Code     2  pt32z192xx_it.o(.text.NMI_Handler)
+    NVIC_Init                                0x20001ca1   Thumb Code   108  pt32z192xx_misc.o(.text.NVIC_Init)
+    PA_Handler                               0x20001d0d   Thumb Code     2  pt32z192xx_it.o(.text.PA_Handler)
+    PB_Handler                               0x20001d11   Thumb Code     2  pt32z192xx_it.o(.text.PB_Handler)
+    PC_Handler                               0x20001d15   Thumb Code    52  pt32z192xx_it.o(.text.PC_Handler)
+    PD_Handler                               0x20001d65   Thumb Code     2  pt32z192xx_it.o(.text.PD_Handler)
+    PMW_TimeBaseInit                         0x20001d69   Thumb Code    26  pt32z192xx_pwm.o(.text.PMW_TimeBaseInit)
+    PWM_BKI_LevelConfig                      0x20001d85   Thumb Code    12  pt32z192xx_pwm.o(.text.PWM_BKI_LevelConfig)
+    PWM_BreakInput_Cmd                       0x20001d91   Thumb Code    18  pt32z192xx_pwm.o(.text.PWM_BreakInput_Cmd)
+    PWM_ClearFlag                            0x20001da5   Thumb Code     4  pt32z192xx_pwm.o(.text.PWM_ClearFlag)
+    PWM_Cmd                                  0x20001da9   Thumb Code    16  pt32z192xx_pwm.o(.text.PWM_Cmd)
+    PWM_GetFlagStatus                        0x20001db9   Thumb Code    10  pt32z192xx_pwm.o(.text.PWM_GetFlagStatus)
+    PWM_IntConfig                            0x20001dc5   Thumb Code   116  pt32z192xx_pwm.o(.text.PWM_IntConfig)
+    PWM_OutputInit                           0x20001e39   Thumb Code   104  pt32z192xx_pwm.o(.text.PWM_OutputInit)
+    PendSV_Handler                           0x20001ea1   Thumb Code     2  pt32z192xx_it.o(.text.PendSV_Handler)
+    RTC_Handler                              0x20001ea5   Thumb Code     2  pt32z192xx_it.o(.text.RTC_Handler)
+    SEGGER_RTT_Init                          0x20001ea9   Thumb Code   112  segger_rtt.o(.text.SEGGER_RTT_Init)
+    SEGGER_RTT_Write                         0x20001f19   Thumb Code   178  segger_rtt.o(.text.SEGGER_RTT_Write)
+    SEGGER_RTT_WriteNoLock                   0x20001fcd   Thumb Code   376  segger_rtt.o(.text.SEGGER_RTT_WriteNoLock)
+    SEGGER_RTT_printf                        0x20002145   Thumb Code    30  segger_rtt_printf.o(.text.SEGGER_RTT_printf)
+    SEGGER_RTT_vprintf                       0x20002165   Thumb Code  2538  segger_rtt_printf.o(.text.SEGGER_RTT_vprintf)
+    SERIAL_PutChar                           0x20002b51   Thumb Code    40  pt32z192xx_serial.o(.text.SERIAL_PutChar)
+    SPI0_Handler                             0x20002b79   Thumb Code     2  pt32z192xx_it.o(.text.SPI0_Handler)
+    SPI1_Handler                             0x20002b7d   Thumb Code     2  pt32z192xx_it.o(.text.SPI1_Handler)
+    SVC_Handler                              0x20002b81   Thumb Code     2  pt32z192xx_it.o(.text.SVC_Handler)
+    SysTick_Handler                          0x20002b85   Thumb Code    34  pt32z192xx_it.o(.text.SysTick_Handler)
+    SystemInit                               0x20002ba9   Thumb Code   384  system_pt32z192xx.o(.text.SystemInit)
+    TMR0_Handler                             0x20002d29   Thumb Code    36  pt32z192xx_it.o(.text.TMR0_Handler)
+    TMR1_Handler                             0x20002d4d   Thumb Code     2  pt32z192xx_it.o(.text.TMR1_Handler)
+    TMR2_Handler                             0x20002d51   Thumb Code     2  pt32z192xx_it.o(.text.TMR2_Handler)
+    TMR3_Handler                             0x20002d55   Thumb Code     2  pt32z192xx_it.o(.text.TMR3_Handler)
+    TMR4_Handler                             0x20002d59   Thumb Code     2  pt32z192xx_it.o(.text.TMR4_Handler)
+    TMR5_Handler                             0x20002d5d   Thumb Code     2  pt32z192xx_it.o(.text.TMR5_Handler)
+    UART0_Handler                            0x20002d61   Thumb Code     2  pt32z192xx_it.o(.text.UART0_Handler)
+    UART1_Handler                            0x20002d65   Thumb Code     2  pt32z192xx_it.o(.text.UART1_Handler)
+    UART2_Handler                            0x20002d69   Thumb Code    20  pt32z192xx_it.o(.text.UART2_Handler)
+    UART_Cmd                                 0x20002d8d   Thumb Code    16  pt32z192xx_uart.o(.text.UART_Cmd)
+    UART_ITConfig                            0x20002d9d   Thumb Code    16  pt32z192xx_uart.o(.text.UART_ITConfig)
+    UART_Init                                0x20002dad   Thumb Code   154  pt32z192xx_uart.o(.text.UART_Init)
+    app                                      0x20003055   Thumb Code   412  app.o(.text.app)
+    fputc                                    0x20003201   Thumb Code    10  pt32z192xx_retarget.o(.text.fputc)
+    main                                     0x2000320d   Thumb Code   760  main.o(.text.main)
+    read_uid                                 0x2000353d   Thumb Code   208  main.o(.text.read_uid)
+    HardFault_Handler                        0x20003631   Thumb Code     0  hardfaulthandler.o(OSKERNEL)
+    __0printf$1                              0x20003645   Thumb Code    22  printf1.o(i.__0printf$1)
+    __1printf$1                              0x20003645   Thumb Code     0  printf1.o(i.__0printf$1)
+    __2printf                                0x20003645   Thumb Code     0  printf1.o(i.__0printf$1)
+    __scatterload_copy                       0x20003665   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x20003673   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x20003675   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    puts                                     0x200037d9   Thumb Code    30  puts.o(i.puts)
+    Region$$Table$$Base                      0x20003888   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x200038a8   Number         0  anon$$obj.o(Region$$Table)
     __stdout                                 0x20010000   Data           4  stdout.o(.data)
     SystemCoreClock                          0x20010004   Data           4  system_pt32z192xx.o(.data.SystemCoreClock)
     VCO_VALUE                                0x20010008   Data           4  system_pt32z192xx.o(.data.VCO_VALUE)
     timeval                                  0x20010010   Data           4  app.o(.bss..L_MergedGlobals)
     key_flag                                 0x20010014   Data           4  app.o(.bss..L_MergedGlobals)
-    TimingDelay                              0x20010070   Data           4  app.o(.bss.TimingDelay)
-    _SEGGER_RTT                              0x20010074   Data         168  segger_rtt.o(.bss._SEGGER_RTT)
-    lBufInArray                              0x2001051c   Data        4096  app.o(.bss.lBufInArray)
-    lBufOutArray                             0x2001151c   Data        2048  app.o(.bss.lBufOutArray)
-    m_AdcValue                               0x20011d1c   Data           2  main.o(.bss.m_AdcValue)
-    __initial_sp                             0x20019d20   Data           0  startup_pt32z192.o(STACK)
+    TimingDelay                              0x20010074   Data           4  app.o(.bss.TimingDelay)
+    _SEGGER_RTT                              0x20010078   Data         168  segger_rtt.o(.bss._SEGGER_RTT)
+    lBufInArray                              0x20010520   Data        4096  app.o(.bss.lBufInArray)
+    lBufOutArray                             0x20011520   Data        2048  app.o(.bss.lBufOutArray)
+    m_AdcValue                               0x20011d20   Data           2  main.o(.bss.m_AdcValue)
+    __initial_sp                             0x20019d28   Data           0  startup_pt32z192.o(STACK)
 
 
 
@@ -373,163 +380,166 @@ Memory Map of the image
 
   Image Entry point : 0x20000131
 
-  Load Region LR_IROM1 (Base: 0x20000000, Size: 0x00003860, Max: 0x00010000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x20000000, Size: 0x000038b8, Max: 0x00010000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x20000000, Load base: 0x20000000, Size: 0x0000384c, Max: 0x00010000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x20000000, Load base: 0x20000000, Size: 0x000038a8, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x20000000   0x00000130   Data   RO          142    RESET               startup_pt32z192.o
-    0x20000130   0x20000130   0x00000000   Code   RO          896  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x20000130   0x20000130   0x00000004   Code   RO         1170    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x20000134   0x20000134   0x00000004   Code   RO         1173    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x20000138   0x20000138   0x00000000   Code   RO         1175    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x20000138   0x20000138   0x00000000   Code   RO         1177    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x20000138   0x20000138   0x00000008   Code   RO         1178    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x20000140   0x20000140   0x00000000   Code   RO         1180    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x20000140   0x20000140   0x00000000   Code   RO         1182    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x20000140   0x20000140   0x00000004   Code   RO         1171    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x20000144   0x20000144   0x00000034   Code   RO          143    .text               startup_pt32z192.o
-    0x20000178   0x20000178   0x000005de   Code   RO          890    .text               cr4_fft_256_stm32.o
+    0x20000000   0x20000000   0x00000130   Data   RO          157    RESET               startup_pt32z192.o
+    0x20000130   0x20000130   0x00000000   Code   RO          911  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x20000130   0x20000130   0x00000004   Code   RO         1185    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x20000134   0x20000134   0x00000004   Code   RO         1188    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x20000138   0x20000138   0x00000000   Code   RO         1190    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x20000138   0x20000138   0x00000000   Code   RO         1192    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x20000138   0x20000138   0x00000008   Code   RO         1193    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x20000140   0x20000140   0x00000000   Code   RO         1195    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x20000140   0x20000140   0x00000000   Code   RO         1197    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x20000140   0x20000140   0x00000004   Code   RO         1186    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x20000144   0x20000144   0x00000034   Code   RO          158    .text               startup_pt32z192.o
+    0x20000178   0x20000178   0x000005de   Code   RO          905    .text               cr4_fft_256_stm32.o
     0x20000756   0x20000756   0x00000002   PAD
-    0x20000758   0x20000758   0x000011e0   Code   RO          893    .text               cr4_fft_1024_stm32.o
-    0x20001938   0x20001938   0x00000024   Code   RO          903    .text               mc_w.l(memcpya.o)
-    0x2000195c   0x2000195c   0x0000002c   Code   RO         1194    .text               mc_w.l(uidiv.o)
-    0x20001988   0x20001988   0x00000024   Code   RO         1209    .text               mc_w.l(init.o)
-    0x200019ac   0x200019ac   0x0000001a   Code   RO          158    .text.ADC_ChannelConfig  pt32z192xx_adc.o
+    0x20000758   0x20000758   0x000011e0   Code   RO          908    .text               cr4_fft_1024_stm32.o
+    0x20001938   0x20001938   0x00000024   Code   RO          918    .text               mc_w.l(memcpya.o)
+    0x2000195c   0x2000195c   0x0000002c   Code   RO         1209    .text               mc_w.l(uidiv.o)
+    0x20001988   0x20001988   0x00000024   Code   RO         1224    .text               mc_w.l(init.o)
+    0x200019ac   0x200019ac   0x0000001a   Code   RO          173    .text.ADC_ChannelConfig  pt32z192xx_adc.o
     0x200019c6   0x200019c6   0x00000002   PAD
-    0x200019c8   0x200019c8   0x00000010   Code   RO          154    .text.ADC_Cmd       pt32z192xx_adc.o
-    0x200019d8   0x200019d8   0x00000002   Code   RO           82    .text.ADC_Handler   pt32z192xx_it.o
+    0x200019c8   0x200019c8   0x00000010   Code   RO          169    .text.ADC_Cmd       pt32z192xx_adc.o
+    0x200019d8   0x200019d8   0x00000002   Code   RO           97    .text.ADC_Handler   pt32z192xx_it.o
     0x200019da   0x200019da   0x00000002   PAD
-    0x200019dc   0x200019dc   0x00000038   Code   RO          150    .text.ADC_Init      pt32z192xx_adc.o
-    0x20001a14   0x20001a14   0x0000000a   Code   RO          164    .text.ADC_StartOfConversion  pt32z192xx_adc.o
+    0x200019dc   0x200019dc   0x00000038   Code   RO          165    .text.ADC_Init      pt32z192xx_adc.o
+    0x20001a14   0x20001a14   0x0000000a   Code   RO          179    .text.ADC_StartOfConversion  pt32z192xx_adc.o
     0x20001a1e   0x20001a1e   0x00000002   PAD
-    0x20001a20   0x20001a20   0x00000024   Code   RO          753    .text.DMA_AutoRepeat_Cmd  pt32z192xx_dma.o
-    0x20001a44   0x20001a44   0x00000022   Code   RO          747    .text.DMA_Cmd       pt32z192xx_dma.o
+    0x20001a20   0x20001a20   0x00000024   Code   RO          768    .text.DMA_AutoRepeat_Cmd  pt32z192xx_dma.o
+    0x20001a44   0x20001a44   0x00000022   Code   RO          762    .text.DMA_Cmd       pt32z192xx_dma.o
     0x20001a66   0x20001a66   0x00000002   PAD
-    0x20001a68   0x20001a68   0x00000042   Code   RO          745    .text.DMA_Config    pt32z192xx_dma.o
+    0x20001a68   0x20001a68   0x00000042   Code   RO          760    .text.DMA_Config    pt32z192xx_dma.o
     0x20001aaa   0x20001aaa   0x00000002   PAD
-    0x20001aac   0x20001aac   0x0000001a   Code   RO          751    .text.DMA_DirectionConfig  pt32z192xx_dma.o
+    0x20001aac   0x20001aac   0x0000001a   Code   RO          766    .text.DMA_DirectionConfig  pt32z192xx_dma.o
     0x20001ac6   0x20001ac6   0x00000002   PAD
-    0x20001ac8   0x20001ac8   0x00000002   Code   RO          118    .text.DMA_Handler   pt32z192xx_it.o
+    0x20001ac8   0x20001ac8   0x00000002   Code   RO          133    .text.DMA_Handler   pt32z192xx_it.o
     0x20001aca   0x20001aca   0x00000002   PAD
-    0x20001acc   0x20001acc   0x0000002a   Code   RO          779    .text.DMA_PeripheralConfig  pt32z192xx_dma.o
+    0x20001acc   0x20001acc   0x0000002a   Code   RO          794    .text.DMA_PeripheralConfig  pt32z192xx_dma.o
     0x20001af6   0x20001af6   0x00000002   PAD
-    0x20001af8   0x20001af8   0x00000002   Code   RO           68    .text.FLASH_Handler  pt32z192xx_it.o
-    0x20001afa   0x20001afa   0x00000002   PAD
-    0x20001afc   0x20001afc   0x00000004   Code   RO          318    .text.GPIO_ClearITPendingBit  pt32z192xx_gpio.o
-    0x20001b00   0x20001b00   0x0000000c   Code   RO          308    .text.GPIO_ITConfig  pt32z192xx_gpio.o
-    0x20001b0c   0x20001b0c   0x00000064   Code   RO          280    .text.GPIO_Init     pt32z192xx_gpio.o
-    0x20001b70   0x20001b70   0x0000000e   Code   RO          306    .text.GPIO_PinAFConfig  pt32z192xx_gpio.o
-    0x20001b7e   0x20001b7e   0x00000002   PAD
-    0x20001b80   0x20001b80   0x00000008   Code   RO          296    .text.GPIO_SetBits  pt32z192xx_gpio.o
-    0x20001b88   0x20001b88   0x00000034   Code   RO          310    .text.GPIO_TriTypeConfig  pt32z192xx_gpio.o
-    0x20001bbc   0x20001bbc   0x000000a8   Code   RO          878    .text.HardFaultHandler  segger_hardfaulthandler.o
-    0x20001c64   0x20001c64   0x00000002   Code   RO           56    .text.NMI_Handler   pt32z192xx_it.o
-    0x20001c66   0x20001c66   0x00000002   PAD
-    0x20001c68   0x20001c68   0x0000006c   Code   RO          382    .text.NVIC_Init     pt32z192xx_misc.o
-    0x20001cd4   0x20001cd4   0x00000002   Code   RO           70    .text.PA_Handler    pt32z192xx_it.o
-    0x20001cd6   0x20001cd6   0x00000002   PAD
-    0x20001cd8   0x20001cd8   0x00000002   Code   RO           72    .text.PB_Handler    pt32z192xx_it.o
-    0x20001cda   0x20001cda   0x00000002   PAD
-    0x20001cdc   0x20001cdc   0x00000050   Code   RO           74    .text.PC_Handler    pt32z192xx_it.o
-    0x20001d2c   0x20001d2c   0x00000002   Code   RO           76    .text.PD_Handler    pt32z192xx_it.o
-    0x20001d2e   0x20001d2e   0x00000002   PAD
-    0x20001d30   0x20001d30   0x0000001a   Code   RO          394    .text.PMW_TimeBaseInit  pt32z192xx_pwm.o
-    0x20001d4a   0x20001d4a   0x00000002   PAD
-    0x20001d4c   0x20001d4c   0x0000000c   Code   RO          426    .text.PWM_BKI_LevelConfig  pt32z192xx_pwm.o
-    0x20001d58   0x20001d58   0x00000012   Code   RO          424    .text.PWM_BreakInput_Cmd  pt32z192xx_pwm.o
-    0x20001d6a   0x20001d6a   0x00000002   PAD
-    0x20001d6c   0x20001d6c   0x00000004   Code   RO          432    .text.PWM_ClearFlag  pt32z192xx_pwm.o
-    0x20001d70   0x20001d70   0x00000010   Code   RO          422    .text.PWM_Cmd       pt32z192xx_pwm.o
-    0x20001d80   0x20001d80   0x0000000a   Code   RO          430    .text.PWM_GetFlagStatus  pt32z192xx_pwm.o
-    0x20001d8a   0x20001d8a   0x00000002   PAD
-    0x20001d8c   0x20001d8c   0x00000074   Code   RO          428    .text.PWM_IntConfig  pt32z192xx_pwm.o
-    0x20001e00   0x20001e00   0x00000068   Code   RO          396    .text.PWM_OutputInit  pt32z192xx_pwm.o
-    0x20001e68   0x20001e68   0x00000002   Code   RO           60    .text.PendSV_Handler  pt32z192xx_it.o
-    0x20001e6a   0x20001e6a   0x00000002   PAD
-    0x20001e6c   0x20001e6c   0x00000002   Code   RO          112    .text.RTC_Handler   pt32z192xx_it.o
-    0x20001e6e   0x20001e6e   0x00000002   PAD
-    0x20001e70   0x20001e70   0x00000070   Code   RO          841    .text.SEGGER_RTT_Init  segger_rtt.o
-    0x20001ee0   0x20001ee0   0x000000b2   Code   RO          805    .text.SEGGER_RTT_Write  segger_rtt.o
-    0x20001f92   0x20001f92   0x00000002   PAD
-    0x20001f94   0x20001f94   0x00000178   Code   RO          801    .text.SEGGER_RTT_WriteNoLock  segger_rtt.o
-    0x2000210c   0x2000210c   0x0000001e   Code   RO          868    .text.SEGGER_RTT_printf  segger_rtt_printf.o
-    0x2000212a   0x2000212a   0x00000002   PAD
-    0x2000212c   0x2000212c   0x000009ea   Code   RO          864    .text.SEGGER_RTT_vprintf  segger_rtt_printf.o
-    0x20002b16   0x20002b16   0x00000002   PAD
-    0x20002b18   0x20002b18   0x00000028   Code   RO          734    .text.SERIAL_PutChar  pt32z192xx_serial.o
-    0x20002b40   0x20002b40   0x00000002   Code   RO           84    .text.SPI0_Handler  pt32z192xx_it.o
-    0x20002b42   0x20002b42   0x00000002   PAD
-    0x20002b44   0x20002b44   0x00000002   Code   RO           86    .text.SPI1_Handler  pt32z192xx_it.o
-    0x20002b46   0x20002b46   0x00000002   PAD
-    0x20002b48   0x20002b48   0x00000002   Code   RO           58    .text.SVC_Handler   pt32z192xx_it.o
-    0x20002b4a   0x20002b4a   0x00000002   PAD
-    0x20002b4c   0x20002b4c   0x00000022   Code   RO           62    .text.SysTick_Handler  pt32z192xx_it.o
-    0x20002b6e   0x20002b6e   0x00000002   PAD
-    0x20002b70   0x20002b70   0x00000180   Code   RO          130    .text.SystemInit    system_pt32z192xx.o
-    0x20002cf0   0x20002cf0   0x00000024   Code   RO          100    .text.TMR0_Handler  pt32z192xx_it.o
-    0x20002d14   0x20002d14   0x00000002   Code   RO          102    .text.TMR1_Handler  pt32z192xx_it.o
-    0x20002d16   0x20002d16   0x00000002   PAD
-    0x20002d18   0x20002d18   0x00000002   Code   RO          104    .text.TMR2_Handler  pt32z192xx_it.o
-    0x20002d1a   0x20002d1a   0x00000002   PAD
-    0x20002d1c   0x20002d1c   0x00000002   Code   RO          106    .text.TMR3_Handler  pt32z192xx_it.o
-    0x20002d1e   0x20002d1e   0x00000002   PAD
-    0x20002d20   0x20002d20   0x00000002   Code   RO          108    .text.TMR4_Handler  pt32z192xx_it.o
-    0x20002d22   0x20002d22   0x00000002   PAD
-    0x20002d24   0x20002d24   0x00000002   Code   RO          110    .text.TMR5_Handler  pt32z192xx_it.o
-    0x20002d26   0x20002d26   0x00000002   PAD
-    0x20002d28   0x20002d28   0x00000002   Code   RO           88    .text.UART0_Handler  pt32z192xx_it.o
-    0x20002d2a   0x20002d2a   0x00000002   PAD
-    0x20002d2c   0x20002d2c   0x00000002   Code   RO           90    .text.UART1_Handler  pt32z192xx_it.o
-    0x20002d2e   0x20002d2e   0x00000002   PAD
-    0x20002d30   0x20002d30   0x00000024   Code   RO           92    .text.UART2_Handler  pt32z192xx_it.o
-    0x20002d54   0x20002d54   0x00000010   Code   RO          566    .text.UART_Cmd      pt32z192xx_uart.o
-    0x20002d64   0x20002d64   0x00000010   Code   RO          594    .text.UART_ITConfig  pt32z192xx_uart.o
-    0x20002d74   0x20002d74   0x0000009a   Code   RO          562    .text.UART_Init     pt32z192xx_uart.o
-    0x20002e0e   0x20002e0e   0x00000002   PAD
-    0x20002e10   0x20002e10   0x0000020c   Code   RO          866    .text._PrintUnsigned  segger_rtt_printf.o
-    0x2000301c   0x2000301c   0x00000190   Code   RO            8    .text.app           app.o
-    0x200031ac   0x200031ac   0x0000000a   Code   RO          720    .text.fputc         pt32z192xx_retarget.o
-    0x200031b6   0x200031b6   0x00000002   PAD
-    0x200031b8   0x200031b8   0x00000328   Code   RO           43    .text.main          main.o
-    0x200034e0   0x200034e0   0x000000f4   Code   RO           39    .text.read_uid      main.o
-    0x200035d4   0x200035d4   0x00000012   Code   RO          887    OSKERNEL            hardfaulthandler.o
-    0x200035e6   0x200035e6   0x00000002   PAD
-    0x200035e8   0x200035e8   0x00000020   Code   RO          954    i.__0printf$1       mc_w.l(printf1.o)
-    0x20003608   0x20003608   0x0000000e   Code   RO         1221    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x20003616   0x20003616   0x00000002   Code   RO         1222    i.__scatterload_null  mc_w.l(handlers.o)
-    0x20003618   0x20003618   0x0000000e   Code   RO         1223    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x20003626   0x20003626   0x00000002   PAD
-    0x20003628   0x20003628   0x00000154   Code   RO          961    i._printf_core      mc_w.l(printf1.o)
-    0x2000377c   0x2000377c   0x00000024   Code   RO          899    i.puts              mc_w.l(puts.o)
-    0x200037a0   0x200037a0   0x00000021   Data   RO           13    .rodata.str1.1      app.o
-    0x200037c1   0x200037c1   0x00000061   Data   RO           45    .rodata.str1.1      main.o
-    0x20003822   0x20003822   0x00000009   Data   RO          853    .rodata.str1.1      segger_rtt.o
-    0x2000382b   0x2000382b   0x00000001   PAD
-    0x2000382c   0x2000382c   0x00000020   Data   RO         1220    Region$$Table       anon$$obj.o
+    0x20001af8   0x20001af8   0x0000002c   Code   RO           25    .text.DWT_INIT      dwtdelay.o
+    0x20001b24   0x20001b24   0x0000000c   Code   RO           29    .text.DWT_get_tick  dwtdelay.o
+    0x20001b30   0x20001b30   0x00000002   Code   RO           83    .text.FLASH_Handler  pt32z192xx_it.o
+    0x20001b32   0x20001b32   0x00000002   PAD
+    0x20001b34   0x20001b34   0x00000004   Code   RO          333    .text.GPIO_ClearITPendingBit  pt32z192xx_gpio.o
+    0x20001b38   0x20001b38   0x0000000c   Code   RO          323    .text.GPIO_ITConfig  pt32z192xx_gpio.o
+    0x20001b44   0x20001b44   0x00000064   Code   RO          295    .text.GPIO_Init     pt32z192xx_gpio.o
+    0x20001ba8   0x20001ba8   0x0000000e   Code   RO          321    .text.GPIO_PinAFConfig  pt32z192xx_gpio.o
+    0x20001bb6   0x20001bb6   0x00000002   PAD
+    0x20001bb8   0x20001bb8   0x00000008   Code   RO          311    .text.GPIO_SetBits  pt32z192xx_gpio.o
+    0x20001bc0   0x20001bc0   0x00000034   Code   RO          325    .text.GPIO_TriTypeConfig  pt32z192xx_gpio.o
+    0x20001bf4   0x20001bf4   0x000000a8   Code   RO          893    .text.HardFaultHandler  segger_hardfaulthandler.o
+    0x20001c9c   0x20001c9c   0x00000002   Code   RO           71    .text.NMI_Handler   pt32z192xx_it.o
+    0x20001c9e   0x20001c9e   0x00000002   PAD
+    0x20001ca0   0x20001ca0   0x0000006c   Code   RO          397    .text.NVIC_Init     pt32z192xx_misc.o
+    0x20001d0c   0x20001d0c   0x00000002   Code   RO           85    .text.PA_Handler    pt32z192xx_it.o
+    0x20001d0e   0x20001d0e   0x00000002   PAD
+    0x20001d10   0x20001d10   0x00000002   Code   RO           87    .text.PB_Handler    pt32z192xx_it.o
+    0x20001d12   0x20001d12   0x00000002   PAD
+    0x20001d14   0x20001d14   0x00000050   Code   RO           89    .text.PC_Handler    pt32z192xx_it.o
+    0x20001d64   0x20001d64   0x00000002   Code   RO           91    .text.PD_Handler    pt32z192xx_it.o
+    0x20001d66   0x20001d66   0x00000002   PAD
+    0x20001d68   0x20001d68   0x0000001a   Code   RO          409    .text.PMW_TimeBaseInit  pt32z192xx_pwm.o
+    0x20001d82   0x20001d82   0x00000002   PAD
+    0x20001d84   0x20001d84   0x0000000c   Code   RO          441    .text.PWM_BKI_LevelConfig  pt32z192xx_pwm.o
+    0x20001d90   0x20001d90   0x00000012   Code   RO          439    .text.PWM_BreakInput_Cmd  pt32z192xx_pwm.o
+    0x20001da2   0x20001da2   0x00000002   PAD
+    0x20001da4   0x20001da4   0x00000004   Code   RO          447    .text.PWM_ClearFlag  pt32z192xx_pwm.o
+    0x20001da8   0x20001da8   0x00000010   Code   RO          437    .text.PWM_Cmd       pt32z192xx_pwm.o
+    0x20001db8   0x20001db8   0x0000000a   Code   RO          445    .text.PWM_GetFlagStatus  pt32z192xx_pwm.o
+    0x20001dc2   0x20001dc2   0x00000002   PAD
+    0x20001dc4   0x20001dc4   0x00000074   Code   RO          443    .text.PWM_IntConfig  pt32z192xx_pwm.o
+    0x20001e38   0x20001e38   0x00000068   Code   RO          411    .text.PWM_OutputInit  pt32z192xx_pwm.o
+    0x20001ea0   0x20001ea0   0x00000002   Code   RO           75    .text.PendSV_Handler  pt32z192xx_it.o
+    0x20001ea2   0x20001ea2   0x00000002   PAD
+    0x20001ea4   0x20001ea4   0x00000002   Code   RO          127    .text.RTC_Handler   pt32z192xx_it.o
+    0x20001ea6   0x20001ea6   0x00000002   PAD
+    0x20001ea8   0x20001ea8   0x00000070   Code   RO          856    .text.SEGGER_RTT_Init  segger_rtt.o
+    0x20001f18   0x20001f18   0x000000b2   Code   RO          820    .text.SEGGER_RTT_Write  segger_rtt.o
+    0x20001fca   0x20001fca   0x00000002   PAD
+    0x20001fcc   0x20001fcc   0x00000178   Code   RO          816    .text.SEGGER_RTT_WriteNoLock  segger_rtt.o
+    0x20002144   0x20002144   0x0000001e   Code   RO          883    .text.SEGGER_RTT_printf  segger_rtt_printf.o
+    0x20002162   0x20002162   0x00000002   PAD
+    0x20002164   0x20002164   0x000009ea   Code   RO          879    .text.SEGGER_RTT_vprintf  segger_rtt_printf.o
+    0x20002b4e   0x20002b4e   0x00000002   PAD
+    0x20002b50   0x20002b50   0x00000028   Code   RO          749    .text.SERIAL_PutChar  pt32z192xx_serial.o
+    0x20002b78   0x20002b78   0x00000002   Code   RO           99    .text.SPI0_Handler  pt32z192xx_it.o
+    0x20002b7a   0x20002b7a   0x00000002   PAD
+    0x20002b7c   0x20002b7c   0x00000002   Code   RO          101    .text.SPI1_Handler  pt32z192xx_it.o
+    0x20002b7e   0x20002b7e   0x00000002   PAD
+    0x20002b80   0x20002b80   0x00000002   Code   RO           73    .text.SVC_Handler   pt32z192xx_it.o
+    0x20002b82   0x20002b82   0x00000002   PAD
+    0x20002b84   0x20002b84   0x00000022   Code   RO           77    .text.SysTick_Handler  pt32z192xx_it.o
+    0x20002ba6   0x20002ba6   0x00000002   PAD
+    0x20002ba8   0x20002ba8   0x00000180   Code   RO          145    .text.SystemInit    system_pt32z192xx.o
+    0x20002d28   0x20002d28   0x00000024   Code   RO          115    .text.TMR0_Handler  pt32z192xx_it.o
+    0x20002d4c   0x20002d4c   0x00000002   Code   RO          117    .text.TMR1_Handler  pt32z192xx_it.o
+    0x20002d4e   0x20002d4e   0x00000002   PAD
+    0x20002d50   0x20002d50   0x00000002   Code   RO          119    .text.TMR2_Handler  pt32z192xx_it.o
+    0x20002d52   0x20002d52   0x00000002   PAD
+    0x20002d54   0x20002d54   0x00000002   Code   RO          121    .text.TMR3_Handler  pt32z192xx_it.o
+    0x20002d56   0x20002d56   0x00000002   PAD
+    0x20002d58   0x20002d58   0x00000002   Code   RO          123    .text.TMR4_Handler  pt32z192xx_it.o
+    0x20002d5a   0x20002d5a   0x00000002   PAD
+    0x20002d5c   0x20002d5c   0x00000002   Code   RO          125    .text.TMR5_Handler  pt32z192xx_it.o
+    0x20002d5e   0x20002d5e   0x00000002   PAD
+    0x20002d60   0x20002d60   0x00000002   Code   RO          103    .text.UART0_Handler  pt32z192xx_it.o
+    0x20002d62   0x20002d62   0x00000002   PAD
+    0x20002d64   0x20002d64   0x00000002   Code   RO          105    .text.UART1_Handler  pt32z192xx_it.o
+    0x20002d66   0x20002d66   0x00000002   PAD
+    0x20002d68   0x20002d68   0x00000024   Code   RO          107    .text.UART2_Handler  pt32z192xx_it.o
+    0x20002d8c   0x20002d8c   0x00000010   Code   RO          581    .text.UART_Cmd      pt32z192xx_uart.o
+    0x20002d9c   0x20002d9c   0x00000010   Code   RO          609    .text.UART_ITConfig  pt32z192xx_uart.o
+    0x20002dac   0x20002dac   0x0000009a   Code   RO          577    .text.UART_Init     pt32z192xx_uart.o
+    0x20002e46   0x20002e46   0x00000002   PAD
+    0x20002e48   0x20002e48   0x0000020c   Code   RO          881    .text._PrintUnsigned  segger_rtt_printf.o
+    0x20003054   0x20003054   0x000001ac   Code   RO            8    .text.app           app.o
+    0x20003200   0x20003200   0x0000000a   Code   RO          735    .text.fputc         pt32z192xx_retarget.o
+    0x2000320a   0x2000320a   0x00000002   PAD
+    0x2000320c   0x2000320c   0x00000330   Code   RO           58    .text.main          main.o
+    0x2000353c   0x2000353c   0x000000f4   Code   RO           54    .text.read_uid      main.o
+    0x20003630   0x20003630   0x00000012   Code   RO          902    OSKERNEL            hardfaulthandler.o
+    0x20003642   0x20003642   0x00000002   PAD
+    0x20003644   0x20003644   0x00000020   Code   RO          969    i.__0printf$1       mc_w.l(printf1.o)
+    0x20003664   0x20003664   0x0000000e   Code   RO         1236    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x20003672   0x20003672   0x00000002   Code   RO         1237    i.__scatterload_null  mc_w.l(handlers.o)
+    0x20003674   0x20003674   0x0000000e   Code   RO         1238    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x20003682   0x20003682   0x00000002   PAD
+    0x20003684   0x20003684   0x00000154   Code   RO          976    i._printf_core      mc_w.l(printf1.o)
+    0x200037d8   0x200037d8   0x00000024   Code   RO          914    i.puts              mc_w.l(puts.o)
+    0x200037fc   0x200037fc   0x00000021   Data   RO           13    .rodata.str1.1      app.o
+    0x2000381d   0x2000381d   0x00000061   Data   RO           60    .rodata.str1.1      main.o
+    0x2000387e   0x2000387e   0x00000009   Data   RO          868    .rodata.str1.1      segger_rtt.o
+    0x20003887   0x20003887   0x00000001   PAD
+    0x20003888   0x20003888   0x00000020   Data   RO         1235    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20010000, Load base: 0x20003850, Size: 0x00009d20, Max: 0x00010000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20010000, Load base: 0x200038a8, Size: 0x00009d28, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20010000   0x20003850   0x00000004   Data   RW         1184    .data               mc_w.l(stdout.o)
-    0x20010004   0x20003854   0x00000004   Data   RW          132    .data.SystemCoreClock  system_pt32z192xx.o
-    0x20010008   0x20003858   0x00000004   Data   RW          133    .data.VCO_VALUE     system_pt32z192xx.o
-    0x2001000c   0x2000385c   0x00000004   PAD
+    0x20010000   0x200038a8   0x00000004   Data   RW         1199    .data               mc_w.l(stdout.o)
+    0x20010004   0x200038ac   0x00000004   Data   RW          147    .data.SystemCoreClock  system_pt32z192xx.o
+    0x20010008   0x200038b0   0x00000004   Data   RW          148    .data.VCO_VALUE     system_pt32z192xx.o
+    0x2001000c   0x200038b4   0x00000004   PAD
     0x20010010        -       0x00000008   Zero   RW           16    .bss..L_MergedGlobals  app.o
-    0x20010018        -       0x00000011   Zero   RW          855    .bss..L_MergedGlobals  segger_rtt.o
-    0x20010029   0x2000385c   0x00000003   PAD
-    0x2001002c        -       0x00000044   Zero   RW          880    .bss..L_MergedGlobals  segger_hardfaulthandler.o
-    0x20010070        -       0x00000004   Zero   RW           10    .bss.TimingDelay    app.o
-    0x20010074        -       0x000000a8   Zero   RW          851    .bss._SEGGER_RTT    segger_rtt.o
-    0x2001011c        -       0x00000400   Zero   RW          854    .bss._acUpBuffer    segger_rtt.o
-    0x2001051c        -       0x00001000   Zero   RW           11    .bss.lBufInArray    app.o
-    0x2001151c        -       0x00000800   Zero   RW           12    .bss.lBufOutArray   app.o
-    0x20011d1c        -       0x00000002   Zero   RW           46    .bss.m_AdcValue     main.o
-    0x20011d1e   0x2000385c   0x00000002   PAD
-    0x20011d20        -       0x00008000   Zero   RW          140    STACK               startup_pt32z192.o
+    0x20010018        -       0x00000011   Zero   RW          870    .bss..L_MergedGlobals  segger_rtt.o
+    0x20010029   0x200038b4   0x00000003   PAD
+    0x2001002c        -       0x00000044   Zero   RW          895    .bss..L_MergedGlobals  segger_hardfaulthandler.o
+    0x20010070        -       0x00000004   Zero   RW           31    .bss.SYSCLK         dwtdelay.o
+    0x20010074        -       0x00000004   Zero   RW           10    .bss.TimingDelay    app.o
+    0x20010078        -       0x000000a8   Zero   RW          866    .bss._SEGGER_RTT    segger_rtt.o
+    0x20010120        -       0x00000400   Zero   RW          869    .bss._acUpBuffer    segger_rtt.o
+    0x20010520        -       0x00001000   Zero   RW           11    .bss.lBufInArray    app.o
+    0x20011520        -       0x00000800   Zero   RW           12    .bss.lBufOutArray   app.o
+    0x20011d20        -       0x00000002   Zero   RW           61    .bss.m_AdcValue     main.o
+    0x20011d22   0x200038b4   0x00000006   PAD
+    0x20011d28        -       0x00008000   Zero   RW          155    STACK               startup_pt32z192.o
 
 
 ==============================================================================
@@ -539,11 +549,12 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       400         16         33          0       6156       3584   app.o
+       428         16         33          0       6156       3490   app.o
       4576       4080          0          0          0        312   cr4_fft_1024_stm32.o
       1502       1008          0          0          0        308   cr4_fft_256_stm32.o
+        56          0          0          0          4       1152   dwtdelay.o
         18          0          0          0          0        300   hardfaulthandler.o
-      1052         92         97          0          2       9084   main.o
+      1060         92         97          0          2       9092   main.o
        108          0          0          0          0       3545   pt32z192xx_adc.o
        204          0          0          0          0       5408   pt32z192xx_dma.o
        190          6          0          0          0       7356   pt32z192xx_gpio.o
@@ -560,9 +571,9 @@ Image component sizes
        384          0          0          8          0       2256   system_pt32z192xx.o
 
     ----------------------------------------------------------------------
-     13360       6016        476          8      40212     100226   Object Totals
+     13452       6016        476          8      40220     101292   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        74          2          1          0          9          0   (incl. Padding)
+        74          2          1          0         13          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -604,15 +615,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     13936       6052        476         12      40212     100422   Grand Totals
-     13936       6052        476         12      40212     100422   ELF Image Totals
-     13936       6052        476         12          0          0   ROM Totals
+     14028       6052        476         12      40220     101468   Grand Totals
+     14028       6052        476         12      40220     101468   ELF Image Totals
+     14028       6052        476         12          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                14412 (  14.07kB)
-    Total RW  Size (RW Data + ZI Data)             40224 (  39.28kB)
-    Total ROM Size (Code + RO Data + RW Data)      14424 (  14.09kB)
+    Total RO  Size (Code + RO Data)                14504 (  14.16kB)
+    Total RW  Size (RW Data + ZI Data)             40232 (  39.29kB)
+    Total ROM Size (Code + RO Data + RW Data)      14516 (  14.18kB)
 
 ==============================================================================
 
