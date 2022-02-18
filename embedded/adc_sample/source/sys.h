@@ -8,10 +8,10 @@
 #include "pt32z192xx_conf.h"
 
 #include "app.h"
+#include "bsp.h"
 #include "SEGGER_RTT.h"
 #include "SEGGER_RTT_Conf.h"
 
-#include "stm32_dsp.h"
 #include "nr_micro_shell.h"
 
 typedef int32_t  s32;
@@ -36,7 +36,7 @@ do \
 		SEGGER_RTT_printf(0, fmt, ##__VA_ARGS__); \
 }while(0)
 
-#define     APP_VERSION               "1.0.0"                 /**< 版本号 */
+#define APP_VERSION             "1.0.0"                 /**< 版本号 */
 
 #define ALL_UPLOAD_DELAY		100
 #define SEGGER_RTT_IN_RAM		1
@@ -61,19 +61,8 @@ do \
 /////////////////////////////////////////////////////////////////////
 #define	USER_PARAMETER_START_SECTOR_ADDRESS0	0x0007A000u
 #define	USER_PARAMETER_START_SECTOR_ADDRESS1	0x0007C000u
-#define	MAGIC_SECTOR_ADDRESS0									0x0007E000u
+#define	MAGIC_SECTOR_ADDRESS0					0x0007E000u
 /////////////////////////////////////////////////////////////////////
-// R-红色
-#define LED1_GPIO_PORT    	CMSDK_PC			          /* GPIO端口 */
-#define LED1_GPIO_PIN		GPIO_Pin_6			        /* 连接到红色LED灯的GPIO */
-
-// G-绿色
-#define LED2_GPIO_PORT    	CMSDK_PC			          /* GPIO端口 */
-#define LED2_GPIO_PIN		GPIO_Pin_7			        /* 连接到绿色LED灯的GPIO */
-
-// B-蓝色
-#define LED3_GPIO_PORT    	CMSDK_PC			          /* GPIO端口 */
-#define LED3_GPIO_PIN		GPIO_Pin_8			        /* 连接到蓝色LED灯的GPIO */
 /** 定义控制LED的开关
   * 1 - off
   *0 - on

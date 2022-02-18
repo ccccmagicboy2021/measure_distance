@@ -2,7 +2,7 @@
 #include "sys.h"
 
 __IO uint32_t   TimingDelay;
-extern  uint16_t m_AdcValue;
+extern volatile uint16_t m_AdcValue;
 
 //#define NPT 256 //sample number
 #define NPT 1024 //sample number

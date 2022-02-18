@@ -36,7 +36,7 @@ extern  __IO uint32_t    TimingDelay;
 
 extern  __IO uint32_t    adc_value;
 
-extern  uint16_t m_AdcValue;
+extern volatile uint16_t m_AdcValue;
 
 extern volatile long timeval;
 

@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>PT32Z192,MSC_CLOCK</Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt;..\application\dhrystone;..\application\fft;..\application\nr_micro_shell\inc;..\application\fifo</IncludePath>
+              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt;..\application\dhrystone;..\application\fft;..\application\nr_micro_shell\inc;..\application\fifo;..\application\bsp</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -397,6 +397,11 @@
               <FileName>fifo.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\application\fifo\fifo.h</FilePath>
+            </File>
+            <File>
+              <FileName>bsp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\bsp\bsp.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -915,7 +920,7 @@
               <MiscControls></MiscControls>
               <Define>PT32Z192,VECT_TAB_SRAM,MSC_CLOCK</Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt;..\application\dhrystone;..\application\fft;..\application\nr_micro_shell\inc</IncludePath>
+              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt;..\application\dhrystone;..\application\fft;..\application\nr_micro_shell\inc;..\application\bsp</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -973,6 +978,11 @@
               <FileName>fifo.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\application\fifo\fifo.h</FilePath>
+            </File>
+            <File>
+              <FileName>bsp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\bsp\bsp.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -9,14 +9,14 @@
 ; Amount of memory (in bytes) allocated for Stack and Heap
 ; Tailor those values to your application needs
 ;//   <o> Stack Size (in Bytes, must 8 byte aligned) <0-16384:8>
-Stack_Size          EQU     0x00008000
+Stack_Size          EQU     0x00001000
 
                     AREA    STACK, NOINIT, READWRITE, ALIGN = 3
 Stack_Mem           SPACE   Stack_Size
 __initial_sp
 
 ;//   <o>  Heap Size (in Bytes) <0-16384:8>
-Heap_Size           EQU     0x00000300
+Heap_Size           EQU     0x00000000
 
                     AREA    HEAP, NOINIT, READWRITE, ALIGN = 3
 __heap_base
