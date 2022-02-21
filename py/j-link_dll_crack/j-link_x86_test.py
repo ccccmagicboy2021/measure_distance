@@ -1,4 +1,4 @@
-#!d:\cccc2020\TOOL\python-3.9.1-embed-amd64\python.exe
+#!d:\cccc2020\TOOL\python-3.9.1-embed-win32\python.exe
 
 import sys
 sys.path.append('test')
@@ -27,12 +27,12 @@ def init_jlink(dllname: str):
     print(jlk.version)
 
 def main():
-    init_jlink('JLink_x64_v4.92.0.0.dll')
-    #init_jlink('JLink_x64_v6.32.0.0.dll')
-    init_jlink('JLink_x64_v7.0.0.0.dll')
-    init_jlink('JLink_x64_v7.58.5.0.dll')
-    init_jlink('JLink_x64_v7.60.5.0.dll')
-    init_jlink('JLink_x64_v7.60.8.0.dll')
+    init_jlink('JLinkARM_v4.92.0.0.dll')
+    init_jlink('JLinkARM_v6.32.0.0.dll')
+    init_jlink('JLinkARM_v7.0.0.0.dll')
+    init_jlink('JLinkARM_v7.20.2.0.dll')
+    init_jlink('JLinkARM_v7.60.5.0.dll')
+    init_jlink('JLinkARM_v7.60.8.0.dll')
 
 if __name__ == '__main__':
     print('bingo')
