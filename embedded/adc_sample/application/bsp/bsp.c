@@ -17,6 +17,9 @@ void bsp_init(void)
     read_uid();
     SysTick_Init(SYSTICK_1MS);      //for systick irq
     
+	EventRecorderInitialize(EventRecordAll, 1U); 
+	EventRecorderStart();
+    
 #ifdef VECT_TAB_SRAM
     CV_LOG("ramcode program begin...\r\n");
     printf("ramcode program begin...\r\n");

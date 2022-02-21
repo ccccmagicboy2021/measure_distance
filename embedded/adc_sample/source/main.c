@@ -7,7 +7,9 @@ int main(void)
     
 	while(1)
 	{
+        EventStartA(1);
 		app();      //app
+        EventStopA(1);
     }
 }
 
