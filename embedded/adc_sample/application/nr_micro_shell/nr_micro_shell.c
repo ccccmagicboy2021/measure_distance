@@ -116,7 +116,7 @@ void _shell_init(shell_st *shell)
         shell_printf("\r\n\x1b[0m");
         shell_printf("\x1b[37;1mBuild:       "__DATE__" "__TIME__"\r\n\x1b[0m");
         shell_printf("Version:     "APP_VERSION"\r\n");
-        shell_printf("Copyright:   2022 \r\n");
+        shell_printf("Copyright:   2022 haha\r\n");
 #endif
 
 	shell_printf("%s",shell->user_name);

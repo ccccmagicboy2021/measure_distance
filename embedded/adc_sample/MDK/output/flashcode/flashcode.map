@@ -196,73 +196,73 @@ Image Symbol Table
     [Anonymous Symbol]                       0x00001820   Section        0  segger_rtt_printf.o(.text._PrintUnsigned)
     _PrintUnsigned._aV2C                     0x00001a1c   Number         0  segger_rtt_printf.o(.text._PrintUnsigned)
     [Anonymous Symbol]                       0x00001a2c   Section        0  nr_micro_shell.o(.text._shell_init)
-    [Anonymous Symbol]                       0x00001b54   Section        0  ansi.o(.text.ansi_clear_current_line)
-    [Anonymous Symbol]                       0x00001b64   Section        0  ansi.o(.text.ansi_get_char)
-    [Anonymous Symbol]                       0x00001c98   Section        0  ansi.o(.text.ansi_init)
-    [Anonymous Symbol]                       0x00001cac   Section        0  app.o(.text.app)
-    [Anonymous Symbol]                       0x00001cc0   Section        0  bsp.o(.text.bsp_init)
-    [Anonymous Symbol]                       0x00001f3c   Section        0  pt32z192xx_retarget.o(.text.fputc)
-    [Anonymous Symbol]                       0x00001f48   Section        0  main.o(.text.main)
-    [Anonymous Symbol]                       0x00001f8c   Section        0  ansi_port.o(.text.nr_ansi_common_char_slover)
-    [Anonymous Symbol]                       0x00002044   Section        0  ansi_port.o(.text.nr_ansi_ctrl_common_slover)
-    [Anonymous Symbol]                       0x00002078   Section        0  ansi_port.o(.text.nr_ansi_in__)
-    [Anonymous Symbol]                       0x00002104   Section        0  ansi_port.o(.text.nr_ansi_in_backspace)
-    [Anonymous Symbol]                       0x00002184   Section        0  ansi_port.o(.text.nr_ansi_in_down)
-    [Anonymous Symbol]                       0x00002204   Section        0  ansi_port.o(.text.nr_ansi_in_enter)
-    [Anonymous Symbol]                       0x00002238   Section        0  ansi_port.o(.text.nr_ansi_in_left)
-    [Anonymous Symbol]                       0x00002258   Section        0  ansi_port.o(.text.nr_ansi_in_newline)
-    [Anonymous Symbol]                       0x0000227c   Section        0  ansi_port.o(.text.nr_ansi_in_right)
-    [Anonymous Symbol]                       0x000022a0   Section        0  ansi_port.o(.text.nr_ansi_in_tab)
-    [Anonymous Symbol]                       0x00002384   Section        0  ansi_port.o(.text.nr_ansi_in_up)
-    [Anonymous Symbol]                       0x00002400   Section        0  bsp.o(.text.read_uid)
-    [Anonymous Symbol]                       0x000024f4   Section        0  nr_micro_shell.o(.text.shell_cmd_complete)
-    [Anonymous Symbol]                       0x00002558   Section        0  nr_micro_shell.o(.text.shell_his_copy_queue_item)
-    [Anonymous Symbol]                       0x000026ec   Section        0  nr_micro_shell.o(.text.shell_his_queue_add_cmd)
-    [Anonymous Symbol]                       0x00002794   Section        0  nr_micro_shell.o(.text.shell_his_queue_search_cmd)
-    [Anonymous Symbol]                       0x00002844   Section        0  nr_micro_shell_commands.o(.text.shell_ls_cmd)
-    [Anonymous Symbol]                       0x00002988   Section        0  nr_micro_shell.o(.text.shell_parser)
-    [Anonymous Symbol]                       0x00002e20   Section        0  nr_micro_shell_commands.o(.text.shell_test_cmd)
-    OSKERNEL                                 0x00002e6c   Section       18  hardfaulthandler.o(OSKERNEL)
-    i.__0printf$3                            0x00002e9c   Section        0  printf3.o(i.__0printf$3)
-    i.__scatterload_copy                     0x00002ebc   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x00002eca   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x00002ecc   Section       14  handlers.o(i.__scatterload_zeroinit)
-    _printf_core                             0x00002edd   Thumb Code   436  printf3.o(i._printf_core)
-    i._printf_core                           0x00002edc   Section        0  printf3.o(i._printf_core)
-    i.putc                                   0x00003094   Section        0  putc.o(i.putc)
-    i.puts                                   0x00003098   Section        0  puts.o(i.puts)
-    .constdata                               0x000030bc   Section      129  ctype_o.o(.constdata)
-    table                                    0x00003140   Data           4  ctype_o.o(.constdata)
-    .constdata                               0x00003140   Section        4  ctype_o.o(.constdata)
-    __tagsym$$used.0                         0x000031bc   Number         0  nr_micro_shell.o(.rodata.nr_shell_cmd0.end)
-    __tagsym$$used.1                         0x000031d0   Number         0  nr_micro_shell.o(.rodata.nr_shell_cmd1.end)
-    .L.str.4                                 0x00003220   Data          23  bsp.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x00003220   Section        0  bsp.o(.rodata.str1.1)
-    .L.str.1                                 0x00003237   Data          45  bsp.o(.rodata.str1.1)
-    .L.str.9                                 0x00003264   Data           6  bsp.o(.rodata.str1.1)
-    .L.str.6                                 0x0000326a   Data           9  bsp.o(.rodata.str1.1)
-    .L.str.5                                 0x00003273   Data          12  bsp.o(.rodata.str1.1)
-    .L.str.3                                 0x0000327f   Data           5  bsp.o(.rodata.str1.1)
-    .L.str.2                                 0x00003284   Data           8  bsp.o(.rodata.str1.1)
-    .L.str                                   0x0000328c   Data          17  main.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x0000328c   Section        0  main.o(.rodata.str1.1)
-    .L.str                                   0x0000329d   Data           9  segger_rtt.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x0000329d   Section        0  segger_rtt.o(.rodata.str1.1)
-    .Lstr.15                                 0x000032a6   Data          17  nr_micro_shell_commands.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x000032a6   Section        0  nr_micro_shell_commands.o(.rodata.str1.1)
-    .L.str.2                                 0x000032b7   Data           6  ansi_port.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x000032b7   Section        0  ansi_port.o(.rodata.str1.1)
-    .L.str.3                                 0x000032bd   Data           4  ansi_port.o(.rodata.str1.1)
-    .L.str.11                                0x000032c1   Data           3  ansi_port.o(.rodata.str1.1)
-    .L.str.7                                 0x000032c1   Data           3  ansi_port.o(.rodata.str1.1)
-    .Lstr                                    0x000032c4   Data          41  nr_micro_shell.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x000032c4   Section        0  nr_micro_shell.o(.rodata.str1.1)
-    .Lstr.16                                 0x000032ed   Data          41  nr_micro_shell.o(.rodata.str1.1)
-    .Lstr.19                                 0x00003316   Data          41  nr_micro_shell.o(.rodata.str1.1)
-    .Lstr.17                                 0x0000333f   Data          41  nr_micro_shell.o(.rodata.str1.1)
-    .Lstr.18                                 0x00003368   Data          41  nr_micro_shell.o(.rodata.str1.1)
-    .Lstr.8                                  0x0000338f   Data           2  nr_micro_shell.o(.rodata.str1.1)
-    .L.str                                   0x00003391   Data          10  nr_micro_shell.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x00001b38   Section        0  ansi.o(.text.ansi_clear_current_line)
+    [Anonymous Symbol]                       0x00001b48   Section        0  ansi.o(.text.ansi_get_char)
+    [Anonymous Symbol]                       0x00001c7c   Section        0  ansi.o(.text.ansi_init)
+    [Anonymous Symbol]                       0x00001c90   Section        0  app.o(.text.app)
+    [Anonymous Symbol]                       0x00001ca4   Section        0  bsp.o(.text.bsp_init)
+    [Anonymous Symbol]                       0x00001f20   Section        0  pt32z192xx_retarget.o(.text.fputc)
+    [Anonymous Symbol]                       0x00001f2c   Section        0  main.o(.text.main)
+    [Anonymous Symbol]                       0x00001f70   Section        0  ansi_port.o(.text.nr_ansi_common_char_slover)
+    [Anonymous Symbol]                       0x00002028   Section        0  ansi_port.o(.text.nr_ansi_ctrl_common_slover)
+    [Anonymous Symbol]                       0x0000205c   Section        0  ansi_port.o(.text.nr_ansi_in__)
+    [Anonymous Symbol]                       0x000020e8   Section        0  ansi_port.o(.text.nr_ansi_in_backspace)
+    [Anonymous Symbol]                       0x00002168   Section        0  ansi_port.o(.text.nr_ansi_in_down)
+    [Anonymous Symbol]                       0x000021e8   Section        0  ansi_port.o(.text.nr_ansi_in_enter)
+    [Anonymous Symbol]                       0x0000221c   Section        0  ansi_port.o(.text.nr_ansi_in_left)
+    [Anonymous Symbol]                       0x0000223c   Section        0  ansi_port.o(.text.nr_ansi_in_newline)
+    [Anonymous Symbol]                       0x00002260   Section        0  ansi_port.o(.text.nr_ansi_in_right)
+    [Anonymous Symbol]                       0x00002284   Section        0  ansi_port.o(.text.nr_ansi_in_tab)
+    [Anonymous Symbol]                       0x00002368   Section        0  ansi_port.o(.text.nr_ansi_in_up)
+    [Anonymous Symbol]                       0x000023e4   Section        0  bsp.o(.text.read_uid)
+    [Anonymous Symbol]                       0x000024d8   Section        0  nr_micro_shell.o(.text.shell_cmd_complete)
+    [Anonymous Symbol]                       0x0000253c   Section        0  nr_micro_shell.o(.text.shell_his_copy_queue_item)
+    [Anonymous Symbol]                       0x000026d0   Section        0  nr_micro_shell.o(.text.shell_his_queue_add_cmd)
+    [Anonymous Symbol]                       0x00002778   Section        0  nr_micro_shell.o(.text.shell_his_queue_search_cmd)
+    [Anonymous Symbol]                       0x00002828   Section        0  nr_micro_shell_commands.o(.text.shell_ls_cmd)
+    [Anonymous Symbol]                       0x0000296c   Section        0  nr_micro_shell.o(.text.shell_parser)
+    [Anonymous Symbol]                       0x00002e04   Section        0  nr_micro_shell_commands.o(.text.shell_test_cmd)
+    OSKERNEL                                 0x00002e50   Section       18  hardfaulthandler.o(OSKERNEL)
+    i.__0printf$3                            0x00002e80   Section        0  printf3.o(i.__0printf$3)
+    i.__scatterload_copy                     0x00002ea0   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00002eae   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00002eb0   Section       14  handlers.o(i.__scatterload_zeroinit)
+    _printf_core                             0x00002ec1   Thumb Code   436  printf3.o(i._printf_core)
+    i._printf_core                           0x00002ec0   Section        0  printf3.o(i._printf_core)
+    i.putc                                   0x00003078   Section        0  putc.o(i.putc)
+    i.puts                                   0x0000307c   Section        0  puts.o(i.puts)
+    .constdata                               0x000030a0   Section      129  ctype_o.o(.constdata)
+    table                                    0x00003124   Data           4  ctype_o.o(.constdata)
+    .constdata                               0x00003124   Section        4  ctype_o.o(.constdata)
+    __tagsym$$used.0                         0x000031a0   Number         0  nr_micro_shell.o(.rodata.nr_shell_cmd0.end)
+    __tagsym$$used.1                         0x000031b4   Number         0  nr_micro_shell.o(.rodata.nr_shell_cmd1.end)
+    .L.str.4                                 0x00003204   Data          23  bsp.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x00003204   Section        0  bsp.o(.rodata.str1.1)
+    .L.str.1                                 0x0000321b   Data          45  bsp.o(.rodata.str1.1)
+    .L.str.9                                 0x00003248   Data           6  bsp.o(.rodata.str1.1)
+    .L.str.5                                 0x0000324e   Data          12  bsp.o(.rodata.str1.1)
+    .L.str.6                                 0x0000325a   Data           9  bsp.o(.rodata.str1.1)
+    .L.str.3                                 0x00003263   Data           5  bsp.o(.rodata.str1.1)
+    .L.str.2                                 0x00003268   Data           8  bsp.o(.rodata.str1.1)
+    .L.str                                   0x00003270   Data          17  main.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x00003270   Section        0  main.o(.rodata.str1.1)
+    .L.str                                   0x00003281   Data           9  segger_rtt.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x00003281   Section        0  segger_rtt.o(.rodata.str1.1)
+    .Lstr.15                                 0x0000328a   Data          17  nr_micro_shell_commands.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x0000328a   Section        0  nr_micro_shell_commands.o(.rodata.str1.1)
+    .L.str.2                                 0x0000329b   Data           6  ansi_port.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x0000329b   Section        0  ansi_port.o(.rodata.str1.1)
+    .L.str.3                                 0x000032a1   Data           4  ansi_port.o(.rodata.str1.1)
+    .L.str.11                                0x000032a5   Data           3  ansi_port.o(.rodata.str1.1)
+    .L.str.7                                 0x000032a5   Data           3  ansi_port.o(.rodata.str1.1)
+    .Lstr                                    0x000032a8   Data          41  nr_micro_shell.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x000032a8   Section        0  nr_micro_shell.o(.rodata.str1.1)
+    .Lstr.16                                 0x000032d1   Data          41  nr_micro_shell.o(.rodata.str1.1)
+    .Lstr.19                                 0x000032fa   Data          41  nr_micro_shell.o(.rodata.str1.1)
+    .Lstr.17                                 0x00003323   Data          41  nr_micro_shell.o(.rodata.str1.1)
+    .Lstr.18                                 0x0000334c   Data          41  nr_micro_shell.o(.rodata.str1.1)
+    .Lstr.20                                 0x00003375   Data          41  nr_micro_shell.o(.rodata.str1.1)
+    .Lstr.8                                  0x0000339c   Data           2  nr_micro_shell.o(.rodata.str1.1)
     [Anonymous Symbol]                       0x20000000   Section        0  eventrecorder.o(.text.EventRecord2)
     EventRecordItem                          0x20000091   Thumb Code   680  eventrecorder.o(.text.EventRecordItem)
     [Anonymous Symbol]                       0x20000090   Section        0  eventrecorder.o(.text.EventRecordItem)
@@ -445,53 +445,53 @@ Image Symbol Table
     UART_ITConfig                            0x00001775   Thumb Code    16  pt32z192xx_uart.o(.text.UART_ITConfig)
     UART_Init                                0x00001785   Thumb Code   154  pt32z192xx_uart.o(.text.UART_Init)
     _shell_init                              0x00001a2d   Thumb Code   148  nr_micro_shell.o(.text._shell_init)
-    ansi_clear_current_line                  0x00001b55   Thumb Code    14  ansi.o(.text.ansi_clear_current_line)
-    ansi_get_char                            0x00001b65   Thumb Code   306  ansi.o(.text.ansi_get_char)
-    ansi_init                                0x00001c99   Thumb Code    18  ansi.o(.text.ansi_init)
-    app                                      0x00001cad   Thumb Code    20  app.o(.text.app)
-    bsp_init                                 0x00001cc1   Thumb Code   576  bsp.o(.text.bsp_init)
-    fputc                                    0x00001f3d   Thumb Code    10  pt32z192xx_retarget.o(.text.fputc)
-    main                                     0x00001f49   Thumb Code    66  main.o(.text.main)
-    nr_ansi_common_char_slover               0x00001f8d   Thumb Code   176  ansi_port.o(.text.nr_ansi_common_char_slover)
-    nr_ansi_ctrl_common_slover               0x00002045   Thumb Code    50  ansi_port.o(.text.nr_ansi_ctrl_common_slover)
-    nr_ansi_in__                             0x00002079   Thumb Code   138  ansi_port.o(.text.nr_ansi_in__)
-    nr_ansi_in_backspace                     0x00002105   Thumb Code   120  ansi_port.o(.text.nr_ansi_in_backspace)
-    nr_ansi_in_down                          0x00002185   Thumb Code   126  ansi_port.o(.text.nr_ansi_in_down)
-    nr_ansi_in_enter                         0x00002205   Thumb Code    52  ansi_port.o(.text.nr_ansi_in_enter)
-    nr_ansi_in_left                          0x00002239   Thumb Code    24  ansi_port.o(.text.nr_ansi_in_left)
-    nr_ansi_in_newline                       0x00002259   Thumb Code    36  ansi_port.o(.text.nr_ansi_in_newline)
-    nr_ansi_in_right                         0x0000227d   Thumb Code    28  ansi_port.o(.text.nr_ansi_in_right)
-    nr_ansi_in_tab                           0x000022a1   Thumb Code   226  ansi_port.o(.text.nr_ansi_in_tab)
-    nr_ansi_in_up                            0x00002385   Thumb Code   124  ansi_port.o(.text.nr_ansi_in_up)
-    read_uid                                 0x00002401   Thumb Code   208  bsp.o(.text.read_uid)
-    shell_cmd_complete                       0x000024f5   Thumb Code   100  nr_micro_shell.o(.text.shell_cmd_complete)
-    shell_his_copy_queue_item                0x00002559   Thumb Code   402  nr_micro_shell.o(.text.shell_his_copy_queue_item)
-    shell_his_queue_add_cmd                  0x000026ed   Thumb Code   168  nr_micro_shell.o(.text.shell_his_queue_add_cmd)
-    shell_his_queue_search_cmd               0x00002795   Thumb Code   174  nr_micro_shell.o(.text.shell_his_queue_search_cmd)
-    shell_ls_cmd                             0x00002845   Thumb Code   168  nr_micro_shell_commands.o(.text.shell_ls_cmd)
-    shell_parser                             0x00002989   Thumb Code  1124  nr_micro_shell.o(.text.shell_parser)
-    shell_test_cmd                           0x00002e21   Thumb Code    44  nr_micro_shell_commands.o(.text.shell_test_cmd)
-    HardFault_Handler                        0x00002e6d   Thumb Code     0  hardfaulthandler.o(OSKERNEL)
-    Long Thumb to Thumb Veneer to EventRecorderInitialize 0x00002e7f   Thumb Code    10  anon$$obj.o(Veneer$$Code)
-    Long Thumb to Thumb Veneer to EventRecorderStart 0x00002e89   Thumb Code    10  anon$$obj.o(Veneer$$Code)
-    Long Thumb to Thumb Veneer to EventRecord2 0x00002e93   Thumb Code    10  anon$$obj.o(Veneer$$Code)
-    __0printf$3                              0x00002e9d   Thumb Code    22  printf3.o(i.__0printf$3)
-    __1printf$3                              0x00002e9d   Thumb Code     0  printf3.o(i.__0printf$3)
-    __2printf                                0x00002e9d   Thumb Code     0  printf3.o(i.__0printf$3)
-    __scatterload_copy                       0x00002ebd   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x00002ecb   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x00002ecd   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    putc                                     0x00003095   Thumb Code     4  putc.o(i.putc)
-    puts                                     0x00003099   Thumb Code    30  puts.o(i.puts)
-    __ctype_table                            0x000030bc   Data         129  ctype_o.o(.constdata)
-    nr_ansi_in_cmd                           0x00003144   Data          21  ansi.o(.rodata.nr_ansi_in_cmd)
-    nr_ansi_in_cmd_fun                       0x0000315c   Data          80  ansi.o(.rodata.nr_ansi_in_cmd_fun)
-    nr_ansi_in_special_symbol_fun            0x000031ac   Data          16  ansi.o(.rodata.nr_ansi_in_special_symbol_fun)
-    _nr_cmd_start_                           0x000031bc   Data          20  nr_micro_shell.o(.rodata.nr_shell_cmd0.end)
-    _nr_cmd_end_                             0x000031d0   Data          20  nr_micro_shell.o(.rodata.nr_shell_cmd1.end)
-    static_cmd                               0x000031e4   Data          60  nr_micro_shell_commands.o(.rodata.static_cmd)
-    Region$$Table$$Base                      0x0000339c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x000033cc   Number         0  anon$$obj.o(Region$$Table)
+    ansi_clear_current_line                  0x00001b39   Thumb Code    14  ansi.o(.text.ansi_clear_current_line)
+    ansi_get_char                            0x00001b49   Thumb Code   306  ansi.o(.text.ansi_get_char)
+    ansi_init                                0x00001c7d   Thumb Code    18  ansi.o(.text.ansi_init)
+    app                                      0x00001c91   Thumb Code    20  app.o(.text.app)
+    bsp_init                                 0x00001ca5   Thumb Code   576  bsp.o(.text.bsp_init)
+    fputc                                    0x00001f21   Thumb Code    10  pt32z192xx_retarget.o(.text.fputc)
+    main                                     0x00001f2d   Thumb Code    66  main.o(.text.main)
+    nr_ansi_common_char_slover               0x00001f71   Thumb Code   176  ansi_port.o(.text.nr_ansi_common_char_slover)
+    nr_ansi_ctrl_common_slover               0x00002029   Thumb Code    50  ansi_port.o(.text.nr_ansi_ctrl_common_slover)
+    nr_ansi_in__                             0x0000205d   Thumb Code   138  ansi_port.o(.text.nr_ansi_in__)
+    nr_ansi_in_backspace                     0x000020e9   Thumb Code   120  ansi_port.o(.text.nr_ansi_in_backspace)
+    nr_ansi_in_down                          0x00002169   Thumb Code   126  ansi_port.o(.text.nr_ansi_in_down)
+    nr_ansi_in_enter                         0x000021e9   Thumb Code    52  ansi_port.o(.text.nr_ansi_in_enter)
+    nr_ansi_in_left                          0x0000221d   Thumb Code    24  ansi_port.o(.text.nr_ansi_in_left)
+    nr_ansi_in_newline                       0x0000223d   Thumb Code    36  ansi_port.o(.text.nr_ansi_in_newline)
+    nr_ansi_in_right                         0x00002261   Thumb Code    28  ansi_port.o(.text.nr_ansi_in_right)
+    nr_ansi_in_tab                           0x00002285   Thumb Code   226  ansi_port.o(.text.nr_ansi_in_tab)
+    nr_ansi_in_up                            0x00002369   Thumb Code   124  ansi_port.o(.text.nr_ansi_in_up)
+    read_uid                                 0x000023e5   Thumb Code   208  bsp.o(.text.read_uid)
+    shell_cmd_complete                       0x000024d9   Thumb Code   100  nr_micro_shell.o(.text.shell_cmd_complete)
+    shell_his_copy_queue_item                0x0000253d   Thumb Code   402  nr_micro_shell.o(.text.shell_his_copy_queue_item)
+    shell_his_queue_add_cmd                  0x000026d1   Thumb Code   168  nr_micro_shell.o(.text.shell_his_queue_add_cmd)
+    shell_his_queue_search_cmd               0x00002779   Thumb Code   174  nr_micro_shell.o(.text.shell_his_queue_search_cmd)
+    shell_ls_cmd                             0x00002829   Thumb Code   168  nr_micro_shell_commands.o(.text.shell_ls_cmd)
+    shell_parser                             0x0000296d   Thumb Code  1124  nr_micro_shell.o(.text.shell_parser)
+    shell_test_cmd                           0x00002e05   Thumb Code    44  nr_micro_shell_commands.o(.text.shell_test_cmd)
+    HardFault_Handler                        0x00002e51   Thumb Code     0  hardfaulthandler.o(OSKERNEL)
+    Long Thumb to Thumb Veneer to EventRecorderInitialize 0x00002e63   Thumb Code    10  anon$$obj.o(Veneer$$Code)
+    Long Thumb to Thumb Veneer to EventRecorderStart 0x00002e6d   Thumb Code    10  anon$$obj.o(Veneer$$Code)
+    Long Thumb to Thumb Veneer to EventRecord2 0x00002e77   Thumb Code    10  anon$$obj.o(Veneer$$Code)
+    __0printf$3                              0x00002e81   Thumb Code    22  printf3.o(i.__0printf$3)
+    __1printf$3                              0x00002e81   Thumb Code     0  printf3.o(i.__0printf$3)
+    __2printf                                0x00002e81   Thumb Code     0  printf3.o(i.__0printf$3)
+    __scatterload_copy                       0x00002ea1   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00002eaf   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00002eb1   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    putc                                     0x00003079   Thumb Code     4  putc.o(i.putc)
+    puts                                     0x0000307d   Thumb Code    30  puts.o(i.puts)
+    __ctype_table                            0x000030a0   Data         129  ctype_o.o(.constdata)
+    nr_ansi_in_cmd                           0x00003128   Data          21  ansi.o(.rodata.nr_ansi_in_cmd)
+    nr_ansi_in_cmd_fun                       0x00003140   Data          80  ansi.o(.rodata.nr_ansi_in_cmd_fun)
+    nr_ansi_in_special_symbol_fun            0x00003190   Data          16  ansi.o(.rodata.nr_ansi_in_special_symbol_fun)
+    _nr_cmd_start_                           0x000031a0   Data          20  nr_micro_shell.o(.rodata.nr_shell_cmd0.end)
+    _nr_cmd_end_                             0x000031b4   Data          20  nr_micro_shell.o(.rodata.nr_shell_cmd1.end)
+    static_cmd                               0x000031c8   Data          60  nr_micro_shell_commands.o(.rodata.static_cmd)
+    Region$$Table$$Base                      0x000033a0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x000033d0   Number         0  anon$$obj.o(Region$$Table)
     EventRecord2                             0x20000001   Thumb Code   144  eventrecorder.o(.text.EventRecord2)
     EventRecorderInitialize                  0x20000339   Thumb Code  2664  eventrecorder.o(.text.EventRecorderInitialize)
     EventRecorderStart                       0x20000da1   Thumb Code    94  eventrecorder.o(.text.EventRecorderStart)
@@ -523,7 +523,7 @@ Memory Map of the image
 
   Load Region LR_IROM1 (Base: 0x00000000, Size: 0x000043c0, Max: 0x00080000, ABSOLUTE, COMPRESSED[0x000042a8])
 
-    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x000033cc, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x000033d0, Max: 0x00080000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -644,74 +644,74 @@ Memory Map of the image
     0x00001784   0x00001784   0x0000009a   Code   RO          570    .text.UART_Init     pt32z192xx_uart.o
     0x0000181e   0x0000181e   0x00000002   PAD
     0x00001820   0x00001820   0x0000020c   Code   RO          874    .text._PrintUnsigned  segger_rtt_printf.o
-    0x00001a2c   0x00001a2c   0x00000128   Code   RO          967    .text._shell_init   nr_micro_shell.o
-    0x00001b54   0x00001b54   0x0000000e   Code   RO          917    .text.ansi_clear_current_line  ansi.o
-    0x00001b62   0x00001b62   0x00000002   PAD
-    0x00001b64   0x00001b64   0x00000132   Code   RO          919    .text.ansi_get_char  ansi.o
-    0x00001c96   0x00001c96   0x00000002   PAD
-    0x00001c98   0x00001c98   0x00000012   Code   RO          915    .text.ansi_init     ansi.o
-    0x00001caa   0x00001caa   0x00000002   PAD
-    0x00001cac   0x00001cac   0x00000014   Code   RO            6    .text.app           app.o
-    0x00001cc0   0x00001cc0   0x0000027c   Code   RO           22    .text.bsp_init      bsp.o
-    0x00001f3c   0x00001f3c   0x0000000a   Code   RO          728    .text.fputc         pt32z192xx_retarget.o
-    0x00001f46   0x00001f46   0x00000002   PAD
-    0x00001f48   0x00001f48   0x00000042   Code   RO           54    .text.main          main.o
-    0x00001f8a   0x00001f8a   0x00000002   PAD
-    0x00001f8c   0x00001f8c   0x000000b8   Code   RO          936    .text.nr_ansi_common_char_slover  ansi_port.o
-    0x00002044   0x00002044   0x00000032   Code   RO          938    .text.nr_ansi_ctrl_common_slover  ansi_port.o
-    0x00002076   0x00002076   0x00000002   PAD
-    0x00002078   0x00002078   0x0000008a   Code   RO          956    .text.nr_ansi_in__  ansi_port.o
-    0x00002102   0x00002102   0x00000002   PAD
-    0x00002104   0x00002104   0x00000080   Code   RO          944    .text.nr_ansi_in_backspace  ansi_port.o
-    0x00002184   0x00002184   0x0000007e   Code   RO          948    .text.nr_ansi_in_down  ansi_port.o
-    0x00002202   0x00002202   0x00000002   PAD
-    0x00002204   0x00002204   0x00000034   Code   RO          940    .text.nr_ansi_in_enter  ansi_port.o
-    0x00002238   0x00002238   0x00000020   Code   RO          950    .text.nr_ansi_in_left  ansi_port.o
-    0x00002258   0x00002258   0x00000024   Code   RO          942    .text.nr_ansi_in_newline  ansi_port.o
-    0x0000227c   0x0000227c   0x00000024   Code   RO          952    .text.nr_ansi_in_right  ansi_port.o
-    0x000022a0   0x000022a0   0x000000e2   Code   RO          954    .text.nr_ansi_in_tab  ansi_port.o
-    0x00002382   0x00002382   0x00000002   PAD
-    0x00002384   0x00002384   0x0000007c   Code   RO          946    .text.nr_ansi_in_up  ansi_port.o
-    0x00002400   0x00002400   0x000000f4   Code   RO           40    .text.read_uid      bsp.o
-    0x000024f4   0x000024f4   0x00000064   Code   RO          979    .text.shell_cmd_complete  nr_micro_shell.o
-    0x00002558   0x00002558   0x00000192   Code   RO          981    .text.shell_his_copy_queue_item  nr_micro_shell.o
-    0x000026ea   0x000026ea   0x00000002   PAD
-    0x000026ec   0x000026ec   0x000000a8   Code   RO          971    .text.shell_his_queue_add_cmd  nr_micro_shell.o
-    0x00002794   0x00002794   0x000000ae   Code   RO          977    .text.shell_his_queue_search_cmd  nr_micro_shell.o
-    0x00002842   0x00002842   0x00000002   PAD
-    0x00002844   0x00002844   0x00000144   Code   RO          899    .text.shell_ls_cmd  nr_micro_shell_commands.o
-    0x00002988   0x00002988   0x00000498   Code   RO          975    .text.shell_parser  nr_micro_shell.o
-    0x00002e20   0x00002e20   0x0000004c   Code   RO          901    .text.shell_test_cmd  nr_micro_shell_commands.o
-    0x00002e6c   0x00002e6c   0x00000012   Code   RO          895    OSKERNEL            hardfaulthandler.o
-    0x00002e7e   0x00002e7e   0x0000000a   Ven    RO         1456    Veneer$$Code        anon$$obj.o
-    0x00002e88   0x00002e88   0x0000000a   Ven    RO         1457    Veneer$$Code        anon$$obj.o
-    0x00002e92   0x00002e92   0x0000000a   Ven    RO         1458    Veneer$$Code        anon$$obj.o
-    0x00002e9c   0x00002e9c   0x00000020   Code   RO         1226    i.__0printf$3       mc_w.l(printf3.o)
-    0x00002ebc   0x00002ebc   0x0000000e   Code   RO         1448    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x00002eca   0x00002eca   0x00000002   Code   RO         1449    i.__scatterload_null  mc_w.l(handlers.o)
-    0x00002ecc   0x00002ecc   0x0000000e   Code   RO         1450    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x00002eda   0x00002eda   0x00000002   PAD
-    0x00002edc   0x00002edc   0x000001b8   Code   RO         1233    i._printf_core      mc_w.l(printf3.o)
-    0x00003094   0x00003094   0x00000004   Code   RO         1085    i.putc              mc_w.l(putc.o)
-    0x00003098   0x00003098   0x00000024   Code   RO         1081    i.puts              mc_w.l(puts.o)
-    0x000030bc   0x000030bc   0x00000081   Data   RO         1096    .constdata          mc_w.l(ctype_o.o)
+    0x00001a2c   0x00001a2c   0x0000010c   Code   RO          967    .text._shell_init   nr_micro_shell.o
+    0x00001b38   0x00001b38   0x0000000e   Code   RO          917    .text.ansi_clear_current_line  ansi.o
+    0x00001b46   0x00001b46   0x00000002   PAD
+    0x00001b48   0x00001b48   0x00000132   Code   RO          919    .text.ansi_get_char  ansi.o
+    0x00001c7a   0x00001c7a   0x00000002   PAD
+    0x00001c7c   0x00001c7c   0x00000012   Code   RO          915    .text.ansi_init     ansi.o
+    0x00001c8e   0x00001c8e   0x00000002   PAD
+    0x00001c90   0x00001c90   0x00000014   Code   RO            6    .text.app           app.o
+    0x00001ca4   0x00001ca4   0x0000027c   Code   RO           22    .text.bsp_init      bsp.o
+    0x00001f20   0x00001f20   0x0000000a   Code   RO          728    .text.fputc         pt32z192xx_retarget.o
+    0x00001f2a   0x00001f2a   0x00000002   PAD
+    0x00001f2c   0x00001f2c   0x00000042   Code   RO           54    .text.main          main.o
+    0x00001f6e   0x00001f6e   0x00000002   PAD
+    0x00001f70   0x00001f70   0x000000b8   Code   RO          936    .text.nr_ansi_common_char_slover  ansi_port.o
+    0x00002028   0x00002028   0x00000032   Code   RO          938    .text.nr_ansi_ctrl_common_slover  ansi_port.o
+    0x0000205a   0x0000205a   0x00000002   PAD
+    0x0000205c   0x0000205c   0x0000008a   Code   RO          956    .text.nr_ansi_in__  ansi_port.o
+    0x000020e6   0x000020e6   0x00000002   PAD
+    0x000020e8   0x000020e8   0x00000080   Code   RO          944    .text.nr_ansi_in_backspace  ansi_port.o
+    0x00002168   0x00002168   0x0000007e   Code   RO          948    .text.nr_ansi_in_down  ansi_port.o
+    0x000021e6   0x000021e6   0x00000002   PAD
+    0x000021e8   0x000021e8   0x00000034   Code   RO          940    .text.nr_ansi_in_enter  ansi_port.o
+    0x0000221c   0x0000221c   0x00000020   Code   RO          950    .text.nr_ansi_in_left  ansi_port.o
+    0x0000223c   0x0000223c   0x00000024   Code   RO          942    .text.nr_ansi_in_newline  ansi_port.o
+    0x00002260   0x00002260   0x00000024   Code   RO          952    .text.nr_ansi_in_right  ansi_port.o
+    0x00002284   0x00002284   0x000000e2   Code   RO          954    .text.nr_ansi_in_tab  ansi_port.o
+    0x00002366   0x00002366   0x00000002   PAD
+    0x00002368   0x00002368   0x0000007c   Code   RO          946    .text.nr_ansi_in_up  ansi_port.o
+    0x000023e4   0x000023e4   0x000000f4   Code   RO           40    .text.read_uid      bsp.o
+    0x000024d8   0x000024d8   0x00000064   Code   RO          979    .text.shell_cmd_complete  nr_micro_shell.o
+    0x0000253c   0x0000253c   0x00000192   Code   RO          981    .text.shell_his_copy_queue_item  nr_micro_shell.o
+    0x000026ce   0x000026ce   0x00000002   PAD
+    0x000026d0   0x000026d0   0x000000a8   Code   RO          971    .text.shell_his_queue_add_cmd  nr_micro_shell.o
+    0x00002778   0x00002778   0x000000ae   Code   RO          977    .text.shell_his_queue_search_cmd  nr_micro_shell.o
+    0x00002826   0x00002826   0x00000002   PAD
+    0x00002828   0x00002828   0x00000144   Code   RO          899    .text.shell_ls_cmd  nr_micro_shell_commands.o
+    0x0000296c   0x0000296c   0x00000498   Code   RO          975    .text.shell_parser  nr_micro_shell.o
+    0x00002e04   0x00002e04   0x0000004c   Code   RO          901    .text.shell_test_cmd  nr_micro_shell_commands.o
+    0x00002e50   0x00002e50   0x00000012   Code   RO          895    OSKERNEL            hardfaulthandler.o
+    0x00002e62   0x00002e62   0x0000000a   Ven    RO         1456    Veneer$$Code        anon$$obj.o
+    0x00002e6c   0x00002e6c   0x0000000a   Ven    RO         1457    Veneer$$Code        anon$$obj.o
+    0x00002e76   0x00002e76   0x0000000a   Ven    RO         1458    Veneer$$Code        anon$$obj.o
+    0x00002e80   0x00002e80   0x00000020   Code   RO         1226    i.__0printf$3       mc_w.l(printf3.o)
+    0x00002ea0   0x00002ea0   0x0000000e   Code   RO         1448    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00002eae   0x00002eae   0x00000002   Code   RO         1449    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00002eb0   0x00002eb0   0x0000000e   Code   RO         1450    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00002ebe   0x00002ebe   0x00000002   PAD
+    0x00002ec0   0x00002ec0   0x000001b8   Code   RO         1233    i._printf_core      mc_w.l(printf3.o)
+    0x00003078   0x00003078   0x00000004   Code   RO         1085    i.putc              mc_w.l(putc.o)
+    0x0000307c   0x0000307c   0x00000024   Code   RO         1081    i.puts              mc_w.l(puts.o)
+    0x000030a0   0x000030a0   0x00000081   Data   RO         1096    .constdata          mc_w.l(ctype_o.o)
+    0x00003121   0x00003121   0x00000003   PAD
+    0x00003124   0x00003124   0x00000004   Data   RO         1097    .constdata          mc_w.l(ctype_o.o)
+    0x00003128   0x00003128   0x00000015   Data   RO          921    .rodata.nr_ansi_in_cmd  ansi.o
     0x0000313d   0x0000313d   0x00000003   PAD
-    0x00003140   0x00003140   0x00000004   Data   RO         1097    .constdata          mc_w.l(ctype_o.o)
-    0x00003144   0x00003144   0x00000015   Data   RO          921    .rodata.nr_ansi_in_cmd  ansi.o
-    0x00003159   0x00003159   0x00000003   PAD
-    0x0000315c   0x0000315c   0x00000050   Data   RO          922    .rodata.nr_ansi_in_cmd_fun  ansi.o
-    0x000031ac   0x000031ac   0x00000010   Data   RO          924    .rodata.nr_ansi_in_special_symbol_fun  ansi.o
-    0x000031bc   0x000031bc   0x00000014   Data   RO          983    .rodata.nr_shell_cmd0.end  nr_micro_shell.o
-    0x000031d0   0x000031d0   0x00000014   Data   RO          984    .rodata.nr_shell_cmd1.end  nr_micro_shell.o
-    0x000031e4   0x000031e4   0x0000003c   Data   RO          903    .rodata.static_cmd  nr_micro_shell_commands.o
-    0x00003220   0x00003220   0x0000006c   Data   RO           45    .rodata.str1.1      bsp.o
-    0x0000328c   0x0000328c   0x00000011   Data   RO           56    .rodata.str1.1      main.o
-    0x0000329d   0x0000329d   0x00000009   Data   RO          861    .rodata.str1.1      segger_rtt.o
-    0x000032a6   0x000032a6   0x00000011   Data   RO          904    .rodata.str1.1      nr_micro_shell_commands.o
-    0x000032b7   0x000032b7   0x0000000d   Data   RO          958    .rodata.str1.1      ansi_port.o
-    0x000032c4   0x000032c4   0x000000d7   Data   RO          986    .rodata.str1.1      nr_micro_shell.o
-    0x0000339b   0x0000339b   0x00000001   PAD
-    0x0000339c   0x0000339c   0x00000030   Data   RO         1447    Region$$Table       anon$$obj.o
+    0x00003140   0x00003140   0x00000050   Data   RO          922    .rodata.nr_ansi_in_cmd_fun  ansi.o
+    0x00003190   0x00003190   0x00000010   Data   RO          924    .rodata.nr_ansi_in_special_symbol_fun  ansi.o
+    0x000031a0   0x000031a0   0x00000014   Data   RO          983    .rodata.nr_shell_cmd0.end  nr_micro_shell.o
+    0x000031b4   0x000031b4   0x00000014   Data   RO          984    .rodata.nr_shell_cmd1.end  nr_micro_shell.o
+    0x000031c8   0x000031c8   0x0000003c   Data   RO          903    .rodata.static_cmd  nr_micro_shell_commands.o
+    0x00003204   0x00003204   0x0000006c   Data   RO           45    .rodata.str1.1      bsp.o
+    0x00003270   0x00003270   0x00000011   Data   RO           56    .rodata.str1.1      main.o
+    0x00003281   0x00003281   0x00000009   Data   RO          861    .rodata.str1.1      segger_rtt.o
+    0x0000328a   0x0000328a   0x00000011   Data   RO          904    .rodata.str1.1      nr_micro_shell_commands.o
+    0x0000329b   0x0000329b   0x0000000d   Data   RO          958    .rodata.str1.1      ansi_port.o
+    0x000032a8   0x000032a8   0x000000f6   Data   RO          986    .rodata.str1.1      nr_micro_shell.o
+    0x0000339e   0x0000339e   0x00000002   PAD
+    0x000033a0   0x000033a0   0x00000030   Data   RO         1447    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x00003400, Size: 0x00002a30, Max: 0x00020000, ABSOLUTE, COMPRESSED[0x00000040])
@@ -757,34 +757,34 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       338          6        117          0        132       3101   ansi.o
-      1132         32         13          0          0       5136   ansi_port.o
-        20          0          0          0         12       1325   app.o
-      1094         96        108          0          2       9070   bsp.o
-      3642          0         24          0       1188      18165   eventrecorder.o
+       338          6        117          0        132       3099   ansi.o
+      1132         32         13          0          0       5133   ansi_port.o
+        20          0          0          0         12       1324   app.o
+      1094         96        108          0          2       9069   bsp.o
+      3642          0         24          0       1188      18164   eventrecorder.o
         18          0          0          0          0        304   hardfaulthandler.o
-        66          0         17          0          0        497   main.o
-      2316        200        255        308          4       8526   nr_micro_shell.o
-       400        188         77          0          0       1507   nr_micro_shell_commands.o
-       108          0          0          0          0       3547   pt32z192xx_adc.o
-       204          0          0          0          0       5410   pt32z192xx_dma.o
-       190          6          0          0          0       7358   pt32z192xx_gpio.o
-       272         44          0          0          0       4969   pt32z192xx_it.o
-       108          0          0          0          0       2458   pt32z192xx_misc.o
-       306          4          0          0          0       8638   pt32z192xx_pwm.o
-        10          0          0          0          0       1250   pt32z192xx_retarget.o
-        40          0          0          0          0       1083   pt32z192xx_serial.o
-       186          0          0          0          0       6290   pt32z192xx_uart.o
+        66          0         17          0          0        496   main.o
+      2288        172        286        308          4       8523   nr_micro_shell.o
+       400        188         77          0          0       1506   nr_micro_shell_commands.o
+       108          0          0          0          0       3546   pt32z192xx_adc.o
+       204          0          0          0          0       5409   pt32z192xx_dma.o
+       190          6          0          0          0       7357   pt32z192xx_gpio.o
+       272         44          0          0          0       4968   pt32z192xx_it.o
+       108          0          0          0          0       2457   pt32z192xx_misc.o
+       306          4          0          0          0       8637   pt32z192xx_pwm.o
+        10          0          0          0          0       1249   pt32z192xx_retarget.o
+        40          0          0          0          0       1082   pt32z192xx_serial.o
+       186          0          0          0          0       6289   pt32z192xx_uart.o
        168          0          0          0         68       2747   segger_hardfaulthandler.o
        666          0          9          0       1209      29955   segger_rtt.o
-      3092        746          0          0          0       9878   segger_rtt_printf.o
+      3092        746          0          0          0       9877   segger_rtt_printf.o
         52         18        304          0       4096        804   startup_pt32z192.o
-       384          0          0          8          0       2258   system_pt32z192xx.o
+       384          0          0          8          0       2257   system_pt32z192xx.o
 
     ----------------------------------------------------------------------
-     14956       1340        976        316       6792     134276   Object Totals
+     14928       1312       1008        316       6792     134252   Object Totals
         50          0         48          0          0          0   (incl. Generated)
-        94          0          4          0         81          0   (incl. Padding)
+        94          0          5          0         81          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -834,15 +834,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     15836       1380       1112        320       6792     134708   Grand Totals
-     15836       1380       1112         64       6792     134708   ELF Image Totals (compressed)
-     15836       1380       1112         64          0          0   ROM Totals
+     15808       1352       1144        320       6792     134684   Grand Totals
+     15808       1352       1144         64       6792     134684   ELF Image Totals (compressed)
+     15808       1352       1144         64          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                16948 (  16.55kB)
+    Total RO  Size (Code + RO Data)                16952 (  16.55kB)
     Total RW  Size (RW Data + ZI Data)              7112 (   6.95kB)
-    Total ROM Size (Code + RO Data + RW Data)      17012 (  16.61kB)
+    Total ROM Size (Code + RO Data + RW Data)      17016 (  16.62kB)
 
 ==============================================================================
 

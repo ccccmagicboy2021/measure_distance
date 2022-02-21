@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>PT32Z192,MSC_CLOCK</Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt;..\application\dhrystone;..\application\fft;..\application\nr_micro_shell2;..\application\fifo;..\application\bsp;..\application\EventRecorder</IncludePath>
+              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt;..\application\dhrystone;..\application\fft;..\application\nr_micro_shell;..\application\fifo;..\application\bsp;..\application\EventRecorder</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -556,22 +556,22 @@
             <File>
               <FileName>ansi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\application\nr_micro_shell2\ansi.c</FilePath>
+              <FilePath>..\application\nr_micro_shell\ansi.c</FilePath>
             </File>
             <File>
               <FileName>ansi_port.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\application\nr_micro_shell2\ansi_port.c</FilePath>
+              <FilePath>..\application\nr_micro_shell\ansi_port.c</FilePath>
             </File>
             <File>
               <FileName>nr_micro_shell.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\application\nr_micro_shell2\nr_micro_shell.c</FilePath>
+              <FilePath>..\application\nr_micro_shell\nr_micro_shell.c</FilePath>
             </File>
             <File>
               <FileName>nr_micro_shell_config.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\application\nr_micro_shell2\nr_micro_shell_config.h</FilePath>
+              <FilePath>..\application\nr_micro_shell\nr_micro_shell_config.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -996,7 +996,7 @@
               <MiscControls></MiscControls>
               <Define>PT32Z192,VECT_TAB_SRAM,MSC_CLOCK</Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt;..\application\dhrystone;..\application\fft;..\application\nr_micro_shell2;..\application\bsp;..\application\EventRecorder</IncludePath>
+              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt;..\application\dhrystone;..\application\fft;..\application\nr_micro_shell;..\application\bsp;..\application\EventRecorder</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1213,22 +1213,22 @@
             <File>
               <FileName>ansi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\application\nr_micro_shell2\ansi.c</FilePath>
+              <FilePath>..\application\nr_micro_shell\ansi.c</FilePath>
             </File>
             <File>
               <FileName>ansi_port.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\application\nr_micro_shell2\ansi_port.c</FilePath>
+              <FilePath>..\application\nr_micro_shell\ansi_port.c</FilePath>
             </File>
             <File>
               <FileName>nr_micro_shell.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\application\nr_micro_shell2\nr_micro_shell.c</FilePath>
+              <FilePath>..\application\nr_micro_shell\nr_micro_shell.c</FilePath>
             </File>
             <File>
               <FileName>nr_micro_shell_config.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\application\nr_micro_shell2\nr_micro_shell_config.h</FilePath>
+              <FilePath>..\application\nr_micro_shell\nr_micro_shell_config.h</FilePath>
             </File>
           </Files>
         </Group>
