@@ -788,7 +788,7 @@
 
   <Group>
     <GroupName>shell</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -799,8 +799,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\application\nr_micro_shell\src\ansi.c</PathWithFileName>
-      <FilenameWithoutPath>ansi.c</FilenameWithoutPath>
+      <PathWithFileName>..\source\nr_micro_shell_commands.c</PathWithFileName>
+      <FilenameWithoutPath>nr_micro_shell_commands.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -811,8 +811,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\application\nr_micro_shell\src\ansi_port.c</PathWithFileName>
-      <FilenameWithoutPath>ansi_port.c</FilenameWithoutPath>
+      <PathWithFileName>..\application\nr_micro_shell2\ansi.c</PathWithFileName>
+      <FilenameWithoutPath>ansi.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -823,32 +823,32 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\application\nr_micro_shell\src\nr_micro_shell.c</PathWithFileName>
-      <FilenameWithoutPath>nr_micro_shell.c</FilenameWithoutPath>
+      <PathWithFileName>..\application\nr_micro_shell2\ansi_port.c</PathWithFileName>
+      <FilenameWithoutPath>ansi_port.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>7</GroupNumber>
       <FileNumber>31</FileNumber>
-      <FileType>5</FileType>
+      <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\application\nr_micro_shell\inc\nr_micro_shell_config.h</PathWithFileName>
-      <FilenameWithoutPath>nr_micro_shell_config.h</FilenameWithoutPath>
+      <PathWithFileName>..\application\nr_micro_shell2\nr_micro_shell.c</PathWithFileName>
+      <FilenameWithoutPath>nr_micro_shell.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>7</GroupNumber>
       <FileNumber>32</FileNumber>
-      <FileType>1</FileType>
+      <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\source\nr_micro_shell_commands.c</PathWithFileName>
-      <FilenameWithoutPath>nr_micro_shell_commands.c</FilenameWithoutPath>
+      <PathWithFileName>..\application\nr_micro_shell2\nr_micro_shell_config.h</PathWithFileName>
+      <FilenameWithoutPath>nr_micro_shell_config.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -888,7 +888,7 @@
 
   <Group>
     <GroupName>EventRecorder</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

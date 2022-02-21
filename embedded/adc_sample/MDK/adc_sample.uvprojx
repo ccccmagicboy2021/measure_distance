@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>PT32Z192,MSC_CLOCK</Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt;..\application\dhrystone;..\application\fft;..\application\nr_micro_shell\inc;..\application\fifo;..\application\bsp;..\application\EventRecorder</IncludePath>
+              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt;..\application\dhrystone;..\application\fft;..\application\nr_micro_shell2;..\application\fifo;..\application\bsp;..\application\EventRecorder</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -549,29 +549,29 @@
           <GroupName>shell</GroupName>
           <Files>
             <File>
+              <FileName>nr_micro_shell_commands.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\nr_micro_shell_commands.c</FilePath>
+            </File>
+            <File>
               <FileName>ansi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\application\nr_micro_shell\src\ansi.c</FilePath>
+              <FilePath>..\application\nr_micro_shell2\ansi.c</FilePath>
             </File>
             <File>
               <FileName>ansi_port.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\application\nr_micro_shell\src\ansi_port.c</FilePath>
+              <FilePath>..\application\nr_micro_shell2\ansi_port.c</FilePath>
             </File>
             <File>
               <FileName>nr_micro_shell.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\application\nr_micro_shell\src\nr_micro_shell.c</FilePath>
+              <FilePath>..\application\nr_micro_shell2\nr_micro_shell.c</FilePath>
             </File>
             <File>
               <FileName>nr_micro_shell_config.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\application\nr_micro_shell\inc\nr_micro_shell_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>nr_micro_shell_commands.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\source\nr_micro_shell_commands.c</FilePath>
+              <FilePath>..\application\nr_micro_shell2\nr_micro_shell_config.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -996,7 +996,7 @@
               <MiscControls></MiscControls>
               <Define>PT32Z192,VECT_TAB_SRAM,MSC_CLOCK</Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt;..\application\dhrystone;..\application\fft;..\application\nr_micro_shell\inc;..\application\bsp;..\application\EventRecorder</IncludePath>
+              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt;..\application\dhrystone;..\application\fft;..\application\nr_micro_shell2;..\application\bsp;..\application\EventRecorder</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1206,29 +1206,29 @@
           <GroupName>shell</GroupName>
           <Files>
             <File>
+              <FileName>nr_micro_shell_commands.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\nr_micro_shell_commands.c</FilePath>
+            </File>
+            <File>
               <FileName>ansi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\application\nr_micro_shell\src\ansi.c</FilePath>
+              <FilePath>..\application\nr_micro_shell2\ansi.c</FilePath>
             </File>
             <File>
               <FileName>ansi_port.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\application\nr_micro_shell\src\ansi_port.c</FilePath>
+              <FilePath>..\application\nr_micro_shell2\ansi_port.c</FilePath>
             </File>
             <File>
               <FileName>nr_micro_shell.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\application\nr_micro_shell\src\nr_micro_shell.c</FilePath>
+              <FilePath>..\application\nr_micro_shell2\nr_micro_shell.c</FilePath>
             </File>
             <File>
               <FileName>nr_micro_shell_config.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\application\nr_micro_shell\inc\nr_micro_shell_config.h</FilePath>
-            </File>
-            <File>
-              <FileName>nr_micro_shell_commands.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\source\nr_micro_shell_commands.c</FilePath>
+              <FilePath>..\application\nr_micro_shell2\nr_micro_shell_config.h</FilePath>
             </File>
           </Files>
         </Group>
