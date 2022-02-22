@@ -573,6 +573,11 @@
               <FileType>2</FileType>
               <FilePath>..\application\HardFaultHandlerMDK\HardFaultHandler.S</FilePath>
             </File>
+            <File>
+              <FileName>SEGGER_RTT_Conf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\application\rtt\SEGGER_RTT_Conf.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -589,14 +594,14 @@
           <GroupName>fft</GroupName>
           <Files>
             <File>
-              <FileName>cr4_fft_256_stm32.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\application\fft\cr4_fft_256_stm32.s</FilePath>
-            </File>
-            <File>
               <FileName>cr4_fft_1024_stm32.s</FileName>
               <FileType>2</FileType>
               <FilePath>..\application\fft\cr4_fft_1024_stm32.s</FilePath>
+            </File>
+            <File>
+              <FileName>cr4_fft_256_stm32.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\application\fft\cr4_fft_256_stm32.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -725,8 +730,8 @@
         </DebugOption>
         <Utilities>
           <Flash1>
-            <UseTargetDll>1</UseTargetDll>
-            <UseExternalTool>0</UseExternalTool>
+            <UseTargetDll>0</UseTargetDll>
+            <UseExternalTool>1</UseExternalTool>
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>0</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
@@ -734,7 +739,7 @@
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3>"" ()</Flash3>
+          <Flash3>"burnaxf" (-stm32 %L)</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -871,8 +876,8 @@
               </OCR_RVCT3>
               <OCR_RVCT4>
                 <Type>1</Type>
-                <StartAddress>0x8000000</StartAddress>
-                <Size>0x10000</Size>
+                <StartAddress>0x20000000</StartAddress>
+                <Size>0x2000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -896,8 +901,8 @@
               </OCR_RVCT8>
               <OCR_RVCT9>
                 <Type>0</Type>
-                <StartAddress>0x20000000</StartAddress>
-                <Size>0x5000</Size>
+                <StartAddress>0x20002000</StartAddress>
+                <Size>0x3000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -909,7 +914,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>5</Optim>
+            <Optim>7</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -933,7 +938,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define></Define>
+              <Define>VECT_TAB_SRAM</Define>
               <Undefine></Undefine>
               <IncludePath>..\application\app;..\application\dhrystone;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\inc;..\source;..\application\systick;..\application\fft;..\application\DWTDelay</IncludePath>
             </VariousControls>
@@ -1169,6 +1174,11 @@
               <FileType>2</FileType>
               <FilePath>..\application\HardFaultHandlerMDK\HardFaultHandler.S</FilePath>
             </File>
+            <File>
+              <FileName>SEGGER_RTT_Conf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\application\rtt\SEGGER_RTT_Conf.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1185,52 +1195,14 @@
           <GroupName>fft</GroupName>
           <Files>
             <File>
-              <FileName>cr4_fft_256_stm32.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\application\fft\cr4_fft_256_stm32.s</FilePath>
-            </File>
-            <File>
               <FileName>cr4_fft_1024_stm32.s</FileName>
               <FileType>2</FileType>
               <FilePath>..\application\fft\cr4_fft_1024_stm32.s</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>9</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>2</IncludeInBuild>
-                  <AlwaysBuild>2</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Aads>
-                    <interw>2</interw>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <thumb>2</thumb>
-                    <SplitLS>2</SplitLS>
-                    <SwStkChk>2</SwStkChk>
-                    <NoWarn>2</NoWarn>
-                    <uSurpInc>2</uSurpInc>
-                    <useXO>2</useXO>
-                    <ClangAsOpt>0</ClangAsOpt>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Aads>
-                </FileArmAds>
-              </FileOption>
+            </File>
+            <File>
+              <FileName>cr4_fft_256_stm32.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\application\fft\cr4_fft_256_stm32.s</FilePath>
             </File>
           </Files>
         </Group>

@@ -3,14 +3,13 @@
 
 //#define NPT 256 //sample number
 #define NPT 1024 //sample number
-uint32_t lBufInArray[NPT];  //fft input
-uint32_t lBufOutArray[NPT/2];   //fft output
-uint32_t lBufMagArray[NPT/2];   //fft mag
-
 
 
 void app(void)
 {   
+    uint32_t lBufInArray[NPT];  //fft input
+    uint32_t lBufOutArray[NPT/2];   //fft output
+    
     int i;
     int start_tick;
     int end_tick;
@@ -23,7 +22,7 @@ void app(void)
     
     //start_tick = get_tick();
     start_tick = DWT_get_tick();
-    cr4_fft_256_stm32(lBufOutArray,lBufInArray, NPT);
+    //cr4_fft_256_stm32(lBufOutArray,lBufInArray, NPT);
     cr4_fft_1024_stm32(lBufOutArray,lBufInArray, NPT);
     //end_tick = get_tick();
     end_tick = DWT_get_tick();
