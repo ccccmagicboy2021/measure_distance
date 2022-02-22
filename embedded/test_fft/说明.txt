@@ -1,11 +1,11 @@
 1. pt32基本工程模板(keil5)
 2. USART：TX - PA9，TX - PA10，波特率115200
 3. SysTick：时钟滴答配置为1MS，使用DWT做精确计时
-4. USER1按下后运行fft一次
+4. 上电后连续运行fft
 flashcode: 
-3114us
+1502us
 ramcode: 
-1871us
+977us
 
 
 

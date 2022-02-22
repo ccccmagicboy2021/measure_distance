@@ -235,8 +235,11 @@ int main(void)
     SysTick_Init(SYSTICK_1MS);     //for delay
     DWT_INIT(SystemCoreClock);        //for time measure
     
+    printf("FFT Test Start\r\n");
+
 	while(1)
 	{
 		app();
+        fft_demo();
     }
 }

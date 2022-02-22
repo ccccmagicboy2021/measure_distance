@@ -44,7 +44,7 @@ void fft_demo(void)
     
     start_tick = DWT_get_tick();
     //start_tick = get_tick();
-    cr4_fft_256_stm32(lBufOutArray,lBufInArray, NPT);
+    //cr4_fft_256_stm32(lBufOutArray,lBufInArray, NPT);
     cr4_fft_1024_stm32(lBufOutArray,lBufInArray, NPT);
     end_tick = DWT_get_tick();
     //end_tick = get_tick();
@@ -65,8 +65,6 @@ void app(void)
     if (key_flag)
     {
         key_flag = 0;
-        printf("FFT Test Start\r\n");
-        fft_demo();
     }
     else
     {
