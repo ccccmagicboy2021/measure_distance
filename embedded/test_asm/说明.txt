@@ -1,0 +1,7 @@
+1. pt32基本工程模板(keil5)
+2. USART：TX - PA9，TX - PA10，波特率115200
+3. SysTick：时钟滴答配置为1MS，使用DWT做精确计时
+4. 设计了一个汇编的函数strcopy并调用
+
+
+
