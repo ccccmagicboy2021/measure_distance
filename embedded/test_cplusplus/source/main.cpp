@@ -3,6 +3,8 @@
 
 uint16_t m_AdcValue;
 
+void UART_Config(void);
+
 #define     PWM0_CH1_GPIO_Port          CMSDK_PA
 #define     PWM0_CH1_PinSource          GPIO_PinSource8
 #define     PWM0_CH1_Pin                GPIO_Pin_8
@@ -220,11 +222,16 @@ int main(void)
     bb0.length = 100;
     bb0.width = 156;
     
+    Box* bb1 = new Box();
+    
+    bb1->length = 200;
+    bb1->width = 144;
+    
     segger_init();
     LED_GPIO_Config();
     switch_gpio_config();
     UART_INT_Config();
-    UART_Config();
+    //UART_Config();
     adc_initial();
     DMA_config();
     read_uid();
@@ -242,6 +249,10 @@ int main(void)
     DWT_INIT(SystemCoreClock);        //for time measure
     
     bb0.print_size();
+    
+    bb1->print_size();
+    delete bb1;
+    
     printf("FFT Test Start\r\n");
 
 	while(1)

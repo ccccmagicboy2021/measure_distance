@@ -157,18 +157,34 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>48</LineNumber>
+          <LineNumber>225</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>12636</Address>
+          <Address>14920</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>D:\cccc2020\CODE\workspace\bfsk_pt32\embedded\test_cplusplus\application\app\app.c</Filename>
+          <Filename>..\source\main.cpp</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\flashcode\../application/app/app.c\48</Expression>
+          <Expression>\\flashcode\../source/main.cpp\225</Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>223</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>14918</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\source\main.cpp</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\flashcode\../source/main.cpp\223</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -520,7 +536,7 @@
       <GroupNumber>3</GroupNumber>
       <FileNumber>6</FileNumber>
       <FileType>1</FileType>
-      <tvExp>0</tvExp>
+      <tvExp>1</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\common\system_pt32z192xx.c</PathWithFileName>

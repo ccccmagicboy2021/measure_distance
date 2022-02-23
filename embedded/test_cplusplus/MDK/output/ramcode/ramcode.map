@@ -21,54 +21,56 @@ Image Symbol Table
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_heap_descriptor.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_heap_descriptor_intlibspace.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_errno_addr.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_errno_addr_intlibspace.o ABSOLUTE
     ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
     ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  mutex_dummy.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_io_names.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command_hlt.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_io.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_io_hlt.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
-    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch_hlt.o ABSOLUTE
-    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command_hlt.o ABSOLUTE
-    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
-    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  _get_argv.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
-    ../clib/heap1.c                          0x00000000   Number         0  h1_free.o ABSOLUTE
-    ../clib/heap1.c                          0x00000000   Number         0  h1_free_threads.o ABSOLUTE
     ../clib/heap1.c                          0x00000000   Number         0  h1_alloc.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_free.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_memalign.o ABSOLUTE
     ../clib/heap1.c                          0x00000000   Number         0  h1_alloc_threads.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_free_threads.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_memalign_threads.o ABSOLUTE
     ../clib/heap1.c                          0x00000000   Number         0  h1_init.o ABSOLUTE
-    ../clib/heap1.c                          0x00000000   Number         0  h1_extend.o ABSOLUTE
     ../clib/heap1.c                          0x00000000   Number         0  h1_init_threads.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_extend.o ABSOLUTE
     ../clib/heap1.c                          0x00000000   Number         0  h1_extend_threads.o ABSOLUTE
     ../clib/heap1.c                          0x00000000   Number         0  h1_final.o ABSOLUTE
     ../clib/heap1.c                          0x00000000   Number         0  h1_final_threads.o ABSOLUTE
     ../clib/heap2.c                          0x00000000   Number         0  heap2.o ABSOLUTE
     ../clib/heap2.c                          0x00000000   Number         0  heap2_threads.o ABSOLUTE
     ../clib/heap2.c                          0x00000000   Number         0  fdtree.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  malloc.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  free.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  hguard.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  init_alloc.o ABSOLUTE
-    ../clib/heapalloc.c                      0x00000000   Number         0  malloc.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  heapstubs.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  term_alloc.o ABSOLUTE
     ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
     ../clib/heapaux.c                        0x00000000   Number         0  heapauxa.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
     ../clib/maybe.s                          0x00000000   Number         0  maybetermalloc1.o ABSOLUTE
@@ -94,16 +96,18 @@ Image Symbol Table
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_d.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent_end.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_outer.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_formal.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
@@ -126,6 +130,7 @@ Image Symbol Table
     ../clib/stdio.c                          0x00000000   Number         0  fseek.o ABSOLUTE
     ../clib/stdio.c                          0x00000000   Number         0  stdio.o ABSOLUTE
     ../clib/stdio.c                          0x00000000   Number         0  ftell.o ABSOLUTE
+    ../clib/stdlib.c                         0x00000000   Number         0  abort.o ABSOLUTE
     ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
     ../clib/string.c                         0x00000000   Number         0  strlen.o ABSOLUTE
     ../common/startup_pt32z192.s             0x00000000   Number         0  startup_pt32z192.o ABSOLUTE
@@ -136,10 +141,14 @@ Image Symbol Table
     SEGGER_HardFaultHandler.c                0x00000000   Number         0  segger_hardfaulthandler.o ABSOLUTE
     SEGGER_RTT.c                             0x00000000   Number         0  segger_rtt.o ABSOLUTE
     SEGGER_RTT_printf.c                      0x00000000   Number         0  segger_rtt_printf.o ABSOLUTE
+    abort_message.cpp                        0x00000000   Number         0  abort_message.cpp.o ABSOLUTE
     app.cpp                                  0x00000000   Number         0  app.o ABSOLUTE
     box.cpp                                  0x00000000   Number         0  box.o ABSOLUTE
+    cxa_default_handlers.cpp                 0x00000000   Number         0  cxa_default_handlers.cpp.o ABSOLUTE
+    cxa_handlers.cpp                         0x00000000   Number         0  cxa_handlers.cpp.o ABSOLUTE
     dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
     main.cpp                                 0x00000000   Number         0  main.o ABSOLUTE
+    new.cpp                                  0x00000000   Number         0  new.cpp.o ABSOLUTE
     pt32z192xx_adc.c                         0x00000000   Number         0  pt32z192xx_adc.o ABSOLUTE
     pt32z192xx_dma.c                         0x00000000   Number         0  pt32z192xx_dma.o ABSOLUTE
     pt32z192xx_dsp.c                         0x00000000   Number         0  pt32z192xx_dsp.o ABSOLUTE
@@ -209,136 +218,142 @@ Image Symbol Table
     .ARM.Collect$$rtexit$$00000002           0x200001da   Section        0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
     .ARM.Collect$$rtexit$$00000003           0x200001da   Section        4  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
     .ARM.Collect$$rtexit$$00000004           0x200001de   Section        6  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
-    .text                                    0x200001e4   Section       80  startup_pt32z192.o(.text)
-    .text                                    0x20000234   Section     4576  cr4_fft_1024_stm32.o(.text)
-    .text                                    0x20001414   Section        0  noretval__2printf.o(.text)
-    .text                                    0x2000142c   Section        0  __printf.o(.text)
-    .text                                    0x20001494   Section        0  _printf_dec.o(.text)
-    .text                                    0x2000150c   Section        0  puts.o(.text)
-    .text                                    0x20001538   Section        0  strlen.o(.text)
-    .text                                    0x20001576   Section      138  rt_memcpy_v6.o(.text)
-    .text                                    0x20001600   Section        0  heapauxi.o(.text)
-    .text                                    0x20001606   Section        0  _printf_intcommon.o(.text)
-    .text                                    0x200016b8   Section        0  _printf_char_file.o(.text)
-    .text                                    0x200016dc   Section      100  rt_memcpy_w.o(.text)
-    _printf_input_char                       0x20001741   Thumb Code    10  _printf_char_common.o(.text)
-    .text                                    0x20001740   Section        0  _printf_char_common.o(.text)
-    .text                                    0x20001770   Section        0  ferror.o(.text)
-    .text                                    0x20001778   Section        0  initio.o(.text)
-    .text                                    0x200018b0   Section       74  sys_stackheap_outer.o(.text)
-    .text                                    0x200018fa   Section        0  h1_free.o(.text)
-    .text                                    0x20001948   Section        0  setvbuf.o(.text)
-    _freopen_locked                          0x20001991   Thumb Code     0  fopen.o(.text)
-    .text                                    0x20001990   Section        0  fopen.o(.text)
-    .text                                    0x20001a80   Section        0  fclose.o(.text)
-    .text                                    0x20001acc   Section        0  exit.o(.text)
-    .text                                    0x20001ade   Section        0  defsig_rtred_outer.o(.text)
-    .text                                    0x20001aec   Section       78  rt_memclr_w.o(.text)
-    .text                                    0x20001b3a   Section        0  sys_io.o(.text)
-    .text                                    0x20001ba0   Section        8  libspace.o(.text)
-    .text                                    0x20001ba8   Section        8  rt_heap_descriptor_intlibspace.o(.text)
-    .text                                    0x20001bb0   Section        0  hguard.o(.text)
-    .text                                    0x20001bb4   Section        0  init_alloc.o(.text)
-    .text                                    0x20001c3e   Section        0  h1_alloc.o(.text)
-    .text                                    0x20001c9c   Section        0  fseek.o(.text)
-    .text                                    0x20001d94   Section        0  stdio.o(.text)
-    .text                                    0x20001e84   Section        0  defsig_exit.o(.text)
-    .text                                    0x20001e90   Section        0  defsig_rtred_inner.o(.text)
-    .text                                    0x20001ec4   Section        2  use_no_semi.o(.text)
-    .text                                    0x20001ec6   Section        0  indicate_semi.o(.text)
-    .text                                    0x20001ec6   Section        0  maybetermalloc1.o(.text)
-    .text                                    0x20001ec6   Section        0  h1_init.o(.text)
-    .text                                    0x20001ed4   Section        0  h1_extend.o(.text)
-    .text                                    0x20001f08   Section        0  ftell.o(.text)
-    .text                                    0x20001f4a   Section        0  defsig_general.o(.text)
-    .text                                    0x20001f7c   Section        0  defsig_rtmem_outer.o(.text)
-    .text                                    0x20001f8a   Section        0  sys_wrch.o(.text)
-    .text                                    0x20001f98   Section        8  rt_errno_addr_intlibspace.o(.text)
-    .text                                    0x20001fa0   Section        0  defsig_rtmem_inner.o(.text)
-    [Anonymous Symbol]                       0x20001ff0   Section        0  pt32z192xx_adc.o(.text.ADC_ChannelConfig)
-    [Anonymous Symbol]                       0x2000200c   Section        0  pt32z192xx_adc.o(.text.ADC_Cmd)
-    [Anonymous Symbol]                       0x2000201c   Section        0  pt32z192xx_it.o(.text.ADC_Handler)
-    [Anonymous Symbol]                       0x20002020   Section        0  pt32z192xx_adc.o(.text.ADC_Init)
-    [Anonymous Symbol]                       0x20002058   Section        0  pt32z192xx_adc.o(.text.ADC_StartOfConversion)
-    [Anonymous Symbol]                       0x20002064   Section        0  pt32z192xx_dma.o(.text.DMA_AutoRepeat_Cmd)
-    [Anonymous Symbol]                       0x20002088   Section        0  pt32z192xx_dma.o(.text.DMA_Cmd)
-    [Anonymous Symbol]                       0x200020ac   Section        0  pt32z192xx_dma.o(.text.DMA_Config)
-    [Anonymous Symbol]                       0x200020f0   Section        0  pt32z192xx_dma.o(.text.DMA_DirectionConfig)
-    [Anonymous Symbol]                       0x2000210c   Section        0  pt32z192xx_it.o(.text.DMA_Handler)
-    [Anonymous Symbol]                       0x20002110   Section        0  pt32z192xx_dma.o(.text.DMA_PeripheralConfig)
-    [Anonymous Symbol]                       0x2000213c   Section        0  dwtdelay.o(.text.DWT_INIT)
-    [Anonymous Symbol]                       0x20002168   Section        0  dwtdelay.o(.text.DWT_get_tick)
-    [Anonymous Symbol]                       0x20002174   Section        0  pt32z192xx_it.o(.text.FLASH_Handler)
-    [Anonymous Symbol]                       0x20002178   Section        0  pt32z192xx_gpio.o(.text.GPIO_ClearITPendingBit)
-    [Anonymous Symbol]                       0x2000217c   Section        0  pt32z192xx_gpio.o(.text.GPIO_ITConfig)
-    [Anonymous Symbol]                       0x20002188   Section        0  pt32z192xx_gpio.o(.text.GPIO_Init)
-    [Anonymous Symbol]                       0x200021ec   Section        0  pt32z192xx_gpio.o(.text.GPIO_PinAFConfig)
-    [Anonymous Symbol]                       0x200021fc   Section        0  pt32z192xx_gpio.o(.text.GPIO_SetBits)
-    [Anonymous Symbol]                       0x20002204   Section        0  pt32z192xx_gpio.o(.text.GPIO_TriTypeConfig)
-    [Anonymous Symbol]                       0x20002238   Section        0  segger_hardfaulthandler.o(.text.HardFaultHandler)
-    [Anonymous Symbol]                       0x200022e0   Section        0  pt32z192xx_it.o(.text.NMI_Handler)
-    [Anonymous Symbol]                       0x200022e4   Section        0  pt32z192xx_misc.o(.text.NVIC_Init)
-    [Anonymous Symbol]                       0x20002350   Section        0  pt32z192xx_it.o(.text.PA_Handler)
-    [Anonymous Symbol]                       0x20002354   Section        0  pt32z192xx_it.o(.text.PB_Handler)
-    [Anonymous Symbol]                       0x20002358   Section        0  pt32z192xx_it.o(.text.PC_Handler)
-    [Anonymous Symbol]                       0x200023a8   Section        0  pt32z192xx_it.o(.text.PD_Handler)
-    [Anonymous Symbol]                       0x200023ac   Section        0  pt32z192xx_pwm.o(.text.PMW_TimeBaseInit)
-    [Anonymous Symbol]                       0x200023c8   Section        0  pt32z192xx_pwm.o(.text.PWM_BKI_LevelConfig)
-    [Anonymous Symbol]                       0x200023d4   Section        0  pt32z192xx_pwm.o(.text.PWM_BreakInput_Cmd)
-    [Anonymous Symbol]                       0x200023e8   Section        0  pt32z192xx_pwm.o(.text.PWM_ClearFlag)
-    [Anonymous Symbol]                       0x200023ec   Section        0  pt32z192xx_pwm.o(.text.PWM_Cmd)
-    [Anonymous Symbol]                       0x200023fc   Section        0  pt32z192xx_pwm.o(.text.PWM_GetFlagStatus)
-    [Anonymous Symbol]                       0x20002408   Section        0  pt32z192xx_pwm.o(.text.PWM_IntConfig)
-    [Anonymous Symbol]                       0x2000247c   Section        0  pt32z192xx_pwm.o(.text.PWM_OutputInit)
-    [Anonymous Symbol]                       0x200024e4   Section        0  pt32z192xx_it.o(.text.PendSV_Handler)
-    [Anonymous Symbol]                       0x200024e8   Section        0  pt32z192xx_it.o(.text.RTC_Handler)
-    [Anonymous Symbol]                       0x200024ec   Section        0  segger_rtt.o(.text.SEGGER_RTT_Init)
-    [Anonymous Symbol]                       0x2000255c   Section        0  segger_rtt.o(.text.SEGGER_RTT_Write)
-    [Anonymous Symbol]                       0x20002610   Section        0  segger_rtt.o(.text.SEGGER_RTT_WriteNoLock)
-    [Anonymous Symbol]                       0x20002788   Section        0  segger_rtt_printf.o(.text.SEGGER_RTT_printf)
-    [Anonymous Symbol]                       0x200027a8   Section        0  segger_rtt_printf.o(.text.SEGGER_RTT_vprintf)
-    [Anonymous Symbol]                       0x20003194   Section        0  pt32z192xx_serial.o(.text.SERIAL_PutChar)
-    [Anonymous Symbol]                       0x200031bc   Section        0  pt32z192xx_it.o(.text.SPI0_Handler)
-    [Anonymous Symbol]                       0x200031c0   Section        0  pt32z192xx_it.o(.text.SPI1_Handler)
-    [Anonymous Symbol]                       0x200031c4   Section        0  pt32z192xx_it.o(.text.SVC_Handler)
-    [Anonymous Symbol]                       0x200031c8   Section        0  pt32z192xx_it.o(.text.SysTick_Handler)
-    [Anonymous Symbol]                       0x200031ec   Section        0  system_pt32z192xx.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x2000336c   Section        0  pt32z192xx_it.o(.text.TMR0_Handler)
-    [Anonymous Symbol]                       0x20003390   Section        0  pt32z192xx_it.o(.text.TMR1_Handler)
-    [Anonymous Symbol]                       0x20003394   Section        0  pt32z192xx_it.o(.text.TMR2_Handler)
-    [Anonymous Symbol]                       0x20003398   Section        0  pt32z192xx_it.o(.text.TMR3_Handler)
-    [Anonymous Symbol]                       0x2000339c   Section        0  pt32z192xx_it.o(.text.TMR4_Handler)
-    [Anonymous Symbol]                       0x200033a0   Section        0  pt32z192xx_it.o(.text.TMR5_Handler)
-    [Anonymous Symbol]                       0x200033a4   Section        0  pt32z192xx_it.o(.text.UART0_Handler)
-    [Anonymous Symbol]                       0x200033a8   Section        0  pt32z192xx_it.o(.text.UART1_Handler)
-    [Anonymous Symbol]                       0x200033ac   Section        0  pt32z192xx_it.o(.text.UART2_Handler)
-    [Anonymous Symbol]                       0x200033d0   Section        0  pt32z192xx_uart.o(.text.UART_Cmd)
-    [Anonymous Symbol]                       0x200033e0   Section        0  pt32z192xx_uart.o(.text.UART_ITConfig)
-    [Anonymous Symbol]                       0x200033f0   Section        0  pt32z192xx_uart.o(.text.UART_Init)
-    _PrintUnsigned                           0x2000348d   Thumb Code   508  segger_rtt_printf.o(.text._PrintUnsigned)
-    [Anonymous Symbol]                       0x2000348c   Section        0  segger_rtt_printf.o(.text._PrintUnsigned)
-    _PrintUnsigned._aV2C                     0x20003688   Number         0  segger_rtt_printf.o(.text._PrintUnsigned)
-    [Anonymous Symbol]                       0x20003698   Section        0  app.o(.text._Z3appv)
-    [Anonymous Symbol]                       0x200036ac   Section        0  app.o(.text._Z8fft_demov)
-    [Anonymous Symbol]                       0x20003828   Section        0  main.o(.text._Z8read_uidv)
-    [Anonymous Symbol]                       0x2000391c   Section        0  box.o(.text._ZN3Box10print_sizeEv)
-    [Anonymous Symbol]                       0x20003950   Section        0  pt32z192xx_retarget.o(.text._sys_exit)
-    [Anonymous Symbol]                       0x20003954   Section        0  pt32z192xx_retarget.o(.text.fputc)
-    [Anonymous Symbol]                       0x20003960   Section        0  main.o(.text.main)
-    OSKERNEL                                 0x20003cb8   Section       18  hardfaulthandler.o(OSKERNEL)
-    .constdata                               0x20003cca   Section        4  sys_io_names.o(.constdata)
-    .constdata                               0x20003cce   Section        4  sys_io_names.o(.constdata)
-    .constdata                               0x20003cd2   Section        4  sys_io_names.o(.constdata)
-    .L.str.3                                 0x20003cd6   Data          23  main.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x20003cd6   Section        0  main.o(.rodata.str1.1)
-    .L.str                                   0x20003ced   Data          34  main.o(.rodata.str1.1)
-    .L.str.8                                 0x20003d0f   Data           6  main.o(.rodata.str1.1)
-    .L.str.5                                 0x20003d15   Data           9  main.o(.rodata.str1.1)
-    .L.str.4                                 0x20003d1e   Data          12  main.o(.rodata.str1.1)
-    .L.str.2                                 0x20003d2a   Data           5  main.o(.rodata.str1.1)
-    .L.str.1                                 0x20003d2f   Data           8  main.o(.rodata.str1.1)
-    .L.str                                   0x20003d37   Data           9  segger_rtt.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x20003d37   Section        0  segger_rtt.o(.rodata.str1.1)
+    .text                                    0x200001e4   Section       88  startup_pt32z192.o(.text)
+    .text                                    0x2000023c   Section     4576  cr4_fft_1024_stm32.o(.text)
+    .text                                    0x2000141c   Section        0  noretval__2printf.o(.text)
+    .text                                    0x20001434   Section        0  __printf.o(.text)
+    .text                                    0x2000149c   Section        0  _printf_dec.o(.text)
+    .text                                    0x20001514   Section        0  puts.o(.text)
+    .text                                    0x20001540   Section        0  strlen.o(.text)
+    .text                                    0x2000157e   Section      138  rt_memcpy_v6.o(.text)
+    .text                                    0x20001608   Section        0  heapauxi.o(.text)
+    .text                                    0x2000160e   Section        0  h1_alloc.o(.text)
+    .text                                    0x2000166c   Section        0  h1_free.o(.text)
+    .text                                    0x200016ba   Section        0  _printf_intcommon.o(.text)
+    .text                                    0x2000176c   Section        0  _printf_char_file.o(.text)
+    .text                                    0x20001790   Section      100  rt_memcpy_w.o(.text)
+    .text                                    0x200017f4   Section        8  rt_heap_descriptor_intlibspace.o(.text)
+    .text                                    0x200017fc   Section        0  hguard.o(.text)
+    .text                                    0x20001800   Section        0  init_alloc.o(.text)
+    .text                                    0x2000188a   Section        0  h1_init.o(.text)
+    _printf_input_char                       0x20001899   Thumb Code    10  _printf_char_common.o(.text)
+    .text                                    0x20001898   Section        0  _printf_char_common.o(.text)
+    .text                                    0x200018c8   Section        0  ferror.o(.text)
+    .text                                    0x200018d0   Section        0  initio.o(.text)
+    .text                                    0x20001a08   Section        8  libspace.o(.text)
+    .text                                    0x20001a10   Section       74  sys_stackheap_outer.o(.text)
+    .text                                    0x20001a5a   Section        0  maybetermalloc1.o(.text)
+    .text                                    0x20001a5a   Section        0  h1_extend.o(.text)
+    .text                                    0x20001a8e   Section        0  setvbuf.o(.text)
+    _freopen_locked                          0x20001ad5   Thumb Code     0  fopen.o(.text)
+    .text                                    0x20001ad4   Section        0  fopen.o(.text)
+    .text                                    0x20001bc4   Section        0  fclose.o(.text)
+    .text                                    0x20001c10   Section        0  exit.o(.text)
+    .text                                    0x20001c22   Section        0  defsig_exit.o(.text)
+    .text                                    0x20001c2c   Section        0  defsig_rtred_outer.o(.text)
+    .text                                    0x20001c3a   Section        0  defsig_rtmem_outer.o(.text)
+    .text                                    0x20001c48   Section       78  rt_memclr_w.o(.text)
+    .text                                    0x20001c96   Section        0  sys_io.o(.text)
+    .text                                    0x20001cfc   Section        2  use_no_semi.o(.text)
+    .text                                    0x20001cfe   Section        0  indicate_semi.o(.text)
+    .text                                    0x20001d00   Section        0  fseek.o(.text)
+    .text                                    0x20001df8   Section        0  stdio.o(.text)
+    .text                                    0x20001ee8   Section        0  defsig_general.o(.text)
+    .text                                    0x20001f1c   Section        0  defsig_rtred_inner.o(.text)
+    .text                                    0x20001f50   Section        0  defsig_rtmem_inner.o(.text)
+    .text                                    0x20001fa0   Section        0  sys_wrch.o(.text)
+    .text                                    0x20001fae   Section        0  ftell.o(.text)
+    .text                                    0x20001ff0   Section        8  rt_errno_addr_intlibspace.o(.text)
+    [Anonymous Symbol]                       0x20001ff8   Section        0  pt32z192xx_adc.o(.text.ADC_ChannelConfig)
+    [Anonymous Symbol]                       0x20002014   Section        0  pt32z192xx_adc.o(.text.ADC_Cmd)
+    [Anonymous Symbol]                       0x20002024   Section        0  pt32z192xx_it.o(.text.ADC_Handler)
+    [Anonymous Symbol]                       0x20002028   Section        0  pt32z192xx_adc.o(.text.ADC_Init)
+    [Anonymous Symbol]                       0x20002060   Section        0  pt32z192xx_adc.o(.text.ADC_StartOfConversion)
+    [Anonymous Symbol]                       0x2000206c   Section        0  pt32z192xx_dma.o(.text.DMA_AutoRepeat_Cmd)
+    [Anonymous Symbol]                       0x20002090   Section        0  pt32z192xx_dma.o(.text.DMA_Cmd)
+    [Anonymous Symbol]                       0x200020b4   Section        0  pt32z192xx_dma.o(.text.DMA_Config)
+    [Anonymous Symbol]                       0x200020f8   Section        0  pt32z192xx_dma.o(.text.DMA_DirectionConfig)
+    [Anonymous Symbol]                       0x20002114   Section        0  pt32z192xx_it.o(.text.DMA_Handler)
+    [Anonymous Symbol]                       0x20002118   Section        0  pt32z192xx_dma.o(.text.DMA_PeripheralConfig)
+    [Anonymous Symbol]                       0x20002144   Section        0  dwtdelay.o(.text.DWT_INIT)
+    [Anonymous Symbol]                       0x20002170   Section        0  dwtdelay.o(.text.DWT_get_tick)
+    [Anonymous Symbol]                       0x2000217c   Section        0  pt32z192xx_it.o(.text.FLASH_Handler)
+    [Anonymous Symbol]                       0x20002180   Section        0  pt32z192xx_gpio.o(.text.GPIO_ClearITPendingBit)
+    [Anonymous Symbol]                       0x20002184   Section        0  pt32z192xx_gpio.o(.text.GPIO_ITConfig)
+    [Anonymous Symbol]                       0x20002190   Section        0  pt32z192xx_gpio.o(.text.GPIO_Init)
+    [Anonymous Symbol]                       0x200021f4   Section        0  pt32z192xx_gpio.o(.text.GPIO_PinAFConfig)
+    [Anonymous Symbol]                       0x20002204   Section        0  pt32z192xx_gpio.o(.text.GPIO_SetBits)
+    [Anonymous Symbol]                       0x2000220c   Section        0  pt32z192xx_gpio.o(.text.GPIO_TriTypeConfig)
+    [Anonymous Symbol]                       0x20002240   Section        0  segger_hardfaulthandler.o(.text.HardFaultHandler)
+    [Anonymous Symbol]                       0x200022e8   Section        0  pt32z192xx_it.o(.text.NMI_Handler)
+    [Anonymous Symbol]                       0x200022ec   Section        0  pt32z192xx_misc.o(.text.NVIC_Init)
+    [Anonymous Symbol]                       0x20002358   Section        0  pt32z192xx_it.o(.text.PA_Handler)
+    [Anonymous Symbol]                       0x2000235c   Section        0  pt32z192xx_it.o(.text.PB_Handler)
+    [Anonymous Symbol]                       0x20002360   Section        0  pt32z192xx_it.o(.text.PC_Handler)
+    [Anonymous Symbol]                       0x200023b0   Section        0  pt32z192xx_it.o(.text.PD_Handler)
+    [Anonymous Symbol]                       0x200023b4   Section        0  pt32z192xx_pwm.o(.text.PMW_TimeBaseInit)
+    [Anonymous Symbol]                       0x200023d0   Section        0  pt32z192xx_pwm.o(.text.PWM_BKI_LevelConfig)
+    [Anonymous Symbol]                       0x200023dc   Section        0  pt32z192xx_pwm.o(.text.PWM_BreakInput_Cmd)
+    [Anonymous Symbol]                       0x200023f0   Section        0  pt32z192xx_pwm.o(.text.PWM_ClearFlag)
+    [Anonymous Symbol]                       0x200023f4   Section        0  pt32z192xx_pwm.o(.text.PWM_Cmd)
+    [Anonymous Symbol]                       0x20002404   Section        0  pt32z192xx_pwm.o(.text.PWM_GetFlagStatus)
+    [Anonymous Symbol]                       0x20002410   Section        0  pt32z192xx_pwm.o(.text.PWM_IntConfig)
+    [Anonymous Symbol]                       0x20002484   Section        0  pt32z192xx_pwm.o(.text.PWM_OutputInit)
+    [Anonymous Symbol]                       0x200024ec   Section        0  pt32z192xx_it.o(.text.PendSV_Handler)
+    [Anonymous Symbol]                       0x200024f0   Section        0  pt32z192xx_it.o(.text.RTC_Handler)
+    [Anonymous Symbol]                       0x200024f4   Section        0  segger_rtt.o(.text.SEGGER_RTT_Init)
+    [Anonymous Symbol]                       0x20002564   Section        0  segger_rtt.o(.text.SEGGER_RTT_Write)
+    [Anonymous Symbol]                       0x20002618   Section        0  segger_rtt.o(.text.SEGGER_RTT_WriteNoLock)
+    [Anonymous Symbol]                       0x20002790   Section        0  segger_rtt_printf.o(.text.SEGGER_RTT_printf)
+    [Anonymous Symbol]                       0x200027b0   Section        0  segger_rtt_printf.o(.text.SEGGER_RTT_vprintf)
+    [Anonymous Symbol]                       0x2000319c   Section        0  pt32z192xx_serial.o(.text.SERIAL_PutChar)
+    [Anonymous Symbol]                       0x200031c4   Section        0  pt32z192xx_it.o(.text.SPI0_Handler)
+    [Anonymous Symbol]                       0x200031c8   Section        0  pt32z192xx_it.o(.text.SPI1_Handler)
+    [Anonymous Symbol]                       0x200031cc   Section        0  pt32z192xx_it.o(.text.SVC_Handler)
+    [Anonymous Symbol]                       0x200031d0   Section        0  pt32z192xx_it.o(.text.SysTick_Handler)
+    [Anonymous Symbol]                       0x200031f4   Section        0  system_pt32z192xx.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x20003374   Section        0  pt32z192xx_it.o(.text.TMR0_Handler)
+    [Anonymous Symbol]                       0x20003398   Section        0  pt32z192xx_it.o(.text.TMR1_Handler)
+    [Anonymous Symbol]                       0x2000339c   Section        0  pt32z192xx_it.o(.text.TMR2_Handler)
+    [Anonymous Symbol]                       0x200033a0   Section        0  pt32z192xx_it.o(.text.TMR3_Handler)
+    [Anonymous Symbol]                       0x200033a4   Section        0  pt32z192xx_it.o(.text.TMR4_Handler)
+    [Anonymous Symbol]                       0x200033a8   Section        0  pt32z192xx_it.o(.text.TMR5_Handler)
+    [Anonymous Symbol]                       0x200033ac   Section        0  pt32z192xx_it.o(.text.UART0_Handler)
+    [Anonymous Symbol]                       0x200033b0   Section        0  pt32z192xx_it.o(.text.UART1_Handler)
+    [Anonymous Symbol]                       0x200033b4   Section        0  pt32z192xx_it.o(.text.UART2_Handler)
+    [Anonymous Symbol]                       0x200033d8   Section        0  pt32z192xx_uart.o(.text.UART_Cmd)
+    [Anonymous Symbol]                       0x200033e8   Section        0  main.o(.text.UART_Config)
+    [Anonymous Symbol]                       0x20003448   Section        0  pt32z192xx_uart.o(.text.UART_ITConfig)
+    [Anonymous Symbol]                       0x20003458   Section        0  pt32z192xx_uart.o(.text.UART_Init)
+    _PrintUnsigned                           0x200034f5   Thumb Code   508  segger_rtt_printf.o(.text._PrintUnsigned)
+    [Anonymous Symbol]                       0x200034f4   Section        0  segger_rtt_printf.o(.text._PrintUnsigned)
+    _PrintUnsigned._aV2C                     0x200036f0   Number         0  segger_rtt_printf.o(.text._PrintUnsigned)
+    [Anonymous Symbol]                       0x20003700   Section        0  app.o(.text._Z3appv)
+    [Anonymous Symbol]                       0x20003714   Section        0  app.o(.text._Z8fft_demov)
+    [Anonymous Symbol]                       0x20003890   Section        0  main.o(.text._Z8read_uidv)
+    [Anonymous Symbol]                       0x20003984   Section        0  box.o(.text._ZN3Box10print_sizeEv)
+    [Anonymous Symbol]                       0x200039b8   Section        0  box.o(.text._ZN3BoxC2Ev)
+    [Anonymous Symbol]                       0x200039d8   Section        0  box.o(.text._ZN3BoxD2Ev)
+    [Anonymous Symbol]                       0x200039f8   Section        0  cxa_handlers.cpp.o(.text._ZSt15get_new_handlerv)
+    [Anonymous Symbol]                       0x20003a04   Section        0  new.cpp.o(.text._ZdlPv)
+    [Anonymous Symbol]                       0x20003a08   Section        0  new.cpp.o(.text._Znwj)
+    [Anonymous Symbol]                       0x20003a30   Section        0  pt32z192xx_retarget.o(.text._sys_exit)
+    [Anonymous Symbol]                       0x20003a34   Section        0  pt32z192xx_retarget.o(.text.fputc)
+    [Anonymous Symbol]                       0x20003a40   Section        0  main.o(.text.main)
+    OSKERNEL                                 0x20003d68   Section       18  hardfaulthandler.o(OSKERNEL)
+    .constdata                               0x20003d7a   Section        4  sys_io_names.o(.constdata)
+    .constdata                               0x20003d7e   Section        4  sys_io_names.o(.constdata)
+    .constdata                               0x20003d82   Section        4  sys_io_names.o(.constdata)
+    .L.str.3                                 0x20003d86   Data          23  main.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x20003d86   Section        0  main.o(.rodata.str1.1)
+    .L.str                                   0x20003d9d   Data          34  main.o(.rodata.str1.1)
+    .L.str.8                                 0x20003dbf   Data           6  main.o(.rodata.str1.1)
+    .L.str.4                                 0x20003dc5   Data          12  main.o(.rodata.str1.1)
+    .L.str.5                                 0x20003dd1   Data           9  main.o(.rodata.str1.1)
+    .L.str.2                                 0x20003dda   Data           5  main.o(.rodata.str1.1)
+    .L.str.1                                 0x20003ddf   Data           8  main.o(.rodata.str1.1)
+    .L.str                                   0x20003de7   Data           9  segger_rtt.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x20003de7   Section        0  segger_rtt.o(.rodata.str1.1)
     .data                                    0x20010000   Section        4  stdio_streams.o(.data)
     .data                                    0x20010004   Section        4  stdio_streams.o(.data)
     .data                                    0x20010008   Section        4  stdio_streams.o(.data)
@@ -356,13 +371,13 @@ Image Symbol Table
     HardFaultRegs                            0x2001018c   Data          64  segger_hardfaulthandler.o(.bss..L_MergedGlobals)
     SYSCLK                                   0x200101cc   Data           4  dwtdelay.o(.bss.SYSCLK)
     [Anonymous Symbol]                       0x200101cc   Section        0  dwtdelay.o(.bss.SYSCLK)
-    _acUpBuffer                              0x2001027c   Data        1024  segger_rtt.o(.bss._acUpBuffer)
-    [Anonymous Symbol]                       0x2001027c   Section        0  segger_rtt.o(.bss._acUpBuffer)
-    Heap_Mem                                 0x20011e88   Data         768  startup_pt32z192.o(HEAP)
-    HEAP                                     0x20011e88   Section      768  startup_pt32z192.o(HEAP)
-    Stack_Mem                                0x20012188   Data       32768  startup_pt32z192.o(STACK)
-    STACK                                    0x20012188   Section    32768  startup_pt32z192.o(STACK)
-    __initial_sp                             0x2001a188   Data           0  startup_pt32z192.o(STACK)
+    _acUpBuffer                              0x20010280   Data        1024  segger_rtt.o(.bss._acUpBuffer)
+    [Anonymous Symbol]                       0x20010280   Section        0  segger_rtt.o(.bss._acUpBuffer)
+    Heap_Mem                                 0x20011e90   Data         768  startup_pt32z192.o(HEAP)
+    HEAP                                     0x20011e90   Section      768  startup_pt32z192.o(HEAP)
+    Stack_Mem                                0x20012190   Data       32768  startup_pt32z192.o(STACK)
+    STACK                                    0x20012190   Section    32768  startup_pt32z192.o(STACK)
+    __initial_sp                             0x2001a190   Data           0  startup_pt32z192.o(STACK)
 
     Global Symbols
 
@@ -457,170 +472,178 @@ Image Symbol Table
     __rt_exit_ls                             0x200001db   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
     __rt_exit_prels_1                        0x200001db   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
     __rt_exit_exit                           0x200001df   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
-    Reset_Handler                            0x200001e5   Thumb Code    14  startup_pt32z192.o(.text)
-    MemManage_Handler                        0x200001f7   Thumb Code     2  startup_pt32z192.o(.text)
-    BusFault_Handler                         0x200001f9   Thumb Code     2  startup_pt32z192.o(.text)
-    UsageFault_Handler                       0x200001fb   Thumb Code     2  startup_pt32z192.o(.text)
-    DebugMon_Handler                         0x200001ff   Thumb Code     2  startup_pt32z192.o(.text)
-    AES_Handler                              0x20000205   Thumb Code     0  startup_pt32z192.o(.text)
-    I2C_Handler                              0x20000205   Thumb Code     0  startup_pt32z192.o(.text)
-    QSPI_Handler                             0x20000205   Thumb Code     0  startup_pt32z192.o(.text)
-    RCC_Handler                              0x20000205   Thumb Code     0  startup_pt32z192.o(.text)
-    USB11_Handler                            0x20000205   Thumb Code     0  startup_pt32z192.o(.text)
-    WDG_Handler                              0x20000205   Thumb Code     0  startup_pt32z192.o(.text)
-    __user_initial_stackheap                 0x20000209   Thumb Code     0  startup_pt32z192.o(.text)
-    cr4_fft_1024_stm32                       0x20000235   Thumb Code     0  cr4_fft_1024_stm32.o(.text)
-    __2printf                                0x20001415   Thumb Code    20  noretval__2printf.o(.text)
-    __printf                                 0x2000142d   Thumb Code   104  __printf.o(.text)
-    _printf_int_dec                          0x20001495   Thumb Code   104  _printf_dec.o(.text)
-    puts                                     0x2000150d   Thumb Code    40  puts.o(.text)
-    strlen                                   0x20001539   Thumb Code    62  strlen.o(.text)
-    __aeabi_memcpy                           0x20001577   Thumb Code     0  rt_memcpy_v6.o(.text)
-    __rt_memcpy                              0x20001577   Thumb Code   138  rt_memcpy_v6.o(.text)
-    _memcpy_lastbytes                        0x200015dd   Thumb Code     0  rt_memcpy_v6.o(.text)
-    __use_two_region_memory                  0x20001601   Thumb Code     2  heapauxi.o(.text)
-    __rt_heap_escrow                         0x20001603   Thumb Code     2  heapauxi.o(.text)
-    __rt_heap_expand                         0x20001605   Thumb Code     2  heapauxi.o(.text)
-    _printf_int_common                       0x20001607   Thumb Code   178  _printf_intcommon.o(.text)
-    _printf_char_file                        0x200016b9   Thumb Code    32  _printf_char_file.o(.text)
-    __aeabi_memcpy4                          0x200016dd   Thumb Code     0  rt_memcpy_w.o(.text)
-    __aeabi_memcpy8                          0x200016dd   Thumb Code     0  rt_memcpy_w.o(.text)
-    __rt_memcpy_w                            0x200016dd   Thumb Code   100  rt_memcpy_w.o(.text)
-    _memcpy_lastbytes_aligned                0x20001725   Thumb Code     0  rt_memcpy_w.o(.text)
-    _printf_char_common                      0x2000174b   Thumb Code    32  _printf_char_common.o(.text)
-    ferror                                   0x20001771   Thumb Code     8  ferror.o(.text)
-    _initio                                  0x20001779   Thumb Code   210  initio.o(.text)
-    _terminateio                             0x2000184b   Thumb Code    56  initio.o(.text)
-    __user_setup_stackheap                   0x200018b1   Thumb Code    74  sys_stackheap_outer.o(.text)
-    free                                     0x200018fb   Thumb Code    78  h1_free.o(.text)
-    setvbuf                                  0x20001949   Thumb Code    70  setvbuf.o(.text)
-    freopen                                  0x20001991   Thumb Code   160  fopen.o(.text)
-    fopen                                    0x20001a31   Thumb Code    74  fopen.o(.text)
-    _fclose_internal                         0x20001a81   Thumb Code    76  fclose.o(.text)
-    fclose                                   0x20001a81   Thumb Code     0  fclose.o(.text)
-    exit                                     0x20001acd   Thumb Code    18  exit.o(.text)
-    __rt_SIGRTRED                            0x20001adf   Thumb Code    14  defsig_rtred_outer.o(.text)
-    __aeabi_memclr4                          0x20001aed   Thumb Code     0  rt_memclr_w.o(.text)
-    __aeabi_memclr8                          0x20001aed   Thumb Code     0  rt_memclr_w.o(.text)
-    __rt_memclr_w                            0x20001aed   Thumb Code     0  rt_memclr_w.o(.text)
-    _memset_w                                0x20001af1   Thumb Code    74  rt_memclr_w.o(.text)
-    _sys_open                                0x20001b3b   Thumb Code    20  sys_io.o(.text)
-    _sys_close                               0x20001b4f   Thumb Code    12  sys_io.o(.text)
-    _sys_write                               0x20001b5b   Thumb Code    16  sys_io.o(.text)
-    _sys_read                                0x20001b6b   Thumb Code    14  sys_io.o(.text)
-    _sys_istty                               0x20001b79   Thumb Code    12  sys_io.o(.text)
-    _sys_seek                                0x20001b85   Thumb Code    14  sys_io.o(.text)
-    _sys_ensure                              0x20001b93   Thumb Code     2  sys_io.o(.text)
-    _sys_flen                                0x20001b95   Thumb Code    12  sys_io.o(.text)
-    __user_libspace                          0x20001ba1   Thumb Code     8  libspace.o(.text)
-    __user_perproc_libspace                  0x20001ba1   Thumb Code     0  libspace.o(.text)
-    __user_perthread_libspace                0x20001ba1   Thumb Code     0  libspace.o(.text)
-    __rt_heap_descriptor                     0x20001ba9   Thumb Code     8  rt_heap_descriptor_intlibspace.o(.text)
-    __use_no_heap                            0x20001bb1   Thumb Code     2  hguard.o(.text)
-    __heap$guard                             0x20001bb3   Thumb Code     2  hguard.o(.text)
-    _terminate_user_alloc                    0x20001bb5   Thumb Code     2  init_alloc.o(.text)
-    _init_user_alloc                         0x20001bb7   Thumb Code     2  init_alloc.o(.text)
-    __Heap_Full                              0x20001bb9   Thumb Code    34  init_alloc.o(.text)
-    __Heap_Broken                            0x20001bdb   Thumb Code     6  init_alloc.o(.text)
-    _init_alloc                              0x20001be1   Thumb Code    94  init_alloc.o(.text)
-    malloc                                   0x20001c3f   Thumb Code    94  h1_alloc.o(.text)
-    _fseek                                   0x20001c9d   Thumb Code   242  fseek.o(.text)
-    fseek                                    0x20001c9d   Thumb Code     0  fseek.o(.text)
-    _seterr                                  0x20001d95   Thumb Code    20  stdio.o(.text)
-    _writebuf                                0x20001da9   Thumb Code    84  stdio.o(.text)
-    _fflush                                  0x20001dfd   Thumb Code    70  stdio.o(.text)
-    _deferredlazyseek                        0x20001e43   Thumb Code    60  stdio.o(.text)
-    __sig_exit                               0x20001e85   Thumb Code    10  defsig_exit.o(.text)
-    __rt_SIGRTRED_inner                      0x20001e91   Thumb Code    14  defsig_rtred_inner.o(.text)
-    __I$use$semihosting                      0x20001ec5   Thumb Code     0  use_no_semi.o(.text)
-    __use_no_semihosting_swi                 0x20001ec5   Thumb Code     2  use_no_semi.o(.text)
-    __Heap_Initialize                        0x20001ec7   Thumb Code    10  h1_init.o(.text)
-    __semihosting_library_function           0x20001ec7   Thumb Code     0  indicate_semi.o(.text)
-    _maybe_terminate_alloc                   0x20001ec7   Thumb Code     0  maybetermalloc1.o(.text)
-    __Heap_DescSize                          0x20001ed1   Thumb Code     4  h1_init.o(.text)
-    __Heap_ProvideMemory                     0x20001ed5   Thumb Code    52  h1_extend.o(.text)
-    _ftell_internal                          0x20001f09   Thumb Code    66  ftell.o(.text)
-    ftell                                    0x20001f09   Thumb Code     0  ftell.o(.text)
-    __default_signal_display                 0x20001f4b   Thumb Code    50  defsig_general.o(.text)
-    __rt_SIGRTMEM                            0x20001f7d   Thumb Code    14  defsig_rtmem_outer.o(.text)
-    _ttywrch                                 0x20001f8b   Thumb Code    14  sys_wrch.o(.text)
-    __aeabi_errno_addr                       0x20001f99   Thumb Code     8  rt_errno_addr_intlibspace.o(.text)
-    __errno$intlibspace                      0x20001f99   Thumb Code     0  rt_errno_addr_intlibspace.o(.text)
-    __rt_errno_addr$intlibspace              0x20001f99   Thumb Code     0  rt_errno_addr_intlibspace.o(.text)
-    __rt_SIGRTMEM_inner                      0x20001fa1   Thumb Code    22  defsig_rtmem_inner.o(.text)
-    ADC_ChannelConfig                        0x20001ff1   Thumb Code    26  pt32z192xx_adc.o(.text.ADC_ChannelConfig)
-    ADC_Cmd                                  0x2000200d   Thumb Code    16  pt32z192xx_adc.o(.text.ADC_Cmd)
-    ADC_Handler                              0x2000201d   Thumb Code     2  pt32z192xx_it.o(.text.ADC_Handler)
-    ADC_Init                                 0x20002021   Thumb Code    56  pt32z192xx_adc.o(.text.ADC_Init)
-    ADC_StartOfConversion                    0x20002059   Thumb Code    10  pt32z192xx_adc.o(.text.ADC_StartOfConversion)
-    DMA_AutoRepeat_Cmd                       0x20002065   Thumb Code    36  pt32z192xx_dma.o(.text.DMA_AutoRepeat_Cmd)
-    DMA_Cmd                                  0x20002089   Thumb Code    34  pt32z192xx_dma.o(.text.DMA_Cmd)
-    DMA_Config                               0x200020ad   Thumb Code    66  pt32z192xx_dma.o(.text.DMA_Config)
-    DMA_DirectionConfig                      0x200020f1   Thumb Code    26  pt32z192xx_dma.o(.text.DMA_DirectionConfig)
-    DMA_Handler                              0x2000210d   Thumb Code     2  pt32z192xx_it.o(.text.DMA_Handler)
-    DMA_PeripheralConfig                     0x20002111   Thumb Code    42  pt32z192xx_dma.o(.text.DMA_PeripheralConfig)
-    DWT_INIT                                 0x2000213d   Thumb Code    44  dwtdelay.o(.text.DWT_INIT)
-    DWT_get_tick                             0x20002169   Thumb Code    12  dwtdelay.o(.text.DWT_get_tick)
-    FLASH_Handler                            0x20002175   Thumb Code     2  pt32z192xx_it.o(.text.FLASH_Handler)
-    GPIO_ClearITPendingBit                   0x20002179   Thumb Code     4  pt32z192xx_gpio.o(.text.GPIO_ClearITPendingBit)
-    GPIO_ITConfig                            0x2000217d   Thumb Code    12  pt32z192xx_gpio.o(.text.GPIO_ITConfig)
-    GPIO_Init                                0x20002189   Thumb Code   100  pt32z192xx_gpio.o(.text.GPIO_Init)
-    GPIO_PinAFConfig                         0x200021ed   Thumb Code    14  pt32z192xx_gpio.o(.text.GPIO_PinAFConfig)
-    GPIO_SetBits                             0x200021fd   Thumb Code     8  pt32z192xx_gpio.o(.text.GPIO_SetBits)
-    GPIO_TriTypeConfig                       0x20002205   Thumb Code    52  pt32z192xx_gpio.o(.text.GPIO_TriTypeConfig)
-    HardFaultHandler                         0x20002239   Thumb Code   168  segger_hardfaulthandler.o(.text.HardFaultHandler)
-    NMI_Handler                              0x200022e1   Thumb Code     2  pt32z192xx_it.o(.text.NMI_Handler)
-    NVIC_Init                                0x200022e5   Thumb Code   108  pt32z192xx_misc.o(.text.NVIC_Init)
-    PA_Handler                               0x20002351   Thumb Code     2  pt32z192xx_it.o(.text.PA_Handler)
-    PB_Handler                               0x20002355   Thumb Code     2  pt32z192xx_it.o(.text.PB_Handler)
-    PC_Handler                               0x20002359   Thumb Code    52  pt32z192xx_it.o(.text.PC_Handler)
-    PD_Handler                               0x200023a9   Thumb Code     2  pt32z192xx_it.o(.text.PD_Handler)
-    PMW_TimeBaseInit                         0x200023ad   Thumb Code    26  pt32z192xx_pwm.o(.text.PMW_TimeBaseInit)
-    PWM_BKI_LevelConfig                      0x200023c9   Thumb Code    12  pt32z192xx_pwm.o(.text.PWM_BKI_LevelConfig)
-    PWM_BreakInput_Cmd                       0x200023d5   Thumb Code    18  pt32z192xx_pwm.o(.text.PWM_BreakInput_Cmd)
-    PWM_ClearFlag                            0x200023e9   Thumb Code     4  pt32z192xx_pwm.o(.text.PWM_ClearFlag)
-    PWM_Cmd                                  0x200023ed   Thumb Code    16  pt32z192xx_pwm.o(.text.PWM_Cmd)
-    PWM_GetFlagStatus                        0x200023fd   Thumb Code    10  pt32z192xx_pwm.o(.text.PWM_GetFlagStatus)
-    PWM_IntConfig                            0x20002409   Thumb Code   116  pt32z192xx_pwm.o(.text.PWM_IntConfig)
-    PWM_OutputInit                           0x2000247d   Thumb Code   104  pt32z192xx_pwm.o(.text.PWM_OutputInit)
-    PendSV_Handler                           0x200024e5   Thumb Code     2  pt32z192xx_it.o(.text.PendSV_Handler)
-    RTC_Handler                              0x200024e9   Thumb Code     2  pt32z192xx_it.o(.text.RTC_Handler)
-    SEGGER_RTT_Init                          0x200024ed   Thumb Code   112  segger_rtt.o(.text.SEGGER_RTT_Init)
-    SEGGER_RTT_Write                         0x2000255d   Thumb Code   178  segger_rtt.o(.text.SEGGER_RTT_Write)
-    SEGGER_RTT_WriteNoLock                   0x20002611   Thumb Code   376  segger_rtt.o(.text.SEGGER_RTT_WriteNoLock)
-    SEGGER_RTT_printf                        0x20002789   Thumb Code    30  segger_rtt_printf.o(.text.SEGGER_RTT_printf)
-    SEGGER_RTT_vprintf                       0x200027a9   Thumb Code  2538  segger_rtt_printf.o(.text.SEGGER_RTT_vprintf)
-    SERIAL_PutChar                           0x20003195   Thumb Code    40  pt32z192xx_serial.o(.text.SERIAL_PutChar)
-    SPI0_Handler                             0x200031bd   Thumb Code     2  pt32z192xx_it.o(.text.SPI0_Handler)
-    SPI1_Handler                             0x200031c1   Thumb Code     2  pt32z192xx_it.o(.text.SPI1_Handler)
-    SVC_Handler                              0x200031c5   Thumb Code     2  pt32z192xx_it.o(.text.SVC_Handler)
-    SysTick_Handler                          0x200031c9   Thumb Code    34  pt32z192xx_it.o(.text.SysTick_Handler)
-    SystemInit                               0x200031ed   Thumb Code   384  system_pt32z192xx.o(.text.SystemInit)
-    TMR0_Handler                             0x2000336d   Thumb Code    36  pt32z192xx_it.o(.text.TMR0_Handler)
-    TMR1_Handler                             0x20003391   Thumb Code     2  pt32z192xx_it.o(.text.TMR1_Handler)
-    TMR2_Handler                             0x20003395   Thumb Code     2  pt32z192xx_it.o(.text.TMR2_Handler)
-    TMR3_Handler                             0x20003399   Thumb Code     2  pt32z192xx_it.o(.text.TMR3_Handler)
-    TMR4_Handler                             0x2000339d   Thumb Code     2  pt32z192xx_it.o(.text.TMR4_Handler)
-    TMR5_Handler                             0x200033a1   Thumb Code     2  pt32z192xx_it.o(.text.TMR5_Handler)
-    UART0_Handler                            0x200033a5   Thumb Code     2  pt32z192xx_it.o(.text.UART0_Handler)
-    UART1_Handler                            0x200033a9   Thumb Code     2  pt32z192xx_it.o(.text.UART1_Handler)
-    UART2_Handler                            0x200033ad   Thumb Code    20  pt32z192xx_it.o(.text.UART2_Handler)
-    UART_Cmd                                 0x200033d1   Thumb Code    16  pt32z192xx_uart.o(.text.UART_Cmd)
-    UART_ITConfig                            0x200033e1   Thumb Code    16  pt32z192xx_uart.o(.text.UART_ITConfig)
-    UART_Init                                0x200033f1   Thumb Code   154  pt32z192xx_uart.o(.text.UART_Init)
-    app()                                    0x20003699   Thumb Code    20  app.o(.text._Z3appv)
-    fft_demo()                               0x200036ad   Thumb Code   344  app.o(.text._Z8fft_demov)
-    read_uid()                               0x20003829   Thumb Code   208  main.o(.text._Z8read_uidv)
-    Box::print_size()                        0x2000391d   Thumb Code    12  box.o(.text._ZN3Box10print_sizeEv)
-    _sys_exit                                0x20003951   Thumb Code     2  pt32z192xx_retarget.o(.text._sys_exit)
-    fputc                                    0x20003955   Thumb Code    10  pt32z192xx_retarget.o(.text.fputc)
-    main                                     0x20003961   Thumb Code   784  main.o(.text.main)
-    HardFault_Handler                        0x20003cb9   Thumb Code     0  hardfaulthandler.o(OSKERNEL)
-    __stdin_name                             0x20003cca   Data           4  sys_io_names.o(.constdata)
-    __stdout_name                            0x20003cce   Data           4  sys_io_names.o(.constdata)
-    __stderr_name                            0x20003cd2   Data           4  sys_io_names.o(.constdata)
-    Region$$Table$$Base                      0x20003d40   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x20003d60   Number         0  anon$$obj.o(Region$$Table)
+    Reset_Handler                            0x200001e5   Thumb Code    18  startup_pt32z192.o(.text)
+    MemManage_Handler                        0x200001fb   Thumb Code     2  startup_pt32z192.o(.text)
+    BusFault_Handler                         0x200001fd   Thumb Code     2  startup_pt32z192.o(.text)
+    UsageFault_Handler                       0x200001ff   Thumb Code     2  startup_pt32z192.o(.text)
+    DebugMon_Handler                         0x20000203   Thumb Code     2  startup_pt32z192.o(.text)
+    AES_Handler                              0x20000209   Thumb Code     0  startup_pt32z192.o(.text)
+    I2C_Handler                              0x20000209   Thumb Code     0  startup_pt32z192.o(.text)
+    QSPI_Handler                             0x20000209   Thumb Code     0  startup_pt32z192.o(.text)
+    RCC_Handler                              0x20000209   Thumb Code     0  startup_pt32z192.o(.text)
+    USB11_Handler                            0x20000209   Thumb Code     0  startup_pt32z192.o(.text)
+    WDG_Handler                              0x20000209   Thumb Code     0  startup_pt32z192.o(.text)
+    __user_initial_stackheap                 0x2000020d   Thumb Code     0  startup_pt32z192.o(.text)
+    cr4_fft_1024_stm32                       0x2000023d   Thumb Code     0  cr4_fft_1024_stm32.o(.text)
+    __2printf                                0x2000141d   Thumb Code    20  noretval__2printf.o(.text)
+    __printf                                 0x20001435   Thumb Code   104  __printf.o(.text)
+    _printf_int_dec                          0x2000149d   Thumb Code   104  _printf_dec.o(.text)
+    puts                                     0x20001515   Thumb Code    40  puts.o(.text)
+    strlen                                   0x20001541   Thumb Code    62  strlen.o(.text)
+    __aeabi_memcpy                           0x2000157f   Thumb Code     0  rt_memcpy_v6.o(.text)
+    __rt_memcpy                              0x2000157f   Thumb Code   138  rt_memcpy_v6.o(.text)
+    _memcpy_lastbytes                        0x200015e5   Thumb Code     0  rt_memcpy_v6.o(.text)
+    __use_two_region_memory                  0x20001609   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow                         0x2000160b   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand                         0x2000160d   Thumb Code     2  heapauxi.o(.text)
+    malloc                                   0x2000160f   Thumb Code    94  h1_alloc.o(.text)
+    free                                     0x2000166d   Thumb Code    78  h1_free.o(.text)
+    _printf_int_common                       0x200016bb   Thumb Code   178  _printf_intcommon.o(.text)
+    _printf_char_file                        0x2000176d   Thumb Code    32  _printf_char_file.o(.text)
+    __aeabi_memcpy4                          0x20001791   Thumb Code     0  rt_memcpy_w.o(.text)
+    __aeabi_memcpy8                          0x20001791   Thumb Code     0  rt_memcpy_w.o(.text)
+    __rt_memcpy_w                            0x20001791   Thumb Code   100  rt_memcpy_w.o(.text)
+    _memcpy_lastbytes_aligned                0x200017d9   Thumb Code     0  rt_memcpy_w.o(.text)
+    __rt_heap_descriptor                     0x200017f5   Thumb Code     8  rt_heap_descriptor_intlibspace.o(.text)
+    __use_no_heap                            0x200017fd   Thumb Code     2  hguard.o(.text)
+    __heap$guard                             0x200017ff   Thumb Code     2  hguard.o(.text)
+    _terminate_user_alloc                    0x20001801   Thumb Code     2  init_alloc.o(.text)
+    _init_user_alloc                         0x20001803   Thumb Code     2  init_alloc.o(.text)
+    __Heap_Full                              0x20001805   Thumb Code    34  init_alloc.o(.text)
+    __Heap_Broken                            0x20001827   Thumb Code     6  init_alloc.o(.text)
+    _init_alloc                              0x2000182d   Thumb Code    94  init_alloc.o(.text)
+    __Heap_Initialize                        0x2000188b   Thumb Code    10  h1_init.o(.text)
+    __Heap_DescSize                          0x20001895   Thumb Code     4  h1_init.o(.text)
+    _printf_char_common                      0x200018a3   Thumb Code    32  _printf_char_common.o(.text)
+    ferror                                   0x200018c9   Thumb Code     8  ferror.o(.text)
+    _initio                                  0x200018d1   Thumb Code   210  initio.o(.text)
+    _terminateio                             0x200019a3   Thumb Code    56  initio.o(.text)
+    __user_libspace                          0x20001a09   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x20001a09   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x20001a09   Thumb Code     0  libspace.o(.text)
+    __user_setup_stackheap                   0x20001a11   Thumb Code    74  sys_stackheap_outer.o(.text)
+    __Heap_ProvideMemory                     0x20001a5b   Thumb Code    52  h1_extend.o(.text)
+    _maybe_terminate_alloc                   0x20001a5b   Thumb Code     0  maybetermalloc1.o(.text)
+    setvbuf                                  0x20001a8f   Thumb Code    70  setvbuf.o(.text)
+    freopen                                  0x20001ad5   Thumb Code   160  fopen.o(.text)
+    fopen                                    0x20001b75   Thumb Code    74  fopen.o(.text)
+    _fclose_internal                         0x20001bc5   Thumb Code    76  fclose.o(.text)
+    fclose                                   0x20001bc5   Thumb Code     0  fclose.o(.text)
+    exit                                     0x20001c11   Thumb Code    18  exit.o(.text)
+    __sig_exit                               0x20001c23   Thumb Code    10  defsig_exit.o(.text)
+    __rt_SIGRTRED                            0x20001c2d   Thumb Code    14  defsig_rtred_outer.o(.text)
+    __rt_SIGRTMEM                            0x20001c3b   Thumb Code    14  defsig_rtmem_outer.o(.text)
+    __aeabi_memclr4                          0x20001c49   Thumb Code     0  rt_memclr_w.o(.text)
+    __aeabi_memclr8                          0x20001c49   Thumb Code     0  rt_memclr_w.o(.text)
+    __rt_memclr_w                            0x20001c49   Thumb Code     0  rt_memclr_w.o(.text)
+    _memset_w                                0x20001c4d   Thumb Code    74  rt_memclr_w.o(.text)
+    _sys_open                                0x20001c97   Thumb Code    20  sys_io.o(.text)
+    _sys_close                               0x20001cab   Thumb Code    12  sys_io.o(.text)
+    _sys_write                               0x20001cb7   Thumb Code    16  sys_io.o(.text)
+    _sys_read                                0x20001cc7   Thumb Code    14  sys_io.o(.text)
+    _sys_istty                               0x20001cd5   Thumb Code    12  sys_io.o(.text)
+    _sys_seek                                0x20001ce1   Thumb Code    14  sys_io.o(.text)
+    _sys_ensure                              0x20001cef   Thumb Code     2  sys_io.o(.text)
+    _sys_flen                                0x20001cf1   Thumb Code    12  sys_io.o(.text)
+    __I$use$semihosting                      0x20001cfd   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x20001cfd   Thumb Code     2  use_no_semi.o(.text)
+    __semihosting_library_function           0x20001cff   Thumb Code     0  indicate_semi.o(.text)
+    _fseek                                   0x20001d01   Thumb Code   242  fseek.o(.text)
+    fseek                                    0x20001d01   Thumb Code     0  fseek.o(.text)
+    _seterr                                  0x20001df9   Thumb Code    20  stdio.o(.text)
+    _writebuf                                0x20001e0d   Thumb Code    84  stdio.o(.text)
+    _fflush                                  0x20001e61   Thumb Code    70  stdio.o(.text)
+    _deferredlazyseek                        0x20001ea7   Thumb Code    60  stdio.o(.text)
+    __default_signal_display                 0x20001ee9   Thumb Code    50  defsig_general.o(.text)
+    __rt_SIGRTRED_inner                      0x20001f1d   Thumb Code    14  defsig_rtred_inner.o(.text)
+    __rt_SIGRTMEM_inner                      0x20001f51   Thumb Code    22  defsig_rtmem_inner.o(.text)
+    _ttywrch                                 0x20001fa1   Thumb Code    14  sys_wrch.o(.text)
+    _ftell_internal                          0x20001faf   Thumb Code    66  ftell.o(.text)
+    ftell                                    0x20001faf   Thumb Code     0  ftell.o(.text)
+    __aeabi_errno_addr                       0x20001ff1   Thumb Code     8  rt_errno_addr_intlibspace.o(.text)
+    __errno$intlibspace                      0x20001ff1   Thumb Code     0  rt_errno_addr_intlibspace.o(.text)
+    __rt_errno_addr$intlibspace              0x20001ff1   Thumb Code     0  rt_errno_addr_intlibspace.o(.text)
+    ADC_ChannelConfig                        0x20001ff9   Thumb Code    26  pt32z192xx_adc.o(.text.ADC_ChannelConfig)
+    ADC_Cmd                                  0x20002015   Thumb Code    16  pt32z192xx_adc.o(.text.ADC_Cmd)
+    ADC_Handler                              0x20002025   Thumb Code     2  pt32z192xx_it.o(.text.ADC_Handler)
+    ADC_Init                                 0x20002029   Thumb Code    56  pt32z192xx_adc.o(.text.ADC_Init)
+    ADC_StartOfConversion                    0x20002061   Thumb Code    10  pt32z192xx_adc.o(.text.ADC_StartOfConversion)
+    DMA_AutoRepeat_Cmd                       0x2000206d   Thumb Code    36  pt32z192xx_dma.o(.text.DMA_AutoRepeat_Cmd)
+    DMA_Cmd                                  0x20002091   Thumb Code    34  pt32z192xx_dma.o(.text.DMA_Cmd)
+    DMA_Config                               0x200020b5   Thumb Code    66  pt32z192xx_dma.o(.text.DMA_Config)
+    DMA_DirectionConfig                      0x200020f9   Thumb Code    26  pt32z192xx_dma.o(.text.DMA_DirectionConfig)
+    DMA_Handler                              0x20002115   Thumb Code     2  pt32z192xx_it.o(.text.DMA_Handler)
+    DMA_PeripheralConfig                     0x20002119   Thumb Code    42  pt32z192xx_dma.o(.text.DMA_PeripheralConfig)
+    DWT_INIT                                 0x20002145   Thumb Code    44  dwtdelay.o(.text.DWT_INIT)
+    DWT_get_tick                             0x20002171   Thumb Code    12  dwtdelay.o(.text.DWT_get_tick)
+    FLASH_Handler                            0x2000217d   Thumb Code     2  pt32z192xx_it.o(.text.FLASH_Handler)
+    GPIO_ClearITPendingBit                   0x20002181   Thumb Code     4  pt32z192xx_gpio.o(.text.GPIO_ClearITPendingBit)
+    GPIO_ITConfig                            0x20002185   Thumb Code    12  pt32z192xx_gpio.o(.text.GPIO_ITConfig)
+    GPIO_Init                                0x20002191   Thumb Code   100  pt32z192xx_gpio.o(.text.GPIO_Init)
+    GPIO_PinAFConfig                         0x200021f5   Thumb Code    14  pt32z192xx_gpio.o(.text.GPIO_PinAFConfig)
+    GPIO_SetBits                             0x20002205   Thumb Code     8  pt32z192xx_gpio.o(.text.GPIO_SetBits)
+    GPIO_TriTypeConfig                       0x2000220d   Thumb Code    52  pt32z192xx_gpio.o(.text.GPIO_TriTypeConfig)
+    HardFaultHandler                         0x20002241   Thumb Code   168  segger_hardfaulthandler.o(.text.HardFaultHandler)
+    NMI_Handler                              0x200022e9   Thumb Code     2  pt32z192xx_it.o(.text.NMI_Handler)
+    NVIC_Init                                0x200022ed   Thumb Code   108  pt32z192xx_misc.o(.text.NVIC_Init)
+    PA_Handler                               0x20002359   Thumb Code     2  pt32z192xx_it.o(.text.PA_Handler)
+    PB_Handler                               0x2000235d   Thumb Code     2  pt32z192xx_it.o(.text.PB_Handler)
+    PC_Handler                               0x20002361   Thumb Code    52  pt32z192xx_it.o(.text.PC_Handler)
+    PD_Handler                               0x200023b1   Thumb Code     2  pt32z192xx_it.o(.text.PD_Handler)
+    PMW_TimeBaseInit                         0x200023b5   Thumb Code    26  pt32z192xx_pwm.o(.text.PMW_TimeBaseInit)
+    PWM_BKI_LevelConfig                      0x200023d1   Thumb Code    12  pt32z192xx_pwm.o(.text.PWM_BKI_LevelConfig)
+    PWM_BreakInput_Cmd                       0x200023dd   Thumb Code    18  pt32z192xx_pwm.o(.text.PWM_BreakInput_Cmd)
+    PWM_ClearFlag                            0x200023f1   Thumb Code     4  pt32z192xx_pwm.o(.text.PWM_ClearFlag)
+    PWM_Cmd                                  0x200023f5   Thumb Code    16  pt32z192xx_pwm.o(.text.PWM_Cmd)
+    PWM_GetFlagStatus                        0x20002405   Thumb Code    10  pt32z192xx_pwm.o(.text.PWM_GetFlagStatus)
+    PWM_IntConfig                            0x20002411   Thumb Code   116  pt32z192xx_pwm.o(.text.PWM_IntConfig)
+    PWM_OutputInit                           0x20002485   Thumb Code   104  pt32z192xx_pwm.o(.text.PWM_OutputInit)
+    PendSV_Handler                           0x200024ed   Thumb Code     2  pt32z192xx_it.o(.text.PendSV_Handler)
+    RTC_Handler                              0x200024f1   Thumb Code     2  pt32z192xx_it.o(.text.RTC_Handler)
+    SEGGER_RTT_Init                          0x200024f5   Thumb Code   112  segger_rtt.o(.text.SEGGER_RTT_Init)
+    SEGGER_RTT_Write                         0x20002565   Thumb Code   178  segger_rtt.o(.text.SEGGER_RTT_Write)
+    SEGGER_RTT_WriteNoLock                   0x20002619   Thumb Code   376  segger_rtt.o(.text.SEGGER_RTT_WriteNoLock)
+    SEGGER_RTT_printf                        0x20002791   Thumb Code    30  segger_rtt_printf.o(.text.SEGGER_RTT_printf)
+    SEGGER_RTT_vprintf                       0x200027b1   Thumb Code  2538  segger_rtt_printf.o(.text.SEGGER_RTT_vprintf)
+    SERIAL_PutChar                           0x2000319d   Thumb Code    40  pt32z192xx_serial.o(.text.SERIAL_PutChar)
+    SPI0_Handler                             0x200031c5   Thumb Code     2  pt32z192xx_it.o(.text.SPI0_Handler)
+    SPI1_Handler                             0x200031c9   Thumb Code     2  pt32z192xx_it.o(.text.SPI1_Handler)
+    SVC_Handler                              0x200031cd   Thumb Code     2  pt32z192xx_it.o(.text.SVC_Handler)
+    SysTick_Handler                          0x200031d1   Thumb Code    34  pt32z192xx_it.o(.text.SysTick_Handler)
+    SystemInit                               0x200031f5   Thumb Code   384  system_pt32z192xx.o(.text.SystemInit)
+    TMR0_Handler                             0x20003375   Thumb Code    36  pt32z192xx_it.o(.text.TMR0_Handler)
+    TMR1_Handler                             0x20003399   Thumb Code     2  pt32z192xx_it.o(.text.TMR1_Handler)
+    TMR2_Handler                             0x2000339d   Thumb Code     2  pt32z192xx_it.o(.text.TMR2_Handler)
+    TMR3_Handler                             0x200033a1   Thumb Code     2  pt32z192xx_it.o(.text.TMR3_Handler)
+    TMR4_Handler                             0x200033a5   Thumb Code     2  pt32z192xx_it.o(.text.TMR4_Handler)
+    TMR5_Handler                             0x200033a9   Thumb Code     2  pt32z192xx_it.o(.text.TMR5_Handler)
+    UART0_Handler                            0x200033ad   Thumb Code     2  pt32z192xx_it.o(.text.UART0_Handler)
+    UART1_Handler                            0x200033b1   Thumb Code     2  pt32z192xx_it.o(.text.UART1_Handler)
+    UART2_Handler                            0x200033b5   Thumb Code    20  pt32z192xx_it.o(.text.UART2_Handler)
+    UART_Cmd                                 0x200033d9   Thumb Code    16  pt32z192xx_uart.o(.text.UART_Cmd)
+    UART_Config                              0x200033e9   Thumb Code    96  main.o(.text.UART_Config)
+    UART_ITConfig                            0x20003449   Thumb Code    16  pt32z192xx_uart.o(.text.UART_ITConfig)
+    UART_Init                                0x20003459   Thumb Code   154  pt32z192xx_uart.o(.text.UART_Init)
+    app()                                    0x20003701   Thumb Code    20  app.o(.text._Z3appv)
+    fft_demo()                               0x20003715   Thumb Code   344  app.o(.text._Z8fft_demov)
+    read_uid()                               0x20003891   Thumb Code   208  main.o(.text._Z8read_uidv)
+    Box::print_size()                        0x20003985   Thumb Code    12  box.o(.text._ZN3Box10print_sizeEv)
+    Box::Box()                               0x200039b9   Thumb Code    16  box.o(.text._ZN3BoxC2Ev)
+    Box::Box__sub_object()                   0x200039b9   Thumb Code    16  box.o(.text._ZN3BoxC2Ev)
+    Box::~Box()                              0x200039d9   Thumb Code    16  box.o(.text._ZN3BoxD2Ev)
+    Box::~Box__sub_object()                  0x200039d9   Thumb Code    16  box.o(.text._ZN3BoxD2Ev)
+    std::get_new_handler()                   0x200039f9   Thumb Code    12  cxa_handlers.cpp.o(.text._ZSt15get_new_handlerv)
+    operator delete(void*)                   0x20003a05   Thumb Code     4  new.cpp.o(.text._ZdlPv)
+    operator new(unsigned int)               0x20003a09   Thumb Code    38  new.cpp.o(.text._Znwj)
+    _sys_exit                                0x20003a31   Thumb Code     2  pt32z192xx_retarget.o(.text._sys_exit)
+    fputc                                    0x20003a35   Thumb Code    10  pt32z192xx_retarget.o(.text.fputc)
+    main                                     0x20003a41   Thumb Code   736  main.o(.text.main)
+    HardFault_Handler                        0x20003d69   Thumb Code     0  hardfaulthandler.o(OSKERNEL)
+    __stdin_name                             0x20003d7a   Data           4  sys_io_names.o(.constdata)
+    __stdout_name                            0x20003d7e   Data           4  sys_io_names.o(.constdata)
+    __stderr_name                            0x20003d82   Data           4  sys_io_names.o(.constdata)
+    Region$$Table$$Base                      0x20003df0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x20003e10   Number         0  anon$$obj.o(Region$$Table)
     __aeabi_stdin                            0x20010000   Data           4  stdio_streams.o(.data)
     __aeabi_stdout                           0x20010004   Data           4  stdio_streams.o(.data)
     __aeabi_stderr                           0x20010008   Data           4  stdio_streams.o(.data)
@@ -633,11 +656,12 @@ Image Symbol Table
     __temporary_stack_top$libspace           0x20010174   Data           0  libspace.o(.bss)
     TimingDelay                              0x200101d0   Data           4  app.o(.bss.TimingDelay)
     _SEGGER_RTT                              0x200101d4   Data         168  segger_rtt.o(.bss._SEGGER_RTT)
-    key_flag                                 0x2001067c   Data           4  app.o(.bss.key_flag)
-    lBufInArray                              0x20010680   Data        4096  app.o(.bss.lBufInArray)
-    lBufOutArray                             0x20011680   Data        2048  app.o(.bss.lBufOutArray)
-    m_AdcValue                               0x20011e80   Data           2  main.o(.bss.m_AdcValue)
-    timeval                                  0x20011e84   Data           4  app.o(.bss.timeval)
+    __cxa_new_handler                        0x2001027c   Data           4  cxa_handlers.cpp.o(.bss.__cxa_new_handler)
+    key_flag                                 0x20010680   Data           4  app.o(.bss.key_flag)
+    lBufInArray                              0x20010684   Data        4096  app.o(.bss.lBufInArray)
+    lBufOutArray                             0x20011684   Data        2048  app.o(.bss.lBufOutArray)
+    m_AdcValue                               0x20011e84   Data           2  main.o(.bss.m_AdcValue)
+    timeval                                  0x20011e88   Data           4  app.o(.bss.timeval)
 
 
 
@@ -647,253 +671,262 @@ Memory Map of the image
 
   Image Entry point : 0x20000131
 
-  Load Region LR_IROM1 (Base: 0x20000000, Size: 0x00003d78, Max: 0x00010000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x20000000, Size: 0x00003e28, Max: 0x00010000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x20000000, Load base: 0x20000000, Size: 0x00003d60, Max: 0x00010000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x20000000, Load base: 0x20000000, Size: 0x00003e10, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x20000000   0x00000130   Data   RO          166    RESET               startup_pt32z192.o
-    0x20000130   0x20000130   0x00000008   Code   RO          960  * !!!main             c_w.l(__main.o)
-    0x20000138   0x20000138   0x00000034   Code   RO         1283    !!!scatter          c_w.l(__scatter.o)
-    0x2000016c   0x2000016c   0x0000001a   Code   RO         1285    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x20000000   0x20000000   0x00000130   Data   RO          171    RESET               startup_pt32z192.o
+    0x20000130   0x20000130   0x00000008   Code   RO          965  * !!!main             c_w.l(__main.o)
+    0x20000138   0x20000138   0x00000034   Code   RO         1374    !!!scatter          c_w.l(__scatter.o)
+    0x2000016c   0x2000016c   0x0000001a   Code   RO         1376    !!handler_copy      c_w.l(__scatter_copy.o)
     0x20000186   0x20000186   0x00000002   PAD
-    0x20000188   0x20000188   0x0000001c   Code   RO         1287    !!handler_zi        c_w.l(__scatter_zi.o)
-    0x200001a4   0x200001a4   0x00000000   Code   RO          951    .ARM.Collect$$_printf_percent$$00000000  c_w.l(_printf_percent.o)
-    0x200001a4   0x200001a4   0x00000006   Code   RO          950    .ARM.Collect$$_printf_percent$$00000009  c_w.l(_printf_d.o)
-    0x200001aa   0x200001aa   0x00000004   Code   RO          967    .ARM.Collect$$_printf_percent$$00000017  c_w.l(_printf_percent_end.o)
-    0x200001ae   0x200001ae   0x00000002   Code   RO         1090    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
-    0x200001b0   0x200001b0   0x00000000   Code   RO         1092    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
-    0x200001b0   0x200001b0   0x00000000   Code   RO         1094    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
-    0x200001b0   0x200001b0   0x00000008   Code   RO         1095    .ARM.Collect$$libinit$$00000005  c_w.l(libinit2.o)
-    0x200001b8   0x200001b8   0x00000000   Code   RO         1097    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
-    0x200001b8   0x200001b8   0x00000000   Code   RO         1099    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
-    0x200001b8   0x200001b8   0x00000000   Code   RO         1101    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
-    0x200001b8   0x200001b8   0x00000000   Code   RO         1104    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
-    0x200001b8   0x200001b8   0x00000000   Code   RO         1106    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
-    0x200001b8   0x200001b8   0x00000000   Code   RO         1108    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
-    0x200001b8   0x200001b8   0x00000000   Code   RO         1110    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
-    0x200001b8   0x200001b8   0x00000000   Code   RO         1112    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
-    0x200001b8   0x200001b8   0x00000000   Code   RO         1114    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
-    0x200001b8   0x200001b8   0x00000000   Code   RO         1116    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
-    0x200001b8   0x200001b8   0x00000000   Code   RO         1118    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
-    0x200001b8   0x200001b8   0x00000000   Code   RO         1120    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
-    0x200001b8   0x200001b8   0x00000000   Code   RO         1122    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
-    0x200001b8   0x200001b8   0x00000004   Code   RO         1123    .ARM.Collect$$libinit$$00000024  c_w.l(libinit2.o)
-    0x200001bc   0x200001bc   0x00000000   Code   RO         1124    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
-    0x200001bc   0x200001bc   0x00000000   Code   RO         1128    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
-    0x200001bc   0x200001bc   0x00000000   Code   RO         1130    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
-    0x200001bc   0x200001bc   0x00000000   Code   RO         1132    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
-    0x200001bc   0x200001bc   0x00000000   Code   RO         1134    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
-    0x200001bc   0x200001bc   0x00000002   Code   RO         1135    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
-    0x200001be   0x200001be   0x00000002   Code   RO         1262    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
-    0x200001c0   0x200001c0   0x00000000   Code   RO         1137    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
-    0x200001c0   0x200001c0   0x00000004   Code   RO         1138    .ARM.Collect$$libshutdown$$00000003  c_w.l(libshutdown2.o)
-    0x200001c4   0x200001c4   0x00000000   Code   RO         1139    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
-    0x200001c4   0x200001c4   0x00000000   Code   RO         1142    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
-    0x200001c4   0x200001c4   0x00000000   Code   RO         1145    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
-    0x200001c4   0x200001c4   0x00000000   Code   RO         1147    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
-    0x200001c4   0x200001c4   0x00000000   Code   RO         1150    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
-    0x200001c4   0x200001c4   0x00000002   Code   RO         1151    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
-    0x200001c6   0x200001c6   0x00000000   Code   RO          962    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
-    0x200001c6   0x200001c6   0x00000000   Code   RO          977    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
-    0x200001c6   0x200001c6   0x00000006   Code   RO          989    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
-    0x200001cc   0x200001cc   0x00000000   Code   RO          979    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
-    0x200001cc   0x200001cc   0x00000004   Code   RO          980    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
-    0x200001d0   0x200001d0   0x00000000   Code   RO          982    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
-    0x200001d0   0x200001d0   0x00000008   Code   RO          983    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
-    0x200001d8   0x200001d8   0x00000002   Code   RO         1159    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
-    0x200001da   0x200001da   0x00000000   Code   RO         1204    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
-    0x200001da   0x200001da   0x00000004   Code   RO         1205    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
-    0x200001de   0x200001de   0x00000006   Code   RO         1206    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
-    0x200001e4   0x200001e4   0x00000050   Code   RO          167    .text               startup_pt32z192.o
-    0x20000234   0x20000234   0x000011e0   Code   RO          917    .text               cr4_fft_1024_stm32.o
-    0x20001414   0x20001414   0x00000018   Code   RO          924    .text               c_w.l(noretval__2printf.o)
-    0x2000142c   0x2000142c   0x00000068   Code   RO          926    .text               c_w.l(__printf.o)
-    0x20001494   0x20001494   0x00000078   Code   RO          928    .text               c_w.l(_printf_dec.o)
-    0x2000150c   0x2000150c   0x0000002c   Code   RO          952    .text               c_w.l(puts.o)
-    0x20001538   0x20001538   0x0000003e   Code   RO          954    .text               c_w.l(strlen.o)
-    0x20001576   0x20001576   0x0000008a   Code   RO          956    .text               c_w.l(rt_memcpy_v6.o)
-    0x20001600   0x20001600   0x00000006   Code   RO          958    .text               c_w.l(heapauxi.o)
-    0x20001606   0x20001606   0x000000b2   Code   RO          963    .text               c_w.l(_printf_intcommon.o)
-    0x200016b8   0x200016b8   0x00000024   Code   RO          965    .text               c_w.l(_printf_char_file.o)
-    0x200016dc   0x200016dc   0x00000064   Code   RO          974    .text               c_w.l(rt_memcpy_w.o)
-    0x20001740   0x20001740   0x00000030   Code   RO          991    .text               c_w.l(_printf_char_common.o)
-    0x20001770   0x20001770   0x00000008   Code   RO          993    .text               c_w.l(ferror.o)
-    0x20001778   0x20001778   0x00000138   Code   RO          995    .text               c_w.l(initio.o)
-    0x200018b0   0x200018b0   0x0000004a   Code   RO         1006    .text               c_w.l(sys_stackheap_outer.o)
-    0x200018fa   0x200018fa   0x0000004e   Code   RO         1010    .text               c_w.l(h1_free.o)
-    0x20001948   0x20001948   0x00000046   Code   RO         1066    .text               c_w.l(setvbuf.o)
-    0x2000198e   0x2000198e   0x00000002   PAD
-    0x20001990   0x20001990   0x000000f0   Code   RO         1069    .text               c_w.l(fopen.o)
-    0x20001a80   0x20001a80   0x0000004c   Code   RO         1071    .text               c_w.l(fclose.o)
-    0x20001acc   0x20001acc   0x00000012   Code   RO         1077    .text               c_w.l(exit.o)
-    0x20001ade   0x20001ade   0x0000000e   Code   RO         1079    .text               c_w.l(defsig_rtred_outer.o)
-    0x20001aec   0x20001aec   0x0000004e   Code   RO         1083    .text               c_w.l(rt_memclr_w.o)
-    0x20001b3a   0x20001b3a   0x00000066   Code   RO         1152    .text               c_w.l(sys_io.o)
-    0x20001ba0   0x20001ba0   0x00000008   Code   RO         1156    .text               c_w.l(libspace.o)
-    0x20001ba8   0x20001ba8   0x00000008   Code   RO         1166    .text               c_w.l(rt_heap_descriptor_intlibspace.o)
-    0x20001bb0   0x20001bb0   0x00000004   Code   RO         1168    .text               c_w.l(hguard.o)
-    0x20001bb4   0x20001bb4   0x0000008a   Code   RO         1170    .text               c_w.l(init_alloc.o)
-    0x20001c3e   0x20001c3e   0x0000005e   Code   RO         1176    .text               c_w.l(h1_alloc.o)
-    0x20001c9c   0x20001c9c   0x000000f8   Code   RO         1188    .text               c_w.l(fseek.o)
-    0x20001d94   0x20001d94   0x000000f0   Code   RO         1190    .text               c_w.l(stdio.o)
-    0x20001e84   0x20001e84   0x0000000a   Code   RO         1192    .text               c_w.l(defsig_exit.o)
-    0x20001e8e   0x20001e8e   0x00000002   PAD
-    0x20001e90   0x20001e90   0x00000034   Code   RO         1194    .text               c_w.l(defsig_rtred_inner.o)
-    0x20001ec4   0x20001ec4   0x00000002   Code   RO         1200    .text               c_w.l(use_no_semi.o)
-    0x20001ec6   0x20001ec6   0x00000000   Code   RO         1202    .text               c_w.l(indicate_semi.o)
-    0x20001ec6   0x20001ec6   0x00000000   Code   RO         1210    .text               c_w.l(maybetermalloc1.o)
-    0x20001ec6   0x20001ec6   0x0000000e   Code   RO         1212    .text               c_w.l(h1_init.o)
-    0x20001ed4   0x20001ed4   0x00000034   Code   RO         1214    .text               c_w.l(h1_extend.o)
-    0x20001f08   0x20001f08   0x00000042   Code   RO         1220    .text               c_w.l(ftell.o)
-    0x20001f4a   0x20001f4a   0x00000032   Code   RO         1224    .text               c_w.l(defsig_general.o)
-    0x20001f7c   0x20001f7c   0x0000000e   Code   RO         1226    .text               c_w.l(defsig_rtmem_outer.o)
-    0x20001f8a   0x20001f8a   0x0000000e   Code   RO         1239    .text               c_w.l(sys_wrch.o)
-    0x20001f98   0x20001f98   0x00000008   Code   RO         1250    .text               c_w.l(rt_errno_addr_intlibspace.o)
-    0x20001fa0   0x20001fa0   0x00000050   Code   RO         1256    .text               c_w.l(defsig_rtmem_inner.o)
-    0x20001ff0   0x20001ff0   0x0000001a   Code   RO          182    .text.ADC_ChannelConfig  pt32z192xx_adc.o
-    0x2000200a   0x2000200a   0x00000002   PAD
-    0x2000200c   0x2000200c   0x00000010   Code   RO          178    .text.ADC_Cmd       pt32z192xx_adc.o
-    0x2000201c   0x2000201c   0x00000002   Code   RO          106    .text.ADC_Handler   pt32z192xx_it.o
-    0x2000201e   0x2000201e   0x00000002   PAD
-    0x20002020   0x20002020   0x00000038   Code   RO          174    .text.ADC_Init      pt32z192xx_adc.o
-    0x20002058   0x20002058   0x0000000a   Code   RO          188    .text.ADC_StartOfConversion  pt32z192xx_adc.o
-    0x20002062   0x20002062   0x00000002   PAD
-    0x20002064   0x20002064   0x00000024   Code   RO          777    .text.DMA_AutoRepeat_Cmd  pt32z192xx_dma.o
-    0x20002088   0x20002088   0x00000022   Code   RO          771    .text.DMA_Cmd       pt32z192xx_dma.o
-    0x200020aa   0x200020aa   0x00000002   PAD
-    0x200020ac   0x200020ac   0x00000042   Code   RO          769    .text.DMA_Config    pt32z192xx_dma.o
-    0x200020ee   0x200020ee   0x00000002   PAD
-    0x200020f0   0x200020f0   0x0000001a   Code   RO          775    .text.DMA_DirectionConfig  pt32z192xx_dma.o
-    0x2000210a   0x2000210a   0x00000002   PAD
-    0x2000210c   0x2000210c   0x00000002   Code   RO          142    .text.DMA_Handler   pt32z192xx_it.o
-    0x2000210e   0x2000210e   0x00000002   PAD
-    0x20002110   0x20002110   0x0000002a   Code   RO          803    .text.DMA_PeripheralConfig  pt32z192xx_dma.o
-    0x2000213a   0x2000213a   0x00000002   PAD
-    0x2000213c   0x2000213c   0x0000002c   Code   RO            2    .text.DWT_INIT      dwtdelay.o
-    0x20002168   0x20002168   0x0000000c   Code   RO            6    .text.DWT_get_tick  dwtdelay.o
-    0x20002174   0x20002174   0x00000002   Code   RO           92    .text.FLASH_Handler  pt32z192xx_it.o
-    0x20002176   0x20002176   0x00000002   PAD
-    0x20002178   0x20002178   0x00000004   Code   RO          342    .text.GPIO_ClearITPendingBit  pt32z192xx_gpio.o
-    0x2000217c   0x2000217c   0x0000000c   Code   RO          332    .text.GPIO_ITConfig  pt32z192xx_gpio.o
-    0x20002188   0x20002188   0x00000064   Code   RO          304    .text.GPIO_Init     pt32z192xx_gpio.o
-    0x200021ec   0x200021ec   0x0000000e   Code   RO          330    .text.GPIO_PinAFConfig  pt32z192xx_gpio.o
-    0x200021fa   0x200021fa   0x00000002   PAD
-    0x200021fc   0x200021fc   0x00000008   Code   RO          320    .text.GPIO_SetBits  pt32z192xx_gpio.o
-    0x20002204   0x20002204   0x00000034   Code   RO          334    .text.GPIO_TriTypeConfig  pt32z192xx_gpio.o
-    0x20002238   0x20002238   0x000000a8   Code   RO          902    .text.HardFaultHandler  segger_hardfaulthandler.o
-    0x200022e0   0x200022e0   0x00000002   Code   RO           80    .text.NMI_Handler   pt32z192xx_it.o
-    0x200022e2   0x200022e2   0x00000002   PAD
-    0x200022e4   0x200022e4   0x0000006c   Code   RO          406    .text.NVIC_Init     pt32z192xx_misc.o
-    0x20002350   0x20002350   0x00000002   Code   RO           94    .text.PA_Handler    pt32z192xx_it.o
-    0x20002352   0x20002352   0x00000002   PAD
-    0x20002354   0x20002354   0x00000002   Code   RO           96    .text.PB_Handler    pt32z192xx_it.o
-    0x20002356   0x20002356   0x00000002   PAD
-    0x20002358   0x20002358   0x00000050   Code   RO           98    .text.PC_Handler    pt32z192xx_it.o
-    0x200023a8   0x200023a8   0x00000002   Code   RO          100    .text.PD_Handler    pt32z192xx_it.o
-    0x200023aa   0x200023aa   0x00000002   PAD
-    0x200023ac   0x200023ac   0x0000001a   Code   RO          418    .text.PMW_TimeBaseInit  pt32z192xx_pwm.o
-    0x200023c6   0x200023c6   0x00000002   PAD
-    0x200023c8   0x200023c8   0x0000000c   Code   RO          450    .text.PWM_BKI_LevelConfig  pt32z192xx_pwm.o
-    0x200023d4   0x200023d4   0x00000012   Code   RO          448    .text.PWM_BreakInput_Cmd  pt32z192xx_pwm.o
-    0x200023e6   0x200023e6   0x00000002   PAD
-    0x200023e8   0x200023e8   0x00000004   Code   RO          456    .text.PWM_ClearFlag  pt32z192xx_pwm.o
-    0x200023ec   0x200023ec   0x00000010   Code   RO          446    .text.PWM_Cmd       pt32z192xx_pwm.o
-    0x200023fc   0x200023fc   0x0000000a   Code   RO          454    .text.PWM_GetFlagStatus  pt32z192xx_pwm.o
-    0x20002406   0x20002406   0x00000002   PAD
-    0x20002408   0x20002408   0x00000074   Code   RO          452    .text.PWM_IntConfig  pt32z192xx_pwm.o
-    0x2000247c   0x2000247c   0x00000068   Code   RO          420    .text.PWM_OutputInit  pt32z192xx_pwm.o
-    0x200024e4   0x200024e4   0x00000002   Code   RO           84    .text.PendSV_Handler  pt32z192xx_it.o
-    0x200024e6   0x200024e6   0x00000002   PAD
-    0x200024e8   0x200024e8   0x00000002   Code   RO          136    .text.RTC_Handler   pt32z192xx_it.o
-    0x200024ea   0x200024ea   0x00000002   PAD
-    0x200024ec   0x200024ec   0x00000070   Code   RO          865    .text.SEGGER_RTT_Init  segger_rtt.o
-    0x2000255c   0x2000255c   0x000000b2   Code   RO          829    .text.SEGGER_RTT_Write  segger_rtt.o
-    0x2000260e   0x2000260e   0x00000002   PAD
-    0x20002610   0x20002610   0x00000178   Code   RO          825    .text.SEGGER_RTT_WriteNoLock  segger_rtt.o
-    0x20002788   0x20002788   0x0000001e   Code   RO          892    .text.SEGGER_RTT_printf  segger_rtt_printf.o
-    0x200027a6   0x200027a6   0x00000002   PAD
-    0x200027a8   0x200027a8   0x000009ea   Code   RO          888    .text.SEGGER_RTT_vprintf  segger_rtt_printf.o
-    0x20003192   0x20003192   0x00000002   PAD
-    0x20003194   0x20003194   0x00000028   Code   RO          758    .text.SERIAL_PutChar  pt32z192xx_serial.o
-    0x200031bc   0x200031bc   0x00000002   Code   RO          108    .text.SPI0_Handler  pt32z192xx_it.o
-    0x200031be   0x200031be   0x00000002   PAD
-    0x200031c0   0x200031c0   0x00000002   Code   RO          110    .text.SPI1_Handler  pt32z192xx_it.o
-    0x200031c2   0x200031c2   0x00000002   PAD
-    0x200031c4   0x200031c4   0x00000002   Code   RO           82    .text.SVC_Handler   pt32z192xx_it.o
+    0x20000188   0x20000188   0x0000001c   Code   RO         1378    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x200001a4   0x200001a4   0x00000000   Code   RO          956    .ARM.Collect$$_printf_percent$$00000000  c_w.l(_printf_percent.o)
+    0x200001a4   0x200001a4   0x00000006   Code   RO          955    .ARM.Collect$$_printf_percent$$00000009  c_w.l(_printf_d.o)
+    0x200001aa   0x200001aa   0x00000004   Code   RO         1083    .ARM.Collect$$_printf_percent$$00000017  c_w.l(_printf_percent_end.o)
+    0x200001ae   0x200001ae   0x00000002   Code   RO         1287    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x200001b0   0x200001b0   0x00000000   Code   RO         1170    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x200001b0   0x200001b0   0x00000000   Code   RO         1172    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x200001b0   0x200001b0   0x00000008   Code   RO         1173    .ARM.Collect$$libinit$$00000005  c_w.l(libinit2.o)
+    0x200001b8   0x200001b8   0x00000000   Code   RO         1175    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x200001b8   0x200001b8   0x00000000   Code   RO         1177    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x200001b8   0x200001b8   0x00000000   Code   RO         1179    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x200001b8   0x200001b8   0x00000000   Code   RO         1182    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x200001b8   0x200001b8   0x00000000   Code   RO         1184    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x200001b8   0x200001b8   0x00000000   Code   RO         1186    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x200001b8   0x200001b8   0x00000000   Code   RO         1188    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x200001b8   0x200001b8   0x00000000   Code   RO         1190    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x200001b8   0x200001b8   0x00000000   Code   RO         1192    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x200001b8   0x200001b8   0x00000000   Code   RO         1194    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x200001b8   0x200001b8   0x00000000   Code   RO         1196    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x200001b8   0x200001b8   0x00000000   Code   RO         1198    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x200001b8   0x200001b8   0x00000000   Code   RO         1200    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x200001b8   0x200001b8   0x00000004   Code   RO         1201    .ARM.Collect$$libinit$$00000024  c_w.l(libinit2.o)
+    0x200001bc   0x200001bc   0x00000000   Code   RO         1202    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x200001bc   0x200001bc   0x00000000   Code   RO         1206    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x200001bc   0x200001bc   0x00000000   Code   RO         1208    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x200001bc   0x200001bc   0x00000000   Code   RO         1210    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x200001bc   0x200001bc   0x00000000   Code   RO         1212    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x200001bc   0x200001bc   0x00000002   Code   RO         1213    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
+    0x200001be   0x200001be   0x00000002   Code   RO         1371    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x200001c0   0x200001c0   0x00000000   Code   RO         1289    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x200001c0   0x200001c0   0x00000004   Code   RO         1290    .ARM.Collect$$libshutdown$$00000003  c_w.l(libshutdown2.o)
+    0x200001c4   0x200001c4   0x00000000   Code   RO         1291    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x200001c4   0x200001c4   0x00000000   Code   RO         1294    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
+    0x200001c4   0x200001c4   0x00000000   Code   RO         1297    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
+    0x200001c4   0x200001c4   0x00000000   Code   RO         1299    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x200001c4   0x200001c4   0x00000000   Code   RO         1302    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x200001c4   0x200001c4   0x00000002   Code   RO         1303    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
+    0x200001c6   0x200001c6   0x00000000   Code   RO         1012    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x200001c6   0x200001c6   0x00000000   Code   RO         1116    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x200001c6   0x200001c6   0x00000006   Code   RO         1128    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x200001cc   0x200001cc   0x00000000   Code   RO         1118    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x200001cc   0x200001cc   0x00000004   Code   RO         1119    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x200001d0   0x200001d0   0x00000000   Code   RO         1121    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x200001d0   0x200001d0   0x00000008   Code   RO         1122    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x200001d8   0x200001d8   0x00000002   Code   RO         1313    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x200001da   0x200001da   0x00000000   Code   RO         1338    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x200001da   0x200001da   0x00000004   Code   RO         1339    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x200001de   0x200001de   0x00000006   Code   RO         1340    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x200001e4   0x200001e4   0x00000058   Code   RO          172    .text               startup_pt32z192.o
+    0x2000023c   0x2000023c   0x000011e0   Code   RO          922    .text               cr4_fft_1024_stm32.o
+    0x2000141c   0x2000141c   0x00000018   Code   RO          929    .text               c_w.l(noretval__2printf.o)
+    0x20001434   0x20001434   0x00000068   Code   RO          931    .text               c_w.l(__printf.o)
+    0x2000149c   0x2000149c   0x00000078   Code   RO          933    .text               c_w.l(_printf_dec.o)
+    0x20001514   0x20001514   0x0000002c   Code   RO          957    .text               c_w.l(puts.o)
+    0x20001540   0x20001540   0x0000003e   Code   RO          959    .text               c_w.l(strlen.o)
+    0x2000157e   0x2000157e   0x0000008a   Code   RO          961    .text               c_w.l(rt_memcpy_v6.o)
+    0x20001608   0x20001608   0x00000006   Code   RO          963    .text               c_w.l(heapauxi.o)
+    0x2000160e   0x2000160e   0x0000005e   Code   RO         1017    .text               c_w.l(h1_alloc.o)
+    0x2000166c   0x2000166c   0x0000004e   Code   RO         1019    .text               c_w.l(h1_free.o)
+    0x200016ba   0x200016ba   0x000000b2   Code   RO         1079    .text               c_w.l(_printf_intcommon.o)
+    0x2000176c   0x2000176c   0x00000024   Code   RO         1081    .text               c_w.l(_printf_char_file.o)
+    0x20001790   0x20001790   0x00000064   Code   RO         1092    .text               c_w.l(rt_memcpy_w.o)
+    0x200017f4   0x200017f4   0x00000008   Code   RO         1133    .text               c_w.l(rt_heap_descriptor_intlibspace.o)
+    0x200017fc   0x200017fc   0x00000004   Code   RO         1135    .text               c_w.l(hguard.o)
+    0x20001800   0x20001800   0x0000008a   Code   RO         1137    .text               c_w.l(init_alloc.o)
+    0x2000188a   0x2000188a   0x0000000e   Code   RO         1141    .text               c_w.l(h1_init.o)
+    0x20001898   0x20001898   0x00000030   Code   RO         1153    .text               c_w.l(_printf_char_common.o)
+    0x200018c8   0x200018c8   0x00000008   Code   RO         1155    .text               c_w.l(ferror.o)
+    0x200018d0   0x200018d0   0x00000138   Code   RO         1157    .text               c_w.l(initio.o)
+    0x20001a08   0x20001a08   0x00000008   Code   RO         1233    .text               c_w.l(libspace.o)
+    0x20001a10   0x20001a10   0x0000004a   Code   RO         1236    .text               c_w.l(sys_stackheap_outer.o)
+    0x20001a5a   0x20001a5a   0x00000000   Code   RO         1242    .text               c_w.l(maybetermalloc1.o)
+    0x20001a5a   0x20001a5a   0x00000034   Code   RO         1244    .text               c_w.l(h1_extend.o)
+    0x20001a8e   0x20001a8e   0x00000046   Code   RO         1250    .text               c_w.l(setvbuf.o)
+    0x20001ad4   0x20001ad4   0x000000f0   Code   RO         1253    .text               c_w.l(fopen.o)
+    0x20001bc4   0x20001bc4   0x0000004c   Code   RO         1255    .text               c_w.l(fclose.o)
+    0x20001c10   0x20001c10   0x00000012   Code   RO         1261    .text               c_w.l(exit.o)
+    0x20001c22   0x20001c22   0x0000000a   Code   RO         1263    .text               c_w.l(defsig_exit.o)
+    0x20001c2c   0x20001c2c   0x0000000e   Code   RO         1267    .text               c_w.l(defsig_rtred_outer.o)
+    0x20001c3a   0x20001c3a   0x0000000e   Code   RO         1271    .text               c_w.l(defsig_rtmem_outer.o)
+    0x20001c48   0x20001c48   0x0000004e   Code   RO         1275    .text               c_w.l(rt_memclr_w.o)
+    0x20001c96   0x20001c96   0x00000066   Code   RO         1306    .text               c_w.l(sys_io.o)
+    0x20001cfc   0x20001cfc   0x00000002   Code   RO         1310    .text               c_w.l(use_no_semi.o)
+    0x20001cfe   0x20001cfe   0x00000000   Code   RO         1312    .text               c_w.l(indicate_semi.o)
+    0x20001cfe   0x20001cfe   0x00000002   PAD
+    0x20001d00   0x20001d00   0x000000f8   Code   RO         1317    .text               c_w.l(fseek.o)
+    0x20001df8   0x20001df8   0x000000f0   Code   RO         1319    .text               c_w.l(stdio.o)
+    0x20001ee8   0x20001ee8   0x00000032   Code   RO         1323    .text               c_w.l(defsig_general.o)
+    0x20001f1a   0x20001f1a   0x00000002   PAD
+    0x20001f1c   0x20001f1c   0x00000034   Code   RO         1325    .text               c_w.l(defsig_rtred_inner.o)
+    0x20001f50   0x20001f50   0x00000050   Code   RO         1327    .text               c_w.l(defsig_rtmem_inner.o)
+    0x20001fa0   0x20001fa0   0x0000000e   Code   RO         1333    .text               c_w.l(sys_wrch.o)
+    0x20001fae   0x20001fae   0x00000042   Code   RO         1348    .text               c_w.l(ftell.o)
+    0x20001ff0   0x20001ff0   0x00000008   Code   RO         1355    .text               c_w.l(rt_errno_addr_intlibspace.o)
+    0x20001ff8   0x20001ff8   0x0000001a   Code   RO          187    .text.ADC_ChannelConfig  pt32z192xx_adc.o
+    0x20002012   0x20002012   0x00000002   PAD
+    0x20002014   0x20002014   0x00000010   Code   RO          183    .text.ADC_Cmd       pt32z192xx_adc.o
+    0x20002024   0x20002024   0x00000002   Code   RO          111    .text.ADC_Handler   pt32z192xx_it.o
+    0x20002026   0x20002026   0x00000002   PAD
+    0x20002028   0x20002028   0x00000038   Code   RO          179    .text.ADC_Init      pt32z192xx_adc.o
+    0x20002060   0x20002060   0x0000000a   Code   RO          193    .text.ADC_StartOfConversion  pt32z192xx_adc.o
+    0x2000206a   0x2000206a   0x00000002   PAD
+    0x2000206c   0x2000206c   0x00000024   Code   RO          782    .text.DMA_AutoRepeat_Cmd  pt32z192xx_dma.o
+    0x20002090   0x20002090   0x00000022   Code   RO          776    .text.DMA_Cmd       pt32z192xx_dma.o
+    0x200020b2   0x200020b2   0x00000002   PAD
+    0x200020b4   0x200020b4   0x00000042   Code   RO          774    .text.DMA_Config    pt32z192xx_dma.o
+    0x200020f6   0x200020f6   0x00000002   PAD
+    0x200020f8   0x200020f8   0x0000001a   Code   RO          780    .text.DMA_DirectionConfig  pt32z192xx_dma.o
+    0x20002112   0x20002112   0x00000002   PAD
+    0x20002114   0x20002114   0x00000002   Code   RO          147    .text.DMA_Handler   pt32z192xx_it.o
+    0x20002116   0x20002116   0x00000002   PAD
+    0x20002118   0x20002118   0x0000002a   Code   RO          808    .text.DMA_PeripheralConfig  pt32z192xx_dma.o
+    0x20002142   0x20002142   0x00000002   PAD
+    0x20002144   0x20002144   0x0000002c   Code   RO            2    .text.DWT_INIT      dwtdelay.o
+    0x20002170   0x20002170   0x0000000c   Code   RO            6    .text.DWT_get_tick  dwtdelay.o
+    0x2000217c   0x2000217c   0x00000002   Code   RO           97    .text.FLASH_Handler  pt32z192xx_it.o
+    0x2000217e   0x2000217e   0x00000002   PAD
+    0x20002180   0x20002180   0x00000004   Code   RO          347    .text.GPIO_ClearITPendingBit  pt32z192xx_gpio.o
+    0x20002184   0x20002184   0x0000000c   Code   RO          337    .text.GPIO_ITConfig  pt32z192xx_gpio.o
+    0x20002190   0x20002190   0x00000064   Code   RO          309    .text.GPIO_Init     pt32z192xx_gpio.o
+    0x200021f4   0x200021f4   0x0000000e   Code   RO          335    .text.GPIO_PinAFConfig  pt32z192xx_gpio.o
+    0x20002202   0x20002202   0x00000002   PAD
+    0x20002204   0x20002204   0x00000008   Code   RO          325    .text.GPIO_SetBits  pt32z192xx_gpio.o
+    0x2000220c   0x2000220c   0x00000034   Code   RO          339    .text.GPIO_TriTypeConfig  pt32z192xx_gpio.o
+    0x20002240   0x20002240   0x000000a8   Code   RO          907    .text.HardFaultHandler  segger_hardfaulthandler.o
+    0x200022e8   0x200022e8   0x00000002   Code   RO           85    .text.NMI_Handler   pt32z192xx_it.o
+    0x200022ea   0x200022ea   0x00000002   PAD
+    0x200022ec   0x200022ec   0x0000006c   Code   RO          411    .text.NVIC_Init     pt32z192xx_misc.o
+    0x20002358   0x20002358   0x00000002   Code   RO           99    .text.PA_Handler    pt32z192xx_it.o
+    0x2000235a   0x2000235a   0x00000002   PAD
+    0x2000235c   0x2000235c   0x00000002   Code   RO          101    .text.PB_Handler    pt32z192xx_it.o
+    0x2000235e   0x2000235e   0x00000002   PAD
+    0x20002360   0x20002360   0x00000050   Code   RO          103    .text.PC_Handler    pt32z192xx_it.o
+    0x200023b0   0x200023b0   0x00000002   Code   RO          105    .text.PD_Handler    pt32z192xx_it.o
+    0x200023b2   0x200023b2   0x00000002   PAD
+    0x200023b4   0x200023b4   0x0000001a   Code   RO          423    .text.PMW_TimeBaseInit  pt32z192xx_pwm.o
+    0x200023ce   0x200023ce   0x00000002   PAD
+    0x200023d0   0x200023d0   0x0000000c   Code   RO          455    .text.PWM_BKI_LevelConfig  pt32z192xx_pwm.o
+    0x200023dc   0x200023dc   0x00000012   Code   RO          453    .text.PWM_BreakInput_Cmd  pt32z192xx_pwm.o
+    0x200023ee   0x200023ee   0x00000002   PAD
+    0x200023f0   0x200023f0   0x00000004   Code   RO          461    .text.PWM_ClearFlag  pt32z192xx_pwm.o
+    0x200023f4   0x200023f4   0x00000010   Code   RO          451    .text.PWM_Cmd       pt32z192xx_pwm.o
+    0x20002404   0x20002404   0x0000000a   Code   RO          459    .text.PWM_GetFlagStatus  pt32z192xx_pwm.o
+    0x2000240e   0x2000240e   0x00000002   PAD
+    0x20002410   0x20002410   0x00000074   Code   RO          457    .text.PWM_IntConfig  pt32z192xx_pwm.o
+    0x20002484   0x20002484   0x00000068   Code   RO          425    .text.PWM_OutputInit  pt32z192xx_pwm.o
+    0x200024ec   0x200024ec   0x00000002   Code   RO           89    .text.PendSV_Handler  pt32z192xx_it.o
+    0x200024ee   0x200024ee   0x00000002   PAD
+    0x200024f0   0x200024f0   0x00000002   Code   RO          141    .text.RTC_Handler   pt32z192xx_it.o
+    0x200024f2   0x200024f2   0x00000002   PAD
+    0x200024f4   0x200024f4   0x00000070   Code   RO          870    .text.SEGGER_RTT_Init  segger_rtt.o
+    0x20002564   0x20002564   0x000000b2   Code   RO          834    .text.SEGGER_RTT_Write  segger_rtt.o
+    0x20002616   0x20002616   0x00000002   PAD
+    0x20002618   0x20002618   0x00000178   Code   RO          830    .text.SEGGER_RTT_WriteNoLock  segger_rtt.o
+    0x20002790   0x20002790   0x0000001e   Code   RO          897    .text.SEGGER_RTT_printf  segger_rtt_printf.o
+    0x200027ae   0x200027ae   0x00000002   PAD
+    0x200027b0   0x200027b0   0x000009ea   Code   RO          893    .text.SEGGER_RTT_vprintf  segger_rtt_printf.o
+    0x2000319a   0x2000319a   0x00000002   PAD
+    0x2000319c   0x2000319c   0x00000028   Code   RO          763    .text.SERIAL_PutChar  pt32z192xx_serial.o
+    0x200031c4   0x200031c4   0x00000002   Code   RO          113    .text.SPI0_Handler  pt32z192xx_it.o
     0x200031c6   0x200031c6   0x00000002   PAD
-    0x200031c8   0x200031c8   0x00000022   Code   RO           86    .text.SysTick_Handler  pt32z192xx_it.o
-    0x200031ea   0x200031ea   0x00000002   PAD
-    0x200031ec   0x200031ec   0x00000180   Code   RO          154    .text.SystemInit    system_pt32z192xx.o
-    0x2000336c   0x2000336c   0x00000024   Code   RO          124    .text.TMR0_Handler  pt32z192xx_it.o
-    0x20003390   0x20003390   0x00000002   Code   RO          126    .text.TMR1_Handler  pt32z192xx_it.o
-    0x20003392   0x20003392   0x00000002   PAD
-    0x20003394   0x20003394   0x00000002   Code   RO          128    .text.TMR2_Handler  pt32z192xx_it.o
-    0x20003396   0x20003396   0x00000002   PAD
-    0x20003398   0x20003398   0x00000002   Code   RO          130    .text.TMR3_Handler  pt32z192xx_it.o
+    0x200031c8   0x200031c8   0x00000002   Code   RO          115    .text.SPI1_Handler  pt32z192xx_it.o
+    0x200031ca   0x200031ca   0x00000002   PAD
+    0x200031cc   0x200031cc   0x00000002   Code   RO           87    .text.SVC_Handler   pt32z192xx_it.o
+    0x200031ce   0x200031ce   0x00000002   PAD
+    0x200031d0   0x200031d0   0x00000022   Code   RO           91    .text.SysTick_Handler  pt32z192xx_it.o
+    0x200031f2   0x200031f2   0x00000002   PAD
+    0x200031f4   0x200031f4   0x00000180   Code   RO          159    .text.SystemInit    system_pt32z192xx.o
+    0x20003374   0x20003374   0x00000024   Code   RO          129    .text.TMR0_Handler  pt32z192xx_it.o
+    0x20003398   0x20003398   0x00000002   Code   RO          131    .text.TMR1_Handler  pt32z192xx_it.o
     0x2000339a   0x2000339a   0x00000002   PAD
-    0x2000339c   0x2000339c   0x00000002   Code   RO          132    .text.TMR4_Handler  pt32z192xx_it.o
+    0x2000339c   0x2000339c   0x00000002   Code   RO          133    .text.TMR2_Handler  pt32z192xx_it.o
     0x2000339e   0x2000339e   0x00000002   PAD
-    0x200033a0   0x200033a0   0x00000002   Code   RO          134    .text.TMR5_Handler  pt32z192xx_it.o
+    0x200033a0   0x200033a0   0x00000002   Code   RO          135    .text.TMR3_Handler  pt32z192xx_it.o
     0x200033a2   0x200033a2   0x00000002   PAD
-    0x200033a4   0x200033a4   0x00000002   Code   RO          112    .text.UART0_Handler  pt32z192xx_it.o
+    0x200033a4   0x200033a4   0x00000002   Code   RO          137    .text.TMR4_Handler  pt32z192xx_it.o
     0x200033a6   0x200033a6   0x00000002   PAD
-    0x200033a8   0x200033a8   0x00000002   Code   RO          114    .text.UART1_Handler  pt32z192xx_it.o
+    0x200033a8   0x200033a8   0x00000002   Code   RO          139    .text.TMR5_Handler  pt32z192xx_it.o
     0x200033aa   0x200033aa   0x00000002   PAD
-    0x200033ac   0x200033ac   0x00000024   Code   RO          116    .text.UART2_Handler  pt32z192xx_it.o
-    0x200033d0   0x200033d0   0x00000010   Code   RO          590    .text.UART_Cmd      pt32z192xx_uart.o
-    0x200033e0   0x200033e0   0x00000010   Code   RO          618    .text.UART_ITConfig  pt32z192xx_uart.o
-    0x200033f0   0x200033f0   0x0000009a   Code   RO          586    .text.UART_Init     pt32z192xx_uart.o
-    0x2000348a   0x2000348a   0x00000002   PAD
-    0x2000348c   0x2000348c   0x0000020c   Code   RO          890    .text._PrintUnsigned  segger_rtt_printf.o
-    0x20003698   0x20003698   0x00000014   Code   RO           23    .text._Z3appv       app.o
-    0x200036ac   0x200036ac   0x0000017c   Code   RO           21    .text._Z8fft_demov  app.o
-    0x20003828   0x20003828   0x000000f4   Code   RO           63    .text._Z8read_uidv  main.o
-    0x2000391c   0x2000391c   0x00000034   Code   RO           40    .text._ZN3Box10print_sizeEv  box.o
-    0x20003950   0x20003950   0x00000002   Code   RO          748    .text._sys_exit     pt32z192xx_retarget.o
-    0x20003952   0x20003952   0x00000002   PAD
-    0x20003954   0x20003954   0x0000000a   Code   RO          744    .text.fputc         pt32z192xx_retarget.o
-    0x2000395e   0x2000395e   0x00000002   PAD
-    0x20003960   0x20003960   0x00000358   Code   RO           67    .text.main          main.o
-    0x20003cb8   0x20003cb8   0x00000012   Code   RO          911    OSKERNEL            hardfaulthandler.o
-    0x20003cca   0x20003cca   0x00000004   Data   RO         1001    .constdata          c_w.l(sys_io_names.o)
-    0x20003cce   0x20003cce   0x00000004   Data   RO         1002    .constdata          c_w.l(sys_io_names.o)
-    0x20003cd2   0x20003cd2   0x00000004   Data   RO         1003    .constdata          c_w.l(sys_io_names.o)
-    0x20003cd6   0x20003cd6   0x00000061   Data   RO           70    .rodata.str1.1      main.o
-    0x20003d37   0x20003d37   0x00000009   Data   RO          877    .rodata.str1.1      segger_rtt.o
-    0x20003d40   0x20003d40   0x00000020   Data   RO         1282    Region$$Table       anon$$obj.o
+    0x200033ac   0x200033ac   0x00000002   Code   RO          117    .text.UART0_Handler  pt32z192xx_it.o
+    0x200033ae   0x200033ae   0x00000002   PAD
+    0x200033b0   0x200033b0   0x00000002   Code   RO          119    .text.UART1_Handler  pt32z192xx_it.o
+    0x200033b2   0x200033b2   0x00000002   PAD
+    0x200033b4   0x200033b4   0x00000024   Code   RO          121    .text.UART2_Handler  pt32z192xx_it.o
+    0x200033d8   0x200033d8   0x00000010   Code   RO          595    .text.UART_Cmd      pt32z192xx_uart.o
+    0x200033e8   0x200033e8   0x00000060   Code   RO           58    .text.UART_Config   main.o
+    0x20003448   0x20003448   0x00000010   Code   RO          623    .text.UART_ITConfig  pt32z192xx_uart.o
+    0x20003458   0x20003458   0x0000009a   Code   RO          591    .text.UART_Init     pt32z192xx_uart.o
+    0x200034f2   0x200034f2   0x00000002   PAD
+    0x200034f4   0x200034f4   0x0000020c   Code   RO          895    .text._PrintUnsigned  segger_rtt_printf.o
+    0x20003700   0x20003700   0x00000014   Code   RO           23    .text._Z3appv       app.o
+    0x20003714   0x20003714   0x0000017c   Code   RO           21    .text._Z8fft_demov  app.o
+    0x20003890   0x20003890   0x000000f4   Code   RO           68    .text._Z8read_uidv  main.o
+    0x20003984   0x20003984   0x00000034   Code   RO           40    .text._ZN3Box10print_sizeEv  box.o
+    0x200039b8   0x200039b8   0x00000020   Code   RO           42    .text._ZN3BoxC2Ev   box.o
+    0x200039d8   0x200039d8   0x00000020   Code   RO           44    .text._ZN3BoxD2Ev   box.o
+    0x200039f8   0x200039f8   0x0000000c   Code   RO         1109    .text._ZSt15get_new_handlerv  libcppabi_w.l(cxa_handlers.cpp.o)
+    0x20003a04   0x20003a04   0x00000004   Code   RO          978    .text._ZdlPv        libcpp_w.l(new.cpp.o)
+    0x20003a08   0x20003a08   0x00000026   Code   RO          970    .text._Znwj         libcpp_w.l(new.cpp.o)
+    0x20003a2e   0x20003a2e   0x00000002   PAD
+    0x20003a30   0x20003a30   0x00000002   Code   RO          753    .text._sys_exit     pt32z192xx_retarget.o
+    0x20003a32   0x20003a32   0x00000002   PAD
+    0x20003a34   0x20003a34   0x0000000a   Code   RO          749    .text.fputc         pt32z192xx_retarget.o
+    0x20003a3e   0x20003a3e   0x00000002   PAD
+    0x20003a40   0x20003a40   0x00000328   Code   RO           72    .text.main          main.o
+    0x20003d68   0x20003d68   0x00000012   Code   RO          916    OSKERNEL            hardfaulthandler.o
+    0x20003d7a   0x20003d7a   0x00000004   Data   RO         1228    .constdata          c_w.l(sys_io_names.o)
+    0x20003d7e   0x20003d7e   0x00000004   Data   RO         1229    .constdata          c_w.l(sys_io_names.o)
+    0x20003d82   0x20003d82   0x00000004   Data   RO         1230    .constdata          c_w.l(sys_io_names.o)
+    0x20003d86   0x20003d86   0x00000061   Data   RO           75    .rodata.str1.1      main.o
+    0x20003de7   0x20003de7   0x00000009   Data   RO          882    .rodata.str1.1      segger_rtt.o
+    0x20003df0   0x20003df0   0x00000020   Data   RO         1373    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20010000, Load base: 0x20003d60, Size: 0x0000a188, Max: 0x00010000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20010000, Load base: 0x20003e10, Size: 0x0000a190, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20010000   0x20003d60   0x00000004   Data   RW          971    .data               c_w.l(stdio_streams.o)
-    0x20010004   0x20003d64   0x00000004   Data   RW          972    .data               c_w.l(stdio_streams.o)
-    0x20010008   0x20003d68   0x00000004   Data   RW          973    .data               c_w.l(stdio_streams.o)
-    0x2001000c   0x20003d6c   0x00000004   Data   RW          156    .data.SystemCoreClock  system_pt32z192xx.o
-    0x20010010   0x20003d70   0x00000004   Data   RW          157    .data.VCO_VALUE     system_pt32z192xx.o
-    0x20010014   0x20003d74   0x00000004   PAD
-    0x20010018        -       0x00000054   Zero   RW          968    .bss                c_w.l(stdio_streams.o)
-    0x2001006c        -       0x00000054   Zero   RW          969    .bss                c_w.l(stdio_streams.o)
-    0x200100c0        -       0x00000054   Zero   RW          970    .bss                c_w.l(stdio_streams.o)
-    0x20010114        -       0x00000060   Zero   RW         1157    .bss                c_w.l(libspace.o)
-    0x20010174        -       0x00000011   Zero   RW          879    .bss..L_MergedGlobals  segger_rtt.o
-    0x20010185   0x20003d74   0x00000003   PAD
-    0x20010188        -       0x00000044   Zero   RW          904    .bss..L_MergedGlobals  segger_hardfaulthandler.o
+    0x20010000   0x20003e10   0x00000004   Data   RW         1087    .data               c_w.l(stdio_streams.o)
+    0x20010004   0x20003e14   0x00000004   Data   RW         1088    .data               c_w.l(stdio_streams.o)
+    0x20010008   0x20003e18   0x00000004   Data   RW         1089    .data               c_w.l(stdio_streams.o)
+    0x2001000c   0x20003e1c   0x00000004   Data   RW          161    .data.SystemCoreClock  system_pt32z192xx.o
+    0x20010010   0x20003e20   0x00000004   Data   RW          162    .data.VCO_VALUE     system_pt32z192xx.o
+    0x20010014   0x20003e24   0x00000004   PAD
+    0x20010018        -       0x00000054   Zero   RW         1084    .bss                c_w.l(stdio_streams.o)
+    0x2001006c        -       0x00000054   Zero   RW         1085    .bss                c_w.l(stdio_streams.o)
+    0x200100c0        -       0x00000054   Zero   RW         1086    .bss                c_w.l(stdio_streams.o)
+    0x20010114        -       0x00000060   Zero   RW         1234    .bss                c_w.l(libspace.o)
+    0x20010174        -       0x00000011   Zero   RW          884    .bss..L_MergedGlobals  segger_rtt.o
+    0x20010185   0x20003e24   0x00000003   PAD
+    0x20010188        -       0x00000044   Zero   RW          909    .bss..L_MergedGlobals  segger_hardfaulthandler.o
     0x200101cc        -       0x00000004   Zero   RW            8    .bss.SYSCLK         dwtdelay.o
     0x200101d0        -       0x00000004   Zero   RW           25    .bss.TimingDelay    app.o
-    0x200101d4        -       0x000000a8   Zero   RW          875    .bss._SEGGER_RTT    segger_rtt.o
-    0x2001027c        -       0x00000400   Zero   RW          878    .bss._acUpBuffer    segger_rtt.o
-    0x2001067c        -       0x00000004   Zero   RW           30    .bss.key_flag       app.o
-    0x20010680        -       0x00001000   Zero   RW           26    .bss.lBufInArray    app.o
-    0x20011680        -       0x00000800   Zero   RW           27    .bss.lBufOutArray   app.o
-    0x20011e80        -       0x00000002   Zero   RW           69    .bss.m_AdcValue     main.o
-    0x20011e82   0x20003d74   0x00000002   PAD
-    0x20011e84        -       0x00000004   Zero   RW           31    .bss.timeval        app.o
-    0x20011e88        -       0x00000300   Zero   RW          165    HEAP                startup_pt32z192.o
-    0x20012188        -       0x00008000   Zero   RW          164    STACK               startup_pt32z192.o
+    0x200101d4        -       0x000000a8   Zero   RW          880    .bss._SEGGER_RTT    segger_rtt.o
+    0x2001027c        -       0x00000004   Zero   RW         1111    .bss.__cxa_new_handler  libcppabi_w.l(cxa_handlers.cpp.o)
+    0x20010280        -       0x00000400   Zero   RW          883    .bss._acUpBuffer    segger_rtt.o
+    0x20010680        -       0x00000004   Zero   RW           30    .bss.key_flag       app.o
+    0x20010684        -       0x00001000   Zero   RW           26    .bss.lBufInArray    app.o
+    0x20011684        -       0x00000800   Zero   RW           27    .bss.lBufOutArray   app.o
+    0x20011e84        -       0x00000002   Zero   RW           74    .bss.m_AdcValue     main.o
+    0x20011e86   0x20003e24   0x00000002   PAD
+    0x20011e88        -       0x00000004   Zero   RW           31    .bss.timeval        app.o
+    0x20011e8c   0x20003e24   0x00000004   PAD
+    0x20011e90        -       0x00000300   Zero   RW          170    HEAP                startup_pt32z192.o
+    0x20012190        -       0x00008000   Zero   RW          169    STACK               startup_pt32z192.o
 
 
 ==============================================================================
@@ -904,11 +937,11 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
        400         36          0          0       6156       9498   app.o
-        52         40          0          0          0       7791   box.o
+       116         72          0          0          0       8230   box.o
       4576       4080          0          0          0        316   cr4_fft_1024_stm32.o
         56          0          0          0          4       1161   dwtdelay.o
         18          0          0          0          0        308   hardfaulthandler.o
-      1100        108         97          0          2      15265   main.o
+      1148        108         97          0          2      15332   main.o
        108          0          0          0          0       3551   pt32z192xx_adc.o
        204          0          0          0          0       5414   pt32z192xx_dma.o
        190          6          0          0          0       7362   pt32z192xx_gpio.o
@@ -921,13 +954,13 @@ Image component sizes
        168          0          0          0         68       2751   segger_hardfaulthandler.o
        666          0          9          0       1209      29959   segger_rtt.o
       3092        746          0          0          0       9882   segger_rtt_printf.o
-        80         36        304          0      33536        828   startup_pt32z192.o
+        88         40        304          0      33536        832   startup_pt32z192.o
        384          0          0          8          0       2262   system_pt32z192xx.o
 
     ----------------------------------------------------------------------
-     12042       5100        442          8      40984     121085   Object Totals
+     12162       5136        442          8      40988     121595   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        72          0          0          0          9          0   (incl. Padding)
+        72          0          0          0         13          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -993,19 +1026,23 @@ Image component sizes
         74          0          0          0          0         80   sys_stackheap_outer.o
         14          0          0          0          0         76   sys_wrch.o
          2          0          0          0          0         68   use_no_semi.o
+        42          0          0          0          0        380   new.cpp.o
+        12          0          0          0          4        148   cxa_handlers.cpp.o
 
     ----------------------------------------------------------------------
-      3216        214         12         12        348       3756   Library Totals
-         6          0          0          0          0          0   (incl. Padding)
+      3272        214         12         12        352       4284   Library Totals
+         8          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
 
       3210        214         12         12        348       3756   c_w.l
+        42          0          0          0          0        380   libcpp_w.l
+        12          0          0          0          4        148   libcppabi_w.l
 
     ----------------------------------------------------------------------
-      3216        214         12         12        348       3756   Library Totals
+      3272        214         12         12        352       4284   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -1014,15 +1051,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     15258       5314        454         20      41332     122593   Grand Totals
-     15258       5314        454         20      41332     122593   ELF Image Totals
-     15258       5314        454         20          0          0   ROM Totals
+     15434       5350        454         20      41340     123591   Grand Totals
+     15434       5350        454         20      41340     123591   ELF Image Totals
+     15434       5350        454         20          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                15712 (  15.34kB)
-    Total RW  Size (RW Data + ZI Data)             41352 (  40.38kB)
-    Total ROM Size (Code + RO Data + RW Data)      15732 (  15.36kB)
+    Total RO  Size (Code + RO Data)                15888 (  15.52kB)
+    Total RW  Size (RW Data + ZI Data)             41360 (  40.39kB)
+    Total ROM Size (Code + RO Data + RW Data)      15908 (  15.54kB)
 
 ==============================================================================
 

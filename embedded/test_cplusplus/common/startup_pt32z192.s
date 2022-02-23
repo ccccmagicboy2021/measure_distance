@@ -122,6 +122,7 @@ __Vectors_Size  EQU  __Vectors_End - __Vectors
 Reset_Handler       PROC
                     EXPORT  Reset_Handler                   [WEAK]
                     IMPORT  SystemInit
+                    IMPORT  UART_Config
                     IMPORT  __main
 
 					LDR     R0, =SystemInit
@@ -130,6 +131,9 @@ Reset_Handler       PROC
                     LDR     R0, =0x4000F800
                     LDR		R1, =0xA5A500F0
                     STR     R1, [R0]
+                    
+                    LDR     R0, =UART_Config
+                    BLX     R0
                     
                     LDR     R0, =__main
                     BX      R0

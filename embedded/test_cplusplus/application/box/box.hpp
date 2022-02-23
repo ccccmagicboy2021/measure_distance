@@ -10,6 +10,8 @@ class Box {
 		int width;
 		
 	public:
+        Box(void);
+        ~Box(void);
 		void print_size(void);
 		
 		
