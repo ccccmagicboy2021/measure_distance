@@ -159,7 +159,7 @@
 #define HCLK_SRC                      (2)     /*!< 0: IOCS_24M, 1: EXT_CLK,  2:PLL_CLK                           */
 #define PCLK_DIV_ENABLE               (1)     /*!< 0: DISABLE,  1: ENABLE                                        */
 #define PCLK_DIV                      (0)     /*!< 1~7                                                           */  
-#define WAIT_STATE                    (7)     /*!< 0: 0 WS, 1: 1 WS, 2: 2 WS, 3:3WS, 4:4WS, 5:5WS, 6:6WS, 7:7WS  */
+#define WAIT_STATE                    (5)     /*!< 0: 0 WS, 1: 1 WS, 2: 2 WS, 3:3WS, 4:4WS, 5:5WS, 6:6WS, 7:7WS  */
 
                                                  
 /** @addtogroup PT32F0xx_System_Private_Variables       

@@ -4657,7 +4657,7 @@
         0x00003266:    f1b13fff    ...?    CMP      r1,#0xffffffff
         0x0000326a:    dcf1        ..      BGT      0x3250 ; SystemInit + 92
         0x0000326c:    f64f0200    O...    MOVW     r2,#0xf800
-        0x00003270:    23f0        .#      MOVS     r3,#0xf0
+        0x00003270:    23b0        .#      MOVS     r3,#0xb0
         0x00003272:    f2c40200    ....    MOVT     r2,#0x4000
         0x00003276:    f2ca53a5    ...S    MOVT     r3,#0xa5a5
         0x0000327a:    f04f0c00    O...    MOV      r12,#0
@@ -5473,8 +5473,8 @@
         0x00003a8e:    f04f0900    O...    MOV      r9,#0
         0x00003a92:    f7fefe7d    ..}.    BL       SEGGER_RTT_printf ; 0x2790
         0x00003a96:    f64351ae    C..Q    MOV      r1,#0x3dae
-        0x00003a9a:    f64352f6    C..R    MOV      r2,#0x3df6
-        0x00003a9e:    f64353ed    C..S    MOV      r3,#0x3ded
+        0x00003a9a:    f64352ed    C..R    MOV      r2,#0x3ded
+        0x00003a9e:    f64353f9    C..S    MOV      r3,#0x3df9
         0x00003aa2:    f2c00100    ....    MOVT     r1,#0
         0x00003aa6:    f2c00200    ....    MOVT     r2,#0
         0x00003aaa:    f2c00300    ....    MOVT     r3,#0
@@ -5762,15 +5762,15 @@
         0x00003de7:    25          %       DCB    37
         0x00003de8:    20583230    02X     DCD    542650928
         0x00003dec:    00          .       DCB    0
-    .L.str.5
-        0x00003ded:    31343a      14:     DCB    49,52,58
-        0x00003df0:    353a3435    54:5    DCD    893006901
-        0x00003df4:    0031        1.      DCW    49
     .L.str.4
-        0x00003df6:    6546        Fe      DCW    25926
-        0x00003df8:    33322062    b 23    DCD    858923106
-        0x00003dfc:    32303220     202    DCD    842019360
-        0x00003e00:    0032        2.      DCW    50
+        0x00003ded:    466562      Feb     DCB    70,101,98
+        0x00003df0:    20333220     23     DCD    540226080
+        0x00003df4:    32323032    2022    DCD    842149938
+        0x00003df8:    00          .       DCB    0
+    .L.str.5
+        0x00003df9:    31353a      15:     DCB    49,53,58
+        0x00003dfc:    343a3630    06:4    DCD    876230192
+        0x00003e00:    0033        3.      DCW    51
     .L.str.2
         0x00003e02:    5b1b        .[      DCW    23323
         0x00003e04:    6d30        0m      DCW    27952
