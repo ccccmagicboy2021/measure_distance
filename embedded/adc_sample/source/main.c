@@ -1,16 +1,21 @@
 #include "sys.h"
 
+void setup()
+{
+    // put your setup code here, to run once:
+    init_all();
+}
+
+void loop()
+{
+    // put your main code here, to run repeatedly:
+    app();
+}
+
 int main(void)
 {
-    bsp_init();
-    shell_init();                   //nr_micro_shell initial
-    
-	while(1)
-	{
-        EventStartA(1);
-		app();      //app
-        EventStopA(1);
-    }
+    setup();
+    for(;;)loop();
 }
 
 

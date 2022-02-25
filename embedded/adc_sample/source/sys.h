@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include <stdio.h>
+#include <string.h>
 
 #include "pt32z192xx.h"
 #include "pt32z192xx_conf.h"
@@ -15,6 +16,8 @@
 #include "nr_micro_shell.h"
 
 #include "EventRecorder.h"
+
+#include "fifo.h"
 
 typedef int32_t  s32;
 typedef int16_t s16;
@@ -156,6 +159,14 @@ do \
                     
 uint16_t SERIAL_PutChar(uint8_t ch);
 uint16_t SERIAL_GetChar(void);
+
+enum app_state
+{
+	UART_SEND_DATA=0,
+	IDLE,
+	UART_PROTOCOL,
+	ERROR_ERROR,
+};
 
 #endif//_7090986F_63F7_4B1A_92CE_B3C5BE86422C_
 

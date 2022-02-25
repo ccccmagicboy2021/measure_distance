@@ -1,33 +1,48 @@
 #include "app.h"
 #include "sys.h"
 
-__IO uint32_t   TimingDelay;
-extern volatile uint16_t m_AdcValue;
-
-//#define NPT 256 //sample number
-#define NPT 1024 //sample number
-uint32_t lBufInArray[NPT];  //fft input
-uint32_t lBufOutArray[NPT/2];   //fft output
-uint32_t lBufMagArray[NPT/2];   //fft mag
-
-unsigned short adc_val;
 volatile uint32_t key_flag;
 
-volatile long timeval;
-
-void Delay_ms(__IO uint32_t nTime)
-{ 
-	TimingDelay = nTime;	
-
-		/* 使能SYSTIC计数器 */  
-	SysTick->CTRL |=  SysTick_CTRL_ENABLE_Msk;
-
-	while(TimingDelay != 0);
+//////////global var here///////////////////////
+char JS_RTT_UpBuffer[2048*4*2];		//2k sample 4bytes single item 2s raw data
+volatile enum app_state state = UART_SEND_DATA;	//状态机变量
+volatile enum app_state next_state = UART_SEND_DATA;	//状态机变量的下一个状态
+////////////////////////////////////////////////
+void error_process(void)
+{
+	//do some print
+	CV_LOG("error!!!\r\n");
+    printf("error!!!\r\n");
 }
 
-int get_tick(void)
+void uart_post_process(void)
 {
-    return  timeval;
+	//
+	state = next_state;
+}
+
+void idle_process(void)
+{
+	static uint32_t last_tick = 0;
+	uint32_t now_tick = 0;
+	uint32_t diff = 0;
+	
+	//
+	state = UART_PROTOCOL;
+}
+
+void sent_sample_data(void)
+{
+	FIFO_DataType tempData[BLOCK_TRANSFER_SIZE];
+	
+	memset(tempData, 0, BLOCK_TRANSFER_SIZE * sizeof(FIFO_DataType));
+	
+	//read fifo
+	if(BLOCK_TRANSFER_SIZE < FIFO_GetDataCount(&FIFO_Data[0]))
+	{
+		FIFO_ReadData(&FIFO_Data[0], tempData, BLOCK_TRANSFER_SIZE);
+		SEGGER_RTT_Write(1, tempData, sizeof(tempData));
+	}
 }
 
 void app(void)
@@ -40,6 +55,29 @@ void app(void)
     {
 		//
     }
+    
+	switch (state)
+	{
+		case	UART_SEND_DATA:
+			//start_tick = SysTick_GetTick();
+			sent_sample_data();
+			//finish_tick = SysTick_GetTick();
+			//CV_LOG("%s - sent_sample_data: %d ms\r\n", __FUNCTION__, finish_tick - start_tick);
+			break;
+		case	UART_PROTOCOL:
+			//bt_uart_service();
+			uart_post_process();
+			break;
+		case	IDLE:
+			idle_process();
+			break;
+		case	ERROR_ERROR:
+			error_process();
+			break;
+		default:
+			error_process();
+			break;
+	}
 }
 
 

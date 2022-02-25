@@ -116,7 +116,14 @@ void _shell_init(shell_st *shell)
         shell_printf("\r\n\x1b[0m");
         shell_printf("\x1b[37;1mBuild:       "__DATE__" "__TIME__"\r\n\x1b[0m");
         shell_printf("Version:     "APP_VERSION"\r\n");
-        shell_printf("Copyright:   2022 haha\r\n");
+        shell_printf("Copyright:   2022 beta\r\n");
+    #ifdef VECT_TAB_SRAM
+        CV_LOG("ramcode program\r\n");
+        shell_printf("ramcode program\r\n");
+    #else
+        CV_LOG("flashcode program\r\n");
+        shell_printf("%sflashcode%s program\r\n", RTT_CTRL_BG_BRIGHT_RED, RTT_CTRL_RESET);
+    #endif
 #endif
 
 	shell_printf("%s",shell->user_name);

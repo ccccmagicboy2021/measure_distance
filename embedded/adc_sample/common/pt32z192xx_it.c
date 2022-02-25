@@ -299,9 +299,22 @@ void LED_Handler(void)
   */
 void TMR0_Handler(void)
 {
+    FIFO_DataType adc_value;
+    
 	if (PWM_GetFlagStatus(PWM0, PWM_FLAG_MR4) != RESET)
  	{	
-        //CV_LOG("adc raw: %04d\r\n", m_AdcValue);
+        adc_value.Val1 = m_AdcValue;	//if
+					
+		if (0 == GPIO_ReadInputDataBit(PWM0_CH4_GPIO_Port, PWM0_CH4_Pin))
+		{
+			adc_value.Val3 = 0;
+		}
+		else
+		{
+			adc_value.Val3 = 1;
+		}
+		FIFO_WriteOneData(&FIFO_Data[0], adc_value);        
+        
         PWM_ClearFlag(PWM0, PWM_FLAG_MR4); //clear
 	}
 }

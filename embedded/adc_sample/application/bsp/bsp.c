@@ -3,30 +3,56 @@
 #include "sys.h"
 
 volatile uint16_t m_AdcValue;
+__IO uint32_t   TimingDelay;
+volatile long timeval;
+extern char JS_RTT_UpBuffer[2048*4*2];		//2k sample 4bytes single item 2s raw data
+
+void memory_init(void)
+{
+	while (1 != FIFO_IsDataEmpty(&FIFO_Data[0]))
+	{
+		CV_LOG("fifo0 number useless: %d\r\n", FIFO_GetDataCount(&FIFO_Data[0]));	
+		//FIFO_ReadData(&FIFO_Data[0], &Fast_detection_data[0], 2000);
+		CV_LOG("fifo0 number useless: %d\r\n", FIFO_GetDataCount(&FIFO_Data[0]));
+	}
+	FIFO_Init(&FIFO_Data[0]);
+    
+	//clear fifo
+	memset(&FIFO_DataBuffer[0], 0, FIFO_DATA_NUM * FIFO_DATA_SIZE * sizeof(FIFO_DataType));
+}
+
+void usart_init(void)
+{
+    UART_INT_Config();
+    UART_Config();
+}
 
 void bsp_init(void)
 {
+    //enable rtt
     segger_init();
+    //memory
+    memory_init();
+    //uuid
+    read_uid();
+    //uart
+    usart_init();
+    //gpio
     LED_GPIO_Config();
     switch_gpio_config();
-    UART_INT_Config();
-    UART_Config();
-    adc_initial();
-    DMA_config();
+    //pwm
     PWM_Mode_Config();
-    read_uid();
+    //adc
+    adc_initial();
+    //dma
+    DMA_config();
+    //systick
     SysTick_Init(SYSTICK_1MS);      //for systick irq
-    
+    //eventrecorder
 	EventRecorderInitialize(EventRecordAll, 1U); 
 	EventRecorderStart();
-    
-#ifdef VECT_TAB_SRAM
-    CV_LOG("ramcode program begin...\r\n");
-    printf("ramcode program begin...\r\n");
-#else
-    CV_LOG("flashcode program begin...\r\n");
-    printf("flashcode program begin...\r\n");
-#endif
+    //shell
+    shell_init();                   //nr_micro_shell initial
 }
 
 void PWM_Mode_Config(void)
@@ -120,6 +146,8 @@ void adc_initial(void)
 
 void segger_init(void)
 {
+	SEGGER_RTT_ConfigUpBuffer(1, "JScope_U2U2", &JS_RTT_UpBuffer[0], sizeof(JS_RTT_UpBuffer), SEGGER_RTT_MODE_NO_BLOCK_SKIP);
+    
 	SEGGER_RTT_Init();
 	CV_LOG("%sRADAR MODULE: PT32Z192 ADC_SAMPLE DEMO%s\r\n", RTT_CTRL_BG_BRIGHT_RED, RTT_CTRL_RESET);
 	CV_LOG("compiled time: %s %s\r\n", __DATE__, __TIME__);
@@ -226,4 +254,22 @@ void read_uid(void)
 	CV_LOG("%s\r\n", RTT_CTRL_RESET);
 }
 
+void init_all(void)
+{
+    bsp_init();
+}
 
+void Delay_ms(__IO uint32_t nTime)
+{ 
+	TimingDelay = nTime;	
+
+		/* 使能SYSTIC计数器 */  
+	SysTick->CTRL |=  SysTick_CTRL_ENABLE_Msk;
+
+	while(TimingDelay != 0);
+}
+
+int get_tick(void)
+{
+    return  timeval;
+}

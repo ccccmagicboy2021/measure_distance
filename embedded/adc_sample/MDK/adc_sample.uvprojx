@@ -996,7 +996,7 @@
               <MiscControls></MiscControls>
               <Define>PT32Z192,VECT_TAB_SRAM,MSC_CLOCK</Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt;..\application\dhrystone;..\application\fft;..\application\nr_micro_shell;..\application\bsp;..\application\EventRecorder</IncludePath>
+              <IncludePath>..\application\app;..\source;..\driver\inc;..\common;..\cmsis;..\application\rtt;..\application\dhrystone;..\application\fft;..\application\nr_micro_shell;..\application\bsp;..\application\EventRecorder;..\application\fifo</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>

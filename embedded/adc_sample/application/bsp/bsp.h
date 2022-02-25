@@ -53,6 +53,7 @@ void SysTick_Init(uint32_t NUM);
 void read_uid(void);
 void DMA_config(void);
 void PWM_Mode_Config(void);
+void init_all(void);
 
 
 
