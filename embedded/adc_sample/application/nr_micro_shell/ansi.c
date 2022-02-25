@@ -113,6 +113,11 @@ void ansi_clear_current_line(ansi_st *ansi)
 char ansi_get_char(char x, ansi_st *ansi)
 {
     int cmd_id = -1;
+    
+    if (x == 0x7F)
+    {
+        x = 0x08;
+    }
 
     if (ansi->combine_state == ANSI_NO_CTRL_CHAR)
     {
