@@ -1,0 +1,12 @@
+usb
+si 1
+speed 25000
+device PT32Z192XX
+r
+h
+loadbin .\MDK\bin\flashcode.bin 0x0000
+r
+g
+qc
+
+

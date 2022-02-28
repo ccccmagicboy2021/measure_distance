@@ -1,0 +1,10 @@
+usb
+si swd
+device PT32Z192XX
+speed 25000
+r
+h
+go
+qc
+
+

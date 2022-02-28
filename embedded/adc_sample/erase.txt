@@ -1,0 +1,11 @@
+usb
+si swd
+device PT32Z192XX
+speed 25000
+r
+h
+erase chip
+go
+qc
+
+

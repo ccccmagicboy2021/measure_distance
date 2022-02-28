@@ -118,10 +118,10 @@ void _shell_init(shell_st *shell)
         shell_printf("Version:     "APP_VERSION"\r\n");
         shell_printf("Copyright:   2022 beta\r\n");
     #ifdef VECT_TAB_SRAM
-        CV_LOG("ramcode program\r\n");
+        CV_LOG("%sramcode%s program\r\n", RTT_CTRL_BG_BRIGHT_BLUE, RTT_CTRL_RESET);
         shell_printf("%sramcode%s program\r\n", RTT_CTRL_BG_BRIGHT_BLUE, RTT_CTRL_RESET);
     #else
-        CV_LOG("flashcode program\r\n");
+        CV_LOG("%sflashcode%s program\r\n", RTT_CTRL_BG_BRIGHT_RED, RTT_CTRL_RESET);
         shell_printf("%sflashcode%s program\r\n", RTT_CTRL_BG_BRIGHT_RED, RTT_CTRL_RESET);
     #endif
 #endif
