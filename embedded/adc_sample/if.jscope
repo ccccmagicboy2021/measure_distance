@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<JScopeProject>
+    <FileVersion major="1" minor="1" />
+    <Project>
+        <Configuration>
+            <JLink>
+                <Options Connection="1" IsRTTSession="1" IsRTTWithTimeStamp="0" SamplingPeriod="100" SerialNo="0" JTAG_IRPre="0" JTAG_DRPre="0" IP="" TargetDevice="PT32z192xx" TargetInterface="SWD" InterfaceSpeed="4000" />
+            </JLink>
+            <ElfFile Name="" />
+            <Scope>
+                <Options TimeResolutionUs="1000000" />
+            </Scope>
+        </Configuration>
+        <Windows>
+            <Graph Show="1" />
+            <Watch Show="1" />
+        </Windows>
+        <SelectedSymbols>
+            <Symbol>
+                <Options Name="2 Byte unsigned RTT Data" Address="0x00000000" Type="" TypeID="7" Size="2" GraphColorRed="255" GraphColorGreen="0" GraphColorBlue="0" YMinSampled="4" YMaxSampled="4095" YAvgSampled="2084.81" Offset="0" ShowInGraph="1" ACCoupling="0" YOffset="0" IsAutoConfig="0" YResolution="2000" MaxValue="0" File="" Scope="1" DrawStyle="0" />
+            </Symbol>
+            <Symbol>
+                <Options Name="2 Byte unsigned RTT Data" Address="0x00000000" Type="" TypeID="7" Size="2" GraphColorRed="0" GraphColorGreen="0" GraphColorBlue="255" YMinSampled="0" YMaxSampled="1" YAvgSampled="0.499995" Offset="2" ShowInGraph="1" ACCoupling="0" YOffset="0" IsAutoConfig="0" YResolution="1" MaxValue="0" File="" Scope="1" DrawStyle="0" />
+            </Symbol>
+        </SelectedSymbols>
+    </Project>
+</JScopeProject>
