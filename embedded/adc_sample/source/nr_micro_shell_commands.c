@@ -185,16 +185,37 @@ void shell_hexdump_cmd(char argc, char *argv)
     }
 }
 
+void shell_quit_cmd(char argc, char *argv)
+{
+	unsigned int i;
+    
+	for (i = 0; i < argc; i++)
+	{
+		shell_printf("paras %d: %s\r\n", i, &(argv[argv[i]]));
+	}
+    
+    if (1 == argc)
+    {
+        NVIC_SystemReset();
+    }
+    else
+    {
+		shell_printf("useage: quit\r\n");
+    }
+}
+
 #ifdef NR_SHELL_USING_EXPORT_CMD
 NR_SHELL_CMD_EXPORT(ls, shell_ls_cmd);
 NR_SHELL_CMD_EXPORT(test, shell_test_cmd);
-NR_SHELL_CMD_EXPORT(test, shell_hexdump_cmd);
+NR_SHELL_CMD_EXPORT(hexdump, shell_hexdump_cmd);
+NR_SHELL_CMD_EXPORT(quit, shell_quit_cmd);
 #else
 const static_cmd_st static_cmd[] =
 	{
 		{"ls", shell_ls_cmd},
 		{"test", shell_test_cmd},
         {"hexdump", shell_hexdump_cmd},
+        {"quit", shell_quit_cmd},
 		{"\0", NULL}};
 #endif
 
