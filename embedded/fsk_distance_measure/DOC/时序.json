@@ -1,7 +1,8 @@
 {signal: [
   {name: 'TMRA3', wave: 'hlhlhlhlhlhlhlh', phase: 2, period: 1},
-  {name: 'EVT_TMRA3_OVF-->ADC', wave: 'HLHLHLH', phase: 0, period: 2},
+  {name: 'EVT_TMRA3_OVF-->ADC(trigger)', wave: 'HLHLHLH', phase: 0, period: 2},
   {name: 'TimeraCh2(PB5)(output)', wave: 'h.l.h.l.h.l.h.l', phase: 2.0, period: 1},
+  {name: 'ENRF(PB6)(output)', wave: 'h......', phase: 0, period: 2},
   {name: 'ADC1_CH6(PA6)(input)', wave: '3.4.3.4.3.4.3.4', phase: 2.0, period: 1, data: ['IF_H', 'IF_L', 'IF_H', 'IF_L', 'IF_H', 'IF_L', 'IF_H', 'IF_L']},
   {name: 'soft_var_value1', wave: '6...6...6...6.', phase: 0.0, period: 1, data: "D0 D1 D2 D3"},
   {name: 'soft_var_value0', wave: '7.7...7...7...', phase: 0.0, period: 1, data: "D0 D1 D2 D3"}
