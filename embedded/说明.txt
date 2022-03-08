@@ -1,6 +1,6 @@
 .\adc_sample(AC6)(flashcode)(ramcode)
-.\adc_sample_with_pwm-8161-4k
-.\adc_sample_with_pwm8161-512-2K
+.\adc_sample_with_pwm-8161-4k(停更)
+.\adc_sample_with_pwm8161-512-2K(停更)
 都为华大F460单片机的工程
 
 采样程序说明：
@@ -23,6 +23,6 @@ data_pack: 192字节
 .\test_dhrystone(AC6)(flashcode)(ramcode)
 为基准测试例子程序
 
-.\fsk_distance_measure(AC5)(flashcode)(配CD2840ADX)(定点计算)
+.\fsk_distance_measure(AC5)(flashcode)(配CD2840ADX)(定点计算)(更新中)
 
 

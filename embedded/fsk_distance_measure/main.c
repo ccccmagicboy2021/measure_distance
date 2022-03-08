@@ -27,6 +27,9 @@ s16 data_buf[256];
 
 int32_t main(void)
 {
+    float distance_f = 0;
+    float speed_f = 0;
+    
     measure_info_t measure_info = {0};
 
     SysClkInit();
@@ -60,7 +63,11 @@ int32_t main(void)
 #ifndef SEND_TO_MATLAB_TEST
             updata_data.speed = measure_info.speed_abf;
             updata_data.distance = measure_info.distance_abf;
-            all_data_update();
+            //all_data_update();
+            //printf("distance: %ld\r\nspeed: %ld\r\n", updata_data.distance, updata_data.speed);
+            distance_f = (int)updata_data.distance/1024.f;
+            speed_f = (int)updata_data.speed/1024.f;
+            printf("/*CD2840ADX,%.3lf,%.3lf*/", distance_f, speed_f);
 #endif
         }
 #ifndef SEND_TO_MATLAB_TEST

@@ -20,7 +20,7 @@ void alphabeta_filter(int fs, int data_length, measure_info_t *measure_info)
     rk = xm - xk;
 
     measure_info->speed_abf = vk + ((BETA * rvk) >> 15);
-    measure_info->distance_abf = xk + ((ALPHA * rk) >> 15);
+    measure_info->distance_abf = xk + ((ALPHA * rk) >> 15) - (measure_info->speed_abf * data_length / fs);
 
     if (measure_info->distance_abf < 0) {
         measure_info->distance_abf = 0;
