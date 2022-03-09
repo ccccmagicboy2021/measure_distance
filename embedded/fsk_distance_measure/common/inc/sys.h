@@ -21,6 +21,18 @@ typedef const uint32_t uc32;
 typedef const uint16_t uc16;
 typedef const uint8_t uc8;
 
+
+#define TH_1 1.2f
+#define TH_2 1.7f
+
+enum app_state
+{
+	IDLE=0,
+	CLOSE,
+	LEAVE_S0,
+    LEAVE_S1,
+};
+
 #endif
 
 

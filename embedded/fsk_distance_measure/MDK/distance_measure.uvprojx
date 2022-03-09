@@ -339,7 +339,7 @@
               <MiscControls>--diag_suppress=186,66</MiscControls>
               <Define>__DEBUG,HC32F46x,USE_DEVICE_DRIVER_LIB,_CC_ARM,</Define>
               <Undefine></Undefine>
-              <IncludePath>..\MDK;..\driver\inc;..\driver\src;..\dsp\Include;..\app\presense_detection\inc;..\common\inc;..\HAL\inc;..\HAL\mcu_sdk;..\app\distance_measure\inc</IncludePath>
+              <IncludePath>..\MDK;..\driver\inc;..\driver\src;..\dsp\Include;..\app\presense_detection\inc;..\common\inc;..\HAL\inc;..\HAL\mcu_sdk;..\app\distance_measure\inc;..\app\app</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -447,6 +447,11 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>app.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\app\app.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1162,6 +1167,11 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>app.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\app\app.c</FilePath>
             </File>
           </Files>
         </Group>

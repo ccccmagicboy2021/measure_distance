@@ -17,6 +17,7 @@
 #include "mcu_api.h"
 #include "protocol.h"
 #include "led.h"
+#include "app.h"
 
 extern updata_data_t updata_data;
 #endif
@@ -25,10 +26,13 @@ const unsigned char version_num[4] = {0, 0, 2, 0};  // v0.2.0.0
 
 s16 data_buf[256];
 
+int state = IDLE;
+int next_state = IDLE;
+float distance_f = 0;
+float speed_f = 0;
+
 int32_t main(void)
 {
-    float distance_f = 0;
-    float speed_f = 0;
     
     measure_info_t measure_info = {0};
 
@@ -67,8 +71,9 @@ int32_t main(void)
             
             distance_f = (int)updata_data.distance/1024.f;
             speed_f = (int)updata_data.speed/1024.f;
-            printf("/*CD2840ADX,%.3lf,%.3lf*/", distance_f, speed_f);
+            //printf("/*CD2840ADX,%.3lf,%.3lf*/", distance_f, speed_f);
             
+            app();
             
 #endif
         }
