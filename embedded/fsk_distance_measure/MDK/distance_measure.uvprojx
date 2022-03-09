@@ -33,7 +33,7 @@
           <SLE66CMisc></SLE66CMisc>
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
-          <SFDFile>C:\Users\phosense\AppData\Local\Arm\Packs\HDSC\HC32F46x\1.0.5\SVD\HDSC_HC32F460JEUA.SFR</SFDFile>
+          <SFDFile>D:\cccc2020\CODE\workspace\bfsk_8161\embedded\fsk_distance_measure\MDK\HDSC_HC32F46x.SFR</SFDFile>
           <bCustSvd>1</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
