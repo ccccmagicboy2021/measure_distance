@@ -3,6 +3,7 @@
 #include "sys.h"
 #include "app.h"
 #include "hc32_ddl.h"
+#include "math.h"
 
 extern int state;
 extern int next_state;
@@ -85,7 +86,17 @@ void idle_process(void)
     {
         if (0 > speed_f)
         {
-            state = LEAVE_S0;
+            if (SPEED_LIMIT2 > fabs(speed_f))
+            {
+                if (MAG_LIMIT2 < mag_f)
+                    state = LEAVE_S0;
+                else
+                    state = IDLE;
+            }
+            else
+            {
+                state = IDLE;
+            }
         }
     }
     
@@ -99,17 +110,7 @@ void idle_process(void)
             leave_en = false;
             
             diff_tick = 0;
-            if (SPEED_LIMIT2 > speed_f)
-            {
-                if (MAG_LIMIT2 < mag_f)
-                    state = LEAVE_S1;
-                else
-                    state = IDLE;
-            }
-            else
-            {
-                state = IDLE;
-            }
+            state = LEAVE_S1;
         }
     }
     else
