@@ -2,6 +2,7 @@
 
 #include "sys.h"
 #include "app.h"
+#include "hc32_ddl.h"
 
 extern int state;
 extern int next_state;
@@ -9,6 +10,24 @@ extern float distance_f;
 extern float speed_f;
 
 extern void uart_transmit_output(unsigned char value);
+
+int leave_timer = 0;
+
+uint32_t start_tick = 0;
+uint32_t now_tick = 0;
+uint32_t diff_tick = 0;
+uint32_t leave_en = false;
+
+void tick_init(void)
+{
+	NVIC_SetPriority(SysTick_IRQn, DDL_IRQ_PRIORITY_15);
+	SysTick_Init(1000u);//1ms
+}
+
+void SysTick_IrqHandler(void)
+{
+    SysTick_IncTick();
+}
 
 void close_process(void)
 {
@@ -19,41 +38,63 @@ void close_process(void)
     uart_transmit_output(0xEE);
     uart_transmit_output(0x11);
     state = IDLE;
+    leave_en = false;
 }
 
 void leave_s0(void)
 {
-    uart_transmit_output(0xDE);
-    uart_transmit_output(0x21);
-    uart_transmit_output(0xDE);
-    uart_transmit_output(0x21);
-    uart_transmit_output(0xDE);
-    uart_transmit_output(0x21);
+    start_tick = SysTick_GetTick();
+    leave_en = true;
+    diff_tick = 0;
     state = IDLE;
 }
 
 void leave_s1(void)
 {
-
+    uart_transmit_output(0xDE);
+    uart_transmit_output(0x21);
+    uart_transmit_output(0xDE);
+    uart_transmit_output(0x21);
+    uart_transmit_output(0xDE);
+    uart_transmit_output(0x21);
+    
     state = IDLE;
 }
 
 void idle_process(void)
-{
+{    
     if (TH_1 >= distance_f)
     {
-        if (0 <= speed_f)
+        if (0 < speed_f)
         {
             state = CLOSE;
         }
     }
     else if (TH_2 >= distance_f)
     {
-        if (0 == speed_f)
+        if (0 > speed_f)
         {
             state = LEAVE_S0;
         }
     }
+    
+    if (leave_en == true)
+    {
+        now_tick = SysTick_GetTick();
+        diff_tick = now_tick - start_tick;
+        
+        if (diff_tick > LEAVING_TIMEOUT)
+        {
+            leave_en = false;
+            state = LEAVE_S1;
+            diff_tick = 0;
+        }
+    }
+    else
+    {
+        diff_tick = 0;
+    }
+    
 }
 
 void app(void)

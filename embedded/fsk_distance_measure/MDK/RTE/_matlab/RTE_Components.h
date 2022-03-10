@@ -4,7 +4,7 @@
  *      *** Do not modify ! ***
  *
  * Project: 'distance_measure' 
- * Target:  'presense_detection_Debug' 
+ * Target:  'matlab' 
  */
 
 #ifndef RTE_COMPONENTS_H

@@ -27,9 +27,11 @@ const unsigned char version_num[4] = {0, 0, 2, 0};  // v0.2.0.0
 s16 data_buf[256];
 
 int state = IDLE;
-int next_state = IDLE;
 float distance_f = 0;
 float speed_f = 0;
+extern void tick_init(void);
+
+extern uint32_t diff_tick;
 
 int32_t main(void)
 {
@@ -52,6 +54,7 @@ int32_t main(void)
     test_usart_init();
 #else
     usart_init();
+    tick_init();
 #endif
 
 #ifndef SEND_TO_MATLAB_TEST
@@ -71,7 +74,7 @@ int32_t main(void)
             
             distance_f = (int)updata_data.distance/1024.f;
             speed_f = (int)updata_data.speed/1024.f;
-            //printf("/*CD2840ADX,%.3lf,%.3lf*/", distance_f, speed_f);
+            printf("/*CD2840ADX,%.3lf,%.3lf,%d,%d*/", distance_f, speed_f, state, diff_tick);
             
             app();
             
