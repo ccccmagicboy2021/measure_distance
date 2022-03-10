@@ -67,7 +67,14 @@ void idle_process(void)
     {
         if (0 < speed_f)
         {
-            state = CLOSE;
+            if (SPEED_LIMIT1 > speed_f)
+            {
+                state = CLOSE;
+            }
+            else
+            {
+                state = IDLE;
+            }
         }
     }
     else if (TH_2 >= distance_f)
@@ -86,8 +93,16 @@ void idle_process(void)
         if (diff_tick > LEAVING_TIMEOUT)
         {
             leave_en = false;
-            state = LEAVE_S1;
+            
             diff_tick = 0;
+            if (SPEED_LIMIT2 > speed_f)
+            {
+                state = LEAVE_S1;
+            }
+            else
+            {
+                state = IDLE;
+            }
         }
     }
     else

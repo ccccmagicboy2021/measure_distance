@@ -22,9 +22,11 @@ typedef const uint16_t uc16;
 typedef const uint8_t uc8;
 
 
-#define TH_1 1.3f
-#define TH_2 (TH_1 + 0.2f)
-#define LEAVING_TIMEOUT 5000u
+#define TH_1 1.3f                   //unit: meter
+#define TH_2 (TH_1 + 0.2f)          //unit: meter
+#define LEAVING_TIMEOUT 5000u       //unit: ms
+#define SPEED_LIMIT1 2.0f           //unit: meter/s
+#define SPEED_LIMIT2 2.0f           //unit: meter/s
 
 enum app_state
 {
