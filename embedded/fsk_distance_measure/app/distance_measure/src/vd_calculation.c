@@ -127,6 +127,10 @@ int vd_calculation(s16 *data_cumulation_1, int len1, s16 *data_cumulation_2, int
     measure_info->distance = ((delta_phi_correct * 4072) >> 15);
     // <<10
     // 4072 = (((float)LIGHT_SPEED) / (4 * PI * FREQ_OFFSET)) << 10
+    if (M2 > M1)
+        measure_info->max_amplitude = M2>>18;
+    else
+        measure_info->max_amplitude = M1>>18;
 
 exit:
     free_mem(magnitude2);

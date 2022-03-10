@@ -27,6 +27,8 @@ typedef const uint8_t uc8;
 #define LEAVING_TIMEOUT 5000u       //unit: ms
 #define SPEED_LIMIT1 2.0f           //unit: meter/s
 #define SPEED_LIMIT2 2.0f           //unit: meter/s
+#define MAG_LIMIT1 5u              //unit: no
+#define MAG_LIMIT2 10u              //unit: no
 
 enum app_state
 {

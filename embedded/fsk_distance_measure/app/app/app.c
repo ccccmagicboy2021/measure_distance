@@ -8,6 +8,7 @@ extern int state;
 extern int next_state;
 extern float distance_f;
 extern float speed_f;
+extern uint32_t mag_f;
 
 extern void uart_transmit_output(unsigned char value);
 
@@ -69,7 +70,10 @@ void idle_process(void)
         {
             if (SPEED_LIMIT1 > speed_f)
             {
-                state = CLOSE;
+                if (MAG_LIMIT1 < mag_f)
+                    state = CLOSE;
+                else
+                    state = IDLE;
             }
             else
             {
@@ -97,7 +101,10 @@ void idle_process(void)
             diff_tick = 0;
             if (SPEED_LIMIT2 > speed_f)
             {
-                state = LEAVE_S1;
+                if (MAG_LIMIT2 < mag_f)
+                    state = LEAVE_S1;
+                else
+                    state = IDLE;
             }
             else
             {

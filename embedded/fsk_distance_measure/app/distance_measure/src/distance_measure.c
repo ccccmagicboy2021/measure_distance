@@ -75,6 +75,7 @@ int measure_distance(s16 *data, measure_info_t *measure_info)
     else
     {
         measure_info->speed_abf = 0;
+        measure_info->max_amplitude = 0;
     }
 
 exit:

@@ -8,6 +8,7 @@ typedef struct {
 	s32 speed_abf;
 	s32 distance_abf;
 	s32 distance_abf_comp;
+    s32 max_amplitude;
 } measure_info_t;
 int measure_distance(short *data, measure_info_t *measure_info);
 
