@@ -77,7 +77,7 @@ int32_t main(void)
             distance_f = (int)updata_data.distance/1024.f;
             speed_f = (int)updata_data.speed/1024.f;
             mag_f = measure_info.max_amplitude;
-            printf("/*CD2840ADX,%.3lf,%.3lf,%d,%d,%d*/", distance_f, speed_f, state, diff_tick, mag_f);
+            //printf("/*CD2840ADX,%.3lf,%.3lf,%d,%d,%d*/", distance_f, speed_f, state, diff_tick, mag_f);
             
             app();
             
