@@ -21,9 +21,11 @@ typedef const uint32_t uc32;
 typedef const uint16_t uc16;
 typedef const uint8_t uc8;
 
+//close: 1.2-1.5m: 1.5
+//close: 0.9-1.2m: 1.2
 
-#define TH_1 1.3f                   //unit: meter
-#define TH_2 (TH_1 + 0.2f)          //unit: meter
+#define TH_1 1.5f                   //unit: meter
+#define TH_2 (TH_1 + 0.3f)          //unit: meter
 #define LEAVING_TIMEOUT 5000u       //unit: ms
 #define SPEED_LIMIT1 2.0f           //unit: meter/s
 #define SPEED_LIMIT2 2.0f           //unit: meter/s

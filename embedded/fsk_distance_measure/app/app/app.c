@@ -33,6 +33,9 @@ void SysTick_IrqHandler(void)
 
 void close_process(void)
 {
+	PORT_SetBits(PortA, Pin01);
+	PORT_ResetBits(PortA, Pin05);
+    
     uart_transmit_output(0xEE);
     uart_transmit_output(0x11);
     uart_transmit_output(0xEE);
@@ -53,6 +56,9 @@ void leave_s0(void)
 
 void leave_s1(void)
 {
+	PORT_ResetBits(PortA, Pin01);
+	PORT_SetBits(PortA, Pin05);
+    
     uart_transmit_output(0xDE);
     uart_transmit_output(0x21);
     uart_transmit_output(0xDE);
