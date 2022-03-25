@@ -1,5 +1,11 @@
 #include "sys.h"
 
+#define CH2840ADX
+
+#ifdef CH2840ADX
+#define USE_UART3
+#endif
+
 #define PORT_GROUP1 GPIOB
 #define PORT_GROUP2 GPIOA
 
@@ -9,7 +15,12 @@
 
 #define LED1_PIN    GPIO_PIN_5
 #define LED2_PIN    GPIO_PIN_4
+
+#ifndef CH2840ADX
 #define LED3_PIN    GPIO_PIN_8
+#else
+#define LED3_PIN    GPIO_PIN_12
+#endif
 
 #define KEY_INPUT_PORT1 GPIOA
 #define KEY_INPUT_PIN1  GPIO_PIN_4
@@ -20,15 +31,45 @@
 #define KEY_INPUT_PORT3 GPIOA
 #define KEY_INPUT_PIN3  GPIO_PIN_6
 
+#ifdef  USE_UART1
+
 #define USARTx          USART1
 #define USARTx_GPIO     GPIOA
 #define USARTx_CLK      RCC_APB2_PERIPH_USART1
 #define USARTx_GPIO_CLK RCC_APB2_PERIPH_GPIOA
 #define USARTx_RxPin    GPIO_PIN_10
 #define USARTx_TxPin    GPIO_PIN_9
-
 #define GPIO_APBxClkCmd  RCC_EnableAPB2PeriphClk
 #define USART_APBxClkCmd RCC_EnableAPB2PeriphClk
+
+#endif
+
+#ifdef USE_UART3
+
+#define USARTx          USART3
+#define USARTx_GPIO     GPIOB
+#define USARTx_CLK      RCC_APB1_PERIPH_USART3
+#define USARTx_GPIO_CLK RCC_APB2_PERIPH_GPIOB
+#define USARTx_RxPin    GPIO_PIN_11
+#define USARTx_TxPin    GPIO_PIN_10
+#define GPIO_APBxClkCmd  RCC_EnableAPB2PeriphClk
+#define USART_APBxClkCmd RCC_EnableAPB1PeriphClk
+
+#endif
+
+void NVIC_Configuration(void)
+{
+    NVIC_InitType NVIC_InitStructure;
+
+    /* Configure the NVIC Preemption Priority Bits */
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_0);
+
+    /* Enable the USARTy Interrupt */
+    NVIC_InitStructure.NVIC_IRQChannel            = USART3_IRQn;
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+    NVIC_InitStructure.NVIC_IRQChannelCmd         = ENABLE;
+    NVIC_Init(&NVIC_InitStructure);
+}
 
 void segger_init(void)
 {
@@ -195,7 +236,7 @@ void uart_init(void)
 {
     USART_InitType USART_InitStructure;    
     GPIO_InitType GPIO_InitStructure;
-
+    
     /* Configure USARTx Tx as alternate function push-pull */
     GPIO_InitStructure.Pin        = USARTx_TxPin;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
@@ -217,6 +258,8 @@ void uart_init(void)
 
     /* Configure USARTx */
     USART_Init(USARTx, &USART_InitStructure);
+    
+    USART_ConfigInt(USARTx, USART_INT_RXDNE, ENABLE);
     /* Enable the USARTx */
     USART_Enable(USARTx, ENABLE);
 }
@@ -230,6 +273,7 @@ int main(void)
     uart_init();
     led_init();
     user_button_init();
+    NVIC_Configuration();
     ///////////////
 #ifdef VECT_TAB_SRAM
     CV_LOG("ramcode program begin...\r\n");
@@ -242,6 +286,8 @@ int main(void)
 	while(1)
 	{
 		app();
+        
+#ifndef CH2840ADX        
         if (GPIO_ReadInputDataBit(KEY_INPUT_PORT1, KEY_INPUT_PIN1) == Bit_RESET)
         {
             LedBlink(PORT_GROUP1, LED1_PIN);
@@ -260,5 +306,10 @@ int main(void)
             CV_LOG("key3 pressed!\r\n");
             printf("key3 pressed!\r\n");
         }
+#endif
+
+        printf("BINGO!\r\n");
+        LedBlink(LED3_PORT, LED3_PIN);
+        
 	}
 }

@@ -34,6 +34,7 @@
  */
 #include "n32g4fr_it.h"
 #include "n32g4fr.h"
+#include "sys.h"
 
 /** @addtogroup N32G4FR_StdPeriph_Template
  * @{
@@ -141,3 +142,14 @@ void DMA_IRQ_HANDLER(void)
 /**
  * @}
  */
+
+void USART3_IRQHandler(void)
+{
+    char temp;
+    if (USART_GetIntStatus(USART3, USART_INT_RXDNE) != RESET)
+    {
+        /* Read one byte from the receive data register */
+        temp = USART_ReceiveData(USART3);
+        CV_LOG("byte rev: 0x%02X\r\n", temp);
+    }
+}
