@@ -1295,7 +1295,7 @@ Image Symbol Table
     get_queue_total_data                     0x00008a59   Thumb Code    20  system.o(i.get_queue_total_data)
     get_sample_data                          0x00008a75   Thumb Code    18  adc.o(i.get_sample_data)
     gpio_init                                0x00008a8d   Thumb Code    36  gpio.o(i.gpio_init)
-    idle_process                             0x00008ae5   Thumb Code   222  app.o(i.idle_process)
+    idle_process                             0x00008ae5   Thumb Code   220  app.o(i.idle_process)
     init_mem                                 0x00008be9   Thumb Code    34  memalloc.o(i.init_mem)
     leave_s0                                 0x00008c15   Thumb Code    28  app.o(i.leave_s0)
     leave_s1                                 0x00008c41   Thumb Code    62  app.o(i.leave_s1)
