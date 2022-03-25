@@ -75,7 +75,7 @@ void idle_process(void)
     {
         if (0 < speed_f)
         {
-            if (SPEED_LIMIT1 > speed_f)
+            if (SPEED_LIMIT1 > fabs(speed_f))
             {
                 if (MAG_LIMIT1 < mag_f)
                     state = CLOSE;
