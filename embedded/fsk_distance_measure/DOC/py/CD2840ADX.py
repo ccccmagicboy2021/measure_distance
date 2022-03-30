@@ -1,5 +1,6 @@
 #!d:\cccc2020\TOOL\python-3.9.1-embed-amd64\python.exe
-
+import typer
+from typing import Optional
 import serial
 import asyncio
 import winsound
@@ -7,7 +8,11 @@ import queue
 import logging
 import sys
 
+__version__ = "1.0.0"
+stop_thread_flag = False
 q = queue.Queue(0)
+app = typer.Typer()
+
 
 def init_log():
     global logger
@@ -25,15 +30,19 @@ async def main_co():
 
 async def play_sound(delay):
     global q
+    global stop_thread_flag
     while True:
         if q.qsize() >= 1:
             sound = q.get()
             winsound.PlaySound(sound, winsound.SND_FILENAME)
+        if (stop_thread_flag == True):
+            break
         await asyncio.sleep(delay)
 
 async def rev_command0(delay):
     global q
     global ser
+    global stop_thread_flag
     state = 0;
     last_state = 0;
     while True:
@@ -55,19 +64,37 @@ async def rev_command0(delay):
                     q.put("leave_f.wav")
                     last_state = state;
 
+        if (stop_thread_flag == True):
+            break
         await asyncio.sleep(delay)
 
-def main():
+def version_callback(value: bool):
+    if value:
+        typer.echo(f"Awesome CD2870ADX tester Version: v{__version__}")
+        raise typer.Exit()
+
+@app.callback()
+def main(version: Optional[bool] = typer.Option(None, "--version", '-v', callback=version_callback)):
+    """
+    Simple program that test CD2870ADX.
+    """
+
+def ser_callback(value: str):
+    return value
+
+@app.command('mode0')
+def mode0(ser_port: str = typer.Option('com4', '--port', '-p', prompt = "Paste your serial device port", help="use comXX format", confirmation_prompt=False, callback=ser_callback),):
+
+    """test mode0"""
+
     global ser
     global q
+    global stop_thread_flag
     
     init_log()
     logger.info("Start app log")
     
-
-    ser=serial.Serial("com4", 9600, timeout=0.5)
-    print(ser.port)
-
+    ser=serial.Serial(ser_port, 9600, timeout=0.5)
     ser.close()
     ser.open()
     ser.set_buffer_size(rx_size = 1024, tx_size = 1024)
@@ -81,9 +108,9 @@ def main():
         ser.close()
         print('Bye-Bye!!!')
         logger.info("End app log")
+        stop_thread_flag = True
         pass
 
+
 if __name__ == '__main__':
-    main()
-
-
+    app()
