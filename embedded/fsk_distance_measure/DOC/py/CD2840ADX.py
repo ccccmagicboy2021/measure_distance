@@ -80,7 +80,7 @@ def main():
         q.put("quit_f.wav")
         ser.close()
         print('Bye-Bye!!!')
-        logger.error("End app log")
+        logger.info("End app log")
         pass
 
 if __name__ == '__main__':

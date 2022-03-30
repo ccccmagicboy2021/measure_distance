@@ -59,8 +59,8 @@ int measure_distance(s16 *data, measure_info_t *measure_info)
     #ifdef SEND_TO_MATLAB_TEST
 		usart_polling_send_data(&cfar_vote, 1);
     #endif
-    if (1) {
-    //if (cfar_vote) {
+    //if (1) {
+    if (cfar_vote) {
         vd_calculation(data_cumulation_1, CUMULATION_SAMPLE_COUNT / 2, data_cumulation_2,
                         CUMULATION_SAMPLE_COUNT / 2, measure_info);
         alphabeta_filter(FS, DATA_PACKAGE_COUNT, measure_info);
