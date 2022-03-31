@@ -46,7 +46,7 @@ jobs:
     - name: Build with pyinstaller AND UPX
       if: env.USE_UPX == 'true'
       run: |
-        pyinstaller.exe --upx-dir=.\upx-3.95-win64 --icon=.\embedded\fsk_distance_measure\DOC\py\CD2840ADX.ico  --noconfirm --onefile --console .\embedded\fsk_distance_measure\DOC\py\CD2840ADX.py --version-file .\embedded\fsk_distance_measure\DOC\py\file_version_info.txt
+        pyinstaller.exe --upx-dir=.\upx-3.96-win64 --icon=.\embedded\fsk_distance_measure\DOC\py\CD2840ADX.ico  --noconfirm --onefile --console .\embedded\fsk_distance_measure\DOC\py\CD2840ADX.py --version-file .\embedded\fsk_distance_measure\DOC\py\file_version_info.txt
         cd dist
         dir
         
