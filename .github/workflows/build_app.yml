@@ -1,0 +1,85 @@
+#===================================================================================
+# https://github.com/ccccmagicboy2022/
+# Description: Build app tool using GitHub Actions
+# Lisence: MIT
+# Author: cccc
+# Url: 
+#===================================================================================
+
+name: CD2840ADX_DEMO
+
+on: [workflow_dispatch]
+
+env:
+  TZ: Asia/Shanghai
+  ZIP_OUTPUT: true
+  USE_UPX: false
+
+jobs:
+  build:
+    name: CD2840ADX
+    runs-on: windows-2016
+
+    steps:
+    - name: Checkout this repos
+      uses: actions/checkout@v2
+      with:
+        ref: bfsk_8161
+
+    - name: Get the python v3.x
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.9.1'
+        architecture: 'x64'      
+
+    - name: Check python version
+      run: |
+        python -c "import sys; print(sys.version)"
+      shell: cmd
+      
+    - name: Install dependencies
+      run: |
+        python3 -m pip install --upgrade pip
+        pip3 install -U -r .\embedded\fsk_distance_measure\DOC\py\requirements.txt
+      shell: cmd
+      
+    - name: Build with pyinstaller AND UPX
+      if: env.USE_UPX == 'true'
+      run: |
+        pyinstaller.exe --upx-dir=.\upx-3.95-win64 --icon=.\embedded\fsk_distance_measure\DOC\py\CD2840ADX.ico  --noconfirm --onefile --console .\embedded\fsk_distance_measure\DOC\py\CD2840ADX.py --version-file .\embedded\fsk_distance_measure\DOC\py\file_version_info.txt
+        cd dist
+        dir
+        
+    - name: Build with pyinstaller
+      if: env.USE_UPX == 'false'
+      run: |
+        pyinstaller.exe --icon=.\embedded\fsk_distance_measure\DOC\py\CD2840ADX.ico  --noconfirm --onefile --console .\embedded\fsk_distance_measure\DOC\py\CD2840ADX.py --version-file .\embedded\fsk_distance_measure\DOC\py\file_version_info.txt
+        cd dist
+        dir        
+        
+    - name: Get the exe version
+      id: get_ver
+      working-directory: .\
+      run: |
+        echo "::set-output name=version::$((Get-Command D:\\a\\measure_distance\\measure_distance\\dist\\CD2840ADX.exe).FileVersionInfo.FileVersion)"
+      shell: powershell
+      
+    - name: Get the datetime
+      id: get_datetime
+      uses: ccccmagicboy/get_datetime@master
+      with:
+        tz1: 'Asia'
+        tz2: 'Shanghai'           
+
+    - name: Zip the artifact
+      if: env.ZIP_OUTPUT == 'true'
+      run: |
+        7z a CD2840ADX_v${{ steps.get_ver.outputs.version }}_${{ steps.get_datetime.outputs.datetime_str }}.zip dist\CD2840ADX.exe README.md
+      shell: cmd
+      
+    - name: Upload the zip file
+      if: env.ZIP_OUTPUT == 'true'    
+      uses: actions/upload-artifact@master
+      with:
+        name: CD2840ADX_v${{ steps.get_ver.outputs.version }}_${{ steps.get_datetime.outputs.datetime_str }}
+        path: CD2840ADX_v${{ steps.get_ver.outputs.version }}_${{ steps.get_datetime.outputs.datetime_str }}.zip
