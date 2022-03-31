@@ -13,12 +13,12 @@ on: [workflow_dispatch]
 env:
   TZ: Asia/Shanghai
   ZIP_OUTPUT: true
-  USE_UPX: false
+  USE_UPX: true
 
 jobs:
   build:
     name: CD2840ADX
-    runs-on: windows-2016
+    runs-on: windows-2019
 
     steps:
     - name: Checkout this repos
