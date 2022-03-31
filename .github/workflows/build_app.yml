@@ -74,7 +74,7 @@ jobs:
     - name: Zip the artifact
       if: env.ZIP_OUTPUT == 'true'
       run: |
-        7z a CD2840ADX_v${{ steps.get_ver.outputs.version }}_${{ steps.get_datetime.outputs.datetime_str }}.zip dist\CD2840ADX.exe README.md
+        7z a CD2840ADX_v${{ steps.get_ver.outputs.version }}_${{ steps.get_datetime.outputs.datetime_str }}.zip dist\CD2840ADX.exe
       shell: cmd
       
     - name: Upload the zip file
