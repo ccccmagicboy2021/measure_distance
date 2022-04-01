@@ -37,7 +37,6 @@ extern uint32_t diff_tick;
 
 int32_t main(void)
 {
-    
     measure_info_t measure_info = {0};
 
     SysClkInit();
