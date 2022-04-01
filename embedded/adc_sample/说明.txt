@@ -1,0 +1,6 @@
+1. n32基本工程模板(keil5)
+2. USART：TX - PB10，RX - PB11，波特率115200
+3. SysTick：时钟滴答配置为1MS
+4. shell
+
+
