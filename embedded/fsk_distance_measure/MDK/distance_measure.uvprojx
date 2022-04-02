@@ -454,9 +454,9 @@
               <FilePath>..\app\app\app.c</FilePath>
             </File>
             <File>
-              <FileName>sys.h</FileName>
+              <FileName>app.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\common\inc\sys.h</FilePath>
+              <FilePath>..\app\app\app.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -1179,9 +1179,9 @@
               <FilePath>..\app\app\app.c</FilePath>
             </File>
             <File>
-              <FileName>sys.h</FileName>
+              <FileName>app.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\common\inc\sys.h</FilePath>
+              <FilePath>..\app\app\app.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -1853,9 +1853,9 @@
               <FilePath>..\app\app\app.c</FilePath>
             </File>
             <File>
-              <FileName>sys.h</FileName>
+              <FileName>app.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\common\inc\sys.h</FilePath>
+              <FilePath>..\app\app\app.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -2578,9 +2578,9 @@
               <FilePath>..\app\app\app.c</FilePath>
             </File>
             <File>
-              <FileName>sys.h</FileName>
+              <FileName>app.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\common\inc\sys.h</FilePath>
+              <FilePath>..\app\app\app.h</FilePath>
             </File>
           </Files>
         </Group>
