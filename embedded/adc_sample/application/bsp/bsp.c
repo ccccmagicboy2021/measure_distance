@@ -124,16 +124,7 @@ void SysTick_Init(uint32_t NUM)
 
 void read_uid(void)
 {
-	char	i = 0;
-    char data[16] = {0};
-		
-	CV_LOG("%smcu chip uid: \r\n", RTT_CTRL_TEXT_BRIGHT_GREEN);
-	for(i = 0; i < sizeof(data); i++) 
-	{
-		data[i] = *((unsigned char *)(UUID0 + i));
-		CV_LOG("%02X ", data[i]);
-	}
-	CV_LOG("%s\r\n", RTT_CTRL_RESET);
+    //
 }
 
 void init_all(void)

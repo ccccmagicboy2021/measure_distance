@@ -3,7 +3,15 @@
 
 #include "sys.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+ 
 void app(void);
+ 
+#ifdef __cplusplus
+}
+#endif
 
 
 #endif//_CBE81D98_3CA6_4077_890C_D3B7C63233CA_

@@ -9827,4 +9827,8 @@ typedef struct
 }
 #endif
 
+#ifdef __cplusplus
+}
+#endif
+
 #endif /* __N32G4FR_H__ */

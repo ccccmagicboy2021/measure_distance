@@ -1,0 +1,22 @@
+#ifndef _D112205B_D20C_4521_BC21_7E1E7A1955E5_
+#define _D112205B_D20C_4521_BC21_7E1E7A1955E5_
+
+#include "adc.hpp"
+
+class Hardware {
+	public:
+		//Uart uart3;		//serial
+		Adc adc_all;	//sensors
+		//Do enrf;		//enable rf
+		//Do enop;		//enable op
+		//Do out;			//gpio output
+		//Do led;			//led output
+		
+	public:
+        Hardware();
+        ~Hardware();
+};
+
+#endif//_D112205B_D20C_4521_BC21_7E1E7A1955E5_
+
+

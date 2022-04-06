@@ -1,9 +1,12 @@
-#include "sys.h"
+#include "hardware.hpp"
+
+Hardware hard_all;
 
 void setup()
 {
     // put your setup code here, to run once:
-    init_all();
+    hard_all.adc_all.init();
+    
 }
 
 void loop()

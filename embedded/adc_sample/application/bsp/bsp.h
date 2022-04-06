@@ -42,6 +42,8 @@
 #define PWM0_CH4_PinSource  GPIO_PinSource11
 #define PWM0_CH4_Pin        GPIO_Pin_11
 
+//extern "C" {
+
 void bsp_init(void);
 void segger_init(void);
 void LED_GPIO_Config(void);
@@ -55,7 +57,7 @@ void DMA_config(void);
 void PWM_Mode_Config(void);
 void init_all(void);
 
-
+//}
 
 
 
