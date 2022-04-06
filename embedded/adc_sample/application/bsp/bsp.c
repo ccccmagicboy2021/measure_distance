@@ -137,4 +137,14 @@ int get_tick(void)
     return  timeval;
 }
 
+int fputc(int ch, FILE* f)
+{
+    USART_SendData(USART3, (uint8_t)ch);
+    while (USART_GetFlagStatus(USART3, USART_FLAG_TXDE) == RESET)
+        ;
+
+    return (ch);
+}
+
+
 

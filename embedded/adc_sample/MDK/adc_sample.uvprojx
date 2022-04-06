@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc;..\application\nr_micro_shell;..\application\EventRecorder;..\application\fifo;..\application\bsp;..\application\adc;..\application\hardware</IncludePath>
+              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc;..\application\nr_micro_shell;..\application\EventRecorder;..\application\fifo;..\application\bsp;..\application\adc;..\application\hardware;..\application\uart;..\application\clk</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -407,6 +407,16 @@
               <FileName>adc.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>..\application\adc\adc.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>uart.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\application\uart\uart.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>clk.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\application\clk\clk.cpp</FilePath>
             </File>
           </Files>
         </Group>
@@ -960,7 +970,7 @@
               <MiscControls></MiscControls>
               <Define>VECT_TAB_SRAM</Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc;..\application\hardware;..\application\nr_micro_shell;..\application\adc;..\application\EventRecorder;..\application\fifo</IncludePath>
+              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc;..\application\hardware;..\application\nr_micro_shell;..\application\adc;..\application\EventRecorder;..\application\fifo;..\application\uart;..\application\clk</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1028,6 +1038,16 @@
               <FileName>adc.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>..\application\adc\adc.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>uart.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\application\uart\uart.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>clk.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\application\clk\clk.cpp</FilePath>
             </File>
           </Files>
         </Group>

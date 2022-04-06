@@ -1,11 +1,10 @@
 #include "hardware.hpp"
 
-Hardware hard_all;
+Hardware hardware_n32_ch2840adx;
 
 void setup()
 {
     // put your setup code here, to run once:
-    hard_all.adc_all.init();
     
 }
 

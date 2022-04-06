@@ -168,11 +168,11 @@ void Adc::init_timer(void)
 
 Adc::Adc()
 {
-    printf("initial adc\r\n");
+    init();
 }
 
 Adc::~Adc()
 {
-    printf("del adc\r\n");
+    //
 }
 
