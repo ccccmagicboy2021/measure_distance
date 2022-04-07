@@ -3,11 +3,15 @@
 
 void memory_init(void)
 {
+	FIFO_DataType tempData[BLOCK_TRANSFER_SIZE];
+	
+	memset(tempData, 0, BLOCK_TRANSFER_SIZE * sizeof(FIFO_DataType));
+    
 	while (1 != FIFO_IsDataEmpty(&FIFO_Data[0]))
 	{
-		//CV_LOG("fifo0 number useless: %d\r\n", FIFO_GetDataCount(&FIFO_Data[0]));	
-		//FIFO_ReadData(&FIFO_Data[0], &Fast_detection_data[0], 2000);
-		//CV_LOG("fifo0 number useless: %d\r\n", FIFO_GetDataCount(&FIFO_Data[0]));
+		CV_LOG("fifo0 number useless: %d\r\n", FIFO_GetDataCount(&FIFO_Data[0]));
+        FIFO_ReadData(&FIFO_Data[0], tempData, BLOCK_TRANSFER_SIZE);
+		CV_LOG("fifo0 number useless: %d\r\n", FIFO_GetDataCount(&FIFO_Data[0]));
 	}
 	FIFO_Init(&FIFO_Data[0]);
     

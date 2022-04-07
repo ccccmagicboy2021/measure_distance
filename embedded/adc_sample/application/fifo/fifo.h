@@ -39,6 +39,10 @@ typedef struct
 extern FIFO_Struct FIFO_Data[FIFO_DATA_NUM];
 extern FIFO_DataType FIFO_DataBuffer[FIFO_DATA_NUM][FIFO_DATA_SIZE];
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 void FIFO_Init(FIFO_Struct *FIFO_Data);
 void FIFO_WriteData(FIFO_Struct *FIFO_Data,FIFO_DataType *Data, uint32_t length);
 void FIFO_WriteOneData(FIFO_Struct *FIFO_Data,FIFO_DataType Data);
@@ -47,5 +51,8 @@ FIFO_DataType FIFO_ReadOneData(FIFO_Struct *FIFO_Data);
 uint8_t FIFO_IsDataFull(FIFO_Struct *FIFO_Data);
 uint8_t FIFO_IsDataEmpty(FIFO_Struct *FIFO_Data);
 uint32_t FIFO_GetDataCount(FIFO_Struct *FIFO_Data);
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* SOURCE_ALWHALESLIB_SYSEXTEND_INC_FIFO_H_ */

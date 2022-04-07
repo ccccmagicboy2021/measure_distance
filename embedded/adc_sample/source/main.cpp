@@ -1,21 +1,22 @@
 #include "sys.hpp"
+#include "sys.h"
 
 Rtt segger_cb;
 Hardware hardware_n32_ch2840adx;
 DWTDelay dwt;
 Shell nr;
+App app;
 
 void setup()
 {
     // put your setup code here, to run once:
+    memory_init();
 }
 
 void loop()
 {
     // put your main code here, to run repeatedly:
-    app();
-    dwt.delay_ms(500);
-    hardware_n32_ch2840adx.led.toggle();
+    app.run();
 }
 
 int main(void)

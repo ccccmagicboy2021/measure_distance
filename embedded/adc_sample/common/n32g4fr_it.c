@@ -36,6 +36,10 @@
 #include "n32g4fr.h"
 #include "sys.h"
 
+uint16_t capture = 0;
+volatile uint16_t g_radar_if_adc_value;     //radar if adc value
+volatile uint16_t g_light_adc_value;		//light sensor adc value
+
 /** @addtogroup N32G4FR_StdPeriph_Template
  * @{
  */
@@ -142,6 +146,41 @@ void DMA_IRQ_HANDLER(void)
 /**
  * @}
  */
+
+void TIM1_CC_IRQHandler(void)
+{
+    FIFO_DataType adc_value;
+    
+    if (TIM_GetIntStatus(TIM1, TIM_INT_CC1) != RESET)
+    {
+        TIM_ClrIntPendingBit(TIM1, TIM_INT_CC1);
+    }
+    else if (TIM_GetIntStatus(TIM1, TIM_INT_CC2) != RESET)
+    {
+        TIM_ClrIntPendingBit(TIM1, TIM_INT_CC2);
+    }
+    else if (TIM_GetIntStatus(TIM1, TIM_INT_CC3) != RESET)
+    {
+        TIM_ClrIntPendingBit(TIM1, TIM_INT_CC3);
+    }
+    else
+    {
+        TIM_ClrIntPendingBit(TIM1, TIM_INT_CC4);
+        
+        adc_value.Val1 = g_radar_if_adc_value;	//if
+					
+		if (GPIO_ReadInputDataBit(GPIOA, GPIO_PIN_10) == Bit_RESET)
+		{
+			adc_value.Val3 = 0;
+		}
+		else
+		{
+			adc_value.Val3 = 1;
+		}
+		FIFO_WriteOneData(&FIFO_Data[0], adc_value);
+        
+    }
+}
 
 void USART3_IRQHandler(void)
 {

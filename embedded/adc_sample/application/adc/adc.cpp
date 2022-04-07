@@ -1,5 +1,9 @@
 #include "adc.hpp"
 #include "sys.h"
+#include "sys.hpp"
+
+extern volatile uint16_t g_radar_if_adc_value;     //radar if adc value
+extern volatile uint16_t g_light_adc_value;		//light sensor adc value
 
 void Adc::init(void)
 {
@@ -26,7 +30,7 @@ void Adc::init_dma(void)
 	
     DMA_DeInit(DMA1_CH1);
     DMA_InitStructure.PeriphAddr     = (uint32_t)&ADC1->DAT;
-    DMA_InitStructure.MemAddr        = (uint32_t)&radar_if_adc_value;
+    DMA_InitStructure.MemAddr        = (uint32_t)&g_radar_if_adc_value;
     DMA_InitStructure.Direction      = DMA_DIR_PERIPH_SRC;
     DMA_InitStructure.BufSize        = 1;
     DMA_InitStructure.PeriphInc      = DMA_PERIPH_INC_DISABLE;
@@ -42,7 +46,7 @@ void Adc::init_dma(void)
     
     DMA_DeInit(DMA1_CH8);
     DMA_InitStructure.PeriphAddr     = (uint32_t)&ADC2->DAT;
-    DMA_InitStructure.MemAddr        = (uint32_t)&light_adc_value;
+    DMA_InitStructure.MemAddr        = (uint32_t)&g_light_adc_value;
     DMA_InitStructure.Direction      = DMA_DIR_PERIPH_SRC;
     DMA_InitStructure.BufSize        = 1;
     DMA_InitStructure.PeriphInc      = DMA_PERIPH_INC_DISABLE;
@@ -115,7 +119,7 @@ void Adc::init_timer(void)
 
     NVIC_InitStructure.NVIC_IRQChannel                   = TIM1_CC_IRQn;
     NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
-    NVIC_InitStructure.NVIC_IRQChannelSubPriority        = 1;
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority        = 0;
     NVIC_InitStructure.NVIC_IRQChannelCmd                = ENABLE;
 
     NVIC_Init(&NVIC_InitStructure);
@@ -123,8 +127,8 @@ void Adc::init_timer(void)
 	//init pin
     GPIO_InitType GPIO_InitStructure;
     
-    GPIO_InitStructure.Pin        = GPIO_PIN_10;
-    GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_AF_PP;
+    GPIO_InitStructure.Pin        = GPIO_PIN_10;        //TIM1_CH3
+    GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_AF_PP;   //not gpio use
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_InitPeripheral(GPIOA, &GPIO_InitStructure);
     
@@ -162,8 +166,9 @@ void Adc::init_timer(void)
 
     //////////////////////////////////////////////////////
     TIM_ConfigArPreload(TIM1, ENABLE);
-    TIM_ConfigInt(TIM1, TIM_INT_CC4, ENABLE);
     TIM_Enable(TIM1, ENABLE);
+    TIM_EnableCtrlPwmOutputs(TIM1, ENABLE);
+    TIM_ConfigInt(TIM1, TIM_INT_CC3 | TIM_INT_CC4, ENABLE);
 }
 
 Adc::Adc()
@@ -175,4 +180,5 @@ Adc::~Adc()
 {
     //
 }
+
 

@@ -4,9 +4,11 @@
     <Project>
         <Configuration>
             <JLink>
-                <Options Connection="1" IsRTTSession="1" IsRTTWithTimeStamp="0" SamplingPeriod="100" SerialNo="0" JTAG_IRPre="0" JTAG_DRPre="0" IP="" TargetDevice="PT32z192xx" TargetInterface="SWD" InterfaceSpeed="4000" />
+                <Options IsRTTSession="1" IsRTTWithTimeStamp="0" SamplingPeriod="100" Connection="1" SerialNo="0" IP="" TargetDevice="PT32z192xx" TargetInterface="SWD" InterfaceSpeed="4000" />
             </JLink>
             <ElfFile Name="" />
+            <DataFile Name="" />
+            <RawFile Name="" />
             <Scope>
                 <Options TimeResolutionUs="1000000" />
             </Scope>
@@ -17,10 +19,10 @@
         </Windows>
         <SelectedSymbols>
             <Symbol>
-                <Options Name="2 Byte unsigned RTT Data" Address="0x00000000" Type="" TypeID="7" Size="2" GraphColorRed="255" GraphColorGreen="0" GraphColorBlue="0" YMinSampled="4" YMaxSampled="4095" YAvgSampled="2084.81" Offset="0" ShowInGraph="1" ACCoupling="0" YOffset="0" IsAutoConfig="0" YResolution="2000" MaxValue="0" File="" Scope="1" DrawStyle="0" />
+                <Options Name="Symbol No 1" Address="0x00000000" Type="2 Byte unsigned RTT Data" TypeID="7" Size="2" GraphColorRed="255" GraphColorGreen="215" GraphColorBlue="0" YMinSampled="180" YMaxSampled="2401" YAvgSampled="631" Offset="4" ShowInGraph="1" YOffset="200" IsAutoConfig="1" YResolution="500" MaxValue="2540" File="None" Scope="1" DrawStyle="0" />
             </Symbol>
             <Symbol>
-                <Options Name="2 Byte unsigned RTT Data" Address="0x00000000" Type="" TypeID="7" Size="2" GraphColorRed="0" GraphColorGreen="0" GraphColorBlue="255" YMinSampled="0" YMaxSampled="1" YAvgSampled="0.499995" Offset="2" ShowInGraph="1" ACCoupling="0" YOffset="0" IsAutoConfig="0" YResolution="1" MaxValue="0" File="" Scope="1" DrawStyle="0" />
+                <Options Name="Symbol No 2" Address="0x00000000" Type="2 Byte unsigned RTT Data" TypeID="7" Size="2" GraphColorRed="0" GraphColorGreen="255" GraphColorBlue="0" YMinSampled="0" YMaxSampled="1" YAvgSampled="0" Offset="6" ShowInGraph="1" YOffset="200" IsAutoConfig="1" YResolution="1" MaxValue="5" File="None" Scope="1" DrawStyle="0" />
             </Symbol>
         </SelectedSymbols>
     </Project>

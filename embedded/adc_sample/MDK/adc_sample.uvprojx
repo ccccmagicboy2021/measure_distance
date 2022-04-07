@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc;..\application\nr_micro_shell;..\application\EventRecorder;..\application\fifo;..\application\bsp;..\application\adc;..\application\hardware;..\application\uart;..\application\clk;..\application\do;..\application\DWTDelay;..\application\shell</IncludePath>
+              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc;..\application\nr_micro_shell;..\application\EventRecorder;..\application\fifo;..\application\bsp;..\application\adc;..\application\hardware;..\application\uart;..\application\clk;..\application\do;..\application\DWTDelay;..\application\shell;..\application\app</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -428,16 +428,16 @@
               <FileType>8</FileType>
               <FilePath>..\application\shell\shell.cpp</FilePath>
             </File>
+            <File>
+              <FileName>app.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\application\app\app.cpp</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>src</GroupName>
           <Files>
-            <File>
-              <FileName>app.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\app\app.c</FilePath>
-            </File>
             <File>
               <FileName>fifo.c</FileName>
               <FileType>1</FileType>
@@ -985,7 +985,7 @@
               <MiscControls></MiscControls>
               <Define>VECT_TAB_SRAM</Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc;..\application\hardware;..\application\nr_micro_shell;..\application\adc;..\application\EventRecorder;..\application\fifo;..\application\uart;..\application\clk;..\application\do;..\application\DWTDelay;..\application\shell</IncludePath>
+              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc;..\application\hardware;..\application\nr_micro_shell;..\application\adc;..\application\EventRecorder;..\application\fifo;..\application\uart;..\application\clk;..\application\do;..\application\DWTDelay;..\application\shell;..\application\bsp</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1074,16 +1074,16 @@
               <FileType>8</FileType>
               <FilePath>..\application\shell\shell.cpp</FilePath>
             </File>
+            <File>
+              <FileName>app.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\application\app\app.cpp</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>src</GroupName>
           <Files>
-            <File>
-              <FileName>app.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\app\app.c</FilePath>
-            </File>
             <File>
               <FileName>fifo.c</FileName>
               <FileType>1</FileType>

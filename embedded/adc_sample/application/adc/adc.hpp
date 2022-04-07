@@ -13,8 +13,6 @@ class Adc
 {
 	public:
 		unsigned int mode;					//working mode for adc
-		volatile uint16_t radar_if_adc_value;	//radar if adc value
-		volatile uint16_t light_adc_value;		//light sensor adc value
 		
 	public:
         Adc();

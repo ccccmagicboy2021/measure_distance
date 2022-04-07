@@ -12,7 +12,7 @@
 #include "EventRecorder.h"
 
 #include "fifo.h"
-#include "app.h"
+#include "bsp.h"
 
 #define CV_LOG(fmt, ...) \
 do \
@@ -28,13 +28,5 @@ do \
 #define	USER_PARAMETER_START_SECTOR_ADDRESS1	0x0007C000u
 #define	MAGIC_SECTOR_ADDRESS0					0x0007E000u
 /////////////////////////////////////////////////////////////////////
-enum app_state
-{
-	UART_SEND_DATA=0,
-	IDLE,
-	UART_PROTOCOL,
-	ERROR_ERROR,
-};
-
 #endif//_7090986F_63F7_4B1A_92CE_B3C5BE86422C_
 
