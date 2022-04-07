@@ -4,7 +4,7 @@ speed 25000
 device N32G4FRKE
 r
 h
-loadbin .\MDK\bin\flashcode.bin 0x0000
+loadbin .\MDK\bin\flashcode.bin 0x08000000
 r
 g
 qc

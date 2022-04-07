@@ -6,10 +6,9 @@
 #include <string.h>
 
 #include "n32g4fr.h"
+#include "SEGGER_RTT.h"
 
 #include "app.h"
-#include "SEGGER_RTT.h"
-#include "SEGGER_RTT_Conf.h"
 
 #include "nr_micro_shell.h"
 
@@ -24,10 +23,7 @@ do \
 }while(0)
 
 #define APP_VERSION             "1.0.0"                 /**< °æ±¾ºÅ */
-
 #define ALL_UPLOAD_DELAY		100
-#define SEGGER_RTT_IN_RAM		1
-
 #define BLOCK_TRANSFER_SIZE 500
 /////////////////////////////////////////////////////////////////////
 #define	USER_PARAMETER_START_SECTOR_ADDRESS0	0x0007A000u

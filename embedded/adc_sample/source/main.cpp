@@ -1,5 +1,6 @@
-#include "hardware.hpp"
+#include "sys.hpp"
 
+Rtt segger_cb;
 Hardware hardware_n32_ch2840adx;
 
 void setup()

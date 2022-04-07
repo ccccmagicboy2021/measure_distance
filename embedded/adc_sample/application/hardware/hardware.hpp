@@ -4,16 +4,17 @@
 #include "clk.hpp"
 #include "adc.hpp"
 #include "uart.hpp"
+#include "do.hpp"
 
 class Hardware {
 	public:
         Clk rcc;
 		Uart uart3;		//serial
-		//Adc adc_all;	//sensors
-		//Do enrf;		//enable rf
-		//Do enop;		//enable op
-		//Do out;			//gpio output
-		//Do led;			//led output
+		Adc adc_all;	//sensors
+		Do enrf;		//enable rf
+		Do enop;		//enable op
+		Do out;			//gpio output
+		Do led;			//led output
 		
 	public:
         Hardware();

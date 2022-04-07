@@ -4,14 +4,13 @@
 volatile uint32_t key_flag;
 
 //////////global var here///////////////////////
-char JS_RTT_UpBuffer[2048*4*2];		//2k sample 4bytes single item 2s raw data
 volatile enum app_state state = UART_SEND_DATA;	//状态机变量
 volatile enum app_state next_state = UART_SEND_DATA;	//状态机变量的下一个状态
 ////////////////////////////////////////////////
 void error_process(void)
 {
 	//do some print
-	CV_LOG("error!!!\r\n");
+	//CV_LOG("error!!!\r\n");
     printf("error!!!\r\n");
 }
 

@@ -12,6 +12,7 @@ class Clk {
         ~Clk();
 		void init(void);
 		void deinit(void);
+        void print_clock(void);
 };
 
 
