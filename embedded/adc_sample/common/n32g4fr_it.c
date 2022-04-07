@@ -150,6 +150,7 @@ void USART3_IRQHandler(void)
     {
         /* Read one byte from the receive data register */
         temp = USART_ReceiveData(USART3);
+        shell(temp);
         CV_LOG("byte rev: 0x%02X\r\n", temp);
     }
 }

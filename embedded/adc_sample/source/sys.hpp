@@ -3,6 +3,8 @@
 
 #include "hardware.hpp"
 #include "rtt.hpp"
+#include "DWTDelay.hpp"
+#include "shell.hpp"
 
 #endif//_850151B4_3838_44A9_AB19_F24ADF33AD4C_
 

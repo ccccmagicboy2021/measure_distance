@@ -1,8 +1,6 @@
 #include "app.h"
 #include "sys.h"
 
-volatile uint32_t key_flag;
-
 //////////global var here///////////////////////
 volatile enum app_state state = UART_SEND_DATA;	//状态机变量
 volatile enum app_state next_state = UART_SEND_DATA;	//状态机变量的下一个状态
@@ -46,15 +44,6 @@ void sent_sample_data(void)
 
 void app(void)
 {    
-    if (key_flag)
-    {
-        key_flag = 0;
-    }
-    else
-    {
-		//
-    }
-    
 	switch (state)
 	{
 		case	UART_SEND_DATA:

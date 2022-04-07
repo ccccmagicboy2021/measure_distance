@@ -7,14 +7,12 @@
 
 #include "n32g4fr.h"
 #include "SEGGER_RTT.h"
-
-#include "app.h"
-
 #include "nr_micro_shell.h"
 
 #include "EventRecorder.h"
 
 #include "fifo.h"
+#include "app.h"
 
 #define CV_LOG(fmt, ...) \
 do \

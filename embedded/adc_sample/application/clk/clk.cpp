@@ -17,7 +17,8 @@ Clk::Clk()
     RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_TIM3, ENABLE);
 
     /* RCC_ADCHCLK_DIV16*/
-    ADC_ConfigClk(ADC_CTRL3_CKMOD_AHB,RCC_ADCHCLK_DIV16);   // 144/16
+    ADC_ConfigClk(ADC_CTRL3_CKMOD_AHB,RCC_ADCHCLK_DIV16);   // 144/16 = 9M
+    RCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSE, RCC_ADC1MCLK_DIV8);  //  8/8  = 1M
     
     print_clock();
 }
@@ -38,5 +39,4 @@ void Clk::print_clock(void)
     CV_LOG("pclk1: %d\r\n", RCC_ClockFreq.Pclk1Freq);
     CV_LOG("pclk2: %d\r\n", RCC_ClockFreq.Pclk2Freq);
     CV_LOG("adc_hclk: %d\r\n", RCC_ClockFreq.AdcHclkFreq);
-    CV_LOG("adc_pllclk: %d\r\n", RCC_ClockFreq.AdcPllClkFreq);
 }

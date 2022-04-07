@@ -196,7 +196,7 @@ void shell_quit_cmd(char argc, char *argv)
     
     if (1 == argc)
     {
-        //NVIC_SystemReset();
+        NVIC_SystemReset();
     }
     else
     {
