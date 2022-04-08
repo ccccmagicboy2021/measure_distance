@@ -73,7 +73,7 @@ void idle_process(void)
 {    
     if (TH_1 >= distance_f)
     {
-        if (0 < speed_f)
+        //if (0 < speed_f)
         {
             if (SPEED_LOW_LIMIT1 < fabs(speed_f))
             {
@@ -88,9 +88,9 @@ void idle_process(void)
             }
         }
     }
-    else if (TH_2 >= distance_f)
+    else //if (TH_2 >= distance_f)
     {
-        if (0 > speed_f)
+        //if (0 > speed_f)
         {
             if (SPEED_LOW_LIMIT2 < fabs(speed_f))
             {
