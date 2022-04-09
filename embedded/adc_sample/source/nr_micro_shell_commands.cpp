@@ -35,6 +35,7 @@
 #include <string.h>
 #include <ctype.h>
 #include "sys.h"
+#include "sys.hpp"
 
 /**
  * @brief ls command
