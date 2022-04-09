@@ -1753,13 +1753,13 @@ Memory Map of the image
     0x20012240        -       0x000000a8   Zero   RW         1794    .bss._SEGGER_RTT    segger_rtt.o
     0x200122e8        -       0x00000010   Zero   RW         1799    .bss._acDownBuffer  segger_rtt.o
     0x200122f8        -       0x00000400   Zero   RW         1798    .bss._acUpBuffer    segger_rtt.o
-    0x200126f8        -       0x00000002   Zero   RW           24    .bss.app            main.o
+    0x200126f8        -       0x00000002   Zero   RW           23    .bss.app            main.o
     0x200126fa   COMPRESSED   0x00000002   PAD
-    0x200126fc        -       0x00000004   Zero   RW           22    .bss.dwt            main.o
+    0x200126fc        -       0x00000004   Zero   RW           24    .bss.dwt            main.o
     0x20012700        -       0x00000002   Zero   RW          379    .bss.g_light_adc_value  n32g4fr_it.o
     0x20012702        -       0x00000002   Zero   RW          377    .bss.g_radar_if_adc_value  n32g4fr_it.o
     0x20012704        -       0x0000002c   Zero   RW           21    .bss.hardware_n32_ch2840adx  main.o
-    0x20012730        -       0x00000001   Zero   RW           23    .bss.nr             main.o
+    0x20012730        -       0x00000001   Zero   RW           22    .bss.nr             main.o
     0x20012731   COMPRESSED   0x00000003   PAD
     0x20012734        -       0x00000084   Zero   RW          262    .bss.nr_ansi        ansi.o
     0x200127b8        -       0x00000004   Zero   RW          324    .bss.nr_shell_strtok.last  nr_micro_shell.o

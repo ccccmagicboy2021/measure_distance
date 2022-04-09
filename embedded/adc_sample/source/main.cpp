@@ -3,9 +3,9 @@
 
 Rtt segger_cb;
 Hardware hardware_n32_ch2840adx;
-DWTDelay dwt;
 Shell nr;
 App app;
+DWTDelay dwt;       //must be last location
 
 void setup()
 {
