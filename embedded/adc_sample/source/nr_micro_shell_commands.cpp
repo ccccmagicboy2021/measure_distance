@@ -37,6 +37,8 @@
 #include "sys.h"
 #include "sys.hpp"
 
+extern Hardware hardware_n32_ch2840adx;
+
 /**
  * @brief ls command
  */
@@ -205,6 +207,38 @@ void shell_quit_cmd(char argc, char *argv)
     }
 }
 
+void shell_mode_cmd(char argc, char *argv)
+{
+	unsigned int i;
+    
+	for (i = 0; i < argc; i++)
+	{
+		shell_printf("paras %d: %s\r\n", i, &(argv[argv[i]]));
+	}
+    
+    if (2 == argc)
+    {
+        if (!strcmp("0", &argv[argv[1]]))
+        {
+            shell_printf("mode 0(cw mode) select\r\n");
+        }
+        else if (!strcmp("1", &argv[argv[1]]))
+        {
+            shell_printf("mode 1(fsk mode) select\r\n");
+        }
+        else
+        {
+            shell_printf("mode not support!\r\n");
+        }
+        //
+    }
+    else
+    {
+		shell_printf("useage: mode 0|1\r\n");
+    }
+}
+
+
 #ifdef NR_SHELL_USING_EXPORT_CMD
 NR_SHELL_CMD_EXPORT(ls, shell_ls_cmd);
 NR_SHELL_CMD_EXPORT(test, shell_test_cmd);
@@ -217,6 +251,7 @@ const static_cmd_st static_cmd[] =
 		{"test", shell_test_cmd},
         {"hexdump", shell_hexdump_cmd},
         {"quit", shell_quit_cmd},
+        {"mode", shell_mode_cmd},
 		{"\0", NULL}};
 #endif
 

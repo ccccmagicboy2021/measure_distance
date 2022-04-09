@@ -116,13 +116,13 @@ The end of line.
 #define NR_SHELL_CMD_PARAS_MAX_NUM 10
 
 /* Command stores the most history commands (the maximum number here refers to the maximum number of commands that can be stored. When the history command line cache is full, it will automatically release the earliest command record) */
-#define NR_SHELL_MAX_CMD_HISTORY_NUM 3
+#define NR_SHELL_MAX_CMD_HISTORY_NUM 10
 
 /* History command cache length */
 #define NR_SHELL_CMD_HISTORY_BUF_LENGTH 253
 
 /* The user's name. */
-#define NR_SHELL_USER_NAME "\x1b[33;1mpt32@cccc:\x1b[0m"
+#define NR_SHELL_USER_NAME "\x1b[33;1mn32@cccc:\x1b[0m"
 
 /*
 0: \n
