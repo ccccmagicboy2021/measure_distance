@@ -24,6 +24,7 @@
 typedef struct cccc
 {
 	unsigned short	Val1;		//radar if
+    unsigned short	Val2;		//light
 	unsigned short	Val3;		//fsk pwm io level
 } FIFO_DataType;
 
