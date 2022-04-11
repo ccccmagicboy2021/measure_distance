@@ -13,6 +13,7 @@ void Adc::init(void)
 	init_dma();
 	init_adc();
 	init_timer();
+    disable_timer_pwm();
 }
 
 void Adc::init_pin(GPIO_Module* port, unsigned int pin)
@@ -30,7 +31,7 @@ void Adc::init_dma(void)
 	
     DMA_DeInit(DMA1_CH1);
     DMA_InitStructure.PeriphAddr     = (uint32_t)&ADC1->DAT;
-    DMA_InitStructure.MemAddr        = (uint32_t)&g_radar_if_adc_value;
+    DMA_InitStructure.MemAddr        = (uint32_t)&g_light_adc_value;
     DMA_InitStructure.Direction      = DMA_DIR_PERIPH_SRC;
     DMA_InitStructure.BufSize        = 1;
     DMA_InitStructure.PeriphInc      = DMA_PERIPH_INC_DISABLE;
@@ -46,7 +47,7 @@ void Adc::init_dma(void)
     
     DMA_DeInit(DMA1_CH8);
     DMA_InitStructure.PeriphAddr     = (uint32_t)&ADC2->DAT;
-    DMA_InitStructure.MemAddr        = (uint32_t)&g_light_adc_value;
+    DMA_InitStructure.MemAddr        = (uint32_t)&g_radar_if_adc_value;
     DMA_InitStructure.Direction      = DMA_DIR_PERIPH_SRC;
     DMA_InitStructure.BufSize        = 1;
     DMA_InitStructure.PeriphInc      = DMA_PERIPH_INC_DISABLE;
@@ -137,11 +138,9 @@ void Adc::init_timer(void)
     OCInitType TIM_OCInitStructure;
 
     /* Time base configuration */
-    wave_freq = 2000;
-    fs = 2*wave_freq;  //adc sample rate
     TIM_TimeBaseStructure.Period    = 1000 - 1;
-    TIM_TimeBaseStructure.Prescaler = (SystemCoreClock/(2000*fs))-1;
-    TIM_TimeBaseStructure.ClkDiv    = 0;
+    TIM_TimeBaseStructure.Prescaler = 72-1; //36 for 2k wave out, 72 for 1k wave out
+    TIM_TimeBaseStructure.ClkDiv    = TIM_CLK_DIV1; //144MHz
     TIM_TimeBaseStructure.CntMode   = TIM_CNT_MODE_UP;
 
     TIM_InitTimeBase(TIM1, &TIM_TimeBaseStructure);
@@ -167,8 +166,17 @@ void Adc::init_timer(void)
     //////////////////////////////////////////////////////
     TIM_ConfigArPreload(TIM1, ENABLE);
     TIM_Enable(TIM1, ENABLE);
-    TIM_EnableCtrlPwmOutputs(TIM1, ENABLE);
     TIM_ConfigInt(TIM1, TIM_INT_CC3 | TIM_INT_CC4, ENABLE);
+}
+
+void Adc::enable_timer_pwm(void)
+{
+    TIM_EnableCtrlPwmOutputs(TIM1, ENABLE);
+}
+
+void Adc::disable_timer_pwm(void)
+{
+    TIM_EnableCtrlPwmOutputs(TIM1, DISABLE);
 }
 
 Adc::Adc()

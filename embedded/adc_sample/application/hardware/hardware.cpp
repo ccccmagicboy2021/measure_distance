@@ -10,7 +10,7 @@ Hardware::Hardware()
     enrf.high();
     enop.high();
     out.low();
-    led.low();
+    led.high();
 }
 
 Hardware::~Hardware()

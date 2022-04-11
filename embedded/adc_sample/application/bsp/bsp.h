@@ -9,6 +9,7 @@ extern "C"
 #endif
     
     void memory_init(void);
+    int hexdump(const char* buf, int len);
 
 #ifdef __cplusplus
 }

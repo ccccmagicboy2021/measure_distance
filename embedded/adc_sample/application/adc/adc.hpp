@@ -25,6 +25,9 @@ class Adc
 		void init_dma(void);
 		void init_adc(void);
 		void init_timer(void);
+    public:
+        void disable_timer_pwm(void);
+        void enable_timer_pwm(void);
 		
 		
 	

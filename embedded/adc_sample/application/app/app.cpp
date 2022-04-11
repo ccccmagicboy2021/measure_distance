@@ -70,8 +70,9 @@ void App::uart_process(void)
 
 void App::idle_process(void)
 {
-    dwt.delay_ms(100);
-    hardware_n32_ch2840adx.led.toggle();
+    //dwt.delay_ms(100);
+    
+    //hardware_n32_ch2840adx.led.toggle();
     //printf("test!\r\n");
     
 	m_state = m_next_state;
