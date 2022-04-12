@@ -4,35 +4,55 @@
 char* memstr(char* full_data, int full_data_len, char* substr);
 void CreateChipXmlFile(const char* path);
 
-void	__stdcall	init(void)
+CString GetModuleDir() 
+{ 
+	HMODULE module = GetModuleHandle(0); 
+	char pFileName[MAX_PATH]; 
+	GetModuleFileName(module, pFileName, MAX_PATH); 
+	
+	CString csFullPath(pFileName); 
+	int nPos = csFullPath.ReverseFind( _T('\\') ); 
+	if( nPos < 0 ) 
+		return CString(""); 
+	else 
+		return csFullPath.Left( nPos ); 
+}
+
+void	__stdcall	init(support_mcu select)
 {
 	const char* sErr;
 	CString cmd;
-
-	TCHAR tchBuffer[MAX_PATH];
-	LPTSTR lpszCurDir;	
-	lpszCurDir = tchBuffer;	
-	CString	currentDir;
+	CString strFileName;
 
 	sErr = JLINKARM_Open();
 
-	::GetModuleFileName(NULL, lpszCurDir, MAX_PATH);
-	currentDir	=	lpszCurDir;
-	currentDir.MakeUpper();
-	currentDir.Replace(".EXE", ".xml");
+	strFileName=GetModuleDir() + "\\JLinkDevices.xml";
+	//JLinkDevices.xml
+	DeleteFile((LPSTR)(LPCTSTR)strFileName);
+	CreateChipXmlFile((LPSTR)(LPCTSTR)strFileName);
 
-	CreateChipXmlFile((LPSTR)(LPCTSTR)currentDir);
-
-	cmd.Format("JLinkDevicesXMLPath %s", currentDir);
+	cmd.Format("JLinkDevicesXMLPath %s", GetModuleDir());
+	TRACE(cmd);
 	JLINKARM_ExecCommand(cmd, NULL, 0);
 	
-	JLINKARM_ExecCommand("device HC32F46X", NULL, 0);
+	switch (select)
+	{
+	case HC32F460:
+		JLINKARM_ExecCommand("device HC32F460_cv", NULL, 0);
+		break;
+	case N32G4FRKE:
+		JLINKARM_ExecCommand("device N32G4FRKEQ7_cv", NULL, 0);
+		break;
+	default:
+		break;
+	}
+
 	JLINKARM_TIF_Select(JLINKARM_TIF_SWD);
 	JLINKARM_SetSpeed(25000);
 
 	JLINKARM_Connect();
 
-	DeleteFile((LPSTR)(LPCTSTR)currentDir);
+	//DeleteFile((LPSTR)(LPCTSTR)strFileName);
 }
 
 int	__stdcall	close(void)
@@ -47,7 +67,7 @@ int	__stdcall	close(void)
 void	__stdcall	about(void)
 {
 	char debug_str[1024] = {0};
-	sprintf(debug_str, "BFSKRAW");
+	sprintf(debug_str, "dll demo for BFSKRAW");
 	MessageBox(GetFocus(), debug_str, TEXT("BFSKRAW"), MB_ICONINFORMATION|MB_OK|MB_SYSTEMMODAL);
 }
 
@@ -58,18 +78,29 @@ unsigned int	__stdcall	read_raw(char *buf, unsigned int length)
 	return read_num;
 }
 
-unsigned int	__stdcall find_cb( void )
+unsigned int	__stdcall find_cb(support_mcu select)
 {
 	int i;
 	U32 addr;
 	U32 addr_cb;
-	CString cmd;
 	U8	buff[0x400];
 	U8	sub_str[] = "SEGGER RTT";
 	char	*pp	=	NULL;
+	CString temp_str;
 
-	addr = 0x1FFF8000;
-
+	switch (select)
+	{
+	case HC32F460:
+		addr = 0x1FFF8000;
+		break;
+	case N32G4FRKE:
+		addr = 0x20000000;
+		break;
+	default:
+		addr = 0x20000000;
+		break;
+	}
+	
 	for (i=0;i<192;i++)
 	{
 		addr_cb = addr + 0x400*i;
@@ -88,6 +119,8 @@ unsigned int	__stdcall find_cb( void )
 		}
 	}
 
+	temp_str.Format("cb address: 0x%08X", addr_cb);
+	TRACE(temp_str);
 	return addr_cb;
 }
 
@@ -149,22 +182,24 @@ void CreateChipXmlFile(const char* path)
 	TiXmlElement *ChipElement = new TiXmlElement("ChipInfo");
 	DeviceElement->LinkEndChild(ChipElement);
 	
-	ChipElement->SetAttribute("Vendor", "HDSC");
-	ChipElement->SetAttribute("Name", "HC32F46x");
+	ChipElement->SetAttribute("Vendor", "cccc");
+	ChipElement->SetAttribute("Name", "HC32F460_cv");
 	ChipElement->SetAttribute("WorkRAMAddr", "0x1FFF8000");
 	ChipElement->SetAttribute("WorkRAMSize", "0x2F000");
 	ChipElement->SetAttribute("Core", "JLINK_CORE_CORTEX_M4");
-	ChipElement->SetAttribute("JLinkScriptFile", "Devices/HDSC/HC32F46x.JLinkScript");
-
-	TiXmlElement *FlashElement = new TiXmlElement("FlashBankInfo");
-	DeviceElement->LinkEndChild(FlashElement);
-
-	FlashElement->SetAttribute("Name", "Flash_512K");
-	FlashElement->SetAttribute("BaseAddr", "0x0");
-	FlashElement->SetAttribute("MaxSize", "0x80000");
-	FlashElement->SetAttribute("Loader", "Devices/HDSC/HC32F46x.FLM");
-	FlashElement->SetAttribute("LoaderType", "FLASH_ALGO_TYPE_OPEN");
-	FlashElement->SetAttribute("AlwaysPresent", "1");
+////////////////////////////////////////////////////////////////////////////
+	TiXmlElement *DeviceElement1 = new TiXmlElement("Device");
+	RootElement->LinkEndChild(DeviceElement1);
+	
+	TiXmlElement *ChipElement1 = new TiXmlElement("ChipInfo");
+	DeviceElement1->LinkEndChild(ChipElement1);
+	
+	ChipElement1->SetAttribute("Vendor", "Nationstech");
+	ChipElement1->SetAttribute("Name", "N32G4FRKEQ7_cv");
+	ChipElement1->SetAttribute("WorkRAMAddr", "0x20000000");
+	ChipElement1->SetAttribute("WorkRAMSize", "0x00024000");
+	ChipElement1->SetAttribute("Core", "JLINK_CORE_CORTEX_M4");
+////////////////////////////////////////////////////////////////////////////
 	
 	myDocument.SaveFile(path);//保存到文件
 }

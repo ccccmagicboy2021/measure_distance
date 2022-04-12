@@ -1,1 +1,1 @@
-MSDEV.EXE burnhex.dsw /make "all - all" /out build_result.txt
+MSDEV.EXE bfskraw_tester.dsw /make "all - all" /out build_result.txt

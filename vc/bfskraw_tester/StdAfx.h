@@ -25,6 +25,7 @@
 // TODO: reference additional headers your program requires here
 //DLL
 #include "bfskraw.h"
+#pragma comment(lib, "bfskraw.lib")
 
 ///增强调试TRACE输出
 #ifdef _DEBUG
