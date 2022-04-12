@@ -7,9 +7,19 @@ import heapq
 import ctypes
 import queue
 import scipy.constants as C
+from enum import Enum
+from enum import unique
 
-READ_BUF_SIZE = 1024
-FREQ_OFFSET = 6e6
+READ_BUF_SIZE = 1024    #一次从缓冲区里读的量
+FREQ_OFFSET = 6e6       #频差
+
+@unique
+class support_mcu(Enum):
+    HC32F460 = 0
+    PT32Z192 = 1
+    ACM32F403 = 2
+    N32G4FRKE = 3
+    OTHERS = 4
 
 def getListMaxNumIndex(num_list,topk=3):
     '''
@@ -36,13 +46,16 @@ class DEV:
     设备类的基类
     '''
 
-    def __init__(self):
+    def __init__(self, mcu=support_mcu.N32G4FRKE):
         '''
         only for x86 windows
         '''
         self.__dll = ctypes.CDLL('./bfskraw.dll')
-        self.__dll.init()
-        self.__handle = self.__dll.find_cb()
+
+        print(mcu.value)
+        self.__dll.init(mcu.value)
+        self.__handle = self.__dll.find_cb(mcu.value)
+        print(f'{hex(self.__handle)}')
         self.__length = READ_BUF_SIZE
         self.__buf = (ctypes.c_uint8 * self.__length)()
         self.__fifo00 = queue.Queue(0)    #no limit size
@@ -69,7 +82,7 @@ class DEV:
 
     def get_range(self, dat0, dat1):
         '''
-        get range
+        get range测距
         '''
         a0 = np.array(dat0)
         a1 = np.array(dat1)

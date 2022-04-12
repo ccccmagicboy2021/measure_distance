@@ -13,6 +13,16 @@ from numpy.fft import fft, fftshift
 from rich.pretty import pprint as print
 import peakutils.peak
 import heapq
+from enum import Enum
+from enum import unique
+
+@unique
+class support_mcu(Enum):
+    HC32F460 = 0
+    PT32Z192 = 1
+    ACM32F403 = 2
+    N32G4FRKE = 3
+    OTHERS = 4
 
 
 def getListMaxNumIndex(num_list,topk=3):
@@ -58,10 +68,10 @@ print(dll)
 dll.about()
 
 #init
-dll.init()
+dll.init(support_mcu.N32G4FRKE.value)
 
 #find_cb
-handle = dll.find_cb()
+handle = dll.find_cb(support_mcu.N32G4FRKE.value)
 print(f'handle = {handle}')
 
 #open
