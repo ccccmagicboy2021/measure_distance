@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc;..\application\nr_micro_shell;..\application\EventRecorder;..\application\fifo;..\application\bsp;..\application\adc;..\application\hardware;..\application\uart;..\application\clk;..\application\do;..\application\DWTDelay;..\application\shell;..\application\app</IncludePath>
+              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc;..\application\nr_micro_shell;..\application\EventRecorder;..\application\fifo;..\application\bsp;..\application\adc;..\application\hardware;..\application\uart;..\application\clk;..\application\do;..\application\DWTDelay;..\application\shell;..\application\app;..\application\systick</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -437,6 +437,11 @@
               <FileName>nr_micro_shell_commands.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>..\source\nr_micro_shell_commands.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>systick.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\application\systick\systick.cpp</FilePath>
             </File>
           </Files>
         </Group>
@@ -647,6 +652,16 @@
               <FileName>SEGGER_RTT_printf.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\rtt\SEGGER_RTT_printf.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>doc</GroupName>
+          <Files>
+            <File>
+              <FileName>说明.txt</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\说明.txt</FilePath>
             </File>
           </Files>
         </Group>
@@ -985,7 +1000,7 @@
               <MiscControls></MiscControls>
               <Define>VECT_TAB_SRAM</Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc;..\application\hardware;..\application\nr_micro_shell;..\application\adc;..\application\EventRecorder;..\application\fifo;..\application\uart;..\application\clk;..\application\do;..\application\DWTDelay;..\application\shell;..\application\bsp</IncludePath>
+              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc;..\application\hardware;..\application\nr_micro_shell;..\application\adc;..\application\EventRecorder;..\application\fifo;..\application\uart;..\application\clk;..\application\do;..\application\DWTDelay;..\application\shell;..\application\bsp;..\application\systick</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1083,6 +1098,11 @@
               <FileName>nr_micro_shell_commands.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>..\source\nr_micro_shell_commands.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>systick.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\application\systick\systick.cpp</FilePath>
             </File>
           </Files>
         </Group>
@@ -1293,6 +1313,16 @@
               <FileName>SEGGER_RTT_printf.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\rtt\SEGGER_RTT_printf.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>doc</GroupName>
+          <Files>
+            <File>
+              <FileName>说明.txt</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\说明.txt</FilePath>
             </File>
           </Files>
         </Group>

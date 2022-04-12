@@ -4,11 +4,13 @@
 
 extern Hardware hardware_n32_ch2840adx;
 extern DWTDelay dwt;
+extern Systick tick;
 
 App::App()
 {
     m_state = UART_SEND_DATA;
     m_next_state = UART_SEND_DATA;
+    memset(m_tempData, 0, BLOCK_TRANSFER_SIZE * sizeof(FIFO_DataType));
 }
 
 App::~App()
@@ -40,15 +42,11 @@ void App::run(void)
 
 void App::sent_sample_data(void)
 {
-	FIFO_DataType tempData[BLOCK_TRANSFER_SIZE];
-	
-	memset(tempData, 0, BLOCK_TRANSFER_SIZE * sizeof(FIFO_DataType));
-	
 	//read fifo
 	if(BLOCK_TRANSFER_SIZE < FIFO_GetDataCount(&FIFO_Data[0]))
 	{
-		FIFO_ReadData(&FIFO_Data[0], tempData, BLOCK_TRANSFER_SIZE);
-		SEGGER_RTT_Write(1, tempData, sizeof(tempData));
+		FIFO_ReadData(&FIFO_Data[0], m_tempData, BLOCK_TRANSFER_SIZE);
+		SEGGER_RTT_Write(1, m_tempData, sizeof(m_tempData));
 	}
     
     m_state = IDLE;
@@ -71,8 +69,9 @@ void App::uart_process(void)
 void App::idle_process(void)
 {
     //dwt.delay_ms(100);
+    tick.delay_ms(100);
     
-    //hardware_n32_ch2840adx.led.toggle();
+    hardware_n32_ch2840adx.led.toggle();
     //printf("test!\r\n");
     
 	m_state = m_next_state;

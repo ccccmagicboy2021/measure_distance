@@ -22,7 +22,7 @@ do \
 
 #define APP_VERSION             "1.0.0"                 /**< °æ±¾ºÅ */
 #define ALL_UPLOAD_DELAY		100
-#define BLOCK_TRANSFER_SIZE 500
+#define BLOCK_TRANSFER_SIZE     500
 /////////////////////////////////////////////////////////////////////
 #define	USER_PARAMETER_START_SECTOR_ADDRESS0	0x0007A000u
 #define	USER_PARAMETER_START_SECTOR_ADDRESS1	0x0007C000u

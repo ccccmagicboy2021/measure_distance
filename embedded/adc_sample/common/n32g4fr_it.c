@@ -36,9 +36,11 @@
 #include "n32g4fr.h"
 #include "sys.h"
 
-uint16_t capture = 0;
 volatile uint16_t g_radar_if_adc_value;     //radar if adc value
 volatile uint16_t g_light_adc_value;		//light sensor adc value
+extern volatile uint32_t delay;
+volatile FIFO_DataType adc_value;
+/////////////////////////////////////////////////////////////////////////
 
 /** @addtogroup N32G4FR_StdPeriph_Template
  * @{
@@ -120,6 +122,10 @@ void DebugMon_Handler(void)
  */
 void SysTick_Handler(void)
 {
+    if (0U != delay)
+	{
+        delay--;
+    }
 }
 
 /**
@@ -148,9 +154,7 @@ void DMA_IRQ_HANDLER(void)
  */
 
 void TIM1_CC_IRQHandler(void)
-{
-    FIFO_DataType adc_value;
-    
+{   
     if (TIM_GetIntStatus(TIM1, TIM_INT_CC1) != RESET)
     {
         TIM_ClrIntPendingBit(TIM1, TIM_INT_CC1);
@@ -169,7 +173,7 @@ void TIM1_CC_IRQHandler(void)
         
         adc_value.Val1 = g_radar_if_adc_value;	//if
         adc_value.Val2 = g_light_adc_value;	    //light
-					
+		
 		if (GPIO_ReadInputDataBit(GPIOA, GPIO_PIN_10) == Bit_RESET)
 		{
 			adc_value.Val3 = 0;
@@ -178,6 +182,7 @@ void TIM1_CC_IRQHandler(void)
 		{
 			adc_value.Val3 = 1;
 		}
+        adc_value.Val4 = 0;
 		FIFO_WriteOneData(&FIFO_Data[0], adc_value);
         
     }
