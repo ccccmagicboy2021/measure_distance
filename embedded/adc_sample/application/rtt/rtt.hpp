@@ -6,7 +6,7 @@
 class Rtt 
 {
 	public:
-		char m_JS_RTT_UpBuffer[2048*8*2];		//2k sample 8bytes single item 2s raw data
+		char m_JS_RTT_UpBuffer[2048*4*2];		//2k sample 4bytes single item 2s raw data
 		
 	public:
         Rtt();

@@ -172,7 +172,7 @@ void TIM1_CC_IRQHandler(void)
         TIM_ClrIntPendingBit(TIM1, TIM_INT_CC4);
         
         adc_value.Val1 = g_radar_if_adc_value;	//if
-        adc_value.Val2 = g_light_adc_value;	    //light
+        //adc_value.Val2 = g_light_adc_value;	    //light
 		
 		if (GPIO_ReadInputDataBit(GPIOA, GPIO_PIN_10) == Bit_RESET)
 		{
@@ -182,7 +182,7 @@ void TIM1_CC_IRQHandler(void)
 		{
 			adc_value.Val3 = 1;
 		}
-        adc_value.Val4 = 0;
+        //adc_value.Val4 = 0;
 		FIFO_WriteOneData(&FIFO_Data[0], adc_value);
         
     }
