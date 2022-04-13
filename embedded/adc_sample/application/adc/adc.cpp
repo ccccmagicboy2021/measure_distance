@@ -12,8 +12,10 @@ void Adc::init(void)
 	
 	init_dma();
 	init_adc();
+    init_timer_pin(3);//for pwm cc output
 	init_timer();
-    disable_timer_pwm();
+    enable_timer_pwm();
+    start_timer();
 }
 
 void Adc::init_pin(GPIO_Module* port, unsigned int pin)
@@ -125,14 +127,6 @@ void Adc::init_timer(void)
 
     NVIC_Init(&NVIC_InitStructure);
     
-	//init pin
-    GPIO_InitType GPIO_InitStructure;
-    
-    GPIO_InitStructure.Pin        = GPIO_PIN_10;        //TIM1_CH3
-    GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_AF_PP;   //not gpio use
-    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_InitPeripheral(GPIOA, &GPIO_InitStructure);
-    
 	//init timer
     TIM_TimeBaseInitType TIM_TimeBaseStructure;
     OCInitType TIM_OCInitStructure;
@@ -165,18 +159,77 @@ void Adc::init_timer(void)
 
     //////////////////////////////////////////////////////
     TIM_ConfigArPreload(TIM1, ENABLE);
-    TIM_Enable(TIM1, ENABLE);
-    TIM_ConfigInt(TIM1, TIM_INT_CC3 | TIM_INT_CC4, ENABLE);
+    TIM_ConfigInt(TIM1, TIM_INT_CC4, ENABLE);       //use CC4 irq
 }
 
 void Adc::enable_timer_pwm(void)
 {
+    init_timer_pin(3);
     TIM_EnableCtrlPwmOutputs(TIM1, ENABLE);
 }
 
 void Adc::disable_timer_pwm(void)
 {
     TIM_EnableCtrlPwmOutputs(TIM1, DISABLE);
+}
+
+void Adc::init_timer_pin(unsigned int mode)
+{
+	//init pin
+    GPIO_InitType GPIO_InitStructure;
+ 
+    switch (mode)
+    {
+        case 0:
+            GPIO_InitStructure.Pin        = GPIO_PIN_10;        //TIM1_CH3
+            GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_Out_PP;   //gpio use
+            GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+            GPIO_InitPeripheral(GPIOA, &GPIO_InitStructure);
+            GPIO_ResetBits(GPIOA, GPIO_PIN_10);   //low
+            break;
+        case 1:
+            GPIO_InitStructure.Pin        = GPIO_PIN_10;        //TIM1_CH3
+            GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_Out_PP;   //gpio use
+            GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+            GPIO_InitPeripheral(GPIOA, &GPIO_InitStructure);
+            GPIO_SetBits(GPIOA, GPIO_PIN_10);  //high
+            break;
+        case 2:
+            GPIO_InitStructure.Pin        = GPIO_PIN_10;        //TIM1_CH3
+            GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_Out_OD;   //gpio use
+            GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+            GPIO_InitPeripheral(GPIOA, &GPIO_InitStructure);
+            break;
+        case 3:
+            GPIO_InitStructure.Pin        = GPIO_PIN_10;        //TIM1_CH3
+            GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_AF_PP;    //not gpio use
+            GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+            GPIO_InitPeripheral(GPIOA, &GPIO_InitStructure);
+            break;
+        default:
+            break;
+    }
+    
+    if (GPIO_ReadInputDataBit(GPIOA, GPIO_PIN_10) == Bit_RESET)
+	{
+		CV_LOG("[%s] - PA10 = 0\r\n", __func__);
+	}
+    else
+    {
+        CV_LOG("[%s] - PA10 = 1\r\n", __func__);
+    }
+}
+
+void Adc::stop_timer(void)
+{
+    //
+    TIM_Enable(TIM1, DISABLE);
+}
+
+void Adc::start_timer(void)
+{
+    //
+    TIM_Enable(TIM1, ENABLE);
 }
 
 Adc::Adc()

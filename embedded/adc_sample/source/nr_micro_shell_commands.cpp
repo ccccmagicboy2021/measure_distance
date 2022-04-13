@@ -38,6 +38,8 @@
 #include "sys.hpp"
 
 extern Hardware hardware_n32_ch2840adx;
+extern Systick tick;
+extern DWTDelay dwt;
 
 /**
  * @brief ls command
@@ -109,10 +111,36 @@ void shell_hexdump_cmd(char argc, char *argv)
     }
 }
 
+void shell_start_cmd(char argc, char *argv)
+{
+    if (1 == argc)
+    {
+        hardware_n32_ch2840adx.adc_all.start_timer();
+    }
+    else
+    {
+		shell_printf("useage: start\r\n");
+    }
+}
+
+void shell_stop_cmd(char argc, char *argv)
+{
+    if (1 == argc)
+    {
+        hardware_n32_ch2840adx.adc_all.stop_timer();
+    }
+    else
+    {
+		shell_printf("useage: stop\r\n");
+    }
+}
+
 void shell_quit_cmd(char argc, char *argv)
 {  
     if (1 == argc)
     {
+        hardware_n32_ch2840adx.adc_all.stop_timer();
+        dwt.delay_ms(500);
         NVIC_SystemReset();
     }
     else
@@ -127,12 +155,25 @@ void shell_mode_cmd(char argc, char *argv)
     {
         if (!strcmp("0", &argv[argv[1]]))
         {
-            shell_printf("mode 0(cw mode) select\r\n");
+            shell_printf("mode 0(cw mode, pin low) select\r\n");
             hardware_n32_ch2840adx.adc_all.disable_timer_pwm();
+            hardware_n32_ch2840adx.adc_all.init_timer_pin(0);
         }
         else if (!strcmp("1", &argv[argv[1]]))
         {
-            shell_printf("mode 1(fsk mode) select\r\n");
+            shell_printf("mode 1(cw mode, pin high) select\r\n");
+            hardware_n32_ch2840adx.adc_all.disable_timer_pwm();
+            hardware_n32_ch2840adx.adc_all.init_timer_pin(1);        
+        }
+        else if (!strcmp("2", &argv[argv[1]]))
+        {
+            shell_printf("mode 1(cw mode, pin od) select\r\n");
+            hardware_n32_ch2840adx.adc_all.disable_timer_pwm();
+            hardware_n32_ch2840adx.adc_all.init_timer_pin(2);        
+        }
+        else if (!strcmp("3", &argv[argv[1]]))
+        {
+            shell_printf("mode 3(fsk mode) select\r\n");
             hardware_n32_ch2840adx.adc_all.enable_timer_pwm();
         }
         else
@@ -156,11 +197,13 @@ NR_SHELL_CMD_EXPORT(quit, shell_quit_cmd);
 #else
 const static_cmd_st static_cmd[] =
 	{
-		{"ls", shell_ls_cmd},
+//		{"ls", shell_ls_cmd},
 //		{"test", shell_test_cmd},
         {"hexdump", shell_hexdump_cmd},
         {"quit", shell_quit_cmd},
         {"mode", shell_mode_cmd},
+        {"stop", shell_stop_cmd},
+        {"start", shell_start_cmd},
 		{"\0", NULL}};
 #endif
 

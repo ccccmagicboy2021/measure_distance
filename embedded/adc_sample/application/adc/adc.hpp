@@ -28,9 +28,10 @@ class Adc
     public:
         void disable_timer_pwm(void);
         void enable_timer_pwm(void);
-		
-		
-	
+        void timer_pin_gpio(unsigned int pin_level);
+        void init_timer_pin(unsigned int mode);
+        void stop_timer(void);
+        void start_timer(void);
 };
 
 #endif//_9DB2BB1F_5CEA_4AF9_9130_2111D1BE73B5_

@@ -7,10 +7,10 @@ Hardware::Hardware()
     out.init_pin(GPIOA, GPIO_PIN_8);
     led.init_pin(GPIOA, GPIO_PIN_12);
     
-    enrf.high();
-    enop.high();
-    out.low();
-    led.high();
+    enrf.high();        //rf enable
+    enop.high();        //op enable
+    out.low();          //not use
+    led.high();         //led off
 }
 
 Hardware::~Hardware()
