@@ -5,6 +5,12 @@
 #include "arm_math.h"
 #include "memalloc.h"
 #include "fp.h"
+#include "math_fp.h"
+#include "corrcoef.h"
+
+#ifdef SEND_TO_MATLAB_TEST
+#include "test_usart.h"
+#endif
 
 #define LIGHT_SPEED                             (3e8f)
 
@@ -13,10 +19,7 @@
 #define FS                                      (2000U)
 #define FS_EQ                                   (FS / 2)
 
-#define MIN_INDEX_1                             (256U)
-#define MIN_INDEX_2                             (258U)
-#define MIN_INDEX_3                             (261U)
-#define MAX_INDEX                               (358U)
+#define MAX_INDEX                               (359U)
 
 #define MAX_BOTTOM_NOISE_INDEX                  (448U)
 #define MIN_BOTTOM_NOISE_INDEX                  (384U)
@@ -24,21 +27,26 @@
 #define FREQ_TIMES1                             (15U)
 #define FREQ_TIMES2                             (10U)
 
-#define SNR                                     (0.8f)
+#define CORR_COEF_TIME_TH                       0  // (0f) << 15
+#define CORR_COEF_FREQ_TH                       27853  // (0.85f) << 15
+#define SPEED_TH                                102  // (0.1f) << 10
+#define DISTANCE_TH                             12288  // (12) << 10
 
-extern const float freq_linspace[];
+#define SECNUM_DISTANCE                         (0.512f)
 
-int find_max_peak(float *data, int len)
+extern const s16 freq_linspace[];
+
+int find_max_peak(s32 *data, int len)
 {
     int i, max = 0;
-    float temp, peak = 0;
+    s32 temp, peak = 0;
 
     for (i = 1; i < len - 1; i++) {
         temp = data[i];
         if (temp > data[i - 1] && temp > data[i + 1]) {
             if (temp > peak) {
                 peak = temp;
-                max = i;
+                max = i + 1;
             }
         }
     }
@@ -48,89 +56,114 @@ int find_max_peak(float *data, int len)
 
 int vd_calculation(s16 *data_cumulation_1, int len1, s16 *data_cumulation_2, int len2, measure_info_t *measure_info)
 {
-    int i, I1, I2;
+    int I1, I2;
     s16 *signal_1, *signal_2, mean;
-    float *spectrum1, *spectrum2, dop_freq, angle1, angle2, M1, M2, *magnitude1, *magnitude2;
-    float delta_phi, delta_phi_correct;
-    s32 min_index;
-    float std1, std2, *temp1, *temp2, mean_f, coeff, cov;
-    float max_mag, bottom_noise;
+    s32 corr_coef_time, corr_coef_freq, min_index, max_mag, bottom_noise, M1, M2, angle1, angle2, delta_phi, delta_phi_correct, dop_freq;
+    s32 *magnitude1, *magnitude2, *spectrum1, *spectrum2, *temp1, *temp2;
     u32 index;
 
     signal_1 = alloc_mem(len1 * sizeof(s16));
     signal_2 = alloc_mem(len2 * sizeof(s16));
-    spectrum1 = alloc_mem(len1 * 2 * sizeof(float));
-    spectrum2 = alloc_mem(len2 * 2 * sizeof(float));
-    magnitude1 = alloc_mem(len1 * sizeof(float));
-    magnitude2 = alloc_mem(len2 * sizeof(float));
+    spectrum1 = alloc_mem(len1 * 2 * sizeof(s32));
+    spectrum2 = alloc_mem(len2 * 2 * sizeof(s32));
+    magnitude1 = alloc_mem(len1 * sizeof(s32));
+    magnitude2 = alloc_mem(len2 * sizeof(s32));
+    temp1 = alloc_mem(len1 * sizeof(s32));
+    temp2 = alloc_mem(len1 * sizeof(s32));
 
     arm_mean_q15(data_cumulation_1, len1 - 1, &mean);
     arm_offset_q15(data_cumulation_1, 0 - mean, signal_1, len1 - 1);
     arm_mean_q15(data_cumulation_2, len2 - 1, &mean);
     arm_offset_q15(data_cumulation_2, 0 - mean, signal_2, len2 - 1);
 
+    for(int i = 0; i < len1 - 1; i++) {
+        temp1[i] = (s32)signal_1[i];
+        temp2[i] = (s32)signal_2[i];
+    }
+    corr_coef_time = corrcoef_q31(temp1, temp2, len1 - 1);
+    #ifdef SEND_TO_MATLAB_TEST
+        usart_polling_send_data_no_head((u8 *)&corr_coef_time, 4);
+    #endif
+
+    free_mem(temp2);
+    free_mem(temp1);
+
     apfft(signal_1, len1 - 1, spectrum1);
     apfft(signal_2, len2 - 1, spectrum2);
+    //  << 17
 
-    arm_cmplx_mag_f32(spectrum1, magnitude1, len1);
-    arm_cmplx_mag_f32(spectrum2, magnitude2, len2);
+    arm_cmplx_mag_q31(spectrum1, magnitude1, len1);
+    arm_cmplx_mag_q31(spectrum2, magnitude2, len2);
+    //  << 16
 
-    arm_max_f32(magnitude1, len1, &max_mag, &index);
-    arm_mean_f32(&magnitude1[MIN_BOTTOM_NOISE_INDEX], MAX_BOTTOM_NOISE_INDEX - MIN_BOTTOM_NOISE_INDEX + 1,
-                    &bottom_noise);
-    if (max_mag > bottom_noise * FREQ_TIMES1)
-        min_index = MIN_INDEX_1;
-    else if (max_mag > bottom_noise * FREQ_TIMES2)
-        min_index = MIN_INDEX_2;
-    else
-        min_index = MIN_INDEX_3;
+    // arm_max_q31(magnitude1, len1, &max_mag, &index);
+    // arm_mean_q31(&magnitude1[MIN_BOTTOM_NOISE_INDEX], MAX_BOTTOM_NOISE_INDEX - MIN_BOTTOM_NOISE_INDEX + 1,
+    //                 &bottom_noise);
+    // if (max_mag > bottom_noise * FREQ_TIMES1)
+    //     min_index = 256;
+    // else if (max_mag > bottom_noise * FREQ_TIMES2)
+    //     min_index = 258;
+    // else
+        min_index = 261;
 
-    temp1 = (float *)signal_1;
-    temp2 = (float *)signal_2;
+    corr_coef_freq = corrcoef_q31(&magnitude1[min_index], &magnitude2[min_index], MAX_INDEX - min_index);
+    #ifdef SEND_TO_MATLAB_TEST
+        usart_polling_send_data_no_head((u8 *)&corr_coef_freq, 4);
+    #endif
 
-    arm_std_f32(&magnitude1[min_index], MAX_INDEX - min_index + 1, &std1);
-    arm_std_f32(&magnitude2[min_index], MAX_INDEX - min_index + 1, &std2);
-
-    arm_offset_f32(&magnitude1[min_index], 0 - bottom_noise, temp1, MAX_INDEX - min_index + 1);
-    arm_mean_f32(&magnitude2[min_index], MAX_INDEX - min_index + 1, &mean_f);
-    arm_offset_f32(&magnitude2[min_index], 0 - mean_f, temp2, MAX_INDEX - min_index + 1);
-    for (i = 0; i < MAX_INDEX - min_index + 1; i++) {
-        temp1[i] = temp1[i] * temp2[i];
-    }
-    arm_mean_f32(temp1, MAX_INDEX - min_index + 1, &cov);
-    coeff = cov / (std1 * std2);
-
-    if (coeff < SNR)
-        goto exit;
-
-    I1 = find_max_peak(&magnitude1[min_index], MAX_INDEX - min_index + 1);
-    M1 = magnitude1[I1 + min_index];
-    I2 = find_max_peak(&magnitude2[min_index], MAX_INDEX - min_index + 1);
-    M2 = magnitude2[I2 + min_index];
+    I1 = find_max_peak(&magnitude1[min_index], MAX_INDEX - min_index);
+    M1 = magnitude1[min_index + I1 - 1];
+    I2 = find_max_peak(&magnitude2[min_index], MAX_INDEX - min_index);
+    M2 = magnitude2[min_index + I2 - 1];
     if (M2 > M1)
         I1 = I2;
     else
         I2 = I1;
 
-    index = min_index + I1;
+    index = min_index + I1 - 1;
     dop_freq = freq_linspace[index];
 
-    angle1 = atan2(spectrum1[2 * index + 1], spectrum1[2 * index]);
-    angle2 = atan2(spectrum2[2 * index + 1], spectrum2[2 * index]);
+    angle1 = arctan2(spectrum1[2 * index + 1], spectrum1[2 * index]);
+    angle2 = arctan2(spectrum2[2 * index + 1], spectrum2[2 * index]);
+    // <<15
 
     delta_phi = angle2 - angle1;
     if (delta_phi < 0)
-        delta_phi += 2 * PI;
+        delta_phi += 205887;  // += 2 * PI <<15 205887
 
-    if (delta_phi > PI) {
-        delta_phi_correct = 2 * PI - delta_phi;
+    if (delta_phi > 102943) {  // PI <<15 102943
+        delta_phi_correct = 205887 - delta_phi;
         dop_freq = -dop_freq;
     } else {
         delta_phi_correct = delta_phi;
     }
 
-    measure_info->speed = dop_freq * LIGHT_SPEED / (2 * FC_FREQ);
-    measure_info->distance = ((float)LIGHT_SPEED) / (4 * PI * FREQ_OFFSET) * delta_phi_correct;
+    measure_info->speed = (dop_freq * 467) >> 11;
+    // <<10
+    // 467 = (LIGHT_SPEED / (2 * FC_FREQ)) << 15
+
+
+    if (corr_coef_time < measure_th.time_th || corr_coef_freq < measure_th.freq_th || \
+                     ((measure_info->speed < measure_th.speed_th) && (measure_info->speed > -measure_th.speed_th))) {
+        measure_info->distance = measure_info->distance - measure_info->speed / 8;
+    } else {
+        measure_info->distance = ((delta_phi_correct * 4072) >> 15);
+        // <<10
+        // 4072 = (((float)LIGHT_SPEED) / (4 * PI * FREQ_OFFSET)) << 10
+    }
+
+    measure_info->distance = measure_info->distance - measure_info->speed * 64 / 100;
+
+    if (measure_info->distance < 0) {
+        measure_info->distance = 0;
+    } else if (measure_info->distance > measure_th.distance_th) {
+        measure_info->distance = measure_th.distance_th;
+    }
+	
+    if (M2 > M1)
+        measure_info->max_amplitude = M2>>17;
+    else
+        measure_info->max_amplitude = M1>>17;
 
 exit:
     free_mem(magnitude2);

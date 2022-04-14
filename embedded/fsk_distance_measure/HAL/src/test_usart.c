@@ -17,7 +17,7 @@
 #define USART_TX_PIN                    (Pin02)
 #define USART_TX_FUNC                   (Func_Usart3_Tx)
 
-void usart_polling_send_data(uint8_t *buffer, uint32_t lenth)
+void usart_polling_send_data(uint8_t *data, uint32_t lenth)
 {
     while (Reset == USART_GetStatus(USART_CH, UsartTxEmpty)) {}
     USART_SendData(USART_CH, 0xABu);
@@ -25,7 +25,15 @@ void usart_polling_send_data(uint8_t *buffer, uint32_t lenth)
     USART_SendData(USART_CH, 0xCDu);
     for (int i = 0; i < lenth; i++) {
         while (Reset == USART_GetStatus(USART_CH, UsartTxEmpty)) {}
-        USART_SendData(USART_CH, buffer[i]);
+        USART_SendData(USART_CH, data[i]);
+    }
+}
+
+void usart_polling_send_data_no_head(uint8_t *data, uint32_t lenth)
+{
+    for (int i = 0; i < lenth; i++) {
+        while (Reset == USART_GetStatus(USART_CH, UsartTxEmpty)) {}
+        USART_SendData(USART_CH, data[i]);
     }
 }
 

@@ -1,7 +1,7 @@
 #ifndef __SYSCLK_H
 #define __SYSCLK_H
 
-#include "hc32_ddl.h"
+#include "sys.h"
 
 
 extern void SysClkInit(void);

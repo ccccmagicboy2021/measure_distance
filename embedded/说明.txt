@@ -1,10 +1,10 @@
-.\fsk_distance_measure(KEIL5)(AC5)(flashcode)(N32)(浮点运算)(OK?，不再更新)
+.\fsk_distance_measure(KEIL5)(AC6)(flashcode)(N32)(定点运算)(OK?)
 .\test_gpio(KEIL5)(AC6)(flashcode)(ramcode)(N32)(OK)
 .\test_uart(KEIL5)(AC6)(flashcode)(ramcode)(N32)(OK)
 .\test_coremark(KEIL5)(AC6)(flashcode)(ramcode)(N32)(OK)
 .\test_dhrystone(KEIL5)(AC6)(flashcode)(ramcode)(N32)(OK)
 .\test_adc(KEIL5)(AC6)(flashcode)(ramcode)(N32)(OK)
 .\test_pwm(KEIL5)(AC6)(flashcode)(ramcode)(N32)(OK)
-.\adc_sample(KEIL5)(AC6)(flashcode)(ramcode)(CPP)(N32)(OK?)
+.\adc_sample(KEIL5)(AC6)(flashcode)(ramcode)(CPP)(N32)(OK)
 
 

@@ -8,18 +8,18 @@
 #endif
 
 uint16_t  Adc1SaValue[ADC1_CH_COUNT] = {0};
-u8 buffer[ELEMENT_SIZE * ELEMENT_COUNT];
+u32 buffer[(ELEMENT_SIZE / 4) * ELEMENT_COUNT];
 static stc_dma_llp_descriptor_t stcLlpDesc[ELEMENT_COUNT] = {0};
 ring_buf_t ring_buffer = {
     .rd = 0,
     .wr = 0,
     .max_count = ELEMENT_COUNT,
     .elem_size = ELEMENT_SIZE,
-    .buf = buffer,
+    .buf = (u8 *)buffer,
 };
 
-#define LIGHT_SAMPLE_NUM			(2u)
-#define LIGHT_BLK_COUNT				(6000u)
+#define LIGHT_SAMPLE_NUM            (2u)
+#define LIGHT_BLK_COUNT             (6000u)
 u8 light_buffer[LIGHT_SAMPLE_NUM][sizeof(u16)];
 u16 light_real_data;
 static stc_dma_llp_descriptor_t light_llp_desc[LIGHT_SAMPLE_NUM] = {0};
@@ -44,8 +44,7 @@ void AdcSetPinMode(uint8_t u8AdcPin, en_pin_mode_t enMode);
 
 void ADC1B_IrqHandler(void)
 {
-    if (Set == ADC_GetEocFlag(M4_ADC1, ADC_SEQ_B))
-    {
+    if (Set == ADC_GetEocFlag(M4_ADC1, ADC_SEQ_B)) {
         ADC_ClrEocFlag(M4_ADC1, ADC_SEQ_B);
     }
 }
@@ -201,7 +200,7 @@ void AdcChannelConfig(void)
 {
     stc_adc_ch_cfg_t stcChCfg;
     uint8_t au8Adc1SaSampTime[ADC1_SA_CHANNEL_COUNT] = ADC1_SA_CHANNEL_SAMPLE_TIME;
-   
+
 
     MEM_ZERO_STRUCT(stcChCfg);
 
@@ -296,7 +295,7 @@ void DmaInitConfig(void)
             stcLlpDesc[i].DARx = (u32)(&buffer[0]);
             stcLlpDesc[i].LLPx = (u32)(&stcLlpDesc[0]);
         } else {
-            stcLlpDesc[i].DARx = (u32)(&buffer[ELEMENT_SIZE * (i + 1)]);
+            stcLlpDesc[i].DARx = (u32)(&buffer[(ELEMENT_SIZE / 4) * (i + 1)]);
             stcLlpDesc[i].LLPx = (u32)(&stcLlpDesc[i + 1]);
         }
     }
@@ -319,14 +318,14 @@ void DmaInitConfig(void)
     stcDmaCfg.stcDmaChCfg.enSrcNseqEn = Disable;
     stcDmaCfg.stcDmaChCfg.enDesNseqEn = Disable;
     stcDmaCfg.stcDmaChCfg.enTrnWidth  = Dma16Bit;
-    stcDmaCfg.stcDmaChCfg.enLlpEn     = Enable;	
+    stcDmaCfg.stcDmaChCfg.enLlpEn     = Enable;
     stcDmaCfg.stcDmaChCfg.enLlpMd = LlpWaitNextReq;
     stcDmaCfg.u32DmaLlp = (u32)(&stcLlpDesc[0]);
     /* Enable DMA interrupt. */
     stcDmaCfg.stcDmaChCfg.enIntEn     = Enable;
 
     PWC_Fcg0PeriphClockCmd(ADC1_SA_DMA_PWC, Enable);
-    DMA_InitChannel(ADC1_SA_DMA_UNIT, ADC1_SA_DMA_CH, &stcDmaCfg);	
+    DMA_InitChannel(ADC1_SA_DMA_UNIT, ADC1_SA_DMA_CH, &stcDmaCfg);
     DMA_Cmd(ADC1_SA_DMA_UNIT, Enable);
     DMA_ChannelCmd(ADC1_SA_DMA_UNIT, ADC1_SA_DMA_CH, Enable);
     DMA_DisableIrq(ADC1_SA_DMA_UNIT, ADC1_SA_DMA_CH, BlkTrnCpltIrq);
@@ -356,7 +355,7 @@ void DmaInitConfig(void)
     stcDmaCfg.stcDmaChCfg.enSrcNseqEn = Disable;
     stcDmaCfg.stcDmaChCfg.enDesNseqEn = Disable;
     stcDmaCfg.stcDmaChCfg.enTrnWidth  = Dma16Bit;
-    stcDmaCfg.stcDmaChCfg.enLlpEn     = Enable;	
+    stcDmaCfg.stcDmaChCfg.enLlpEn     = Enable;
     stcDmaCfg.stcDmaChCfg.enLlpMd = LlpWaitNextReq;
     stcDmaCfg.u32DmaLlp = (u32)(&light_llp_desc[0]);
     /* Enable DMA interrupt. */

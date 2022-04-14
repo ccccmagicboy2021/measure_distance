@@ -45,7 +45,8 @@ void SysClkInit(void)
 
     /* flash read wait cycle setting */
     EFM_Unlock();
-    EFM_SetLatency(EFM_LATENCY_4);
+    EFM_SetLatency(EFM_LATENCY_5);
+    EFM_InstructionCacheCmd(Enable);
     EFM_Lock();
 
     /* Enable MPLL. */
