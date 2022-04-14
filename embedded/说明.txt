@@ -1,4 +1,4 @@
-.\adc_sample(AC6)(flashcode)(ramcode)
+.\adc_sample(AC6)(flashcode)(ramcode)(OK)
 .\adc_sample_with_pwm-8161-4k(停更)
 .\adc_sample_with_pwm8161-512-2K(停更)
 都为华大F460单片机的工程
@@ -11,18 +11,18 @@ header0: 0xAB
 header1: 0xCD
 data_pack: 192字节
 
-.\test_axf(AC6)(flashcode)(ramcode)
-.\test_freertos(AC5)(flashcode)(ramcode)
-.\test_threadx(AC5)(flashcode)(ramcode)
+.\test_axf(AC6)(flashcode)(ramcode)(OK)
+.\test_freertos(AC5)(flashcode)(ramcode)(OK)
+.\test_threadx(AC5)(flashcode)(ramcode)(OK)
 为试验性工程，暂时也用的华大F460单片机
 
-.\test_static_lib(AC6)(flashcode)(lib)
+.\test_static_lib(AC6)(flashcode)(lib)(OK)
 为静态库封装及调试的例子
 
-.\test_coremark(AC6)(flashcode)(ramcode)
-.\test_dhrystone(AC6)(flashcode)(ramcode)
+.\test_coremark(AC6)(flashcode)(ramcode)(OK)
+.\test_dhrystone(AC6)(flashcode)(ramcode)(OK)
 为基准测试例子程序
 
-.\fsk_distance_measure(AC5)(flashcode)(配CD2840ADX)(定点计算)(更新中)
+.\fsk_distance_measure(AC5)(flashcode)(配CD2840ADX)(定点计算)(OK)
 
 
