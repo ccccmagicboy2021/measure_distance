@@ -76,7 +76,7 @@ int micromotion_detection(s16 *data, int len, s32 offset)
     cfar_ca(temp_input, total, temp_output, &output_len);
 
     for (i = 0; i < output_len; i++) {
-        if (temp_input[i] > (temp_output[i] + FCONV(offset, 10, 17 + q))) {
+        if ((s64)temp_input[i] > ((s64)temp_output[i] + ((s64)offset << (7 + q)))) {
             ret = 1;
             break;
         }

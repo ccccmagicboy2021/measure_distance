@@ -8,11 +8,7 @@ void alphabeta_filter(int fs, int data_length, measure_info_t *measure_info)
 {
     s32 vm, xm, vk, xk, rvk, rk;
 
-    if (measure_info->speed_abf * measure_info->speed < 0) {
-        measure_info->speed_abf = 0;
-    }
-
-    vm = (measure_info->speed_abf + measure_info->speed) / 2;
+    vm = measure_info->speed;
     xm = (measure_info->distance_abf + measure_info->distance) / 2;
     vk = measure_info->speed_abf;
     xk = measure_info->distance_abf - measure_info->speed_abf * data_length / fs;

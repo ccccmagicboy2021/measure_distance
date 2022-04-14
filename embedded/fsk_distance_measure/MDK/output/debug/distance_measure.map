@@ -530,167 +530,166 @@ Image Symbol Table
     i.all_data_update                        0x00007bb8   Section        0  protocol.o(i.all_data_update)
     i.alloc_mem                              0x00007bd4   Section        0  memalloc.o(i.alloc_mem)
     i.alphabeta_filter                       0x00007c94   Section        0  alphabeta_filter.o(i.alphabeta_filter)
-    i.apfft                                  0x00007d3c   Section        0  apfft.o(i.apfft)
-    i.app                                    0x00007e30   Section        0  app.o(i.app)
-    i.arctan                                 0x00007e6c   Section        0  math_fp.o(i.arctan)
-    i.arctan2                                0x00007ea4   Section        0  math_fp.o(i.arctan2)
-    i.arm_absmax_q31                         0x00007f70   Section        0  statisticsfunctions.o(i.arm_absmax_q31)
-    i.arm_bitreversal_32                     0x00008008   Section        0  transformfunctions.o(i.arm_bitreversal_32)
-    i.arm_cfft_q31                           0x00008044   Section        0  transformfunctions.o(i.arm_cfft_q31)
-    i.arm_cfft_radix4by2_inverse_q31         0x000080f0   Section        0  transformfunctions.o(i.arm_cfft_radix4by2_inverse_q31)
-    i.arm_cfft_radix4by2_q31                 0x000081b0   Section        0  transformfunctions.o(i.arm_cfft_radix4by2_q31)
-    i.arm_cmplx_mag_q31                      0x00008270   Section        0  complexmathfunctions.o(i.arm_cmplx_mag_q31)
-    i.arm_max_q31                            0x0000829c   Section        0  statisticsfunctions.o(i.arm_max_q31)
-    i.arm_mean_q15                           0x000082bc   Section        0  statisticsfunctions.o(i.arm_mean_q15)
-    i.arm_mean_q31                           0x000082d8   Section        0  statisticsfunctions.o(i.arm_mean_q31)
-    i.arm_offset_q15                         0x00008308   Section        0  basicmathfunctions.o(i.arm_offset_q15)
-    i.arm_radix4_butterfly_inverse_q31       0x00008320   Section        0  transformfunctions.o(i.arm_radix4_butterfly_inverse_q31)
-    i.arm_radix4_butterfly_q31               0x000086f4   Section        0  transformfunctions.o(i.arm_radix4_butterfly_q31)
-    i.arm_rfft_init_q31                      0x00008ac4   Section        0  transformfunctions.o(i.arm_rfft_init_q31)
-    i.arm_rfft_q31                           0x00008b8c   Section        0  transformfunctions.o(i.arm_rfft_q31)
-    i.arm_shift_q31                          0x00008bf0   Section        0  basicmathfunctions.o(i.arm_shift_q31)
-    i.arm_split_rfft_q31                     0x00008c3a   Section        0  transformfunctions.o(i.arm_split_rfft_q31)
-    i.arm_split_rifft_q31                    0x00008d10   Section        0  transformfunctions.o(i.arm_split_rifft_q31)
-    i.arm_sqrt_q31                           0x00008d74   Section        0  fastmathfunctions.o(i.arm_sqrt_q31)
-    i.arm_std_q31                            0x00008e54   Section        0  statisticsfunctions.o(i.arm_std_q31)
-    i.bt_enable_lowpoer_result               0x00008ed2   Section        0  protocol.o(i.bt_enable_lowpoer_result)
-    i.bt_factor_reset_notify                 0x00008ed4   Section        0  protocol.o(i.bt_factor_reset_notify)
-    i.bt_modify_adv_interval_result          0x00008ed6   Section        0  protocol.o(i.bt_modify_adv_interval_result)
-    i.bt_protocol_init                       0x00008ed8   Section        0  mcu_api.o(i.bt_protocol_init)
-    i.bt_send_one_time_password_token_result 0x00008efc   Section        0  protocol.o(i.bt_send_one_time_password_token_result)
-    i.bt_uart_service                        0x00008f00   Section        0  mcu_api.o(i.bt_uart_service)
-    i.bt_uart_write_data                     0x00008f74   Section        0  system.o(i.bt_uart_write_data)
-    bt_uart_write_data                       0x00008f75   Thumb Code    36  system.o(i.bt_uart_write_data)
-    i.bt_uart_write_frame                    0x00008f98   Section        0  system.o(i.bt_uart_write_frame)
-    i.cal_q_q31                              0x00008fdc   Section        0  corrcoef.o(i.cal_q_q31)
-    cal_q_q31                                0x00008fdd   Thumb Code    28  corrcoef.o(i.cal_q_q31)
-    i.cfar_ca                                0x00008ff8   Section        0  micromotion_detection.o(i.cfar_ca)
-    i.close_process                          0x00009048   Section        0  app.o(i.close_process)
-    i.corrcoef_q31                           0x00009094   Section        0  corrcoef.o(i.corrcoef_q31)
-    i.data_handle                            0x000091b8   Section        0  system.o(i.data_handle)
-    i.data_point_handle                      0x00009304   Section        0  system.o(i.data_point_handle)
-    data_point_handle                        0x00009305   Thumb Code    70  system.o(i.data_point_handle)
-    i.dp_download_handle                     0x00009350   Section        0  protocol.o(i.dp_download_handle)
-    i.enIrqRegistration                      0x0000937c   Section        0  hc32f46x_interrupts.o(i.enIrqRegistration)
-    i.enShareIrqEnable                       0x0000943c   Section        0  hc32f46x_interrupts.o(i.enShareIrqEnable)
-    i.find_max_peak                          0x00009460   Section        0  vd_calculation.o(i.find_max_peak)
-    i.fputc                                  0x00009498   Section        0  hc32f46x_utility.o(i.fputc)
-    i.free_mem                               0x000094a8   Section        0  memalloc.o(i.free_mem)
-    i.get_check_sum                          0x000094ec   Section        0  system.o(i.get_check_sum)
-    i.get_dowmload_dpid_index                0x00009508   Section        0  system.o(i.get_dowmload_dpid_index)
-    get_dowmload_dpid_index                  0x00009509   Thumb Code    40  system.o(i.get_dowmload_dpid_index)
-    i.get_download_cmd_total                 0x00009534   Section        0  protocol.o(i.get_download_cmd_total)
-    i.get_mcu_bt_mode                        0x00009538   Section        0  system.o(i.get_mcu_bt_mode)
-    get_mcu_bt_mode                          0x00009539   Thumb Code    14  system.o(i.get_mcu_bt_mode)
-    i.get_queue_total_data                   0x00009548   Section        0  system.o(i.get_queue_total_data)
-    i.get_sample_data                        0x00009564   Section        0  adc.o(i.get_sample_data)
-    i.gpio_init                              0x0000957c   Section        0  gpio.o(i.gpio_init)
-    i.heat_beat_check                        0x000095a0   Section        0  system.o(i.heat_beat_check)
-    heat_beat_check                          0x000095a1   Thumb Code    48  system.o(i.heat_beat_check)
-    i.idle_process                           0x000095d4   Section        0  app.o(i.idle_process)
-    i.init_mem                               0x000096b8   Section        0  memalloc.o(i.init_mem)
-    i.leave_s0                               0x000096e4   Section        0  app.o(i.leave_s0)
-    i.leave_s1                               0x00009710   Section        0  app.o(i.leave_s1)
-    i.led_init                               0x00009754   Section        0  led.o(i.led_init)
-    i.main                                   0x000097bc   Section        0  main.o(i.main)
-    i.mcu_common_uart_data_unpack            0x000098e8   Section        0  mcu_api.o(i.mcu_common_uart_data_unpack)
-    mcu_common_uart_data_unpack              0x000098e9   Thumb Code   366  mcu_api.o(i.mcu_common_uart_data_unpack)
-    i.mcu_dp_value_update                    0x00009a6c   Section        0  mcu_api.o(i.mcu_dp_value_update)
-    i.measure_distance                       0x00009ae4   Section        0  distance_measure.o(i.measure_distance)
-    i.micromotion_detection                  0x00009bd4   Section        0  micromotion_detection.o(i.micromotion_detection)
-    i.my_memcpy                              0x00009d0c   Section        0  mcu_api.o(i.my_memcpy)
-    i.my_memset                              0x00009d50   Section        0  mcu_api.o(i.my_memset)
-    i.my_strlen                              0x00009d72   Section        0  mcu_api.o(i.my_strlen)
-    i.product_info_update                    0x00009d90   Section        0  system.o(i.product_info_update)
-    product_info_update                      0x00009d91   Thumb Code    54  system.o(i.product_info_update)
-    i.ring_buffer_get                        0x00009ddc   Section        0  ringbuffer.o(i.ring_buffer_get)
-    i.ring_buffer_put                        0x00009e70   Section        0  ringbuffer.o(i.ring_buffer_put)
-    i.set_bt_uart_buffer                     0x00009f00   Section        0  system.o(i.set_bt_uart_buffer)
-    i.set_bt_uart_byte                       0x00009f28   Section        0  system.o(i.set_bt_uart_byte)
-    i.tick_init                              0x00009f38   Section        0  app.o(i.tick_init)
-    i.uart_receive_input                     0x00009f70   Section        0  mcu_api.o(i.uart_receive_input)
-    i.uart_transmit_output                   0x00009fd0   Section        0  protocol.o(i.uart_transmit_output)
-    i.usart_init                             0x00009fe8   Section        0  usart.o(i.usart_init)
-    i.vd_calculation                         0x0000a0f4   Section        0  vd_calculation.o(i.vd_calculation)
-    .constdata                               0x0000a320   Section        4  main.o(.constdata)
-    .constdata                               0x0000a324   Section       16  hc32f46x_usart.o(.constdata)
-    .constdata                               0x0000a334   Section        9  usart.o(.constdata)
-    .constdata                               0x0000a340   Section        8  micromotion_detection.o(.constdata)
-    .constdata                               0x0000a348   Section     2048  hamming.o(.constdata)
-    .constdata                               0x0000ab48   Section     2044  hanning_conv.o(.constdata)
-    .constdata                               0x0000b344   Section     2048  freq_linspace.o(.constdata)
-    .constdata                               0x0000bb44   Section        8  protocol.o(.constdata)
-    .constdata                               0x0000bb4c   Section       96  commontables.o(.constdata)
-    .constdata                               0x0000bbac   Section      192  commontables.o(.constdata)
-    .constdata                               0x0000bc6c   Section      384  commontables.o(.constdata)
-    .constdata                               0x0000bdec   Section      768  commontables.o(.constdata)
-    .constdata                               0x0000c0ec   Section     1536  commontables.o(.constdata)
-    .constdata                               0x0000c6ec   Section     3072  commontables.o(.constdata)
-    .constdata                               0x0000d2ec   Section     6144  commontables.o(.constdata)
-    .constdata                               0x0000eaec   Section    12288  commontables.o(.constdata)
-    .constdata                               0x00011aec   Section    24576  commontables.o(.constdata)
-    .constdata                               0x00017aec   Section       24  commontables.o(.constdata)
-    .constdata                               0x00017b04   Section       48  commontables.o(.constdata)
-    .constdata                               0x00017b34   Section      112  commontables.o(.constdata)
-    .constdata                               0x00017ba4   Section      224  commontables.o(.constdata)
-    .constdata                               0x00017c84   Section      480  commontables.o(.constdata)
-    .constdata                               0x00017e64   Section      960  commontables.o(.constdata)
-    .constdata                               0x00018224   Section     1984  commontables.o(.constdata)
-    .constdata                               0x000189e4   Section     3968  commontables.o(.constdata)
-    .constdata                               0x00019964   Section     8064  commontables.o(.constdata)
-    .constdata                               0x0001b8e4   Section    32768  commontables.o(.constdata)
-    .constdata                               0x000238e4   Section    32768  commontables.o(.constdata)
-    .constdata                               0x0002b8e4   Section       16  commontables.o(.constdata)
-    .constdata                               0x0002b8f4   Section       16  commontables.o(.constdata)
-    .constdata                               0x0002b904   Section       16  commontables.o(.constdata)
-    .constdata                               0x0002b914   Section       16  commontables.o(.constdata)
-    .constdata                               0x0002b924   Section       16  commontables.o(.constdata)
-    .constdata                               0x0002b934   Section       16  commontables.o(.constdata)
-    .constdata                               0x0002b944   Section       16  commontables.o(.constdata)
-    .constdata                               0x0002b954   Section       16  commontables.o(.constdata)
-    .constdata                               0x0002b964   Section       16  commontables.o(.constdata)
+    i.apfft                                  0x00007d10   Section        0  apfft.o(i.apfft)
+    i.app                                    0x00007e04   Section        0  app.o(i.app)
+    i.arctan                                 0x00007e40   Section        0  math_fp.o(i.arctan)
+    i.arctan2                                0x00007e78   Section        0  math_fp.o(i.arctan2)
+    i.arm_absmax_q31                         0x00007f44   Section        0  statisticsfunctions.o(i.arm_absmax_q31)
+    i.arm_bitreversal_32                     0x00007fdc   Section        0  transformfunctions.o(i.arm_bitreversal_32)
+    i.arm_cfft_q31                           0x00008018   Section        0  transformfunctions.o(i.arm_cfft_q31)
+    i.arm_cfft_radix4by2_inverse_q31         0x000080c4   Section        0  transformfunctions.o(i.arm_cfft_radix4by2_inverse_q31)
+    i.arm_cfft_radix4by2_q31                 0x00008184   Section        0  transformfunctions.o(i.arm_cfft_radix4by2_q31)
+    i.arm_cmplx_mag_q31                      0x00008244   Section        0  complexmathfunctions.o(i.arm_cmplx_mag_q31)
+    i.arm_mean_q15                           0x00008270   Section        0  statisticsfunctions.o(i.arm_mean_q15)
+    i.arm_mean_q31                           0x0000828c   Section        0  statisticsfunctions.o(i.arm_mean_q31)
+    i.arm_offset_q15                         0x000082bc   Section        0  basicmathfunctions.o(i.arm_offset_q15)
+    i.arm_radix4_butterfly_inverse_q31       0x000082d4   Section        0  transformfunctions.o(i.arm_radix4_butterfly_inverse_q31)
+    i.arm_radix4_butterfly_q31               0x000086a8   Section        0  transformfunctions.o(i.arm_radix4_butterfly_q31)
+    i.arm_rfft_init_q31                      0x00008a78   Section        0  transformfunctions.o(i.arm_rfft_init_q31)
+    i.arm_rfft_q31                           0x00008b40   Section        0  transformfunctions.o(i.arm_rfft_q31)
+    i.arm_shift_q31                          0x00008ba4   Section        0  basicmathfunctions.o(i.arm_shift_q31)
+    i.arm_split_rfft_q31                     0x00008bee   Section        0  transformfunctions.o(i.arm_split_rfft_q31)
+    i.arm_split_rifft_q31                    0x00008cc4   Section        0  transformfunctions.o(i.arm_split_rifft_q31)
+    i.arm_sqrt_q31                           0x00008d28   Section        0  fastmathfunctions.o(i.arm_sqrt_q31)
+    i.arm_std_q31                            0x00008e08   Section        0  statisticsfunctions.o(i.arm_std_q31)
+    i.bt_enable_lowpoer_result               0x00008e86   Section        0  protocol.o(i.bt_enable_lowpoer_result)
+    i.bt_factor_reset_notify                 0x00008e88   Section        0  protocol.o(i.bt_factor_reset_notify)
+    i.bt_modify_adv_interval_result          0x00008e8a   Section        0  protocol.o(i.bt_modify_adv_interval_result)
+    i.bt_protocol_init                       0x00008e8c   Section        0  mcu_api.o(i.bt_protocol_init)
+    i.bt_send_one_time_password_token_result 0x00008eb0   Section        0  protocol.o(i.bt_send_one_time_password_token_result)
+    i.bt_uart_service                        0x00008eb4   Section        0  mcu_api.o(i.bt_uart_service)
+    i.bt_uart_write_data                     0x00008f28   Section        0  system.o(i.bt_uart_write_data)
+    bt_uart_write_data                       0x00008f29   Thumb Code    36  system.o(i.bt_uart_write_data)
+    i.bt_uart_write_frame                    0x00008f4c   Section        0  system.o(i.bt_uart_write_frame)
+    i.cal_q_q31                              0x00008f90   Section        0  corrcoef.o(i.cal_q_q31)
+    cal_q_q31                                0x00008f91   Thumb Code    28  corrcoef.o(i.cal_q_q31)
+    i.cfar_ca                                0x00008fac   Section        0  micromotion_detection.o(i.cfar_ca)
+    i.close_process                          0x00008ffc   Section        0  app.o(i.close_process)
+    i.corrcoef_q31                           0x00009048   Section        0  corrcoef.o(i.corrcoef_q31)
+    i.data_handle                            0x0000916c   Section        0  system.o(i.data_handle)
+    i.data_point_handle                      0x000092b8   Section        0  system.o(i.data_point_handle)
+    data_point_handle                        0x000092b9   Thumb Code    70  system.o(i.data_point_handle)
+    i.dp_download_handle                     0x00009304   Section        0  protocol.o(i.dp_download_handle)
+    i.enIrqRegistration                      0x00009404   Section        0  hc32f46x_interrupts.o(i.enIrqRegistration)
+    i.enShareIrqEnable                       0x000094c4   Section        0  hc32f46x_interrupts.o(i.enShareIrqEnable)
+    i.find_max_peak                          0x000094e8   Section        0  vd_calculation.o(i.find_max_peak)
+    i.fputc                                  0x00009520   Section        0  hc32f46x_utility.o(i.fputc)
+    i.free_mem                               0x00009530   Section        0  memalloc.o(i.free_mem)
+    i.get_check_sum                          0x00009574   Section        0  system.o(i.get_check_sum)
+    i.get_dowmload_dpid_index                0x00009590   Section        0  system.o(i.get_dowmload_dpid_index)
+    get_dowmload_dpid_index                  0x00009591   Thumb Code    40  system.o(i.get_dowmload_dpid_index)
+    i.get_download_cmd_total                 0x000095bc   Section        0  protocol.o(i.get_download_cmd_total)
+    i.get_mcu_bt_mode                        0x000095c0   Section        0  system.o(i.get_mcu_bt_mode)
+    get_mcu_bt_mode                          0x000095c1   Thumb Code    14  system.o(i.get_mcu_bt_mode)
+    i.get_queue_total_data                   0x000095d0   Section        0  system.o(i.get_queue_total_data)
+    i.get_sample_data                        0x000095ec   Section        0  adc.o(i.get_sample_data)
+    i.gpio_init                              0x00009604   Section        0  gpio.o(i.gpio_init)
+    i.heat_beat_check                        0x00009628   Section        0  system.o(i.heat_beat_check)
+    heat_beat_check                          0x00009629   Thumb Code    48  system.o(i.heat_beat_check)
+    i.idle_process                           0x0000965c   Section        0  app.o(i.idle_process)
+    i.init_mem                               0x0000973c   Section        0  memalloc.o(i.init_mem)
+    i.leave_s0                               0x00009768   Section        0  app.o(i.leave_s0)
+    i.leave_s1                               0x00009794   Section        0  app.o(i.leave_s1)
+    i.led_init                               0x000097d8   Section        0  led.o(i.led_init)
+    i.main                                   0x00009840   Section        0  main.o(i.main)
+    i.mcu_common_uart_data_unpack            0x0000996c   Section        0  mcu_api.o(i.mcu_common_uart_data_unpack)
+    mcu_common_uart_data_unpack              0x0000996d   Thumb Code   366  mcu_api.o(i.mcu_common_uart_data_unpack)
+    i.mcu_dp_value_update                    0x00009af0   Section        0  mcu_api.o(i.mcu_dp_value_update)
+    i.measure_distance                       0x00009b68   Section        0  distance_measure.o(i.measure_distance)
+    i.micromotion_detection                  0x00009c5c   Section        0  micromotion_detection.o(i.micromotion_detection)
+    i.my_memcpy                              0x00009d9c   Section        0  mcu_api.o(i.my_memcpy)
+    i.my_memset                              0x00009de0   Section        0  mcu_api.o(i.my_memset)
+    i.my_strlen                              0x00009e02   Section        0  mcu_api.o(i.my_strlen)
+    i.product_info_update                    0x00009e20   Section        0  system.o(i.product_info_update)
+    product_info_update                      0x00009e21   Thumb Code    54  system.o(i.product_info_update)
+    i.ring_buffer_get                        0x00009e6c   Section        0  ringbuffer.o(i.ring_buffer_get)
+    i.ring_buffer_put                        0x00009f00   Section        0  ringbuffer.o(i.ring_buffer_put)
+    i.set_bt_uart_buffer                     0x00009f90   Section        0  system.o(i.set_bt_uart_buffer)
+    i.set_bt_uart_byte                       0x00009fb8   Section        0  system.o(i.set_bt_uart_byte)
+    i.tick_init                              0x00009fc8   Section        0  app.o(i.tick_init)
+    i.uart_receive_input                     0x0000a000   Section        0  mcu_api.o(i.uart_receive_input)
+    i.uart_transmit_output                   0x0000a060   Section        0  protocol.o(i.uart_transmit_output)
+    i.usart_init                             0x0000a078   Section        0  usart.o(i.usart_init)
+    i.vd_calculation                         0x0000a184   Section        0  vd_calculation.o(i.vd_calculation)
+    .constdata                               0x0000a418   Section        4  main.o(.constdata)
+    .constdata                               0x0000a41c   Section       16  hc32f46x_usart.o(.constdata)
+    .constdata                               0x0000a42c   Section        9  usart.o(.constdata)
+    .constdata                               0x0000a438   Section        8  micromotion_detection.o(.constdata)
+    .constdata                               0x0000a440   Section     2048  hamming.o(.constdata)
+    .constdata                               0x0000ac40   Section     2044  hanning_conv.o(.constdata)
+    .constdata                               0x0000b43c   Section     2048  freq_linspace.o(.constdata)
+    .constdata                               0x0000bc3c   Section       14  protocol.o(.constdata)
+    .constdata                               0x0000bc4c   Section       96  commontables.o(.constdata)
+    .constdata                               0x0000bcac   Section      192  commontables.o(.constdata)
+    .constdata                               0x0000bd6c   Section      384  commontables.o(.constdata)
+    .constdata                               0x0000beec   Section      768  commontables.o(.constdata)
+    .constdata                               0x0000c1ec   Section     1536  commontables.o(.constdata)
+    .constdata                               0x0000c7ec   Section     3072  commontables.o(.constdata)
+    .constdata                               0x0000d3ec   Section     6144  commontables.o(.constdata)
+    .constdata                               0x0000ebec   Section    12288  commontables.o(.constdata)
+    .constdata                               0x00011bec   Section    24576  commontables.o(.constdata)
+    .constdata                               0x00017bec   Section       24  commontables.o(.constdata)
+    .constdata                               0x00017c04   Section       48  commontables.o(.constdata)
+    .constdata                               0x00017c34   Section      112  commontables.o(.constdata)
+    .constdata                               0x00017ca4   Section      224  commontables.o(.constdata)
+    .constdata                               0x00017d84   Section      480  commontables.o(.constdata)
+    .constdata                               0x00017f64   Section      960  commontables.o(.constdata)
+    .constdata                               0x00018324   Section     1984  commontables.o(.constdata)
+    .constdata                               0x00018ae4   Section     3968  commontables.o(.constdata)
+    .constdata                               0x00019a64   Section     8064  commontables.o(.constdata)
+    .constdata                               0x0001b9e4   Section    32768  commontables.o(.constdata)
+    .constdata                               0x000239e4   Section    32768  commontables.o(.constdata)
+    .constdata                               0x0002b9e4   Section       16  commontables.o(.constdata)
+    .constdata                               0x0002b9f4   Section       16  commontables.o(.constdata)
+    .constdata                               0x0002ba04   Section       16  commontables.o(.constdata)
+    .constdata                               0x0002ba14   Section       16  commontables.o(.constdata)
+    .constdata                               0x0002ba24   Section       16  commontables.o(.constdata)
+    .constdata                               0x0002ba34   Section       16  commontables.o(.constdata)
+    .constdata                               0x0002ba44   Section       16  commontables.o(.constdata)
+    .constdata                               0x0002ba54   Section       16  commontables.o(.constdata)
+    .constdata                               0x0002ba64   Section       16  commontables.o(.constdata)
     i.EFM_InstructionCacheCmd                0x1fff800c   Section        0  hc32f46x_efm.o(i.EFM_InstructionCacheCmd)
     i.EFM_Lock                               0x1fff8058   Section        0  hc32f46x_efm.o(i.EFM_Lock)
     i.EFM_SetLatency                         0x1fff8070   Section        0  hc32f46x_efm.o(i.EFM_SetLatency)
     i.EFM_Unlock                             0x1fff80f4   Section        0  hc32f46x_efm.o(i.EFM_Unlock)
     .data                                    0x1fff8108   Section        4  memalloc.o(.data)
     total                                    0x1fff8108   Data           4  memalloc.o(.data)
-    .data                                    0x1fff810c   Section       16  main.o(.data)
-    .data                                    0x1fff811c   Section       28  app.o(.data)
-    finish_tick                              0x1fff8130   Data           4  app.o(.data)
-    start_tick                               0x1fff8134   Data           4  app.o(.data)
-    .data                                    0x1fff8138   Section        8  hc32f46x_utility.o(.data)
-    m_u32TickStep                            0x1fff8138   Data           4  hc32f46x_utility.o(.data)
-    m_u32TickCount                           0x1fff813c   Data           4  hc32f46x_utility.o(.data)
-    .data                                    0x1fff8140   Section        1  hc32f46x_dmac.o(.data)
-    DmaChEnState                             0x1fff8140   Data           1  hc32f46x_dmac.o(.data)
-    .data                                    0x1fff8144   Section        4  hc32f46x_exint_nmi_swi.o(.data)
-    pfnNmiCallback                           0x1fff8144   Data           4  hc32f46x_exint_nmi_swi.o(.data)
-    .data                                    0x1fff8148   Section        8  system_hc32f46x.o(.data)
-    .data                                    0x1fff8150   Section       24  adc.o(.data)
-    .data                                    0x1fff8168   Section        4  distance_measure.o(.data)
-    data_index                               0x1fff8168   Data           4  distance_measure.o(.data)
-    .data                                    0x1fff816c   Section       10  mcu_api.o(.data)
-    current_uart_rev_state_type              0x1fff816c   Data           1  mcu_api.o(.data)
-    bt_uart_rx_buf_temp                      0x1fff816d   Data           3  mcu_api.o(.data)
-    uart_data_len                            0x1fff8170   Data           2  mcu_api.o(.data)
-    UART_RX_Count                            0x1fff8172   Data           2  mcu_api.o(.data)
-    rx_in                                    0x1fff8174   Data           2  mcu_api.o(.data)
-    .data                                    0x1fff8178   Section        8  protocol.o(.data)
-    .data                                    0x1fff8180   Section       13  system.o(.data)
-    mcu_reset_state                          0x1fff818c   Data           1  system.o(.data)
-    .data                                    0x1fff8190   Section        4  stdout.o(.data)
-    .bss                                     0x1fff8194   Section    30960  memalloc.o(.bss)
-    chunks                                   0x1fff8194   Data         240  memalloc.o(.bss)
-    reserved_mem                             0x1fff8284   Data       30720  memalloc.o(.bss)
-    .bss                                     0x1ffffa84   Section      512  main.o(.bss)
-    .bss                                     0x1ffffc84   Section      512  hc32f46x_interrupts.o(.bss)
-    .bss                                     0x1ffffe84   Section     2276  adc.o(.bss)
-    stcLlpDesc                               0x200006a8   Data         128  adc.o(.bss)
-    light_llp_desc                           0x20000728   Data          64  adc.o(.bss)
-    .bss                                     0x20000768   Section     2048  distance_measure.o(.bss)
-    .bss                                     0x20000f68   Section      677  system.o(.bss)
-    STACK                                    0x20001210   Section     1536  startup_hc32f46x.o(STACK)
+    .data                                    0x1fff810c   Section       36  main.o(.data)
+    .data                                    0x1fff8130   Section       28  app.o(.data)
+    finish_tick                              0x1fff8144   Data           4  app.o(.data)
+    start_tick                               0x1fff8148   Data           4  app.o(.data)
+    .data                                    0x1fff814c   Section        8  hc32f46x_utility.o(.data)
+    m_u32TickStep                            0x1fff814c   Data           4  hc32f46x_utility.o(.data)
+    m_u32TickCount                           0x1fff8150   Data           4  hc32f46x_utility.o(.data)
+    .data                                    0x1fff8154   Section        1  hc32f46x_dmac.o(.data)
+    DmaChEnState                             0x1fff8154   Data           1  hc32f46x_dmac.o(.data)
+    .data                                    0x1fff8158   Section        4  hc32f46x_exint_nmi_swi.o(.data)
+    pfnNmiCallback                           0x1fff8158   Data           4  hc32f46x_exint_nmi_swi.o(.data)
+    .data                                    0x1fff815c   Section        8  system_hc32f46x.o(.data)
+    .data                                    0x1fff8164   Section       24  adc.o(.data)
+    .data                                    0x1fff817c   Section        4  distance_measure.o(.data)
+    data_index                               0x1fff817c   Data           4  distance_measure.o(.data)
+    .data                                    0x1fff8180   Section       10  mcu_api.o(.data)
+    current_uart_rev_state_type              0x1fff8180   Data           1  mcu_api.o(.data)
+    bt_uart_rx_buf_temp                      0x1fff8181   Data           3  mcu_api.o(.data)
+    uart_data_len                            0x1fff8184   Data           2  mcu_api.o(.data)
+    UART_RX_Count                            0x1fff8186   Data           2  mcu_api.o(.data)
+    rx_in                                    0x1fff8188   Data           2  mcu_api.o(.data)
+    .data                                    0x1fff818c   Section        8  protocol.o(.data)
+    .data                                    0x1fff8194   Section       13  system.o(.data)
+    mcu_reset_state                          0x1fff81a0   Data           1  system.o(.data)
+    .data                                    0x1fff81a4   Section        4  stdout.o(.data)
+    .bss                                     0x1fff81a8   Section    30960  memalloc.o(.bss)
+    chunks                                   0x1fff81a8   Data         240  memalloc.o(.bss)
+    reserved_mem                             0x1fff8298   Data       30720  memalloc.o(.bss)
+    .bss                                     0x1ffffa98   Section      512  main.o(.bss)
+    .bss                                     0x1ffffc98   Section      512  hc32f46x_interrupts.o(.bss)
+    .bss                                     0x1ffffe98   Section     2276  adc.o(.bss)
+    stcLlpDesc                               0x200006bc   Data         128  adc.o(.bss)
+    light_llp_desc                           0x2000073c   Data          64  adc.o(.bss)
+    .bss                                     0x2000077c   Section     2048  distance_measure.o(.bss)
+    .bss                                     0x20000f7c   Section      677  system.o(.bss)
+    STACK                                    0x20001228   Section     1536  startup_hc32f46x.o(STACK)
 
     Global Symbols
 
@@ -1272,150 +1271,150 @@ Image Symbol Table
     accumulate_data                          0x00007b9b   Thumb Code    28  distance_measure.o(i.accumulate_data)
     all_data_update                          0x00007bb9   Thumb Code    24  protocol.o(i.all_data_update)
     alloc_mem                                0x00007bd5   Thumb Code   156  memalloc.o(i.alloc_mem)
-    alphabeta_filter                         0x00007c95   Thumb Code   168  alphabeta_filter.o(i.alphabeta_filter)
-    apfft                                    0x00007d3d   Thumb Code   238  apfft.o(i.apfft)
-    app                                      0x00007e31   Thumb Code    54  app.o(i.app)
-    arctan                                   0x00007e6d   Thumb Code    56  math_fp.o(i.arctan)
-    arctan2                                  0x00007ea5   Thumb Code   194  math_fp.o(i.arctan2)
-    arm_absmax_q31                           0x00007f71   Thumb Code   152  statisticsfunctions.o(i.arm_absmax_q31)
-    arm_bitreversal_32                       0x00008009   Thumb Code    60  transformfunctions.o(i.arm_bitreversal_32)
-    arm_cfft_q31                             0x00008045   Thumb Code   172  transformfunctions.o(i.arm_cfft_q31)
-    arm_cfft_radix4by2_inverse_q31           0x000080f1   Thumb Code   192  transformfunctions.o(i.arm_cfft_radix4by2_inverse_q31)
-    arm_cfft_radix4by2_q31                   0x000081b1   Thumb Code   192  transformfunctions.o(i.arm_cfft_radix4by2_q31)
-    arm_cmplx_mag_q31                        0x00008271   Thumb Code    44  complexmathfunctions.o(i.arm_cmplx_mag_q31)
-    arm_max_q31                              0x0000829d   Thumb Code    32  statisticsfunctions.o(i.arm_max_q31)
-    arm_mean_q15                             0x000082bd   Thumb Code    28  statisticsfunctions.o(i.arm_mean_q15)
-    arm_mean_q31                             0x000082d9   Thumb Code    48  statisticsfunctions.o(i.arm_mean_q31)
-    arm_offset_q15                           0x00008309   Thumb Code    24  basicmathfunctions.o(i.arm_offset_q15)
-    arm_radix4_butterfly_inverse_q31         0x00008321   Thumb Code   980  transformfunctions.o(i.arm_radix4_butterfly_inverse_q31)
-    arm_radix4_butterfly_q31                 0x000086f5   Thumb Code   976  transformfunctions.o(i.arm_radix4_butterfly_q31)
-    arm_rfft_init_q31                        0x00008ac5   Thumb Code   154  transformfunctions.o(i.arm_rfft_init_q31)
-    arm_rfft_q31                             0x00008b8d   Thumb Code   100  transformfunctions.o(i.arm_rfft_q31)
-    arm_shift_q31                            0x00008bf1   Thumb Code    74  basicmathfunctions.o(i.arm_shift_q31)
-    arm_split_rfft_q31                       0x00008c3b   Thumb Code   214  transformfunctions.o(i.arm_split_rfft_q31)
-    arm_split_rifft_q31                      0x00008d11   Thumb Code   100  transformfunctions.o(i.arm_split_rifft_q31)
-    arm_sqrt_q31                             0x00008d75   Thumb Code   218  fastmathfunctions.o(i.arm_sqrt_q31)
-    arm_std_q31                              0x00008e55   Thumb Code   126  statisticsfunctions.o(i.arm_std_q31)
-    bt_enable_lowpoer_result                 0x00008ed3   Thumb Code     2  protocol.o(i.bt_enable_lowpoer_result)
-    bt_factor_reset_notify                   0x00008ed5   Thumb Code     2  protocol.o(i.bt_factor_reset_notify)
-    bt_modify_adv_interval_result            0x00008ed7   Thumb Code     2  protocol.o(i.bt_modify_adv_interval_result)
-    bt_protocol_init                         0x00008ed9   Thumb Code    18  mcu_api.o(i.bt_protocol_init)
-    bt_send_one_time_password_token_result   0x00008efd   Thumb Code     2  protocol.o(i.bt_send_one_time_password_token_result)
-    bt_uart_service                          0x00008f01   Thumb Code    92  mcu_api.o(i.bt_uart_service)
-    bt_uart_write_frame                      0x00008f99   Thumb Code    64  system.o(i.bt_uart_write_frame)
-    cfar_ca                                  0x00008ff9   Thumb Code    72  micromotion_detection.o(i.cfar_ca)
-    close_process                            0x00009049   Thumb Code    66  app.o(i.close_process)
-    corrcoef_q31                             0x00009095   Thumb Code   290  corrcoef.o(i.corrcoef_q31)
-    data_handle                              0x000091b9   Thumb Code   318  system.o(i.data_handle)
-    dp_download_handle                       0x00009351   Thumb Code    38  protocol.o(i.dp_download_handle)
-    enIrqRegistration                        0x0000937d   Thumb Code   146  hc32f46x_interrupts.o(i.enIrqRegistration)
-    enShareIrqEnable                         0x0000943d   Thumb Code    32  hc32f46x_interrupts.o(i.enShareIrqEnable)
-    find_max_peak                            0x00009461   Thumb Code    56  vd_calculation.o(i.find_max_peak)
-    fputc                                    0x00009499   Thumb Code    16  hc32f46x_utility.o(i.fputc)
-    free_mem                                 0x000094a9   Thumb Code    58  memalloc.o(i.free_mem)
-    get_check_sum                            0x000094ed   Thumb Code    28  system.o(i.get_check_sum)
-    get_download_cmd_total                   0x00009535   Thumb Code     4  protocol.o(i.get_download_cmd_total)
-    get_queue_total_data                     0x00009549   Thumb Code    20  system.o(i.get_queue_total_data)
-    get_sample_data                          0x00009565   Thumb Code    18  adc.o(i.get_sample_data)
-    gpio_init                                0x0000957d   Thumb Code    36  gpio.o(i.gpio_init)
-    idle_process                             0x000095d5   Thumb Code   190  app.o(i.idle_process)
-    init_mem                                 0x000096b9   Thumb Code    34  memalloc.o(i.init_mem)
-    leave_s0                                 0x000096e5   Thumb Code    28  app.o(i.leave_s0)
-    leave_s1                                 0x00009711   Thumb Code    62  app.o(i.leave_s1)
-    led_init                                 0x00009755   Thumb Code   104  led.o(i.led_init)
-    main                                     0x000097bd   Thumb Code   230  main.o(i.main)
-    mcu_dp_value_update                      0x00009a6d   Thumb Code   114  mcu_api.o(i.mcu_dp_value_update)
-    measure_distance                         0x00009ae5   Thumb Code   212  distance_measure.o(i.measure_distance)
-    micromotion_detection                    0x00009bd5   Thumb Code   308  micromotion_detection.o(i.micromotion_detection)
-    my_memcpy                                0x00009d0d   Thumb Code    68  mcu_api.o(i.my_memcpy)
-    my_memset                                0x00009d51   Thumb Code    34  mcu_api.o(i.my_memset)
-    my_strlen                                0x00009d73   Thumb Code    28  mcu_api.o(i.my_strlen)
-    ring_buffer_get                          0x00009ddd   Thumb Code   118  ringbuffer.o(i.ring_buffer_get)
-    ring_buffer_put                          0x00009e71   Thumb Code    98  ringbuffer.o(i.ring_buffer_put)
-    set_bt_uart_buffer                       0x00009f01   Thumb Code    34  system.o(i.set_bt_uart_buffer)
-    set_bt_uart_byte                         0x00009f29   Thumb Code    12  system.o(i.set_bt_uart_byte)
-    tick_init                                0x00009f39   Thumb Code    48  app.o(i.tick_init)
-    uart_receive_input                       0x00009f71   Thumb Code    84  mcu_api.o(i.uart_receive_input)
-    uart_transmit_output                     0x00009fd1   Thumb Code    20  protocol.o(i.uart_transmit_output)
-    usart_init                               0x00009fe9   Thumb Code   244  usart.o(i.usart_init)
-    vd_calculation                           0x0000a0f5   Thumb Code   542  vd_calculation.o(i.vd_calculation)
-    version_num                              0x0000a320   Data           4  main.o(.constdata)
-    cfar_param                               0x0000a340   Data           8  micromotion_detection.o(.constdata)
-    hamming_TAB512                           0x0000a348   Data        2048  hamming.o(.constdata)
-    hanning_conv_TAB511                      0x0000ab48   Data        2044  hanning_conv.o(.constdata)
-    freq_linspace                            0x0000b344   Data        2048  freq_linspace.o(.constdata)
-    download_cmd                             0x0000bb44   Data           8  protocol.o(.constdata)
-    twiddleCoef_16_q31                       0x0000bb4c   Data          96  commontables.o(.constdata)
-    twiddleCoef_32_q31                       0x0000bbac   Data         192  commontables.o(.constdata)
-    twiddleCoef_64_q31                       0x0000bc6c   Data         384  commontables.o(.constdata)
-    twiddleCoef_128_q31                      0x0000bdec   Data         768  commontables.o(.constdata)
-    twiddleCoef_256_q31                      0x0000c0ec   Data        1536  commontables.o(.constdata)
-    twiddleCoef_512_q31                      0x0000c6ec   Data        3072  commontables.o(.constdata)
-    twiddleCoef_1024_q31                     0x0000d2ec   Data        6144  commontables.o(.constdata)
-    twiddleCoef_2048_q31                     0x0000eaec   Data       12288  commontables.o(.constdata)
-    twiddleCoef_4096_q31                     0x00011aec   Data       24576  commontables.o(.constdata)
-    armBitRevIndexTable_fixed_16             0x00017aec   Data          24  commontables.o(.constdata)
-    armBitRevIndexTable_fixed_32             0x00017b04   Data          48  commontables.o(.constdata)
-    armBitRevIndexTable_fixed_64             0x00017b34   Data         112  commontables.o(.constdata)
-    armBitRevIndexTable_fixed_128            0x00017ba4   Data         224  commontables.o(.constdata)
-    armBitRevIndexTable_fixed_256            0x00017c84   Data         480  commontables.o(.constdata)
-    armBitRevIndexTable_fixed_512            0x00017e64   Data         960  commontables.o(.constdata)
-    armBitRevIndexTable_fixed_1024           0x00018224   Data        1984  commontables.o(.constdata)
-    armBitRevIndexTable_fixed_2048           0x000189e4   Data        3968  commontables.o(.constdata)
-    armBitRevIndexTable_fixed_4096           0x00019964   Data        8064  commontables.o(.constdata)
-    realCoefAQ31                             0x0001b8e4   Data       32768  commontables.o(.constdata)
-    realCoefBQ31                             0x000238e4   Data       32768  commontables.o(.constdata)
-    arm_cfft_sR_q31_len16                    0x0002b8e4   Data          16  commontables.o(.constdata)
-    arm_cfft_sR_q31_len32                    0x0002b8f4   Data          16  commontables.o(.constdata)
-    arm_cfft_sR_q31_len64                    0x0002b904   Data          16  commontables.o(.constdata)
-    arm_cfft_sR_q31_len128                   0x0002b914   Data          16  commontables.o(.constdata)
-    arm_cfft_sR_q31_len256                   0x0002b924   Data          16  commontables.o(.constdata)
-    arm_cfft_sR_q31_len512                   0x0002b934   Data          16  commontables.o(.constdata)
-    arm_cfft_sR_q31_len1024                  0x0002b944   Data          16  commontables.o(.constdata)
-    arm_cfft_sR_q31_len2048                  0x0002b954   Data          16  commontables.o(.constdata)
-    arm_cfft_sR_q31_len4096                  0x0002b964   Data          16  commontables.o(.constdata)
-    Region$$Table$$Base                      0x0002b974   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0002b9a4   Number         0  anon$$obj.o(Region$$Table)
+    alphabeta_filter                         0x00007c95   Thumb Code   124  alphabeta_filter.o(i.alphabeta_filter)
+    apfft                                    0x00007d11   Thumb Code   238  apfft.o(i.apfft)
+    app                                      0x00007e05   Thumb Code    54  app.o(i.app)
+    arctan                                   0x00007e41   Thumb Code    56  math_fp.o(i.arctan)
+    arctan2                                  0x00007e79   Thumb Code   194  math_fp.o(i.arctan2)
+    arm_absmax_q31                           0x00007f45   Thumb Code   152  statisticsfunctions.o(i.arm_absmax_q31)
+    arm_bitreversal_32                       0x00007fdd   Thumb Code    60  transformfunctions.o(i.arm_bitreversal_32)
+    arm_cfft_q31                             0x00008019   Thumb Code   172  transformfunctions.o(i.arm_cfft_q31)
+    arm_cfft_radix4by2_inverse_q31           0x000080c5   Thumb Code   192  transformfunctions.o(i.arm_cfft_radix4by2_inverse_q31)
+    arm_cfft_radix4by2_q31                   0x00008185   Thumb Code   192  transformfunctions.o(i.arm_cfft_radix4by2_q31)
+    arm_cmplx_mag_q31                        0x00008245   Thumb Code    44  complexmathfunctions.o(i.arm_cmplx_mag_q31)
+    arm_mean_q15                             0x00008271   Thumb Code    28  statisticsfunctions.o(i.arm_mean_q15)
+    arm_mean_q31                             0x0000828d   Thumb Code    48  statisticsfunctions.o(i.arm_mean_q31)
+    arm_offset_q15                           0x000082bd   Thumb Code    24  basicmathfunctions.o(i.arm_offset_q15)
+    arm_radix4_butterfly_inverse_q31         0x000082d5   Thumb Code   980  transformfunctions.o(i.arm_radix4_butterfly_inverse_q31)
+    arm_radix4_butterfly_q31                 0x000086a9   Thumb Code   976  transformfunctions.o(i.arm_radix4_butterfly_q31)
+    arm_rfft_init_q31                        0x00008a79   Thumb Code   154  transformfunctions.o(i.arm_rfft_init_q31)
+    arm_rfft_q31                             0x00008b41   Thumb Code   100  transformfunctions.o(i.arm_rfft_q31)
+    arm_shift_q31                            0x00008ba5   Thumb Code    74  basicmathfunctions.o(i.arm_shift_q31)
+    arm_split_rfft_q31                       0x00008bef   Thumb Code   214  transformfunctions.o(i.arm_split_rfft_q31)
+    arm_split_rifft_q31                      0x00008cc5   Thumb Code   100  transformfunctions.o(i.arm_split_rifft_q31)
+    arm_sqrt_q31                             0x00008d29   Thumb Code   218  fastmathfunctions.o(i.arm_sqrt_q31)
+    arm_std_q31                              0x00008e09   Thumb Code   126  statisticsfunctions.o(i.arm_std_q31)
+    bt_enable_lowpoer_result                 0x00008e87   Thumb Code     2  protocol.o(i.bt_enable_lowpoer_result)
+    bt_factor_reset_notify                   0x00008e89   Thumb Code     2  protocol.o(i.bt_factor_reset_notify)
+    bt_modify_adv_interval_result            0x00008e8b   Thumb Code     2  protocol.o(i.bt_modify_adv_interval_result)
+    bt_protocol_init                         0x00008e8d   Thumb Code    18  mcu_api.o(i.bt_protocol_init)
+    bt_send_one_time_password_token_result   0x00008eb1   Thumb Code     2  protocol.o(i.bt_send_one_time_password_token_result)
+    bt_uart_service                          0x00008eb5   Thumb Code    92  mcu_api.o(i.bt_uart_service)
+    bt_uart_write_frame                      0x00008f4d   Thumb Code    64  system.o(i.bt_uart_write_frame)
+    cfar_ca                                  0x00008fad   Thumb Code    72  micromotion_detection.o(i.cfar_ca)
+    close_process                            0x00008ffd   Thumb Code    66  app.o(i.close_process)
+    corrcoef_q31                             0x00009049   Thumb Code   290  corrcoef.o(i.corrcoef_q31)
+    data_handle                              0x0000916d   Thumb Code   318  system.o(i.data_handle)
+    dp_download_handle                       0x00009305   Thumb Code   248  protocol.o(i.dp_download_handle)
+    enIrqRegistration                        0x00009405   Thumb Code   146  hc32f46x_interrupts.o(i.enIrqRegistration)
+    enShareIrqEnable                         0x000094c5   Thumb Code    32  hc32f46x_interrupts.o(i.enShareIrqEnable)
+    find_max_peak                            0x000094e9   Thumb Code    56  vd_calculation.o(i.find_max_peak)
+    fputc                                    0x00009521   Thumb Code    16  hc32f46x_utility.o(i.fputc)
+    free_mem                                 0x00009531   Thumb Code    58  memalloc.o(i.free_mem)
+    get_check_sum                            0x00009575   Thumb Code    28  system.o(i.get_check_sum)
+    get_download_cmd_total                   0x000095bd   Thumb Code     4  protocol.o(i.get_download_cmd_total)
+    get_queue_total_data                     0x000095d1   Thumb Code    20  system.o(i.get_queue_total_data)
+    get_sample_data                          0x000095ed   Thumb Code    18  adc.o(i.get_sample_data)
+    gpio_init                                0x00009605   Thumb Code    36  gpio.o(i.gpio_init)
+    idle_process                             0x0000965d   Thumb Code   192  app.o(i.idle_process)
+    init_mem                                 0x0000973d   Thumb Code    34  memalloc.o(i.init_mem)
+    leave_s0                                 0x00009769   Thumb Code    28  app.o(i.leave_s0)
+    leave_s1                                 0x00009795   Thumb Code    62  app.o(i.leave_s1)
+    led_init                                 0x000097d9   Thumb Code   104  led.o(i.led_init)
+    main                                     0x00009841   Thumb Code   230  main.o(i.main)
+    mcu_dp_value_update                      0x00009af1   Thumb Code   114  mcu_api.o(i.mcu_dp_value_update)
+    measure_distance                         0x00009b69   Thumb Code   212  distance_measure.o(i.measure_distance)
+    micromotion_detection                    0x00009c5d   Thumb Code   316  micromotion_detection.o(i.micromotion_detection)
+    my_memcpy                                0x00009d9d   Thumb Code    68  mcu_api.o(i.my_memcpy)
+    my_memset                                0x00009de1   Thumb Code    34  mcu_api.o(i.my_memset)
+    my_strlen                                0x00009e03   Thumb Code    28  mcu_api.o(i.my_strlen)
+    ring_buffer_get                          0x00009e6d   Thumb Code   118  ringbuffer.o(i.ring_buffer_get)
+    ring_buffer_put                          0x00009f01   Thumb Code    98  ringbuffer.o(i.ring_buffer_put)
+    set_bt_uart_buffer                       0x00009f91   Thumb Code    34  system.o(i.set_bt_uart_buffer)
+    set_bt_uart_byte                         0x00009fb9   Thumb Code    12  system.o(i.set_bt_uart_byte)
+    tick_init                                0x00009fc9   Thumb Code    48  app.o(i.tick_init)
+    uart_receive_input                       0x0000a001   Thumb Code    84  mcu_api.o(i.uart_receive_input)
+    uart_transmit_output                     0x0000a061   Thumb Code    20  protocol.o(i.uart_transmit_output)
+    usart_init                               0x0000a079   Thumb Code   244  usart.o(i.usart_init)
+    vd_calculation                           0x0000a185   Thumb Code   644  vd_calculation.o(i.vd_calculation)
+    version_num                              0x0000a418   Data           4  main.o(.constdata)
+    cfar_param                               0x0000a438   Data           8  micromotion_detection.o(.constdata)
+    hamming_TAB512                           0x0000a440   Data        2048  hamming.o(.constdata)
+    hanning_conv_TAB511                      0x0000ac40   Data        2044  hanning_conv.o(.constdata)
+    freq_linspace                            0x0000b43c   Data        2048  freq_linspace.o(.constdata)
+    download_cmd                             0x0000bc3c   Data          14  protocol.o(.constdata)
+    twiddleCoef_16_q31                       0x0000bc4c   Data          96  commontables.o(.constdata)
+    twiddleCoef_32_q31                       0x0000bcac   Data         192  commontables.o(.constdata)
+    twiddleCoef_64_q31                       0x0000bd6c   Data         384  commontables.o(.constdata)
+    twiddleCoef_128_q31                      0x0000beec   Data         768  commontables.o(.constdata)
+    twiddleCoef_256_q31                      0x0000c1ec   Data        1536  commontables.o(.constdata)
+    twiddleCoef_512_q31                      0x0000c7ec   Data        3072  commontables.o(.constdata)
+    twiddleCoef_1024_q31                     0x0000d3ec   Data        6144  commontables.o(.constdata)
+    twiddleCoef_2048_q31                     0x0000ebec   Data       12288  commontables.o(.constdata)
+    twiddleCoef_4096_q31                     0x00011bec   Data       24576  commontables.o(.constdata)
+    armBitRevIndexTable_fixed_16             0x00017bec   Data          24  commontables.o(.constdata)
+    armBitRevIndexTable_fixed_32             0x00017c04   Data          48  commontables.o(.constdata)
+    armBitRevIndexTable_fixed_64             0x00017c34   Data         112  commontables.o(.constdata)
+    armBitRevIndexTable_fixed_128            0x00017ca4   Data         224  commontables.o(.constdata)
+    armBitRevIndexTable_fixed_256            0x00017d84   Data         480  commontables.o(.constdata)
+    armBitRevIndexTable_fixed_512            0x00017f64   Data         960  commontables.o(.constdata)
+    armBitRevIndexTable_fixed_1024           0x00018324   Data        1984  commontables.o(.constdata)
+    armBitRevIndexTable_fixed_2048           0x00018ae4   Data        3968  commontables.o(.constdata)
+    armBitRevIndexTable_fixed_4096           0x00019a64   Data        8064  commontables.o(.constdata)
+    realCoefAQ31                             0x0001b9e4   Data       32768  commontables.o(.constdata)
+    realCoefBQ31                             0x000239e4   Data       32768  commontables.o(.constdata)
+    arm_cfft_sR_q31_len16                    0x0002b9e4   Data          16  commontables.o(.constdata)
+    arm_cfft_sR_q31_len32                    0x0002b9f4   Data          16  commontables.o(.constdata)
+    arm_cfft_sR_q31_len64                    0x0002ba04   Data          16  commontables.o(.constdata)
+    arm_cfft_sR_q31_len128                   0x0002ba14   Data          16  commontables.o(.constdata)
+    arm_cfft_sR_q31_len256                   0x0002ba24   Data          16  commontables.o(.constdata)
+    arm_cfft_sR_q31_len512                   0x0002ba34   Data          16  commontables.o(.constdata)
+    arm_cfft_sR_q31_len1024                  0x0002ba44   Data          16  commontables.o(.constdata)
+    arm_cfft_sR_q31_len2048                  0x0002ba54   Data          16  commontables.o(.constdata)
+    arm_cfft_sR_q31_len4096                  0x0002ba64   Data          16  commontables.o(.constdata)
+    Region$$Table$$Base                      0x0002ba74   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0002baa4   Number         0  anon$$obj.o(Region$$Table)
     Long Thumb to Thumb Veneer to Ddl_AssertHandler 0x1fff8001   Thumb Code    10  anon$$obj.o(Veneer$$Code)
     EFM_InstructionCacheCmd                  0x1fff800d   Thumb Code    40  hc32f46x_efm.o(i.EFM_InstructionCacheCmd)
     EFM_Lock                                 0x1fff8059   Thumb Code    20  hc32f46x_efm.o(i.EFM_Lock)
     EFM_SetLatency                           0x1fff8071   Thumb Code    94  hc32f46x_efm.o(i.EFM_SetLatency)
     EFM_Unlock                               0x1fff80f5   Thumb Code    16  hc32f46x_efm.o(i.EFM_Unlock)
-    state                                    0x1fff810c   Data           4  main.o(.data)
-    distance_f                               0x1fff8110   Data           4  main.o(.data)
-    speed_f                                  0x1fff8114   Data           4  main.o(.data)
-    mag_f                                    0x1fff8118   Data           4  main.o(.data)
-    leave_timer                              0x1fff811c   Data           4  app.o(.data)
-    start_tick                               0x1fff8120   Data           4  app.o(.data)
-    now_tick                                 0x1fff8124   Data           4  app.o(.data)
-    diff_tick                                0x1fff8128   Data           4  app.o(.data)
-    leave_en                                 0x1fff812c   Data           4  app.o(.data)
-    HRC_VALUE                                0x1fff8148   Data           4  system_hc32f46x.o(.data)
-    SystemCoreClock                          0x1fff814c   Data           4  system_hc32f46x.o(.data)
-    ring_buffer                              0x1fff8150   Data          12  adc.o(.data)
-    light_buffer                             0x1fff815c   Data           4  adc.o(.data)
-    light_real_data                          0x1fff8160   Data           2  adc.o(.data)
-    TaskVal                                  0x1fff8162   Data           1  adc.o(.data)
-    TaskState                                0x1fff8163   Data           1  adc.o(.data)
-    pTaskCBS                                 0x1fff8164   Data           4  adc.o(.data)
-    updata_data                              0x1fff8178   Data           8  protocol.o(.data)
-    queue_in                                 0x1fff8180   Data           4  system.o(.data)
-    queue_out                                0x1fff8184   Data           4  system.o(.data)
-    stop_update_flag                         0x1fff8188   Data           1  system.o(.data)
-    reset_bt_flag                            0x1fff8189   Data           1  system.o(.data)
-    set_btmode_flag                          0x1fff818a   Data           1  system.o(.data)
-    bt_work_state                            0x1fff818b   Data           1  system.o(.data)
-    __stdout                                 0x1fff8190   Data           4  stdout.o(.data)
-    data_buf                                 0x1ffffa84   Data         512  main.o(.bss)
-    IrqHandler                               0x1ffffc84   Data         512  hc32f46x_interrupts.o(.bss)
-    Adc1SaValue                              0x1ffffe84   Data          34  adc.o(.bss)
-    buffer                                   0x1ffffea8   Data        2048  adc.o(.bss)
-    data_cumulation_1                        0x20000768   Data        1024  distance_measure.o(.bss)
-    data_cumulation_2                        0x20000b68   Data        1024  distance_measure.o(.bss)
-    bt_queue_buf                             0x20000f68   Data          23  system.o(.bss)
-    bt_uart_rx_buf                           0x20000f7f   Data         135  system.o(.bss)
-    bt_uart_tx_buf                           0x20001006   Data         519  system.o(.bss)
-    __initial_sp                             0x20001810   Data           0  startup_hc32f46x.o(STACK)
+    measure_th                               0x1fff810c   Data          20  main.o(.data)
+    state                                    0x1fff8120   Data           4  main.o(.data)
+    distance_f                               0x1fff8124   Data           4  main.o(.data)
+    speed_f                                  0x1fff8128   Data           4  main.o(.data)
+    mag_f                                    0x1fff812c   Data           4  main.o(.data)
+    leave_timer                              0x1fff8130   Data           4  app.o(.data)
+    start_tick                               0x1fff8134   Data           4  app.o(.data)
+    now_tick                                 0x1fff8138   Data           4  app.o(.data)
+    diff_tick                                0x1fff813c   Data           4  app.o(.data)
+    leave_en                                 0x1fff8140   Data           4  app.o(.data)
+    HRC_VALUE                                0x1fff815c   Data           4  system_hc32f46x.o(.data)
+    SystemCoreClock                          0x1fff8160   Data           4  system_hc32f46x.o(.data)
+    ring_buffer                              0x1fff8164   Data          12  adc.o(.data)
+    light_buffer                             0x1fff8170   Data           4  adc.o(.data)
+    light_real_data                          0x1fff8174   Data           2  adc.o(.data)
+    TaskVal                                  0x1fff8176   Data           1  adc.o(.data)
+    TaskState                                0x1fff8177   Data           1  adc.o(.data)
+    pTaskCBS                                 0x1fff8178   Data           4  adc.o(.data)
+    updata_data                              0x1fff818c   Data           8  protocol.o(.data)
+    queue_in                                 0x1fff8194   Data           4  system.o(.data)
+    queue_out                                0x1fff8198   Data           4  system.o(.data)
+    stop_update_flag                         0x1fff819c   Data           1  system.o(.data)
+    reset_bt_flag                            0x1fff819d   Data           1  system.o(.data)
+    set_btmode_flag                          0x1fff819e   Data           1  system.o(.data)
+    bt_work_state                            0x1fff819f   Data           1  system.o(.data)
+    __stdout                                 0x1fff81a4   Data           4  stdout.o(.data)
+    data_buf                                 0x1ffffa98   Data         512  main.o(.bss)
+    IrqHandler                               0x1ffffc98   Data         512  hc32f46x_interrupts.o(.bss)
+    Adc1SaValue                              0x1ffffe98   Data          34  adc.o(.bss)
+    buffer                                   0x1ffffebc   Data        2048  adc.o(.bss)
+    data_cumulation_1                        0x2000077c   Data        1024  distance_measure.o(.bss)
+    data_cumulation_2                        0x20000b7c   Data        1024  distance_measure.o(.bss)
+    bt_queue_buf                             0x20000f7c   Data          23  system.o(.bss)
+    bt_uart_rx_buf                           0x20000f93   Data         135  system.o(.bss)
+    bt_uart_tx_buf                           0x2000101a   Data         519  system.o(.bss)
+    __initial_sp                             0x20001828   Data           0  startup_hc32f46x.o(STACK)
 
 
 
@@ -1425,60 +1424,60 @@ Memory Map of the image
 
   Image Entry point : 0x00000281
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x0002bb38, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x0002bc4c, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x0002b9a4, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x0002baa4, Max: 0x00080000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x00000000   0x00000000   0x00000280   Data   RO           69    RESET               startup_hc32f46x.o
-    0x00000280   0x00000280   0x00000000   Code   RO         9429  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x00000280   0x00000280   0x00000004   Code   RO         9812    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x00000284   0x00000284   0x00000004   Code   RO         9815    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x00000288   0x00000288   0x00000000   Code   RO         9817    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x00000288   0x00000288   0x00000000   Code   RO         9819    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x00000288   0x00000288   0x00000008   Code   RO         9820    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x00000290   0x00000290   0x00000004   Code   RO         9827    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
-    0x00000294   0x00000294   0x00000000   Code   RO         9822    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
-    0x00000294   0x00000294   0x00000000   Code   RO         9824    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
-    0x00000294   0x00000294   0x00000004   Code   RO         9813    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x00000280   0x00000280   0x00000000   Code   RO         9433  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x00000280   0x00000280   0x00000004   Code   RO         9816    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x00000284   0x00000284   0x00000004   Code   RO         9819    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x00000288   0x00000288   0x00000000   Code   RO         9821    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x00000288   0x00000288   0x00000000   Code   RO         9823    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x00000288   0x00000288   0x00000008   Code   RO         9824    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x00000290   0x00000290   0x00000004   Code   RO         9831    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
+    0x00000294   0x00000294   0x00000000   Code   RO         9826    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
+    0x00000294   0x00000294   0x00000000   Code   RO         9828    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
+    0x00000294   0x00000294   0x00000004   Code   RO         9817    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x00000298   0x00000298   0x0000005c   Code   RO           70    .text               startup_hc32f46x.o
-    0x000002f4   0x000002f4   0x00000062   Code   RO         9432    .text               mc_w.l(uldiv.o)
-    0x00000356   0x00000356   0x00000062   Code   RO         9434    .text               mc_w.l(ldiv.o)
-    0x000003b8   0x000003b8   0x0000001e   Code   RO         9436    .text               mc_w.l(llshl.o)
-    0x000003d6   0x000003d6   0x00000024   Code   RO         9438    .text               mc_w.l(llsshr.o)
-    0x000003fa   0x000003fa   0x00000000   Code   RO         9840    .text               mc_w.l(iusefp.o)
-    0x000003fa   0x000003fa   0x00000002   Code   RO         9864    i.__scatterload_null  mc_w.l(handlers.o)
-    0x000003fc   0x000003fc   0x00000002   Code   RO         4177    i.bt_close_timer_result  protocol.o
-    0x000003fe   0x000003fe   0x00000002   Code   RO         4179    i.bt_disconnect_result  protocol.o
+    0x000002f4   0x000002f4   0x00000062   Code   RO         9436    .text               mc_w.l(uldiv.o)
+    0x00000356   0x00000356   0x00000062   Code   RO         9438    .text               mc_w.l(ldiv.o)
+    0x000003b8   0x000003b8   0x0000001e   Code   RO         9440    .text               mc_w.l(llshl.o)
+    0x000003d6   0x000003d6   0x00000024   Code   RO         9442    .text               mc_w.l(llsshr.o)
+    0x000003fa   0x000003fa   0x00000000   Code   RO         9844    .text               mc_w.l(iusefp.o)
+    0x000003fa   0x000003fa   0x00000002   Code   RO         9868    i.__scatterload_null  mc_w.l(handlers.o)
+    0x000003fc   0x000003fc   0x00000002   Code   RO         4181    i.bt_close_timer_result  protocol.o
+    0x000003fe   0x000003fe   0x00000002   Code   RO         4183    i.bt_disconnect_result  protocol.o
     0x00000400   0x00000400   0x00000020   Data   RO          294    .ARM.__AT_0x00000400  hc32f46x_icg.o
-    0x00000420   0x00000420   0x0000000a   Ven    RO         9869    Veneer$$Code        anon$$obj.o
-    0x0000042a   0x0000042a   0x0000000a   Ven    RO         9870    Veneer$$Code        anon$$obj.o
-    0x00000434   0x00000434   0x0000000a   Ven    RO         9871    Veneer$$Code        anon$$obj.o
-    0x0000043e   0x0000043e   0x0000000a   Ven    RO         9872    Veneer$$Code        anon$$obj.o
-    0x00000448   0x00000448   0x00000040   Code   RO         9470    .text               mc_w.l(memmovea.o)
-    0x00000488   0x00000488   0x00000024   Code   RO         9472    .text               mc_w.l(memseta.o)
-    0x000004ac   0x000004ac   0x000000b0   Code   RO         9739    .text               mf_w.l(fadd.o)
-    0x0000055c   0x0000055c   0x00000064   Code   RO         9741    .text               mf_w.l(fmul.o)
-    0x000005c0   0x000005c0   0x0000007c   Code   RO         9743    .text               mf_w.l(fdiv.o)
-    0x0000063c   0x0000063c   0x00000018   Code   RO         9745    .text               mf_w.l(fscalb.o)
-    0x00000654   0x00000654   0x0000014e   Code   RO         9747    .text               mf_w.l(dadd.o)
-    0x000007a2   0x000007a2   0x000000e4   Code   RO         9749    .text               mf_w.l(dmul.o)
-    0x00000886   0x00000886   0x000000de   Code   RO         9751    .text               mf_w.l(ddiv.o)
-    0x00000964   0x00000964   0x00000012   Code   RO         9755    .text               mf_w.l(fflti.o)
-    0x00000976   0x00000976   0x0000000a   Code   RO         9757    .text               mf_w.l(ffltui.o)
-    0x00000980   0x00000980   0x00000032   Code   RO         9761    .text               mf_w.l(ffixi.o)
-    0x000009b2   0x000009b2   0x00000028   Code   RO         9763    .text               mf_w.l(ffixui.o)
-    0x000009da   0x000009da   0x00000026   Code   RO         9767    .text               mf_w.l(f2d.o)
-    0x00000a00   0x00000a00   0x00000030   Code   RO         9771    .text               mf_w.l(cdrcmple.o)
-    0x00000a30   0x00000a30   0x00000014   Code   RO         9775    .text               mf_w.l(cfcmple.o)
-    0x00000a44   0x00000a44   0x00000014   Code   RO         9777    .text               mf_w.l(cfrcmple.o)
-    0x00000a58   0x00000a58   0x0000002c   Code   RO         9829    .text               mc_w.l(uidiv.o)
-    0x00000a84   0x00000a84   0x00000020   Code   RO         9831    .text               mc_w.l(llushr.o)
-    0x00000aa4   0x00000aa4   0x0000006e   Code   RO         9841    .text               mf_w.l(fepilogue.o)
-    0x00000b12   0x00000b12   0x000000ba   Code   RO         9847    .text               mf_w.l(depilogue.o)
-    0x00000bcc   0x00000bcc   0x00000030   Code   RO         9853    .text               mf_w.l(dfixul.o)
-    0x00000bfc   0x00000bfc   0x00000024   Code   RO         9859    .text               mc_w.l(init.o)
+    0x00000420   0x00000420   0x0000000a   Ven    RO         9873    Veneer$$Code        anon$$obj.o
+    0x0000042a   0x0000042a   0x0000000a   Ven    RO         9874    Veneer$$Code        anon$$obj.o
+    0x00000434   0x00000434   0x0000000a   Ven    RO         9875    Veneer$$Code        anon$$obj.o
+    0x0000043e   0x0000043e   0x0000000a   Ven    RO         9876    Veneer$$Code        anon$$obj.o
+    0x00000448   0x00000448   0x00000040   Code   RO         9474    .text               mc_w.l(memmovea.o)
+    0x00000488   0x00000488   0x00000024   Code   RO         9476    .text               mc_w.l(memseta.o)
+    0x000004ac   0x000004ac   0x000000b0   Code   RO         9743    .text               mf_w.l(fadd.o)
+    0x0000055c   0x0000055c   0x00000064   Code   RO         9745    .text               mf_w.l(fmul.o)
+    0x000005c0   0x000005c0   0x0000007c   Code   RO         9747    .text               mf_w.l(fdiv.o)
+    0x0000063c   0x0000063c   0x00000018   Code   RO         9749    .text               mf_w.l(fscalb.o)
+    0x00000654   0x00000654   0x0000014e   Code   RO         9751    .text               mf_w.l(dadd.o)
+    0x000007a2   0x000007a2   0x000000e4   Code   RO         9753    .text               mf_w.l(dmul.o)
+    0x00000886   0x00000886   0x000000de   Code   RO         9755    .text               mf_w.l(ddiv.o)
+    0x00000964   0x00000964   0x00000012   Code   RO         9759    .text               mf_w.l(fflti.o)
+    0x00000976   0x00000976   0x0000000a   Code   RO         9761    .text               mf_w.l(ffltui.o)
+    0x00000980   0x00000980   0x00000032   Code   RO         9765    .text               mf_w.l(ffixi.o)
+    0x000009b2   0x000009b2   0x00000028   Code   RO         9767    .text               mf_w.l(ffixui.o)
+    0x000009da   0x000009da   0x00000026   Code   RO         9771    .text               mf_w.l(f2d.o)
+    0x00000a00   0x00000a00   0x00000030   Code   RO         9775    .text               mf_w.l(cdrcmple.o)
+    0x00000a30   0x00000a30   0x00000014   Code   RO         9779    .text               mf_w.l(cfcmple.o)
+    0x00000a44   0x00000a44   0x00000014   Code   RO         9781    .text               mf_w.l(cfrcmple.o)
+    0x00000a58   0x00000a58   0x0000002c   Code   RO         9833    .text               mc_w.l(uidiv.o)
+    0x00000a84   0x00000a84   0x00000020   Code   RO         9835    .text               mc_w.l(llushr.o)
+    0x00000aa4   0x00000aa4   0x0000006e   Code   RO         9845    .text               mf_w.l(fepilogue.o)
+    0x00000b12   0x00000b12   0x000000ba   Code   RO         9851    .text               mf_w.l(depilogue.o)
+    0x00000bcc   0x00000bcc   0x00000030   Code   RO         9857    .text               mf_w.l(dfixul.o)
+    0x00000bfc   0x00000bfc   0x00000024   Code   RO         9863    .text               mc_w.l(init.o)
     0x00000c20   0x00000c20   0x0000001c   Code   RO         3304    i.ADC1B_IrqHandler  adc.o
     0x00000c3c   0x00000c3c   0x000000e0   Code   RO          416    i.ADC_AddAdcChannel  hc32f46x_adc.o
     0x00000d1c   0x00000d1c   0x0000005c   Code   RO          425    i.ADC_ClrEocFlag    hc32f46x_adc.o
@@ -1680,7 +1679,7 @@ Memory Map of the image
     0x00005df4   0x00005df4   0x00000078   Code   RO         2156    i.PWC_Fcg2PeriphClockCmd  hc32f46x_pwc.o
     0x00005e6c   0x00005e6c   0x00000078   Code   RO         2157    i.PWC_Fcg3PeriphClockCmd  hc32f46x_pwc.o
     0x00005ee4   0x00005ee4   0x00000008   Code   RO         1310    i.PendSV_Handler    hc32f46x_interrupts.o
-    0x00005eec   0x00005eec   0x0000003c   Code   RO         4340    i.Queue_Read_Byte   system.o
+    0x00005eec   0x00005eec   0x0000003c   Code   RO         4344    i.Queue_Read_Byte   system.o
     0x00005f28   0x00005f28   0x00000008   Code   RO         1311    i.SVC_Handler       hc32f46x_interrupts.o
     0x00005f30   0x00005f30   0x0000012c   Code   RO         2532    i.SetClkSyncBaudrate  hc32f46x_usart.o
     0x0000605c   0x0000605c   0x00000160   Code   RO         2533    i.SetScBaudrate     hc32f46x_usart.o
@@ -1706,171 +1705,171 @@ Memory Map of the image
     0x00007220   0x00007220   0x00000008   Code   RO         1313    i.UsageFault_Handler  hc32f46x_interrupts.o
     0x00007228   0x00007228   0x00000090   Code   RO         2567    i.UsartGetClk       hc32f46x_usart.o
     0x000072b8   0x000072b8   0x0000001c   Code   RO         3553    i.UsartRxIrqCallback  usart.o
-    0x000072d4   0x000072d4   0x00000020   Code   RO         9711    i.__0printf         mc_w.l(printfa.o)
-    0x000072f4   0x000072f4   0x0000000e   Code   RO         9863    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x00007302   0x00007302   0x0000000e   Code   RO         9865    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x00007310   0x00007310   0x00000184   Code   RO         9718    i._fp_digits        mc_w.l(printfa.o)
-    0x00007494   0x00007494   0x000006b4   Code   RO         9719    i._printf_core      mc_w.l(printfa.o)
-    0x00007b48   0x00007b48   0x00000024   Code   RO         9720    i._printf_post_padding  mc_w.l(printfa.o)
-    0x00007b6c   0x00007b6c   0x0000002e   Code   RO         9721    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x000072d4   0x000072d4   0x00000020   Code   RO         9715    i.__0printf         mc_w.l(printfa.o)
+    0x000072f4   0x000072f4   0x0000000e   Code   RO         9867    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00007302   0x00007302   0x0000000e   Code   RO         9869    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00007310   0x00007310   0x00000184   Code   RO         9722    i._fp_digits        mc_w.l(printfa.o)
+    0x00007494   0x00007494   0x000006b4   Code   RO         9723    i._printf_core      mc_w.l(printfa.o)
+    0x00007b48   0x00007b48   0x00000024   Code   RO         9724    i._printf_post_padding  mc_w.l(printfa.o)
+    0x00007b6c   0x00007b6c   0x0000002e   Code   RO         9725    i._printf_pre_padding  mc_w.l(printfa.o)
     0x00007b9a   0x00007b9a   0x0000001c   Code   RO         3683    i.accumulate_data   distance_measure.o
     0x00007bb6   0x00007bb6   0x00000002   PAD
-    0x00007bb8   0x00007bb8   0x0000001c   Code   RO         4175    i.all_data_update   protocol.o
+    0x00007bb8   0x00007bb8   0x0000001c   Code   RO         4179    i.all_data_update   protocol.o
     0x00007bd4   0x00007bd4   0x000000c0   Code   RO            1    i.alloc_mem         memalloc.o
-    0x00007c94   0x00007c94   0x000000a8   Code   RO         3860    i.alphabeta_filter  alphabeta_filter.o
-    0x00007d3c   0x00007d3c   0x000000f4   Code   RO         3922    i.apfft             apfft.o
-    0x00007e30   0x00007e30   0x0000003c   Code   RO          223    i.app               app.o
-    0x00007e6c   0x00007e6c   0x00000038   Code   RO         3238    i.arctan            math_fp.o
-    0x00007ea4   0x00007ea4   0x000000cc   Code   RO         3239    i.arctan2           math_fp.o
-    0x00007f70   0x00007f70   0x00000098   Code   RO         7841    i.arm_absmax_q31    statisticsfunctions.o
-    0x00008008   0x00008008   0x0000003c   Code   RO         8652    i.arm_bitreversal_32  transformfunctions.o
-    0x00008044   0x00008044   0x000000ac   Code   RO         8664    i.arm_cfft_q31      transformfunctions.o
-    0x000080f0   0x000080f0   0x000000c0   Code   RO         8679    i.arm_cfft_radix4by2_inverse_q31  transformfunctions.o
-    0x000081b0   0x000081b0   0x000000c0   Code   RO         8681    i.arm_cfft_radix4by2_q31  transformfunctions.o
-    0x00008270   0x00008270   0x0000002c   Code   RO         5279    i.arm_cmplx_mag_q31  complexmathfunctions.o
-    0x0000829c   0x0000829c   0x00000020   Code   RO         7856    i.arm_max_q31       statisticsfunctions.o
-    0x000082bc   0x000082bc   0x0000001c   Code   RO         7859    i.arm_mean_q15      statisticsfunctions.o
-    0x000082d8   0x000082d8   0x00000030   Code   RO         7860    i.arm_mean_q31      statisticsfunctions.o
-    0x00008308   0x00008308   0x00000018   Code   RO         4460    i.arm_offset_q15    basicmathfunctions.o
-    0x00008320   0x00008320   0x000003d4   Code   RO         8700    i.arm_radix4_butterfly_inverse_q31  transformfunctions.o
-    0x000086f4   0x000086f4   0x000003d0   Code   RO         8702    i.arm_radix4_butterfly_q31  transformfunctions.o
-    0x00008ac4   0x00008ac4   0x000000c8   Code   RO         8727    i.arm_rfft_init_q31  transformfunctions.o
-    0x00008b8c   0x00008b8c   0x00000064   Code   RO         8729    i.arm_rfft_q31      transformfunctions.o
-    0x00008bf0   0x00008bf0   0x0000004a   Code   RO         4471    i.arm_shift_q31     basicmathfunctions.o
-    0x00008c3a   0x00008c3a   0x000000d6   Code   RO         8732    i.arm_split_rfft_q31  transformfunctions.o
-    0x00008d10   0x00008d10   0x00000064   Code   RO         8735    i.arm_split_rifft_q31  transformfunctions.o
-    0x00008d74   0x00008d74   0x000000e0   Code   RO         5861    i.arm_sqrt_q31      fastmathfunctions.o
-    0x00008e54   0x00008e54   0x0000007e   Code   RO         7875    i.arm_std_q31       statisticsfunctions.o
-    0x00008ed2   0x00008ed2   0x00000002   Code   RO         4181    i.bt_enable_lowpoer_result  protocol.o
-    0x00008ed4   0x00008ed4   0x00000002   Code   RO         4182    i.bt_factor_reset_notify  protocol.o
-    0x00008ed6   0x00008ed6   0x00000002   Code   RO         4184    i.bt_modify_adv_interval_result  protocol.o
-    0x00008ed8   0x00008ed8   0x00000024   Code   RO         4012    i.bt_protocol_init  mcu_api.o
-    0x00008efc   0x00008efc   0x00000002   Code   RO         4187    i.bt_send_one_time_password_token_result  protocol.o
-    0x00008efe   0x00008efe   0x00000002   PAD
-    0x00008f00   0x00008f00   0x00000074   Code   RO         4013    i.bt_uart_service   mcu_api.o
-    0x00008f74   0x00008f74   0x00000024   Code   RO         4341    i.bt_uart_write_data  system.o
-    0x00008f98   0x00008f98   0x00000044   Code   RO         4342    i.bt_uart_write_frame  system.o
-    0x00008fdc   0x00008fdc   0x0000001c   Code   RO         3947    i.cal_q_q31         corrcoef.o
-    0x00008ff8   0x00008ff8   0x00000050   Code   RO         3723    i.cfar_ca           micromotion_detection.o
-    0x00009048   0x00009048   0x0000004c   Code   RO          224    i.close_process     app.o
-    0x00009094   0x00009094   0x00000122   Code   RO         3948    i.corrcoef_q31      corrcoef.o
-    0x000091b6   0x000091b6   0x00000002   PAD
-    0x000091b8   0x000091b8   0x0000014c   Code   RO         4343    i.data_handle       system.o
-    0x00009304   0x00009304   0x0000004c   Code   RO         4344    i.data_point_handle  system.o
-    0x00009350   0x00009350   0x0000002c   Code   RO         4189    i.dp_download_handle  protocol.o
-    0x0000937c   0x0000937c   0x000000c0   Code   RO         1320    i.enIrqRegistration  hc32f46x_interrupts.o
-    0x0000943c   0x0000943c   0x00000024   Code   RO         1323    i.enShareIrqEnable  hc32f46x_interrupts.o
-    0x00009460   0x00009460   0x00000038   Code   RO         3826    i.find_max_peak     vd_calculation.o
-    0x00009498   0x00009498   0x00000010   Code   RO          327    i.fputc             hc32f46x_utility.o
-    0x000094a8   0x000094a8   0x00000044   Code   RO            2    i.free_mem          memalloc.o
-    0x000094ec   0x000094ec   0x0000001c   Code   RO         4345    i.get_check_sum     system.o
-    0x00009508   0x00009508   0x0000002c   Code   RO         4346    i.get_dowmload_dpid_index  system.o
-    0x00009534   0x00009534   0x00000004   Code   RO         4190    i.get_download_cmd_total  protocol.o
-    0x00009538   0x00009538   0x0000000e   Code   RO         4347    i.get_mcu_bt_mode   system.o
-    0x00009546   0x00009546   0x00000002   PAD
-    0x00009548   0x00009548   0x0000001c   Code   RO         4348    i.get_queue_total_data  system.o
-    0x00009564   0x00009564   0x00000018   Code   RO         3319    i.get_sample_data   adc.o
-    0x0000957c   0x0000957c   0x00000024   Code   RO         3622    i.gpio_init         gpio.o
-    0x000095a0   0x000095a0   0x00000034   Code   RO         4349    i.heat_beat_check   system.o
-    0x000095d4   0x000095d4   0x000000e4   Code   RO          225    i.idle_process      app.o
-    0x000096b8   0x000096b8   0x0000002c   Code   RO            3    i.init_mem          memalloc.o
-    0x000096e4   0x000096e4   0x0000002c   Code   RO          226    i.leave_s0          app.o
-    0x00009710   0x00009710   0x00000044   Code   RO          227    i.leave_s1          app.o
-    0x00009754   0x00009754   0x00000068   Code   RO         3443    i.led_init          led.o
-    0x000097bc   0x000097bc   0x0000012c   Code   RO           78    i.main              main.o
-    0x000098e8   0x000098e8   0x00000184   Code   RO         4017    i.mcu_common_uart_data_unpack  mcu_api.o
-    0x00009a6c   0x00009a6c   0x00000078   Code   RO         4023    i.mcu_dp_value_update  mcu_api.o
-    0x00009ae4   0x00009ae4   0x000000f0   Code   RO         3684    i.measure_distance  distance_measure.o
-    0x00009bd4   0x00009bd4   0x00000138   Code   RO         3724    i.micromotion_detection  micromotion_detection.o
-    0x00009d0c   0x00009d0c   0x00000044   Code   RO         4032    i.my_memcpy         mcu_api.o
-    0x00009d50   0x00009d50   0x00000022   Code   RO         4033    i.my_memset         mcu_api.o
-    0x00009d72   0x00009d72   0x0000001c   Code   RO         4034    i.my_strlen         mcu_api.o
-    0x00009d8e   0x00009d8e   0x00000002   PAD
-    0x00009d90   0x00009d90   0x0000004c   Code   RO         4350    i.product_info_update  system.o
-    0x00009ddc   0x00009ddc   0x00000094   Code   RO           43    i.ring_buffer_get   ringbuffer.o
-    0x00009e70   0x00009e70   0x00000090   Code   RO           44    i.ring_buffer_put   ringbuffer.o
-    0x00009f00   0x00009f00   0x00000028   Code   RO         4351    i.set_bt_uart_buffer  system.o
-    0x00009f28   0x00009f28   0x00000010   Code   RO         4352    i.set_bt_uart_byte  system.o
-    0x00009f38   0x00009f38   0x00000038   Code   RO          228    i.tick_init         app.o
-    0x00009f70   0x00009f70   0x00000060   Code   RO         4035    i.uart_receive_input  mcu_api.o
-    0x00009fd0   0x00009fd0   0x00000018   Code   RO         4197    i.uart_transmit_output  protocol.o
-    0x00009fe8   0x00009fe8   0x0000010c   Code   RO         3554    i.usart_init        usart.o
-    0x0000a0f4   0x0000a0f4   0x0000022c   Code   RO         3827    i.vd_calculation    vd_calculation.o
-    0x0000a320   0x0000a320   0x00000004   Data   RO           80    .constdata          main.o
-    0x0000a324   0x0000a324   0x00000010   Data   RO         2568    .constdata          hc32f46x_usart.o
-    0x0000a334   0x0000a334   0x00000009   Data   RO         3555    .constdata          usart.o
-    0x0000a33d   0x0000a33d   0x00000003   PAD
-    0x0000a340   0x0000a340   0x00000008   Data   RO         3725    .constdata          micromotion_detection.o
-    0x0000a348   0x0000a348   0x00000800   Data   RO         3976    .constdata          hamming.o
-    0x0000ab48   0x0000ab48   0x000007fc   Data   RO         3985    .constdata          hanning_conv.o
-    0x0000b344   0x0000b344   0x00000800   Data   RO         3994    .constdata          freq_linspace.o
-    0x0000bb44   0x0000bb44   0x00000008   Data   RO         4198    .constdata          protocol.o
-    0x0000bb4c   0x0000bb4c   0x00000060   Data   RO         5043    .constdata          commontables.o
-    0x0000bbac   0x0000bbac   0x000000c0   Data   RO         5044    .constdata          commontables.o
-    0x0000bc6c   0x0000bc6c   0x00000180   Data   RO         5045    .constdata          commontables.o
-    0x0000bdec   0x0000bdec   0x00000300   Data   RO         5046    .constdata          commontables.o
-    0x0000c0ec   0x0000c0ec   0x00000600   Data   RO         5047    .constdata          commontables.o
-    0x0000c6ec   0x0000c6ec   0x00000c00   Data   RO         5048    .constdata          commontables.o
-    0x0000d2ec   0x0000d2ec   0x00001800   Data   RO         5049    .constdata          commontables.o
-    0x0000eaec   0x0000eaec   0x00003000   Data   RO         5050    .constdata          commontables.o
-    0x00011aec   0x00011aec   0x00006000   Data   RO         5051    .constdata          commontables.o
-    0x00017aec   0x00017aec   0x00000018   Data   RO         5079    .constdata          commontables.o
-    0x00017b04   0x00017b04   0x00000030   Data   RO         5080    .constdata          commontables.o
-    0x00017b34   0x00017b34   0x00000070   Data   RO         5081    .constdata          commontables.o
-    0x00017ba4   0x00017ba4   0x000000e0   Data   RO         5082    .constdata          commontables.o
-    0x00017c84   0x00017c84   0x000001e0   Data   RO         5083    .constdata          commontables.o
-    0x00017e64   0x00017e64   0x000003c0   Data   RO         5084    .constdata          commontables.o
-    0x00018224   0x00018224   0x000007c0   Data   RO         5085    .constdata          commontables.o
-    0x000189e4   0x000189e4   0x00000f80   Data   RO         5086    .constdata          commontables.o
-    0x00019964   0x00019964   0x00001f80   Data   RO         5087    .constdata          commontables.o
-    0x0001b8e4   0x0001b8e4   0x00008000   Data   RO         5106    .constdata          commontables.o
-    0x000238e4   0x000238e4   0x00008000   Data   RO         5107    .constdata          commontables.o
-    0x0002b8e4   0x0002b8e4   0x00000010   Data   RO         5157    .constdata          commontables.o
-    0x0002b8f4   0x0002b8f4   0x00000010   Data   RO         5158    .constdata          commontables.o
-    0x0002b904   0x0002b904   0x00000010   Data   RO         5159    .constdata          commontables.o
-    0x0002b914   0x0002b914   0x00000010   Data   RO         5160    .constdata          commontables.o
-    0x0002b924   0x0002b924   0x00000010   Data   RO         5161    .constdata          commontables.o
-    0x0002b934   0x0002b934   0x00000010   Data   RO         5162    .constdata          commontables.o
-    0x0002b944   0x0002b944   0x00000010   Data   RO         5163    .constdata          commontables.o
-    0x0002b954   0x0002b954   0x00000010   Data   RO         5164    .constdata          commontables.o
-    0x0002b964   0x0002b964   0x00000010   Data   RO         5165    .constdata          commontables.o
-    0x0002b974   0x0002b974   0x00000030   Data   RO         9861    Region$$Table       anon$$obj.o
+    0x00007c94   0x00007c94   0x0000007c   Code   RO         3864    i.alphabeta_filter  alphabeta_filter.o
+    0x00007d10   0x00007d10   0x000000f4   Code   RO         3926    i.apfft             apfft.o
+    0x00007e04   0x00007e04   0x0000003c   Code   RO          223    i.app               app.o
+    0x00007e40   0x00007e40   0x00000038   Code   RO         3238    i.arctan            math_fp.o
+    0x00007e78   0x00007e78   0x000000cc   Code   RO         3239    i.arctan2           math_fp.o
+    0x00007f44   0x00007f44   0x00000098   Code   RO         7845    i.arm_absmax_q31    statisticsfunctions.o
+    0x00007fdc   0x00007fdc   0x0000003c   Code   RO         8656    i.arm_bitreversal_32  transformfunctions.o
+    0x00008018   0x00008018   0x000000ac   Code   RO         8668    i.arm_cfft_q31      transformfunctions.o
+    0x000080c4   0x000080c4   0x000000c0   Code   RO         8683    i.arm_cfft_radix4by2_inverse_q31  transformfunctions.o
+    0x00008184   0x00008184   0x000000c0   Code   RO         8685    i.arm_cfft_radix4by2_q31  transformfunctions.o
+    0x00008244   0x00008244   0x0000002c   Code   RO         5283    i.arm_cmplx_mag_q31  complexmathfunctions.o
+    0x00008270   0x00008270   0x0000001c   Code   RO         7863    i.arm_mean_q15      statisticsfunctions.o
+    0x0000828c   0x0000828c   0x00000030   Code   RO         7864    i.arm_mean_q31      statisticsfunctions.o
+    0x000082bc   0x000082bc   0x00000018   Code   RO         4464    i.arm_offset_q15    basicmathfunctions.o
+    0x000082d4   0x000082d4   0x000003d4   Code   RO         8704    i.arm_radix4_butterfly_inverse_q31  transformfunctions.o
+    0x000086a8   0x000086a8   0x000003d0   Code   RO         8706    i.arm_radix4_butterfly_q31  transformfunctions.o
+    0x00008a78   0x00008a78   0x000000c8   Code   RO         8731    i.arm_rfft_init_q31  transformfunctions.o
+    0x00008b40   0x00008b40   0x00000064   Code   RO         8733    i.arm_rfft_q31      transformfunctions.o
+    0x00008ba4   0x00008ba4   0x0000004a   Code   RO         4475    i.arm_shift_q31     basicmathfunctions.o
+    0x00008bee   0x00008bee   0x000000d6   Code   RO         8736    i.arm_split_rfft_q31  transformfunctions.o
+    0x00008cc4   0x00008cc4   0x00000064   Code   RO         8739    i.arm_split_rifft_q31  transformfunctions.o
+    0x00008d28   0x00008d28   0x000000e0   Code   RO         5865    i.arm_sqrt_q31      fastmathfunctions.o
+    0x00008e08   0x00008e08   0x0000007e   Code   RO         7879    i.arm_std_q31       statisticsfunctions.o
+    0x00008e86   0x00008e86   0x00000002   Code   RO         4185    i.bt_enable_lowpoer_result  protocol.o
+    0x00008e88   0x00008e88   0x00000002   Code   RO         4186    i.bt_factor_reset_notify  protocol.o
+    0x00008e8a   0x00008e8a   0x00000002   Code   RO         4188    i.bt_modify_adv_interval_result  protocol.o
+    0x00008e8c   0x00008e8c   0x00000024   Code   RO         4016    i.bt_protocol_init  mcu_api.o
+    0x00008eb0   0x00008eb0   0x00000002   Code   RO         4191    i.bt_send_one_time_password_token_result  protocol.o
+    0x00008eb2   0x00008eb2   0x00000002   PAD
+    0x00008eb4   0x00008eb4   0x00000074   Code   RO         4017    i.bt_uart_service   mcu_api.o
+    0x00008f28   0x00008f28   0x00000024   Code   RO         4345    i.bt_uart_write_data  system.o
+    0x00008f4c   0x00008f4c   0x00000044   Code   RO         4346    i.bt_uart_write_frame  system.o
+    0x00008f90   0x00008f90   0x0000001c   Code   RO         3951    i.cal_q_q31         corrcoef.o
+    0x00008fac   0x00008fac   0x00000050   Code   RO         3727    i.cfar_ca           micromotion_detection.o
+    0x00008ffc   0x00008ffc   0x0000004c   Code   RO          224    i.close_process     app.o
+    0x00009048   0x00009048   0x00000122   Code   RO         3952    i.corrcoef_q31      corrcoef.o
+    0x0000916a   0x0000916a   0x00000002   PAD
+    0x0000916c   0x0000916c   0x0000014c   Code   RO         4347    i.data_handle       system.o
+    0x000092b8   0x000092b8   0x0000004c   Code   RO         4348    i.data_point_handle  system.o
+    0x00009304   0x00009304   0x00000100   Code   RO         4193    i.dp_download_handle  protocol.o
+    0x00009404   0x00009404   0x000000c0   Code   RO         1320    i.enIrqRegistration  hc32f46x_interrupts.o
+    0x000094c4   0x000094c4   0x00000024   Code   RO         1323    i.enShareIrqEnable  hc32f46x_interrupts.o
+    0x000094e8   0x000094e8   0x00000038   Code   RO         3830    i.find_max_peak     vd_calculation.o
+    0x00009520   0x00009520   0x00000010   Code   RO          327    i.fputc             hc32f46x_utility.o
+    0x00009530   0x00009530   0x00000044   Code   RO            2    i.free_mem          memalloc.o
+    0x00009574   0x00009574   0x0000001c   Code   RO         4349    i.get_check_sum     system.o
+    0x00009590   0x00009590   0x0000002c   Code   RO         4350    i.get_dowmload_dpid_index  system.o
+    0x000095bc   0x000095bc   0x00000004   Code   RO         4194    i.get_download_cmd_total  protocol.o
+    0x000095c0   0x000095c0   0x0000000e   Code   RO         4351    i.get_mcu_bt_mode   system.o
+    0x000095ce   0x000095ce   0x00000002   PAD
+    0x000095d0   0x000095d0   0x0000001c   Code   RO         4352    i.get_queue_total_data  system.o
+    0x000095ec   0x000095ec   0x00000018   Code   RO         3319    i.get_sample_data   adc.o
+    0x00009604   0x00009604   0x00000024   Code   RO         3622    i.gpio_init         gpio.o
+    0x00009628   0x00009628   0x00000034   Code   RO         4353    i.heat_beat_check   system.o
+    0x0000965c   0x0000965c   0x000000e0   Code   RO          225    i.idle_process      app.o
+    0x0000973c   0x0000973c   0x0000002c   Code   RO            3    i.init_mem          memalloc.o
+    0x00009768   0x00009768   0x0000002c   Code   RO          226    i.leave_s0          app.o
+    0x00009794   0x00009794   0x00000044   Code   RO          227    i.leave_s1          app.o
+    0x000097d8   0x000097d8   0x00000068   Code   RO         3443    i.led_init          led.o
+    0x00009840   0x00009840   0x0000012c   Code   RO           78    i.main              main.o
+    0x0000996c   0x0000996c   0x00000184   Code   RO         4021    i.mcu_common_uart_data_unpack  mcu_api.o
+    0x00009af0   0x00009af0   0x00000078   Code   RO         4027    i.mcu_dp_value_update  mcu_api.o
+    0x00009b68   0x00009b68   0x000000f4   Code   RO         3684    i.measure_distance  distance_measure.o
+    0x00009c5c   0x00009c5c   0x00000140   Code   RO         3728    i.micromotion_detection  micromotion_detection.o
+    0x00009d9c   0x00009d9c   0x00000044   Code   RO         4036    i.my_memcpy         mcu_api.o
+    0x00009de0   0x00009de0   0x00000022   Code   RO         4037    i.my_memset         mcu_api.o
+    0x00009e02   0x00009e02   0x0000001c   Code   RO         4038    i.my_strlen         mcu_api.o
+    0x00009e1e   0x00009e1e   0x00000002   PAD
+    0x00009e20   0x00009e20   0x0000004c   Code   RO         4354    i.product_info_update  system.o
+    0x00009e6c   0x00009e6c   0x00000094   Code   RO           43    i.ring_buffer_get   ringbuffer.o
+    0x00009f00   0x00009f00   0x00000090   Code   RO           44    i.ring_buffer_put   ringbuffer.o
+    0x00009f90   0x00009f90   0x00000028   Code   RO         4355    i.set_bt_uart_buffer  system.o
+    0x00009fb8   0x00009fb8   0x00000010   Code   RO         4356    i.set_bt_uart_byte  system.o
+    0x00009fc8   0x00009fc8   0x00000038   Code   RO          228    i.tick_init         app.o
+    0x0000a000   0x0000a000   0x00000060   Code   RO         4039    i.uart_receive_input  mcu_api.o
+    0x0000a060   0x0000a060   0x00000018   Code   RO         4201    i.uart_transmit_output  protocol.o
+    0x0000a078   0x0000a078   0x0000010c   Code   RO         3554    i.usart_init        usart.o
+    0x0000a184   0x0000a184   0x00000294   Code   RO         3831    i.vd_calculation    vd_calculation.o
+    0x0000a418   0x0000a418   0x00000004   Data   RO           80    .constdata          main.o
+    0x0000a41c   0x0000a41c   0x00000010   Data   RO         2568    .constdata          hc32f46x_usart.o
+    0x0000a42c   0x0000a42c   0x00000009   Data   RO         3555    .constdata          usart.o
+    0x0000a435   0x0000a435   0x00000003   PAD
+    0x0000a438   0x0000a438   0x00000008   Data   RO         3729    .constdata          micromotion_detection.o
+    0x0000a440   0x0000a440   0x00000800   Data   RO         3980    .constdata          hamming.o
+    0x0000ac40   0x0000ac40   0x000007fc   Data   RO         3989    .constdata          hanning_conv.o
+    0x0000b43c   0x0000b43c   0x00000800   Data   RO         3998    .constdata          freq_linspace.o
+    0x0000bc3c   0x0000bc3c   0x0000000e   Data   RO         4202    .constdata          protocol.o
+    0x0000bc4a   0x0000bc4a   0x00000002   PAD
+    0x0000bc4c   0x0000bc4c   0x00000060   Data   RO         5047    .constdata          commontables.o
+    0x0000bcac   0x0000bcac   0x000000c0   Data   RO         5048    .constdata          commontables.o
+    0x0000bd6c   0x0000bd6c   0x00000180   Data   RO         5049    .constdata          commontables.o
+    0x0000beec   0x0000beec   0x00000300   Data   RO         5050    .constdata          commontables.o
+    0x0000c1ec   0x0000c1ec   0x00000600   Data   RO         5051    .constdata          commontables.o
+    0x0000c7ec   0x0000c7ec   0x00000c00   Data   RO         5052    .constdata          commontables.o
+    0x0000d3ec   0x0000d3ec   0x00001800   Data   RO         5053    .constdata          commontables.o
+    0x0000ebec   0x0000ebec   0x00003000   Data   RO         5054    .constdata          commontables.o
+    0x00011bec   0x00011bec   0x00006000   Data   RO         5055    .constdata          commontables.o
+    0x00017bec   0x00017bec   0x00000018   Data   RO         5083    .constdata          commontables.o
+    0x00017c04   0x00017c04   0x00000030   Data   RO         5084    .constdata          commontables.o
+    0x00017c34   0x00017c34   0x00000070   Data   RO         5085    .constdata          commontables.o
+    0x00017ca4   0x00017ca4   0x000000e0   Data   RO         5086    .constdata          commontables.o
+    0x00017d84   0x00017d84   0x000001e0   Data   RO         5087    .constdata          commontables.o
+    0x00017f64   0x00017f64   0x000003c0   Data   RO         5088    .constdata          commontables.o
+    0x00018324   0x00018324   0x000007c0   Data   RO         5089    .constdata          commontables.o
+    0x00018ae4   0x00018ae4   0x00000f80   Data   RO         5090    .constdata          commontables.o
+    0x00019a64   0x00019a64   0x00001f80   Data   RO         5091    .constdata          commontables.o
+    0x0001b9e4   0x0001b9e4   0x00008000   Data   RO         5110    .constdata          commontables.o
+    0x000239e4   0x000239e4   0x00008000   Data   RO         5111    .constdata          commontables.o
+    0x0002b9e4   0x0002b9e4   0x00000010   Data   RO         5161    .constdata          commontables.o
+    0x0002b9f4   0x0002b9f4   0x00000010   Data   RO         5162    .constdata          commontables.o
+    0x0002ba04   0x0002ba04   0x00000010   Data   RO         5163    .constdata          commontables.o
+    0x0002ba14   0x0002ba14   0x00000010   Data   RO         5164    .constdata          commontables.o
+    0x0002ba24   0x0002ba24   0x00000010   Data   RO         5165    .constdata          commontables.o
+    0x0002ba34   0x0002ba34   0x00000010   Data   RO         5166    .constdata          commontables.o
+    0x0002ba44   0x0002ba44   0x00000010   Data   RO         5167    .constdata          commontables.o
+    0x0002ba54   0x0002ba54   0x00000010   Data   RO         5168    .constdata          commontables.o
+    0x0002ba64   0x0002ba64   0x00000010   Data   RO         5169    .constdata          commontables.o
+    0x0002ba74   0x0002ba74   0x00000030   Data   RO         9865    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x1fff8000, Load base: 0x0002b9a4, Size: 0x00009810, Max: 0x0002f000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x1fff8000, Load base: 0x0002baa4, Size: 0x00009828, Max: 0x0002f000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x1fff8000   0x0002b9a4   0x0000000a   Ven    RO         9873    Veneer$$Code        anon$$obj.o
-    0x1fff800a   0x0002b9ae   0x00000002   PAD
-    0x1fff800c   0x0002b9b0   0x0000004c   Code   RO          895    i.EFM_InstructionCacheCmd  hc32f46x_efm.o
-    0x1fff8058   0x0002b9fc   0x00000018   Code   RO          897    i.EFM_Lock          hc32f46x_efm.o
-    0x1fff8070   0x0002ba14   0x00000084   Code   RO          906    i.EFM_SetLatency    hc32f46x_efm.o
-    0x1fff80f4   0x0002ba98   0x00000014   Code   RO          911    i.EFM_Unlock        hc32f46x_efm.o
-    0x1fff8108   0x0002baac   0x00000004   Data   RW            5    .data               memalloc.o
-    0x1fff810c   0x0002bab0   0x00000010   Data   RW           81    .data               main.o
-    0x1fff811c   0x0002bac0   0x0000001c   Data   RW          229    .data               app.o
-    0x1fff8138   0x0002badc   0x00000008   Data   RW          328    .data               hc32f46x_utility.o
-    0x1fff8140   0x0002bae4   0x00000001   Data   RW         2791    .data               hc32f46x_dmac.o
-    0x1fff8141   0x0002bae5   0x00000003   PAD
-    0x1fff8144   0x0002bae8   0x00000004   Data   RW         2961    .data               hc32f46x_exint_nmi_swi.o
-    0x1fff8148   0x0002baec   0x00000008   Data   RW         3270    .data               system_hc32f46x.o
-    0x1fff8150   0x0002baf4   0x00000018   Data   RW         3321    .data               adc.o
-    0x1fff8168   0x0002bb0c   0x00000004   Data   RW         3686    .data               distance_measure.o
-    0x1fff816c   0x0002bb10   0x0000000a   Data   RW         4036    .data               mcu_api.o
-    0x1fff8176   0x0002bb1a   0x00000002   PAD
-    0x1fff8178   0x0002bb1c   0x00000008   Data   RW         4199    .data               protocol.o
-    0x1fff8180   0x0002bb24   0x0000000d   Data   RW         4354    .data               system.o
-    0x1fff818d   0x0002bb31   0x00000003   PAD
-    0x1fff8190   0x0002bb34   0x00000004   Data   RW         9828    .data               mc_w.l(stdout.o)
-    0x1fff8194        -       0x000078f0   Zero   RW            4    .bss                memalloc.o
-    0x1ffffa84        -       0x00000200   Zero   RW           79    .bss                main.o
-    0x1ffffc84        -       0x00000200   Zero   RW         1324    .bss                hc32f46x_interrupts.o
-    0x1ffffe84        -       0x000008e4   Zero   RW         3320    .bss                adc.o
-    0x20000768        -       0x00000800   Zero   RW         3685    .bss                distance_measure.o
-    0x20000f68        -       0x000002a5   Zero   RW         4353    .bss                system.o
-    0x2000120d   0x0002bb38   0x00000003   PAD
-    0x20001210        -       0x00000600   Zero   RW           67    STACK               startup_hc32f46x.o
+    0x1fff8000   0x0002baa4   0x0000000a   Ven    RO         9877    Veneer$$Code        anon$$obj.o
+    0x1fff800a   0x0002baae   0x00000002   PAD
+    0x1fff800c   0x0002bab0   0x0000004c   Code   RO          895    i.EFM_InstructionCacheCmd  hc32f46x_efm.o
+    0x1fff8058   0x0002bafc   0x00000018   Code   RO          897    i.EFM_Lock          hc32f46x_efm.o
+    0x1fff8070   0x0002bb14   0x00000084   Code   RO          906    i.EFM_SetLatency    hc32f46x_efm.o
+    0x1fff80f4   0x0002bb98   0x00000014   Code   RO          911    i.EFM_Unlock        hc32f46x_efm.o
+    0x1fff8108   0x0002bbac   0x00000004   Data   RW            5    .data               memalloc.o
+    0x1fff810c   0x0002bbb0   0x00000024   Data   RW           81    .data               main.o
+    0x1fff8130   0x0002bbd4   0x0000001c   Data   RW          229    .data               app.o
+    0x1fff814c   0x0002bbf0   0x00000008   Data   RW          328    .data               hc32f46x_utility.o
+    0x1fff8154   0x0002bbf8   0x00000001   Data   RW         2791    .data               hc32f46x_dmac.o
+    0x1fff8155   0x0002bbf9   0x00000003   PAD
+    0x1fff8158   0x0002bbfc   0x00000004   Data   RW         2961    .data               hc32f46x_exint_nmi_swi.o
+    0x1fff815c   0x0002bc00   0x00000008   Data   RW         3270    .data               system_hc32f46x.o
+    0x1fff8164   0x0002bc08   0x00000018   Data   RW         3321    .data               adc.o
+    0x1fff817c   0x0002bc20   0x00000004   Data   RW         3686    .data               distance_measure.o
+    0x1fff8180   0x0002bc24   0x0000000a   Data   RW         4040    .data               mcu_api.o
+    0x1fff818a   0x0002bc2e   0x00000002   PAD
+    0x1fff818c   0x0002bc30   0x00000008   Data   RW         4203    .data               protocol.o
+    0x1fff8194   0x0002bc38   0x0000000d   Data   RW         4358    .data               system.o
+    0x1fff81a1   0x0002bc45   0x00000003   PAD
+    0x1fff81a4   0x0002bc48   0x00000004   Data   RW         9832    .data               mc_w.l(stdout.o)
+    0x1fff81a8        -       0x000078f0   Zero   RW            4    .bss                memalloc.o
+    0x1ffffa98        -       0x00000200   Zero   RW           79    .bss                main.o
+    0x1ffffc98        -       0x00000200   Zero   RW         1324    .bss                hc32f46x_interrupts.o
+    0x1ffffe98        -       0x000008e4   Zero   RW         3320    .bss                adc.o
+    0x2000077c        -       0x00000800   Zero   RW         3685    .bss                distance_measure.o
+    0x20000f7c        -       0x000002a5   Zero   RW         4357    .bss                system.o
+    0x20001221   0x0002bc4c   0x00000007   PAD
+    0x20001228        -       0x00000600   Zero   RW           67    STACK               startup_hc32f46x.o
 
 
 

@@ -54,10 +54,10 @@ description: Initial version
 
 
 /******************************************************************************
-							Configuration of user-related information
+                            Configuration of user-related information
 ******************************************************************************/
 /******************************************************************************
-							1: modify product information
+                            1: modify product information
 ******************************************************************************/
 #define PRODUCT_KEY "xsdce3yg"    //开发平台创建产品后生成的16位字符产品唯一标识
 
@@ -77,8 +77,8 @@ If you need to turn on this function, the serial port receiving buffer will beco
 ******************************************************************************/
 //#define         SUPPORT_MCU_FIRM_UPDATE                 //Enable MCU firmware upgrade (default)
 /******************************************************************************
-						 3: define the sending and receiving cache:
-					If there is not enough RAM for MCU, it can be changed to 24.
+                         3: define the sending and receiving cache:
+                    If there is not enough RAM for MCU, it can be changed to 24.
 ******************************************************************************/
 #ifndef SUPPORT_MCU_FIRM_UPDATE
 #define BT_UART_QUEUE_LMT             16              //The size of the data receiving queue can be reduced if the RAM of MCU is not enough.
@@ -90,14 +90,14 @@ If you need to turn on this function, the serial port receiving buffer will beco
 
 #define BT_UART_SEND_BUF_LMT         512              //According to the size of the user's DP data, it must be greater than 32
 /******************************************************************************
-						4: define how the module works
+                        4: define how the module works
 Module self-processing:
-		  Bt indicator and BT Reset button are connected to the BT module (turn on the BT_CONTROL_SELF_MODE macro)
-		  and define BT_STATE_KEY and BT_RESET_KEY correctly
+          Bt indicator and BT Reset button are connected to the BT module (turn on the BT_CONTROL_SELF_MODE macro)
+          and define BT_STATE_KEY and BT_RESET_KEY correctly
 MCU self-processing:
-		  The BT indicator and bt Reset button are connected to the MCU (turn off the BT_CONTROL_SELF_MODE macro)
-		  The MCU calls the McU_reset_bt () function in the McU_api.c file where the bt reset needs to be handled, and can call the McU_get_reset_bt_flag () function to return the bt reset result
-		  Or call the McU_set_bt_mode (BT_CONFIG_E mode) function in the file McU_api.c to set BT mode, and call the McU_get_bt_work_state () function to return the result of setting BT
+          The BT indicator and bt Reset button are connected to the MCU (turn off the BT_CONTROL_SELF_MODE macro)
+          The MCU calls the McU_reset_bt () function in the McU_api.c file where the bt reset needs to be handled, and can call the McU_get_reset_bt_flag () function to return the bt reset result
+          Or call the McU_set_bt_mode (BT_CONFIG_E mode) function in the file McU_api.c to set BT mode, and call the McU_get_bt_work_state () function to return the result of setting BT
 ******************************************************************************/
 //#define         BT_CONTROL_SELF_MODE                       / / bt self-processing button and LED indicator; if it is MCU external button / LED indicator, please turn off the macro
 #ifdef          BT_CONTROL_SELF_MODE                      // Module self-processing
@@ -106,24 +106,35 @@ MCU self-processing:
 #endif
 
 /******************************************************************************
-					  5: clock function configuration
+                      5: clock function configuration
 
 ******************************************************************************/
 #define         SUPPORT_MCU_RTC_CHECK                //open
 
 /******************************************************************************
-						1:dp data point serial number redefinition
-		  * * this is automatically generated code. If there are any changes on the development platform, please download MCU_SDK again.**
+                        1:dp data point serial number redefinition
+          * * this is automatically generated code. If there are any changes on the development platform, please download MCU_SDK again.**
 ******************************************************************************/
 
-#define DPID_SPEED_UP   0xAA
-#define DPID_DISTANCE_UP  0xAB
+#define DPID_SPEED_UP      0xAA
+#define DPID_DISTANCE_UP   0xAB
 #define DPID_VERSION_DOWN  0xAC
-#define DPID_VERSION_UP  0xAD
+#define DPID_VERSION_UP    0xAD
+#define DPID_SET_SENSITIVITY_DOWN  0xB0
+#define DPID_SET_TIME_TH_DOWN      0xB1
+#define DPID_SET_FREQ_TH_DOWN      0xB2
+#define DPID_SET_DISTANCE_TH_DOWN  0xB3
+#define DPID_SET_SPEED_TH_DOWN     0xB4
+#define DPID_TH_DOWN               0xB5
+#define DPID_SET_SENSITIVITY_UP  0xBA
+#define DPID_SET_TIME_TH_UP      0xBB
+#define DPID_SET_FREQ_TH_UP      0xBC
+#define DPID_SET_DISTANCE_TH_UP  0xBD
+#define DPID_SET_SPEED_TH_UP     0xBE
 
 typedef struct {
-	unsigned long speed;
-	unsigned long distance;
+    unsigned long speed;
+    unsigned long distance;
 } updata_data_t;
 
 
@@ -144,7 +155,7 @@ Function description: upload all dp information of the system to achieve data sy
 Input parameters: none
 Return parameter: none
 Instructions for use: this function needs to be called internally in SDK
-		   MCU must implement the data reporting function within this function, including reporting only and downloadable hairstyle data.
+           MCU must implement the data reporting function within this function, including reporting only and downloadable hairstyle data.
 *****************************************************************************/
 
 void all_data_update(void);
@@ -196,26 +207,26 @@ void bt_rf_test_req(void);
 Function name: bt_send_recordable_DP_data
 Function description: report the recorded data
 Input parameters: Type-1: Bluetooth module built-in time report -2: original data only report, no time -3: MCU built-in time report
-		Dpid: former datapoint serial number
-		Dptype: Corresponds to a datapoint specific data type on the open platform
-		value:
-		len:
+        Dpid: former datapoint serial number
+        Dptype: Corresponds to a datapoint specific data type on the open platform
+        value:
+        len:
 Return parameter: none
 Instructions: the MCU needs to improve the function itself
-	It is recommended to use the cache queue. All data to be sent to the module should be put into the MCU cache queue, and the next data should be reported after one has been reported successfully. The recorded data should ensure that each data has been reported successfully
+    It is recommended to use the cache queue. All data to be sent to the module should be put into the MCU cache queue, and the next data should be reported after one has been reported successfully. The recorded data should ensure that each data has been reported successfully
 *****************************************************************************/
 void bt_rf_test_result(unsigned char result,signed char rssi);
 /*****************************************************************************
 Function name: bt_send_recordable_DP_data
 Function description: report the recorded data
 Input parameters: Type-1: Bluetooth module built-in time report -2: original data only report, no time -3: MCU built-in time report
-		Dpid: former datapoint serial number
-		Dptype: Corresponds to a datapoint specific data type on the open platform
-		value:
-		len:
+        Dpid: former datapoint serial number
+        Dptype: Corresponds to a datapoint specific data type on the open platform
+        value:
+        len:
 Return parameter: none
 Instructions: the MCU needs to improve the function itself
-	It is recommended to use the cache queue. All data to be sent to the module should be put into the MCU cache queue, and the next data should be reported after one has been reported successfully. The recorded data should ensure that each data has been reported successfully
+    It is recommended to use the cache queue. All data to be sent to the module should be put into the MCU cache queue, and the next data should be reported after one has been reported successfully. The recorded data should ensure that each data has been reported successfully
 *****************************************************************************/
 
 void bt_send_recordable_dp_data(unsigned char snedType,unsigned char dpid,unsigned char dpType, unsigned char value[],unsigned short len);
@@ -343,10 +354,10 @@ void bt_send_mcu_ver(void);
 Function name: bt_time_sync_result
 Function description: send the result of time synchronization to the module
 Input parameters: result synchronization result 0 successful, other failed
-		sync_time_type :time format
-		Bt_time: Custom time (valid if time format 0 or 1)
-		Time_zone_100: time zone
-		Time_stamp_ms: timestamp (valid if it is in time format 1)
+        sync_time_type :time format
+        Bt_time: Custom time (valid if time format 0 or 1)
+        Time_zone_100: time zone
+        Time_stamp_ms: timestamp (valid if it is in time format 1)
 Return parameter: none
 Instructions: MCU needs to improve the function on its own.
 *****************************************************************************/

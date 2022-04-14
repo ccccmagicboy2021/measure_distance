@@ -4,12 +4,13 @@
 #include "sys.h"
 #include "led.h"
 #include "timer.h"
+#include "distance_measure.h"
 
 extern unsigned char version_num[];
 updata_data_t updata_data;
 
 /******************************************************************************
-								Transplant notes:
+                                Transplant notes:
 1.MCU call bt_uart_service() in the main loop.
 2: After the program is initialized normally, it is recommended not to close the serial port interrupt. If the interrupt must be turned off, the interrupt time must be short. Turning off the interrupt will cause the serial port data packet to be lost.
 3: Do not call the report function in the interrupt/timer interrupt
@@ -17,7 +18,7 @@ updata_data_t updata_data;
 
 
 /******************************************************************************
-							  Step 1: initialization
+                              Step 1: initialization
 1: Include the header file "Bt.h" in files that need to be used with BT-related files
 2: Call the BT_protocol_init () function of the McU_api.c file during MCU initialization
 3: Fill the MCU serial byte transmission function into the protocol. C file uart_transmit_output function, and delete #error
@@ -27,23 +28,29 @@ updata_data_t updata_data;
 
 /******************************************************************************
                         1:Comparison Table of sequence types of dp data points
-		  * * this is automatically generated code. If there are any changes on the development platform, please download MCU_SDK** again.
+          * * this is automatically generated code. If there are any changes on the development platform, please download MCU_SDK** again.
 ******************************************************************************/
 const DOWNLOAD_CMD_S download_cmd[] =
 {
-	{DPID_DISTANCE_UP,DP_TYPE_VALUE},
+    {DPID_VERSION_DOWN,DP_TYPE_VALUE},
 
-	{DPID_SPEED_UP, DP_TYPE_VALUE},
+    {DPID_SET_SENSITIVITY_DOWN, DP_TYPE_VALUE},
 
-	{DPID_VERSION_DOWN, DP_TYPE_VALUE},
+    {DPID_SET_TIME_TH_DOWN, DP_TYPE_VALUE},
 
-	{DPID_VERSION_UP, DP_TYPE_VALUE},
+    {DPID_SET_FREQ_TH_DOWN, DP_TYPE_VALUE},
+
+    {DPID_SET_DISTANCE_TH_DOWN, DP_TYPE_VALUE},
+
+    {DPID_SET_SPEED_TH_DOWN, DP_TYPE_VALUE},
+
+    {DPID_TH_DOWN, DP_TYPE_VALUE},
 };
 
 
 
 /******************************************************************************
-						   2: uart port single byte sending function
+                           2: uart port single byte sending function
 Please fill the MCU serial port sending function into this function, and pass the received data into the serial port sending function as parameters
 ******************************************************************************/
 
@@ -71,13 +78,13 @@ void uart_transmit_output(unsigned char value)
 #endif
 }
 /******************************************************************************
-						   Step 2: implement specific user functions
+                           Step 2: implement specific user functions
 1:APP dispatch data processing
 2: data reporting processing
 ******************************************************************************/
 
 /******************************************************************************
-							1: all data reporting and processing
+                            1: all data reporting and processing
 The current function handles all data reporting (including dispatch / escalation and escalation only)
   Users are required to implement according to the actual situation:
   1: it is necessary to implement data points that can be sent / reported.
@@ -94,32 +101,74 @@ Function description: upload all dp information of the system to achieve data sy
 Input parameters: none
 Return parameter: none
 Instructions for use: this function needs to be called internally in SDK（上报）
-		   MCU must implement the data reporting function within this function, including reporting only and downloadable hairstyle data.
+           MCU must implement the data reporting function within this function, including reporting only and downloadable hairstyle data.
 *****************************************************************************/
 
 void all_data_update(void)
 {
     mcu_dp_value_update(DPID_SPEED_UP, updata_data.speed);
 
-	mcu_dp_value_update(DPID_DISTANCE_UP, updata_data.distance);
+    mcu_dp_value_update(DPID_DISTANCE_UP, updata_data.distance);
 }
 
 
 
 unsigned char dp_download_handle(unsigned char dpid,const unsigned char value[], unsigned short length)
 {
-	unsigned char ret;
-	switch(dpid)
-	{
-		case DPID_VERSION_DOWN:
-			//感应延时处理函数
-			ret = mcu_dp_value_update(DPID_VERSION_UP, *(unsigned long *)version_num);
-		break;
-
-		default:
-		break;
-	}
-	return ret;
+    unsigned char ret;
+    unsigned char temp[4];
+    switch(dpid)
+    {
+        case DPID_VERSION_DOWN:
+            //感应延时处理函数
+            ret = mcu_dp_value_update(DPID_VERSION_UP, *(unsigned long *)version_num);
+            break;
+        case DPID_SET_SENSITIVITY_DOWN:
+            measure_th.sensitivity = *(int *)value;
+            ret = mcu_dp_value_update(DPID_SET_SENSITIVITY_UP, measure_th.sensitivity);
+            break;
+        case DPID_SET_TIME_TH_DOWN:
+            measure_th.time_th = *(int *)value;
+            ret = mcu_dp_value_update(DPID_SET_TIME_TH_UP, measure_th.time_th);
+            break;
+        case DPID_SET_FREQ_TH_DOWN:
+            measure_th.freq_th = *(int *)value;
+            ret = mcu_dp_value_update(DPID_SET_FREQ_TH_UP, measure_th.freq_th);
+            break;
+        case DPID_SET_DISTANCE_TH_DOWN:
+            measure_th.distance_th = *(int *)value;
+            ret = mcu_dp_value_update(DPID_SET_DISTANCE_TH_UP, measure_th.distance_th);
+            break;
+        case DPID_SET_SPEED_TH_DOWN:
+            measure_th.speed_th = *(int *)value;
+            ret = mcu_dp_value_update(DPID_SET_SPEED_TH_UP, measure_th.speed_th);
+            break;
+        case DPID_TH_DOWN:
+            switch (value[0])
+            {
+            case 1:
+                ret = mcu_dp_value_update(DPID_SET_SENSITIVITY_UP, measure_th.sensitivity);
+                break;
+            case 2:
+                ret = mcu_dp_value_update(DPID_SET_TIME_TH_UP, measure_th.time_th);
+                break;
+            case 3:
+                ret = mcu_dp_value_update(DPID_SET_FREQ_TH_UP, measure_th.freq_th);
+                break;
+            case 4:
+                ret = mcu_dp_value_update(DPID_SET_DISTANCE_TH_UP, measure_th.distance_th);
+                break;
+            case 5:
+                ret = mcu_dp_value_update(DPID_SET_SPEED_TH_UP, measure_th.speed_th);
+                break;
+            default:
+                break;
+            }
+            break;
+        default:
+            break;
+    }
+    return ret;
 }
 
 
@@ -132,7 +181,7 @@ Instructions: This function cannot be modified by the user
 *****************************************************************************/
 unsigned char get_download_cmd_total(void)
 {
-	return(sizeof(download_cmd) / sizeof(download_cmd[0]));
+    return(sizeof(download_cmd) / sizeof(download_cmd[0]));
 }
 
 //////////////////////////////////The current version of MCU SDK has a new support protocol interface over the previous version////////////////////
@@ -146,7 +195,7 @@ Instructions: The MCU calls for active untying
 *****************************************************************************/
 void bt_unbound_req(void)
 {
-	bt_uart_write_frame(TUYA_BCI_UART_COMMON_UNBOUND_REQ,0);
+    bt_uart_write_frame(TUYA_BCI_UART_COMMON_UNBOUND_REQ,0);
 }
 #endif
 
@@ -160,13 +209,13 @@ Instructions for use:
 *****************************************************************************/
 void bt_rf_test_req(void)
 {
-	bt_uart_write_frame(TUYA_BCI_UART_COMMON_RF_TEST,0);
+    bt_uart_write_frame(TUYA_BCI_UART_COMMON_RF_TEST,0);
 }
 /*****************************************************************************
 Function name: bt_rf_test_result
 Function description: Bluetooth RF test feedback
 Input parameter: Result: Bluetooth RF test result;0: failure /1: success
-		   Rssi: Successful test indicates that the Bluetooth signal strength/test failure value is meaningless
+           Rssi: Successful test indicates that the Bluetooth signal strength/test failure value is meaningless
 Return parameter: none
 Instructions: The MCU needs to improve the function itself
 *****************************************************************************/
@@ -177,12 +226,12 @@ void bt_rf_test_result(unsigned char result,signed char rssi)
   #error "Please improve the function by yourself and delete the line after completion"
   if(result == 0)
   {
-	// The test failed
+    // The test failed
   }
   else
   {
-	// The test was successful
-	// RSSI is the signal strength, which is generally greater than -70dbM and within the normal range of Bluetooth signals
+    // The test was successful
+    // RSSI is the signal strength, which is generally greater than -70dbM and within the normal range of Bluetooth signals
   }
   
 }
@@ -193,29 +242,29 @@ void bt_rf_test_result(unsigned char result,signed char rssi)
 Function name: bt_send_recordable_DP_data
 Function description: report the recorded data
 Input parameters: Type-1: Bluetooth module built-in time report -2: original data only report, no time -3: MCU built-in time report
-		Dpid: former datapoint serial number
-		Dptype: Corresponds to a datapoint specific data type on the open platform
-		value:
-		len:
+        Dpid: former datapoint serial number
+        Dptype: Corresponds to a datapoint specific data type on the open platform
+        value:
+        len:
 Return parameter: none
 Instructions: the MCU needs to improve the function itself
-	It is recommended to use the cache queue. All data to be sent to the module should be put into the MCU cache queue, and the next data should be reported after one has been reported successfully. The recorded data should ensure that each data has been reported successfully
+    It is recommended to use the cache queue. All data to be sent to the module should be put into the MCU cache queue, and the next data should be reported after one has been reported successfully. The recorded data should ensure that each data has been reported successfully
 *****************************************************************************/
 void bt_send_recordable_dp_data(unsigned char snedType,unsigned char dpid,unsigned char dpType, unsigned char value[],unsigned short len)
 {
-	#error "Please improve the function by yourself and delete the line after completion"
-	if(snedType==0x01)//Format 1, Bluetooth module self-report time
-	{
+    #error "Please improve the function by yourself and delete the line after completion"
+    if(snedType==0x01)//Format 1, Bluetooth module self-report time
+    {
 
-	}
-	else if(snedType==0x02)//Format 2, report only the original data, no time (Note: Telink docking platform does not support this format)
-	{
+    }
+    else if(snedType==0x02)//Format 2, report only the original data, no time (Note: Telink docking platform does not support this format)
+    {
 
-	}
-	else if(snedType==0x03)//Format 3, MCU own time report
-	{
+    }
+    else if(snedType==0x03)//Format 3, MCU own time report
+    {
 
-	}
+    }
 }
 /*****************************************************************************
 Function name: bt_send_recordable_dp_data_result
@@ -226,7 +275,7 @@ Instructions: the MCU needs to improve the function itself
 *****************************************************************************/
 void bt_send_recordable_dp_data_result(unsigned char result)
 {
-	#error "Please improve the function by yourself and delete the line after completion"
+    #error "Please improve the function by yourself and delete the line after completion"
 }
 #ifdef TUYA_BCI_UART_COMMON_SEND_TIME_SYNC_TYPE 
 /*****************************************************************************
@@ -243,44 +292,44 @@ Return parameter: none
 *****************************************************************************/
 void bt_send_time_sync_req(unsigned char sync_time_type)
 {
-	unsigned short length = 0;
+    unsigned short length = 0;
   
-  	length = set_bt_uart_byte(length,sync_time_type);
-  	
-	bt_uart_write_frame(TUYA_BCI_UART_COMMON_SEND_TIME_SYNC_TYPE,length);
+      length = set_bt_uart_byte(length,sync_time_type);
+      
+    bt_uart_write_frame(TUYA_BCI_UART_COMMON_SEND_TIME_SYNC_TYPE,length);
 }
 /*****************************************************************************
 Function name: bt_time_sync_result
 Function description: send the result of time synchronization to the module
 Input parameters: result synchronization result 0 successful, other failed
-		sync_time_type :time format
-		Bt_time: Custom time (valid if time format 0 or 1)
-		Time_zone_100: time zone
-		Time_stamp_ms: timestamp (valid if it is in time format 1)
+        sync_time_type :time format
+        Bt_time: Custom time (valid if time format 0 or 1)
+        Time_zone_100: time zone
+        Time_stamp_ms: timestamp (valid if it is in time format 1)
 Return parameter: none
 Instructions: MCU needs to improve the function on its own.
 *****************************************************************************/
 void bt_time_sync_result(unsigned char result,unsigned char sync_time_type,bt_time_struct_data_t bt_time,unsigned short time_zone_100,long long time_stamp_ms)
 {
-	#error "Please improve the function by yourself and delete the line after completion"
-	if(result == 0x00)
-	{
-		// synchronization time is successful
-		if(sync_time_type==0x00||sync_time_type==0x02)
-		{
-			// populate the data of custom time format in bt_time into the mcu clock system
-			//time_zone_100
-		}
-		else if(sync_time_type==0x01)
-		{
-			// populate the timestamp in time_stamp_ms into the mcu clock system
-			//time_zone_100
-		}
-	}
-	else
-	{
-		// synchronization time failed
-	}
+    #error "Please improve the function by yourself and delete the line after completion"
+    if(result == 0x00)
+    {
+        // synchronization time is successful
+        if(sync_time_type==0x00||sync_time_type==0x02)
+        {
+            // populate the data of custom time format in bt_time into the mcu clock system
+            //time_zone_100
+        }
+        else if(sync_time_type==0x01)
+        {
+            // populate the timestamp in time_stamp_ms into the mcu clock system
+            //time_zone_100
+        }
+    }
+    else
+    {
+        // synchronization time failed
+    }
 }
 #endif
 #endif
@@ -295,11 +344,11 @@ Instructions for use:
 *****************************************************************************/
 void bt_modify_adv_interval_req(unsigned char value)
 {
-	unsigned short length = 0;
+    unsigned short length = 0;
   
-  	length = set_bt_uart_byte(length,value);
-  	
-	bt_uart_write_frame(TUYA_BCI_UART_COMMON_MODIFY_ADV_INTERVAL,length);
+      length = set_bt_uart_byte(length,value);
+      
+    bt_uart_write_frame(TUYA_BCI_UART_COMMON_MODIFY_ADV_INTERVAL,length);
 }
 /*****************************************************************************
 Function name: bt_modify_adv_interval_result
@@ -311,16 +360,16 @@ Instructions: MCU needs to improve the function on its own.
 *****************************************************************************/
 void bt_modify_adv_interval_result(unsigned char result)
 {
-	//#error "Please improve the function by yourself and delete the line after completion"
-	if(result == 0x00)
-	{
-		//success
+    //#error "Please improve the function by yourself and delete the line after completion"
+    if(result == 0x00)
+    {
+        //success
 
-	}
-	else
-	{
-		//failed
-	}
+    }
+    else
+    {
+        //failed
+    }
 }
 #endif
 
@@ -334,11 +383,11 @@ Instructions for use:
 *****************************************************************************/
 void bt_close_timer_req(unsigned char value)
 {
-	unsigned short length = 0;
+    unsigned short length = 0;
   
-  	length = set_bt_uart_byte(length,value);
-  	
-	bt_uart_write_frame(TUYA_BCI_UART_COMMON_TURNOFF_SYSTEM_TIME,length);
+      length = set_bt_uart_byte(length,value);
+      
+    bt_uart_write_frame(TUYA_BCI_UART_COMMON_TURNOFF_SYSTEM_TIME,length);
 }
 /*****************************************************************************
 Function name: bt_close_timer_result
@@ -350,16 +399,16 @@ Instructions: MCU needs to improve the function on its own.
 *****************************************************************************/
 void bt_close_timer_result(unsigned char result)
 {
-	//#error "Please improve the function by yourself and delete the line after completion"
-	if(result == 0x00)
-	{
-		//success
+    //#error "Please improve the function by yourself and delete the line after completion"
+    if(result == 0x00)
+    {
+        //success
 
-	}
-	else
-	{
-		//failed
-	}
+    }
+    else
+    {
+        //failed
+    }
 }
 #endif
 
@@ -372,11 +421,11 @@ Return parameter: none
 *****************************************************************************/
 void bt_enable_lowpoer_req(unsigned char value)
 {
-	unsigned short length = 0;
+    unsigned short length = 0;
   
-  	length = set_bt_uart_byte(length,value);
-  	
-	bt_uart_write_frame(TUYA_BCI_UART_COMMON_ENANBLE_LOWER_POWER,length);
+      length = set_bt_uart_byte(length,value);
+      
+    bt_uart_write_frame(TUYA_BCI_UART_COMMON_ENANBLE_LOWER_POWER,length);
 }
 /*****************************************************************************
 Function name: bt_enable_lowpoer_result
@@ -389,16 +438,16 @@ Instructions: MCU needs to improve the function on its own.
 
 void bt_enable_lowpoer_result(unsigned char result)
 {
-	//#error "Please improve the function by yourself and delete the line after completion"
-	if(result == 0x00)
-	{
-		//success
+    //#error "Please improve the function by yourself and delete the line after completion"
+    if(result == 0x00)
+    {
+        //success
 
-	}
-	else
-	{
-		//failed
-	}
+    }
+    else
+    {
+        //failed
+    }
 }
 #endif
 
@@ -412,14 +461,14 @@ Instructions for use: it is used to lock the universal serial port docking dynam
 *****************************************************************************/
 unsigned char bt_send_one_time_password_token(unsigned char value[],unsigned char len)
 {
-	unsigned short length = 0;
- 	if(len!=8)return 0;
- 	
-  	length = set_bt_uart_buffer(length,value,8);
-  	
-	bt_uart_write_frame(TUYA_BCI_UART_COMMON_SEND_ONE_TIME_PASSWORD_TOKEN,length);
-	
-	return 0;
+    unsigned short length = 0;
+     if(len!=8)return 0;
+     
+      length = set_bt_uart_buffer(length,value,8);
+      
+    bt_uart_write_frame(TUYA_BCI_UART_COMMON_SEND_ONE_TIME_PASSWORD_TOKEN,length);
+    
+    return 0;
 }
 /*****************************************************************************
 Function name:bt_send_one_time_password_token_result
@@ -430,16 +479,16 @@ Instructions: MCU needs to improve the function on its own.
 *****************************************************************************/
 void bt_send_one_time_password_token_result(unsigned char result)
 {
-	//#error "Please improve the function by yourself and delete the line after completion"
-	if(result == 0x00)
-	{
-		// password verification passed
+    //#error "Please improve the function by yourself and delete the line after completion"
+    if(result == 0x00)
+    {
+        // password verification passed
 
-	}
-	else
-	{
-		//Password check failed.
-	}
+    }
+    else
+    {
+        //Password check failed.
+    }
 }
 #endif
 
@@ -453,7 +502,7 @@ Instructions for use:
 *****************************************************************************/
 void bt_disconnect_req(void)
 {
-	bt_uart_write_frame(TUYA_BCI_UART_COMMON_ACTIVE_DISCONNECT,0);
+    bt_uart_write_frame(TUYA_BCI_UART_COMMON_ACTIVE_DISCONNECT,0);
 }
 /*****************************************************************************
 Function name: bt_disconnect_result
@@ -465,16 +514,16 @@ Instructions: MCU needs to improve the function on its own.
 *****************************************************************************/
 void bt_disconnect_result(unsigned char result)
 {
-	//#error "Please improve the function by yourself and delete the line after completion"
-	if(result == 0x00)
-	{
-		//success
+    //#error "Please improve the function by yourself and delete the line after completion"
+    if(result == 0x00)
+    {
+        //success
 
-	}
-	else
-	{
-		//failed
-	}
+    }
+    else
+    {
+        //failed
+    }
 }
 #endif
 
@@ -488,10 +537,10 @@ Instructions: MCU can be called once after initialization of serial port.
 *****************************************************************************/
 void bt_send_mcu_ver(void)
 {
-	unsigned short length = 0;
-	length = set_bt_uart_buffer(length,(unsigned char *)MCU_APP_VER_NUM,3);
-	length = set_bt_uart_buffer(length,(unsigned char *)MCU_HARD_VER_NUM,3);
-	bt_uart_write_frame(TUYA_BCI_UART_COMMON_MCU_SEND_VERSION,length);
+    unsigned short length = 0;
+    length = set_bt_uart_buffer(length,(unsigned char *)MCU_APP_VER_NUM,3);
+    length = set_bt_uart_buffer(length,(unsigned char *)MCU_HARD_VER_NUM,3);
+    bt_uart_write_frame(TUYA_BCI_UART_COMMON_MCU_SEND_VERSION,length);
 }
 #endif
 #ifdef TUYA_BCI_UART_COMMON_FACTOR_RESET_NOTIFY
@@ -504,41 +553,41 @@ Instructions for use: MCU can complete the operation of restoring factory settin
 *****************************************************************************/
 void bt_factor_reset_notify(void)
 {
-	//#error "Please improve the function by yourself and delete the line after completion"
+    //#error "Please improve the function by yourself and delete the line after completion"
 }
 #endif
 
 void soft_reset_mcu(void)
 {
-	NVIC_SystemReset();
+    NVIC_SystemReset();
 }
-	
+    
 void go_bootloader_ota(void)
 {	
-	//goto bootloader
-	//
+    //goto bootloader
+    //
 }
-		
+        
 void tuya_re_config_network(void)
 {
-	//
-	mcu_reset_bt();
+    //
+    mcu_reset_bt();
 }
-			
+            
 void tuya_reset_module(void)
 {
-	//
-	bt_unbound_req();
+    //
+    bt_unbound_req();
 }
-				
+                
 void tuya_retry_ota(void)
 {
-	//
+    //
 }
-					
+                    
 void reset_default_parameter(void)
 {
-	
+    
 }
 
 

@@ -3,8 +3,9 @@
 
 
 //close: 0.9-1.2m: 2.0
+//close: 1.2-1.5m: 2.5
 
-#define TH_1    2.5f              //unit: meter
+#define TH_1    2.0f              //unit: meter
 //#define TH_2    (TH_1 + 0.1f)                //unit: meter
 #define LEAVING_TIMEOUT     2000u        //unit: ms
 #define SPEED_LOW_LIMIT1    0.000f           //unit: meter/s

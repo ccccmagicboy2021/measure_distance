@@ -22,7 +22,15 @@
 extern updata_data_t updata_data;
 #endif
 
-const unsigned char version_num[4] = {0, 0, 2, 0};  // v0.2.0.0
+const unsigned char version_num[4] = {6, 0, 2, 0};  // v0.2.0.6
+
+measure_th_t measure_th = {
+	.sensitivity = 2560,  // 2.5 * 2 ^ 10
+	.time_th = -65536,  // (-2f) << 15
+	.freq_th = 27853,  // (0.85f) << 15
+	.distance_th = 12288,  // (12) << 10
+	.speed_th = 154,  // (0.15f) << 10
+};
 
 s16 data_buf[256];
 
