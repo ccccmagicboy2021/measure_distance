@@ -305,8 +305,8 @@ unsigned char mcu_dp_raw_update(unsigned char dpid,const unsigned char value[],u
 {
   unsigned short length = 0;
   
-  if(stop_update_flag == ENABLE)
-    return SUCCESS;
+  if(stop_update_flag == TU_ENABLE)
+    return TU_SUCCESS;
   //
   length = set_bt_uart_byte(length,dpid);
   length = set_bt_uart_byte(length,DP_TYPE_RAW);
@@ -318,7 +318,7 @@ unsigned char mcu_dp_raw_update(unsigned char dpid,const unsigned char value[],u
   
   bt_uart_write_frame(STATE_UPLOAD_CMD,length);
   
-  return SUCCESS;
+  return TU_SUCCESS;
 }
 /*****************************************************************************
 Function name: mcu_dp_bool_update
@@ -331,8 +331,8 @@ unsigned char mcu_dp_bool_update(unsigned char dpid,unsigned char value)
 {
   unsigned short length = 0;
   
-  if(stop_update_flag == ENABLE)
-    return SUCCESS;
+  if(stop_update_flag == TU_ENABLE)
+    return TU_SUCCESS;
   
   length = set_bt_uart_byte(length,dpid);
   length = set_bt_uart_byte(length,DP_TYPE_BOOL);
@@ -351,7 +351,7 @@ unsigned char mcu_dp_bool_update(unsigned char dpid,unsigned char value)
   
   bt_uart_write_frame(STATE_UPLOAD_CMD,length);
   
-  return SUCCESS;
+  return TU_SUCCESS;
 }
 /*****************************************************************************
 Function name: mcu_dp_value_update
@@ -364,8 +364,8 @@ unsigned char mcu_dp_value_update(unsigned char dpid,unsigned long value)
 {
   unsigned short length = 0;
   
-  if(stop_update_flag == ENABLE)
-    return SUCCESS;
+  if(stop_update_flag == TU_ENABLE)
+    return TU_SUCCESS;
   
   length = set_bt_uart_byte(length,dpid);
   length = set_bt_uart_byte(length,DP_TYPE_VALUE);
@@ -380,7 +380,7 @@ unsigned char mcu_dp_value_update(unsigned char dpid,unsigned long value)
   
   bt_uart_write_frame(STATE_UPLOAD_CMD,length);
   
-  return SUCCESS;
+  return TU_SUCCESS;
 }
 /*****************************************************************************
 Function name: mcu_dp_string_update
@@ -394,8 +394,8 @@ unsigned char mcu_dp_string_update(unsigned char dpid,const unsigned char value[
 {
   unsigned short length = 0;
   
-  if(stop_update_flag == ENABLE)
-    return SUCCESS;
+  if(stop_update_flag == TU_ENABLE)
+    return TU_SUCCESS;
   //
   length = set_bt_uart_byte(length,dpid);
   length = set_bt_uart_byte(length,DP_TYPE_STRING);
@@ -407,7 +407,7 @@ unsigned char mcu_dp_string_update(unsigned char dpid,const unsigned char value[
   
   bt_uart_write_frame(STATE_UPLOAD_CMD,length);
   
-  return SUCCESS;
+  return TU_SUCCESS;
 }
 /*****************************************************************************
 Function name: mcu_dp_enum_update
@@ -420,8 +420,8 @@ unsigned char mcu_dp_enum_update(unsigned char dpid,unsigned char value)
 {
   unsigned short length = 0;
   
-  if(stop_update_flag == ENABLE)
-    return SUCCESS;
+  if(stop_update_flag == TU_ENABLE)
+    return TU_SUCCESS;
   
   length = set_bt_uart_byte(length,dpid);
   length = set_bt_uart_byte(length,DP_TYPE_ENUM);
@@ -433,7 +433,7 @@ unsigned char mcu_dp_enum_update(unsigned char dpid,unsigned char value)
   
   bt_uart_write_frame(STATE_UPLOAD_CMD,length);
   
-  return SUCCESS;
+  return TU_SUCCESS;
 }
 /*****************************************************************************
 Function name: mcu_dp_fault_update
@@ -446,8 +446,8 @@ unsigned char mcu_dp_fault_update(unsigned char dpid,unsigned long value)
 {
   unsigned short length = 0;
    
-  if(stop_update_flag == ENABLE)
-    return SUCCESS;
+  if(stop_update_flag == TU_ENABLE)
+    return TU_SUCCESS;
   
   length = set_bt_uart_byte(length,dpid);
   length = set_bt_uart_byte(length,DP_TYPE_BITMAP);
@@ -476,7 +476,7 @@ unsigned char mcu_dp_fault_update(unsigned char dpid,unsigned long value)
   
   bt_uart_write_frame(STATE_UPLOAD_CMD,length);
 
-  return SUCCESS;
+  return TU_SUCCESS;
 }
 /*****************************************************************************
 Function name: mcu_get_dp_download_bool

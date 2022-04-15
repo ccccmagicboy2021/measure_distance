@@ -93,7 +93,7 @@ APP_NEW_FW_SETTING_ADR  	:Firmware upgrade configuration information storage add
 #define	    APP_NEW_FW_MAX_SIZE                (APP_NEW_FW_END_ADR - APP_NEW_FW_START_ADR)//116K
 
 
-#pragma anon_unions
+//#pragma anon_unions
 typedef struct
 {
     uint32_t command_size;              /**< The size of the current init command stored in the DFU settings. */
@@ -124,7 +124,7 @@ typedef struct
 } dfu_progress_t;
 
 /** @brief Description of a single bank. */
-#pragma pack(4)
+//#pragma pack(4)
 typedef struct
 {
     uint32_t                image_size;         /**< Size of the image in the bank. */

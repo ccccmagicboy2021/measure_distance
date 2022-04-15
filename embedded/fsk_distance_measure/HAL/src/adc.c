@@ -1,4 +1,3 @@
-#include "hc32_ddl.h"
 #include "adc.h"
 #include "ringbuffer.h"
 #include "sys.h"

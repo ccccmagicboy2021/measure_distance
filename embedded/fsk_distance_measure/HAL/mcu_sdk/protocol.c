@@ -1,6 +1,5 @@
 #include "bluetooth.h"
 #include "usart.h"
-#include "hc32_ddl.h"
 #include "sys.h"
 #include "led.h"
 #include "timer.h"
@@ -63,19 +62,9 @@ Instructions for use: please fill the MCU serial port sending function into this
 *****************************************************************************/
 void uart_transmit_output(unsigned char value)
 {
-#ifndef TUYA_ENABLE
-    USART_CH->DR = value;
-    while (0ul == USART_CH->SR_f.TC)
-    {
+    USART_SendData(USART3, (uint8_t)value);
+    while (USART_GetFlagStatus(USART3, USART_FLAG_TXDE) == RESET)
         ;
-    }
-#else
-    USART_TUYA_CH->DR = value;
-    while (0ul == USART_TUYA_CH->SR_f.TC)
-    {
-        ;
-    }
-#endif
 }
 /******************************************************************************
                            Step 2: implement specific user functions

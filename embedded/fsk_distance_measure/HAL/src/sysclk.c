@@ -1,4 +1,4 @@
-#include "hc32_ddl.h"
+#include "sys.h"
 #include "sysclk.h"
 
 #define  MYDEBUG    //¿ªÆôµ÷ÊÔ
@@ -6,82 +6,36 @@
 
 void SysClkInit(void)
 {
-    stc_clk_xtal_cfg_t   stcXtalCfg;
-    stc_clk_mpll_cfg_t   stcMpllCfg;
-    en_clk_sys_source_t  enSysClkSrc;
-    stc_clk_sysclk_cfg_t stcSysClkCfg;
+    RCC_EnableAPB2PeriphClk(RCC_APB2_PERIPH_GPIOB, ENABLE);
+    RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_USART3, ENABLE);
+    RCC_EnableAPB2PeriphClk(RCC_APB2_PERIPH_AFIO, ENABLE);
+        
+    RCC_EnableAHBPeriphClk(RCC_AHB_PERIPH_ADC1, ENABLE);
+    RCC_EnableAHBPeriphClk(RCC_AHB_PERIPH_ADC2, ENABLE);
+    RCC_EnableAHBPeriphClk(RCC_AHB_PERIPH_DMA1, ENABLE);
+    
+    RCC_ConfigPclk1(RCC_HCLK_DIV4);     //APB1 CLK      144/4=36MHz(max p86)
+    RCC_EnableAPB2PeriphClk(RCC_APB2_PERIPH_TIM1, ENABLE);      //timer1 72*2=144MHz
+    RCC_EnableAPB2PeriphClk(RCC_APB2_PERIPH_GPIOA, ENABLE);     //PA10
+    
+    RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_TIM2, ENABLE);      //timer2 72MHz not use
+    RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_TIM3, ENABLE);      //not use
 
-    MEM_ZERO_STRUCT(enSysClkSrc);
-    MEM_ZERO_STRUCT(stcSysClkCfg);
-    MEM_ZERO_STRUCT(stcXtalCfg);
-    MEM_ZERO_STRUCT(stcMpllCfg);
-
-    /* Set bus clk div. */
-    stcSysClkCfg.enHclkDiv  = ClkSysclkDiv1;
-    stcSysClkCfg.enExclkDiv = ClkSysclkDiv2;
-    stcSysClkCfg.enPclk0Div = ClkSysclkDiv1;
-    stcSysClkCfg.enPclk1Div = ClkSysclkDiv2;
-    stcSysClkCfg.enPclk2Div = ClkSysclkDiv4;
-    stcSysClkCfg.enPclk3Div = ClkSysclkDiv4;
-    stcSysClkCfg.enPclk4Div = ClkSysclkDiv2;
-    CLK_SysClkConfig(&stcSysClkCfg);
-
-    /* Switch system clock source to MPLL. */
-    /* Use Xtal as MPLL source. */
-    stcXtalCfg.enMode = ClkXtalModeOsc;
-    stcXtalCfg.enDrv = ClkXtalLowDrv;
-    stcXtalCfg.enFastStartup = Enable;
-    CLK_XtalConfig(&stcXtalCfg);
-    CLK_XtalCmd(Enable);
-
-    /* MPLL config. */
-    stcMpllCfg.pllmDiv = 1u; /* XTAL 8M / 1 */
-    stcMpllCfg.plln = 50u;   /* 8M*50 = 400M */
-    stcMpllCfg.PllpDiv = 2u; /* MLLP = 100M */
-    stcMpllCfg.PllqDiv = 2u; /* MLLQ = 100M */
-    stcMpllCfg.PllrDiv = 2u; /* MLLR = 100M */
-    CLK_SetPllSource(ClkPllSrcXTAL);
-    CLK_MpllConfig(&stcMpllCfg);
-
-    /* flash read wait cycle setting */
-    EFM_Unlock();
-    EFM_SetLatency(EFM_LATENCY_5);
-    EFM_InstructionCacheCmd(Enable);
-    EFM_Lock();
-
-    /* Enable MPLL. */
-    CLK_MpllCmd(Enable);
-
-    /* Wait MPLL ready. */
-    while (Set != CLK_GetFlagStatus(ClkFlagMPLLRdy))
-    {
-    }
-
-    /* Switch system clock source to MPLL. */
-    CLK_SetSysClkSource(CLKSysSrcMPLL);
+    /* RCC_ADCHCLK_DIV16*/
+    ADC_ConfigClk(ADC_CTRL3_CKMOD_AHB,RCC_ADCHCLK_DIV16);   // 144/16 = 9M
+    RCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSE, RCC_ADC1MCLK_DIV8);  //  8/8  = 1M
 }
 
 
 void clk_test(void)
 {
-	volatile uint32_t sysclk = 0;
-	volatile uint32_t hclk   = 0;
-	volatile uint32_t pclk0  = 0;
-    volatile uint32_t pclk1  = 0;
-	volatile uint32_t pclk2  = 0;
-	
-	stc_clk_freq_t stcClkTmp1;
-	CLK_GetClockFreq(&stcClkTmp1);
-	
-    sysclk = stcClkTmp1.sysclkFreq;
-	hclk = stcClkTmp1.hclkFreq;
-	pclk0 = stcClkTmp1.pclk0Freq;
-	pclk1 = stcClkTmp1.pclk1Freq;
-	pclk2 = stcClkTmp1.pclk2Freq;
-	
-	printf("sysclk:%d \n",sysclk);
-	printf("hclk:%d \n",hclk);
-	printf("pclk0:%d \n",pclk0);
-	printf("pclk1:%d \n",pclk1);
-	printf("pclk2:%d \n",pclk2);
+    RCC_ClocksType RCC_ClockFreq;
+    
+    RCC_GetClocksFreqValue(&RCC_ClockFreq);
+    
+    printf("sysclk: %d\r\n", RCC_ClockFreq.SysclkFreq);
+    printf("hclk: %d\r\n", RCC_ClockFreq.HclkFreq);
+    printf("pclk1: %d\r\n", RCC_ClockFreq.Pclk1Freq);
+    printf("pclk2: %d\r\n", RCC_ClockFreq.Pclk2Freq);
+    printf("adc_hclk: %d\r\n", RCC_ClockFreq.AdcHclkFreq);
 }

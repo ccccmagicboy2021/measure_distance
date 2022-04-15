@@ -337,9 +337,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>N32G4FR, USE_STDPERIPH_DRIVER, SYSCLK_FREQ=144000000, __DEBUG,USE_DEVICE_DRIVER_LIB,_CC_ARM,DEBUG_MODE</Define>
+              <Define>N32G4FR, USE_STDPERIPH_DRIVER, SYSCLK_FREQ=144000000, __DEBUG,USE_DEVICE_DRIVER_LIB,_CC_ARM,DEBUG_MODE,ARM_MATH_CM4</Define>
               <Undefine></Undefine>
-              <IncludePath>..\MDK;..\driver\inc;..\driver\src;..\dsp\Include;..\common;..\HAL\inc;..\HAL\mcu_sdk;..\app\distance_measure\inc;..\app\app;..\cmsis</IncludePath>
+              <IncludePath>..\MDK;..\driver\inc;..\driver\src;..\dsp\Include;..\common;..\HAL\inc;..\HAL\mcu_sdk;..\app\distance_measure\inc;..\app\app;..\cmsis;..\dsp_lib\Include;..\dsp_lib\dsp</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -427,6 +427,11 @@
               <FileName>app.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\app\app\app.h</FilePath>
+            </File>
+            <File>
+              <FileName>gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HAL\src\gpio.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -568,10 +573,27 @@
               <FileType>1</FileType>
               <FilePath>..\dsp\math_fp.c</FilePath>
             </File>
+            <File>
+              <FileName>arm_cortexM4lf_math.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\dsp_lib\arm_cortexM4lf_math.lib</FilePath>
+            </File>
+            <File>
+              <FileName>arm_absmax_q31.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\dsp_lib\arm_absmax_q31.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>hal</GroupName>
+          <Files>
+            <File>
+              <FileName>sysclk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HAL\src\sysclk.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>distance_measure</GroupName>

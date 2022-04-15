@@ -331,7 +331,7 @@ void data_handle(unsigned short offset)
       //
       ret = data_point_handle((unsigned char *)bt_uart_rx_buf + offset + DATA_START + i);
       
-      if(SUCCESS == ret)
+      if(TU_SUCCESS == ret)
       {
         //Success tips
       }

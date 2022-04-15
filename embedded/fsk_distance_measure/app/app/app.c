@@ -12,6 +12,9 @@ extern uint32_t mag_f;
 
 extern void uart_transmit_output(unsigned char value);
 
+static uint32_t m_u32TickStep = 0UL;
+static __IO uint32_t m_u32TickCount = 0UL;
+
 int leave_timer = 0;
 
 uint32_t start_tick = 0;
@@ -19,10 +22,31 @@ uint32_t now_tick = 0;
 uint32_t diff_tick = 0;
 uint32_t leave_en = false;
 
+void SysTick_Init(uint32_t u32Freq)
+{
+    if (0UL != u32Freq)
+    {
+        m_u32TickStep = 1000UL / u32Freq;
+        /* setup systick timer for 1000Hz interrupts */
+        if (SysTick_Config(SystemCoreClock / u32Freq)){
+            /* capture error */
+            while (1)
+            {
+            }
+        }
+    }
+}
+
+void SysTick_IncTick(void)
+{
+    m_u32TickCount += m_u32TickStep;
+}
+
 void tick_init(void)
 {
-	NVIC_SetPriority(SysTick_IRQn, DDL_IRQ_PRIORITY_15);
-	SysTick_Init(1000u);//1ms
+    /* configure the systick handler priority */
+    NVIC_SetPriority(SysTick_IRQn, 15U);    
+    SysTick_Init(1000u);//1ms
 }
 
 void SysTick_IrqHandler(void)
@@ -30,10 +54,14 @@ void SysTick_IrqHandler(void)
     SysTick_IncTick();
 }
 
+uint32_t SysTick_GetTick(void)
+{
+    return m_u32TickCount;
+}
+
 void close_process(void)
 {
-	PORT_SetBits(PortA, Pin01);
-	PORT_ResetBits(PortA, Pin05);
+    GPIO_ResetBits(GPIOA, GPIO_PIN_12); //led on
     
     uart_transmit_output(0xEE);
     uart_transmit_output(0x11);
@@ -55,8 +83,7 @@ void leave_s0(void)
 
 void leave_s1(void)
 {
-	PORT_ResetBits(PortA, Pin01);
-	PORT_SetBits(PortA, Pin05);
+    GPIO_SetBits(GPIOA, GPIO_PIN_12);   //led off
     
     uart_transmit_output(0xDE);
     uart_transmit_output(0x21);
