@@ -1,8 +1,0 @@
-<DataBase>
-    <Device>
-        <ChipInfo Vendor="cccc" Name="HC32F460_cv" WorkRAMAddr="0x1FFF8000" WorkRAMSize="0x2F000" Core="JLINK_CORE_CORTEX_M4" />
-    </Device>
-    <Device>
-        <ChipInfo Vendor="Nationstech" Name="N32G4FRKEQ7_cv" WorkRAMAddr="0x20000000" WorkRAMSize="0x00024000" Core="JLINK_CORE_CORTEX_M4" />
-    </Device>
-</DataBase>

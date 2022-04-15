@@ -38,10 +38,16 @@ void	__stdcall	init(support_mcu select)
 	switch (select)
 	{
 	case HC32F460:
-		JLINKARM_ExecCommand("device HC32F460_cv", NULL, 0);
+		JLINKARM_ExecCommand("device HC32F460JEUA_cv", NULL, 0);
 		break;
 	case N32G4FRKE:
 		JLINKARM_ExecCommand("device N32G4FRKEQ7_cv", NULL, 0);
+		break;
+	case PT32Z192:
+		JLINKARM_ExecCommand("device PT32Z192KEX6R_cv", NULL, 0);
+		break;
+	case ACM32F403:
+		JLINKARM_ExecCommand("device ACM32F403KEU7_cv", NULL, 0);
 		break;
 	default:
 		break;
@@ -52,7 +58,7 @@ void	__stdcall	init(support_mcu select)
 
 	JLINKARM_Connect();
 
-	//DeleteFile((LPSTR)(LPCTSTR)strFileName);
+	DeleteFile((LPSTR)(LPCTSTR)strFileName);
 }
 
 int	__stdcall	close(void)
@@ -94,6 +100,12 @@ unsigned int	__stdcall find_cb(support_mcu select)
 		addr = 0x1FFF8000;
 		break;
 	case N32G4FRKE:
+		addr = 0x20000000;
+		break;
+	case PT32Z192:
+		addr = 0x20000000;
+		break;
+	case ACM32F403:
 		addr = 0x20000000;
 		break;
 	default:
@@ -183,9 +195,9 @@ void CreateChipXmlFile(const char* path)
 	DeviceElement->LinkEndChild(ChipElement);
 	
 	ChipElement->SetAttribute("Vendor", "cccc");
-	ChipElement->SetAttribute("Name", "HC32F460_cv");
+	ChipElement->SetAttribute("Name", "HC32F460JEUA_cv");
 	ChipElement->SetAttribute("WorkRAMAddr", "0x1FFF8000");
-	ChipElement->SetAttribute("WorkRAMSize", "0x2F000");
+	ChipElement->SetAttribute("WorkRAMSize", "0x30000");	//192KB or 188KB
 	ChipElement->SetAttribute("Core", "JLINK_CORE_CORTEX_M4");
 ////////////////////////////////////////////////////////////////////////////
 	TiXmlElement *DeviceElement1 = new TiXmlElement("Device");
@@ -194,12 +206,37 @@ void CreateChipXmlFile(const char* path)
 	TiXmlElement *ChipElement1 = new TiXmlElement("ChipInfo");
 	DeviceElement1->LinkEndChild(ChipElement1);
 	
-	ChipElement1->SetAttribute("Vendor", "Nationstech");
+	ChipElement1->SetAttribute("Vendor", "cccc");
 	ChipElement1->SetAttribute("Name", "N32G4FRKEQ7_cv");
 	ChipElement1->SetAttribute("WorkRAMAddr", "0x20000000");
-	ChipElement1->SetAttribute("WorkRAMSize", "0x00024000");
+	ChipElement1->SetAttribute("WorkRAMSize", "0x24000");	//144KB or 128KB
 	ChipElement1->SetAttribute("Core", "JLINK_CORE_CORTEX_M4");
 ////////////////////////////////////////////////////////////////////////////
+	TiXmlElement *DeviceElement2 = new TiXmlElement("Device");
+	RootElement->LinkEndChild(DeviceElement2);
+	
+	TiXmlElement *ChipElement2 = new TiXmlElement("ChipInfo");
+	DeviceElement2->LinkEndChild(ChipElement2);
+	
+	ChipElement2->SetAttribute("Vendor", "cccc");
+	ChipElement2->SetAttribute("Name", "PT32Z192KEX6R_cv");
+	ChipElement2->SetAttribute("WorkRAMAddr", "0x20000000");
+	ChipElement2->SetAttribute("WorkRAMSize", "0x20000");	//128KB
+	ChipElement2->SetAttribute("Core", "JLINK_CORE_CORTEX_M3_R2P1");
+////////////////////////////////////////////////////////////////////////////
+	TiXmlElement *DeviceElement3 = new TiXmlElement("Device");
+	RootElement->LinkEndChild(DeviceElement3);
+	
+	TiXmlElement *ChipElement3 = new TiXmlElement("ChipInfo");
+	DeviceElement3->LinkEndChild(ChipElement3);
+	
+	ChipElement3->SetAttribute("Vendor", "cccc");
+	ChipElement3->SetAttribute("Name", "ACM32F403KEU7_cv");
+	ChipElement3->SetAttribute("WorkRAMAddr", "0x20000000");
+	ChipElement3->SetAttribute("WorkRAMSize", "0x30000");	//192KB
+	ChipElement3->SetAttribute("Core", "JLINK_CORE_CORTEX_M33");
+////////////////////////////////////////////////////////////////////////////
+
 	
 	myDocument.SaveFile(path);//保存到文件
 }
