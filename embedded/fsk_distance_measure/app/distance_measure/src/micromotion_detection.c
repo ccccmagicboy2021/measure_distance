@@ -4,6 +4,7 @@
 #include "math.h"
 #include "arm_math.h"
 #include "fp.h"
+#include "sys.h"
 
 #define FREQ_START_NUM              (10U)
 #define FREQ_END_NUM                (100U)

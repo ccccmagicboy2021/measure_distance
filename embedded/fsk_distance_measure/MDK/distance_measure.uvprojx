@@ -428,11 +428,6 @@
               <FileType>5</FileType>
               <FilePath>..\app\app\app.h</FilePath>
             </File>
-            <File>
-              <FileName>gpio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HAL\src\gpio.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -589,9 +584,34 @@
           <GroupName>hal</GroupName>
           <Files>
             <File>
+              <FileName>gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HAL\src\gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HAL\src\led.c</FilePath>
+            </File>
+            <File>
               <FileName>sysclk.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HAL\src\sysclk.c</FilePath>
+            </File>
+            <File>
+              <FileName>timera_pwm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HAL\src\timera_pwm.c</FilePath>
+            </File>
+            <File>
+              <FileName>usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HAL\src\usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HAL\src\adc.c</FilePath>
             </File>
           </Files>
         </Group>

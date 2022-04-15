@@ -36,6 +36,9 @@
 #include "n32g4fr.h"
 #include "sys.h"
 
+volatile uint16_t g_radar_if_adc_value;     //radar if adc value
+volatile uint16_t g_light_adc_value;		//light sensor adc value
+
 /** @addtogroup N32G4FR_StdPeriph_Template
  * @{
  */
@@ -122,7 +125,7 @@ void DebugMon_Handler(void)
  */
 void SysTick_Handler(void)
 {
-    //delay_decrement();
+    //
 }
 
 /**
@@ -140,55 +143,59 @@ void DMA_IRQ_HANDLER(void)
 /******************************************************************************/
 void TIM2_IRQHandler(void)
 {
-    if (TIM_GetIntStatus(TIM2, TIM_INT_CC1) != RESET)
-    {
-        TIM_ClrIntPendingBit(TIM2, TIM_INT_CC1);
-    }
-    else if (TIM_GetIntStatus(TIM2, TIM_INT_CC2) != RESET)
-    {
-        TIM_ClrIntPendingBit(TIM2, TIM_INT_CC2);
-    }
-    else if (TIM_GetIntStatus(TIM2, TIM_INT_CC3) != RESET)
-    {
-        TIM_ClrIntPendingBit(TIM2, TIM_INT_CC3);
-    }
-    else
-    {
-        TIM_ClrIntPendingBit(TIM2, TIM_INT_CC4);
-    }
+    //
 }
 
 void TIM3_IRQHandler(void)
 {
-    if (TIM_GetIntStatus(TIM3, TIM_INT_CC2) == SET)
-    {
-        TIM3EnterIrqCnt++;
-        /* Clear TIM3 Capture compare interrupt pending bit */
-        TIM_ClrIntPendingBit(TIM3, TIM_INT_CC2);
-        if (CaptureNumber == 0)
-        {
-            /* Get the Input Capture value */
-            IC3ReadValue1 = TIM_GetCap2(TIM3);
-            CaptureNumber = 1;
-        }
-        else if (CaptureNumber == 1)
-        {
-            /* Get the Input Capture value */
-            IC3ReadValue2 = TIM_GetCap2(TIM3);
+    //
+}
 
-            /* Capture computation */
-            if (IC3ReadValue2 > IC3ReadValue1)
-            {
-                Capture = (IC3ReadValue2 - IC3ReadValue1);
-            }
-            else
-            {
-                Capture = ((0xFFFF - IC3ReadValue1) + IC3ReadValue2);
-            }
-            /* Frequency computation */
-            TIM3Freq      = (uint32_t)(SystemCoreClock/2) / Capture;
-            CaptureNumber = 0;
-        }
+void USART3_IRQHandler(void)
+{
+    char temp;
+    if (USART_GetIntStatus(USART3, USART_INT_RXDNE) != RESET)
+    {
+        /* Read one byte from the receive data register */
+        temp = USART_ReceiveData(USART3);
+        uart_receive_input(temp);
+    }
+}
+
+void TIM1_CC_IRQHandler(void)
+{   
+    if (TIM_GetIntStatus(TIM1, TIM_INT_CC1) != RESET)
+    {
+        TIM_ClrIntPendingBit(TIM1, TIM_INT_CC1);
+    }
+    else if (TIM_GetIntStatus(TIM1, TIM_INT_CC2) != RESET)
+    {
+        TIM_ClrIntPendingBit(TIM1, TIM_INT_CC2);
+    }
+    else if (TIM_GetIntStatus(TIM1, TIM_INT_CC3) != RESET)
+    {
+        TIM_ClrIntPendingBit(TIM1, TIM_INT_CC3);
+    }
+    else
+    {
+        TIM_ClrIntPendingBit(TIM1, TIM_INT_CC4);
+        
+        /*
+        adc_value.Val1 = g_radar_if_adc_value;	//if
+        //adc_value.Val2 = g_light_adc_value;	    //light
+		
+		if (GPIO_ReadInputDataBit(GPIOA, GPIO_PIN_10) == Bit_RESET)
+		{
+			adc_value.Val3 = 0;
+		}
+		else
+		{
+			adc_value.Val3 = 1;
+		}
+        //adc_value.Val4 = 0;
+		FIFO_WriteOneData(&FIFO_Data[0], adc_value);
+        */
+        
     }
 }
 

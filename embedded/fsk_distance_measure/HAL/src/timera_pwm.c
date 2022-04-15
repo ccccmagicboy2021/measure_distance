@@ -1,8 +1,8 @@
 /*******************************************************************************
  * Include files
  ******************************************************************************/
-#include "hc32_ddl.h"
 #include "timera_pwm.h"
+#include "sys.h"
 
 /*******************************************************************************
  * Local type definitions ('typedef')
@@ -13,18 +13,7 @@
  ******************************************************************************/
  
 /* TIMERA unit and clock definition */
-#define TIMERA_UNIT1                    (M4_TMRA3)
-#define TIMERA_UNIT1_CLOCK              (PWC_FCG2_PERIPH_TIMA3)
 
-/* TIMERA channel 1 Port/Pin definition */
-#define TIMERA_UNIT1_CH1                (TimeraCh2)
-#define TIMERA_UNIT1_CH1_PORT           (PortB)
-#define TIMERA_UNIT1_CH1_PIN            (Pin05)
-#define TIMERA_UNIT1_CH1_FUNC           (Func_Tima0)
-
-
-#define TIMERA_COUNT_OVERFLOW           (50000-1)  // 2kHz
-#define TIMERA_COUNT_COMPARE						(25000-1)  //
 
 /*******************************************************************************
  * Global variable definitions (declared in header file with 'extern')
@@ -51,50 +40,119 @@
  ** \retval None
  **
  ******************************************************************************/
+void init_timer_pin(unsigned int mode)
+{
+	//init pin
+    GPIO_InitType GPIO_InitStructure;
+ 
+    switch (mode)
+    {
+        case 0:
+            GPIO_InitStructure.Pin        = GPIO_PIN_10;        //TIM1_CH3
+            GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_Out_PP;   //gpio use
+            GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+            GPIO_InitPeripheral(GPIOA, &GPIO_InitStructure);
+            GPIO_ResetBits(GPIOA, GPIO_PIN_10);   //low
+            break;
+        case 1:
+            GPIO_InitStructure.Pin        = GPIO_PIN_10;        //TIM1_CH3
+            GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_Out_PP;   //gpio use
+            GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+            GPIO_InitPeripheral(GPIOA, &GPIO_InitStructure);
+            GPIO_SetBits(GPIOA, GPIO_PIN_10);  //high
+            break;
+        case 2:
+            GPIO_InitStructure.Pin        = GPIO_PIN_10;        //TIM1_CH3
+            GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_Out_OD;   //gpio use
+            GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+            GPIO_InitPeripheral(GPIOA, &GPIO_InitStructure);
+            break;
+        case 3:
+            GPIO_InitStructure.Pin        = GPIO_PIN_10;        //TIM1_CH3
+            GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_AF_PP;    //not gpio use
+            GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+            GPIO_InitPeripheral(GPIOA, &GPIO_InitStructure);
+            break;
+        default:
+            break;
+    }
+    
+    if (GPIO_ReadInputDataBit(GPIOA, GPIO_PIN_10) == Bit_RESET)
+	{
+		printf("[%s] - PA10 = 0\r\n", __func__);
+	}
+    else
+    {
+        printf("[%s] - PA10 = 1\r\n", __func__);
+    }
+}
+
+void init_timer(void)
+{
+    unsigned int fs = 0;
+    unsigned int wave_freq = 0;
+    
+	//init interrupt
+    NVIC_InitType NVIC_InitStructure;
+
+    NVIC_InitStructure.NVIC_IRQChannel                   = TIM1_CC_IRQn;
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority        = 0;
+    NVIC_InitStructure.NVIC_IRQChannelCmd                = ENABLE;
+
+    NVIC_Init(&NVIC_InitStructure);
+    
+	//init timer
+    TIM_TimeBaseInitType TIM_TimeBaseStructure;
+    OCInitType TIM_OCInitStructure;
+
+    /* Time base configuration */
+    TIM_TimeBaseStructure.Period    = 1000 - 1;
+    TIM_TimeBaseStructure.Prescaler = 72-1; //36 for 2k wave out, 72 for 1k wave out
+    TIM_TimeBaseStructure.ClkDiv    = TIM_CLK_DIV1; //144MHz
+    TIM_TimeBaseStructure.CntMode   = TIM_CNT_MODE_UP;
+
+    TIM_InitTimeBase(TIM1, &TIM_TimeBaseStructure);
+
+    /* Output Compare Active Mode configuration: Channel3 */
+    TIM_OCInitStructure.OcMode      = TIM_OCMODE_TOGGLE;
+    TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
+    TIM_OCInitStructure.Pulse       = 250 - 1;
+    TIM_OCInitStructure.OcPolarity  = TIM_OC_POLARITY_HIGH;
+
+    TIM_InitOc3(TIM1, &TIM_OCInitStructure);
+    TIM_ConfigOc3Preload(TIM1, TIM_OC_PRE_LOAD_DISABLE);
+
+    /* Output Compare Active Mode configuration: Channel4 */
+    TIM_OCInitStructure.OcMode      = TIM_OCMODE_TOGGLE;
+    TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
+    TIM_OCInitStructure.Pulse       = 750 - 1;
+    TIM_OCInitStructure.OcPolarity  = TIM_OC_POLARITY_HIGH;
+
+    TIM_InitOc4(TIM1, &TIM_OCInitStructure);
+    TIM_ConfigOc4Preload(TIM1, TIM_OC_PRE_LOAD_DISABLE);
+
+    //////////////////////////////////////////////////////
+    TIM_ConfigArPreload(TIM1, ENABLE);
+    TIM_ConfigInt(TIM1, TIM_INT_CC4, ENABLE);       //use CC4 irq
+}
+
+void enable_timer_pwm(void)
+{
+    TIM_EnableCtrlPwmOutputs(TIM1, ENABLE);
+}
+
+void start_timer(void)
+{
+    TIM_Enable(TIM1, ENABLE);
+}
+
 void Timera_Config(void)
 {
-    stc_timera_base_init_t stcTimeraInit;
-    stc_timera_compare_init_t stcTimerCompareInit;
-    stc_port_init_t stcPortInit;
-
-    /* configuration structure initialization */
-    MEM_ZERO_STRUCT(stcTimeraInit);
-    MEM_ZERO_STRUCT(stcTimerCompareInit);
-    MEM_ZERO_STRUCT(stcPortInit);
-
-    /* Configuration peripheral clock */
-    PWC_Fcg2PeriphClockCmd(TIMERA_UNIT1_CLOCK, Enable);
-    PWC_Fcg0PeriphClockCmd(PWC_FCG0_PERIPH_AOS, Enable);
-
-    /* Configuration TIMERA compare pin */
-    PORT_SetFunc(TIMERA_UNIT1_CH1_PORT, TIMERA_UNIT1_CH1_PIN, TIMERA_UNIT1_CH1_FUNC, Disable);
-
-    /* Configuration timera unit 1 base structure */
-    stcTimeraInit.enClkDiv = TimeraPclkDiv1;
-    stcTimeraInit.enCntMode = TimeraCountModeSawtoothWave;
-    stcTimeraInit.enCntDir = TimeraCountDirUp;
-    stcTimeraInit.enSyncStartupEn = Disable;
-    stcTimeraInit.u16PeriodVal = TIMERA_COUNT_OVERFLOW;
-    TIMERA_BaseInit(TIMERA_UNIT1, &stcTimeraInit);
-
-    /* Configuration timera unit 1 compare structure */
-    stcTimerCompareInit.u16CompareVal = TIMERA_COUNT_COMPARE;
-    stcTimerCompareInit.enStartCountOutput = TimeraCountStartOutputHigh;
-    stcTimerCompareInit.enStopCountOutput = TimeraCountStopOutputLow;
-    stcTimerCompareInit.enCompareMatchOutput = TimeraCompareMatchOutputReverse;
-    stcTimerCompareInit.enPeriodMatchOutput = TimeraPeriodMatchOutputKeep;
-    stcTimerCompareInit.enSpecifyOutput = TimeraSpecifyOutputInvalid;
-    stcTimerCompareInit.enCacheEn = Disable;
-    stcTimerCompareInit.enTriangularTroughTransEn = Disable;
-    stcTimerCompareInit.enTriangularCrestTransEn = Disable;
-    stcTimerCompareInit.u16CompareCacheVal = 0;
-
-    /* Configure Channel 1 */
-    TIMERA_CompareInit(TIMERA_UNIT1, TIMERA_UNIT1_CH1, &stcTimerCompareInit);
-    TIMERA_CompareCmd(TIMERA_UNIT1, TIMERA_UNIT1_CH1, Enable);
-
-		TIMERA_Cmd(TIMERA_UNIT1, Enable);
-
+    init_timer_pin(3);//for pwm cc output
+	init_timer();
+    enable_timer_pwm();
+    start_timer();
 }
 
 
