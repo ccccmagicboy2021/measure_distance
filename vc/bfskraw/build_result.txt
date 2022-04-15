@@ -1,0 +1,6 @@
+--------------------Configuration: bfskraw - Win32 Release--------------------
+
+bfskraw.dll - 0 error(s), 0 warning(s)
+--------------------Configuration: bfskraw - Win32 Debug--------------------
+
+bfskraw.dll - 0 error(s), 0 warning(s)
