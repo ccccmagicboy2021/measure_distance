@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc;..\application\nr_micro_shell;..\application\EventRecorder;..\application\fifo;..\application\bsp;..\application\adc;..\application\hardware;..\application\uart;..\application\clk;..\application\do;..\application\DWTDelay;..\application\shell;..\application\app;..\application\systick</IncludePath>
+              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc;..\application\nr_micro_shell;..\application\EventRecorder;..\application\fifo;..\application\bsp;..\application\adc;..\application\hardware;..\application\uart;..\application\clk;..\application\do;..\application\DWTDelay;..\application\shell;..\application\app;..\application\systick;..\application\log</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -477,6 +477,11 @@
               <FileName>sys.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\source\sys.h</FilePath>
+            </File>
+            <File>
+              <FileName>log.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\log\log.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1000,7 +1005,7 @@
               <MiscControls></MiscControls>
               <Define>VECT_TAB_SRAM</Define>
               <Undefine></Undefine>
-              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc;..\application\hardware;..\application\nr_micro_shell;..\application\adc;..\application\EventRecorder;..\application\fifo;..\application\uart;..\application\clk;..\application\do;..\application\DWTDelay;..\application\shell;..\application\bsp;..\application\systick</IncludePath>
+              <IncludePath>..\application\app;..\application\HardFaultHandlerMDK;..\application\rtt;..\cmsis;..\common;..\driver\Inc;..\source;..\bsp\inc;..\application\hardware;..\application\nr_micro_shell;..\application\adc;..\application\EventRecorder;..\application\fifo;..\application\uart;..\application\clk;..\application\do;..\application\DWTDelay;..\application\shell;..\application\bsp;..\application\systick;..\application\log</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1138,6 +1143,11 @@
               <FileName>sys.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\source\sys.h</FilePath>
+            </File>
+            <File>
+              <FileName>log.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\log\log.c</FilePath>
             </File>
           </Files>
         </Group>

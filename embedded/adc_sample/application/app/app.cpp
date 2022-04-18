@@ -71,6 +71,14 @@ void App::idle_process(void)
     //dwt.delay_ms(100);
     tick.delay_ms(100);
     
+    log_set_level(LOG_ERROR);
+    log_trace("Hello %s\r\n", "world");
+    log_debug("Hello %s\r\n", "world");
+    log_info("Hello %s\r\n", "world");
+    log_warn("Hello %s\r\n", "world");
+    //log_error("Hello %s\r\n", "world");
+    //log_fatal("Hello %s\r\n", "world");
+    
     //hardware_n32_ch2840adx.led.toggle();
     //printf("test!\r\n");
     

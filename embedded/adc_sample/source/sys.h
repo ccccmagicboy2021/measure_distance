@@ -13,6 +13,7 @@
 
 #include "fifo.h"
 #include "bsp.h"
+#include "log.h"
 
 #define CV_LOG(fmt, ...) \
 do \
