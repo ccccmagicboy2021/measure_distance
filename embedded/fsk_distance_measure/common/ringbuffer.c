@@ -13,7 +13,7 @@ int ring_buffer_put(ring_buf_t *ring_buf)
         return -ENOMEM;
     }
 
-    ring_buf->wr = (ring_buf ->wr + 1) % ring_buf->max_count;;
+    ring_buf->wr = (ring_buf ->wr + 1) % ring_buf->max_count;
 
     return 0;
 }

@@ -39,6 +39,9 @@
 volatile uint16_t g_radar_if_adc_value;     //radar if adc value
 volatile uint16_t g_light_adc_value;		//light sensor adc value
 
+extern u32 buffer[(ELEMENT_SIZE / 4) * ELEMENT_COUNT];
+extern ring_buf_t ring_buffer;
+
 /** @addtogroup N32G4FR_StdPeriph_Template
  * @{
  */
@@ -160,6 +163,21 @@ void USART3_IRQHandler(void)
         temp = USART_ReceiveData(USART3);
         uart_receive_input(temp);
     }
+}
+
+void DMA1_Channel8_IRQHandler(void)
+{
+	static int i = 0;
+	
+	if ((ELEMENT_COUNT - 1) == i) {
+		DMA1_CH8->MADDR = (u32)(&buffer[0]);
+		i = 0;
+	} else {
+		DMA1_CH8->MADDR = (u32)(&buffer[(ELEMENT_SIZE / 4) * (i + 1)]);
+		i++;
+	}
+	
+	ring_buffer_put(&ring_buffer);
 }
 
 void TIM1_CC_IRQHandler(void)

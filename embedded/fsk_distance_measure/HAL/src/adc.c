@@ -9,8 +9,8 @@
 extern volatile uint16_t g_radar_if_adc_value;     //radar if adc value
 extern volatile uint16_t g_light_adc_value;		//light sensor adc value
 
-
 u32 buffer[(ELEMENT_SIZE / 4) * ELEMENT_COUNT];
+
 ring_buf_t ring_buffer = {
     .rd = 0,
     .wr = 0,
@@ -84,14 +84,14 @@ void AdcInitConfig(void)
     ADC_InitStructure.WorkMode       = ADC_WORKMODE_INDEPENDENT;
     ADC_InitStructure.MultiChEn      = ENABLE;
     ADC_InitStructure.ContinueConvEn = ENABLE;
-    ADC_InitStructure.ExtTrigSelect  = ADC_EXT_TRIGCONV_NONE;
+    ADC_InitStructure.ExtTrigSelect  = ADC_EXT_TRIGCONV_T1_CC1;
     ADC_InitStructure.DatAlign       = ADC_DAT_ALIGN_R;
     ADC_InitStructure.ChsNumber      = 1;
     
 	ADC_Init(ADC2, &ADC_InitStructure);
     ADC_ConfigRegularChannel(ADC2, ADC2_Channel_05_PC4, 1, ADC_SAMP_TIME_55CYCLES5);
 
-    ADC_EnableDMA(ADC2, ENABLE);
+    ADC_EnableDMA(ADC2, ENABLE);    //use dma1 ch8
     ADC_Enable(ADC2, ENABLE);
 
     while(ADC_GetFlagStatusNew(ADC2,ADC_FLAG_RDY) == RESET)
@@ -139,13 +139,15 @@ void DmaInitConfig(void)
     DMA_Init(DMA1_CH1, &DMA_InitStructure);
 	DMA_EnableChannel(DMA1_CH1, ENABLE);	//for adc1
     
+    ///////////////////////////////////////////////////////
+    
     DMA_DeInit(DMA1_CH8);
     DMA_InitStructure.PeriphAddr     = (uint32_t)&ADC2->DAT;
-    DMA_InitStructure.MemAddr        = (uint32_t)&g_radar_if_adc_value;
+    DMA_InitStructure.MemAddr        = (uint32_t)(&buffer[0]);
     DMA_InitStructure.Direction      = DMA_DIR_PERIPH_SRC;
-    DMA_InitStructure.BufSize        = 1;
+    DMA_InitStructure.BufSize        = ELEMENT_SIZE / sizeof(u16);
     DMA_InitStructure.PeriphInc      = DMA_PERIPH_INC_DISABLE;
-    DMA_InitStructure.DMA_MemoryInc  = DMA_MEM_INC_DISABLE;
+    DMA_InitStructure.DMA_MemoryInc  = DMA_MEM_INC_ENABLE;
     DMA_InitStructure.PeriphDataSize = DMA_PERIPH_DATA_SIZE_HALFWORD;
     DMA_InitStructure.MemDataSize    = DMA_MemoryDataSize_HalfWord;
     DMA_InitStructure.CircularMode   = DMA_MODE_CIRCULAR;
@@ -154,6 +156,17 @@ void DmaInitConfig(void)
 	
     DMA_Init(DMA1_CH8, &DMA_InitStructure);
     DMA_EnableChannel(DMA1_CH8, ENABLE);	//for adc2
+    
+    NVIC_InitType NVIC_InitStructure;
+     
+    /* Enable the DMA Interrupt */
+    NVIC_InitStructure.NVIC_IRQChannel                   = DMA1_Channel8_IRQn;
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority        = 0;
+    NVIC_InitStructure.NVIC_IRQChannelCmd                = ENABLE;
+    NVIC_Init(&NVIC_InitStructure);
+    
+    DMA_ConfigInt(DMA1_CH8, DMA_INT_TXC | DMA_INT_HTX, ENABLE);  //p178
 }
 
 int get_sample_data(u8 *buf)

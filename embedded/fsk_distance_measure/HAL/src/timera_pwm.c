@@ -131,10 +131,19 @@ void init_timer(void)
 
     TIM_InitOc4(TIM1, &TIM_OCInitStructure);
     TIM_ConfigOc4Preload(TIM1, TIM_OC_PRE_LOAD_DISABLE);
+    
+    //----------------------------------------------------------
+    TIM_OCInitStructure.OcMode      = TIM_OCMODE_TOGGLE;
+    TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
+    TIM_OCInitStructure.Pulse       = 750 - 1;
+    TIM_OCInitStructure.OcPolarity  = TIM_OC_POLARITY_HIGH;
+
+    TIM_InitOc1(TIM1, &TIM_OCInitStructure);
+    TIM_ConfigOc1Preload(TIM1, TIM_OC_PRE_LOAD_DISABLE);
 
     //////////////////////////////////////////////////////
     TIM_ConfigArPreload(TIM1, ENABLE);
-    TIM_ConfigInt(TIM1, TIM_INT_CC4, ENABLE);       //use CC4 irq
+    //TIM_ConfigInt(TIM1, TIM_INT_CC4, ENABLE);       //use CC4 irq
 }
 
 void enable_timer_pwm(void)
