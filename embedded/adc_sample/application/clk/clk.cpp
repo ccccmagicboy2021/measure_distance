@@ -4,6 +4,7 @@
 Clk::Clk()
 {
     RCC_EnableAPB2PeriphClk(RCC_APB2_PERIPH_GPIOB, ENABLE);
+    RCC_EnableAPB2PeriphClk(RCC_APB2_PERIPH_GPIOC, ENABLE);
     RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_USART3, ENABLE);
     RCC_EnableAPB2PeriphClk(RCC_APB2_PERIPH_AFIO, ENABLE);
         
