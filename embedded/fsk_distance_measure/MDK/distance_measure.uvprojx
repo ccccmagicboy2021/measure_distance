@@ -727,6 +727,21 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>debug</GroupName>
+          <Files>
+            <File>
+              <FileName>SEGGER_RTT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\rtt\SEGGER_RTT.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_RTT_printf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\rtt\SEGGER_RTT_printf.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>::CMSIS</GroupName>
         </Group>
       </Groups>
@@ -1397,6 +1412,21 @@
               <FileName>system.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HAL\mcu_sdk\system.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>debug</GroupName>
+          <Files>
+            <File>
+              <FileName>SEGGER_RTT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\rtt\SEGGER_RTT.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_RTT_printf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\rtt\SEGGER_RTT_printf.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2126,6 +2156,21 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>debug</GroupName>
+          <Files>
+            <File>
+              <FileName>SEGGER_RTT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\rtt\SEGGER_RTT.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_RTT_printf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\rtt\SEGGER_RTT_printf.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>::CMSIS</GroupName>
         </Group>
       </Groups>
@@ -2463,7 +2508,7 @@
               <MiscControls>--diag_suppress=186,66</MiscControls>
               <Define>__DEBUG,HC32F46x,USE_DEVICE_DRIVER_LIB,_CC_ARM,DEBUG_MODE</Define>
               <Undefine></Undefine>
-              <IncludePath>..\MDK;..\driver\inc;..\driver\src;..\dsp\Include;..\app\presense_detection\inc;..\common\inc;..\HAL\inc;..\HAL\mcu_sdk;..\app\distance_measure\inc;..\app\app</IncludePath>
+              <IncludePath>..\MDK;..\driver\inc;..\driver\src;..\dsp\Include;..\app\presense_detection\inc;..\common\inc;..\HAL\inc;..\HAL\mcu_sdk;..\app\distance_measure\inc;..\app\app;..\app\rtt</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -2847,6 +2892,21 @@
               <FileName>system.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HAL\mcu_sdk\system.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>debug</GroupName>
+          <Files>
+            <File>
+              <FileName>SEGGER_RTT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\rtt\SEGGER_RTT.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_RTT_printf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\rtt\SEGGER_RTT_printf.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -2,6 +2,7 @@
 #define __SYS_H__
 
 #include "stdint.h"
+#include "SEGGER_RTT.h"
 
 typedef int32_t  s32;
 typedef int16_t s16;
@@ -20,6 +21,12 @@ typedef uint8_t  u8;
 typedef const uint32_t uc32;
 typedef const uint16_t uc16;
 typedef const uint8_t uc8;
+
+#define CV_LOG(fmt, ...) \
+do \
+{ \
+		SEGGER_RTT_printf(0, fmt, ##__VA_ARGS__); \
+}while(0)
 
 #endif
 
