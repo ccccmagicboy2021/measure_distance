@@ -37,6 +37,7 @@ int ring_buffer_get(ring_buf_t *ring_buf, u8 *data)
 
     for (i = 0; i < ring_buf->elem_size / 2; i++)
         *((u16 *)data + i) = *((u16 *)ptr + i) * (1 << 3);  // NOLINT
+        //*((u16 *)data + i) = *((u16 *)ptr + i);  // NOLINT
     // memcpy(data, ptr, ring_buf->elem_size);
 // #define UNIT_TEST
 #ifdef UNIT_TEST

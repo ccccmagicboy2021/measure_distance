@@ -167,17 +167,31 @@ void USART3_IRQHandler(void)
 
 void DMA1_Channel8_IRQHandler(void)
 {
-	static int i = 0;
-	
-	if ((ELEMENT_COUNT - 1) == i) {
-		DMA1_CH8->MADDR = (u32)(&buffer[0]);
-		i = 0;
-	} else {
-		DMA1_CH8->MADDR = (u32)(&buffer[(ELEMENT_SIZE / 4) * (i + 1)]);
-		i++;
-	}
-	
-	ring_buffer_put(&ring_buffer);
+    static int i = 0;
+    static u32 current_address = 0;
+    
+    if(DMA_GetIntStatus(DMA1_INT_TXC8, DMA1) != RESET)
+    {
+        DMA_EnableChannel(DMA1_CH8, DISABLE);
+
+        /////////////////////////////////////////////
+        if ((ELEMENT_COUNT - 1) == i) 
+        {
+            DMA1_CH8->MADDR = (u32)(&buffer[0]);
+            current_address = DMA1_CH8->MADDR;
+            i = 0;
+        }
+        else
+        {
+            DMA1_CH8->MADDR = (u32)(&buffer[(ELEMENT_SIZE / 4) * (i + 1)]);//prepare for the next dma transfer
+            current_address = DMA1_CH8->MADDR;
+            i++;
+        }
+        ring_buffer_put(&ring_buffer);
+        /////////////////////////////////////////////
+        DMA_ClrIntPendingBit(DMA1_INT_GLB8, DMA1);
+        DMA_EnableChannel(DMA1_CH8, ENABLE);
+    }
 }
 
 void TIM1_CC_IRQHandler(void)

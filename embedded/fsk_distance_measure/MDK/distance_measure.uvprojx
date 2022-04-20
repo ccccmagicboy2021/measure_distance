@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>N32G4FR, USE_STDPERIPH_DRIVER, SYSCLK_FREQ=144000000, __DEBUG,USE_DEVICE_DRIVER_LIB,_CC_ARM,DEBUG_MODE,ARM_MATH_CM4</Define>
               <Undefine></Undefine>
-              <IncludePath>..\MDK;..\driver\inc;..\driver\src;..\dsp\Include;..\common;..\HAL\inc;..\HAL\mcu_sdk;..\app\distance_measure\inc;..\app\app;..\cmsis;..\dsp_lib\Include;..\dsp_lib\dsp</IncludePath>
+              <IncludePath>..\MDK;..\driver\inc;..\driver\src;..\dsp\Include;..\common;..\HAL\inc;..\HAL\mcu_sdk;..\app\distance_measure\inc;..\app\app;..\cmsis;..\dsp_lib\Include;..\dsp_lib\dsp;..\app\rtt</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -697,6 +697,21 @@
               <FileName>system.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HAL\mcu_sdk\system.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>debug</GroupName>
+          <Files>
+            <File>
+              <FileName>SEGGER_RTT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\rtt\SEGGER_RTT.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_RTT_printf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\rtt\SEGGER_RTT_printf.c</FilePath>
             </File>
           </Files>
         </Group>

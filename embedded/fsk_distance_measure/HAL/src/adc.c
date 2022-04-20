@@ -58,6 +58,7 @@ void AdcConfig(void)
 void AdcInitConfig(void)
 {
     ADC_InitType ADC_InitStructure;
+    ADC_InitTypeEx ADC_InitStructureEx;
 	
     ADC_InitStructure.WorkMode       = ADC_WORKMODE_INDEPENDENT;
     ADC_InitStructure.MultiChEn      = ENABLE;
@@ -83,14 +84,19 @@ void AdcInitConfig(void)
 ////////////////////////////////////////////////////////////
     ADC_InitStructure.WorkMode       = ADC_WORKMODE_INDEPENDENT;
     ADC_InitStructure.MultiChEn      = ENABLE;
-    ADC_InitStructure.ContinueConvEn = ENABLE;
+    ADC_InitStructure.ContinueConvEn = DISABLE;
     ADC_InitStructure.ExtTrigSelect  = ADC_EXT_TRIGCONV_T1_CC1;
+    
     ADC_InitStructure.DatAlign       = ADC_DAT_ALIGN_R;
     ADC_InitStructure.ChsNumber      = 1;
     
 	ADC_Init(ADC2, &ADC_InitStructure);
-    ADC_ConfigRegularChannel(ADC2, ADC2_Channel_05_PC4, 1, ADC_SAMP_TIME_55CYCLES5);
+    ADC_InitStructureEx.ResBit = ADC_CTRL3_RES_12BIT;
+    ADC_InitEx(ADC2, &ADC_InitStructureEx);
+    
+    ADC_ConfigRegularChannel(ADC2, ADC2_Channel_05_PC4, 1, ADC_SAMP_TIME_55CYCLES5);    //p195 55.5+1.5=57T=6.3us
 
+    ADC_EnableExternalTrigConv(ADC2, ENABLE);
     ADC_EnableDMA(ADC2, ENABLE);    //use dma1 ch8
     ADC_Enable(ADC2, ENABLE);
 
@@ -133,7 +139,7 @@ void DmaInitConfig(void)
     DMA_InitStructure.PeriphDataSize = DMA_PERIPH_DATA_SIZE_HALFWORD;
     DMA_InitStructure.MemDataSize    = DMA_MemoryDataSize_HalfWord;
     DMA_InitStructure.CircularMode   = DMA_MODE_CIRCULAR;
-    DMA_InitStructure.Priority       = DMA_PRIORITY_VERY_HIGH;
+    DMA_InitStructure.Priority       = DMA_PRIORITY_LOW;
     DMA_InitStructure.Mem2Mem        = DMA_M2M_DISABLE;
 	
     DMA_Init(DMA1_CH1, &DMA_InitStructure);
@@ -151,12 +157,9 @@ void DmaInitConfig(void)
     DMA_InitStructure.PeriphDataSize = DMA_PERIPH_DATA_SIZE_HALFWORD;
     DMA_InitStructure.MemDataSize    = DMA_MemoryDataSize_HalfWord;
     DMA_InitStructure.CircularMode   = DMA_MODE_CIRCULAR;
-    DMA_InitStructure.Priority       = DMA_PRIORITY_LOW;
+    DMA_InitStructure.Priority       = DMA_PRIORITY_VERY_HIGH;
     DMA_InitStructure.Mem2Mem        = DMA_M2M_DISABLE;
-	
-    DMA_Init(DMA1_CH8, &DMA_InitStructure);
-    DMA_EnableChannel(DMA1_CH8, ENABLE);	//for adc2
-    
+	    
     NVIC_InitType NVIC_InitStructure;
      
     /* Enable the DMA Interrupt */
@@ -166,7 +169,9 @@ void DmaInitConfig(void)
     NVIC_InitStructure.NVIC_IRQChannelCmd                = ENABLE;
     NVIC_Init(&NVIC_InitStructure);
     
-    DMA_ConfigInt(DMA1_CH8, DMA_INT_TXC | DMA_INT_HTX, ENABLE);  //p178
+    DMA_Init(DMA1_CH8, &DMA_InitStructure);
+    DMA_ConfigInt(DMA1_CH8, DMA_INT_TXC, ENABLE);   //p178
+    DMA_EnableChannel(DMA1_CH8, ENABLE);	        //for adc2
 }
 
 int get_sample_data(u8 *buf)

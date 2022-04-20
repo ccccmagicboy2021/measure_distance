@@ -38,15 +38,50 @@ float distance_f = 0;
 float speed_f = 0;
 uint32_t mag_f = 0;
 
+char m_JS_RTT_UpBuffer[2048*4*2];
+#define SEGGER_RTT_IN_RAM   1
+
 extern void tick_init(void);
 
 extern uint32_t diff_tick;
+
+extern void     start_timer(void);
+
+void rtt_init(void)
+{
+    //must align to dword
+	//SEGGER_RTT_ConfigUpBuffer(1, "JScope_U2U2U2U2", &m_JS_RTT_UpBuffer[0], sizeof(m_JS_RTT_UpBuffer), SEGGER_RTT_MODE_NO_BLOCK_SKIP);
+    SEGGER_RTT_ConfigUpBuffer(1, "JScope_U2U2", &m_JS_RTT_UpBuffer[0], sizeof(m_JS_RTT_UpBuffer), SEGGER_RTT_MODE_NO_BLOCK_SKIP);
+    
+	SEGGER_RTT_Init();
+	CV_LOG("%sRADAR MODULE: N32G4FRKEQ7 distance_measure DEMO%s\r\n", RTT_CTRL_BG_BRIGHT_RED, RTT_CTRL_RESET);
+	CV_LOG("compiled time: %s %s\r\n", __DATE__, __TIME__);
+    
+#ifdef VECT_TAB_SRAM
+    CV_LOG("ramcode program begin...\r\n");
+#else
+    CV_LOG("flashcode program begin...\r\n");
+#endif
+}
+
+int fputc(int ch, FILE* f)
+{
+    USART_SendData(USART3, (uint8_t)ch);
+    while (USART_GetFlagStatus(USART3, USART_FLAG_TXDE) == RESET)
+        ;
+
+    return (ch);
+}
 
 int32_t main(void)
 {
     measure_info_t measure_info = {0};
 
     SysClkInit();
+    
+    rtt_init();
+    
+    usart_init();
 
     AdcConfig();
 
@@ -54,26 +89,24 @@ int32_t main(void)
 
     gpio_init();
 
-    //GPIO_TEST_SET();
-
     init_mem();
 
-#ifdef SEND_TO_MATLAB_TEST
-    test_usart_init();
-#else
-    usart_init();
     tick_init();
-#endif
 
 #ifndef SEND_TO_MATLAB_TEST
     bt_protocol_init();
     led_init();
 #endif
 
+        
+    clk_test();
+    start_timer();
+    
     while (1)
     {
         if (is_data_available()) {
             get_sample_data((u8 *)data_buf);
+            SEGGER_RTT_Write(1, data_buf, sizeof(data_buf));
             measure_distance(data_buf, &measure_info);
 #ifndef SEND_TO_MATLAB_TEST
             updata_data.speed = measure_info.speed_abf;
@@ -88,7 +121,6 @@ int32_t main(void)
             printf("/*CD2840ADX,%.3lf,%.3lf,%d,%d,%d*/", distance_f, speed_f, state, diff_tick, mag_f);
 #endif           
             app();
-        
             
 #endif
         }

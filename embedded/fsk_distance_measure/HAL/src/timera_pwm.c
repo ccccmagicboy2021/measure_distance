@@ -114,6 +114,7 @@ void init_timer(void)
 
     TIM_InitTimeBase(TIM1, &TIM_TimeBaseStructure);
 
+    //----------------------------------------------------------
     /* Output Compare Active Mode configuration: Channel3 */
     TIM_OCInitStructure.OcMode      = TIM_OCMODE_TOGGLE;
     TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
@@ -123,6 +124,7 @@ void init_timer(void)
     TIM_InitOc3(TIM1, &TIM_OCInitStructure);
     TIM_ConfigOc3Preload(TIM1, TIM_OC_PRE_LOAD_DISABLE);
 
+    //----------------------------------------------------------
     /* Output Compare Active Mode configuration: Channel4 */
     TIM_OCInitStructure.OcMode      = TIM_OCMODE_TOGGLE;
     TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
@@ -133,6 +135,7 @@ void init_timer(void)
     TIM_ConfigOc4Preload(TIM1, TIM_OC_PRE_LOAD_DISABLE);
     
     //----------------------------------------------------------
+    /* Output Compare Active Mode configuration: Channel1 */
     TIM_OCInitStructure.OcMode      = TIM_OCMODE_TOGGLE;
     TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
     TIM_OCInitStructure.Pulse       = 750 - 1;
@@ -161,7 +164,6 @@ void Timera_Config(void)
     init_timer_pin(3);//for pwm cc output
 	init_timer();
     enable_timer_pwm();
-    start_timer();
 }
 
 
