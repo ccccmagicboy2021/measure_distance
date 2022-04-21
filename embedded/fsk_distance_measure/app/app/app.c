@@ -35,6 +35,7 @@ void close_process(void)
 {
 	PORT_SetBits(PortA, Pin01);
 	PORT_ResetBits(PortA, Pin05);
+    PORT_SetBits(PortA, Pin08);  //OUT
     
     uart_transmit_output(0xEE);
     uart_transmit_output(0x11);
@@ -58,6 +59,7 @@ void leave_s1(void)
 {
 	PORT_ResetBits(PortA, Pin01);
 	PORT_SetBits(PortA, Pin05);
+    PORT_ResetBits(PortA, Pin08);  //OUT
     
     uart_transmit_output(0xDE);
     uart_transmit_output(0x21);
