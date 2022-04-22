@@ -196,6 +196,9 @@ void DMA1_Channel8_IRQHandler(void)
 
 void TIM1_CC_IRQHandler(void)
 {   
+    static u32 byte_offset_addr = 0;//0~0x800
+    u16 * temp;
+    
     if (TIM_GetIntStatus(TIM1, TIM_INT_CC1) != RESET)
     {
         TIM_ClrIntPendingBit(TIM1, TIM_INT_CC1);
@@ -212,22 +215,29 @@ void TIM1_CC_IRQHandler(void)
     {
         TIM_ClrIntPendingBit(TIM1, TIM_INT_CC4);
         
-        /*
-        adc_value.Val1 = g_radar_if_adc_value;	//if
-        //adc_value.Val2 = g_light_adc_value;	    //light
-		
-		if (GPIO_ReadInputDataBit(GPIOA, GPIO_PIN_10) == Bit_RESET)
-		{
-			adc_value.Val3 = 0;
-		}
-		else
-		{
-			adc_value.Val3 = 1;
-		}
-        //adc_value.Val4 = 0;
-		FIFO_WriteOneData(&FIFO_Data[0], adc_value);
-        */
+        temp = (u16 *)((u8*)&buffer[0] + byte_offset_addr);
         
+        *temp = g_radar_if_adc_value;
+        
+        if (0x200==byte_offset_addr)
+        {
+            ring_buffer_put(&ring_buffer);
+        }
+        else if (0x400==byte_offset_addr)
+        {
+            ring_buffer_put(&ring_buffer);
+        }
+        else if (0x600==byte_offset_addr)
+        {
+            ring_buffer_put(&ring_buffer);
+        }
+        
+        byte_offset_addr += 2;
+        
+        if (0x800==byte_offset_addr)
+        {
+            byte_offset_addr = 0;
+        } 
     }
 }
 

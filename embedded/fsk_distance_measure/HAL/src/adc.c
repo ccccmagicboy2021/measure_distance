@@ -27,11 +27,13 @@ u16 light_real_data;
 void AdcConfig(void);
 void AdcClockConfig(void);
 void AdcInitConfig(void);
+void AdcInitConfig2(void);
 void AdcChannelConfig(void);
 void AdcTriggerConfig(void);
 
 void DmaConfig(void);
 void DmaInitConfig(void);
+void DmaInitConfig2(void);
 
 void init_pin(GPIO_Module* port, unsigned int pin)
 {
@@ -47,6 +49,7 @@ void AdcConfig(void)
 	init_pin(GPIOC, GPIO_PIN_4);
 	init_pin(GPIOA, GPIO_PIN_6);
     AdcInitConfig();
+    //AdcInitConfig2();
     DmaConfig();
 }
 
@@ -55,6 +58,60 @@ void AdcConfig(void)
  ** \brief  ADC initial configuration.
  **
  ******************************************************************************/
+void AdcInitConfig2(void)
+{
+    ADC_InitType ADC_InitStructure;
+    ADC_InitTypeEx ADC_InitStructureEx;
+	
+    ADC_InitStructure.WorkMode       = ADC_WORKMODE_INDEPENDENT;
+    ADC_InitStructure.MultiChEn      = DISABLE;
+    ADC_InitStructure.ContinueConvEn = ENABLE;
+    ADC_InitStructure.ExtTrigSelect  = ADC_EXT_TRIGCONV_NONE;
+    ADC_InitStructure.DatAlign       = ADC_DAT_ALIGN_R;
+    ADC_InitStructure.ChsNumber      = 1;
+    
+	ADC_Init(ADC1, &ADC_InitStructure);
+    ADC_ConfigRegularChannel(ADC1, ADC1_Channel_03_PA6, 1, ADC_SAMP_TIME_55CYCLES5);
+
+    ADC_EnableDMA(ADC1, ENABLE);
+    ADC_Enable(ADC1, ENABLE);
+
+    while(ADC_GetFlagStatusNew(ADC1,ADC_FLAG_RDY) == RESET)
+        ;
+    ADC_StartCalibration(ADC1);
+    while (ADC_GetCalibrationStatus(ADC1))
+        ;
+    
+    ADC_EnableSoftwareStartConv(ADC1, ENABLE);
+	
+////////////////////////////////////////////////////////////
+    ADC_InitStructure.WorkMode       = ADC_WORKMODE_INDEPENDENT;
+    ADC_InitStructure.MultiChEn      = DISABLE;
+    ADC_InitStructure.ContinueConvEn = ENABLE;
+    ADC_InitStructure.ExtTrigSelect  = ADC_EXT_TRIGCONV_NONE;
+    
+    ADC_InitStructure.DatAlign       = ADC_DAT_ALIGN_R;
+    ADC_InitStructure.ChsNumber      = 1;
+    
+	ADC_Init(ADC2, &ADC_InitStructure);
+    ADC_InitStructureEx.ResBit = ADC_CTRL3_RES_12BIT;
+    ADC_InitEx(ADC2, &ADC_InitStructureEx);
+    
+    ADC_ConfigRegularChannel(ADC2, ADC2_Channel_05_PC4, 1, ADC_SAMP_TIME_55CYCLES5);    //p195 55.5+1.5=57T=6.3us
+
+    ADC_EnableExternalTrigConv(ADC2, ENABLE);
+    ADC_EnableDMA(ADC2, ENABLE);    //use dma1 ch8
+    ADC_Enable(ADC2, ENABLE);
+
+    while(ADC_GetFlagStatusNew(ADC2,ADC_FLAG_RDY) == RESET)
+        ;
+    ADC_StartCalibration(ADC2);
+    while (ADC_GetCalibrationStatus(ADC2))
+        ;
+    
+    ADC_EnableSoftwareStartConv(ADC2, ENABLE);
+}
+
 void AdcInitConfig(void)
 {
     ADC_InitType ADC_InitStructure;
@@ -83,7 +140,7 @@ void AdcInitConfig(void)
 	
 ////////////////////////////////////////////////////////////
     ADC_InitStructure.WorkMode       = ADC_WORKMODE_INDEPENDENT;
-    ADC_InitStructure.MultiChEn      = ENABLE;
+    ADC_InitStructure.MultiChEn      = DISABLE;
     ADC_InitStructure.ContinueConvEn = DISABLE;
     ADC_InitStructure.ExtTrigSelect  = ADC_EXT_TRIGCONV_T1_CC1;
     
@@ -117,7 +174,8 @@ void AdcInitConfig(void)
  ******************************************************************************/
 void DmaConfig(void)
 {
-    DmaInitConfig();
+    DmaInitConfig();    //use int
+    //DmaInitConfig2();   //not use int
 }
 
 /**
@@ -125,6 +183,45 @@ void DmaConfig(void)
  ** \brief  DMA initial configuration.
  **
  ******************************************************************************/
+void DmaInitConfig2(void)
+{
+    DMA_InitType DMA_InitStructure;
+	
+    DMA_DeInit(DMA1_CH1);
+    DMA_InitStructure.PeriphAddr     = (uint32_t)&ADC1->DAT;
+    DMA_InitStructure.MemAddr        = (uint32_t)&g_light_adc_value;
+    DMA_InitStructure.Direction      = DMA_DIR_PERIPH_SRC;
+    DMA_InitStructure.BufSize        = 1;
+    DMA_InitStructure.PeriphInc      = DMA_PERIPH_INC_DISABLE;
+    DMA_InitStructure.DMA_MemoryInc  = DMA_MEM_INC_DISABLE;
+    DMA_InitStructure.PeriphDataSize = DMA_PERIPH_DATA_SIZE_HALFWORD;
+    DMA_InitStructure.MemDataSize    = DMA_MemoryDataSize_HalfWord;
+    DMA_InitStructure.CircularMode   = DMA_MODE_CIRCULAR;
+    DMA_InitStructure.Priority       = DMA_PRIORITY_LOW;
+    DMA_InitStructure.Mem2Mem        = DMA_M2M_DISABLE;
+	
+    DMA_Init(DMA1_CH1, &DMA_InitStructure);
+	DMA_EnableChannel(DMA1_CH1, ENABLE);	//for adc1
+    
+    ///////////////////////////////////////////////////////
+    
+    DMA_DeInit(DMA1_CH8);
+    DMA_InitStructure.PeriphAddr     = (uint32_t)&ADC2->DAT;
+    DMA_InitStructure.MemAddr        = (uint32_t)(&g_radar_if_adc_value);
+    DMA_InitStructure.Direction      = DMA_DIR_PERIPH_SRC;
+    DMA_InitStructure.BufSize        = 1;
+    DMA_InitStructure.PeriphInc      = DMA_PERIPH_INC_DISABLE;
+    DMA_InitStructure.DMA_MemoryInc  = DMA_MEM_INC_DISABLE;
+    DMA_InitStructure.PeriphDataSize = DMA_PERIPH_DATA_SIZE_HALFWORD;
+    DMA_InitStructure.MemDataSize    = DMA_MemoryDataSize_HalfWord;
+    DMA_InitStructure.CircularMode   = DMA_MODE_CIRCULAR;
+    DMA_InitStructure.Priority       = DMA_PRIORITY_VERY_HIGH;
+    DMA_InitStructure.Mem2Mem        = DMA_M2M_DISABLE;
+    
+    DMA_Init(DMA1_CH8, &DMA_InitStructure);
+    DMA_EnableChannel(DMA1_CH8, ENABLE);	        //for adc2
+}
+
 void DmaInitConfig(void)
 {
     DMA_InitType DMA_InitStructure;
