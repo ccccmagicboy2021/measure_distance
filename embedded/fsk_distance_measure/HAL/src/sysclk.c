@@ -20,7 +20,7 @@ void SysClkInit(void)
     RCC_EnableAPB2PeriphClk(RCC_APB2_PERIPH_GPIOA, ENABLE);     //PA10
     
     RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_TIM2, ENABLE);      //timer2 72MHz not use
-    RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_TIM3, ENABLE);      //not use
+    RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_TIM3, ENABLE);      //timer3 72MHz for part charge
 
     /* RCC_ADCHCLK_DIV16*/
     ADC_ConfigClk(ADC_CTRL3_CKMOD_AHB,RCC_ADCHCLK_DIV16);   // 144/16 = 9M

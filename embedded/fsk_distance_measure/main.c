@@ -46,6 +46,9 @@ extern void tick_init(void);
 extern uint32_t diff_tick;
 
 extern void     start_timer(void);
+extern void     time3_init(void);
+
+int part_charge = 0;
 
 void rtt_init(void)
 {
@@ -101,6 +104,7 @@ int32_t main(void)
         
     clk_test();
     start_timer();
+    time3_init();
     
     while (1)
     {
@@ -127,6 +131,15 @@ int32_t main(void)
 #ifndef SEND_TO_MATLAB_TEST
         bt_uart_service();
 #endif
+        
+		if (GPIO_ReadInputDataBit(GPIOB, GPIO_PIN_4) == Bit_RESET)
+		{
+			part_charge = 0;
+		}
+		else
+		{
+			part_charge = 1;
+		}
     }
 }
 

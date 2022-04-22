@@ -613,6 +613,11 @@
               <FileType>1</FileType>
               <FilePath>..\HAL\src\adc.c</FilePath>
             </File>
+            <File>
+              <FileName>tim3.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\tim3\tim3.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -654,14 +659,14 @@
               <FilePath>..\app\distance_measure\src\filter.c</FilePath>
             </File>
             <File>
-              <FileName>freq_linspace.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\app\distance_measure\src\freq_linspace.c</FilePath>
-            </File>
-            <File>
               <FileName>hamming.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\app\distance_measure\src\hamming.c</FilePath>
+            </File>
+            <File>
+              <FileName>freq_linspace.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\distance_measure\src\freq_linspace.c</FilePath>
             </File>
             <File>
               <FileName>hanning_conv.c</FileName>

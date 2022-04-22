@@ -15,8 +15,8 @@ void gpio_init(void)
     GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_Out_PP;
     GPIO_InitPeripheral(GPIOB, &GPIO_InitStructure);
     
-    GPIO_SetBits(GPIOB, GPIO_PIN_4);
-    GPIO_SetBits(GPIOB, GPIO_PIN_5);
+    GPIO_SetBits(GPIOB, GPIO_PIN_4);    //ENRF
+    GPIO_SetBits(GPIOB, GPIO_PIN_5);    //ENOP
 }
 
 

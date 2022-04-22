@@ -139,16 +139,6 @@ void init_timer2(void)
 
 void init_timer(void)
 {
-	//init interrupt
-    NVIC_InitType NVIC_InitStructure;
-
-    NVIC_InitStructure.NVIC_IRQChannel                   = TIM1_CC_IRQn;
-    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
-    NVIC_InitStructure.NVIC_IRQChannelSubPriority        = 0;
-    NVIC_InitStructure.NVIC_IRQChannelCmd                = ENABLE;
-
-    NVIC_Init(&NVIC_InitStructure);
-    
 	//init timer
     TIM_TimeBaseInitType TIM_TimeBaseStructure;
     OCInitType TIM_OCInitStructure;
