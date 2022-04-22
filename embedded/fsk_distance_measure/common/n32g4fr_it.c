@@ -41,6 +41,7 @@ volatile uint16_t g_light_adc_value;		//light sensor adc value
 
 extern u32 buffer[(ELEMENT_SIZE / 4) * ELEMENT_COUNT];
 extern ring_buf_t ring_buffer;
+extern void SysTick_IrqHandler(void);
 
 /** @addtogroup N32G4FR_StdPeriph_Template
  * @{
@@ -128,7 +129,7 @@ void DebugMon_Handler(void)
  */
 void SysTick_Handler(void)
 {
-    //
+    SysTick_IrqHandler();
 }
 
 /**
