@@ -45,8 +45,9 @@ extern void tick_init(void);
 
 extern uint32_t diff_tick;
 
-extern void     start_timer(void);
-extern void     time3_init(void);
+extern void start_timer(void);
+extern void time3_init(void);
+extern void time3_start(void);
 
 int part_charge = 0;
 
@@ -103,8 +104,14 @@ int32_t main(void)
 
         
     clk_test();
-    start_timer();
-    time3_init();
+    time3_init();   //enrf 初始化
+    
+    uint32_t    priMask;
+    priMask =   __get_PRIMASK();          //关中断保护
+    __set_PRIMASK(1);
+    start_timer();  //fsk
+    time3_start();  //enrf
+    __set_PRIMASK(priMask);
     
     while (1)
     {

@@ -19,7 +19,7 @@ void time3_init(void)
 
     /* Time base configuration */
     TIM_TimeBaseStructure.Period    = 1000 - 1;
-    TIM_TimeBaseStructure.Prescaler = 720-1; // 100K freq
+    TIM_TimeBaseStructure.Prescaler = 36-1; // base: 1M-1K = 72 ; 2M-2K = 36
     TIM_TimeBaseStructure.ClkDiv    = TIM_CLK_DIV1; //72MHz
     TIM_TimeBaseStructure.CntMode   = TIM_CNT_MODE_DOWN;
 
@@ -28,11 +28,16 @@ void time3_init(void)
     /* Output Compare Active Mode configuration: Channel1 */
     TIM_OCInitStructure.OcMode      = TIM_OCMODE_PWM1;
     TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
-    TIM_OCInitStructure.Pulse       = 100 - 1;
-    TIM_OCInitStructure.OcPolarity  = TIM_OC_POLARITY_LOW;
+    TIM_OCInitStructure.Pulse       = 500 - 1;
+    TIM_OCInitStructure.OcPolarity  = TIM_OC_POLARITY_HIGH;
 
     TIM_InitOc1(TIM3, &TIM_OCInitStructure);
     TIM_ConfigOc1Preload(TIM3, TIM_OC_PRE_LOAD_DISABLE);
     
+    TIM_Enable(TIM3, DISABLE);
+}
+
+void time3_start(void)
+{
     TIM_Enable(TIM3, ENABLE);
 }
