@@ -155,17 +155,18 @@ void init_timer(void)
     /* Output Compare Active Mode configuration: Channel3 */
     TIM_OCInitStructure.OcMode      = TIM_OCMODE_TOGGLE;
     TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
-    TIM_OCInitStructure.Pulse       = 250 - 1;
-    TIM_OCInitStructure.OcPolarity  = TIM_OC_POLARITY_LOW;
+    TIM_OCInitStructure.Pulse       = 1 - 1;
+    //TIM_OCInitStructure.OcPolarity  = TIM_OC_POLARITY_LOW;  //high first, low after
+    TIM_OCInitStructure.OcPolarity  = TIM_OC_POLARITY_HIGH; //low first, high after
 
     TIM_InitOc3(TIM1, &TIM_OCInitStructure);
     TIM_ConfigOc3Preload(TIM1, TIM_OC_PRE_LOAD_DISABLE);
     
     //----------------------------------------------------------
-    /* Output Compare Active Mode configuration: Channel1 */
+    /* Output Compare Active Mode configuration: Channel1 */ //for adc trigger
     TIM_OCInitStructure.OcMode      = TIM_OCMODE_PWM1;
     TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
-    TIM_OCInitStructure.Pulse       = 500 - 1;
+    TIM_OCInitStructure.Pulse       = 5 - 1;
     TIM_OCInitStructure.OcPolarity  = TIM_OC_POLARITY_LOW;
 
     TIM_InitOc1(TIM1, &TIM_OCInitStructure);
