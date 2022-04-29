@@ -46,6 +46,10 @@ description: Initial version
 #define SYSTEM_GLOBAL
 
 #include "bluetooth.h"
+#include "sys.h"
+
+//
+extern float dis_limit1;
 //
 //
 extern const DOWNLOAD_CMD_S download_cmd[];
@@ -278,7 +282,7 @@ void data_handle(unsigned short offset)
   
   unsigned char ret;
   unsigned short i,total_len;
-  unsigned char cmd_type = bt_uart_rx_buf[offset + FRAME_TYPE];
+  unsigned char cmd_type = bt_uart_rx_buf[offset + 1];
 
 
   //signed char bt_rssi;
@@ -290,178 +294,30 @@ void data_handle(unsigned short offset)
   long long time_stamp_ms;
 #endif
 
+  CV_LOG("cmd: %d\r\n", cmd_type);
+  
   switch(cmd_type)
   {
-  case HEAT_BEAT_CMD:                                   //Heartbeat package
-    heat_beat_check();
+  case 0x01://
+    dis_limit1 = 1.8f;
+    //
     break;
-    
-  case PRODUCT_INFO_CMD:                                //product information
-    product_info_update();
+  case 0x02://'
+    dis_limit1 = 1.6f;
+    //
     break;
-    
-  case WORK_MODE_CMD:                                   //Query module working mode set by MCU
-    get_mcu_bt_mode();
+  case 0x03://
+    dis_limit1 = 1.4f;
+    //
     break;
-    
-#ifndef BT_CONTROL_SELF_MODE
-  case BT_STATE_CMD:                                  //bt work state
-    bt_work_state = bt_uart_rx_buf[offset + DATA_START];
-    if(bt_work_state==0x01||bt_work_state==0x00)
-    {
-//    	mcu_ota_init_disconnect();
-
-    }
-    bt_uart_write_frame(BT_STATE_CMD,0);
+  case 0x04://
+    dis_limit1 = 1.2f;
+    //
     break;
-
-  case BT_RESET_CMD:                                  //Reset BT (BT returns success)
-    reset_bt_flag = RESET_BT_SUCCESS;
+  case 0x05://
+    dis_limit1 = 1.0f;
+    //
     break;
-#endif
-    
-  case DATA_QUERT_CMD:                                  //dp data handled
-    total_len = bt_uart_rx_buf[offset + LENGTH_HIGH] * 0x100;
-    total_len += bt_uart_rx_buf[offset + LENGTH_LOW];
-    
-    for(i = 0;i < total_len;)
-    {
-      dp_len = bt_uart_rx_buf[offset + DATA_START + i + 2] * 0x100;
-      dp_len += bt_uart_rx_buf[offset + DATA_START + i + 3];
-      //
-      ret = data_point_handle((unsigned char *)bt_uart_rx_buf + offset + DATA_START + i);
-      
-      if(SUCCESS == ret)
-      {
-        //Success tips
-      }
-      else
-      {
-        //Error message
-      }
-      
-      i += (dp_len + 4);
-    }
-    
-    break;
-    
-  case STATE_QUERY_CMD:                                 //Status query
-    all_data_update();                               
-    break;
-    
-#ifdef TUYA_BCI_UART_COMMON_RF_TEST 
-	case TUYA_BCI_UART_COMMON_RF_TEST:
-		if(my_memcmp((unsigned char *)bt_uart_rx_buf + offset + DATA_START+7,"true",4)==0)
-		{
-			bt_rssi = (bt_uart_rx_buf[offset + DATA_START+21]-'0')*10 + (bt_uart_rx_buf[offset + DATA_START+22]-'0');
-			bt_rssi = -bt_rssi;
-			bt_rf_test_result(1,bt_rssi);
-		}
-		else
-		{
-			bt_rf_test_result(0,0);
-		}
-		break;
-#endif
-
-#ifdef TUYA_BCI_UART_COMMON_SEND_STORAGE_TYPE 
-	case TUYA_BCI_UART_COMMON_SEND_STORAGE_TYPE:
-		bt_send_recordable_dp_data_result(bt_uart_rx_buf[offset + DATA_START]);
-		break;
-#endif
-
-#ifdef TUYA_BCI_UART_COMMON_SEND_TIME_SYNC_TYPE 
-	case TUYA_BCI_UART_COMMON_SEND_TIME_SYNC_TYPE:
-		ret = bt_uart_rx_buf[offset + DATA_START];
-		if(ret==0)//Get time succeeded
-		{
-			if(bt_uart_rx_buf[offset + DATA_START+1]==0x00)//Time format 0 :Get 7 bytes of time and time type + 2 bytes of time zone information
-			{
-				bt_time.nYear = bt_uart_rx_buf[offset + DATA_START+2] + 2018;
-
-				bt_time.nMonth = bt_uart_rx_buf[offset + DATA_START+3];
-				bt_time.nDay = bt_uart_rx_buf[offset + DATA_START+4];
-				bt_time.nHour = bt_uart_rx_buf[offset + DATA_START+5];
-				bt_time.nMin = bt_uart_rx_buf[offset + DATA_START+6];
-				bt_time.nSec = bt_uart_rx_buf[offset + DATA_START+7];
-				bt_time.DayIndex = bt_uart_rx_buf[offset + DATA_START+8];
-				time_zone_100 = ((unsigned short)bt_uart_rx_buf[offset + DATA_START+9]<<8)+bt_uart_rx_buf[offset + DATA_START+10];
-			}
-			else if(bt_uart_rx_buf[offset + DATA_START+1]==0x01)//Time format 1: Get 13 bytes of ms-level unix time + 2 bytes of time zone information
-			{
-				my_memcpy(current_timems_string,&bt_uart_rx_buf[offset + DATA_START+2],13);
-				time_stamp_ms = my_atoll(current_timems_string);
-				time_zone_100 = ((unsigned short)bt_uart_rx_buf[offset + DATA_START+15]<8)+bt_uart_rx_buf[offset + DATA_START+16];
-			}
-			else if(bt_uart_rx_buf[offset + DATA_START+1]==0x02)//Time format 2: Get 7 bytes of time and time type + 2 bytes of time zone information
-			{
-				bt_time.nYear = bt_uart_rx_buf[offset + DATA_START+2] + 2000;
-				bt_time.nMonth = bt_uart_rx_buf[offset + DATA_START+3];
-				bt_time.nDay = bt_uart_rx_buf[offset + DATA_START+4];
-				bt_time.nHour = bt_uart_rx_buf[offset + DATA_START+5];
-				bt_time.nMin = bt_uart_rx_buf[offset + DATA_START+6];
-				bt_time.nSec = bt_uart_rx_buf[offset + DATA_START+7];
-				bt_time.DayIndex = bt_uart_rx_buf[offset + DATA_START+8];
-				time_zone_100 = ((unsigned short)bt_uart_rx_buf[offset + DATA_START+9]<<8)+bt_uart_rx_buf[offset + DATA_START+10];
-			}
-			bt_time_sync_result(0,bt_uart_rx_buf[offset + DATA_START+1],bt_time,time_zone_100,time_stamp_ms);
-		}
-		else//Failed to get time
-		{
-			bt_time_sync_result(1,bt_uart_rx_buf[offset + DATA_START+1],bt_time,time_zone_100,time_stamp_ms);
-		}
-		break;
-#endif
-
-#ifdef TUYA_BCI_UART_COMMON_MODIFY_ADV_INTERVAL
-	case TUYA_BCI_UART_COMMON_MODIFY_ADV_INTERVAL:
-		bt_modify_adv_interval_result(bt_uart_rx_buf[offset + DATA_START]);
-		break;
-#endif
-#ifdef TUYA_BCI_UART_COMMON_TURNOFF_SYSTEM_TIME
-	case TUYA_BCI_UART_COMMON_TURNOFF_SYSTEM_TIME:
-	  bt_close_timer_result(bt_uart_rx_buf[offset + DATA_START]);
-	  break;
-#endif
-#ifdef TUYA_BCI_UART_COMMON_ENANBLE_LOWER_POWER
-	case TUYA_BCI_UART_COMMON_ENANBLE_LOWER_POWER:
-		bt_enable_lowpoer_result(bt_uart_rx_buf[offset + DATA_START]);
-		break;
-#endif
-#ifdef TUYA_BCI_UART_COMMON_SEND_ONE_TIME_PASSWORD_TOKEN
-	case TUYA_BCI_UART_COMMON_SEND_ONE_TIME_PASSWORD_TOKEN:
-	  bt_send_one_time_password_token_result(bt_uart_rx_buf[offset + DATA_START]);
-	  break;
-#endif
-#ifdef TUYA_BCI_UART_COMMON_ACTIVE_DISCONNECT
-	case TUYA_BCI_UART_COMMON_ACTIVE_DISCONNECT:
-		bt_disconnect_result(bt_uart_rx_buf[offset + DATA_START]);
-		break;
-#endif
-#ifdef TUYA_BCI_UART_COMMON_QUERY_MCU_VERSION
-	case TUYA_BCI_UART_COMMON_QUERY_MCU_VERSION:  
-	  length = set_bt_uart_buffer(length,(unsigned char *)MCU_APP_VER_NUM,3);
-	  length = set_bt_uart_buffer(length,(unsigned char *)MCU_HARD_VER_NUM,3);
-	  bt_uart_write_frame(TUYA_BCI_UART_COMMON_QUERY_MCU_VERSION,length);
-	  break;
-#endif
-#ifdef TUYA_BCI_UART_COMMON_FACTOR_RESET_NOTIFY
-	case TUYA_BCI_UART_COMMON_FACTOR_RESET_NOTIFY:	
-		bt_factor_reset_notify();
-		break;
-#endif
-#ifdef SUPPORT_MCU_FIRM_UPDATE
-	  case TUYA_BCI_UART_COMMON_MCU_OTA_REQUEST:
-	  case TUYA_BCI_UART_COMMON_MCU_OTA_FILE_INFO:
-	  case TUYA_BCI_UART_COMMON_MCU_OTA_FILE_OFFSET:
-	  case TUYA_BCI_UART_COMMON_MCU_OTA_DATA:
-	  case TUYA_BCI_UART_COMMON_MCU_OTA_END:
-		total_len = bt_uart_rx_buf[offset + LENGTH_HIGH] * 0x100;
-		total_len += bt_uart_rx_buf[offset + LENGTH_LOW];
-		mcu_ota_proc(cmd_type,&bt_uart_rx_buf[offset + DATA_START],total_len);
-	  	break;
-#endif   
-
   default:
     break;
   }

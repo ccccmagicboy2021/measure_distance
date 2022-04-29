@@ -8,6 +8,7 @@
 extern int state;
 extern int next_state;
 extern float distance_f;
+float dis_limit1 = 1.8f;
 extern float speed_f;
 extern uint32_t mag_f;
 
@@ -73,7 +74,7 @@ void leave_s1(void)
 
 void idle_process(void)
 {    
-    if (TH_1 >= distance_f)
+    if (dis_limit1 >= distance_f)
     {
         //if (0 < speed_f)
         {

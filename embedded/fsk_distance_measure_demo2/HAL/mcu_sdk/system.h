@@ -120,7 +120,7 @@ typedef struct
 
 //=============================================================================
 #define         VERSION                 0x00                                            //Protocol version number
-#define         PROTOCOL_HEAD           0x07                                            //Fixed protocol header length
+#define         PROTOCOL_HEAD           0x05                                            //Fixed protocol header length
 #define         FIRM_UPDATA_SIZE        200                                            //Upgrade package size
 #define         FRAME_FIRST             0x55
 #define         FRAME_SECOND            0xaa

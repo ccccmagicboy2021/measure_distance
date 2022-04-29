@@ -41,6 +41,9 @@ description: Initial version
 
 #include "bluetooth.h"
 #include <ctype.h>
+
+#include "sys.h"
+
 /*****************************************************************************
 Function name: hex_to_bcd
 Function description: hex to bcd
@@ -571,27 +574,26 @@ static uint8_t mcu_common_uart_data_unpack(uint8_t data)
 {
     uint8_t ret = FALSE;
 
-    bt_uart_rx_buf_temp[0] = bt_uart_rx_buf_temp[1];
-    bt_uart_rx_buf_temp[1] = bt_uart_rx_buf_temp[2];
-    bt_uart_rx_buf_temp[2] = data;
+    bt_uart_rx_buf_temp[0] = data;
 
-    if((bt_uart_rx_buf_temp[0]==0x55)&&(bt_uart_rx_buf_temp[1]==0xAA)&&(bt_uart_rx_buf_temp[2]==0x00))
+    if(bt_uart_rx_buf_temp[0] == 0xAA)  //only one byte header
     {
-        my_memset(bt_uart_rx_buf,0,sizeof(bt_uart_rx_buf));
-        my_memcpy(bt_uart_rx_buf,bt_uart_rx_buf_temp,3);
-        my_memset(bt_uart_rx_buf_temp,0,3);
-        UART_RX_Count = 3;
+        my_memset(bt_uart_rx_buf,0,sizeof(bt_uart_rx_buf)); //clear buffer
+        my_memcpy(bt_uart_rx_buf,bt_uart_rx_buf_temp,1);    //copy only one byte: bt_uart_rx_buf[0]
+        my_memset(bt_uart_rx_buf_temp,0,3);                 //clear 3bytes temp buffer
+        UART_RX_Count = 1;                                  //one byte bypass
         current_uart_rev_state_type = MCU_UART_REV_STATE_FOUND_HEAD;
         uart_data_len = 0;
         return ret;
     }
+    
     switch(current_uart_rev_state_type)
     {
     case MCU_UART_REV_STATE_FOUND_NULL:
         break;
     case MCU_UART_REV_STATE_FOUND_HEAD:
         bt_uart_rx_buf[UART_RX_Count++] = data;
-        current_uart_rev_state_type = MCU_UART_REV_STATE_FOUND_CMD;
+        current_uart_rev_state_type = MCU_UART_REV_STATE_FOUND_CMD;//find 0x01 0x02 0x03
         break;
     case MCU_UART_REV_STATE_FOUND_CMD:
         bt_uart_rx_buf[UART_RX_Count++] = data;
@@ -600,17 +602,13 @@ static uint8_t mcu_common_uart_data_unpack(uint8_t data)
     case MCU_UART_REV_STATE_FOUND_LEN_H:
         bt_uart_rx_buf[UART_RX_Count++] = data;
         uart_data_len = (bt_uart_rx_buf[UART_RX_Count-2]<<8)|bt_uart_rx_buf[UART_RX_Count-1];
-        if(uart_data_len>UART_RX_DATA_LEN_MAX)
+        if(uart_data_len != 0)
         {
             my_memset(bt_uart_rx_buf_temp,0,3);
             my_memset(bt_uart_rx_buf,0,sizeof(bt_uart_rx_buf));
             UART_RX_Count = 0;
             current_uart_rev_state_type = MCU_UART_REV_STATE_FOUND_NULL;
             uart_data_len = 0;
-        }
-        else if(uart_data_len>0)
-        {
-            current_uart_rev_state_type = MCU_UART_REV_STATE_FOUND_LEN_L;
         }
         else
         {
@@ -661,7 +659,8 @@ void bt_uart_service(void)
     if(mcu_common_uart_data_unpack(Queue_Read_Byte()))
     {
 		data_handle(0);
-		rx_value_len = bt_uart_rx_buf[LENGTH_HIGH] * 0x100 + bt_uart_rx_buf[LENGTH_LOW] + PROTOCOL_HEAD;
+		rx_value_len = bt_uart_rx_buf[3] * 0x100 + bt_uart_rx_buf[2] + PROTOCOL_HEAD;
+        CV_LOG("rx: %d bytes\r\n", rx_value_len);
 		my_memset(bt_uart_rx_buf_temp,0,3);
         my_memset(bt_uart_rx_buf,0,sizeof(bt_uart_rx_buf));
         UART_RX_Count = 0;
