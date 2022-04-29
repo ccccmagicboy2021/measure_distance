@@ -1,0 +1,12 @@
+usb
+si 1
+speed 25000
+device HC32F46x
+r
+h
+loadfile .\distance_measure.hex
+r
+g
+qc
+
+
