@@ -46,6 +46,8 @@ extern void tick_init(void);
 
 extern uint32_t diff_tick;
 
+extern void Timera1_init(void);
+
 void rtt_init(void)
 {
     //must align to dword
@@ -73,6 +75,7 @@ int32_t main(void)
     AdcConfig();
 
     Timera_Config();
+    Timera1_init();
 
     gpio_init();
 
