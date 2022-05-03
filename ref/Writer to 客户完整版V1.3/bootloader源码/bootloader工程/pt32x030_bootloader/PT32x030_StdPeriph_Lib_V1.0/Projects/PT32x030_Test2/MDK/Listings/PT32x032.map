@@ -1,0 +1,1186 @@
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+==============================================================================
+
+Section Cross References
+
+    startup_pt32x030.o(RESET) refers to startup_pt32x030.o(STACK) for __initial_sp
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.NMI_Handler) for NMI_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.HardFault_Handler) for HardFault_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.SVC_Handler) for SVC_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.PendSV_Handler) for PendSV_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.SysTick_Handler) for SysTick_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.SYSWDG_Handler) for SYSWDG_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.CLK_FAIL_Handler) for CLK_FAIL_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.FLASH_Handler) for FLASH_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.PA_Handler) for PA_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.PB_Handler) for PB_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.PC_Handler) for PC_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.PF_Handler) for PF_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.Comparator0_Handler) for Comparator0_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.Comparator1_Handler) for Comparator1_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.Comparator2_Handler) for Comparator2_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.ADC_Handler) for ADC_Handler
+    startup_pt32x030.o(RESET) refers to pwm_test2.o(i.TIMER1_Handler) for TIMER1_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.TIMER4_Handler) for TIMER4_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.TIMER3_Handler) for TIMER3_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.TIMER2_Handler) for TIMER2_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.I2C0_Handler) for I2C0_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.I2C1_Handler) for I2C1_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.SPI0_Handler) for SPI0_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.SPI1_Handler) for SPI1_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.UART0_Handler) for UART0_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.UART1_Handler) for UART1_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.TIMER5_Handler) for TIMER5_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.TIMER6_Handler) for TIMER6_Handler
+    startup_pt32x030.o(RESET) refers to pt32x030_it.o(i.TIMER7_Handler) for TIMER7_Handler
+    startup_pt32x030.o(RESET) refers to system_pt32x030.o(i.SystemInit) for SystemInit
+    startup_pt32x030.o(RESET) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    system_pt32x030.o(i.SystemInit) refers to system_pt32x030.o(i.clk_source_config) for clk_source_config
+    system_pt32x030.o(i.SystemInit) refers to system_pt32x030.o(i.clk_pll_config) for clk_pll_config
+    system_pt32x030.o(i.SystemInit) refers to system_pt32x030.o(i.clk_hsclk_set) for clk_hsclk_set
+    system_pt32x030.o(i.SystemInit) refers to system_pt32x030.o(i.clk_mco_config) for clk_mco_config
+    system_pt32x030.o(i.SystemInit) refers to system_pt32x030.o(.data) for rest_flag
+    pt32x030_gpio.o(i.GPIO_AnalogFunctionConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_gpio.o(i.GPIO_AnalogFunctionConfig) refers to pt32x030_gpio.o(.conststring) for .conststring
+    pt32x030_gpio.o(i.GPIO_ClearFlag) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_gpio.o(i.GPIO_ClearFlag) refers to pt32x030_gpio.o(.conststring) for .conststring
+    pt32x030_gpio.o(i.GPIO_ClearITPendingBit) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_gpio.o(i.GPIO_ClearITPendingBit) refers to pt32x030_gpio.o(.conststring) for .conststring
+    pt32x030_gpio.o(i.GPIO_ClearPinAF) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_gpio.o(i.GPIO_ClearPinAF) refers to pt32x030_gpio.o(.conststring) for .conststring
+    pt32x030_gpio.o(i.GPIO_GetFlagStatus) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_gpio.o(i.GPIO_GetFlagStatus) refers to pt32x030_gpio.o(.conststring) for .conststring
+    pt32x030_gpio.o(i.GPIO_GetITStatus) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_gpio.o(i.GPIO_GetITStatus) refers to pt32x030_gpio.o(.conststring) for .conststring
+    pt32x030_gpio.o(i.GPIO_ITConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_gpio.o(i.GPIO_ITConfig) refers to pt32x030_gpio.o(.conststring) for .conststring
+    pt32x030_gpio.o(i.GPIO_Init) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_gpio.o(i.GPIO_Init) refers to pt32x030_gpio.o(.conststring) for .conststring
+    pt32x030_gpio.o(i.GPIO_PinAFConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_gpio.o(i.GPIO_PinAFConfig) refers to pt32x030_gpio.o(.conststring) for .conststring
+    pt32x030_gpio.o(i.GPIO_PullDownConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_gpio.o(i.GPIO_PullDownConfig) refers to pt32x030_gpio.o(.conststring) for .conststring
+    pt32x030_gpio.o(i.GPIO_PullUpConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_gpio.o(i.GPIO_PullUpConfig) refers to pt32x030_gpio.o(.conststring) for .conststring
+    pt32x030_gpio.o(i.GPIO_ReadInputData) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_gpio.o(i.GPIO_ReadInputData) refers to pt32x030_gpio.o(.conststring) for .conststring
+    pt32x030_gpio.o(i.GPIO_ReadInputDataBit) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_gpio.o(i.GPIO_ReadInputDataBit) refers to pt32x030_gpio.o(.conststring) for .conststring
+    pt32x030_gpio.o(i.GPIO_ReadOutputData) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_gpio.o(i.GPIO_ReadOutputData) refers to pt32x030_gpio.o(.conststring) for .conststring
+    pt32x030_gpio.o(i.GPIO_ReadOutputDataBit) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_gpio.o(i.GPIO_ReadOutputDataBit) refers to pt32x030_gpio.o(.conststring) for .conststring
+    pt32x030_gpio.o(i.GPIO_ResetBits) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_gpio.o(i.GPIO_ResetBits) refers to pt32x030_gpio.o(.conststring) for .conststring
+    pt32x030_gpio.o(i.GPIO_ReverseBits) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_gpio.o(i.GPIO_ReverseBits) refers to pt32x030_gpio.o(.conststring) for .conststring
+    pt32x030_gpio.o(i.GPIO_SetBits) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_gpio.o(i.GPIO_SetBits) refers to pt32x030_gpio.o(.conststring) for .conststring
+    pt32x030_gpio.o(i.GPIO_TriTypeConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_gpio.o(i.GPIO_TriTypeConfig) refers to pt32x030_gpio.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    pt32x030_gpio.o(i.GPIO_TriTypeConfig) refers to pt32x030_gpio.o(.conststring) for .conststring
+    pt32x030_gpio.o(i.GPIO_Write) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_gpio.o(i.GPIO_Write) refers to pt32x030_gpio.o(.conststring) for .conststring
+    pt32x030_gpio.o(i.GPIO_WriteBit) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_gpio.o(i.GPIO_WriteBit) refers to pt32x030_gpio.o(.conststring) for .conststring
+    pt32x030_misc.o(i.NVIC_Init) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_misc.o(i.NVIC_Init) refers to pt32x030_misc.o(.conststring) for .conststring
+    pt32x030_misc.o(i.NVIC_SystemLPConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_misc.o(i.NVIC_SystemLPConfig) refers to pt32x030_misc.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PMW_TimeBaseInit) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PMW_TimeBaseInit) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_ADC_Config) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_ADC_Config) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_BKIS_Config) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_BKIS_Config) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_BKI_LevelConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_BKI_LevelConfig) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_BK_SOURCE) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_BK_SOURCE) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_BreakInput_Cmd) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_BreakInput_Cmd) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_CHN_Config) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_CHN_Config) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_CH_Config) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_CH_Config) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_CapITConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_CapITConfig) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_CaptureDIV) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_CaptureDIV) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_CaptureFilter) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_CaptureFilter) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_CaptureSCDIV) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_CaptureSCDIV) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_CaptureSource) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_CaptureSource) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_Channel_Clear) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_Channel_Clear) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_ClearFlag) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_ClearFlag) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_ClockSourceConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_ClockSourceConfig) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_Cmd) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_Cmd) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_CounterModeConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_CounterModeConfig) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_DEBUG_PENDING) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_DEBUG_PENDING) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_DMAConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_DMAConfig) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_DT_Config) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_DT_Config) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_FE_CaptureConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_FE_CaptureConfig) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_GetCaptureCounter) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_GetCaptureCounter) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_GetCaptureEdge) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_GetCaptureEdge) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_GetCompare) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_GetCompare) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_GetCounter) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_GetCounter) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_GetFlagStatus) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_GetFlagStatus) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_GetINT_RepeatTimes) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_GetINT_RepeatTimes) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_GetPrescaler) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_GetPrescaler) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_GetPrescalerCnt) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_GetPrescalerCnt) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_IDLE_Config) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_IDLE_Config) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_INT_RepeatTimes) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_INT_RepeatTimes) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_IntConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_IntConfig) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_OD_Config) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_OD_Config) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_OutputInit) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_OutputInit) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_POL_Config) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_POL_Config) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_PRELOAD_Config) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_PRELOAD_Config) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_PrescalerConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_PrescalerConfig) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_RE_CaptureConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_RE_CaptureConfig) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_RST_CaptureConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_RST_CaptureConfig) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_SMCR_EXCLK2) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_SMCR_EXCLK2) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_SMCR_ITConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_SMCR_ITConfig) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_SMCR_Init) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_SMCR_Init) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_SYNC_Config) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_SYNC_Config) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_SetCompare) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_SetCompare) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_SetCounter) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_SetCounter) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_SetCounterReload) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_SetCounterReload) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_Software_BK) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_Software_BK) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_TI1XOR_Config) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_TI1XOR_Config) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_TRGO_SEL) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_TRGO_SEL) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWM_UpdateCmd) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWM_UpdateCmd) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWMn_IDLE_Config) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWMn_IDLE_Config) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwm.o(i.PWMn_POL_Config) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwm.o(i.PWMn_POL_Config) refers to pt32x030_pwm.o(.conststring) for .conststring
+    pt32x030_pwr.o(i.PWR_EnterSTANDBYMode) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwr.o(i.PWR_EnterSTANDBYMode) refers to pt32x030_pwr.o(.conststring) for .conststring
+    pt32x030_pwr.o(i.PWR_EnterSleepMode) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwr.o(i.PWR_EnterSleepMode) refers to pt32x030_pwr.o(.conststring) for .conststring
+    pt32x030_pwr.o(i.PWR_LVDLevelConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwr.o(i.PWR_LVDLevelConfig) refers to pt32x030_pwr.o(.conststring) for .conststring
+    pt32x030_pwr.o(i.PWR_PVDCmd) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwr.o(i.PWR_PVDCmd) refers to pt32x030_pwr.o(.conststring) for .conststring
+    pt32x030_pwr.o(i.PWR_PVDLevelConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_pwr.o(i.PWR_PVDLevelConfig) refers to pt32x030_pwr.o(.conststring) for .conststring
+    pt32x030_sys.o(i.IAP_Config) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_sys.o(i.IAP_Config) refers to pt32x030_sys.o(.conststring) for .conststring
+    pt32x030_sys.o(i.System_ClearResetFlag) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_sys.o(i.System_ClearResetFlag) refers to pt32x030_sys.o(.conststring) for .conststring
+    pt32x030_sys.o(i.System_GetClocksFreq) refers to uidiv.o(.text) for __aeabi_uidivmod
+    pt32x030_sys.o(i.System_GetResetFlagStatus) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_sys.o(i.System_GetResetFlagStatus) refers to pt32x030_sys.o(.conststring) for .conststring
+    pt32x030_sys.o(i.System_RestConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_sys.o(i.System_RestConfig) refers to pt32x030_sys.o(.conststring) for .conststring
+    pt32x030_uart.o(i.UART_ClearFlag) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_uart.o(i.UART_ClearFlag) refers to pt32x030_uart.o(.conststring) for .conststring
+    pt32x030_uart.o(i.UART_Cmd) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_uart.o(i.UART_Cmd) refers to pt32x030_uart.o(.conststring) for .conststring
+    pt32x030_uart.o(i.UART_GetFlagStatus) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_uart.o(i.UART_GetFlagStatus) refers to pt32x030_uart.o(.conststring) for .conststring
+    pt32x030_uart.o(i.UART_GetITStatus) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_uart.o(i.UART_GetITStatus) refers to pt32x030_uart.o(.conststring) for .conststring
+    pt32x030_uart.o(i.UART_HalfDuplexCmd) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_uart.o(i.UART_HalfDuplexCmd) refers to pt32x030_uart.o(.conststring) for .conststring
+    pt32x030_uart.o(i.UART_HalfDuplex_DirectionModeCmd) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_uart.o(i.UART_HalfDuplex_DirectionModeCmd) refers to pt32x030_uart.o(.conststring) for .conststring
+    pt32x030_uart.o(i.UART_ITConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_uart.o(i.UART_ITConfig) refers to pt32x030_uart.o(.conststring) for .conststring
+    pt32x030_uart.o(i.UART_Init) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_uart.o(i.UART_Init) refers to pt32x030_sys.o(i.System_GetClocksFreq) for System_GetClocksFreq
+    pt32x030_uart.o(i.UART_Init) refers to uidiv.o(.text) for __aeabi_uidivmod
+    pt32x030_uart.o(i.UART_Init) refers to pt32x030_uart.o(.conststring) for .conststring
+    pt32x030_uart.o(i.UART_InvPinCmd) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_uart.o(i.UART_InvPinCmd) refers to pt32x030_uart.o(.conststring) for .conststring
+    pt32x030_uart.o(i.UART_IrDACmd) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_uart.o(i.UART_IrDACmd) refers to pt32x030_uart.o(.conststring) for .conststring
+    pt32x030_uart.o(i.UART_IrDAInvPinCmd) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_uart.o(i.UART_IrDAInvPinCmd) refers to pt32x030_uart.o(.conststring) for .conststring
+    pt32x030_uart.o(i.UART_ReceiveData) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_uart.o(i.UART_ReceiveData) refers to pt32x030_uart.o(.conststring) for .conststring
+    pt32x030_uart.o(i.UART_ReceiveData_Timeout) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_uart.o(i.UART_ReceiveData_Timeout) refers to pt32x030_uart.o(i.UART_SetReceiverTimeOut) for UART_SetReceiverTimeOut
+    pt32x030_uart.o(i.UART_ReceiveData_Timeout) refers to pt32x030_uart.o(.conststring) for .conststring
+    pt32x030_uart.o(i.UART_RxConfig) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_uart.o(i.UART_RxConfig) refers to pt32x030_uart.o(.conststring) for .conststring
+    pt32x030_uart.o(i.UART_SendData) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_uart.o(i.UART_SendData) refers to pt32x030_uart.o(.conststring) for .conststring
+    pt32x030_uart.o(i.UART_SetDutyCycle) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_uart.o(i.UART_SetDutyCycle) refers to pt32x030_uart.o(.conststring) for .conststring
+    pt32x030_uart.o(i.UART_SetGuardTime) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_uart.o(i.UART_SetGuardTime) refers to pt32x030_uart.o(.conststring) for .conststring
+    pt32x030_uart.o(i.UART_SetReceiverTimeOut) refers to pwm_test2.o(i.assert_failed) for assert_failed
+    pt32x030_uart.o(i.UART_SetReceiverTimeOut) refers to pt32x030_uart.o(.conststring) for .conststring
+    pt32x030_uart.o(i.UART_StringSend) refers to pt32x030_uart.o(i.UART_SendData) for UART_SendData
+    pt32x030_it.o(i.SysTick_Handler) refers to pt32x030_it.o(.data) for g_Tim
+    pwm_test2.o(i.UART_Config) refers to pt32x030_uart.o(i.UART_Init) for UART_Init
+    pwm_test2.o(i.UART_Config) refers to pt32x030_uart.o(i.UART_Cmd) for UART_Cmd
+    pwm_test2.o(i.assert_failed) refers to printf3.o(i.__0printf$3) for __2printf
+    pwm_test2.o(i.main) refers to pwm_test2.o(i.UART_Driver) for UART_Driver
+    pwm_test2.o(i.main) refers to common.o(i.main_menu) for main_menu
+    common.o(i.GetKey) refers to common.o(i.SerialKeyPressed) for SerialKeyPressed
+    common.o(i.GetKey) refers to pt32x030_it.o(.data) for g_Tim
+    common.o(i.Receive_Byte) refers to common.o(i.SerialKeyPressed) for SerialKeyPressed
+    common.o(i.Receive_Packet) refers to common.o(i.Receive_Byte) for Receive_Byte
+    common.o(i.Send_Byte) refers to pt32x030_serial.o(i.SERIAL_PutChar) for SERIAL_PutChar
+    common.o(i.SerialDownload) refers to common.o(i.Ymodem_Receive) for Ymodem_Receive
+    common.o(i.SerialDownload) refers to common.o(.bss) for tab_1024
+    common.o(i.SerialPutString) refers to pt32x030_serial.o(i.SERIAL_PutChar) for SERIAL_PutChar
+    common.o(i.Ymodem_Receive) refers to common.o(i.Receive_Packet) for Receive_Packet
+    common.o(i.Ymodem_Receive) refers to common.o(i.Send_Byte) for Send_Byte
+    common.o(i.Ymodem_Receive) refers to common.o(i.FLASH_PagesMask) for FLASH_PagesMask
+    common.o(i.Ymodem_Receive) refers to memcpya.o(.text) for __aeabi_memcpy
+    common.o(i.Ymodem_Receive) refers to common.o(.data) for FlashDestination
+    common.o(i.Ymodem_Receive) refers to common.o(.bss) for file_name
+    common.o(i.main_menu) refers to common.o(i.SerialPutString) for SerialPutString
+    common.o(i.main_menu) refers to common.o(i.GetKey) for GetKey
+    common.o(i.main_menu) refers to common.o(i.Send_Byte) for Send_Byte
+    common.o(i.main_menu) refers to common.o(i.SerialDownload) for SerialDownload
+    common.o(i.main_menu) refers to pt32x030_it.o(.data) for g_Tim
+    common.o(i.main_menu) refers to common.o(.data) for uStatus
+    pt32x030_retarget.o(i.fgetc) refers to pt32x030_serial.o(i.SERIAL_GetChar) for SERIAL_GetChar
+    pt32x030_retarget.o(i.fputc) refers to pt32x030_serial.o(i.SERIAL_PutChar) for SERIAL_PutChar
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    printfb.o(i.__0fprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0fprintf$bare) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0printf$bare) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to pt32x030_retarget.o(.data) for __stdout
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printfb.o(i.__0vfprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vfprintf$bare) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vprintf$bare) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to pt32x030_retarget.o(.data) for __stdout
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printf0.o(i.__0fprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0fprintf$0) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0printf$0) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to pt32x030_retarget.o(.data) for __stdout
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf0.o(i.__0vfprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vfprintf$0) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vprintf$0) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to pt32x030_retarget.o(.data) for __stdout
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf1.o(i.__0fprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0fprintf$1) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0printf$1) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to pt32x030_retarget.o(.data) for __stdout
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i.__0vfprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vfprintf$1) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vprintf$1) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to pt32x030_retarget.o(.data) for __stdout
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf2.o(i.__0fprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0fprintf$2) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0printf$2) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to pt32x030_retarget.o(.data) for __stdout
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf2.o(i.__0vfprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vfprintf$2) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vprintf$2) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to pt32x030_retarget.o(.data) for __stdout
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf3.o(i.__0fprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0fprintf$3) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0printf$3) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to pt32x030_retarget.o(.data) for __stdout
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i.__0vfprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vfprintf$3) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vprintf$3) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to pt32x030_retarget.o(.data) for __stdout
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf4.o(i.__0fprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0fprintf$4) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0printf$4) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to pt32x030_retarget.o(.data) for __stdout
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i.__0vfprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vfprintf$4) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vprintf$4) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to pt32x030_retarget.o(.data) for __stdout
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf5.o(i.__0fprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0fprintf$5) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0printf$5) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to pt32x030_retarget.o(.data) for __stdout
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i.__0vfprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vfprintf$5) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vprintf$5) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to pt32x030_retarget.o(.data) for __stdout
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf6.o(i.__0fprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0fprintf$6) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0printf$6) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to pt32x030_retarget.o(.data) for __stdout
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i.__0vfprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vfprintf$6) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vprintf$6) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to pt32x030_retarget.o(.data) for __stdout
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_pre_padding) for _printf_pre_padding
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_post_padding) for _printf_post_padding
+    printf6.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf7.o(i.__0fprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0fprintf$7) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0printf$7) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to pt32x030_retarget.o(.data) for __stdout
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i.__0vfprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vfprintf$7) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vprintf$7) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to pt32x030_retarget.o(.data) for __stdout
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_pre_padding) for _printf_pre_padding
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_post_padding) for _printf_post_padding
+    printf7.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf8.o(i.__0fprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0fprintf$8) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0printf$8) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to pt32x030_retarget.o(.data) for __stdout
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i.__0vfprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vfprintf$8) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vprintf$8) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to pt32x030_retarget.o(.data) for __stdout
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_pre_padding) for _printf_pre_padding
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_post_padding) for _printf_post_padding
+    printf8.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i.__0fprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0fprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0fprintf) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printfa.o(i.__0printf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0printf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0printf) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printfa.o(i.__0printf) refers to pt32x030_retarget.o(.data) for __stdout
+    printfa.o(i.__0snprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0snprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0snprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0sprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0sprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0sprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i.__0vfprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vfprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vfprintf) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printfa.o(i.__0vprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vprintf) refers to pt32x030_retarget.o(i.fputc) for fputc
+    printfa.o(i.__0vprintf) refers to pt32x030_retarget.o(.data) for __stdout
+    printfa.o(i.__0vsnprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0vsprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i._fp_digits) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._fp_digits) refers to dmul.o(.text) for __aeabi_dmul
+    printfa.o(i._fp_digits) refers to ddiv.o(.text) for __aeabi_ddiv
+    printfa.o(i._fp_digits) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    printfa.o(i._fp_digits) refers to dadd.o(.text) for __aeabi_dadd
+    printfa.o(i._fp_digits) refers to dfixul.o(.text) for __aeabi_d2ulz
+    printfa.o(i._fp_digits) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_pre_padding) for _printf_pre_padding
+    printfa.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i._printf_core) refers to printfa.o(i._fp_digits) for _fp_digits
+    printfa.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printfa.o(i._printf_post_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_pre_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._snputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._sputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_pt32x030.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_pt32x030.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to pwm_test2.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to pwm_test2.o(i.main) for main
+    uldiv.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    uldiv.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dfixul.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixul.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    depilogue.o(.text) refers to depilogue.o(i.__ARM_clz) for __ARM_clz
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup_pt32x030.o(HEAP), (0 bytes).
+    Removing system_pt32x030.o(.rev16_text), (4 bytes).
+    Removing system_pt32x030.o(.revsh_text), (4 bytes).
+    Removing system_pt32x030.o(i.Wait_ClockReady), (26 bytes).
+    Removing system_pt32x030.o(i.clk_get_sysclk), (52 bytes).
+    Removing pt32x030_ana.o(.rev16_text), (4 bytes).
+    Removing pt32x030_ana.o(.revsh_text), (4 bytes).
+    Removing pt32x030_gpio.o(.rev16_text), (4 bytes).
+    Removing pt32x030_gpio.o(.revsh_text), (4 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_AnalogFunctionConfig), (96 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_ClearFlag), (80 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_ClearITPendingBit), (80 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_ClearPinAF), (152 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_GetFlagStatus), (160 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_GetITStatus), (180 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_ITConfig), (112 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_Init), (216 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_PinAFConfig), (248 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_PullDownConfig), (104 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_PullUpConfig), (104 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_ReadInputData), (56 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_ReadInputDataBit), (164 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_ReadOutputData), (56 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_ReadOutputDataBit), (164 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_ResetBits), (76 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_ReverseBits), (76 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_SetBits), (76 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_StructInit), (16 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_TriTypeConfig), (236 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_Write), (56 bytes).
+    Removing pt32x030_gpio.o(i.GPIO_WriteBit), (188 bytes).
+    Removing pt32x030_gpio.o(.conststring), (69 bytes).
+    Removing pt32x030_misc.o(.rev16_text), (4 bytes).
+    Removing pt32x030_misc.o(.revsh_text), (4 bytes).
+    Removing pt32x030_misc.o(i.NVIC_Init), (156 bytes).
+    Removing pt32x030_misc.o(i.NVIC_SystemLPConfig), (84 bytes).
+    Removing pt32x030_misc.o(.conststring), (69 bytes).
+    Removing pt32x030_pwm.o(.rev16_text), (4 bytes).
+    Removing pt32x030_pwm.o(.revsh_text), (4 bytes).
+    Removing pt32x030_pwm.o(i.PMW_TimeBaseInit), (196 bytes).
+    Removing pt32x030_pwm.o(i.PWM_ADC_Config), (148 bytes).
+    Removing pt32x030_pwm.o(i.PWM_BKIS_Config), (80 bytes).
+    Removing pt32x030_pwm.o(i.PWM_BKI_LevelConfig), (80 bytes).
+    Removing pt32x030_pwm.o(i.PWM_BK_SOURCE), (124 bytes).
+    Removing pt32x030_pwm.o(i.PWM_BreakInput_Cmd), (80 bytes).
+    Removing pt32x030_pwm.o(i.PWM_CHN_Config), (116 bytes).
+    Removing pt32x030_pwm.o(i.PWM_CH_Config), (116 bytes).
+    Removing pt32x030_pwm.o(i.PWM_CapITConfig), (168 bytes).
+    Removing pt32x030_pwm.o(i.PWM_CaptureDIV), (120 bytes).
+    Removing pt32x030_pwm.o(i.PWM_CaptureFilter), (132 bytes).
+    Removing pt32x030_pwm.o(i.PWM_CaptureSCDIV), (92 bytes).
+    Removing pt32x030_pwm.o(i.PWM_CaptureSource), (160 bytes).
+    Removing pt32x030_pwm.o(i.PWM_Channel_Clear), (120 bytes).
+    Removing pt32x030_pwm.o(i.PWM_ClearFlag), (60 bytes).
+    Removing pt32x030_pwm.o(i.PWM_ClockSourceConfig), (76 bytes).
+    Removing pt32x030_pwm.o(i.PWM_Cmd), (76 bytes).
+    Removing pt32x030_pwm.o(i.PWM_CounterModeConfig), (108 bytes).
+    Removing pt32x030_pwm.o(i.PWM_DEBUG_PENDING), (76 bytes).
+    Removing pt32x030_pwm.o(i.PWM_DMAConfig), (164 bytes).
+    Removing pt32x030_pwm.o(i.PWM_DT_Config), (64 bytes).
+    Removing pt32x030_pwm.o(i.PWM_FE_CaptureConfig), (120 bytes).
+    Removing pt32x030_pwm.o(i.PWM_GetCaptureCounter), (100 bytes).
+    Removing pt32x030_pwm.o(i.PWM_GetCaptureEdge), (100 bytes).
+    Removing pt32x030_pwm.o(i.PWM_GetCompare), (100 bytes).
+    Removing pt32x030_pwm.o(i.PWM_GetCounter), (36 bytes).
+    Removing pt32x030_pwm.o(i.PWM_GetFlagStatus), (144 bytes).
+    Removing pt32x030_pwm.o(i.PWM_GetINT_RepeatTimes), (36 bytes).
+    Removing pt32x030_pwm.o(i.PWM_GetPrescaler), (36 bytes).
+    Removing pt32x030_pwm.o(i.PWM_GetPrescalerCnt), (36 bytes).
+    Removing pt32x030_pwm.o(i.PWM_IDLE_Config), (116 bytes).
+    Removing pt32x030_pwm.o(i.PWM_INT_RepeatTimes), (52 bytes).
+    Removing pt32x030_pwm.o(i.PWM_IntConfig), (220 bytes).
+    Removing pt32x030_pwm.o(i.PWM_OD_Config), (136 bytes).
+    Removing pt32x030_pwm.o(i.PWM_OutputInit), (392 bytes).
+    Removing pt32x030_pwm.o(i.PWM_POL_Config), (116 bytes).
+    Removing pt32x030_pwm.o(i.PWM_PRELOAD_Config), (84 bytes).
+    Removing pt32x030_pwm.o(i.PWM_PrescalerConfig), (60 bytes).
+    Removing pt32x030_pwm.o(i.PWM_RE_CaptureConfig), (120 bytes).
+    Removing pt32x030_pwm.o(i.PWM_RST_CaptureConfig), (120 bytes).
+    Removing pt32x030_pwm.o(i.PWM_SMCR_EXCLK2), (76 bytes).
+    Removing pt32x030_pwm.o(i.PWM_SMCR_ITConfig), (72 bytes).
+    Removing pt32x030_pwm.o(i.PWM_SMCR_Init), (412 bytes).
+    Removing pt32x030_pwm.o(i.PWM_SYNC_Config), (76 bytes).
+    Removing pt32x030_pwm.o(i.PWM_SetCompare), (112 bytes).
+    Removing pt32x030_pwm.o(i.PWM_SetCounter), (60 bytes).
+    Removing pt32x030_pwm.o(i.PWM_SetCounterReload), (60 bytes).
+    Removing pt32x030_pwm.o(i.PWM_Software_BK), (80 bytes).
+    Removing pt32x030_pwm.o(i.PWM_TI1XOR_Config), (92 bytes).
+    Removing pt32x030_pwm.o(i.PWM_TRGO_SEL), (144 bytes).
+    Removing pt32x030_pwm.o(i.PWM_TimeBaseStructInit), (18 bytes).
+    Removing pt32x030_pwm.o(i.PWM_UpdateCmd), (40 bytes).
+    Removing pt32x030_pwm.o(i.PWMn_IDLE_Config), (116 bytes).
+    Removing pt32x030_pwm.o(i.PWMn_POL_Config), (116 bytes).
+    Removing pt32x030_pwm.o(.conststring), (68 bytes).
+    Removing pt32x030_pwr.o(.rev16_text), (4 bytes).
+    Removing pt32x030_pwr.o(.revsh_text), (4 bytes).
+    Removing pt32x030_pwr.o(i.PWR_EnterSTANDBYMode), (60 bytes).
+    Removing pt32x030_pwr.o(i.PWR_EnterSleepMode), (84 bytes).
+    Removing pt32x030_pwr.o(i.PWR_LVDLevelConfig), (60 bytes).
+    Removing pt32x030_pwr.o(i.PWR_PVDCmd), (64 bytes).
+    Removing pt32x030_pwr.o(i.PWR_PVDLevelConfig), (76 bytes).
+    Removing pt32x030_pwr.o(.conststring), (68 bytes).
+    Removing pt32x030_sys.o(.rev16_text), (4 bytes).
+    Removing pt32x030_sys.o(.revsh_text), (4 bytes).
+    Removing pt32x030_sys.o(i.IAP_Config), (64 bytes).
+    Removing pt32x030_sys.o(i.System_ClearAllResetFlag), (12 bytes).
+    Removing pt32x030_sys.o(i.System_ClearResetFlag), (64 bytes).
+    Removing pt32x030_sys.o(i.System_GetAgentID), (12 bytes).
+    Removing pt32x030_sys.o(i.System_GetCD), (12 bytes).
+    Removing pt32x030_sys.o(i.System_GetClocksFreq), (180 bytes).
+    Removing pt32x030_sys.o(i.System_GetCustomerID), (12 bytes).
+    Removing pt32x030_sys.o(i.System_GetFlashProtectStatus), (24 bytes).
+    Removing pt32x030_sys.o(i.System_GetRemapStatus), (24 bytes).
+    Removing pt32x030_sys.o(i.System_GetResetFlagStatus), (76 bytes).
+    Removing pt32x030_sys.o(i.System_GetUID), (16 bytes).
+    Removing pt32x030_sys.o(i.System_ResetRemapBit), (20 bytes).
+    Removing pt32x030_sys.o(i.System_RestConfig), (104 bytes).
+    Removing pt32x030_sys.o(i.System_Retriming), (16 bytes).
+    Removing pt32x030_sys.o(.conststring), (68 bytes).
+    Removing pt32x030_uart.o(.rev16_text), (4 bytes).
+    Removing pt32x030_uart.o(.revsh_text), (4 bytes).
+    Removing pt32x030_uart.o(i.UART_ClearFlag), (72 bytes).
+    Removing pt32x030_uart.o(i.UART_Cmd), (84 bytes).
+    Removing pt32x030_uart.o(i.UART_FifoReset), (30 bytes).
+    Removing pt32x030_uart.o(i.UART_GetFlagStatus), (132 bytes).
+    Removing pt32x030_uart.o(i.UART_GetITStatus), (144 bytes).
+    Removing pt32x030_uart.o(i.UART_HalfDuplexCmd), (92 bytes).
+    Removing pt32x030_uart.o(i.UART_HalfDuplex_DirectionModeCmd), (100 bytes).
+    Removing pt32x030_uart.o(i.UART_ITConfig), (156 bytes).
+    Removing pt32x030_uart.o(i.UART_Init), (412 bytes).
+    Removing pt32x030_uart.o(i.UART_InvPinCmd), (108 bytes).
+    Removing pt32x030_uart.o(i.UART_IrDACmd), (76 bytes).
+    Removing pt32x030_uart.o(i.UART_IrDAInvPinCmd), (76 bytes).
+    Removing pt32x030_uart.o(i.UART_LoopBackConfig), (24 bytes).
+    Removing pt32x030_uart.o(i.UART_ReceiveData), (48 bytes).
+    Removing pt32x030_uart.o(i.UART_ReceiveData_Timeout), (76 bytes).
+    Removing pt32x030_uart.o(i.UART_RxConfig), (88 bytes).
+    Removing pt32x030_uart.o(i.UART_SendData), (84 bytes).
+    Removing pt32x030_uart.o(i.UART_SetDutyCycle), (72 bytes).
+    Removing pt32x030_uart.o(i.UART_SetGuardTime), (56 bytes).
+    Removing pt32x030_uart.o(i.UART_SetReceiverTimeOut), (72 bytes).
+    Removing pt32x030_uart.o(i.UART_StringReceive), (78 bytes).
+    Removing pt32x030_uart.o(i.UART_StringSend), (48 bytes).
+    Removing pt32x030_uart.o(i.UART_StructInit), (28 bytes).
+    Removing pt32x030_uart.o(.conststring), (69 bytes).
+    Removing pt32x030_it.o(.rev16_text), (4 bytes).
+    Removing pt32x030_it.o(.revsh_text), (4 bytes).
+    Removing pwm_test2.o(.rev16_text), (4 bytes).
+    Removing pwm_test2.o(.revsh_text), (4 bytes).
+    Removing pwm_test2.o(i.Delay), (12 bytes).
+    Removing pwm_test2.o(i.Delay_Count), (12 bytes).
+    Removing pwm_test2.o(i.Software_Delay), (38 bytes).
+    Removing pwm_test2.o(i.UART_Config), (56 bytes).
+    Removing pwm_test2.o(i.assert_failed), (68 bytes).
+    Removing pwm_test2.o(.data), (8 bytes).
+    Removing common.o(.rev16_text), (4 bytes).
+    Removing common.o(.revsh_text), (4 bytes).
+    Removing common.o(i.Str2Int), (266 bytes).
+    Removing pt32x030_retarget.o(.rev16_text), (4 bytes).
+    Removing pt32x030_retarget.o(.revsh_text), (4 bytes).
+    Removing pt32x030_retarget.o(i.__backspace), (6 bytes).
+    Removing pt32x030_retarget.o(i._sys_exit), (4 bytes).
+    Removing pt32x030_retarget.o(i.fgetc), (10 bytes).
+    Removing pt32x030_retarget.o(i.fputc), (14 bytes).
+    Removing pt32x030_retarget.o(.data), (8 bytes).
+    Removing pt32x030_serial.o(.rev16_text), (4 bytes).
+    Removing pt32x030_serial.o(.revsh_text), (4 bytes).
+    Removing pt32x030_serial.o(i.SERIAL_GetChar), (28 bytes).
+    Removing dadd.o(.text), (356 bytes).
+    Removing dmul.o(.text), (208 bytes).
+    Removing ddiv.o(.text), (240 bytes).
+    Removing dfixul.o(.text), (64 bytes).
+    Removing cdrcmple.o(.text), (40 bytes).
+    Removing depilogue.o(.text), (190 bytes).
+    Removing pt32x030_gpio.o(i.__ARM_common_switch8), (28 bytes).
+    Removing depilogue.o(i.__ARM_clz), (46 bytes).
+
+176 unused section(s) (total 14321 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      220  startup_pt32x030.o(RESET)
+    ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
+    ../clib/microlib/printf/stubs.s          0x00000000   Number         0  stubs.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  useno.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    ..\..\..\Libraries\CMSIS\Device\PT32x030\Source\Templates\system_PT32x030.c 0x00000000   Number         0  system_pt32x030.o ABSOLUTE
+    ..\..\..\Libraries\PT32x030_StdPeriph_Lib_Driver\cmsis\startup_PT32x030.s 0x00000000   Number         0  startup_pt32x030.o ABSOLUTE
+    ..\..\..\Libraries\PT32x030_StdPeriph_Lib_Driver\src\PT32x030_ana.c 0x00000000   Number         0  pt32x030_ana.o ABSOLUTE
+    ..\..\..\Libraries\PT32x030_StdPeriph_Lib_Driver\src\PT32x030_gpio.c 0x00000000   Number         0  pt32x030_gpio.o ABSOLUTE
+    ..\..\..\Libraries\PT32x030_StdPeriph_Lib_Driver\src\PT32x030_misc.c 0x00000000   Number         0  pt32x030_misc.o ABSOLUTE
+    ..\..\..\Libraries\PT32x030_StdPeriph_Lib_Driver\src\PT32x030_pwm.c 0x00000000   Number         0  pt32x030_pwm.o ABSOLUTE
+    ..\..\..\Libraries\PT32x030_StdPeriph_Lib_Driver\src\PT32x030_pwr.c 0x00000000   Number         0  pt32x030_pwr.o ABSOLUTE
+    ..\..\..\Libraries\PT32x030_StdPeriph_Lib_Driver\src\PT32x030_retarget.c 0x00000000   Number         0  pt32x030_retarget.o ABSOLUTE
+    ..\..\..\Libraries\PT32x030_StdPeriph_Lib_Driver\src\PT32x030_serial.c 0x00000000   Number         0  pt32x030_serial.o ABSOLUTE
+    ..\..\..\Libraries\PT32x030_StdPeriph_Lib_Driver\src\PT32x030_sys.c 0x00000000   Number         0  pt32x030_sys.o ABSOLUTE
+    ..\..\..\Libraries\PT32x030_StdPeriph_Lib_Driver\src\PT32x030_uart.c 0x00000000   Number         0  pt32x030_uart.o ABSOLUTE
+    ..\PT32x030_it.c                         0x00000000   Number         0  pt32x030_it.o ABSOLUTE
+    ..\\..\\..\\Libraries\\CMSIS\\Device\\PT32x030\\Source\\Templates\\system_PT32x030.c 0x00000000   Number         0  system_pt32x030.o ABSOLUTE
+    ..\\..\\..\\Libraries\\PT32x030_StdPeriph_Lib_Driver\\src\\PT32x030_ana.c 0x00000000   Number         0  pt32x030_ana.o ABSOLUTE
+    ..\\..\\..\\Libraries\\PT32x030_StdPeriph_Lib_Driver\\src\\PT32x030_gpio.c 0x00000000   Number         0  pt32x030_gpio.o ABSOLUTE
+    ..\\..\\..\\Libraries\\PT32x030_StdPeriph_Lib_Driver\\src\\PT32x030_misc.c 0x00000000   Number         0  pt32x030_misc.o ABSOLUTE
+    ..\\..\\..\\Libraries\\PT32x030_StdPeriph_Lib_Driver\\src\\PT32x030_pwm.c 0x00000000   Number         0  pt32x030_pwm.o ABSOLUTE
+    ..\\..\\..\\Libraries\\PT32x030_StdPeriph_Lib_Driver\\src\\PT32x030_pwr.c 0x00000000   Number         0  pt32x030_pwr.o ABSOLUTE
+    ..\\..\\..\\Libraries\\PT32x030_StdPeriph_Lib_Driver\\src\\PT32x030_retarget.c 0x00000000   Number         0  pt32x030_retarget.o ABSOLUTE
+    ..\\..\\..\\Libraries\\PT32x030_StdPeriph_Lib_Driver\\src\\PT32x030_serial.c 0x00000000   Number         0  pt32x030_serial.o ABSOLUTE
+    ..\\..\\..\\Libraries\\PT32x030_StdPeriph_Lib_Driver\\src\\PT32x030_sys.c 0x00000000   Number         0  pt32x030_sys.o ABSOLUTE
+    ..\\..\\..\\Libraries\\PT32x030_StdPeriph_Lib_Driver\\src\\PT32x030_uart.c 0x00000000   Number         0  pt32x030_uart.o ABSOLUTE
+    ..\\PT32x030_it.c                        0x00000000   Number         0  pt32x030_it.o ABSOLUTE
+    ..\\common.c                             0x00000000   Number         0  common.o ABSOLUTE
+    ..\\pwm_test2.c                          0x00000000   Number         0  pwm_test2.o ABSOLUTE
+    ..\common.c                              0x00000000   Number         0  common.o ABSOLUTE
+    ..\pwm_test2.c                           0x00000000   Number         0  pwm_test2.o ABSOLUTE
+    cdrcmple.s                               0x00000000   Number         0  cdrcmple.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    .ARM.Collect$$$$00000000                 0x000000dc   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x000000dc   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x000000e0   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x000000e4   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x000000e4   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x000000e4   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x000000ec   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x000000ec   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x000000ec   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x000000ec   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x000000f0   Section        0  memcpya.o(.text)
+    .text                                    0x00000114   Section       36  init.o(.text)
+    i.ADC_Handler                            0x00000138   Section        0  pt32x030_it.o(i.ADC_Handler)
+    i.CLK_FAIL_Handler                       0x0000013a   Section        0  pt32x030_it.o(i.CLK_FAIL_Handler)
+    i.Comparator0_Handler                    0x0000013c   Section        0  pt32x030_it.o(i.Comparator0_Handler)
+    i.Comparator1_Handler                    0x0000013e   Section        0  pt32x030_it.o(i.Comparator1_Handler)
+    i.Comparator2_Handler                    0x00000140   Section        0  pt32x030_it.o(i.Comparator2_Handler)
+    i.FLASH_Handler                          0x00000142   Section        0  pt32x030_it.o(i.FLASH_Handler)
+    i.FLASH_PagesMask                        0x00000144   Section        0  common.o(i.FLASH_PagesMask)
+    i.GetKey                                 0x0000015c   Section        0  common.o(i.GetKey)
+    i.HardFault_Handler                      0x0000018c   Section        0  pt32x030_it.o(i.HardFault_Handler)
+    i.I2C0_Handler                           0x0000018e   Section        0  pt32x030_it.o(i.I2C0_Handler)
+    i.I2C1_Handler                           0x00000190   Section        0  pt32x030_it.o(i.I2C1_Handler)
+    i.NMI_Handler                            0x00000192   Section        0  pt32x030_it.o(i.NMI_Handler)
+    i.PA_Handler                             0x00000194   Section        0  pt32x030_it.o(i.PA_Handler)
+    i.PB_Handler                             0x00000196   Section        0  pt32x030_it.o(i.PB_Handler)
+    i.PC_Handler                             0x00000198   Section        0  pt32x030_it.o(i.PC_Handler)
+    i.PF_Handler                             0x0000019a   Section        0  pt32x030_it.o(i.PF_Handler)
+    i.PendSV_Handler                         0x0000019c   Section        0  pt32x030_it.o(i.PendSV_Handler)
+    i.Receive_Byte                           0x0000019e   Section        0  common.o(i.Receive_Byte)
+    Receive_Byte                             0x0000019f   Thumb Code    34  common.o(i.Receive_Byte)
+    i.Receive_Packet                         0x000001c0   Section        0  common.o(i.Receive_Packet)
+    Receive_Packet                           0x000001c1   Thumb Code   192  common.o(i.Receive_Packet)
+    i.SERIAL_PutChar                         0x00000280   Section        0  pt32x030_serial.o(i.SERIAL_PutChar)
+    i.SPI0_Handler                           0x000002bc   Section        0  pt32x030_it.o(i.SPI0_Handler)
+    i.SPI1_Handler                           0x000002be   Section        0  pt32x030_it.o(i.SPI1_Handler)
+    i.SVC_Handler                            0x000002c0   Section        0  pt32x030_it.o(i.SVC_Handler)
+    i.SYSWDG_Handler                         0x000002c2   Section        0  pt32x030_it.o(i.SYSWDG_Handler)
+    i.Send_Byte                              0x000002c4   Section        0  common.o(i.Send_Byte)
+    i.SerialDownload                         0x000002d4   Section        0  common.o(i.SerialDownload)
+    i.SerialKeyPressed                       0x000002e4   Section        0  common.o(i.SerialKeyPressed)
+    i.SerialPutString                        0x00000304   Section        0  common.o(i.SerialPutString)
+    i.SysTick_Handler                        0x0000031c   Section        0  pt32x030_it.o(i.SysTick_Handler)
+    i.SystemInit                             0x0000032c   Section        0  system_pt32x030.o(i.SystemInit)
+    i.TIMER1_Handler                         0x00000360   Section        0  pwm_test2.o(i.TIMER1_Handler)
+    i.TIMER2_Handler                         0x00000362   Section        0  pt32x030_it.o(i.TIMER2_Handler)
+    i.TIMER3_Handler                         0x00000364   Section        0  pt32x030_it.o(i.TIMER3_Handler)
+    i.TIMER4_Handler                         0x00000366   Section        0  pt32x030_it.o(i.TIMER4_Handler)
+    i.TIMER5_Handler                         0x00000368   Section        0  pt32x030_it.o(i.TIMER5_Handler)
+    i.TIMER6_Handler                         0x0000036a   Section        0  pt32x030_it.o(i.TIMER6_Handler)
+    i.TIMER7_Handler                         0x0000036c   Section        0  pt32x030_it.o(i.TIMER7_Handler)
+    i.UART0_Handler                          0x0000036e   Section        0  pt32x030_it.o(i.UART0_Handler)
+    i.UART1_Handler                          0x00000370   Section        0  pt32x030_it.o(i.UART1_Handler)
+    i.UART_Driver                            0x00000374   Section        0  pwm_test2.o(i.UART_Driver)
+    i.Ymodem_Receive                         0x00000394   Section        0  common.o(i.Ymodem_Receive)
+    i.__scatterload_copy                     0x00000650   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x0000065e   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00000660   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.clk_hsclk_set                          0x00000670   Section        0  system_pt32x030.o(i.clk_hsclk_set)
+    i.clk_mco_config                         0x000006ac   Section        0  system_pt32x030.o(i.clk_mco_config)
+    i.clk_pll_config                         0x000006d8   Section        0  system_pt32x030.o(i.clk_pll_config)
+    i.clk_source_config                      0x000006ec   Section        0  system_pt32x030.o(i.clk_source_config)
+    i.main                                   0x0000070c   Section        0  pwm_test2.o(i.main)
+    i.main_menu                              0x0000076c   Section        0  common.o(i.main_menu)
+    .data                                    0x20000000   Section        1  system_pt32x030.o(.data)
+    rest_flag                                0x20000000   Data           1  system_pt32x030.o(.data)
+    .data                                    0x20000004   Section        4  pt32x030_it.o(.data)
+    .data                                    0x20000008   Section       29  common.o(.data)
+    uStatus                                  0x20000024   Data           1  common.o(.data)
+    .bss                                     0x20000028   Section     1280  common.o(.bss)
+    STACK                                    0x20000528   Section      512  startup_pt32x030.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  pwm_test2.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_pt32x030.o(RESET)
+    __use_no_errno                           0x00000000   Number         0  useno.o ABSOLUTE
+    __use_no_exception_handling              0x00000000   Number         0  useno.o ABSOLUTE
+    __use_no_fp                              0x00000000   Number         0  useno.o ABSOLUTE
+    __use_no_heap                            0x00000000   Number         0  useno.o ABSOLUTE
+    __use_no_heap_region                     0x00000000   Number         0  useno.o ABSOLUTE
+    __use_no_semihosting                     0x00000000   Number         0  useno.o ABSOLUTE
+    __use_no_semihosting_swi                 0x00000000   Number         0  useno.o ABSOLUTE
+    __use_no_signal_handling                 0x00000000   Number         0  useno.o ABSOLUTE
+    _printf_a                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_c                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_charcount                        0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_d                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_e                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_f                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_flags                            0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_fp_dec                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_fp_hex                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_g                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_i                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_int_dec                          0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_l                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_lc                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_ll                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_lld                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_lli                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_llo                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_llu                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_llx                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_longlong_dec                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_longlong_hex                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_longlong_oct                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_ls                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_mbtowc                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_n                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_o                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_p                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_percent                          0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_pre_padding                      0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_return_value                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_s                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_sizespec                         0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_str                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_truncate_signed                  0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_truncate_unsigned                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_u                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_wc                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_wctomb                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_widthprec                        0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_x                                0x00000000   Number         0  stubs.o ABSOLUTE
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    Reset_Handler                            0x000000c1   Thumb Code     8  startup_pt32x030.o(RESET)
+    ALU_Handler                              0x000000d3   Thumb Code     0  startup_pt32x030.o(RESET)
+    DMA_Handler                              0x000000d3   Thumb Code     0  startup_pt32x030.o(RESET)
+    LVD_Handler                              0x000000d3   Thumb Code     0  startup_pt32x030.o(RESET)
+    __main                                   0x000000dd   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x000000dd   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x000000e1   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x000000e5   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x000000e5   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x000000e5   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x000000e5   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x000000ed   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x000000ed   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    __aeabi_memcpy                           0x000000f1   Thumb Code    36  memcpya.o(.text)
+    __aeabi_memcpy4                          0x000000f1   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memcpy8                          0x000000f1   Thumb Code     0  memcpya.o(.text)
+    __scatterload                            0x00000115   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x00000115   Thumb Code     0  init.o(.text)
+    ADC_Handler                              0x00000139   Thumb Code     2  pt32x030_it.o(i.ADC_Handler)
+    CLK_FAIL_Handler                         0x0000013b   Thumb Code     2  pt32x030_it.o(i.CLK_FAIL_Handler)
+    Comparator0_Handler                      0x0000013d   Thumb Code     2  pt32x030_it.o(i.Comparator0_Handler)
+    Comparator1_Handler                      0x0000013f   Thumb Code     2  pt32x030_it.o(i.Comparator1_Handler)
+    Comparator2_Handler                      0x00000141   Thumb Code     2  pt32x030_it.o(i.Comparator2_Handler)
+    FLASH_Handler                            0x00000143   Thumb Code     2  pt32x030_it.o(i.FLASH_Handler)
+    FLASH_PagesMask                          0x00000145   Thumb Code    24  common.o(i.FLASH_PagesMask)
+    GetKey                                   0x0000015d   Thumb Code    38  common.o(i.GetKey)
+    HardFault_Handler                        0x0000018d   Thumb Code     2  pt32x030_it.o(i.HardFault_Handler)
+    I2C0_Handler                             0x0000018f   Thumb Code     2  pt32x030_it.o(i.I2C0_Handler)
+    I2C1_Handler                             0x00000191   Thumb Code     2  pt32x030_it.o(i.I2C1_Handler)
+    NMI_Handler                              0x00000193   Thumb Code     2  pt32x030_it.o(i.NMI_Handler)
+    PA_Handler                               0x00000195   Thumb Code     2  pt32x030_it.o(i.PA_Handler)
+    PB_Handler                               0x00000197   Thumb Code     2  pt32x030_it.o(i.PB_Handler)
+    PC_Handler                               0x00000199   Thumb Code     2  pt32x030_it.o(i.PC_Handler)
+    PF_Handler                               0x0000019b   Thumb Code     2  pt32x030_it.o(i.PF_Handler)
+    PendSV_Handler                           0x0000019d   Thumb Code     2  pt32x030_it.o(i.PendSV_Handler)
+    SERIAL_PutChar                           0x00000281   Thumb Code    54  pt32x030_serial.o(i.SERIAL_PutChar)
+    SPI0_Handler                             0x000002bd   Thumb Code     2  pt32x030_it.o(i.SPI0_Handler)
+    SPI1_Handler                             0x000002bf   Thumb Code     2  pt32x030_it.o(i.SPI1_Handler)
+    SVC_Handler                              0x000002c1   Thumb Code     2  pt32x030_it.o(i.SVC_Handler)
+    SYSWDG_Handler                           0x000002c3   Thumb Code     2  pt32x030_it.o(i.SYSWDG_Handler)
+    Send_Byte                                0x000002c5   Thumb Code    14  common.o(i.Send_Byte)
+    SerialDownload                           0x000002d5   Thumb Code    10  common.o(i.SerialDownload)
+    SerialKeyPressed                         0x000002e5   Thumb Code    28  common.o(i.SerialKeyPressed)
+    SerialPutString                          0x00000305   Thumb Code    22  common.o(i.SerialPutString)
+    SysTick_Handler                          0x0000031d   Thumb Code    12  pt32x030_it.o(i.SysTick_Handler)
+    SystemInit                               0x0000032d   Thumb Code    42  system_pt32x030.o(i.SystemInit)
+    TIMER1_Handler                           0x00000361   Thumb Code     2  pwm_test2.o(i.TIMER1_Handler)
+    TIMER2_Handler                           0x00000363   Thumb Code     2  pt32x030_it.o(i.TIMER2_Handler)
+    TIMER3_Handler                           0x00000365   Thumb Code     2  pt32x030_it.o(i.TIMER3_Handler)
+    TIMER4_Handler                           0x00000367   Thumb Code     2  pt32x030_it.o(i.TIMER4_Handler)
+    TIMER5_Handler                           0x00000369   Thumb Code     2  pt32x030_it.o(i.TIMER5_Handler)
+    TIMER6_Handler                           0x0000036b   Thumb Code     2  pt32x030_it.o(i.TIMER6_Handler)
+    TIMER7_Handler                           0x0000036d   Thumb Code     2  pt32x030_it.o(i.TIMER7_Handler)
+    UART0_Handler                            0x0000036f   Thumb Code     2  pt32x030_it.o(i.UART0_Handler)
+    UART1_Handler                            0x00000371   Thumb Code     2  pt32x030_it.o(i.UART1_Handler)
+    UART_Driver                              0x00000375   Thumb Code    28  pwm_test2.o(i.UART_Driver)
+    Ymodem_Receive                           0x00000395   Thumb Code   668  common.o(i.Ymodem_Receive)
+    __scatterload_copy                       0x00000651   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x0000065f   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00000661   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    clk_hsclk_set                            0x00000671   Thumb Code    56  system_pt32x030.o(i.clk_hsclk_set)
+    clk_mco_config                           0x000006ad   Thumb Code    38  system_pt32x030.o(i.clk_mco_config)
+    clk_pll_config                           0x000006d9   Thumb Code    14  system_pt32x030.o(i.clk_pll_config)
+    clk_source_config                        0x000006ed   Thumb Code    26  system_pt32x030.o(i.clk_source_config)
+    main                                     0x0000070d   Thumb Code    74  pwm_test2.o(i.main)
+    main_menu                                0x0000076d   Thumb Code    80  common.o(i.main_menu)
+    Region$$Table$$Base                      0x000007d0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x000007f0   Number         0  anon$$obj.o(Region$$Table)
+    g_Tim                                    0x20000004   Data           4  pt32x030_it.o(.data)
+    sector_count                             0x20000008   Data           1  common.o(.data)
+    FlashDestination                         0x2000000c   Data           4  common.o(.data)
+    PageSize                                 0x20000010   Data           2  common.o(.data)
+    EraseCounter                             0x20000014   Data           4  common.o(.data)
+    NbrOfPage                                0x20000018   Data           4  common.o(.data)
+    RamSource                                0x2000001c   Data           4  common.o(.data)
+    SIZE_TEST                                0x20000020   Data           4  common.o(.data)
+    tab_1024                                 0x20000028   Data        1024  common.o(.bss)
+    file_name                                0x20000428   Data         256  common.o(.bss)
+    __initial_sp                             0x20000728   Data           0  startup_pt32x030.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000000dd
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00000818, Max: 0x00010000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x000007f0, Max: 0x00010000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x000000dc   Code   RO            3    RESET               startup_pt32x030.o
+    0x000000dc   0x000000dc   0x00000000   Code   RO         1381  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x000000dc   0x000000dc   0x00000004   Code   RO         1651    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x000000e0   0x000000e0   0x00000004   Code   RO         1654    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x000000e4   0x000000e4   0x00000000   Code   RO         1656    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x000000e4   0x000000e4   0x00000000   Code   RO         1658    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x000000e4   0x000000e4   0x00000008   Code   RO         1659    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x000000ec   0x000000ec   0x00000000   Code   RO         1661    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
+    0x000000ec   0x000000ec   0x00000000   Code   RO         1663    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
+    0x000000ec   0x000000ec   0x00000004   Code   RO         1652    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x000000f0   0x000000f0   0x00000024   Code   RO         1386    .text               mc_p.l(memcpya.o)
+    0x00000114   0x00000114   0x00000024   Code   RO         1678    .text               mc_p.l(init.o)
+    0x00000138   0x00000138   0x00000002   Code   RO          964    i.ADC_Handler       pt32x030_it.o
+    0x0000013a   0x0000013a   0x00000002   Code   RO          965    i.CLK_FAIL_Handler  pt32x030_it.o
+    0x0000013c   0x0000013c   0x00000002   Code   RO          966    i.Comparator0_Handler  pt32x030_it.o
+    0x0000013e   0x0000013e   0x00000002   Code   RO          967    i.Comparator1_Handler  pt32x030_it.o
+    0x00000140   0x00000140   0x00000002   Code   RO          968    i.Comparator2_Handler  pt32x030_it.o
+    0x00000142   0x00000142   0x00000002   Code   RO          969    i.FLASH_Handler     pt32x030_it.o
+    0x00000144   0x00000144   0x00000018   Code   RO         1223    i.FLASH_PagesMask   common.o
+    0x0000015c   0x0000015c   0x00000030   Code   RO         1224    i.GetKey            common.o
+    0x0000018c   0x0000018c   0x00000002   Code   RO          970    i.HardFault_Handler  pt32x030_it.o
+    0x0000018e   0x0000018e   0x00000002   Code   RO          971    i.I2C0_Handler      pt32x030_it.o
+    0x00000190   0x00000190   0x00000002   Code   RO          972    i.I2C1_Handler      pt32x030_it.o
+    0x00000192   0x00000192   0x00000002   Code   RO          973    i.NMI_Handler       pt32x030_it.o
+    0x00000194   0x00000194   0x00000002   Code   RO          974    i.PA_Handler        pt32x030_it.o
+    0x00000196   0x00000196   0x00000002   Code   RO          975    i.PB_Handler        pt32x030_it.o
+    0x00000198   0x00000198   0x00000002   Code   RO          976    i.PC_Handler        pt32x030_it.o
+    0x0000019a   0x0000019a   0x00000002   Code   RO          977    i.PF_Handler        pt32x030_it.o
+    0x0000019c   0x0000019c   0x00000002   Code   RO          978    i.PendSV_Handler    pt32x030_it.o
+    0x0000019e   0x0000019e   0x00000022   Code   RO         1225    i.Receive_Byte      common.o
+    0x000001c0   0x000001c0   0x000000c0   Code   RO         1226    i.Receive_Packet    common.o
+    0x00000280   0x00000280   0x0000003c   Code   RO         1358    i.SERIAL_PutChar    pt32x030_serial.o
+    0x000002bc   0x000002bc   0x00000002   Code   RO          979    i.SPI0_Handler      pt32x030_it.o
+    0x000002be   0x000002be   0x00000002   Code   RO          980    i.SPI1_Handler      pt32x030_it.o
+    0x000002c0   0x000002c0   0x00000002   Code   RO          981    i.SVC_Handler       pt32x030_it.o
+    0x000002c2   0x000002c2   0x00000002   Code   RO          982    i.SYSWDG_Handler    pt32x030_it.o
+    0x000002c4   0x000002c4   0x0000000e   Code   RO         1227    i.Send_Byte         common.o
+    0x000002d2   0x000002d2   0x00000002   PAD
+    0x000002d4   0x000002d4   0x00000010   Code   RO         1228    i.SerialDownload    common.o
+    0x000002e4   0x000002e4   0x00000020   Code   RO         1229    i.SerialKeyPressed  common.o
+    0x00000304   0x00000304   0x00000016   Code   RO         1230    i.SerialPutString   common.o
+    0x0000031a   0x0000031a   0x00000002   PAD
+    0x0000031c   0x0000031c   0x00000010   Code   RO          983    i.SysTick_Handler   pt32x030_it.o
+    0x0000032c   0x0000032c   0x00000034   Code   RO           11    i.SystemInit        system_pt32x030.o
+    0x00000360   0x00000360   0x00000002   Code   RO         1155    i.TIMER1_Handler    pwm_test2.o
+    0x00000362   0x00000362   0x00000002   Code   RO          984    i.TIMER2_Handler    pt32x030_it.o
+    0x00000364   0x00000364   0x00000002   Code   RO          985    i.TIMER3_Handler    pt32x030_it.o
+    0x00000366   0x00000366   0x00000002   Code   RO          986    i.TIMER4_Handler    pt32x030_it.o
+    0x00000368   0x00000368   0x00000002   Code   RO          987    i.TIMER5_Handler    pt32x030_it.o
+    0x0000036a   0x0000036a   0x00000002   Code   RO          988    i.TIMER6_Handler    pt32x030_it.o
+    0x0000036c   0x0000036c   0x00000002   Code   RO          989    i.TIMER7_Handler    pt32x030_it.o
+    0x0000036e   0x0000036e   0x00000002   Code   RO          990    i.UART0_Handler     pt32x030_it.o
+    0x00000370   0x00000370   0x00000002   Code   RO          991    i.UART1_Handler     pt32x030_it.o
+    0x00000372   0x00000372   0x00000002   PAD
+    0x00000374   0x00000374   0x00000020   Code   RO         1157    i.UART_Driver       pwm_test2.o
+    0x00000394   0x00000394   0x000002bc   Code   RO         1232    i.Ymodem_Receive    common.o
+    0x00000650   0x00000650   0x0000000e   Code   RO         1692    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x0000065e   0x0000065e   0x00000002   Code   RO         1693    i.__scatterload_null  mc_p.l(handlers.o)
+    0x00000660   0x00000660   0x0000000e   Code   RO         1694    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x0000066e   0x0000066e   0x00000002   PAD
+    0x00000670   0x00000670   0x0000003c   Code   RO           14    i.clk_hsclk_set     system_pt32x030.o
+    0x000006ac   0x000006ac   0x0000002c   Code   RO           15    i.clk_mco_config    system_pt32x030.o
+    0x000006d8   0x000006d8   0x00000014   Code   RO           16    i.clk_pll_config    system_pt32x030.o
+    0x000006ec   0x000006ec   0x00000020   Code   RO           17    i.clk_source_config  system_pt32x030.o
+    0x0000070c   0x0000070c   0x00000060   Code   RO         1159    i.main              pwm_test2.o
+    0x0000076c   0x0000076c   0x00000064   Code   RO         1233    i.main_menu         common.o
+    0x000007d0   0x000007d0   0x00000020   Data   RO         1690    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x000007f0, Size: 0x00000728, Max: 0x00001000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x000007f0   0x00000001   Data   RW           18    .data               system_pt32x030.o
+    0x20000001   0x000007f1   0x00000003   PAD
+    0x20000004   0x000007f4   0x00000004   Data   RW          992    .data               pt32x030_it.o
+    0x20000008   0x000007f8   0x0000001d   Data   RW         1235    .data               common.o
+    0x20000025   0x00000815   0x00000003   PAD
+    0x20000028        -       0x00000500   Zero   RW         1234    .bss                common.o
+    0x20000528        -       0x00000200   Zero   RW            1    STACK               startup_pt32x030.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      1182         72          0         29       1280       8957   common.o
+        70          4          0          4          0      15233   pt32x030_it.o
+        60          6          0          0          0        725   pt32x030_serial.o
+       130         26          0          0          0      11110   pwm_test2.o
+       220        200          0          0        512        840   startup_pt32x030.o
+       208         32          0          1          0      75671   system_pt32x030.o
+
+    ----------------------------------------------------------------------
+      1876        340         32         40       1792     112536   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         6          0          0          6          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        36          0          0          0          0         60   memcpya.o
+
+    ----------------------------------------------------------------------
+       124         16          0          0          0        128   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       122         16          0          0          0        128   mc_p.l
+
+    ----------------------------------------------------------------------
+       124         16          0          0          0        128   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      2000        356         32         40       1792     110968   Grand Totals
+      2000        356         32         40       1792     110968   ELF Image Totals
+      2000        356         32         40          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 2032 (   1.98kB)
+    Total RW  Size (RW Data + ZI Data)              1832 (   1.79kB)
+    Total ROM Size (Code + RO Data + RW Data)       2072 (   2.02kB)
+
+==============================================================================
+

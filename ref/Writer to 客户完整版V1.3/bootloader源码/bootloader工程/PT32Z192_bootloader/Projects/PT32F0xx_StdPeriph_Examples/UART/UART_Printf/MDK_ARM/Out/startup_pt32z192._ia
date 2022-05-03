@@ -1,0 +1,6 @@
+--cpu Cortex-M3 --li -g --apcs=interwork --pd "__MICROLIB SETA 1"
+-IC:\Keil_v5\ARM\RV31\INC
+-IC:\Keil_v5\ARM\CMSIS\Include
+-IC:\Keil_v5\ARM\INC\ST\STM32F0xx
+--pd "__UVISION_VERSION SETA 530"
+--list .\list\startup_pt32z192.lst --xref -o .\out\startup_pt32z192.o --depend .\out\startup_pt32z192.d "..\..\..\..\..\Libraries\PT32Z192xx_StdPeriph_Lib_Driver\cmsis\startup_pt32z192.s"

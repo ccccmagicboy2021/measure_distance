@@ -1,0 +1,24 @@
+--cpu Cortex-M0
+".\out\startup_pangu01.o"
+".\out\system_pangu01.o"
+".\out\main.o"
+".\out\pangu01_it.o"
+".\out\bsptime.o"
+".\out\common.o"
+".\out\download.o"
+".\out\ymodem.o"
+".\out\pangu01_gpio.o"
+".\out\pangu01_i2c.o"
+".\out\pangu01_spi.o"
+".\out\pangu01_sys.o"
+".\out\pangu01_uart.o"
+".\out\pangu01_wdt.o"
+".\out\pangu01_crc.o"
+".\out\pangu01_flash.o"
+".\out\pangu01_ana.o"
+".\out\pangu01_retarget.o"
+".\out\pangu01_serial.o"
+--library_type=microlib --strict --scatter ".\Out\Project.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\List\Project.map" -o .\Out\Project.axf

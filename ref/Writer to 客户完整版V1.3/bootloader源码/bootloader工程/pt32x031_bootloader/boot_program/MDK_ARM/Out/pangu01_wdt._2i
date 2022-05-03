@@ -1,0 +1,6 @@
+-c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork --split_sections -I ..\..\..\..\Lib\inc -I ..\..\..\..\Lib\cmsis
+-IG:\keil\ARM\RV31\INC
+-IG:\keil\ARM\CMSIS\Include
+-IG:\keil\ARM\INC\ST\STM32F0xx
+-D__UVISION_VERSION="527"
+-o .\out\pangu01_wdt.o --omf_browse .\out\pangu01_wdt.crf --depend .\out\pangu01_wdt.d --feedback ".\Out\Project.fed" "..\..\..\..\Lib\src\pangu01_wdt.c"
