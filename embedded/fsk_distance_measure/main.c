@@ -48,6 +48,7 @@ extern uint32_t diff_tick;
 extern void start_timer(void);
 extern void time3_init(void);
 extern void time3_start(void);
+extern uint32_t SysTick_GetTick(void);
 
 int part_charge = 0;
 
@@ -79,6 +80,10 @@ int fputc(int ch, FILE* f)
 
 int32_t main(void)
 {
+	uint32_t start_tick = 0;
+	uint32_t end_tick = 0;
+	uint32_t diff = 0;
+    
     measure_info_t measure_info = {0};
 
     SysClkInit();
@@ -118,7 +123,12 @@ int32_t main(void)
         if (is_data_available()) {
             get_sample_data((u8 *)data_buf);
             SEGGER_RTT_Write(1, data_buf, sizeof(data_buf));
+            
+            start_tick = SysTick_GetTick();
             measure_distance(data_buf, &measure_info);
+            end_tick = SysTick_GetTick();
+            diff = end_tick - start_tick;
+            
 #ifndef SEND_TO_MATLAB_TEST
             updata_data.speed = measure_info.speed_abf;
             updata_data.distance = measure_info.distance_abf;
@@ -129,7 +139,7 @@ int32_t main(void)
             mag_f = measure_info.max_amplitude;
             
 #ifdef DEBUG_MODE
-            printf("/*CD2840ADX,%.3lf,%.3lf,%d,%d,%d*/", distance_f, speed_f, state, diff_tick, mag_f);
+            printf("/*CD2840ADX,%.3lf,%.3lf,%d,%d,%d,%d*/", distance_f, speed_f, state, diff_tick, mag_f, diff);
 #endif           
             app();
             
