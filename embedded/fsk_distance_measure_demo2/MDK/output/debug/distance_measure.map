@@ -598,57 +598,57 @@ Image Symbol Table
     i.leave_s1                               0x00009c54   Section        0  app.o(i.leave_s1)
     i.led_init                               0x00009c9c   Section        0  led.o(i.led_init)
     i.main                                   0x00009d04   Section        0  main.o(i.main)
-    i.mcu_common_uart_data_unpack            0x00009e44   Section        0  mcu_api.o(i.mcu_common_uart_data_unpack)
-    mcu_common_uart_data_unpack              0x00009e45   Thumb Code   318  mcu_api.o(i.mcu_common_uart_data_unpack)
-    i.measure_distance                       0x00009f98   Section        0  distance_measure.o(i.measure_distance)
-    i.micromotion_detection                  0x0000a08c   Section        0  micromotion_detection.o(i.micromotion_detection)
-    i.my_memcpy                              0x0000a1cc   Section        0  mcu_api.o(i.my_memcpy)
-    i.my_memset                              0x0000a210   Section        0  mcu_api.o(i.my_memset)
-    i.ring_buffer_get                        0x0000a234   Section        0  ringbuffer.o(i.ring_buffer_get)
-    i.ring_buffer_put                        0x0000a2c8   Section        0  ringbuffer.o(i.ring_buffer_put)
-    i.rtt_init                               0x0000a358   Section        0  main.o(i.rtt_init)
-    i.tick_init                              0x0000a448   Section        0  app.o(i.tick_init)
-    i.uart_receive_input                     0x0000a480   Section        0  mcu_api.o(i.uart_receive_input)
-    i.uart_transmit_output                   0x0000a4e0   Section        0  protocol.o(i.uart_transmit_output)
-    i.usart_init                             0x0000a4f8   Section        0  usart.o(i.usart_init)
-    i.vd_calculation                         0x0000a604   Section        0  vd_calculation.o(i.vd_calculation)
-    .constdata                               0x0000a898   Section       16  hc32f46x_usart.o(.constdata)
-    .constdata                               0x0000a8a8   Section        9  usart.o(.constdata)
-    .constdata                               0x0000a8b4   Section        8  micromotion_detection.o(.constdata)
-    .constdata                               0x0000a8bc   Section     2048  hamming.o(.constdata)
-    .constdata                               0x0000b0bc   Section     2044  hanning_conv.o(.constdata)
-    .constdata                               0x0000b8b8   Section     2048  freq_linspace.o(.constdata)
-    .constdata                               0x0000c0b8   Section       16  segger_rtt_printf.o(.constdata)
-    _aV2C                                    0x0000c0b8   Data          16  segger_rtt_printf.o(.constdata)
-    .constdata                               0x0000c0c8   Section       96  commontables.o(.constdata)
-    .constdata                               0x0000c128   Section      192  commontables.o(.constdata)
-    .constdata                               0x0000c1e8   Section      384  commontables.o(.constdata)
-    .constdata                               0x0000c368   Section      768  commontables.o(.constdata)
-    .constdata                               0x0000c668   Section     1536  commontables.o(.constdata)
-    .constdata                               0x0000cc68   Section     3072  commontables.o(.constdata)
-    .constdata                               0x0000d868   Section     6144  commontables.o(.constdata)
-    .constdata                               0x0000f068   Section    12288  commontables.o(.constdata)
-    .constdata                               0x00012068   Section    24576  commontables.o(.constdata)
-    .constdata                               0x00018068   Section       24  commontables.o(.constdata)
-    .constdata                               0x00018080   Section       48  commontables.o(.constdata)
-    .constdata                               0x000180b0   Section      112  commontables.o(.constdata)
-    .constdata                               0x00018120   Section      224  commontables.o(.constdata)
-    .constdata                               0x00018200   Section      480  commontables.o(.constdata)
-    .constdata                               0x000183e0   Section      960  commontables.o(.constdata)
-    .constdata                               0x000187a0   Section     1984  commontables.o(.constdata)
-    .constdata                               0x00018f60   Section     3968  commontables.o(.constdata)
-    .constdata                               0x00019ee0   Section     8064  commontables.o(.constdata)
-    .constdata                               0x0001be60   Section    32768  commontables.o(.constdata)
-    .constdata                               0x00023e60   Section    32768  commontables.o(.constdata)
-    .constdata                               0x0002be60   Section       16  commontables.o(.constdata)
-    .constdata                               0x0002be70   Section       16  commontables.o(.constdata)
-    .constdata                               0x0002be80   Section       16  commontables.o(.constdata)
-    .constdata                               0x0002be90   Section       16  commontables.o(.constdata)
-    .constdata                               0x0002bea0   Section       16  commontables.o(.constdata)
-    .constdata                               0x0002beb0   Section       16  commontables.o(.constdata)
-    .constdata                               0x0002bec0   Section       16  commontables.o(.constdata)
-    .constdata                               0x0002bed0   Section       16  commontables.o(.constdata)
-    .constdata                               0x0002bee0   Section       16  commontables.o(.constdata)
+    i.mcu_common_uart_data_unpack            0x00009e60   Section        0  mcu_api.o(i.mcu_common_uart_data_unpack)
+    mcu_common_uart_data_unpack              0x00009e61   Thumb Code   318  mcu_api.o(i.mcu_common_uart_data_unpack)
+    i.measure_distance                       0x00009fb4   Section        0  distance_measure.o(i.measure_distance)
+    i.micromotion_detection                  0x0000a0a8   Section        0  micromotion_detection.o(i.micromotion_detection)
+    i.my_memcpy                              0x0000a1e8   Section        0  mcu_api.o(i.my_memcpy)
+    i.my_memset                              0x0000a22c   Section        0  mcu_api.o(i.my_memset)
+    i.ring_buffer_get                        0x0000a250   Section        0  ringbuffer.o(i.ring_buffer_get)
+    i.ring_buffer_put                        0x0000a2e4   Section        0  ringbuffer.o(i.ring_buffer_put)
+    i.rtt_init                               0x0000a374   Section        0  main.o(i.rtt_init)
+    i.tick_init                              0x0000a464   Section        0  app.o(i.tick_init)
+    i.uart_receive_input                     0x0000a49c   Section        0  mcu_api.o(i.uart_receive_input)
+    i.uart_transmit_output                   0x0000a4fc   Section        0  protocol.o(i.uart_transmit_output)
+    i.usart_init                             0x0000a514   Section        0  usart.o(i.usart_init)
+    i.vd_calculation                         0x0000a620   Section        0  vd_calculation.o(i.vd_calculation)
+    .constdata                               0x0000a8b4   Section       16  hc32f46x_usart.o(.constdata)
+    .constdata                               0x0000a8c4   Section        9  usart.o(.constdata)
+    .constdata                               0x0000a8d0   Section        8  micromotion_detection.o(.constdata)
+    .constdata                               0x0000a8d8   Section     2048  hamming.o(.constdata)
+    .constdata                               0x0000b0d8   Section     2044  hanning_conv.o(.constdata)
+    .constdata                               0x0000b8d4   Section     2048  freq_linspace.o(.constdata)
+    .constdata                               0x0000c0d4   Section       16  segger_rtt_printf.o(.constdata)
+    _aV2C                                    0x0000c0d4   Data          16  segger_rtt_printf.o(.constdata)
+    .constdata                               0x0000c0e4   Section       96  commontables.o(.constdata)
+    .constdata                               0x0000c144   Section      192  commontables.o(.constdata)
+    .constdata                               0x0000c204   Section      384  commontables.o(.constdata)
+    .constdata                               0x0000c384   Section      768  commontables.o(.constdata)
+    .constdata                               0x0000c684   Section     1536  commontables.o(.constdata)
+    .constdata                               0x0000cc84   Section     3072  commontables.o(.constdata)
+    .constdata                               0x0000d884   Section     6144  commontables.o(.constdata)
+    .constdata                               0x0000f084   Section    12288  commontables.o(.constdata)
+    .constdata                               0x00012084   Section    24576  commontables.o(.constdata)
+    .constdata                               0x00018084   Section       24  commontables.o(.constdata)
+    .constdata                               0x0001809c   Section       48  commontables.o(.constdata)
+    .constdata                               0x000180cc   Section      112  commontables.o(.constdata)
+    .constdata                               0x0001813c   Section      224  commontables.o(.constdata)
+    .constdata                               0x0001821c   Section      480  commontables.o(.constdata)
+    .constdata                               0x000183fc   Section      960  commontables.o(.constdata)
+    .constdata                               0x000187bc   Section     1984  commontables.o(.constdata)
+    .constdata                               0x00018f7c   Section     3968  commontables.o(.constdata)
+    .constdata                               0x00019efc   Section     8064  commontables.o(.constdata)
+    .constdata                               0x0001be7c   Section    32768  commontables.o(.constdata)
+    .constdata                               0x00023e7c   Section    32768  commontables.o(.constdata)
+    .constdata                               0x0002be7c   Section       16  commontables.o(.constdata)
+    .constdata                               0x0002be8c   Section       16  commontables.o(.constdata)
+    .constdata                               0x0002be9c   Section       16  commontables.o(.constdata)
+    .constdata                               0x0002beac   Section       16  commontables.o(.constdata)
+    .constdata                               0x0002bebc   Section       16  commontables.o(.constdata)
+    .constdata                               0x0002becc   Section       16  commontables.o(.constdata)
+    .constdata                               0x0002bedc   Section       16  commontables.o(.constdata)
+    .constdata                               0x0002beec   Section       16  commontables.o(.constdata)
+    .constdata                               0x0002befc   Section       16  commontables.o(.constdata)
     i.EFM_InstructionCacheCmd                0x1fff800c   Section        0  hc32f46x_efm.o(i.EFM_InstructionCacheCmd)
     i.EFM_Lock                               0x1fff8058   Section        0  hc32f46x_efm.o(i.EFM_Lock)
     i.EFM_SetLatency                         0x1fff8070   Section        0  hc32f46x_efm.o(i.EFM_SetLatency)
@@ -1323,54 +1323,54 @@ Image Symbol Table
     leave_s0                                 0x00009c29   Thumb Code    28  app.o(i.leave_s0)
     leave_s1                                 0x00009c55   Thumb Code    68  app.o(i.leave_s1)
     led_init                                 0x00009c9d   Thumb Code   104  led.o(i.led_init)
-    main                                     0x00009d05   Thumb Code   250  main.o(i.main)
-    measure_distance                         0x00009f99   Thumb Code   212  distance_measure.o(i.measure_distance)
-    micromotion_detection                    0x0000a08d   Thumb Code   316  micromotion_detection.o(i.micromotion_detection)
-    my_memcpy                                0x0000a1cd   Thumb Code    68  mcu_api.o(i.my_memcpy)
-    my_memset                                0x0000a211   Thumb Code    34  mcu_api.o(i.my_memset)
-    ring_buffer_get                          0x0000a235   Thumb Code   118  ringbuffer.o(i.ring_buffer_get)
-    ring_buffer_put                          0x0000a2c9   Thumb Code    98  ringbuffer.o(i.ring_buffer_put)
-    rtt_init                                 0x0000a359   Thumb Code    70  main.o(i.rtt_init)
-    tick_init                                0x0000a449   Thumb Code    48  app.o(i.tick_init)
-    uart_receive_input                       0x0000a481   Thumb Code    84  mcu_api.o(i.uart_receive_input)
-    uart_transmit_output                     0x0000a4e1   Thumb Code    20  protocol.o(i.uart_transmit_output)
-    usart_init                               0x0000a4f9   Thumb Code   244  usart.o(i.usart_init)
-    vd_calculation                           0x0000a605   Thumb Code   644  vd_calculation.o(i.vd_calculation)
-    cfar_param                               0x0000a8b4   Data           8  micromotion_detection.o(.constdata)
-    hamming_TAB512                           0x0000a8bc   Data        2048  hamming.o(.constdata)
-    hanning_conv_TAB511                      0x0000b0bc   Data        2044  hanning_conv.o(.constdata)
-    freq_linspace                            0x0000b8b8   Data        2048  freq_linspace.o(.constdata)
-    twiddleCoef_16_q31                       0x0000c0c8   Data          96  commontables.o(.constdata)
-    twiddleCoef_32_q31                       0x0000c128   Data         192  commontables.o(.constdata)
-    twiddleCoef_64_q31                       0x0000c1e8   Data         384  commontables.o(.constdata)
-    twiddleCoef_128_q31                      0x0000c368   Data         768  commontables.o(.constdata)
-    twiddleCoef_256_q31                      0x0000c668   Data        1536  commontables.o(.constdata)
-    twiddleCoef_512_q31                      0x0000cc68   Data        3072  commontables.o(.constdata)
-    twiddleCoef_1024_q31                     0x0000d868   Data        6144  commontables.o(.constdata)
-    twiddleCoef_2048_q31                     0x0000f068   Data       12288  commontables.o(.constdata)
-    twiddleCoef_4096_q31                     0x00012068   Data       24576  commontables.o(.constdata)
-    armBitRevIndexTable_fixed_16             0x00018068   Data          24  commontables.o(.constdata)
-    armBitRevIndexTable_fixed_32             0x00018080   Data          48  commontables.o(.constdata)
-    armBitRevIndexTable_fixed_64             0x000180b0   Data         112  commontables.o(.constdata)
-    armBitRevIndexTable_fixed_128            0x00018120   Data         224  commontables.o(.constdata)
-    armBitRevIndexTable_fixed_256            0x00018200   Data         480  commontables.o(.constdata)
-    armBitRevIndexTable_fixed_512            0x000183e0   Data         960  commontables.o(.constdata)
-    armBitRevIndexTable_fixed_1024           0x000187a0   Data        1984  commontables.o(.constdata)
-    armBitRevIndexTable_fixed_2048           0x00018f60   Data        3968  commontables.o(.constdata)
-    armBitRevIndexTable_fixed_4096           0x00019ee0   Data        8064  commontables.o(.constdata)
-    realCoefAQ31                             0x0001be60   Data       32768  commontables.o(.constdata)
-    realCoefBQ31                             0x00023e60   Data       32768  commontables.o(.constdata)
-    arm_cfft_sR_q31_len16                    0x0002be60   Data          16  commontables.o(.constdata)
-    arm_cfft_sR_q31_len32                    0x0002be70   Data          16  commontables.o(.constdata)
-    arm_cfft_sR_q31_len64                    0x0002be80   Data          16  commontables.o(.constdata)
-    arm_cfft_sR_q31_len128                   0x0002be90   Data          16  commontables.o(.constdata)
-    arm_cfft_sR_q31_len256                   0x0002bea0   Data          16  commontables.o(.constdata)
-    arm_cfft_sR_q31_len512                   0x0002beb0   Data          16  commontables.o(.constdata)
-    arm_cfft_sR_q31_len1024                  0x0002bec0   Data          16  commontables.o(.constdata)
-    arm_cfft_sR_q31_len2048                  0x0002bed0   Data          16  commontables.o(.constdata)
-    arm_cfft_sR_q31_len4096                  0x0002bee0   Data          16  commontables.o(.constdata)
-    Region$$Table$$Base                      0x0002bef0   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0002bf20   Number         0  anon$$obj.o(Region$$Table)
+    main                                     0x00009d05   Thumb Code   274  main.o(i.main)
+    measure_distance                         0x00009fb5   Thumb Code   212  distance_measure.o(i.measure_distance)
+    micromotion_detection                    0x0000a0a9   Thumb Code   316  micromotion_detection.o(i.micromotion_detection)
+    my_memcpy                                0x0000a1e9   Thumb Code    68  mcu_api.o(i.my_memcpy)
+    my_memset                                0x0000a22d   Thumb Code    34  mcu_api.o(i.my_memset)
+    ring_buffer_get                          0x0000a251   Thumb Code   118  ringbuffer.o(i.ring_buffer_get)
+    ring_buffer_put                          0x0000a2e5   Thumb Code    98  ringbuffer.o(i.ring_buffer_put)
+    rtt_init                                 0x0000a375   Thumb Code    70  main.o(i.rtt_init)
+    tick_init                                0x0000a465   Thumb Code    48  app.o(i.tick_init)
+    uart_receive_input                       0x0000a49d   Thumb Code    84  mcu_api.o(i.uart_receive_input)
+    uart_transmit_output                     0x0000a4fd   Thumb Code    20  protocol.o(i.uart_transmit_output)
+    usart_init                               0x0000a515   Thumb Code   244  usart.o(i.usart_init)
+    vd_calculation                           0x0000a621   Thumb Code   644  vd_calculation.o(i.vd_calculation)
+    cfar_param                               0x0000a8d0   Data           8  micromotion_detection.o(.constdata)
+    hamming_TAB512                           0x0000a8d8   Data        2048  hamming.o(.constdata)
+    hanning_conv_TAB511                      0x0000b0d8   Data        2044  hanning_conv.o(.constdata)
+    freq_linspace                            0x0000b8d4   Data        2048  freq_linspace.o(.constdata)
+    twiddleCoef_16_q31                       0x0000c0e4   Data          96  commontables.o(.constdata)
+    twiddleCoef_32_q31                       0x0000c144   Data         192  commontables.o(.constdata)
+    twiddleCoef_64_q31                       0x0000c204   Data         384  commontables.o(.constdata)
+    twiddleCoef_128_q31                      0x0000c384   Data         768  commontables.o(.constdata)
+    twiddleCoef_256_q31                      0x0000c684   Data        1536  commontables.o(.constdata)
+    twiddleCoef_512_q31                      0x0000cc84   Data        3072  commontables.o(.constdata)
+    twiddleCoef_1024_q31                     0x0000d884   Data        6144  commontables.o(.constdata)
+    twiddleCoef_2048_q31                     0x0000f084   Data       12288  commontables.o(.constdata)
+    twiddleCoef_4096_q31                     0x00012084   Data       24576  commontables.o(.constdata)
+    armBitRevIndexTable_fixed_16             0x00018084   Data          24  commontables.o(.constdata)
+    armBitRevIndexTable_fixed_32             0x0001809c   Data          48  commontables.o(.constdata)
+    armBitRevIndexTable_fixed_64             0x000180cc   Data         112  commontables.o(.constdata)
+    armBitRevIndexTable_fixed_128            0x0001813c   Data         224  commontables.o(.constdata)
+    armBitRevIndexTable_fixed_256            0x0001821c   Data         480  commontables.o(.constdata)
+    armBitRevIndexTable_fixed_512            0x000183fc   Data         960  commontables.o(.constdata)
+    armBitRevIndexTable_fixed_1024           0x000187bc   Data        1984  commontables.o(.constdata)
+    armBitRevIndexTable_fixed_2048           0x00018f7c   Data        3968  commontables.o(.constdata)
+    armBitRevIndexTable_fixed_4096           0x00019efc   Data        8064  commontables.o(.constdata)
+    realCoefAQ31                             0x0001be7c   Data       32768  commontables.o(.constdata)
+    realCoefBQ31                             0x00023e7c   Data       32768  commontables.o(.constdata)
+    arm_cfft_sR_q31_len16                    0x0002be7c   Data          16  commontables.o(.constdata)
+    arm_cfft_sR_q31_len32                    0x0002be8c   Data          16  commontables.o(.constdata)
+    arm_cfft_sR_q31_len64                    0x0002be9c   Data          16  commontables.o(.constdata)
+    arm_cfft_sR_q31_len128                   0x0002beac   Data          16  commontables.o(.constdata)
+    arm_cfft_sR_q31_len256                   0x0002bebc   Data          16  commontables.o(.constdata)
+    arm_cfft_sR_q31_len512                   0x0002becc   Data          16  commontables.o(.constdata)
+    arm_cfft_sR_q31_len1024                  0x0002bedc   Data          16  commontables.o(.constdata)
+    arm_cfft_sR_q31_len2048                  0x0002beec   Data          16  commontables.o(.constdata)
+    arm_cfft_sR_q31_len4096                  0x0002befc   Data          16  commontables.o(.constdata)
+    Region$$Table$$Base                      0x0002bf0c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0002bf3c   Number         0  anon$$obj.o(Region$$Table)
     Long Thumb to Thumb Veneer to Ddl_AssertHandler 0x1fff8001   Thumb Code    10  anon$$obj.o(Veneer$$Code)
     EFM_InstructionCacheCmd                  0x1fff800d   Thumb Code    40  hc32f46x_efm.o(i.EFM_InstructionCacheCmd)
     EFM_Lock                                 0x1fff8059   Thumb Code    20  hc32f46x_efm.o(i.EFM_Lock)
@@ -1424,9 +1424,9 @@ Memory Map of the image
 
   Image Entry point : 0x00000281
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x0002c0cc, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x0002c0e8, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x0002bf20, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x0002bf3c, Max: 0x00080000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1777,94 +1777,94 @@ Memory Map of the image
     0x00009c28   0x00009c28   0x0000002c   Code   RO          259    i.leave_s0          app.o
     0x00009c54   0x00009c54   0x00000048   Code   RO          260    i.leave_s1          app.o
     0x00009c9c   0x00009c9c   0x00000068   Code   RO         3480    i.led_init          led.o
-    0x00009d04   0x00009d04   0x00000140   Code   RO           91    i.main              main.o
-    0x00009e44   0x00009e44   0x00000154   Code   RO         4073    i.mcu_common_uart_data_unpack  mcu_api.o
-    0x00009f98   0x00009f98   0x000000f4   Code   RO         3733    i.measure_distance  distance_measure.o
-    0x0000a08c   0x0000a08c   0x00000140   Code   RO         3774    i.micromotion_detection  micromotion_detection.o
-    0x0000a1cc   0x0000a1cc   0x00000044   Code   RO         4088    i.my_memcpy         mcu_api.o
-    0x0000a210   0x0000a210   0x00000022   Code   RO         4089    i.my_memset         mcu_api.o
-    0x0000a232   0x0000a232   0x00000002   PAD
-    0x0000a234   0x0000a234   0x00000094   Code   RO           56    i.ring_buffer_get   ringbuffer.o
-    0x0000a2c8   0x0000a2c8   0x00000090   Code   RO           57    i.ring_buffer_put   ringbuffer.o
-    0x0000a358   0x0000a358   0x000000f0   Code   RO           92    i.rtt_init          main.o
-    0x0000a448   0x0000a448   0x00000038   Code   RO          261    i.tick_init         app.o
-    0x0000a480   0x0000a480   0x00000060   Code   RO         4091    i.uart_receive_input  mcu_api.o
-    0x0000a4e0   0x0000a4e0   0x00000018   Code   RO         4253    i.uart_transmit_output  protocol.o
-    0x0000a4f8   0x0000a4f8   0x0000010c   Code   RO         3591    i.usart_init        usart.o
-    0x0000a604   0x0000a604   0x00000294   Code   RO         3877    i.vd_calculation    vd_calculation.o
-    0x0000a898   0x0000a898   0x00000010   Data   RO         2608    .constdata          hc32f46x_usart.o
-    0x0000a8a8   0x0000a8a8   0x00000009   Data   RO         3592    .constdata          usart.o
-    0x0000a8b1   0x0000a8b1   0x00000003   PAD
-    0x0000a8b4   0x0000a8b4   0x00000008   Data   RO         3775    .constdata          micromotion_detection.o
-    0x0000a8bc   0x0000a8bc   0x00000800   Data   RO         4032    .constdata          hamming.o
-    0x0000b0bc   0x0000b0bc   0x000007fc   Data   RO         4041    .constdata          hanning_conv.o
-    0x0000b8b8   0x0000b8b8   0x00000800   Data   RO         4050    .constdata          freq_linspace.o
-    0x0000c0b8   0x0000c0b8   0x00000010   Data   RO         4717    .constdata          segger_rtt_printf.o
-    0x0000c0c8   0x0000c0c8   0x00000060   Data   RO         5363    .constdata          commontables.o
-    0x0000c128   0x0000c128   0x000000c0   Data   RO         5364    .constdata          commontables.o
-    0x0000c1e8   0x0000c1e8   0x00000180   Data   RO         5365    .constdata          commontables.o
-    0x0000c368   0x0000c368   0x00000300   Data   RO         5366    .constdata          commontables.o
-    0x0000c668   0x0000c668   0x00000600   Data   RO         5367    .constdata          commontables.o
-    0x0000cc68   0x0000cc68   0x00000c00   Data   RO         5368    .constdata          commontables.o
-    0x0000d868   0x0000d868   0x00001800   Data   RO         5369    .constdata          commontables.o
-    0x0000f068   0x0000f068   0x00003000   Data   RO         5370    .constdata          commontables.o
-    0x00012068   0x00012068   0x00006000   Data   RO         5371    .constdata          commontables.o
-    0x00018068   0x00018068   0x00000018   Data   RO         5399    .constdata          commontables.o
-    0x00018080   0x00018080   0x00000030   Data   RO         5400    .constdata          commontables.o
-    0x000180b0   0x000180b0   0x00000070   Data   RO         5401    .constdata          commontables.o
-    0x00018120   0x00018120   0x000000e0   Data   RO         5402    .constdata          commontables.o
-    0x00018200   0x00018200   0x000001e0   Data   RO         5403    .constdata          commontables.o
-    0x000183e0   0x000183e0   0x000003c0   Data   RO         5404    .constdata          commontables.o
-    0x000187a0   0x000187a0   0x000007c0   Data   RO         5405    .constdata          commontables.o
-    0x00018f60   0x00018f60   0x00000f80   Data   RO         5406    .constdata          commontables.o
-    0x00019ee0   0x00019ee0   0x00001f80   Data   RO         5407    .constdata          commontables.o
-    0x0001be60   0x0001be60   0x00008000   Data   RO         5426    .constdata          commontables.o
-    0x00023e60   0x00023e60   0x00008000   Data   RO         5427    .constdata          commontables.o
-    0x0002be60   0x0002be60   0x00000010   Data   RO         5477    .constdata          commontables.o
-    0x0002be70   0x0002be70   0x00000010   Data   RO         5478    .constdata          commontables.o
-    0x0002be80   0x0002be80   0x00000010   Data   RO         5479    .constdata          commontables.o
-    0x0002be90   0x0002be90   0x00000010   Data   RO         5480    .constdata          commontables.o
-    0x0002bea0   0x0002bea0   0x00000010   Data   RO         5481    .constdata          commontables.o
-    0x0002beb0   0x0002beb0   0x00000010   Data   RO         5482    .constdata          commontables.o
-    0x0002bec0   0x0002bec0   0x00000010   Data   RO         5483    .constdata          commontables.o
-    0x0002bed0   0x0002bed0   0x00000010   Data   RO         5484    .constdata          commontables.o
-    0x0002bee0   0x0002bee0   0x00000010   Data   RO         5485    .constdata          commontables.o
-    0x0002bef0   0x0002bef0   0x00000030   Data   RO        10182    Region$$Table       anon$$obj.o
+    0x00009d04   0x00009d04   0x0000015c   Code   RO           91    i.main              main.o
+    0x00009e60   0x00009e60   0x00000154   Code   RO         4073    i.mcu_common_uart_data_unpack  mcu_api.o
+    0x00009fb4   0x00009fb4   0x000000f4   Code   RO         3733    i.measure_distance  distance_measure.o
+    0x0000a0a8   0x0000a0a8   0x00000140   Code   RO         3774    i.micromotion_detection  micromotion_detection.o
+    0x0000a1e8   0x0000a1e8   0x00000044   Code   RO         4088    i.my_memcpy         mcu_api.o
+    0x0000a22c   0x0000a22c   0x00000022   Code   RO         4089    i.my_memset         mcu_api.o
+    0x0000a24e   0x0000a24e   0x00000002   PAD
+    0x0000a250   0x0000a250   0x00000094   Code   RO           56    i.ring_buffer_get   ringbuffer.o
+    0x0000a2e4   0x0000a2e4   0x00000090   Code   RO           57    i.ring_buffer_put   ringbuffer.o
+    0x0000a374   0x0000a374   0x000000f0   Code   RO           92    i.rtt_init          main.o
+    0x0000a464   0x0000a464   0x00000038   Code   RO          261    i.tick_init         app.o
+    0x0000a49c   0x0000a49c   0x00000060   Code   RO         4091    i.uart_receive_input  mcu_api.o
+    0x0000a4fc   0x0000a4fc   0x00000018   Code   RO         4253    i.uart_transmit_output  protocol.o
+    0x0000a514   0x0000a514   0x0000010c   Code   RO         3591    i.usart_init        usart.o
+    0x0000a620   0x0000a620   0x00000294   Code   RO         3877    i.vd_calculation    vd_calculation.o
+    0x0000a8b4   0x0000a8b4   0x00000010   Data   RO         2608    .constdata          hc32f46x_usart.o
+    0x0000a8c4   0x0000a8c4   0x00000009   Data   RO         3592    .constdata          usart.o
+    0x0000a8cd   0x0000a8cd   0x00000003   PAD
+    0x0000a8d0   0x0000a8d0   0x00000008   Data   RO         3775    .constdata          micromotion_detection.o
+    0x0000a8d8   0x0000a8d8   0x00000800   Data   RO         4032    .constdata          hamming.o
+    0x0000b0d8   0x0000b0d8   0x000007fc   Data   RO         4041    .constdata          hanning_conv.o
+    0x0000b8d4   0x0000b8d4   0x00000800   Data   RO         4050    .constdata          freq_linspace.o
+    0x0000c0d4   0x0000c0d4   0x00000010   Data   RO         4717    .constdata          segger_rtt_printf.o
+    0x0000c0e4   0x0000c0e4   0x00000060   Data   RO         5363    .constdata          commontables.o
+    0x0000c144   0x0000c144   0x000000c0   Data   RO         5364    .constdata          commontables.o
+    0x0000c204   0x0000c204   0x00000180   Data   RO         5365    .constdata          commontables.o
+    0x0000c384   0x0000c384   0x00000300   Data   RO         5366    .constdata          commontables.o
+    0x0000c684   0x0000c684   0x00000600   Data   RO         5367    .constdata          commontables.o
+    0x0000cc84   0x0000cc84   0x00000c00   Data   RO         5368    .constdata          commontables.o
+    0x0000d884   0x0000d884   0x00001800   Data   RO         5369    .constdata          commontables.o
+    0x0000f084   0x0000f084   0x00003000   Data   RO         5370    .constdata          commontables.o
+    0x00012084   0x00012084   0x00006000   Data   RO         5371    .constdata          commontables.o
+    0x00018084   0x00018084   0x00000018   Data   RO         5399    .constdata          commontables.o
+    0x0001809c   0x0001809c   0x00000030   Data   RO         5400    .constdata          commontables.o
+    0x000180cc   0x000180cc   0x00000070   Data   RO         5401    .constdata          commontables.o
+    0x0001813c   0x0001813c   0x000000e0   Data   RO         5402    .constdata          commontables.o
+    0x0001821c   0x0001821c   0x000001e0   Data   RO         5403    .constdata          commontables.o
+    0x000183fc   0x000183fc   0x000003c0   Data   RO         5404    .constdata          commontables.o
+    0x000187bc   0x000187bc   0x000007c0   Data   RO         5405    .constdata          commontables.o
+    0x00018f7c   0x00018f7c   0x00000f80   Data   RO         5406    .constdata          commontables.o
+    0x00019efc   0x00019efc   0x00001f80   Data   RO         5407    .constdata          commontables.o
+    0x0001be7c   0x0001be7c   0x00008000   Data   RO         5426    .constdata          commontables.o
+    0x00023e7c   0x00023e7c   0x00008000   Data   RO         5427    .constdata          commontables.o
+    0x0002be7c   0x0002be7c   0x00000010   Data   RO         5477    .constdata          commontables.o
+    0x0002be8c   0x0002be8c   0x00000010   Data   RO         5478    .constdata          commontables.o
+    0x0002be9c   0x0002be9c   0x00000010   Data   RO         5479    .constdata          commontables.o
+    0x0002beac   0x0002beac   0x00000010   Data   RO         5480    .constdata          commontables.o
+    0x0002bebc   0x0002bebc   0x00000010   Data   RO         5481    .constdata          commontables.o
+    0x0002becc   0x0002becc   0x00000010   Data   RO         5482    .constdata          commontables.o
+    0x0002bedc   0x0002bedc   0x00000010   Data   RO         5483    .constdata          commontables.o
+    0x0002beec   0x0002beec   0x00000010   Data   RO         5484    .constdata          commontables.o
+    0x0002befc   0x0002befc   0x00000010   Data   RO         5485    .constdata          commontables.o
+    0x0002bf0c   0x0002bf0c   0x00000030   Data   RO        10182    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x1fff8000, Load base: 0x0002bf20, Size: 0x0000dcd8, Max: 0x0002f000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x1fff8000, Load base: 0x0002bf3c, Size: 0x0000dcd8, Max: 0x0002f000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x1fff8000   0x0002bf20   0x0000000a   Ven    RO        10194    Veneer$$Code        anon$$obj.o
-    0x1fff800a   0x0002bf2a   0x00000002   PAD
-    0x1fff800c   0x0002bf2c   0x0000004c   Code   RO          935    i.EFM_InstructionCacheCmd  hc32f46x_efm.o
-    0x1fff8058   0x0002bf78   0x00000018   Code   RO          937    i.EFM_Lock          hc32f46x_efm.o
-    0x1fff8070   0x0002bf90   0x00000084   Code   RO          946    i.EFM_SetLatency    hc32f46x_efm.o
-    0x1fff80f4   0x0002c014   0x00000014   Code   RO          951    i.EFM_Unlock        hc32f46x_efm.o
-    0x1fff8108   0x0002c028   0x00000004   Data   RW            5    .data               memalloc.o
-    0x1fff810c   0x0002c02c   0x00000024   Data   RW           95    .data               main.o
-    0x1fff8130   0x0002c050   0x00000020   Data   RW          262    .data               app.o
-    0x1fff8150   0x0002c070   0x00000008   Data   RW          368    .data               hc32f46x_utility.o
-    0x1fff8158   0x0002c078   0x00000001   Data   RW         2831    .data               hc32f46x_dmac.o
-    0x1fff8159   0x0002c079   0x00000003   PAD
-    0x1fff815c   0x0002c07c   0x00000004   Data   RW         3001    .data               hc32f46x_exint_nmi_swi.o
-    0x1fff8160   0x0002c080   0x00000008   Data   RW         3307    .data               system_hc32f46x.o
-    0x1fff8168   0x0002c088   0x00000018   Data   RW         3358    .data               adc.o
-    0x1fff8180   0x0002c0a0   0x00000004   Data   RW         3735    .data               distance_measure.o
-    0x1fff8184   0x0002c0a4   0x0000000a   Data   RW         4092    .data               mcu_api.o
-    0x1fff818e   0x0002c0ae   0x00000002   PAD
-    0x1fff8190   0x0002c0b0   0x00000008   Data   RW         4255    .data               protocol.o
-    0x1fff8198   0x0002c0b8   0x0000000d   Data   RW         4410    .data               system.o
-    0x1fff81a5   0x0002c0c5   0x00000003   PAD
-    0x1fff81a8   0x0002c0c8   0x00000004   Data   RW        10149    .data               mc_w.l(stdout.o)
+    0x1fff8000   0x0002bf3c   0x0000000a   Ven    RO        10194    Veneer$$Code        anon$$obj.o
+    0x1fff800a   0x0002bf46   0x00000002   PAD
+    0x1fff800c   0x0002bf48   0x0000004c   Code   RO          935    i.EFM_InstructionCacheCmd  hc32f46x_efm.o
+    0x1fff8058   0x0002bf94   0x00000018   Code   RO          937    i.EFM_Lock          hc32f46x_efm.o
+    0x1fff8070   0x0002bfac   0x00000084   Code   RO          946    i.EFM_SetLatency    hc32f46x_efm.o
+    0x1fff80f4   0x0002c030   0x00000014   Code   RO          951    i.EFM_Unlock        hc32f46x_efm.o
+    0x1fff8108   0x0002c044   0x00000004   Data   RW            5    .data               memalloc.o
+    0x1fff810c   0x0002c048   0x00000024   Data   RW           95    .data               main.o
+    0x1fff8130   0x0002c06c   0x00000020   Data   RW          262    .data               app.o
+    0x1fff8150   0x0002c08c   0x00000008   Data   RW          368    .data               hc32f46x_utility.o
+    0x1fff8158   0x0002c094   0x00000001   Data   RW         2831    .data               hc32f46x_dmac.o
+    0x1fff8159   0x0002c095   0x00000003   PAD
+    0x1fff815c   0x0002c098   0x00000004   Data   RW         3001    .data               hc32f46x_exint_nmi_swi.o
+    0x1fff8160   0x0002c09c   0x00000008   Data   RW         3307    .data               system_hc32f46x.o
+    0x1fff8168   0x0002c0a4   0x00000018   Data   RW         3358    .data               adc.o
+    0x1fff8180   0x0002c0bc   0x00000004   Data   RW         3735    .data               distance_measure.o
+    0x1fff8184   0x0002c0c0   0x0000000a   Data   RW         4092    .data               mcu_api.o
+    0x1fff818e   0x0002c0ca   0x00000002   PAD
+    0x1fff8190   0x0002c0cc   0x00000008   Data   RW         4255    .data               protocol.o
+    0x1fff8198   0x0002c0d4   0x0000000d   Data   RW         4410    .data               system.o
+    0x1fff81a5   0x0002c0e1   0x00000003   PAD
+    0x1fff81a8   0x0002c0e4   0x00000004   Data   RW        10149    .data               mc_w.l(stdout.o)
     0x1fff81ac        -       0x000078f0   Zero   RW            4    .bss                memalloc.o
     0x1ffffa9c        -       0x00004200   Zero   RW           93    .bss                main.o
     0x20003c9c        -       0x00000200   Zero   RW         1364    .bss                hc32f46x_interrupts.o
     0x20003e9c        -       0x000008e4   Zero   RW         3357    .bss                adc.o
     0x20004780        -       0x00000800   Zero   RW         3734    .bss                distance_measure.o
     0x20004f80        -       0x0000029f   Zero   RW         4409    .bss                system.o
-    0x2000521f   0x0002c0cc   0x00000001   PAD
+    0x2000521f   0x0002c0e8   0x00000001   PAD
     0x20005220        -       0x000004b8   Zero   RW         4519    .bss                segger_rtt.o
     0x200056d8        -       0x00000600   Zero   RW           80    STACK               startup_hc32f46x.o
 

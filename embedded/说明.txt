@@ -24,6 +24,6 @@ data_pack: 192字节
 为基准测试例子程序
 
 .\fsk_distance_measure(AC5)(flashcode)(配CD2840ADX的demo1)(定点计算)(OK)
-.\fsk_distance_measure_demo2(AC5)(flashcode)(配CD3032ADX的demo2)(定点计算)(OK)
+.\fsk_distance_measure_demo2(AC5)(flashcode)(配CD3032ADX的demo2)(定点计算)(OK)(12ms)
 
 
