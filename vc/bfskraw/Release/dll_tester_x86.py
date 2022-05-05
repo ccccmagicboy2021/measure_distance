@@ -33,9 +33,11 @@ dll.about()
 
 #init
 dll.init(support_mcu.N32G4FRKE.value)
+#dll.init(support_mcu.HC32F460.value)
 
 #find_cb
 handle = dll.find_cb(support_mcu.N32G4FRKE.value)
+#handle = dll.find_cb(support_mcu.HC32F460.value)
 print(f'handle = {handle}')
 
 #open
