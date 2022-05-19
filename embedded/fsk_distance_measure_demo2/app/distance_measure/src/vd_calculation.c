@@ -159,11 +159,6 @@ int vd_calculation(s16 *data_cumulation_1, int len1, s16 *data_cumulation_2, int
     } else if (measure_info->distance > measure_th.distance_th) {
         measure_info->distance = measure_th.distance_th;
     }
-	
-    if (M2 > M1)
-        measure_info->max_amplitude = M2>>17;
-    else
-        measure_info->max_amplitude = M1>>17;
 
 exit:
     free_mem(magnitude2);

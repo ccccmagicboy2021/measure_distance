@@ -117,7 +117,7 @@ int pd_calculation(s16 *data_cumulation_1, s16 *data_cumulation_2, int len, meas
 
     freq_snr = (float)high_freq_amp / low_freq_amp;
 
-    if (freq_snr > 3) {
+    if (freq_snr > 2) {
         now_dop_info_1 = dop_freq;
         now_dop_info_2 = dop_freq;
         if (now_phase_info_1 > PI) {
@@ -154,6 +154,12 @@ int pd_calculation(s16 *data_cumulation_1, s16 *data_cumulation_2, int len, meas
     measure_info->dop_info_2 = now_dop_info_2;
     measure_info->distance = measure_info->phase_info_2 * COEF;
     measure_info->speed = measure_info->dop_info_2 * COEFC;
+	
+	
+    //if (M2 > M1)
+    //    measure_info->max_amplitude = M2>>17;
+    //else
+    //    measure_info->max_amplitude = M1>>17;
 
 
     return 0;
