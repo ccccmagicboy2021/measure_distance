@@ -3,12 +3,13 @@
 #include "sys.h"
 
 typedef struct {
-	s32 speed;
-	s32 distance;
-	s32 speed_abf;
-	s32 distance_abf;
-	s32 distance_abf_comp;
-    s32 max_amplitude;
+	float distance;
+	float distance_abf;
+	float speed;
+    float phase_info_1;
+	float phase_info_2;
+	float dop_info_1;
+	float dop_info_2;
 } measure_info_t;
 
 typedef struct {

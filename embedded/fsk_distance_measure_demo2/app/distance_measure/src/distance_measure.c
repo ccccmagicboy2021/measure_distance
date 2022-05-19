@@ -1,10 +1,8 @@
 #include "sys.h"
-#include <string.h>
 #include "distance_measure.h"
-#include "vd_calculation.h"
-#include "alphabeta_filter.h"
+#include "pd_calculation.h"
 #include "micromotion_detection.h"
-#include "distance_compensation.h"
+#include "alpha_filter.h"
 
 #ifdef SEND_TO_MATLAB_TEST
 #include "test_usart.h"
@@ -57,26 +55,17 @@ int measure_distance(s16 *data, measure_info_t *measure_info)
 
     cfar_vote = micromotion_detection(data_cumulation_1, CUMULATION_SAMPLE_COUNT / 2, measure_th.sensitivity);
     #ifdef SEND_TO_MATLAB_TEST
-		usart_polling_send_data_no_head(&cfar_vote, 1);
+		//usart_polling_send_data_no_head(&cfar_vote, 1);
     #endif
-    //if (1) {
     if (cfar_vote) {
-        vd_calculation(data_cumulation_1, CUMULATION_SAMPLE_COUNT / 2, data_cumulation_2,
-                        CUMULATION_SAMPLE_COUNT / 2, measure_info);
-        alphabeta_filter(FS, DATA_PACKAGE_COUNT, measure_info);
+        pd_calculation(data_cumulation_1, data_cumulation_2, CUMULATION_SAMPLE_COUNT / 2, measure_info);
+        alpha_filter(FS, DATA_PACKAGE_COUNT, measure_info);
+        //alphabeta_filter(FS, DATA_PACKAGE_COUNT, measure_info);
         //distance_compensation(measure_info);
         #ifdef SEND_TO_MATLAB_TEST
-		    usart_polling_send_data_no_head((u8 *)&measure_info->distance, 4);
-			  usart_polling_send_data_no_head((u8 *)&measure_info->speed, 4);
-		    usart_polling_send_data_no_head((u8 *)&measure_info->distance_abf, 4);
-			  usart_polling_send_data_no_head((u8 *)&measure_info->speed_abf, 4);
-//			  usart_polling_send_data_no_head((u8 *)&measure_info->distance_abf_comp, 4);			
-        #endif		
-    }
-    else
-    {
-        measure_info->speed_abf = 0;
-        measure_info->max_amplitude = 0;
+		    //usart_polling_send_data_no_head((u8 *)&measure_info->distance, 4);
+			  //usart_polling_send_data_no_head((u8 *)&measure_info->speed, 4);
+        #endif
     }
 
 exit:

@@ -22,10 +22,10 @@
 extern updata_data_t updata_data;
 #endif
 
-const unsigned char version_num[4] = {6, 0, 2, 0};  // v0.2.0.6
+const unsigned char version_num[4] = {1, 1, 2, 0};  // v0.2.1.1
 
 measure_th_t measure_th = {
-	.sensitivity = 2560,  // 2.5 * 2 ^ 10
+	.sensitivity = 2048,  // 2 * 2 ^ 10
 	.time_th = -65536,  // (-2f) << 15
 	.freq_th = 27853,  // (0.85f) << 15
 	.distance_th = 12288,  // (12) << 10
@@ -83,8 +83,6 @@ int32_t main(void)
 
     gpio_init();
 
-    GPIO_TEST_SET();
-
     init_mem();
 
 #ifdef SEND_TO_MATLAB_TEST
@@ -111,13 +109,13 @@ int32_t main(void)
             diff = end_tick - start_tick;
             
 #ifndef SEND_TO_MATLAB_TEST
-            updata_data.speed = measure_info.speed_abf;
-            updata_data.distance = measure_info.distance_abf;
+            updata_data.speed = (s32)(measure_info.speed * 1024);
+            updata_data.distance = (s32)(measure_info.distance_abf * 1024);
             //all_data_update();
             
             distance_f = (int)updata_data.distance/1024.f;
             speed_f = (int)updata_data.speed/1024.f;
-            mag_f = measure_info.max_amplitude;
+            //mag_f = measure_info.max_amplitude;
             
 #ifdef DEBUG_MODE
             printf("/*CD2840ADX,%.3lf,%.3lf,%d,%d,%d,%d*/", distance_f, speed_f, state, diff_tick, mag_f, diff);

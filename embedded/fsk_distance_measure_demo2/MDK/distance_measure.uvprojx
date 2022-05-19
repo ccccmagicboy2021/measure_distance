@@ -655,21 +655,6 @@
               <FilePath>..\app\distance_measure\src\micromotion_detection.c</FilePath>
             </File>
             <File>
-              <FileName>vd_calculation.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\app\distance_measure\src\vd_calculation.c</FilePath>
-            </File>
-            <File>
-              <FileName>alphabeta_filter.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\app\distance_measure\src\alphabeta_filter.c</FilePath>
-            </File>
-            <File>
-              <FileName>distance_compensation.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\app\distance_measure\src\distance_compensation.c</FilePath>
-            </File>
-            <File>
               <FileName>filter.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\app\distance_measure\src\filter.c</FilePath>
@@ -703,6 +688,16 @@
               <FileName>comp_table.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\app\distance_measure\src\comp_table.c</FilePath>
+            </File>
+            <File>
+              <FileName>alpha_filter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\distance_measure\src\alpha_filter.c</FilePath>
+            </File>
+            <File>
+              <FileName>pd_calculation.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\distance_measure\src\pd_calculation.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1344,21 +1339,6 @@
               <FilePath>..\app\distance_measure\src\micromotion_detection.c</FilePath>
             </File>
             <File>
-              <FileName>vd_calculation.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\app\distance_measure\src\vd_calculation.c</FilePath>
-            </File>
-            <File>
-              <FileName>alphabeta_filter.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\app\distance_measure\src\alphabeta_filter.c</FilePath>
-            </File>
-            <File>
-              <FileName>distance_compensation.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\app\distance_measure\src\distance_compensation.c</FilePath>
-            </File>
-            <File>
               <FileName>filter.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\app\distance_measure\src\filter.c</FilePath>
@@ -1392,6 +1372,16 @@
               <FileName>comp_table.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\app\distance_measure\src\comp_table.c</FilePath>
+            </File>
+            <File>
+              <FileName>alpha_filter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\distance_measure\src\alpha_filter.c</FilePath>
+            </File>
+            <File>
+              <FileName>pd_calculation.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\distance_measure\src\pd_calculation.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2084,21 +2074,6 @@
               <FilePath>..\app\distance_measure\src\micromotion_detection.c</FilePath>
             </File>
             <File>
-              <FileName>vd_calculation.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\app\distance_measure\src\vd_calculation.c</FilePath>
-            </File>
-            <File>
-              <FileName>alphabeta_filter.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\app\distance_measure\src\alphabeta_filter.c</FilePath>
-            </File>
-            <File>
-              <FileName>distance_compensation.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\app\distance_measure\src\distance_compensation.c</FilePath>
-            </File>
-            <File>
               <FileName>filter.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\app\distance_measure\src\filter.c</FilePath>
@@ -2132,6 +2107,16 @@
               <FileName>comp_table.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\app\distance_measure\src\comp_table.c</FilePath>
+            </File>
+            <File>
+              <FileName>alpha_filter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\distance_measure\src\alpha_filter.c</FilePath>
+            </File>
+            <File>
+              <FileName>pd_calculation.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\distance_measure\src\pd_calculation.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2824,21 +2809,6 @@
               <FilePath>..\app\distance_measure\src\micromotion_detection.c</FilePath>
             </File>
             <File>
-              <FileName>vd_calculation.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\app\distance_measure\src\vd_calculation.c</FilePath>
-            </File>
-            <File>
-              <FileName>alphabeta_filter.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\app\distance_measure\src\alphabeta_filter.c</FilePath>
-            </File>
-            <File>
-              <FileName>distance_compensation.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\app\distance_measure\src\distance_compensation.c</FilePath>
-            </File>
-            <File>
               <FileName>filter.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\app\distance_measure\src\filter.c</FilePath>
@@ -2872,6 +2842,16 @@
               <FileName>comp_table.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\app\distance_measure\src\comp_table.c</FilePath>
+            </File>
+            <File>
+              <FileName>alpha_filter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\distance_measure\src\alpha_filter.c</FilePath>
+            </File>
+            <File>
+              <FileName>pd_calculation.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\distance_measure\src\pd_calculation.c</FilePath>
             </File>
           </Files>
         </Group>
