@@ -574,49 +574,37 @@ static uint8_t mcu_common_uart_data_unpack(uint8_t data)
 {
     uint8_t ret = FALSE;
 
-    bt_uart_rx_buf_temp[0] = data;
-
-    if(bt_uart_rx_buf_temp[0] == 0xAA)  //only one byte header
+    if (current_uart_rev_state_type == MCU_UART_REV_STATE_FOUND_NULL)
     {
-        my_memset(bt_uart_rx_buf,0,sizeof(bt_uart_rx_buf)); //clear buffer
-        my_memcpy(bt_uart_rx_buf,bt_uart_rx_buf_temp,1);    //copy only one byte: bt_uart_rx_buf[0]
-        my_memset(bt_uart_rx_buf_temp,0,3);                 //clear 3bytes temp buffer
-        UART_RX_Count = 1;                                  //one byte bypass
+        bt_uart_rx_buf_temp[0] = bt_uart_rx_buf_temp[1];
+        bt_uart_rx_buf_temp[1] = data;
+    }
+
+    if((bt_uart_rx_buf_temp[0]==FRAME_FIRST)&&(bt_uart_rx_buf_temp[1]==FRAME_SECOND))
+    {
+        my_memset(bt_uart_rx_buf,0,sizeof(bt_uart_rx_buf));
+        my_memcpy(bt_uart_rx_buf,bt_uart_rx_buf_temp,2);
+        my_memset(bt_uart_rx_buf_temp,0,2);
+        UART_RX_Count = 2;
         current_uart_rev_state_type = MCU_UART_REV_STATE_FOUND_HEAD;
         uart_data_len = 0;
         return ret;
     }
-    
     switch(current_uart_rev_state_type)
     {
     case MCU_UART_REV_STATE_FOUND_NULL:
         break;
     case MCU_UART_REV_STATE_FOUND_HEAD:
-        bt_uart_rx_buf[UART_RX_Count++] = data;
-        current_uart_rev_state_type = MCU_UART_REV_STATE_FOUND_CMD;//find 0x01 0x02 0x03
+        bt_uart_rx_buf[UART_RX_Count++] = data; //data length
+        current_uart_rev_state_type = MCU_UART_REV_STATE_FOUND_CMD;
+        uart_data_len = data - 2;
         break;
     case MCU_UART_REV_STATE_FOUND_CMD:
-        bt_uart_rx_buf[UART_RX_Count++] = data;
-        current_uart_rev_state_type = MCU_UART_REV_STATE_FOUND_LEN_H;
-        break;
-    case MCU_UART_REV_STATE_FOUND_LEN_H:
-        bt_uart_rx_buf[UART_RX_Count++] = data;
-        uart_data_len = (bt_uart_rx_buf[UART_RX_Count-2]<<8)|bt_uart_rx_buf[UART_RX_Count-1];
-        if(uart_data_len != 0)
-        {
-            my_memset(bt_uart_rx_buf_temp,0,3);
-            my_memset(bt_uart_rx_buf,0,sizeof(bt_uart_rx_buf));
-            UART_RX_Count = 0;
-            current_uart_rev_state_type = MCU_UART_REV_STATE_FOUND_NULL;
-            uart_data_len = 0;
-        }
-        else
-        {
-            current_uart_rev_state_type = MCU_UART_REV_STATE_FOUND_DATA;
-        }
+        bt_uart_rx_buf[UART_RX_Count++] = data; //cmd
+        current_uart_rev_state_type = MCU_UART_REV_STATE_FOUND_LEN_L;
         break;
     case MCU_UART_REV_STATE_FOUND_LEN_L:
-        bt_uart_rx_buf[UART_RX_Count++] = data;   //DATA
+        bt_uart_rx_buf[UART_RX_Count++] = data;   //DATA 
         uart_data_len--;
         if(uart_data_len==0)
         {
@@ -628,7 +616,7 @@ static uint8_t mcu_common_uart_data_unpack(uint8_t data)
         ret = TRUE;
         break;
     default:
-        my_memset(bt_uart_rx_buf_temp,0,3);
+        my_memset(bt_uart_rx_buf_temp,0,2);
         my_memset(bt_uart_rx_buf,0,sizeof(bt_uart_rx_buf));
         UART_RX_Count = 0;
         current_uart_rev_state_type = MCU_UART_REV_STATE_FOUND_NULL;
@@ -659,9 +647,9 @@ void bt_uart_service(void)
     if(mcu_common_uart_data_unpack(Queue_Read_Byte()))
     {
 		data_handle(0);
-		rx_value_len = bt_uart_rx_buf[3] * 0x100 + bt_uart_rx_buf[2] + PROTOCOL_HEAD;
+		rx_value_len = bt_uart_rx_buf[2];
         CV_LOG("rx: %d bytes\r\n", rx_value_len);
-		my_memset(bt_uart_rx_buf_temp,0,3);
+		my_memset(bt_uart_rx_buf_temp,0,2);
         my_memset(bt_uart_rx_buf,0,sizeof(bt_uart_rx_buf));
         UART_RX_Count = 0;
         current_uart_rev_state_type = MCU_UART_REV_STATE_FOUND_NULL;

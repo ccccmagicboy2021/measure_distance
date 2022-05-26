@@ -282,7 +282,7 @@ void data_handle(unsigned short offset)
   
   unsigned char ret;
   unsigned short i,total_len;
-  unsigned char cmd_type = bt_uart_rx_buf[offset + 1];
+  unsigned char cmd_type = bt_uart_rx_buf[offset + 3];
 
 
   //signed char bt_rssi;

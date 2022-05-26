@@ -22,7 +22,7 @@
 extern updata_data_t updata_data;
 #endif
 
-const unsigned char version_num[4] = {1, 1, 2, 0};  // v0.2.1.1
+const unsigned char version_num[4] = {2, 1, 2, 0};  // v0.2.1.2
 
 measure_th_t measure_th = {
 	.sensitivity = 2048,  // 2 * 2 ^ 10
@@ -113,8 +113,8 @@ int32_t main(void)
             updata_data.distance = (s32)(measure_info.distance_abf * 1024);
             //all_data_update();
             
-            distance_f = (int)updata_data.distance/1024.f;
-            speed_f = (int)updata_data.speed/1024.f;
+            distance_f = measure_info.speed;
+            speed_f = measure_info.distance_abf;
             //mag_f = measure_info.max_amplitude;
             
 #ifdef DEBUG_MODE

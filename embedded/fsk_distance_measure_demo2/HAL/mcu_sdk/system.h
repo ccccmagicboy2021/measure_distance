@@ -123,7 +123,7 @@ typedef struct
 #define         PROTOCOL_HEAD           0x05                                            //Fixed protocol header length
 #define         FIRM_UPDATA_SIZE        200                                            //Upgrade package size
 #define         FRAME_FIRST             0x55
-#define         FRAME_SECOND            0xaa
+#define         FRAME_SECOND            0x5A
 //============================================================================= 
 SYSTEM_EXTERN unsigned char volatile bt_queue_buf[PROTOCOL_HEAD + BT_UART_QUEUE_LMT];  //Serial queue buffer
 SYSTEM_EXTERN unsigned char bt_uart_rx_buf[PROTOCOL_HEAD + BT_UART_RECV_BUF_LMT];         //Serial receive buffer
