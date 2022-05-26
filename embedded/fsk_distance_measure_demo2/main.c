@@ -113,8 +113,8 @@ int32_t main(void)
             updata_data.distance = (s32)(measure_info.distance_abf * 1024);
             //all_data_update();
             
-            distance_f = measure_info.speed;
-            speed_f = measure_info.distance_abf;
+            distance_f = measure_info.distance_abf;
+            speed_f = measure_info.speed;
             //mag_f = measure_info.max_amplitude;
             
 #ifdef DEBUG_MODE

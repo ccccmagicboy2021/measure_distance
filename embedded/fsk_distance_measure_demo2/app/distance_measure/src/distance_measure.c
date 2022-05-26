@@ -67,6 +67,10 @@ int measure_distance(s16 *data, measure_info_t *measure_info)
 			  //usart_polling_send_data_no_head((u8 *)&measure_info->speed, 4);
         #endif
     }
+	else
+	{
+		measure_info->speed = 0.0f;
+	}
 
 exit:
     return 0;
