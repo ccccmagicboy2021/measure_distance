@@ -21,6 +21,25 @@ enum app_state
     LEAVE_S1,
 };
 
+enum radar_state
+{
+	RAD_OFF=0,
+	RAD_ON,     //default
+};
+
+enum uart_bitrate
+{
+	BIT_115200=1,   //default
+	BIT_57600,
+    BIT_38400,
+    BIT_28800,
+    BIT_19200,
+    BIT_14400,
+    BIT_9600,   
+    BIT_4800,
+    BIT_2400,
+    BIT_1200,
+};
 
 
 void app(void);

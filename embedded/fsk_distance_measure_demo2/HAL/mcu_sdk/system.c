@@ -49,7 +49,9 @@ description: Initial version
 #include "sys.h"
 
 //
-extern float dis_limit1;
+extern uint16_t dis_limit1;
+extern int radar_onoff_;
+extern float distance_f;
 //
 //
 extern const DOWNLOAD_CMD_S download_cmd[];
@@ -132,6 +134,162 @@ Input parameter: fr_type:frame type
            len:data length
 Return parameter: none
 *****************************************************************************/
+void send_d1_response(uint8_t data0)
+{
+    uint8_t sum = 0;
+    //
+    uint8_t data_byte = 0;
+    
+    data_byte = 0x55;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = 0xA5;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = 0x03;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = 0xD1;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = data0;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    uart_transmit_output(sum);
+    
+    CV_LOG("cmd: %d, data0: %d\r\n", 0xD1, data0);
+}
+
+void send_d2_response(uint8_t data0)
+{
+    uint8_t sum = 0;
+    //
+    uint8_t data_byte = 0;
+    
+    data_byte = 0x55;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = 0xA5;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = 0x03;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = 0xD2;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = data0;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    uart_transmit_output(sum);
+    
+    CV_LOG("cmd: %d, data0: %d\r\n", 0xD2, data0);
+}
+void send_d3_response()
+{
+    uint8_t sum = 0;
+    //
+    uint8_t data_byte = 0;
+    
+    uint16_t dis_cm = distance_f*100;
+    
+    data_byte = 0x55;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = 0xA5;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = 0x0A;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = 0xD3;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = dis_cm >> 8;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = dis_cm & 0x00FF;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = 0x00;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = 0x00;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = 0x00;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = 0x00;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = 0x00;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = radar_onoff_;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    uart_transmit_output(sum);
+    
+    CV_LOG("cmd: %d, distance: %d cm, radar onoff: %d\r\n", 0xD3, dis_cm, radar_onoff_);
+}
+void send_d4_response(uint16_t data0)
+{
+    uint8_t sum = 0;
+    //
+    uint8_t data_byte = 0;
+    
+    data_byte = 0x55;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = 0xA5;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = 0x04;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = 0xD4;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = data0 >> 8;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    data_byte = data0 & 0x00FF;
+    uart_transmit_output(data_byte);
+    sum += data_byte;
+    
+    uart_transmit_output(sum);
+    
+    CV_LOG("cmd: %d, data0: %d\r\n", 0xD4, data0);
+}
+
 void bt_uart_write_frame(unsigned char fr_type, unsigned short len)
 {
   unsigned char check_sum = 0;
@@ -294,28 +452,77 @@ void data_handle(unsigned short offset)
   long long time_stamp_ms;
 #endif
 
-  CV_LOG("cmd: %d\r\n", cmd_type);
+  total_len = bt_uart_rx_buf[2] - 2;// minus cmd and sum
+  
+  CV_LOG("cmd: %d, length: %d\r\n", cmd_type, total_len);
   
   switch(cmd_type)
   {
-  case 0x01://
-    dis_limit1 = 1.8f;
+  case 0xD1:// ON/OFF radar
+    if (bt_uart_rx_buf[4] == RAD_ON)
+    {
+        radar_onoff_ = RAD_ON;
+        send_d1_response(bt_uart_rx_buf[4]);
+    }
+    else if (bt_uart_rx_buf[4] == RAD_OFF)
+    {
+        radar_onoff_ = RAD_OFF;
+        send_d1_response(bt_uart_rx_buf[4]);
+    }
     //
     break;
-  case 0x02://'
-    dis_limit1 = 1.6f;
+  case 0xD2:// set bitrate
+    if (bt_uart_rx_buf[4] == BIT_115200)
+    {
+        //
+        send_d2_response(bt_uart_rx_buf[4]);
+    }
+    else if (bt_uart_rx_buf[4] == BIT_57600)
+    {
+    
+    }
+    else if (bt_uart_rx_buf[4] == BIT_38400)
+    {
+    
+    }
+    else if (bt_uart_rx_buf[4] == BIT_28800)
+    {
+    
+    }
+    else if (bt_uart_rx_buf[4] == BIT_19200)
+    {
+    
+    }
+    else if (bt_uart_rx_buf[4] == BIT_14400)
+    {
+    
+    }
+    else if (bt_uart_rx_buf[4] == BIT_9600)
+    {
+        //
+        send_d2_response(bt_uart_rx_buf[4]);
+    }
+    else if (bt_uart_rx_buf[4] == BIT_4800)
+    {
+    
+    }
+    else if (bt_uart_rx_buf[4] == BIT_2400)
+    {
+    
+    }
+    else if (bt_uart_rx_buf[4] == BIT_1200)
+    {
+    
+    }
     //
     break;
-  case 0x03://
-    dis_limit1 = 1.4f;
+  case 0xD3:// check distance
+    send_d3_response();
     //
     break;
-  case 0x04://
-    dis_limit1 = 1.2f;
-    //
-    break;
-  case 0x05://
-    dis_limit1 = 1.0f;
+  case 0xD4:// set o output at where(unit: cm)
+    dis_limit1 = (bt_uart_rx_buf[4]<<8)|bt_uart_rx_buf[5];
+    send_d4_response(dis_limit1);
     //
     break;
   default:

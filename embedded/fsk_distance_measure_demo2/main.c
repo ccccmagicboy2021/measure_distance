@@ -118,7 +118,7 @@ int32_t main(void)
             //mag_f = measure_info.max_amplitude;
             
 #ifdef DEBUG_MODE
-            printf("/*CD2840ADX,%.3lf,%.3lf,%d,%d,%d,%d*/", distance_f, speed_f, state, diff_tick, mag_f, diff);
+            //printf("/*CD2840ADX,%.3lf,%.3lf,%d,%d,%d,%d*/", distance_f, speed_f, state, diff_tick, mag_f, diff);
 #endif           
             app();
         

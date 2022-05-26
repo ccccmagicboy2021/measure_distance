@@ -23,7 +23,7 @@ data_pack: 192字节
 .\test_dhrystone(AC6)(flashcode)(ramcode)(OK)
 为基准测试例子程序
 
-.\fsk_distance_measure(AC5)(flashcode)(配CD2840ADX的demo1)(定点计算)(OK)(使用旧算法12ms)(app配套)
-.\fsk_distance_measure_demo2(AC5)(flashcode)(配CD3032ADX的demo2)(定点计算)(OK)(使用最新的算法4.3ms)(使用用户通信协议)
+.\fsk_distance_measure(AC5)(flashcode)(配CD2840ADX的demo1)(定点计算)(OK)(使用旧算法12ms)(app配套)(重点到接近与离开)
+.\fsk_distance_measure_demo2(AC5)(flashcode)(配CD3032ADX的demo2)(定点计算)(OK)(使用最新的算法4.3ms)(使用用户通信协议)(重点在某一位置内外O口输出)
 
 

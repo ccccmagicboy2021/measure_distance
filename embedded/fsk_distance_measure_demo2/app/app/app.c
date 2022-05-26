@@ -5,10 +5,14 @@
 #include "hc32_ddl.h"
 #include "math.h"
 
+////////////
+#define DIS_INIT_CM 100
+int radar_onoff_ = RAD_ON;
+////////////
 extern int state;
 extern int next_state;
 extern float distance_f;
-float dis_limit1 = 1.8f;
+uint16_t dis_limit1 = DIS_INIT_CM;
 extern float speed_f;
 extern uint32_t mag_f;
 
@@ -38,14 +42,21 @@ void close_process(void)
 	PORT_SetBits(PortA, Pin01);
 	PORT_ResetBits(PortA, Pin05);
     //PORT_ResetBits(PortA, Pin08);  //OUT
-    Timera1_en(1);
+    if (radar_onoff_ == RAD_ON)
+    {
+        Timera1_en(1);
+    }
+    else if (radar_onoff_ == RAD_OFF)
+    {
+        Timera1_en(0);
+    }
     
-    uart_transmit_output(0xEE);
-    uart_transmit_output(0x11);
-    uart_transmit_output(0xEE);
-    uart_transmit_output(0x11);
-    uart_transmit_output(0xEE);
-    uart_transmit_output(0x11);
+    //uart_transmit_output(0xEE);
+    //uart_transmit_output(0x11);
+    //uart_transmit_output(0xEE);
+    //uart_transmit_output(0x11);
+    //uart_transmit_output(0xEE);
+    //uart_transmit_output(0x11);
     state = IDLE;
     leave_en = false;
 }
@@ -65,19 +76,19 @@ void leave_s1(void)
     //PORT_SetBits(PortA, Pin08);  //OUT
     Timera1_en(0);
     
-    uart_transmit_output(0xDE);
-    uart_transmit_output(0x21);
-    uart_transmit_output(0xDE);
-    uart_transmit_output(0x21);
-    uart_transmit_output(0xDE);
-    uart_transmit_output(0x21);
+    //uart_transmit_output(0xDE);
+    //uart_transmit_output(0x21);
+    //uart_transmit_output(0xDE);
+    //uart_transmit_output(0x21);
+    //uart_transmit_output(0xDE);
+    //uart_transmit_output(0x21);
     
     state = IDLE;
 }
 
 void idle_process(void)
 {    
-    if (dis_limit1 >= distance_f)
+    if (dis_limit1 >= distance_f*100)
     {
         //if (0 < speed_f)
         {

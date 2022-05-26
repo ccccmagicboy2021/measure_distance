@@ -601,7 +601,14 @@ static uint8_t mcu_common_uart_data_unpack(uint8_t data)
         break;
     case MCU_UART_REV_STATE_FOUND_CMD:
         bt_uart_rx_buf[UART_RX_Count++] = data; //cmd
-        current_uart_rev_state_type = MCU_UART_REV_STATE_FOUND_LEN_L;
+        if (uart_data_len==0)
+        {
+            current_uart_rev_state_type = MCU_UART_REV_STATE_FOUND_DATA;
+        }
+        else
+        {
+            current_uart_rev_state_type = MCU_UART_REV_STATE_FOUND_LEN_L;        
+        }
         break;
     case MCU_UART_REV_STATE_FOUND_LEN_L:
         bt_uart_rx_buf[UART_RX_Count++] = data;   //DATA 
