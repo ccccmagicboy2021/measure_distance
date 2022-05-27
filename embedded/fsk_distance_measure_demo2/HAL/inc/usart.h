@@ -6,7 +6,7 @@
 #define USART_CH                        (M4_USART3)
 
 /* USART baudrate definition */
-#define USART_BAUDRATE                  (9600ul)
+#define USART_BAUDRATE                  (115200ul)
 
 
 /* USART RX Port/Pin definition */

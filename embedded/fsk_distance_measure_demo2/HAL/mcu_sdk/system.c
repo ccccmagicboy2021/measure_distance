@@ -474,45 +474,83 @@ void data_handle(unsigned short offset)
   case 0xD2:// set bitrate
     if (bt_uart_rx_buf[4] == BIT_115200)
     {
-        //
+        *((unsigned int *)(UART3_CR1)) = 0x80000000;
+        *((unsigned int *)(UART3_BRR)) = 0x6BFE;
+        *((unsigned int *)(UART3_PR)) = 0x0;
+        *((unsigned int *)(UART3_CR1)) = 0xA000802C;
         send_d2_response(bt_uart_rx_buf[4]);
     }
     else if (bt_uart_rx_buf[4] == BIT_57600)
     {
-    
+        *((unsigned int *)(UART3_CR1)) = 0x80000000;
+        *((unsigned int *)(UART3_BRR)) = (uint32_t)0x0000D8FFul;
+        *((unsigned int *)(UART3_PR)) = (uint32_t)0x00000000ul;
+        *((unsigned int *)(UART3_CR1)) = 0xA000802C;
+        send_d2_response(bt_uart_rx_buf[4]);    
     }
     else if (bt_uart_rx_buf[4] == BIT_38400)
     {
-    
+        *((unsigned int *)(UART3_CR1)) = 0x80000000;
+        *((unsigned int *)(UART3_BRR)) = 0x50FE;
+        *((unsigned int *)(UART3_PR)) = 0x1;
+        *((unsigned int *)(UART3_CR1)) = 0xA000802C;
+        send_d2_response(bt_uart_rx_buf[4]);
     }
     else if (bt_uart_rx_buf[4] == BIT_28800)
     {
-    
+        *((unsigned int *)(UART3_CR1)) = 0x80000000;
+        *((unsigned int *)(UART3_BRR)) = 0x6BFE;
+        *((unsigned int *)(UART3_PR)) = 0x1;
+        *((unsigned int *)(UART3_CR1)) = 0xA000802C;
+        send_d2_response(bt_uart_rx_buf[4]);
     }
     else if (bt_uart_rx_buf[4] == BIT_19200)
     {
-    
+        *((unsigned int *)(UART3_CR1)) = 0x80000000;
+        *((unsigned int *)(UART3_BRR)) = 0xA1FE;
+        *((unsigned int *)(UART3_PR)) = 0x1;
+        *((unsigned int *)(UART3_CR1)) = 0xA000802C;
+        send_d2_response(bt_uart_rx_buf[4]);
     }
     else if (bt_uart_rx_buf[4] == BIT_14400)
     {
-    
+        *((unsigned int *)(UART3_CR1)) = 0x80000000;
+        *((unsigned int *)(UART3_BRR)) = 0xD8FF;
+        *((unsigned int *)(UART3_PR)) = 0x1;
+        *((unsigned int *)(UART3_CR1)) = 0xA000802C;
+        send_d2_response(bt_uart_rx_buf[4]);      
     }
     else if (bt_uart_rx_buf[4] == BIT_9600)
     {
-        //
+        *((unsigned int *)(UART3_CR1)) = 0x80000000;
+        *((unsigned int *)(UART3_BRR)) = 0x50FE;
+        *((unsigned int *)(UART3_PR)) = 0x2;
+        *((unsigned int *)(UART3_CR1)) = 0xA000802C;
         send_d2_response(bt_uart_rx_buf[4]);
     }
     else if (bt_uart_rx_buf[4] == BIT_4800)
     {
-    
+        *((unsigned int *)(UART3_CR1)) = 0x80000000;
+        *((unsigned int *)(UART3_BRR)) = 0xA1FE;
+        *((unsigned int *)(UART3_PR)) = 0x2;
+        *((unsigned int *)(UART3_CR1)) = 0xA000802C;
+        send_d2_response(bt_uart_rx_buf[4]);
     }
     else if (bt_uart_rx_buf[4] == BIT_2400)
     {
-    
+        *((unsigned int *)(UART3_CR1)) = 0x80000000;
+        *((unsigned int *)(UART3_BRR)) = 0x50FE;
+        *((unsigned int *)(UART3_PR)) = 0x3;
+        *((unsigned int *)(UART3_CR1)) = 0xA000802C;
+        send_d2_response(bt_uart_rx_buf[4]);
     }
     else if (bt_uart_rx_buf[4] == BIT_1200)
     {
-    
+        *((unsigned int *)(UART3_CR1)) = 0x80000000;
+        *((unsigned int *)(UART3_BRR)) = 0xA1FE;
+        *((unsigned int *)(UART3_PR)) = 0x3;
+        *((unsigned int *)(UART3_CR1)) = 0xA000802C;
+        send_d2_response(bt_uart_rx_buf[4]);
     }
     //
     break;

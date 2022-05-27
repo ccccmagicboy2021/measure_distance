@@ -59,7 +59,7 @@ void usart_init(void)
                              PWC_FCG1_PERIPH_USART3 | PWC_FCG1_PERIPH_USART4;
     const stc_usart_uart_init_t stcInitCfg = {
         UsartIntClkCkNoOutput,
-        UsartClkDiv_16,
+        UsartClkDiv_1,
         UsartDataBits8,
         UsartDataLsbFirst,
         UsartOneStopBit,

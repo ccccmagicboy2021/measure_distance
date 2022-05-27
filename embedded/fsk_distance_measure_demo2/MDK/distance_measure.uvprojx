@@ -550,11 +550,6 @@
               <FilePath>..\driver\src\hc32f46x_interrupts.c</FilePath>
             </File>
             <File>
-              <FileName>hc32f46x_pwc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\hc32f46x_pwc.c</FilePath>
-            </File>
-            <File>
               <FileName>hc32f46x_sram.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\driver\src\hc32f46x_sram.c</FilePath>
@@ -583,6 +578,11 @@
               <FileName>hc32f46x_timera.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\driver\src\hc32f46x_timera.c</FilePath>
+            </File>
+            <File>
+              <FileName>hc32f46x_pwc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\src\hc32f46x_pwc.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1234,11 +1234,6 @@
               <FilePath>..\driver\src\hc32f46x_interrupts.c</FilePath>
             </File>
             <File>
-              <FileName>hc32f46x_pwc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\hc32f46x_pwc.c</FilePath>
-            </File>
-            <File>
               <FileName>hc32f46x_sram.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\driver\src\hc32f46x_sram.c</FilePath>
@@ -1267,6 +1262,11 @@
               <FileName>hc32f46x_timera.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\driver\src\hc32f46x_timera.c</FilePath>
+            </File>
+            <File>
+              <FileName>hc32f46x_pwc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\src\hc32f46x_pwc.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1969,11 +1969,6 @@
               <FilePath>..\driver\src\hc32f46x_interrupts.c</FilePath>
             </File>
             <File>
-              <FileName>hc32f46x_pwc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\hc32f46x_pwc.c</FilePath>
-            </File>
-            <File>
               <FileName>hc32f46x_sram.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\driver\src\hc32f46x_sram.c</FilePath>
@@ -2002,6 +1997,11 @@
               <FileName>hc32f46x_timera.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\driver\src\hc32f46x_timera.c</FilePath>
+            </File>
+            <File>
+              <FileName>hc32f46x_pwc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\src\hc32f46x_pwc.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2704,11 +2704,6 @@
               <FilePath>..\driver\src\hc32f46x_interrupts.c</FilePath>
             </File>
             <File>
-              <FileName>hc32f46x_pwc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\hc32f46x_pwc.c</FilePath>
-            </File>
-            <File>
               <FileName>hc32f46x_sram.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\driver\src\hc32f46x_sram.c</FilePath>
@@ -2737,6 +2732,11 @@
               <FileName>hc32f46x_timera.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\driver\src\hc32f46x_timera.c</FilePath>
+            </File>
+            <File>
+              <FileName>hc32f46x_pwc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\src\hc32f46x_pwc.c</FilePath>
             </File>
           </Files>
         </Group>

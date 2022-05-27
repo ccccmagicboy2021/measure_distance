@@ -41,7 +41,7 @@ void close_process(void)
 {
 	PORT_SetBits(PortA, Pin01);
 	PORT_ResetBits(PortA, Pin05);
-    //PORT_ResetBits(PortA, Pin08);  //OUT
+
     if (radar_onoff_ == RAD_ON)
     {
         Timera1_en(1);
@@ -50,13 +50,7 @@ void close_process(void)
     {
         Timera1_en(0);
     }
-    
-    //uart_transmit_output(0xEE);
-    //uart_transmit_output(0x11);
-    //uart_transmit_output(0xEE);
-    //uart_transmit_output(0x11);
-    //uart_transmit_output(0xEE);
-    //uart_transmit_output(0x11);
+
     state = IDLE;
     leave_en = false;
 }
@@ -64,8 +58,17 @@ void close_process(void)
 void leave_s0(void)
 {
     start_tick = SysTick_GetTick();
-    leave_en = true;
-    diff_tick = 0;
+    
+    if (leave_en == true)
+    {
+    
+    }
+    else
+    {
+        leave_en = true;
+        diff_tick = 0;    
+    }
+
     state = IDLE;
 }
 
@@ -73,15 +76,7 @@ void leave_s1(void)
 {
 	PORT_ResetBits(PortA, Pin01);
 	PORT_SetBits(PortA, Pin05);
-    //PORT_SetBits(PortA, Pin08);  //OUT
     Timera1_en(0);
-    
-    //uart_transmit_output(0xDE);
-    //uart_transmit_output(0x21);
-    //uart_transmit_output(0xDE);
-    //uart_transmit_output(0x21);
-    //uart_transmit_output(0xDE);
-    //uart_transmit_output(0x21);
     
     state = IDLE;
 }
@@ -94,10 +89,10 @@ void idle_process(void)
         {
             if (SPEED_LOW_LIMIT1 < fabs(speed_f))
             {
-                if (MAG_LIMIT1 < mag_f)
+                //if (MAG_LIMIT1 < mag_f)
                     state = CLOSE;
-                else
-                    state = IDLE;
+                //else
+                    //state = IDLE;
             }
             else
             {
@@ -111,10 +106,10 @@ void idle_process(void)
         {
             if (SPEED_LOW_LIMIT2 < fabs(speed_f))
             {
-                if (MAG_LIMIT2 < mag_f)
+                //if (MAG_LIMIT2 < mag_f)
                     state = LEAVE_S0;
-                else
-                    state = IDLE;
+                //else
+                    //state = IDLE;
             }
             else
             {

@@ -5,13 +5,17 @@
 //close: 0.9-1.2m: 2.0
 //close: 1.2-1.5m: 2.5
 
-#define TH_1    2.0f              //unit: meter
+//#define TH_1    2.0f              //unit: meter
 //#define TH_2    (TH_1 + 0.1f)                //unit: meter
-#define LEAVING_TIMEOUT     2000u        //unit: ms
+#define LEAVING_TIMEOUT     500u        //unit: ms
 #define SPEED_LOW_LIMIT1    0.000f           //unit: meter/s
 #define SPEED_LOW_LIMIT2    0.000f           //unit: meter/s
-#define MAG_LIMIT1 2u               //unit: no
-#define MAG_LIMIT2 2u               //unit: no
+//#define MAG_LIMIT1 2u               //unit: no
+//#define MAG_LIMIT2 2u               //unit: no
+
+#define UART3_BRR				0x40021008u
+#define UART3_CR1               0x4002100Cu
+#define UART3_PR				0x40021018u
 
 enum app_state
 {
