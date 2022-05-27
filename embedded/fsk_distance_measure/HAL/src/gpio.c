@@ -10,5 +10,6 @@ void gpio_init(void){
     stcPortInit.enExInt = Enable;
     stcPortInit.enPullUp = Enable;
 
-    PORT_Init(GPIO_TEST_PORT, GPIO_TEST_PIN, &stcPortInit);
+    PORT_Init(PortB, Pin06, &stcPortInit);
+    PORT_SetBits(PortB, Pin06);
 	}
