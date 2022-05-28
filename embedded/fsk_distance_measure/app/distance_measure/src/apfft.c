@@ -10,7 +10,7 @@ void apfft(s16 *data, int len, s32 *output)
     arm_rfft_instance_q31 fft;
 
     N = (len + 1) / 2;
-    M = 2 * N;
+    M = len + 1;
 
     data_add_tab = alloc_mem(M * sizeof(s32));
 
@@ -40,8 +40,9 @@ void apfft(s16 *data, int len, s32 *output)
         output[M - 1 - 2 * i] = - output[M + 3 + 2 * i];
     }
 
-    output[0] = 0;
+    output[0] = output[M + 1];
     output[1] = 0;
+		output[M + 1] = 0;
 
     free_mem(data_add_tab);
 }

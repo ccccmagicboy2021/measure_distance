@@ -103,10 +103,10 @@ void idle_process(void)
         {
             if (SPEED_LOW_LIMIT1 < fabs(speed_f))
             {
-                if (MAG_LIMIT1 < mag_f)
+                //if (MAG_LIMIT1 < mag_f)
                     state = CLOSE;
-                else
-                    state = IDLE;
+                //else
+                    //state = IDLE;
             }
             else
             {
@@ -120,10 +120,10 @@ void idle_process(void)
         {
             if (SPEED_LOW_LIMIT2 < fabs(speed_f))
             {
-                if (MAG_LIMIT2 < mag_f)
+                //if (MAG_LIMIT2 < mag_f)
                     state = LEAVE_S0;
-                else
-                    state = IDLE;
+                //else
+                    //state = IDLE;
             }
             else
             {
