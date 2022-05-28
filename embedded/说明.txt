@@ -1,4 +1,4 @@
-.\fsk_distance_measure(KEIL5)(AC6)(flashcode)(N32)(定点运算)(OK)(23ms)(CH2840ADX)
+.\fsk_distance_measure(KEIL5)(AC6)(flashcode)(N32)(定点运算)(OK)(6ms)(CH2840ADX)(最新算法)
 .\test_gpio(KEIL5)(AC6)(flashcode)(ramcode)(N32)(OK)
 .\test_uart(KEIL5)(AC6)(flashcode)(ramcode)(N32)(OK)
 .\test_coremark(KEIL5)(AC6)(flashcode)(ramcode)(N32)(OK)
