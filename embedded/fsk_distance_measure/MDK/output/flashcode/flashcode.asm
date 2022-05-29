@@ -1544,32 +1544,32 @@
         0x08000dd2:    bd80        ..      POP      {r7,pc}
     AdcInitConfig
         0x08000dd4:    b580        ..      PUSH     {r7,lr}
-        0x08000dd6:    b08c        ..      SUB      sp,sp,#0x30
+        0x08000dd6:    b08e        ..      SUB      sp,sp,#0x38
         0x08000dd8:    2100        .!      MOVS     r1,#0
-        0x08000dda:    9107        ..      STR      r1,[sp,#0x1c]
+        0x08000dda:    9109        ..      STR      r1,[sp,#0x24]
         0x08000ddc:    2001        .       MOVS     r0,#1
-        0x08000dde:    9003        ..      STR      r0,[sp,#0xc]
-        0x08000de0:    f88d0020    .. .    STRB     r0,[sp,#0x20]
-        0x08000de4:    f88d0021    ..!.    STRB     r0,[sp,#0x21]
+        0x08000dde:    9005        ..      STR      r0,[sp,#0x14]
+        0x08000de0:    f88d0028    ..(.    STRB     r0,[sp,#0x28]
+        0x08000de4:    f88d0029    ..).    STRB     r0,[sp,#0x29]
         0x08000de8:    f44f2260    O.`"    MOV      r2,#0xe0000
-        0x08000dec:    9209        ..      STR      r2,[sp,#0x24]
-        0x08000dee:    910a        ..      STR      r1,[sp,#0x28]
-        0x08000df0:    f88d002c    ..,.    STRB     r0,[sp,#0x2c]
+        0x08000dec:    920b        ..      STR      r2,[sp,#0x2c]
+        0x08000dee:    910c        ..      STR      r1,[sp,#0x30]
+        0x08000df0:    f88d0034    ..4.    STRB     r0,[sp,#0x34]
         0x08000df4:    f6400000    @...    MOVW     r0,#0x800
         0x08000df8:    f2c40002    ....    MOVT     r0,#0x4002
-        0x08000dfc:    9002        ..      STR      r0,[sp,#8]
-        0x08000dfe:    a907        ..      ADD      r1,sp,#0x1c
+        0x08000dfc:    9004        ..      STR      r0,[sp,#0x10]
+        0x08000dfe:    a909        ..      ADD      r1,sp,#0x24
         0x08000e00:    f7fffede    ....    BL       ADC_Init ; 0x8000bc0
-        0x08000e04:    9802        ..      LDR      r0,[sp,#8]
-        0x08000e06:    9a03        ..      LDR      r2,[sp,#0xc]
+        0x08000e04:    9804        ..      LDR      r0,[sp,#0x10]
+        0x08000e06:    9a05        ..      LDR      r2,[sp,#0x14]
         0x08000e08:    2103        .!      MOVS     r1,#3
         0x08000e0a:    2305        .#      MOVS     r3,#5
         0x08000e0c:    f7fffd7a    ..z.    BL       ADC_ConfigRegularChannel ; 0x8000904
-        0x08000e10:    9802        ..      LDR      r0,[sp,#8]
-        0x08000e12:    9903        ..      LDR      r1,[sp,#0xc]
+        0x08000e10:    9804        ..      LDR      r0,[sp,#0x10]
+        0x08000e12:    9905        ..      LDR      r1,[sp,#0x14]
         0x08000e14:    f7fffe60    ..`.    BL       ADC_EnableDMA ; 0x8000ad8
-        0x08000e18:    9802        ..      LDR      r0,[sp,#8]
-        0x08000e1a:    9903        ..      LDR      r1,[sp,#0xc]
+        0x08000e18:    9804        ..      LDR      r0,[sp,#0x10]
+        0x08000e1a:    9905        ..      LDR      r1,[sp,#0x14]
         0x08000e1c:    f7fffe46    ..F.    BL       ADC_Enable ; 0x8000aac
         0x08000e20:    e7ff        ..      B        0x8000e22 ; AdcInitConfig + 78
         0x08000e22:    f6400000    @...    MOVW     r0,#0x800
@@ -1592,65 +1592,65 @@
         0x08000e56:    f6400000    @...    MOVW     r0,#0x800
         0x08000e5a:    f2c40002    ....    MOVT     r0,#0x4002
         0x08000e5e:    2101        .!      MOVS     r1,#1
-        0x08000e60:    9101        ..      STR      r1,[sp,#4]
+        0x08000e60:    9103        ..      STR      r1,[sp,#0xc]
         0x08000e62:    f7fffe65    ..e.    BL       ADC_EnableSoftwareStartConv ; 0x8000b30
-        0x08000e66:    9801        ..      LDR      r0,[sp,#4]
+        0x08000e66:    9803        ..      LDR      r0,[sp,#0xc]
         0x08000e68:    2100        .!      MOVS     r1,#0
-        0x08000e6a:    9107        ..      STR      r1,[sp,#0x1c]
-        0x08000e6c:    f88d1020    .. .    STRB     r1,[sp,#0x20]
-        0x08000e70:    f88d1021    ..!.    STRB     r1,[sp,#0x21]
-        0x08000e74:    9109        ..      STR      r1,[sp,#0x24]
-        0x08000e76:    910a        ..      STR      r1,[sp,#0x28]
-        0x08000e78:    f88d002c    ..,.    STRB     r0,[sp,#0x2c]
+        0x08000e6a:    9109        ..      STR      r1,[sp,#0x24]
+        0x08000e6c:    f88d1028    ..(.    STRB     r1,[sp,#0x28]
+        0x08000e70:    f88d1029    ..).    STRB     r1,[sp,#0x29]
+        0x08000e74:    910b        ..      STR      r1,[sp,#0x2c]
+        0x08000e76:    910c        ..      STR      r1,[sp,#0x30]
+        0x08000e78:    f88d0034    ..4.    STRB     r0,[sp,#0x34]
         0x08000e7c:    f6404000    @..@    MOVW     r0,#0xc00
         0x08000e80:    f2c40002    ....    MOVT     r0,#0x4002
-        0x08000e84:    9000        ..      STR      r0,[sp,#0]
-        0x08000e86:    a907        ..      ADD      r1,sp,#0x1c
+        0x08000e84:    9002        ..      STR      r0,[sp,#8]
+        0x08000e86:    a909        ..      ADD      r1,sp,#0x24
         0x08000e88:    f7fffe9a    ....    BL       ADC_Init ; 0x8000bc0
-        0x08000e8c:    9800        ..      LDR      r0,[sp,#0]
+        0x08000e8c:    9802        ..      LDR      r0,[sp,#8]
         0x08000e8e:    2103        .!      MOVS     r1,#3
-        0x08000e90:    f88d1017    ....    STRB     r1,[sp,#0x17]
-        0x08000e94:    a904        ..      ADD      r1,sp,#0x10
-        0x08000e96:    f7fffee1    ....    BL       ADC_InitEx ; 0x8000c5c
-        0x08000e9a:    9800        ..      LDR      r0,[sp,#0]
-        0x08000e9c:    9a01        ..      LDR      r2,[sp,#4]
-        0x08000e9e:    2305        .#      MOVS     r3,#5
-        0x08000ea0:    4619        .F      MOV      r1,r3
-        0x08000ea2:    f7fffd2f    ../.    BL       ADC_ConfigRegularChannel ; 0x8000904
-        0x08000ea6:    9800        ..      LDR      r0,[sp,#0]
-        0x08000ea8:    9901        ..      LDR      r1,[sp,#4]
-        0x08000eaa:    f7fffe2b    ..+.    BL       ADC_EnableExternalTrigConv ; 0x8000b04
-        0x08000eae:    9800        ..      LDR      r0,[sp,#0]
-        0x08000eb0:    9901        ..      LDR      r1,[sp,#4]
-        0x08000eb2:    f7fffe11    ....    BL       ADC_EnableDMA ; 0x8000ad8
-        0x08000eb6:    9800        ..      LDR      r0,[sp,#0]
-        0x08000eb8:    9901        ..      LDR      r1,[sp,#4]
-        0x08000eba:    f7fffdf7    ....    BL       ADC_Enable ; 0x8000aac
-        0x08000ebe:    e7ff        ..      B        0x8000ec0 ; AdcInitConfig + 236
-        0x08000ec0:    f6404000    @..@    MOVW     r0,#0xc00
-        0x08000ec4:    f2c40002    ....    MOVT     r0,#0x4002
-        0x08000ec8:    2120         !      MOVS     r1,#0x20
-        0x08000eca:    f7fffe5f    .._.    BL       ADC_GetFlagStatusNew ; 0x8000b8c
-        0x08000ece:    b908        ..      CBNZ     r0,0x8000ed4 ; AdcInitConfig + 256
-        0x08000ed0:    e7ff        ..      B        0x8000ed2 ; AdcInitConfig + 254
-        0x08000ed2:    e7f5        ..      B        0x8000ec0 ; AdcInitConfig + 236
-        0x08000ed4:    f6404000    @..@    MOVW     r0,#0xc00
-        0x08000ed8:    f2c40002    ....    MOVT     r0,#0x4002
-        0x08000edc:    f7ffff5c    ..\.    BL       ADC_StartCalibration ; 0x8000d98
-        0x08000ee0:    e7ff        ..      B        0x8000ee2 ; AdcInitConfig + 270
-        0x08000ee2:    f6404000    @..@    MOVW     r0,#0xc00
-        0x08000ee6:    f2c40002    ....    MOVT     r0,#0x4002
-        0x08000eea:    f7fffe37    ..7.    BL       ADC_GetCalibrationStatus ; 0x8000b5c
-        0x08000eee:    b108        ..      CBZ      r0,0x8000ef4 ; AdcInitConfig + 288
-        0x08000ef0:    e7ff        ..      B        0x8000ef2 ; AdcInitConfig + 286
-        0x08000ef2:    e7f6        ..      B        0x8000ee2 ; AdcInitConfig + 270
-        0x08000ef4:    f6404000    @..@    MOVW     r0,#0xc00
-        0x08000ef8:    f2c40002    ....    MOVT     r0,#0x4002
-        0x08000efc:    2101        .!      MOVS     r1,#1
-        0x08000efe:    f7fffe17    ....    BL       ADC_EnableSoftwareStartConv ; 0x8000b30
-        0x08000f02:    b00c        ..      ADD      sp,sp,#0x30
-        0x08000f04:    bd80        ..      POP      {r7,pc}
-        0x08000f06:    0000        ..      MOVS     r0,r0
+        0x08000e90:    9101        ..      STR      r1,[sp,#4]
+        0x08000e92:    f88d101f    ....    STRB     r1,[sp,#0x1f]
+        0x08000e96:    a906        ..      ADD      r1,sp,#0x18
+        0x08000e98:    f7fffee0    ....    BL       ADC_InitEx ; 0x8000c5c
+        0x08000e9c:    9b01        ..      LDR      r3,[sp,#4]
+        0x08000e9e:    9802        ..      LDR      r0,[sp,#8]
+        0x08000ea0:    9a03        ..      LDR      r2,[sp,#0xc]
+        0x08000ea2:    2105        .!      MOVS     r1,#5
+        0x08000ea4:    f7fffd2e    ....    BL       ADC_ConfigRegularChannel ; 0x8000904
+        0x08000ea8:    9802        ..      LDR      r0,[sp,#8]
+        0x08000eaa:    9903        ..      LDR      r1,[sp,#0xc]
+        0x08000eac:    f7fffe2a    ..*.    BL       ADC_EnableExternalTrigConv ; 0x8000b04
+        0x08000eb0:    9802        ..      LDR      r0,[sp,#8]
+        0x08000eb2:    9903        ..      LDR      r1,[sp,#0xc]
+        0x08000eb4:    f7fffe10    ....    BL       ADC_EnableDMA ; 0x8000ad8
+        0x08000eb8:    9802        ..      LDR      r0,[sp,#8]
+        0x08000eba:    9903        ..      LDR      r1,[sp,#0xc]
+        0x08000ebc:    f7fffdf6    ....    BL       ADC_Enable ; 0x8000aac
+        0x08000ec0:    e7ff        ..      B        0x8000ec2 ; AdcInitConfig + 238
+        0x08000ec2:    f6404000    @..@    MOVW     r0,#0xc00
+        0x08000ec6:    f2c40002    ....    MOVT     r0,#0x4002
+        0x08000eca:    2120         !      MOVS     r1,#0x20
+        0x08000ecc:    f7fffe5e    ..^.    BL       ADC_GetFlagStatusNew ; 0x8000b8c
+        0x08000ed0:    b908        ..      CBNZ     r0,0x8000ed6 ; AdcInitConfig + 258
+        0x08000ed2:    e7ff        ..      B        0x8000ed4 ; AdcInitConfig + 256
+        0x08000ed4:    e7f5        ..      B        0x8000ec2 ; AdcInitConfig + 238
+        0x08000ed6:    f6404000    @..@    MOVW     r0,#0xc00
+        0x08000eda:    f2c40002    ....    MOVT     r0,#0x4002
+        0x08000ede:    f7ffff5b    ..[.    BL       ADC_StartCalibration ; 0x8000d98
+        0x08000ee2:    e7ff        ..      B        0x8000ee4 ; AdcInitConfig + 272
+        0x08000ee4:    f6404000    @..@    MOVW     r0,#0xc00
+        0x08000ee8:    f2c40002    ....    MOVT     r0,#0x4002
+        0x08000eec:    f7fffe36    ..6.    BL       ADC_GetCalibrationStatus ; 0x8000b5c
+        0x08000ef0:    b108        ..      CBZ      r0,0x8000ef6 ; AdcInitConfig + 290
+        0x08000ef2:    e7ff        ..      B        0x8000ef4 ; AdcInitConfig + 288
+        0x08000ef4:    e7f6        ..      B        0x8000ee4 ; AdcInitConfig + 272
+        0x08000ef6:    f6404000    @..@    MOVW     r0,#0xc00
+        0x08000efa:    f2c40002    ....    MOVT     r0,#0x4002
+        0x08000efe:    2101        .!      MOVS     r1,#1
+        0x08000f00:    f7fffe16    ....    BL       ADC_EnableSoftwareStartConv ; 0x8000b30
+        0x08000f04:    b00e        ..      ADD      sp,sp,#0x38
+        0x08000f06:    bd80        ..      POP      {r7,pc}
     BusFault_Handler
         0x08000f08:    e7ff        ..      B        0x8000f0a ; BusFault_Handler + 2
         0x08000f0a:    e7fe        ..      B        0x8000f0a ; BusFault_Handler + 2
@@ -11406,7 +11406,7 @@
         0x0800707a:    2360        `#      MOVS     r3,#0x60
         0x0800707c:    f8ad300c    ...0    STRH     r3,[sp,#0xc]
         0x08007080:    f8ad200e    ...     STRH     r2,[sp,#0xe]
-        0x08007084:    2209        ."      MOVS     r2,#9
+        0x08007084:    2213        ."      MOVS     r2,#0x13
         0x08007086:    f8ad2012    ...     STRH     r2,[sp,#0x12]
         0x0800708a:    f8ad1014    ....    STRH     r1,[sp,#0x14]
         0x0800708e:    f8ad1018    ....    STRH     r1,[sp,#0x18]
@@ -34590,7 +34590,7 @@
     .L.str.5
         0x0801d32b:    4d          M       DCB    77
         0x0801d32c:    32207961    ay 2    DCD    840989025
-        0x0801d330:    30322038    8 20    DCD    808591416
+        0x0801d330:    30322039    9 20    DCD    808591417
         0x0801d334:    3232        22      DCW    12850
         0x0801d336:    00          .       DCB    0
     .L.str
@@ -34601,8 +34601,8 @@
         0x0801d342:    00          .       DCB    0
     .L.str.6
         0x0801d343:    31          1       DCB    49
-        0x0801d344:    33313a39    9:13    DCD    858864185
-        0x0801d348:    0039323a    :29.    DCD    3748410
+        0x0801d344:    30353a32    2:50    DCD    808794674
+        0x0801d348:    0034303a    :04.    DCD    3420218
     .L.str.3
         0x0801d34c:    6d305b1b    .[0m    DCD    1831885595
         0x0801d350:    00          .       DCB    0

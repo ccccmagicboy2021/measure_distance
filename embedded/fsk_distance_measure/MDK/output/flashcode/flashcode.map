@@ -615,7 +615,7 @@ Image Symbol Table
     ADC_InitEx                               0x08000c5d   Thumb Code   316  n32g4fr_adc.o(.text.ADC_InitEx)
     ADC_StartCalibration                     0x08000d99   Thumb Code    18  n32g4fr_adc.o(.text.ADC_StartCalibration)
     AdcConfig                                0x08000dad   Thumb Code    40  adc.o(.text.AdcConfig)
-    AdcInitConfig                            0x08000dd5   Thumb Code   306  adc.o(.text.AdcInitConfig)
+    AdcInitConfig                            0x08000dd5   Thumb Code   308  adc.o(.text.AdcInitConfig)
     BusFault_Handler                         0x08000f09   Thumb Code     4  n32g4fr_it.o(.text.BusFault_Handler)
     DMA1_Channel8_IRQHandler                 0x08000f0d   Thumb Code   188  n32g4fr_it.o(.text.DMA1_Channel8_IRQHandler)
     DMA_ClrIntPendingBit                     0x08000fc9   Thumb Code    16  n32g4fr_dma.o(.text.DMA_ClrIntPendingBit)
@@ -896,8 +896,7 @@ Memory Map of the image
     0x08000d98   0x08000d98   0x00000012   Code   RO          200    .text.ADC_StartCalibration  n32g4fr_adc.o
     0x08000daa   0x08000daa   0x00000002   PAD
     0x08000dac   0x08000dac   0x00000028   Code   RO         1575    .text.AdcConfig     adc.o
-    0x08000dd4   0x08000dd4   0x00000132   Code   RO         1577    .text.AdcInitConfig  adc.o
-    0x08000f06   0x08000f06   0x00000002   PAD
+    0x08000dd4   0x08000dd4   0x00000134   Code   RO         1577    .text.AdcInitConfig  adc.o
     0x08000f08   0x08000f08   0x00000004   Code   RO           30    .text.BusFault_Handler  n32g4fr_it.o
     0x08000f0c   0x08000f0c   0x000000bc   Code   RO           48    .text.DMA1_Channel8_IRQHandler  n32g4fr_it.o
     0x08000fc8   0x08000fc8   0x00000010   Code   RO          474    .text.DMA_ClrIntPendingBit  n32g4fr_dma.o
@@ -1271,7 +1270,7 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       644          0          0         12       2048       7082   adc.o
+       646          0          0         12       2048       7082   adc.o
        224          8          0          0          0       1001   alpha_filter.o
        384          0          0          0          0       1785   apfft.o
        888         12          0          0         24       5791   app.o
@@ -1311,7 +1310,7 @@ Image component sizes
     ----------------------------------------------------------------------
      22692        104       7084         36      56000     155379   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-       146          0          3          0         17          0   (incl. Padding)
+       144          0          3          0         17          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 

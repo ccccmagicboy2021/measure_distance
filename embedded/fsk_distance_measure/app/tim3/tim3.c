@@ -30,7 +30,8 @@ void time3_init(void)
     /* Output Compare Active Mode configuration: Channel1 */
     TIM_OCInitStructure.OcMode      = TIM_OCMODE_PWM1;
     TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
-    TIM_OCInitStructure.Pulse       = 10 - 1;   //1%
+    //TIM_OCInitStructure.Pulse       = 10 - 1;   //1%
+    TIM_OCInitStructure.Pulse       = 20 - 1;   //2%
     //TIM_OCInitStructure.Pulse       = 60 - 1;   //6%
     //TIM_OCInitStructure.Pulse       = 100 - 1;   //10%
     //TIM_OCInitStructure.Pulse       = 200 - 1;   //20%
