@@ -1,0 +1,24 @@
+{signal: [
+  {name: 'TIM1', wave: 'hlhlhlhlhlhlhlh', phase: 2, period: 1},
+  {name: 'TIM1_CH4(IRQ)', wave: 'HLHLHLH', phase: 0, period: 2},
+  {name: 'TIM1_CH3(PA10)(output)', wave: 'h.l.h.l.h.l.h.l', phase: 2.0, period: 1},
+  {name: 'ENRF(PB4)(output)', wave: 'h......', phase: 0, period: 2},
+  {name: 'ENOP(PB5)(output)', wave: 'h......', phase: 0, period: 2},
+  {name: 'ADC2_CH5(PC4)(input)', wave: '3.4.3.4.3.4.3.4', phase: 2.0, period: 1, data: ['IF_H', 'IF_L', 'IF_H', 'IF_L', 'IF_H', 'IF_L', 'IF_H', 'IF_L']},
+  {name: 'soft_var_value1', wave: '6...6...6...6.', phase: 0.0, period: 1, data: "D0 D1 D2 D3"},
+  {name: 'soft_var_value0', wave: '7.7...7...7...', phase: 0.0, period: 1, data: "D0 D1 D2 D3"}
+],
+head:{
+  text:'XBR8161 控制(N32)',
+  tick:0,
+  every:1
+  },
+foot:{
+  text:'Figure 1',
+  },
+config: { 
+  hscale: 2 
+  }
+}
+
+
