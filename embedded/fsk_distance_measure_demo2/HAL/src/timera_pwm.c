@@ -147,7 +147,31 @@ void init_timer(void)
     TIM_TimeBaseStructure.CntMode   = TIM_CNT_MODE_UP;
 
     TIM_InitTimeBase(TIM1, &TIM_TimeBaseStructure);
+    
+    //----------------------------------------------------------
+    /* Output Compare Active Mode configuration: Channel3 */
+    TIM_OCInitStructure.OcMode      = TIM_OCMODE_TOGGLE;
+    TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
+    TIM_OCInitStructure.Pulse       = 1 - 1;
+    //TIM_OCInitStructure.OcPolarity  = TIM_OC_POLARITY_LOW;  //high first, low after
+    TIM_OCInitStructure.OcPolarity  = TIM_OC_POLARITY_HIGH; //low first, high after
+    TIM_OCInitStructure.OcIdleState  = TIM_OC_IDLE_STATE_RESET;
 
+    TIM_InitOc3(TIM1, &TIM_OCInitStructure);
+    TIM_ConfigOc3Preload(TIM1, TIM_OC_PRE_LOAD_DISABLE);
+    
+    //----------------------------------------------------------
+    /* Output Compare Active Mode configuration: Channel1 */ //for adc trigger
+    TIM_OCInitStructure.OcMode      = TIM_OCMODE_PWM1;
+    TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
+    TIM_OCInitStructure.Pulse       = 5 - 1;
+    TIM_OCInitStructure.OcPolarity  = TIM_OC_POLARITY_LOW;
+    TIM_OCInitStructure.OcIdleState  = TIM_OC_IDLE_STATE_RESET;
+
+    TIM_InitOc1(TIM1, &TIM_OCInitStructure);
+    TIM_ConfigOc1Preload(TIM1, TIM_OC_PRE_LOAD_DISABLE);
+
+    //////////////////////////////////////////////////////
     //channel2
     TIM_OCInitStructure.OcMode      = TIM_OCMODE_PWM1;
     TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
@@ -162,35 +186,10 @@ void init_timer(void)
     TIM_OCInitStructure.OcPolarity  = TIM_OC_POLARITY_HIGH;
     TIM_OCInitStructure.OcIdleState  = TIM_OC_IDLE_STATE_RESET;
     
-    TIM_OCInitStructure.OutputNState = TIM_OUTPUT_NSTATE_DISABLE;
-    TIM_OCInitStructure.OcNPolarity  = TIM_OCN_POLARITY_LOW;
-    TIM_OCInitStructure.OcNIdleState = TIM_OC_IDLE_STATE_RESET;
-    
     TIM_InitOc2(TIM1, &TIM_OCInitStructure);
-    TIM_ConfigOc2Preload(TIM1, TIM_OC_PRE_LOAD_DISABLE);
+    TIM_ConfigOc2Preload(TIM1, TIM_OC_PRE_LOAD_DISABLE);    
     
-    //----------------------------------------------------------
-    /* Output Compare Active Mode configuration: Channel3 */
-    TIM_OCInitStructure.OcMode      = TIM_OCMODE_TOGGLE;
-    TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
-    TIM_OCInitStructure.Pulse       = 1 - 1;
-    //TIM_OCInitStructure.OcPolarity  = TIM_OC_POLARITY_LOW;  //high first, low after
-    TIM_OCInitStructure.OcPolarity  = TIM_OC_POLARITY_HIGH; //low first, high after
-
-    TIM_InitOc3(TIM1, &TIM_OCInitStructure);
-    TIM_ConfigOc3Preload(TIM1, TIM_OC_PRE_LOAD_DISABLE);
     
-    //----------------------------------------------------------
-    /* Output Compare Active Mode configuration: Channel1 */ //for adc trigger
-    TIM_OCInitStructure.OcMode      = TIM_OCMODE_PWM1;
-    TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
-    TIM_OCInitStructure.Pulse       = 5 - 1;
-    TIM_OCInitStructure.OcPolarity  = TIM_OC_POLARITY_LOW;
-
-    TIM_InitOc1(TIM1, &TIM_OCInitStructure);
-    TIM_ConfigOc1Preload(TIM1, TIM_OC_PRE_LOAD_DISABLE);
-
-    //////////////////////////////////////////////////////
     TIM_ConfigArPreload(TIM1, ENABLE);
 }
 

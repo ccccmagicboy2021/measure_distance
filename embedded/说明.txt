@@ -1,5 +1,5 @@
 .\fsk_distance_measure(KEIL5)(AC6)(flashcode)(N32)(定点运算)(OK)(7ms)(CH2840ADX)(最新算法)(144MHz 2%脉冲供电)
-.\fsk_distance_measure_demo2(AC6)(flashcode)(N32)(定点计算)(OK)(6ms)(配CH1616ADX的demo2)(最新算法)(128MHz 6%脉冲供电)
+.\fsk_distance_measure_demo2(AC6)(flashcode)(N32)(定点计算)(OK)(6ms)(配CH1616ADX的demo2)(最新算法)(128MHz 1%脉冲供电)
 .\test_gpio(KEIL5)(AC6)(flashcode)(ramcode)(N32)(OK)
 .\test_uart(KEIL5)(AC6)(flashcode)(ramcode)(N32)(OK)
 .\test_coremark(KEIL5)(AC6)(flashcode)(ramcode)(N32)(OK)

@@ -3,7 +3,7 @@
 
 ** ELF Header Information
 
-    File Name: D:\cccc2020\CODE\workspace\bfsk_n32\embedded\fsk_distance_measure_demo2\MDK\output\flashcode\flashcode.axf
+    File Name: d:\cccc2020\CODE\workspace\bfsk_n32\embedded\fsk_distance_measure_demo2\MDK\output\flashcode\flashcode.axf
 
     Machine class: ELFCLASS32 (32-bit)
     Data encoding: ELFDATA2LSB (Little endian)
@@ -31,8 +31,8 @@
     Program header entries: 1
     Section header entries: 16
 
-    Program header offset: 377000 (0x0005c0a8)
-    Section header offset: 377032 (0x0005c0c8)
+    Program header offset: 377040 (0x0005c0d0)
+    Section header offset: 377072 (0x0005c0f0)
 
     Section header string table index: 15
 
@@ -9276,53 +9276,52 @@
         0x08005a06:    f7fcff27    ..'.    BL       TIM_InitTimeBase ; 0x8002858
         0x08005a0a:    9903        ..      LDR      r1,[sp,#0xc]
         0x08005a0c:    9804        ..      LDR      r0,[sp,#0x10]
-        0x08005a0e:    2260        `"      MOVS     r2,#0x60
-        0x08005a10:    9201        ..      STR      r2,[sp,#4]
-        0x08005a12:    f8ad2018    ...     STRH     r2,[sp,#0x18]
-        0x08005a16:    2201        ."      MOVS     r2,#1
-        0x08005a18:    9205        ..      STR      r2,[sp,#0x14]
-        0x08005a1a:    f8ad201a    ...     STRH     r2,[sp,#0x1a]
-        0x08005a1e:    2209        ."      MOVS     r2,#9
-        0x08005a20:    f8ad201e    ...     STRH     r2,[sp,#0x1e]
-        0x08005a24:    f8ad1020    .. .    STRH     r1,[sp,#0x20]
-        0x08005a28:    f8ad1024    ..$.    STRH     r1,[sp,#0x24]
-        0x08005a2c:    f8ad101c    ....    STRH     r1,[sp,#0x1c]
-        0x08005a30:    2208        ."      MOVS     r2,#8
-        0x08005a32:    f8ad2022    .."     STRH     r2,[sp,#0x22]
-        0x08005a36:    f8ad1026    ..&.    STRH     r1,[sp,#0x26]
-        0x08005a3a:    a906        ..      ADD      r1,sp,#0x18
-        0x08005a3c:    9102        ..      STR      r1,[sp,#8]
-        0x08005a3e:    f7fcfe03    ....    BL       TIM_InitOc2 ; 0x8002648
-        0x08005a42:    9903        ..      LDR      r1,[sp,#0xc]
-        0x08005a44:    9804        ..      LDR      r0,[sp,#0x10]
-        0x08005a46:    f7fcfcef    ....    BL       TIM_ConfigOc2Preload ; 0x8002428
-        0x08005a4a:    9902        ..      LDR      r1,[sp,#8]
-        0x08005a4c:    9a03        ..      LDR      r2,[sp,#0xc]
-        0x08005a4e:    9804        ..      LDR      r0,[sp,#0x10]
-        0x08005a50:    9b05        ..      LDR      r3,[sp,#0x14]
-        0x08005a52:    f04f0c30    O.0.    MOV      r12,#0x30
-        0x08005a56:    f8adc018    ....    STRH     r12,[sp,#0x18]
-        0x08005a5a:    f8ad301a    ...0    STRH     r3,[sp,#0x1a]
-        0x08005a5e:    f8ad201e    ...     STRH     r2,[sp,#0x1e]
-        0x08005a62:    f8ad2020    ..      STRH     r2,[sp,#0x20]
-        0x08005a66:    f7fcfe73    ..s.    BL       TIM_InitOc3 ; 0x8002750
-        0x08005a6a:    9903        ..      LDR      r1,[sp,#0xc]
-        0x08005a6c:    9804        ..      LDR      r0,[sp,#0x10]
-        0x08005a6e:    f7fcfcfb    ....    BL       TIM_ConfigOc3Preload ; 0x8002468
-        0x08005a72:    9b01        ..      LDR      r3,[sp,#4]
-        0x08005a74:    9902        ..      LDR      r1,[sp,#8]
-        0x08005a76:    9804        ..      LDR      r0,[sp,#0x10]
-        0x08005a78:    9a05        ..      LDR      r2,[sp,#0x14]
-        0x08005a7a:    f8ad3018    ...0    STRH     r3,[sp,#0x18]
-        0x08005a7e:    f8ad201a    ...     STRH     r2,[sp,#0x1a]
-        0x08005a82:    2204        ."      MOVS     r2,#4
-        0x08005a84:    f8ad201e    ...     STRH     r2,[sp,#0x1e]
-        0x08005a88:    2202        ."      MOVS     r2,#2
-        0x08005a8a:    f8ad2020    ..      STRH     r2,[sp,#0x20]
-        0x08005a8e:    f7fcfd5d    ..].    BL       TIM_InitOc1 ; 0x800254c
+        0x08005a0e:    2230        0"      MOVS     r2,#0x30
+        0x08005a10:    f8ad2018    ...     STRH     r2,[sp,#0x18]
+        0x08005a14:    2201        ."      MOVS     r2,#1
+        0x08005a16:    9205        ..      STR      r2,[sp,#0x14]
+        0x08005a18:    f8ad201a    ...     STRH     r2,[sp,#0x1a]
+        0x08005a1c:    f8ad101e    ....    STRH     r1,[sp,#0x1e]
+        0x08005a20:    f8ad1020    .. .    STRH     r1,[sp,#0x20]
+        0x08005a24:    f8ad1024    ..$.    STRH     r1,[sp,#0x24]
+        0x08005a28:    a906        ..      ADD      r1,sp,#0x18
+        0x08005a2a:    9102        ..      STR      r1,[sp,#8]
+        0x08005a2c:    f7fcfe90    ....    BL       TIM_InitOc3 ; 0x8002750
+        0x08005a30:    9903        ..      LDR      r1,[sp,#0xc]
+        0x08005a32:    9804        ..      LDR      r0,[sp,#0x10]
+        0x08005a34:    f7fcfd18    ....    BL       TIM_ConfigOc3Preload ; 0x8002468
+        0x08005a38:    9902        ..      LDR      r1,[sp,#8]
+        0x08005a3a:    9a03        ..      LDR      r2,[sp,#0xc]
+        0x08005a3c:    9804        ..      LDR      r0,[sp,#0x10]
+        0x08005a3e:    9b05        ..      LDR      r3,[sp,#0x14]
+        0x08005a40:    f04f0c60    O.`.    MOV      r12,#0x60
+        0x08005a44:    f8cdc004    ....    STR      r12,[sp,#4]
+        0x08005a48:    f8adc018    ....    STRH     r12,[sp,#0x18]
+        0x08005a4c:    f8ad301a    ...0    STRH     r3,[sp,#0x1a]
+        0x08005a50:    2304        .#      MOVS     r3,#4
+        0x08005a52:    f8ad301e    ...0    STRH     r3,[sp,#0x1e]
+        0x08005a56:    2302        .#      MOVS     r3,#2
+        0x08005a58:    f8ad3020    .. 0    STRH     r3,[sp,#0x20]
+        0x08005a5c:    f8ad2024    ..$     STRH     r2,[sp,#0x24]
+        0x08005a60:    f7fcfd74    ..t.    BL       TIM_InitOc1 ; 0x800254c
+        0x08005a64:    9903        ..      LDR      r1,[sp,#0xc]
+        0x08005a66:    9804        ..      LDR      r0,[sp,#0x10]
+        0x08005a68:    f7fcfcc0    ....    BL       TIM_ConfigOc1Preload ; 0x80023ec
+        0x08005a6c:    f8ddc004    ....    LDR      r12,[sp,#4]
+        0x08005a70:    9902        ..      LDR      r1,[sp,#8]
+        0x08005a72:    9a03        ..      LDR      r2,[sp,#0xc]
+        0x08005a74:    9804        ..      LDR      r0,[sp,#0x10]
+        0x08005a76:    9b05        ..      LDR      r3,[sp,#0x14]
+        0x08005a78:    f8adc018    ....    STRH     r12,[sp,#0x18]
+        0x08005a7c:    f8ad301a    ...0    STRH     r3,[sp,#0x1a]
+        0x08005a80:    2309        .#      MOVS     r3,#9
+        0x08005a82:    f8ad301e    ...0    STRH     r3,[sp,#0x1e]
+        0x08005a86:    f8ad2020    ..      STRH     r2,[sp,#0x20]
+        0x08005a8a:    f8ad2024    ..$     STRH     r2,[sp,#0x24]
+        0x08005a8e:    f7fcfddb    ....    BL       TIM_InitOc2 ; 0x8002648
         0x08005a92:    9903        ..      LDR      r1,[sp,#0xc]
         0x08005a94:    9804        ..      LDR      r0,[sp,#0x10]
-        0x08005a96:    f7fcfca9    ....    BL       TIM_ConfigOc1Preload ; 0x80023ec
+        0x08005a96:    f7fcfcc7    ....    BL       TIM_ConfigOc2Preload ; 0x8002428
         0x08005a9a:    9804        ..      LDR      r0,[sp,#0x10]
         0x08005a9c:    9905        ..      LDR      r1,[sp,#0x14]
         0x08005a9e:    f7fcfc8f    ....    BL       TIM_ConfigArPreload ; 0x80023c0
@@ -34257,9 +34256,9 @@
         0x0801cfe4:    32553255    U2U2    DCD    844444245
         0x0801cfe8:    00          .       DCB    0
     .L.str.6
-        0x0801cfe9:    31313a      11:     DCB    49,49,58
-        0x0801cfec:    303a3235    52:0    DCD    809120309
-        0x0801cff0:    0033        3.      DCW    51
+        0x0801cfe9:    31343a      14:     DCB    49,52,58
+        0x0801cfec:    343a3032    20:4    DCD    876228658
+        0x0801cff0:    0034        4.      DCW    52
     .L.str.3
         0x0801cff2:    5b1b        .[      DCW    23323
         0x0801cff4:    6d30        0m      DCW    27952
@@ -46624,7 +46623,7 @@
 
 
 ** Section #7 '.debug_line' (SHT_PROGBITS)
-    Size   : 50225 bytes
+    Size   : 50293 bytes
 
 
 ** Section #8 '.debug_loc' (SHT_PROGBITS)
@@ -46640,13 +46639,13 @@
 
 
 ** Section #11 '.symtab' (SHT_SYMTAB)
-    Size   : 10416 bytes (alignment 4)
+    Size   : 10400 bytes (alignment 4)
     String table #12 '.strtab'
-    Last local symbol no. 288
+    Last local symbol no. 287
 
 
 ** Section #12 '.strtab' (SHT_STRTAB)
-    Size   : 9456 bytes
+    Size   : 9448 bytes
 
 
 ** Section #13 '.note' (SHT_NOTE)
@@ -46654,7 +46653,7 @@
 
 
 ** Section #14 '.comment' (SHT_PROGBITS)
-    Size   : 2236 bytes
+    Size   : 2232 bytes
 
 
 ** Section #15 '.shstrtab' (SHT_STRTAB)

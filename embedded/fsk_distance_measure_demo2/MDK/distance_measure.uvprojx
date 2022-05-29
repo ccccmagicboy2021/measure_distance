@@ -613,11 +613,6 @@
               <FileType>1</FileType>
               <FilePath>..\HAL\src\adc.c</FilePath>
             </File>
-            <File>
-              <FileName>tim3.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\app\tim3\tim3.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
