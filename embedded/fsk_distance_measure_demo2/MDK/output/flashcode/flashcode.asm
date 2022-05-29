@@ -31,8 +31,8 @@
     Program header entries: 1
     Section header entries: 16
 
-    Program header offset: 379800 (0x0005cb98)
-    Section header offset: 379832 (0x0005cbb8)
+    Program header offset: 377000 (0x0005c0a8)
+    Section header offset: 377032 (0x0005c0c8)
 
     Section header string table index: 15
 
@@ -1613,9 +1613,9 @@
         0x08000e94:    a904        ..      ADD      r1,sp,#0x10
         0x08000e96:    f7fffee1    ....    BL       ADC_InitEx ; 0x8000c5c
         0x08000e9a:    9800        ..      LDR      r0,[sp,#0]
-        0x08000e9c:    9a01        ..      LDR      r2,[sp,#4]
-        0x08000e9e:    2305        .#      MOVS     r3,#5
-        0x08000ea0:    4619        .F      MOV      r1,r3
+        0x08000e9c:    9b01        ..      LDR      r3,[sp,#4]
+        0x08000e9e:    2105        .!      MOVS     r1,#5
+        0x08000ea0:    461a        .F      MOV      r2,r3
         0x08000ea2:    f7fffd2f    ../.    BL       ADC_ConfigRegularChannel ; 0x8000904
         0x08000ea6:    9800        ..      LDR      r0,[sp,#0]
         0x08000ea8:    9901        ..      LDR      r1,[sp,#4]
@@ -9282,7 +9282,7 @@
         0x08005a16:    2201        ."      MOVS     r2,#1
         0x08005a18:    9205        ..      STR      r2,[sp,#0x14]
         0x08005a1a:    f8ad201a    ...     STRH     r2,[sp,#0x1a]
-        0x08005a1e:    223b        ;"      MOVS     r2,#0x3b
+        0x08005a1e:    2209        ."      MOVS     r2,#9
         0x08005a20:    f8ad201e    ...     STRH     r2,[sp,#0x1e]
         0x08005a24:    f8ad1020    .. .    STRH     r1,[sp,#0x20]
         0x08005a28:    f8ad1024    ..$.    STRH     r1,[sp,#0x24]
@@ -9315,7 +9315,7 @@
         0x08005a78:    9a05        ..      LDR      r2,[sp,#0x14]
         0x08005a7a:    f8ad3018    ...0    STRH     r3,[sp,#0x18]
         0x08005a7e:    f8ad201a    ...     STRH     r2,[sp,#0x1a]
-        0x08005a82:    2209        ."      MOVS     r2,#9
+        0x08005a82:    2204        ."      MOVS     r2,#4
         0x08005a84:    f8ad201e    ...     STRH     r2,[sp,#0x1e]
         0x08005a88:    2202        ."      MOVS     r2,#2
         0x08005a8a:    f8ad2020    ..      STRH     r2,[sp,#0x20]
@@ -34257,9 +34257,9 @@
         0x0801cfe4:    32553255    U2U2    DCD    844444245
         0x0801cfe8:    00          .       DCB    0
     .L.str.6
-        0x0801cfe9:    31303a      10:     DCB    49,48,58
-        0x0801cfec:    303a3835    58:0    DCD    809121845
-        0x0801cff0:    0037        7.      DCW    55
+        0x0801cfe9:    31313a      11:     DCB    49,49,58
+        0x0801cfec:    303a3235    52:0    DCD    809120309
+        0x0801cff0:    0033        3.      DCW    51
     .L.str.3
         0x0801cff2:    5b1b        .[      DCW    23323
         0x0801cff4:    6d30        0m      DCW    27952
@@ -46612,19 +46612,19 @@
 
 
 ** Section #4 '.debug_abbrev' (SHT_PROGBITS)
-    Size   : 10475 bytes
+    Size   : 10400 bytes
 
 
 ** Section #5 '.debug_frame' (SHT_PROGBITS)
-    Size   : 11816 bytes
+    Size   : 11728 bytes
 
 
 ** Section #6 '.debug_info' (SHT_PROGBITS)
-    Size   : 60835 bytes
+    Size   : 60012 bytes
 
 
 ** Section #7 '.debug_line' (SHT_PROGBITS)
-    Size   : 50517 bytes
+    Size   : 50225 bytes
 
 
 ** Section #8 '.debug_loc' (SHT_PROGBITS)
@@ -46632,11 +46632,11 @@
 
 
 ** Section #9 '.debug_str' (SHT_PROGBITS)
-    Size   : 45365 bytes
+    Size   : 43868 bytes
 
 
 ** Section #10 '.debug_ranges' (SHT_PROGBITS)
-    Size   : 3736 bytes
+    Size   : 3712 bytes
 
 
 ** Section #11 '.symtab' (SHT_SYMTAB)

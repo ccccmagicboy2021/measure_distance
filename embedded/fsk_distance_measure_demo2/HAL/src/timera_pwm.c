@@ -134,56 +134,6 @@ void init_timer_pin_pa9(unsigned int mode)
     }
 }
 
-void init_timer2(void)
-{    
-	//init interrupt
-    NVIC_InitType NVIC_InitStructure;
-
-    NVIC_InitStructure.NVIC_IRQChannel                   = TIM1_CC_IRQn;
-    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
-    NVIC_InitStructure.NVIC_IRQChannelSubPriority        = 0;
-    NVIC_InitStructure.NVIC_IRQChannelCmd                = ENABLE;
-
-    NVIC_Init(&NVIC_InitStructure);
-    
-	//init timer
-    TIM_TimeBaseInitType TIM_TimeBaseStructure;
-    OCInitType TIM_OCInitStructure;
-
-    /* Time base configuration */
-    TIM_TimeBaseStructure.Period    = 1000 - 1;
-    TIM_TimeBaseStructure.Prescaler = 72-1; //36 for 2k wave out, 72 for 1k wave out
-    TIM_TimeBaseStructure.ClkDiv    = TIM_CLK_DIV1; //144MHz
-    TIM_TimeBaseStructure.CntMode   = TIM_CNT_MODE_UP;
-
-    TIM_InitTimeBase(TIM1, &TIM_TimeBaseStructure);
-
-    //----------------------------------------------------------
-    /* Output Compare Active Mode configuration: Channel3 */
-    TIM_OCInitStructure.OcMode      = TIM_OCMODE_TOGGLE;
-    TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
-    TIM_OCInitStructure.Pulse       = 250 - 1;
-    TIM_OCInitStructure.OcPolarity  = TIM_OC_POLARITY_HIGH;
-
-    TIM_InitOc3(TIM1, &TIM_OCInitStructure);
-    TIM_ConfigOc3Preload(TIM1, TIM_OC_PRE_LOAD_DISABLE);
-
-    //----------------------------------------------------------
-    /* Output Compare Active Mode configuration: Channel4 */
-    TIM_OCInitStructure.OcMode      = TIM_OCMODE_TOGGLE;
-    TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
-    TIM_OCInitStructure.Pulse       = 750 - 1;
-    TIM_OCInitStructure.OcPolarity  = TIM_OC_POLARITY_HIGH;
-
-    TIM_InitOc4(TIM1, &TIM_OCInitStructure);
-    TIM_ConfigOc4Preload(TIM1, TIM_OC_PRE_LOAD_DISABLE);
-    
-    //----------------------------------------------------------
-    //////////////////////////////////////////////////////
-    TIM_ConfigArPreload(TIM1, ENABLE);
-    TIM_ConfigInt(TIM1, TIM_INT_CC4, ENABLE);       //use CC4 irq
-}
-
 void init_timer(void)
 {
 	//init timer
@@ -201,8 +151,8 @@ void init_timer(void)
     //channel2
     TIM_OCInitStructure.OcMode      = TIM_OCMODE_PWM1;
     TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
-    //TIM_OCInitStructure.Pulse       = 10 - 1;   //1%
-    TIM_OCInitStructure.Pulse       = 60 - 1;   //6%
+    TIM_OCInitStructure.Pulse       = 10 - 1;   //1%
+    //TIM_OCInitStructure.Pulse       = 60 - 1;   //6%
     //TIM_OCInitStructure.Pulse       = 100 - 1;   //10%
     //TIM_OCInitStructure.Pulse       = 200 - 1;   //20%
     //TIM_OCInitStructure.Pulse       = 300 - 1;   //30%
@@ -234,7 +184,7 @@ void init_timer(void)
     /* Output Compare Active Mode configuration: Channel1 */ //for adc trigger
     TIM_OCInitStructure.OcMode      = TIM_OCMODE_PWM1;
     TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
-    TIM_OCInitStructure.Pulse       = 10 - 1;
+    TIM_OCInitStructure.Pulse       = 5 - 1;
     TIM_OCInitStructure.OcPolarity  = TIM_OC_POLARITY_LOW;
 
     TIM_InitOc1(TIM1, &TIM_OCInitStructure);
@@ -259,7 +209,6 @@ void Timera_Config(void)
     init_timer_pin(3);//for pwm cc output
     init_timer_pin_pa9(3);  //for enrf
 	init_timer();       //not use int
-    //init_timer2();    //use cc4 int
     enable_timer_pwm();
 }
 
