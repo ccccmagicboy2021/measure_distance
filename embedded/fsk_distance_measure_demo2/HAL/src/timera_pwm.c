@@ -142,8 +142,8 @@ void init_timer(void)
 
     /* Time base configuration */
     TIM_TimeBaseStructure.Period    = 1000 - 1;
-    TIM_TimeBaseStructure.Prescaler = 64-1; //32 for 2k wave out, 64 for 1k wave out
-    TIM_TimeBaseStructure.ClkDiv    = TIM_CLK_DIV1; //128MHz
+    TIM_TimeBaseStructure.Prescaler = 16-1; //8 for 2k wave out, 16 for 1k wave out
+    TIM_TimeBaseStructure.ClkDiv    = TIM_CLK_DIV1; //32MHz
     TIM_TimeBaseStructure.CntMode   = TIM_CNT_MODE_UP;
 
     TIM_InitTimeBase(TIM1, &TIM_TimeBaseStructure);

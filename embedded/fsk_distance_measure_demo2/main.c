@@ -130,14 +130,14 @@ int32_t main(void)
 #ifndef SEND_TO_MATLAB_TEST
             updata_data.speed = (s32)(measure_info.speed * 1024);
             updata_data.distance = (s32)(measure_info.distance_abf * 1024);
-            all_data_update();
+            //all_data_update();
             
             distance_f = measure_info.distance_abf;
             speed_f = measure_info.speed;
             //mag_f = measure_info.max_amplitude;
             
 #ifdef DEBUG_MODE
-            //printf("/*CD2840ADX,%.3lf,%.3lf,%d,%d,%d,%d*/", distance_f, speed_f, state, diff_tick, mag_f, diff);
+            printf("/*CD2840ADX,%.3lf,%.3lf,%d,%d,%d,%d*/", distance_f, speed_f, state, diff_tick, mag_f, diff);
 #endif           
             app();
         

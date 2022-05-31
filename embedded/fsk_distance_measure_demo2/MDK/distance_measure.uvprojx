@@ -337,7 +337,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>N32G4FR, USE_STDPERIPH_DRIVER, SYSCLK_FREQ=128000000, __DEBUG,USE_DEVICE_DRIVER_LIB,_CC_ARM,DEBUG_MODE,ARM_MATH_CM4,SYSCLK_SRC=2</Define>
+              <Define>N32G4FR, USE_STDPERIPH_DRIVER, SYSCLK_FREQ=32000000, __DEBUG,USE_DEVICE_DRIVER_LIB,_CC_ARM,DEBUG_MODE,ARM_MATH_CM4,SYSCLK_SRC=2</Define>
               <Undefine></Undefine>
               <IncludePath>..\MDK;..\driver\inc;..\driver\src;..\dsp\Include;..\common;..\HAL\inc;..\HAL\mcu_sdk;..\app\distance_measure\inc;..\app\app;..\cmsis;..\dsp_lib\Include;..\dsp_lib\dsp;..\app\rtt</IncludePath>
             </VariousControls>

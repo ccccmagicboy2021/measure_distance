@@ -15,15 +15,15 @@ void SysClkInit(void)
     RCC_EnableAHBPeriphClk(RCC_AHB_PERIPH_ADC2, ENABLE);
     RCC_EnableAHBPeriphClk(RCC_AHB_PERIPH_DMA1, ENABLE);
     
-    RCC_ConfigPclk1(RCC_HCLK_DIV4);     //APB1 CLK      128/4=32MHz(max p86)
-    RCC_EnableAPB2PeriphClk(RCC_APB2_PERIPH_TIM1, ENABLE);      //timer1 64*2=128MHz
+    RCC_ConfigPclk1(RCC_HCLK_DIV4);     //APB1 CLK      32/4=8MHz(max p86)
+    RCC_EnableAPB2PeriphClk(RCC_APB2_PERIPH_TIM1, ENABLE);      //timer1 16*2=32MHz
     RCC_EnableAPB2PeriphClk(RCC_APB2_PERIPH_GPIOA, ENABLE);     //PA10
     
-    RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_TIM2, ENABLE);      //timer2 64MHz not use
-    RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_TIM3, ENABLE);      //timer3 64MHz for part charge
+    RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_TIM2, ENABLE);      //timer2 16MHz not use
+    RCC_EnableAPB1PeriphClk(RCC_APB1_PERIPH_TIM3, ENABLE);      //timer3 16MHz not use
 
     /* RCC_ADCHCLK_DIV16*/
-    ADC_ConfigClk(ADC_CTRL3_CKMOD_AHB,RCC_ADCHCLK_DIV16);   // 128/16 = 8M
+    ADC_ConfigClk(ADC_CTRL3_CKMOD_AHB,RCC_ADCHCLK_DIV16);   // 32/16 = 2M
     RCC_ConfigAdc1mClk(RCC_ADC1MCLK_SRC_HSI, RCC_ADC1MCLK_DIV8);  //  8/8  = 1M
 }
 
