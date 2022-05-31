@@ -1613,9 +1613,9 @@
         0x08000e94:    a904        ..      ADD      r1,sp,#0x10
         0x08000e96:    f7fffee1    ....    BL       ADC_InitEx ; 0x8000c5c
         0x08000e9a:    9800        ..      LDR      r0,[sp,#0]
-        0x08000e9c:    9b01        ..      LDR      r3,[sp,#4]
+        0x08000e9c:    9a01        ..      LDR      r2,[sp,#4]
         0x08000e9e:    2105        .!      MOVS     r1,#5
-        0x08000ea0:    461a        .F      MOV      r2,r3
+        0x08000ea0:    2302        .#      MOVS     r3,#2
         0x08000ea2:    f7fffd2f    ../.    BL       ADC_ConfigRegularChannel ; 0x8000904
         0x08000ea6:    9800        ..      LDR      r0,[sp,#0]
         0x08000ea8:    9901        ..      LDR      r1,[sp,#4]
@@ -9298,7 +9298,7 @@
         0x08005a44:    f8cdc004    ....    STR      r12,[sp,#4]
         0x08005a48:    f8adc018    ....    STRH     r12,[sp,#0x18]
         0x08005a4c:    f8ad301a    ...0    STRH     r3,[sp,#0x1a]
-        0x08005a50:    2304        .#      MOVS     r3,#4
+        0x08005a50:    2309        .#      MOVS     r3,#9
         0x08005a52:    f8ad301e    ...0    STRH     r3,[sp,#0x1e]
         0x08005a56:    2302        .#      MOVS     r3,#2
         0x08005a58:    f8ad3020    .. 0    STRH     r3,[sp,#0x20]
@@ -9314,7 +9314,7 @@
         0x08005a76:    9b05        ..      LDR      r3,[sp,#0x14]
         0x08005a78:    f8adc018    ....    STRH     r12,[sp,#0x18]
         0x08005a7c:    f8ad301a    ...0    STRH     r3,[sp,#0x1a]
-        0x08005a80:    2309        .#      MOVS     r3,#9
+        0x08005a80:    2313        .#      MOVS     r3,#0x13
         0x08005a82:    f8ad301e    ...0    STRH     r3,[sp,#0x1e]
         0x08005a86:    f8ad2020    ..      STRH     r2,[sp,#0x20]
         0x08005a8a:    f8ad2024    ..$     STRH     r2,[sp,#0x24]
@@ -10960,7 +10960,7 @@
         0x08006be8:    4669        iF      MOV      r1,sp
         0x08006bea:    2000        .       MOVS     r0,#0
         0x08006bec:    6008        .`      STR      r0,[r1,#0]
-        0x08006bee:    f64c7153    L.Sq    MOV      r1,#0xcf53
+        0x08006bee:    f64c715c    L.\q    MOV      r1,#0xcf5c
         0x08006bf2:    f6c00101    ....    MOVT     r1,#0x801
         0x08006bf6:    f64122a4    A.."    MOV      r2,#0x1aa4
         0x08006bfa:    f2c20200    ....    MOVT     r2,#0x2000
@@ -10981,9 +10981,9 @@
         0x08006c2e:    e7ff        ..      B        0x8006c30 ; rtt_init + 76
         0x08006c30:    f64c61f8    L..a    MOV      r1,#0xcef8
         0x08006c34:    f6c00101    ....    MOVT     r1,#0x801
-        0x08006c38:    f64c7247    L.Gr    MOV      r2,#0xcf47
+        0x08006c38:    f64c7250    L.Pr    MOV      r2,#0xcf50
         0x08006c3c:    f6c00201    ....    MOVT     r2,#0x801
-        0x08006c40:    f64c735f    L._s    MOV      r3,#0xcf5f
+        0x08006c40:    f64c7347    L.Gs    MOV      r3,#0xcf47
         0x08006c44:    f6c00301    ....    MOVT     r3,#0x801
         0x08006c48:    2000        .       MOVS     r0,#0
         0x08006c4a:    f7faffef    ....    BL       SEGGER_RTT_printf ; 0x8001c2c
@@ -34201,22 +34201,18 @@
         0x0801cf40:    73253220     2%s    DCD    1931817504
         0x0801cf44:    0a0d        ..      DCW    2573
         0x0801cf46:    00          .       DCB    0
-    .L.str.5
-        0x0801cf47:    4d          M       DCB    77
-        0x0801cf48:    33207961    ay 3    DCD    857766241
-        0x0801cf4c:    30322030    0 20    DCD    808591408
-        0x0801cf50:    3232        22      DCW    12850
-        0x0801cf52:    00          .       DCB    0
-    .L.str
-        0x0801cf53:    4a          J       DCB    74
-        0x0801cf54:    706f6353    Scop    DCD    1886348115
-        0x0801cf58:    32555f65    e_U2    DCD    844455781
-        0x0801cf5c:    3255        U2      DCW    12885
-        0x0801cf5e:    00          .       DCB    0
     .L.str.6
-        0x0801cf5f:    31          1       DCB    49
-        0x0801cf60:    31353a37    7:51    DCD    825571895
-        0x0801cf64:    0036323a    :26.    DCD    3551802
+        0x0801cf47:    31          1       DCB    49
+        0x0801cf48:    33343a36    6:43    DCD    859060790
+        0x0801cf4c:    0031323a    :21.    DCD    3224122
+    .L.str.5
+        0x0801cf50:    2079614d    May     DCD    544825677
+        0x0801cf54:    32203133    31 2    DCD    840970547
+        0x0801cf58:    00323230    022.    DCD    3289648
+    .L.str
+        0x0801cf5c:    6f63534a    JSco    DCD    1868780362
+        0x0801cf60:    555f6570    pe_U    DCD    1432315248
+        0x0801cf64:    00325532    2U2.    DCD    3298610
     .L.str.3
         0x0801cf68:    6d305b1b    .[0m    DCD    1831885595
         0x0801cf6c:    00          .       DCB    0

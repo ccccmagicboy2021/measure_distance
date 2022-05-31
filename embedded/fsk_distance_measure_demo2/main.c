@@ -94,9 +94,9 @@ int32_t main(void)
 
     AdcConfig();
 
-    Timera_Config();
-
     //gpio_init();
+    
+    Timera_Config();
 
     init_mem();
 
@@ -109,13 +109,11 @@ int32_t main(void)
 
         
     clk_test();
-    //time3_init();   //enrf 初始化
     
     uint32_t    priMask;
     priMask =   __get_PRIMASK();          //关中断保护
     __set_PRIMASK(1);
     start_timer();  //fsk and enrf
-    //time3_start();  //enrf
     __set_PRIMASK(priMask);
     
     while (1)

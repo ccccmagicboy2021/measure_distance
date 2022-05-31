@@ -164,8 +164,8 @@ void init_timer(void)
     /* Output Compare Active Mode configuration: Channel1 */ //for adc trigger
     TIM_OCInitStructure.OcMode      = TIM_OCMODE_PWM1;
     TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
-    TIM_OCInitStructure.Pulse       = 5 - 1;        //2.5us
-    //TIM_OCInitStructure.Pulse       = 10 - 1;        //5us
+    //TIM_OCInitStructure.Pulse       = 5 - 1;        //2.5us
+    TIM_OCInitStructure.Pulse       = 10 - 1;        //5us
     //TIM_OCInitStructure.Pulse       = 20 - 1;        //10us
     TIM_OCInitStructure.OcPolarity  = TIM_OC_POLARITY_LOW;
     TIM_OCInitStructure.OcIdleState  = TIM_OC_IDLE_STATE_RESET;
@@ -177,8 +177,8 @@ void init_timer(void)
     //channel2
     TIM_OCInitStructure.OcMode      = TIM_OCMODE_PWM1;
     TIM_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;
-    TIM_OCInitStructure.Pulse       = 10 - 1;   //1%        //5us
-    //TIM_OCInitStructure.Pulse       = 20 - 1;   //2%        //10us
+    //TIM_OCInitStructure.Pulse       = 10 - 1;   //1%        //5us
+    TIM_OCInitStructure.Pulse       = 20 - 1;   //2%        //10us
     //TIM_OCInitStructure.Pulse       = 40 - 1;   //4%        //20us
     //TIM_OCInitStructure.Pulse       = 60 - 1;   //6%
     //TIM_OCInitStructure.Pulse       = 100 - 1;   //10%

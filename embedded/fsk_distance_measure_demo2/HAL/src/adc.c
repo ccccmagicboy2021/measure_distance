@@ -97,7 +97,7 @@ void AdcInitConfig(void)
     ADC_InitStructureEx.ResBit = ADC_CTRL3_RES_12BIT;
     ADC_InitEx(ADC2, &ADC_InitStructureEx);
     
-    ADC_ConfigRegularChannel(ADC2, ADC2_Channel_05_PC4, 1, ADC_SAMP_TIME_7CYCLES5);    //p195 7.5+1.5=9T=1.125us
+    ADC_ConfigRegularChannel(ADC2, ADC2_Channel_05_PC4, 1, ADC_SAMP_TIME_13CYCLES5);    //p195 13.5+1.5=15T=15*1/8=1.625us
 
     ADC_EnableExternalTrigConv(ADC2, ENABLE);
     ADC_EnableDMA(ADC2, ENABLE);    //use dma1 ch8
